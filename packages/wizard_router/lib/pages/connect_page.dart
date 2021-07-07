@@ -12,8 +12,8 @@ class SecondPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return WizardPage(
       name: 'Connect',
-      onBack: () => Wizard.back(context),
-      onNext: () => Wizard.next(context),
+      onBack: () => Wizard.of(context).back(),
+      onNext: () => Wizard.of(context).next(),
     );
   }
 }
