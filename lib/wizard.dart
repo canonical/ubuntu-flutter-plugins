@@ -12,7 +12,7 @@ typedef WizardPageBuilder = Widget Function(
   required String route,
 });
 
-class Wizard extends StatefulWidget {
+class Wizard extends StatelessWidget {
   const Wizard({
     Key? key,
     required this.initialRoute,
@@ -24,41 +24,18 @@ class Wizard extends StatefulWidget {
   final WizardNextRoute nextRoute;
   final WizardPageBuilder pageBuilder;
 
-  static void back(BuildContext context) {
-    Provider.of<_WizardState>(context, listen: false)._back(context);
-  }
-
-  static void next(BuildContext context) {
-    Provider.of<_WizardState>(context, listen: false)._next(context);
-  }
-
-  @override
-  State<Wizard> createState() => _WizardState();
-}
-
-class _WizardState extends State<Wizard> {
-  void _back(BuildContext context) {
-    final routes = context.flow<List<String>>().state;
-    assert(routes.isNotEmpty);
-    context.flow<List<String>>().update((state) {
-      return List<String>.of(state)..removeLast();
-    });
-  }
-
-  Future<void> _next(BuildContext context) async {
-    final routes = context.flow<List<String>>().state;
-    assert(routes.isNotEmpty);
-    final route = await widget.nextRoute(context, route: routes.last);
-    context.flow<List<String>>().update((state) {
-      return List<String>.of(state)..add(route);
-    });
+  static WizardScopeState of(BuildContext context) {
+    return Provider.of<WizardScopeState>(context, listen: false);
   }
 
   Page _createPage(BuildContext context, {required String route}) {
     return MaterialPage(
       name: route,
       key: ValueKey(route),
-      child: widget.pageBuilder(context, route: route),
+      child: WizardScope(
+        nextRoute: nextRoute,
+        child: pageBuilder(context, route: route),
+      ),
     );
   }
 
@@ -67,13 +44,54 @@ class _WizardState extends State<Wizard> {
     return Provider.value(
       value: this,
       child: FlowBuilder<List<String>>(
-        state: <String>[widget.initialRoute],
+        state: <String>[initialRoute],
         onGeneratePages: (state, __) {
           return state
               .map((route) => _createPage(context, route: route))
               .toList();
         },
       ),
+    );
+  }
+}
+
+class WizardScope extends StatefulWidget {
+  const WizardScope({
+    Key? key,
+    required this.child,
+    required this.nextRoute,
+  }) : super(key: key);
+
+  final Widget child;
+  final WizardNextRoute nextRoute;
+
+  @override
+  State<WizardScope> createState() => WizardScopeState();
+}
+
+class WizardScopeState extends State<WizardScope> {
+  void back() {
+    final routes = context.flow<List<String>>().state;
+    assert(routes.isNotEmpty);
+    context.flow<List<String>>().update((state) {
+      return List<String>.of(state)..removeLast();
+    });
+  }
+
+  Future<void> next() async {
+    final routes = context.flow<List<String>>().state;
+    assert(routes.isNotEmpty);
+    final route = await widget.nextRoute(context, route: routes.last);
+    context.flow<List<String>>().update((state) {
+      return List<String>.of(state)..add(route);
+    });
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Provider<WizardScopeState>.value(
+      value: this,
+      child: widget.child,
     );
   }
 }

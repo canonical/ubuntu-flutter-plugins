@@ -12,7 +12,7 @@ class SummaryPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return WizardPage(
       name: 'Summary',
-      onBack: () => Wizard.back(context),
+      onBack: () => Wizard.of(context).back(),
     );
   }
 }

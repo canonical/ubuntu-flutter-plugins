@@ -73,7 +73,7 @@ class _FirstPageState extends State<FirstPage> {
           ),
         ),
       ),
-      onNext: () => Wizard.next(context),
+      onNext: () => Wizard.of(context).next(),
     );
   }
 }
