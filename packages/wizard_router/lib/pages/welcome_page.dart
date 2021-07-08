@@ -57,21 +57,10 @@ class _FirstPageState extends State<FirstPage> {
         model.isConnected ? 'Skip connect page' : 'Don\'t skip connect page';
     return WizardPage(
       name: 'Welcome',
-      leading: Theme(
-        data: Theme.of(context).copyWith(
-          highlightColor: Colors.transparent,
-          hoverColor: Colors.transparent,
-          splashColor: Colors.transparent,
-        ),
-        child: IntrinsicWidth(
-          child: CheckboxListTile(
-            tileColor: Colors.transparent,
-            controlAffinity: ListTileControlAffinity.leading,
-            title: Text('Connected ($description)'),
-            value: model.isConnected,
-            onChanged: (value) => model.setConnected(value!),
-          ),
-        ),
+      leading: WizardCheckbox(
+        value: model.isConnected,
+        title: Text('Connected ($description)'),
+        onChanged: (value) => model.setConnected(value!),
       ),
       onNext: () => Wizard.of(context).next(),
     );
