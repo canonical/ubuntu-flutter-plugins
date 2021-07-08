@@ -43,3 +43,36 @@ class WizardPage extends StatelessWidget {
     );
   }
 }
+
+class WizardCheckbox extends StatelessWidget {
+  const WizardCheckbox({
+    Key? key,
+    this.title,
+    required this.value,
+    required this.onChanged,
+  }) : super(key: key);
+
+  final Widget? title;
+  final bool value;
+  final ValueChanged<bool?> onChanged;
+
+  @override
+  Widget build(BuildContext context) {
+    return Theme(
+      data: Theme.of(context).copyWith(
+        highlightColor: Colors.transparent,
+        hoverColor: Colors.transparent,
+        splashColor: Colors.transparent,
+      ),
+      child: IntrinsicWidth(
+        child: CheckboxListTile(
+          tileColor: Colors.transparent,
+          controlAffinity: ListTileControlAffinity.leading,
+          title: title,
+          value: value,
+          onChanged: onChanged,
+        ),
+      ),
+    );
+  }
+}
