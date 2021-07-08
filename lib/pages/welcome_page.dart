@@ -56,7 +56,7 @@ class _FirstPageState extends State<FirstPage> {
     final description =
         model.isConnected ? 'Skip connect page' : 'Don\'t skip connect page';
     return WizardPage(
-      name: 'Welcome',
+      name: 'Welcome (1/3)',
       leading: WizardCheckbox(
         value: model.isConnected,
         title: Text('Connected ($description)'),
