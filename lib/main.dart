@@ -1,4 +1,3 @@
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -7,10 +6,9 @@ import 'services.dart';
 import 'wizard.dart';
 
 void main() {
-  final service = NetworkService();
   runApp(
     Provider.value(
-      value: service,
+      value: NetworkService(),
       child: const WizardApp(),
     ),
   );
