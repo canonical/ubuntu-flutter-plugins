@@ -70,9 +70,9 @@ class WizardScope extends StatefulWidget {
 }
 
 class WizardScopeState extends State<WizardScope> {
-  void back() {
+  Future<void> back() async {
     final routes = context.flow<List<String>>().state;
-    assert(routes.isNotEmpty);
+    assert(routes.length > 1);
     context.flow<List<String>>().update((state) {
       return List<String>.of(state)..removeLast();
     });
