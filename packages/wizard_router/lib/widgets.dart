@@ -18,7 +18,9 @@ class WizardPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: Text(name)),
-      body: Center(child: Text('This is the $name page...')),
+      body: Center(
+        child: Text(name, style: Theme.of(context).textTheme.headline4),
+      ),
       bottomNavigationBar: Row(
         children: [
           if (leading != null) leading!,
