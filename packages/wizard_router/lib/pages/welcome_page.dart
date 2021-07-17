@@ -5,8 +5,8 @@ import '../services.dart';
 import '../widgets.dart';
 import '../wizard.dart';
 
-class FirstModel extends ChangeNotifier {
-  FirstModel(this._service);
+class WelcomeModel extends ChangeNotifier {
+  WelcomeModel(this._service);
 
   final NetworkService _service;
 
@@ -28,31 +28,31 @@ class FirstModel extends ChangeNotifier {
   }
 }
 
-class FirstPage extends StatefulWidget {
-  const FirstPage({Key? key}) : super(key: key);
+class WelcomePage extends StatefulWidget {
+  const WelcomePage({Key? key}) : super(key: key);
 
   static Widget create(BuildContext context) {
     final service = Provider.of<NetworkService>(context, listen: false);
     return ChangeNotifierProvider(
-      create: (_) => FirstModel(service),
-      child: const FirstPage(),
+      create: (_) => WelcomeModel(service),
+      child: const WelcomePage(),
     );
   }
 
   @override
-  State<FirstPage> createState() => _FirstPageState();
+  State<WelcomePage> createState() => _WelcomePageState();
 }
 
-class _FirstPageState extends State<FirstPage> {
+class _WelcomePageState extends State<WelcomePage> {
   @override
   void initState() {
     super.initState();
-    Provider.of<FirstModel>(context, listen: false).init();
+    Provider.of<WelcomeModel>(context, listen: false).init();
   }
 
   @override
   Widget build(BuildContext context) {
-    final model = Provider.of<FirstModel>(context);
+    final model = Provider.of<WelcomeModel>(context);
     final description =
         model.isConnected ? 'Skip connect page' : 'Don\'t skip connect page';
     return WizardPage(

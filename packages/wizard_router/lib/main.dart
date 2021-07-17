@@ -22,12 +22,12 @@ class WizardApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       home: Wizard(
-        initialRoute: Routes.initialPage,
-        nextRoute: Routes.nextPage,
+        initialRoute: Routes.initial,
+        nextRoute: Routes.nextRoute,
         routes: {
-          Routes.welcomePage: FirstPage.create,
-          Routes.connectPage: SecondPage.create,
-          Routes.summaryPage: SummaryPage.create,
+          Routes.welcome: WelcomePage.create,
+          Routes.connect: ConnectPage.create,
+          Routes.summary: SummaryPage.create,
         },
       ),
     );
