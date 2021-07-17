@@ -1,7 +1,6 @@
 import 'package:flutter/widgets.dart';
 import 'package:provider/provider.dart';
 
-import 'pages.dart';
 import 'services.dart';
 
 abstract class Routes {
@@ -26,22 +25,6 @@ abstract class Routes {
         return Routes.summaryPage;
       default:
         throw UnimplementedError('Implement Routes.nextRoute() for: $route');
-    }
-  }
-
-  static Widget createPage(
-    BuildContext context, {
-    required String route,
-  }) {
-    switch (route) {
-      case Routes.welcomePage:
-        return FirstPage.create(context);
-      case Routes.connectPage:
-        return SecondPage.create(context);
-      case Routes.summaryPage:
-        return SummaryPage.create(context);
-      default:
-        throw UnimplementedError('Implement Routes.createPage() for: $route');
     }
   }
 }

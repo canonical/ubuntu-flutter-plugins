@@ -7,22 +7,17 @@ typedef WizardNextRoute = Future<String> Function(
   required String route,
 });
 
-typedef WizardPageBuilder = Widget Function(
-  BuildContext context, {
-  required String route,
-});
-
 class Wizard extends StatelessWidget {
   const Wizard({
     Key? key,
     required this.initialRoute,
     required this.nextRoute,
-    required this.pageBuilder,
+    required this.routes,
   }) : super(key: key);
 
   final String initialRoute;
   final WizardNextRoute nextRoute;
-  final WizardPageBuilder pageBuilder;
+  final Map<String, WidgetBuilder> routes;
 
   static WizardScopeState of(BuildContext context) {
     return Provider.of<WizardScopeState>(context, listen: false);
@@ -34,7 +29,7 @@ class Wizard extends StatelessWidget {
       key: ValueKey(route),
       child: WizardScope(
         nextRoute: nextRoute,
-        child: pageBuilder(context, route: route),
+        child: routes[route]!(context),
       ),
     );
   }

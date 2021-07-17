@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
+import 'pages.dart';
 import 'routes.dart';
 import 'services.dart';
 import 'wizard.dart';
@@ -23,7 +24,11 @@ class WizardApp extends StatelessWidget {
       home: Wizard(
         initialRoute: Routes.initialPage,
         nextRoute: Routes.nextPage,
-        pageBuilder: Routes.createPage,
+        routes: {
+          Routes.welcomePage: FirstPage.create,
+          Routes.connectPage: SecondPage.create,
+          Routes.summaryPage: SummaryPage.create,
+        },
       ),
     );
   }
