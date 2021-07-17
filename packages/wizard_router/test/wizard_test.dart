@@ -35,7 +35,11 @@ void main() {
         home: Wizard(
           initialRoute: initialRoute,
           nextRoute: nextRoute,
-          pageBuilder: (context, {required route}) => Text(route),
+          routes: {
+            Routes.firstPage: (_) => const Text(Routes.firstPage),
+            Routes.secondPage: (_) => const Text(Routes.secondPage),
+            Routes.thirdPage: (_) => const Text(Routes.thirdPage),
+          },
         ),
       ),
     );
