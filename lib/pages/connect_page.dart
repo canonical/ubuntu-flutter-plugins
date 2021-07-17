@@ -3,10 +3,10 @@ import 'package:flutter/material.dart';
 import '../widgets.dart';
 import '../wizard.dart';
 
-class SecondPage extends StatelessWidget {
-  const SecondPage({Key? key}) : super(key: key);
+class ConnectPage extends StatelessWidget {
+  const ConnectPage({Key? key}) : super(key: key);
 
-  static Widget create(BuildContext context) => const SecondPage();
+  static Widget create(BuildContext context) => const ConnectPage();
 
   @override
   Widget build(BuildContext context) {

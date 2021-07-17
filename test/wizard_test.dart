@@ -5,19 +5,19 @@ import 'package:flutter_wizard_example/wizard.dart';
 
 abstract class Routes {
   Routes._();
-  static const firstPage = '/first';
-  static const secondPage = '/second';
-  static const thirdPage = '/third';
+  static const first = '/first';
+  static const second = '/second';
+  static const third = '/third';
 
   static Future<String> nextRoute(
     BuildContext context, {
     required String route,
   }) async {
     switch (route) {
-      case Routes.firstPage:
-        return Routes.secondPage;
-      case Routes.secondPage:
-        return Routes.thirdPage;
+      case Routes.first:
+        return Routes.second;
+      case Routes.second:
+        return Routes.third;
       default:
         throw UnimplementedError(route);
     }
@@ -36,9 +36,9 @@ void main() {
           initialRoute: initialRoute,
           nextRoute: nextRoute,
           routes: {
-            Routes.firstPage: (_) => const Text(Routes.firstPage),
-            Routes.secondPage: (_) => const Text(Routes.secondPage),
-            Routes.thirdPage: (_) => const Text(Routes.thirdPage),
+            Routes.first: (_) => const Text(Routes.first),
+            Routes.second: (_) => const Text(Routes.second),
+            Routes.third: (_) => const Text(Routes.third),
           },
         ),
       ),
@@ -46,27 +46,27 @@ void main() {
   }
 
   testWidgets('initial route set to first page', (tester) async {
-    await pumpWizardApp(tester, initialRoute: Routes.firstPage);
+    await pumpWizardApp(tester, initialRoute: Routes.first);
 
-    expect(find.text(Routes.firstPage), findsOneWidget);
-    expect(find.text(Routes.secondPage), findsNothing);
-    expect(find.text(Routes.thirdPage), findsNothing);
+    expect(find.text(Routes.first), findsOneWidget);
+    expect(find.text(Routes.second), findsNothing);
+    expect(find.text(Routes.third), findsNothing);
   });
 
   testWidgets('initial route set to second page', (tester) async {
-    await pumpWizardApp(tester, initialRoute: Routes.secondPage);
+    await pumpWizardApp(tester, initialRoute: Routes.second);
 
-    expect(find.text(Routes.firstPage), findsNothing);
-    expect(find.text(Routes.secondPage), findsOneWidget);
-    expect(find.text(Routes.thirdPage), findsNothing);
+    expect(find.text(Routes.first), findsNothing);
+    expect(find.text(Routes.second), findsOneWidget);
+    expect(find.text(Routes.third), findsNothing);
   });
 
   testWidgets('navigate back and forth', (tester) async {
-    await pumpWizardApp(tester, initialRoute: Routes.firstPage);
+    await pumpWizardApp(tester, initialRoute: Routes.first);
 
-    final firstPage = find.text(Routes.firstPage);
-    final secondPage = find.text(Routes.secondPage);
-    final thirdPage = find.text(Routes.thirdPage);
+    final firstPage = find.text(Routes.first);
+    final secondPage = find.text(Routes.second);
+    final thirdPage = find.text(Routes.third);
 
     expect(firstPage, findsOneWidget);
     expect(secondPage, findsNothing);
@@ -115,9 +115,9 @@ void main() {
   });
 
   testWidgets('navigate past first and last pages', (tester) async {
-    await pumpWizardApp(tester, initialRoute: Routes.firstPage);
+    await pumpWizardApp(tester, initialRoute: Routes.first);
 
-    final page = find.text(Routes.firstPage);
+    final page = find.text(Routes.first);
     expect(page, findsOneWidget);
 
     final wizard = Wizard.of(tester.element(page));
