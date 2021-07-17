@@ -1,15 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
+import 'models.dart';
 import 'pages.dart';
 import 'routes.dart';
 import 'services.dart';
 import 'wizard.dart';
 
 void main() {
+  final service = NetworkService();
   runApp(
-    Provider.value(
-      value: NetworkService(),
+    ChangeNotifierProvider(
+      create: (_) => NetworkModel(service),
       child: const WizardApp(),
     ),
   );
@@ -20,14 +22,43 @@ class WizardApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       home: Wizard(
         initialRoute: Routes.initial,
-        nextRoute: Routes.nextRoute,
-        routes: {
+        routes: const <String, WidgetBuilder>{
           Routes.welcome: WelcomePage.create,
+          Routes.chooser: ChooserPage.create,
+          Routes.preview: PreviewPage.create,
           Routes.connect: ConnectPage.create,
-          Routes.summary: SummaryPage.create,
+          Routes.install: InstallPage.create,
+        },
+        onNext: (settings) {
+          switch (settings.name) {
+            case Routes.chooser:
+              switch (settings.arguments as Choice?) {
+                case Choice.preview:
+                  return Routes.preview;
+                case Choice.install:
+                  if (!context.read<NetworkModel>().isConnected) {
+                    return Routes.connect;
+                  }
+                  return Routes.install;
+                default:
+                  throw ArgumentError(settings.arguments);
+              }
+            default:
+              return null;
+          }
+        },
+        onBack: (settings) {
+          switch (settings.name) {
+            case Routes.connect:
+              return Routes.chooser;
+            case Routes.install:
+              return Routes.preview;
+            default:
+              return null;
+          }
         },
       ),
     );

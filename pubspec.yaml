@@ -1,6 +1,6 @@
 name: flutter_wizard_example
 description: A wizard example based on FlowBuilder.
-publish_to: 'none' 
+publish_to: 'none'
 
 environment:
   sdk: ">=2.12.0 <3.0.0"
@@ -9,6 +9,7 @@ dependencies:
   flutter:
     sdk: flutter
   flow_builder: ^0.0.3
+  flutter_markdown: ^0.6.2
   provider: ^5.0.0
 
 dev_dependencies:

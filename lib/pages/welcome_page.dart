@@ -1,68 +1,46 @@
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
+import 'package:flutter_markdown/flutter_markdown.dart';
 
-import '../services.dart';
 import '../widgets.dart';
 import '../wizard.dart';
 
-class WelcomeModel extends ChangeNotifier {
-  WelcomeModel(this._service);
-
-  final NetworkService _service;
-
-  void init() {
-    _service.isConnected().then((value) => _updateConnected(value));
-  }
-
-  bool _connected = false;
-  bool get isConnected => _connected;
-  void setConnected(bool value) {
-    _service.setConnectedForTesting(value);
-    _updateConnected(value);
-  }
-
-  void _updateConnected(bool value) {
-    if (_connected == value) return;
-    _connected = value;
-    notifyListeners();
-  }
-}
-
-class WelcomePage extends StatefulWidget {
+class WelcomePage extends StatelessWidget {
   const WelcomePage({Key? key}) : super(key: key);
 
-  static Widget create(BuildContext context) {
-    final service = Provider.of<NetworkService>(context, listen: false);
-    return ChangeNotifierProvider(
-      create: (_) => WelcomeModel(service),
-      child: const WelcomePage(),
-    );
-  }
-
-  @override
-  State<WelcomePage> createState() => _WelcomePageState();
-}
-
-class _WelcomePageState extends State<WelcomePage> {
-  @override
-  void initState() {
-    super.initState();
-    Provider.of<WelcomeModel>(context, listen: false).init();
-  }
+  static Widget create(BuildContext context) => const WelcomePage();
 
   @override
   Widget build(BuildContext context) {
-    final model = Provider.of<WelcomeModel>(context);
-    final description =
-        model.isConnected ? 'Skip connect page' : 'Don\'t skip connect page';
     return WizardPage(
-      name: 'Welcome (1/3)',
-      leading: WizardCheckbox(
-        value: model.isConnected,
-        title: Text('Connected ($description)'),
-        onChanged: (value) => model.setConnected(value!),
+      title: const Text('Welcome'),
+      body: const Center(
+        child: MarkdownBody(
+          data: '''
+# Welcome
+This is an example implementation of a wizard based on `FlowBuilder`.
+The example comes with two routes, whose order is determined by user
+interaction and an imaginary network service.
+
+## Routes:
+- _Welcome -> Choice -> Preview_
+- _Welcome -> Choice -> Install -> (Connect) -> Summary_
+
+## Remarks:
+- Pages call `Wizard.of(context).next()` to request the next page.
+- Pages do not know/care what comes next in the wizard (unless passing arguments
+  that are assumed to be handled by the next page).
+- Page order and routing logic is defined in one central place.
+- Adding, removing, or re-ordering pages does not cause changes in existing
+  pages.
+''',
+        ),
       ),
-      onNext: () => Wizard.of(context).next(),
+      actions: [
+        WizardAction(
+          label: 'Next',
+          onActivated: Wizard.of(context).next,
+        ),
+      ],
     );
   }
 }
