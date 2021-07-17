@@ -8,19 +8,27 @@ abstract class Routes {
   static const first = '/first';
   static const second = '/second';
   static const third = '/third';
+}
 
-  static Future<String> nextRoute(
-    BuildContext context, {
-    required String route,
-  }) async {
-    switch (route) {
-      case Routes.first:
-        return Routes.second;
-      case Routes.second:
-        return Routes.third;
-      default:
-        throw UnimplementedError(route);
-    }
+String? onNext(RouteSettings settings) {
+  switch (settings.name) {
+    case Routes.first:
+      return Routes.second;
+    case Routes.second:
+      return Routes.third;
+    default:
+      throw UnimplementedError(settings.name);
+  }
+}
+
+String? onBack(RouteSettings settings) {
+  switch (settings.name) {
+    case Routes.first:
+      return Routes.second;
+    case Routes.second:
+      return Routes.third;
+    default:
+      throw UnimplementedError(settings.name);
   }
 }
 
@@ -28,18 +36,20 @@ void main() {
   Future<void> pumpWizardApp(
     WidgetTester tester, {
     required String initialRoute,
-    WizardNextRoute nextRoute = Routes.nextRoute,
+    WizardRouteCallback? onNext,
+    WizardRouteCallback? onBack,
   }) {
     return tester.pumpWidget(
       MaterialApp(
         home: Wizard(
           initialRoute: initialRoute,
-          nextRoute: nextRoute,
           routes: {
             Routes.first: (_) => const Text(Routes.first),
             Routes.second: (_) => const Text(Routes.second),
             Routes.third: (_) => const Text(Routes.third),
           },
+          onNext: onNext,
+          onBack: onBack,
         ),
       ),
     );
@@ -76,7 +86,7 @@ void main() {
     final firstWizardScope = Wizard.of(tester.element(firstPage));
     expect(firstWizardScope, isNotNull);
 
-    await firstWizardScope.next();
+    firstWizardScope.next();
     await tester.pumpAndSettle();
 
     expect(firstPage, findsNothing);
@@ -87,7 +97,7 @@ void main() {
     final secondWizardScope = Wizard.of(tester.element(secondPage));
     expect(secondWizardScope, isNotNull);
 
-    await secondWizardScope.next();
+    secondWizardScope.next();
     await tester.pumpAndSettle();
 
     expect(firstPage, findsNothing);
@@ -98,7 +108,7 @@ void main() {
     final thirdWizardScope = Wizard.of(tester.element(thirdPage));
     expect(thirdWizardScope, isNotNull);
 
-    await thirdWizardScope.back();
+    thirdWizardScope.back();
     await tester.pumpAndSettle();
 
     expect(firstPage, findsNothing);
@@ -106,7 +116,7 @@ void main() {
     expect(thirdPage, findsNothing);
 
     // 2nd -> 1st
-    await secondWizardScope.back();
+    secondWizardScope.back();
     await tester.pumpAndSettle();
 
     expect(firstPage, findsOneWidget);
@@ -123,12 +133,12 @@ void main() {
     final wizard = Wizard.of(tester.element(page));
     expect(wizard, isNotNull);
 
-    await wizard.next();
-    await wizard.next();
-    await expectLater(() => wizard.next(), throwsA(isUnimplementedError));
+    wizard.next();
+    wizard.next();
+    expectLater(() => wizard.next(), throwsAssertionError);
 
-    await wizard.back();
-    await wizard.back();
-    await expectLater(() => wizard.back(), throwsA(isAssertionError));
+    wizard.back();
+    wizard.back();
+    expectLater(() => wizard.back(), throwsAssertionError);
   });
 }

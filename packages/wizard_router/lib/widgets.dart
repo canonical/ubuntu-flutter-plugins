@@ -1,43 +1,45 @@
 import 'package:flutter/material.dart';
 
+class WizardAction {
+  const WizardAction({required this.label, required this.onActivated});
+  final String label;
+  final VoidCallback? onActivated;
+}
+
 class WizardPage extends StatelessWidget {
   const WizardPage({
     Key? key,
-    required this.name,
-    this.onBack,
-    this.onNext,
-    this.leading,
+    this.title,
+    this.body,
+    this.actions = const <WizardAction>[],
   }) : super(key: key);
 
-  final String name;
-  final VoidCallback? onBack;
-  final VoidCallback? onNext;
-  final Widget? leading;
+  final Widget? title;
+  final Widget? body;
+  final List<WizardAction> actions;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text(name)),
-      body: Center(
-        child: Text(name, style: Theme.of(context).textTheme.headline4),
+      appBar: AppBar(title: title),
+      body: Padding(
+        padding: const EdgeInsets.all(16.0),
+        child: body,
       ),
       bottomNavigationBar: Row(
         children: [
-          if (leading != null) leading!,
           const Spacer(),
           Padding(
             padding: const EdgeInsets.all(8.0),
             child: ButtonBar(
-              children: [
-                OutlinedButton(
-                  onPressed: onBack,
-                  child: const Text('Back'),
-                ),
-                OutlinedButton(
-                  onPressed: onNext,
-                  child: const Text('Continue'),
-                ),
-              ],
+              children: actions
+                  .map(
+                    (action) => OutlinedButton(
+                      onPressed: action.onActivated,
+                      child: Text(action.label),
+                    ),
+                  )
+                  .toList(),
             ),
           ),
         ],

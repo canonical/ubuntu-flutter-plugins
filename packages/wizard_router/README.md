@@ -1,17 +1,17 @@
 # flutter_wizard_example
 
-A wizard example based on FlowBuilder. The example comes with three
-pages and an imaginary network service that affects the page order.
+This is an example implementation of a wizard based on `FlowBuilder`.
+The example comes with two routes, whose order is determined by user
+interaction and an imaginary network service.
 
-Structure:
-- Welcome page
-- Connect page (conditional)
-- Summary page
+## Routes:
+- _Welcome -> Choice -> Preview_
+- _Welcome -> Choice -> Install -> (Connect) -> Summary_
 
-Remarks:
-- Pages call `Wizard.of(context).next()` to request the next page
-- Pages do not know/care what comes next in the wizard
-- Page order and routing logic is defined in one central place
-- Adding, removing, or re-ordering pages does not cause changes in
-  existing pages
-
+## Remarks:
+- Pages call `Wizard.of(context).next()` to request the next page.
+- Pages do not know/care what comes next in the wizard (unless passing arguments
+  that are assumed to be handled by the next page).
+- Page order and routing logic is defined in one central place.
+- Adding, removing, or re-ordering pages does not cause changes in existing
+  pages.
