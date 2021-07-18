@@ -1,10 +1,10 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_wizard/flutter_wizard.dart';
 import 'package:provider/provider.dart';
 
 import '../widgets.dart';
-import '../wizard.dart';
 
 class InstallModel extends ValueNotifier<int> {
   InstallModel() : super(0) {

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_wizard/flutter_wizard.dart';
 import 'package:flutter_markdown/flutter_markdown.dart';
 
 import '../widgets.dart';
-import '../wizard.dart';
 
 class WelcomePage extends StatelessWidget {
   const WelcomePage({Key? key}) : super(key: key);

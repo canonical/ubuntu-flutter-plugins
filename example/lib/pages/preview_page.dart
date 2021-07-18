@@ -1,9 +1,9 @@
 import 'dart:io';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_wizard/flutter_wizard.dart';
 
 import '../widgets.dart';
-import '../wizard.dart';
 
 class PreviewPage extends StatelessWidget {
   const PreviewPage({Key? key}) : super(key: key);

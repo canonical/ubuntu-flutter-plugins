@@ -1,7 +1,6 @@
-import 'package:flutter_test/flutter_test.dart';
 import 'package:flutter/material.dart';
-
-import 'package:flutter_wizard_example/wizard.dart';
+import 'package:flutter_test/flutter_test.dart';
+import 'package:flutter_wizard/flutter_wizard.dart';
 
 abstract class Routes {
   Routes._();
