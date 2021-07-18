@@ -1,14 +1,14 @@
 # Wizard Router for Flutter
 
-[wizard_router](https://pub.dev/packages/wizard_router) implements routing for
-classic linear wizards in a way that it cuts dependencies between the wizard
-pages. Wizard pages merely request the next or previous page in the wizard. They
-do not know/care what is the next or previous page in the wizard. Thus, adding,
+[wizard_router](https://pub.dev/packages/wizard_router) provides routing for
+classic linear wizards in a way that it eliminates dependencies between wizard
+pages. Wizard pages merely request the next or previous page in the wizard
+without knowing/caring what is the next or previous wizard page. Thus, adding,
 removing, or re-ordering pages does not cause changes in existing pages.
 
 ## Usage
 
-Define routes:
+### Routes
 
 ```dart
 MaterialApp(
@@ -24,23 +24,29 @@ MaterialApp(
 )
 ```
 
+### Navigation
+
 The next or previous page is requested by calling `Wizard.of(context).next()` or
 `Wizard.of(context).back()`, respectively.
 
 ```dart
-ButtonBar(
-  children: [
-    ElevatedButton(
-      onPressed: Wizard.of(context).back
-      child: const Text('Back'),
-    ),
-    ElevatedButton(
-      onPressed: Wizard.of(context).next
-      child: const Text('Next'),
-    ),
-  ],
+BarPage(
+  child: ButtonBar(
+    children: [
+      ElevatedButton(
+        onPressed: Wizard.of(context).back
+        child: const Text('Back'),
+      ),
+      ElevatedButton(
+        onPressed: Wizard.of(context).next
+        child: const Text('Next'),
+      ),
+    ],
+  ),
 )
 ```
+
+### Conditions
 
 For unconditional linear wizards, defining the routes is enough. If there are
 conditions between wizard pages, the page order can be customized by
@@ -67,6 +73,8 @@ Wizard(
 )
 ```
 
+### Arguments
+
 It is recommended to avoid such dependencies between wizard pages that make
 assumptions of the page order. However, sometimes it may be  desirable to pass
 arguments to the next page. This is possible by passing them to
@@ -83,7 +91,7 @@ BarPageState extends State<BarPage>(
   void initState() {
     super.initState();
 
-    final arguments = Wizard.of(context).arguments as Something;
+    final something = Wizard.of(context).arguments as Something;
     // ...
   }
 )
