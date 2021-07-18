@@ -1,7 +1,7 @@
 import 'dart:io';
 
 import 'package:flutter/material.dart';
-import 'package:flutter_wizard/flutter_wizard.dart';
+import 'package:wizard_router/wizard_router.dart';
 
 import '../widgets.dart';
 

@@ -1,8 +1,8 @@
 cmake_minimum_required(VERSION 3.10)
 project(runner LANGUAGES CXX)
 
-set(BINARY_NAME "flutter_wizard_example")
-set(APPLICATION_ID "com.example.flutter_wizard_example")
+set(BINARY_NAME "wizard_router_example")
+set(APPLICATION_ID "com.example.wizard_router_example")
 
 cmake_policy(SET CMP0063 NEW)
 

@@ -1,6 +1,6 @@
-name: flutter_wizard
-description: A wizard based on FlowBuilder.
-homepage: https://github.com/jpnurmi/flutter_wizard
+name: wizard_router
+description: A wizard router based on FlowBuilder.
+homepage: https://github.com/jpnurmi/wizard_router
 version: 0.1.0
 
 environment:
