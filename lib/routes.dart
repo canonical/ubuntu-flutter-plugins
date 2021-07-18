@@ -6,5 +6,4 @@ abstract class Routes {
   static const String preview = '/preview';
   static const String install = '/install';
   static const String connect = '/connect';
-  static const String summary = '/summary';
 }
