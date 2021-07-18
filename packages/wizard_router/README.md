@@ -6,7 +6,7 @@ interaction and an imaginary network service.
 
 ## Routes:
 - _Welcome -> Choice -> Preview_
-- _Welcome -> Choice -> Install -> (Connect) -> Summary_
+- _Welcome -> Choice -> (Connect) -> Install_
 
 ## Remarks:
 - Pages call `Wizard.of(context).next()` to request the next page.
