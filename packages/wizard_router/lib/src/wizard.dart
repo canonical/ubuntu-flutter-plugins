@@ -89,6 +89,8 @@ class WizardScope extends StatefulWidget {
 }
 
 class WizardScopeState extends State<WizardScope> {
+  Object? get arguments => ModalRoute.of(context)?.settings.arguments;
+
   void back() {
     final routes = context.flow<List<RouteSettings>>().state;
     assert(routes.length > 1,
