@@ -1,0 +1,17 @@
+name: flutter_wizard_example
+description: Demonstrates how to use the flutter_wizard package.
+publish_to: 'none'
+
+environment:
+  sdk: ">=2.12.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_markdown: ^0.6.2
+  flutter_wizard:
+    path: ../
+  provider: ^5.0.0
+
+flutter:
+  uses-material-design: true
