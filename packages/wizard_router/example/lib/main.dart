@@ -55,7 +55,7 @@ class WizardApp extends StatelessWidget {
             case Routes.connect:
               return Routes.chooser;
             case Routes.install:
-              return Routes.preview;
+              return Routes.chooser;
             default:
               return null;
           }
