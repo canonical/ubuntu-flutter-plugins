@@ -117,11 +117,10 @@ class WizardScopeState extends State<WizardScope> {
 
     // pick the next route on the list
     String nextRoute() {
-      final names = widget.routes.toList();
-      final index = names.indexOf(previous.name!);
-      assert(index < names.length - 1,
+      final index = widget.routes.indexOf(previous.name!);
+      assert(index < widget.routes.length - 1,
           '`Wizard.next()` called from the last route ${previous.name}.');
-      return names[index + 1];
+      return widget.routes[index + 1];
     }
 
     final next = RouteSettings(
