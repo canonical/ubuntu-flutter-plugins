@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_wizard/flutter_wizard.dart';
 import 'package:provider/provider.dart';
+import 'package:wizard_router/wizard_router.dart';
 
 import 'models.dart';
 import 'pages.dart';

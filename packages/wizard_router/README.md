@@ -1,4 +1,4 @@
-# flutter_wizard_example
+# wizard_router
 
 This is an example implementation of a wizard based on `FlowBuilder`.
 The example comes with two routes, whose order is determined by user

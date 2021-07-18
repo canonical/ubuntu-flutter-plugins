@@ -1,3 +1,3 @@
-library flutter_wizard;
+library wizard_router;
 
 export 'src/wizard.dart';
