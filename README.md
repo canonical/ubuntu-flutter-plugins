@@ -86,7 +86,7 @@ queried from `Wizard.of(context).arguments`.
 
 ```dart
 FooPage(
-  onFoo: () => Wizard.of(context).next(something),
+  onFoo: () => Wizard.of(context).next(arguments: something),
 )
 
 BarPageState extends State<BarPage>(

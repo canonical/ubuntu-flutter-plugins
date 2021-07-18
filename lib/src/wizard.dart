@@ -7,13 +7,13 @@ typedef WizardRouteCallback = String? Function(RouteSettings settings);
 class Wizard extends StatefulWidget {
   const Wizard({
     Key? key,
-    required this.initialRoute,
+    this.initialRoute,
     required this.routes,
     this.onNext,
     this.onBack,
   }) : super(key: key);
 
-  final String initialRoute;
+  final String? initialRoute;
   final Map<String, WidgetBuilder> routes;
   final WizardRouteCallback? onNext;
   final WizardRouteCallback? onBack;
@@ -32,13 +32,14 @@ class _WizardState extends State<Wizard> {
   @override
   void initState() {
     super.initState();
-    _routes = <RouteSettings>[RouteSettings(name: widget.initialRoute)];
+    _routes = <RouteSettings>[
+      RouteSettings(name: widget.initialRoute ?? widget.routes.keys.first),
+    ];
   }
 
   Page _createPage(BuildContext context, {required RouteSettings settings}) {
     final route = settings.name;
     final builder = widget.routes[route];
-    assert(builder != null, '`Wizard.routes` is missing route \'$route\'.');
 
     return MaterialPage(
       name: settings.name,
@@ -98,6 +99,11 @@ class WizardScopeState extends State<WizardScope> {
 
     // go back to a specific route, or pick the previous route on the list
     final previous = widget.onBack?.call(routes.last);
+    if (previous != null) {
+      assert(widget.routes.contains(previous),
+          '`Wizard.routes` is missing route \'$previous\'.');
+    }
+
     final start = previous != null
         ? routes.lastIndexWhere((settings) => settings.name == previous) + 1
         : routes.length - 1;
@@ -129,6 +135,9 @@ class WizardScopeState extends State<WizardScope> {
       name: onNext() ?? nextRoute(),
       arguments: arguments,
     );
+
+    assert(widget.routes.contains(next.name),
+        '`Wizard.routes` is missing route \'${next.name}\'.');
 
     context.flow<List<RouteSettings>>().update((state) {
       final copy = List<RouteSettings>.of(state);
