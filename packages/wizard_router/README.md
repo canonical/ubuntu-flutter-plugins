@@ -6,6 +6,8 @@ pages. Wizard pages merely request the next or previous page in the wizard
 without knowing/caring what is the next or previous wizard page. Thus, adding,
 removing, or re-ordering pages does not cause changes in existing pages.
 
+![wizard_router](https://github.com/jpnurmi/wizard_router/raw/main/images/wizard_router.png)
+
 ## Usage
 
 ### Routes
