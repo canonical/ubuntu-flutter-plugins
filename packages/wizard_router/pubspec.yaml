@@ -1,9 +1,11 @@
 name: wizard_router
-description: A wizard router based on FlowBuilder.
+description: >-
+  Routing for linear wizards. No dependencies between pages. Pages merely
+  request the next page. Routes and conditions defined in a central place.
 homepage: https://github.com/jpnurmi/wizard_router
 repository: https://github.com/jpnurmi/wizard_router
 issue_tracker: https://github.com/jpnurmi/wizard_router/issues
-version: 0.1.0
+version: 0.1.0+1
 
 environment:
   sdk: '>=2.12.0 <3.0.0'
