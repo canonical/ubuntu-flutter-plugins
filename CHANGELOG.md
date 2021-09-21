@@ -1,6 +1,7 @@
 ## 0.3.0
 
 * Add Wizard.home()
+* Add Wizard.hasNext and Wizard.hasPrevious
 
 ## 0.2.0
 
