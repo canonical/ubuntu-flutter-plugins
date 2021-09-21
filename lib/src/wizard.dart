@@ -147,6 +147,7 @@ class Wizard extends StatefulWidget {
   /// - [WizardScopeState.next]
   /// - [WizardScopeState.arguments]
   /// - [WizardScopeState.back]
+  /// - [WizardScopeState.home]
   static WizardScopeState of(BuildContext context) {
     return Provider.of<WizardScopeState>(context, listen: false);
   }
@@ -233,6 +234,22 @@ class WizardScopeState extends State<WizardScope> {
   /// final something = Wizard.of(context).arguments as Something;
   /// ```
   Object? get arguments => ModalRoute.of(context)?.settings.arguments;
+
+  /// Requests the wizard to show the first page.
+  ///
+  /// ```dart
+  /// onPressed: Wizard.of(context).home
+  /// ```
+  void home() {
+    final routes = context.flow<List<RouteSettings>>().state;
+    assert(routes.length > 1,
+        '`Wizard.back()` called from the first route ${routes.last.name}');
+
+    context.flow<List<RouteSettings>>().update((state) {
+      final copy = List<RouteSettings>.of(state);
+      return copy..replaceRange(1, routes.length, []);
+    });
+  }
 
   /// Requests the wizard to show the previous page.
   ///
