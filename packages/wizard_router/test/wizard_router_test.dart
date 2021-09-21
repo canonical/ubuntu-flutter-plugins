@@ -305,4 +305,56 @@ void main() {
     final secondWizardScope = Wizard.of(tester.element(secondPage));
     expect(secondWizardScope.arguments, equals('something'));
   });
+
+  testWidgets('navigate home', (tester) async {
+    await pumpWizardApp(
+      tester,
+      routes: {
+        Routes.first: (_) => const Text(Routes.first),
+        Routes.second: (_) => const Text(Routes.second),
+        Routes.third: (_) => const Text(Routes.third),
+      },
+    );
+
+    final firstPage = find.text(Routes.first);
+    final secondPage = find.text(Routes.second);
+    final thirdPage = find.text(Routes.third);
+
+    final wizard = Wizard.of(tester.element(firstPage));
+
+    // 1st -> home
+    await expectLater(() => wizard.home(), throwsAssertionError);
+
+    // 2nd -> home
+    wizard.next();
+    await tester.pumpAndSettle();
+
+    expect(firstPage, findsNothing);
+    expect(secondPage, findsOneWidget);
+    expect(thirdPage, findsNothing);
+
+    wizard.home();
+    await tester.pumpAndSettle();
+
+    expect(firstPage, findsOneWidget);
+    expect(secondPage, findsNothing);
+    expect(thirdPage, findsNothing);
+
+    // 3rd -> home
+    wizard.next();
+    await tester.pump();
+    wizard.next();
+    await tester.pumpAndSettle();
+
+    expect(firstPage, findsNothing);
+    expect(secondPage, findsNothing);
+    expect(thirdPage, findsOneWidget);
+
+    wizard.home();
+    await tester.pumpAndSettle();
+
+    expect(firstPage, findsOneWidget);
+    expect(secondPage, findsNothing);
+    expect(thirdPage, findsNothing);
+  });
 }
