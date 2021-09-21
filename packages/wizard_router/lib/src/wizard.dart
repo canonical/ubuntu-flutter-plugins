@@ -257,7 +257,7 @@ class WizardScopeState extends State<WizardScope> {
   /// onPressed: Wizard.of(context).back
   /// ```
   void back() {
-    final routes = context.flow<List<RouteSettings>>().state;
+    final routes = _getRoutes();
     assert(routes.length > 1,
         '`Wizard.back()` called from the first route ${routes.last.name}');
 
@@ -285,7 +285,7 @@ class WizardScopeState extends State<WizardScope> {
   /// onPressed: Wizard.of(context).next
   /// ```
   void next({Object? arguments}) {
-    final routes = context.flow<List<RouteSettings>>().state;
+    final routes = _getRoutes();
     assert(routes.isNotEmpty, routes.length.toString());
 
     final previous = routes.last.copyWith(arguments: arguments);
@@ -314,6 +314,14 @@ class WizardScopeState extends State<WizardScope> {
       return copy..add(next);
     });
   }
+
+  List<RouteSettings> _getRoutes() => context.flow<List<RouteSettings>>().state;
+
+  /// Returns `false` if the wizard is currently on the first page.
+  bool get hasPrevious => _getRoutes().length > 1;
+
+  /// Returns `false` if the wizard is currently on the last page.
+  bool get hasNext => _getRoutes().length < widget._routes.length;
 
   @override
   Widget build(BuildContext context) {
