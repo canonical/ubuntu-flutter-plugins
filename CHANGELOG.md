@@ -1,3 +1,7 @@
+## 0.4.0
+
+* Add result argument to Wizard.back()
+
 ## 0.3.0
 
 * Add Wizard.home()
