@@ -245,7 +245,7 @@ class WizardScopeState extends State<WizardScope> {
     assert(routes.length > 1,
         '`Wizard.back()` called from the first route ${routes.last.name}');
 
-    context.flow<List<RouteSettings>>().update((state) {
+    _updateRoutes((state) {
       final copy = List<RouteSettings>.of(state);
       return copy..replaceRange(1, routes.length, []);
     });
@@ -272,7 +272,7 @@ class WizardScopeState extends State<WizardScope> {
         ? routes.lastIndexWhere((settings) => settings.name == previous) + 1
         : routes.length - 1;
 
-    context.flow<List<RouteSettings>>().update((state) {
+    _updateRoutes((state) {
       final copy = List<RouteSettings>.of(state);
       return copy..replaceRange(start, routes.length, []);
     });
@@ -309,13 +309,19 @@ class WizardScopeState extends State<WizardScope> {
     assert(widget._routes.contains(next.name),
         '`Wizard.routes` is missing route \'${next.name}\'.');
 
-    context.flow<List<RouteSettings>>().update((state) {
+    _updateRoutes((state) {
       final copy = List<RouteSettings>.of(state);
       return copy..add(next);
     });
   }
 
   List<RouteSettings> _getRoutes() => context.flow<List<RouteSettings>>().state;
+
+  void _updateRoutes(
+    List<RouteSettings> Function(List<RouteSettings>) callback,
+  ) {
+    context.flow<List<RouteSettings>>().update(callback);
+  }
 
   /// Returns `false` if the wizard is currently on the first page.
   bool get hasPrevious => _getRoutes().length > 1;
