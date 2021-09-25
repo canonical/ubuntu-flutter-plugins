@@ -241,7 +241,7 @@ class WizardScopeState extends State<WizardScope> {
   /// onPressed: Wizard.of(context).home
   /// ```
   void home() {
-    final routes = context.flow<List<RouteSettings>>().state;
+    final routes = _getRoutes();
     assert(routes.length > 1,
         '`Wizard.back()` called from the first route ${routes.last.name}');
 
