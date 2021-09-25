@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:flow_builder/flow_builder.dart';
 import 'package:provider/provider.dart';
@@ -157,17 +159,17 @@ class Wizard extends StatefulWidget {
 }
 
 class _WizardState extends State<Wizard> {
-  late List<RouteSettings> _routes;
+  late List<_WizardRoute> _routes;
 
   @override
   void initState() {
     super.initState();
-    _routes = <RouteSettings>[
-      RouteSettings(name: widget.initialRoute ?? widget.routes.keys.first),
+    _routes = <_WizardRoute>[
+      _WizardRoute(name: widget.initialRoute ?? widget.routes.keys.first),
     ];
   }
 
-  Page _createPage(BuildContext context, {required RouteSettings settings}) {
+  Page _createPage(BuildContext context, {required _WizardRoute settings}) {
     final route = settings.name;
     final builder = widget.routes[route];
 
@@ -188,7 +190,7 @@ class _WizardState extends State<Wizard> {
   Widget build(BuildContext context) {
     return Provider.value(
       value: this,
-      child: FlowBuilder<List<RouteSettings>>(
+      child: FlowBuilder<List<_WizardRoute>>(
         state: _routes,
         onGeneratePages: (state, __) {
           _routes = state;
@@ -246,17 +248,18 @@ class WizardScopeState extends State<WizardScope> {
         '`Wizard.home()` called from the first route ${routes.last.name}');
 
     _updateRoutes((state) {
-      final copy = List<RouteSettings>.of(state);
+      final copy = List<_WizardRoute>.of(state);
       return copy..replaceRange(1, routes.length, []);
     });
   }
 
-  /// Requests the wizard to show the previous page.
+  /// Requests the wizard to show the previous page. Optionally, `result` can be
+  /// returned to the previous page.
   ///
   /// ```dart
   /// onPressed: Wizard.of(context).back
   /// ```
-  void back() {
+  void back<T extends Object?>([T? result]) {
     final routes = _getRoutes();
     assert(routes.length > 1,
         '`Wizard.back()` called from the first route ${routes.last.name}');
@@ -273,7 +276,8 @@ class WizardScopeState extends State<WizardScope> {
         : routes.length - 1;
 
     _updateRoutes((state) {
-      final copy = List<RouteSettings>.of(state);
+      final copy = List<_WizardRoute>.of(state);
+      copy[start].result.complete(result);
       return copy..replaceRange(start, routes.length, []);
     });
   }
@@ -284,7 +288,7 @@ class WizardScopeState extends State<WizardScope> {
   /// ```dart
   /// onPressed: Wizard.of(context).next
   /// ```
-  void next({Object? arguments}) {
+  Future<T?> next<T extends Object?>({Object? arguments}) {
     final routes = _getRoutes();
     assert(routes.isNotEmpty, routes.length.toString());
 
@@ -301,7 +305,7 @@ class WizardScopeState extends State<WizardScope> {
       return widget._routes[index + 1];
     }
 
-    final next = RouteSettings(
+    final next = _WizardRoute<T?>(
       name: onNext() ?? nextRoute(),
       arguments: arguments,
     );
@@ -310,17 +314,19 @@ class WizardScopeState extends State<WizardScope> {
         '`Wizard.routes` is missing route \'${next.name}\'.');
 
     _updateRoutes((state) {
-      final copy = List<RouteSettings>.of(state);
+      final copy = List<_WizardRoute>.of(state);
       return copy..add(next);
     });
+
+    return next.result.future;
   }
 
-  List<RouteSettings> _getRoutes() => context.flow<List<RouteSettings>>().state;
+  List<_WizardRoute> _getRoutes() => context.flow<List<_WizardRoute>>().state;
 
   void _updateRoutes(
-    List<RouteSettings> Function(List<RouteSettings>) callback,
+    List<_WizardRoute> Function(List<_WizardRoute>) callback,
   ) {
-    context.flow<List<RouteSettings>>().update(callback);
+    context.flow<List<_WizardRoute>>().update(callback);
   }
 
   /// Returns `false` if the wizard is currently on the first page.
@@ -336,4 +342,13 @@ class WizardScopeState extends State<WizardScope> {
       child: widget._child,
     );
   }
+}
+
+class _WizardRoute<T extends Object?> extends RouteSettings {
+  _WizardRoute({
+    String? name,
+    Object? arguments,
+  }) : super(name: name, arguments: arguments);
+
+  final result = Completer<T?>();
 }

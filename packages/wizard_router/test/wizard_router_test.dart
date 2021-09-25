@@ -389,4 +389,26 @@ void main() {
     expect(wizard.hasPrevious, isTrue);
     expect(wizard.hasNext, isFalse);
   });
+
+  testWidgets('return result', (tester) async {
+    await pumpWizardApp(
+      tester,
+      routes: {
+        Routes.first: (_) => const Text(Routes.first),
+        Routes.second: (_) => const Text(Routes.second),
+      },
+    );
+
+    final firstPage = find.text(Routes.first);
+    final firstWizardScope = Wizard.of(tester.element(firstPage));
+    expect(firstWizardScope.arguments, isNull);
+
+    final result = firstWizardScope.next();
+    await tester.pumpAndSettle();
+
+    final secondPage = find.text(Routes.second);
+    final secondWizardScope = Wizard.of(tester.element(secondPage));
+    secondWizardScope.back('result');
+    expect(await result, equals('result'));
+  });
 }
