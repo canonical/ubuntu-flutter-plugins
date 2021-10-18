@@ -4,8 +4,30 @@ import 'package:flutter/material.dart';
 import 'package:flow_builder/flow_builder.dart';
 import 'package:provider/provider.dart';
 
-/// The signature of [Wizard.onNext] and [Wizard.onBack] callbacks.
+/// The signature of [WizardRoute.onNext] and [WizardRoute.onBack] callbacks.
 typedef WizardRouteCallback = String? Function(RouteSettings settings);
+
+class WizardRoute {
+  const WizardRoute({
+    required this.builder,
+    this.onNext,
+    this.onBack,
+  });
+
+  final WidgetBuilder builder;
+
+  /// The callback invoked when the next page is requested.
+  ///
+  /// If `onNext` is not specified or it returns `null`, the order is determined
+  /// from [routes].
+  final WizardRouteCallback? onNext;
+
+  /// The callback invoked when the previous page is requested.
+  ///
+  /// If `onBack` is not specified or it returns `null`, the order is determined
+  /// from [routes].
+  final WizardRouteCallback? onBack;
+}
 
 /// A wizard is a flow of steps that the user can navigate through.
 ///
@@ -26,9 +48,9 @@ typedef WizardRouteCallback = String? Function(RouteSettings settings);
 ///   home: Scaffold(
 ///     body: Wizard(
 ///       routes: {
-///         '/foo': (context) => FooPage(),
-///         '/bar': (context) => BarPage(),
-///         '/baz': (context) => BazPage(),
+///         '/foo': WizardRoute(builder: (context) => FooPage()),
+///         '/bar': WizardRoute(builder: (context) => BarPage()),
+///         '/baz': WizardRoute(builder: (context) => BazPage()),
 ///       },
 ///     ),
 ///   ),
@@ -61,27 +83,25 @@ typedef WizardRouteCallback = String? Function(RouteSettings settings);
 ///
 /// For unconditional linear wizards, defining the routes is enough. The router
 /// follows the order the routes are defined in. If there are conditions between
-/// the wizard pages, the order can be customized with the `Wizard.onNext` and
-/// `Wizard.onBack` callbacks.
+/// the wizard pages, the order can be customized with the `WizardRoute.onNext`
+/// and `WizardRoute.onBack` callbacks.
 ///
 /// ```dart
 /// Wizard(
 ///   routes: {
-///     '/foo': (context) => FooPage(),
-///     '/bar': (context) => BarPage(),
-///     '/baz': (context) => BazPage(),
-///     '/qux': (context) => QuxPage(),
+///     '/foo': WizardRoute(
+///       builder: (context) => FooPage(),
+///       // conditionally skip the _Bar_ page when stepping forward from the _Foo_ page
+///       onNext: (settings) => skipBar ? '/baz' : null,
+///     ),
+///     '/bar': WizardRoute(builder: (context) => BarPage()),
+///     '/baz': WizardRoute(builder: (context) => BazPage()),
+///     '/qux': WizardRoute(
+///       builder: (context) => QuxPage(),
+///       // always skip the Baz page when stepping back from the Qux page
+///       onBack: (settings) => '/bar',
+///     ),
 ///   },
-///   onNext: (settings) {
-///     // conditionally skip the _Bar_ page when stepping forward from the _Foo_ page
-///     if (settings.name == '/foo' && skipBar) return '/baz';
-///     return null;
-///   }
-///   onBack: (settings) {
-///     // always skip the Baz page when stepping back from the Qux page
-///     if (settings.name == '/qux') return '/bar';
-///     return null;
-///   }
 /// )
 /// ```
 ///
@@ -114,8 +134,6 @@ class Wizard extends StatefulWidget {
     Key? key,
     this.initialRoute,
     required this.routes,
-    this.onNext,
-    this.onBack,
   }) : super(key: key);
 
   /// The name of the first route to show.
@@ -127,20 +145,8 @@ class Wizard extends StatefulWidget {
   /// The wizards's routing table.
   ///
   /// The order of `routes` is the order of the wizard pages are shown. The
-  /// order can be customized with [onNext] and [onBack].
-  final Map<String, WidgetBuilder> routes;
-
-  /// The callback invoked when the next page is requested.
-  ///
-  /// If `onNext` is not specified or it returns `null`, the order is determined
-  /// from [routes].
-  final WizardRouteCallback? onNext;
-
-  /// The callback invoked when the previous page is requested.
-  ///
-  /// If `onBack` is not specified or it returns `null`, the order is determined
-  /// from [routes].
-  final WizardRouteCallback? onBack;
+  /// order can be customized with [WizardRoute.onNext] and [WizardRoute.onBack].
+  final Map<String, WizardRoute> routes;
 
   /// The wizard scope from the closest instance of this class that encloses the
   /// given `context`.
@@ -159,29 +165,26 @@ class Wizard extends StatefulWidget {
 }
 
 class _WizardState extends State<Wizard> {
-  late List<_WizardRoute> _routes;
+  late List<_WizardRouteSettings> _routes;
 
   @override
   void initState() {
     super.initState();
-    _routes = <_WizardRoute>[
-      _WizardRoute(name: widget.initialRoute ?? widget.routes.keys.first),
+    _routes = <_WizardRouteSettings>[
+      _WizardRouteSettings(
+          name: widget.initialRoute ?? widget.routes.keys.first),
     ];
   }
 
-  Page _createPage(BuildContext context, {required _WizardRoute settings}) {
-    final route = settings.name;
-    final builder = widget.routes[route];
-
+  Page _createPage(BuildContext context,
+      {required _WizardRouteSettings settings}) {
     return MaterialPage(
       name: settings.name,
       arguments: settings.arguments,
       key: ValueKey(settings.name),
       child: WizardScope(
+        route: widget.routes[settings.name]!,
         routes: widget.routes.keys.toList(),
-        onNext: widget.onNext,
-        onBack: widget.onBack,
-        child: builder!(context),
       ),
     );
   }
@@ -190,7 +193,7 @@ class _WizardState extends State<Wizard> {
   Widget build(BuildContext context) {
     return Provider.value(
       value: this,
-      child: FlowBuilder<List<_WizardRoute>>(
+      child: FlowBuilder<List<_WizardRouteSettings>>(
         state: _routes,
         onGeneratePages: (state, __) {
           _routes = state;
@@ -209,20 +212,14 @@ class _WizardState extends State<Wizard> {
 class WizardScope extends StatefulWidget {
   const WizardScope({
     Key? key,
-    required Widget child,
+    required WizardRoute route,
     required List<String> routes,
-    WizardRouteCallback? onNext,
-    WizardRouteCallback? onBack,
-  })  : _child = child,
+  })  : _route = route,
         _routes = routes,
-        _onNext = onNext,
-        _onBack = onBack,
         super(key: key);
 
-  final Widget _child;
+  final WizardRoute _route;
   final List<String> _routes;
-  final WizardRouteCallback? _onNext;
-  final WizardRouteCallback? _onBack;
 
   @override
   State<WizardScope> createState() => WizardScopeState();
@@ -248,7 +245,7 @@ class WizardScopeState extends State<WizardScope> {
         '`Wizard.home()` called from the first route ${routes.last.name}');
 
     _updateRoutes((state) {
-      final copy = List<_WizardRoute>.of(state);
+      final copy = List<_WizardRouteSettings>.of(state);
       return copy..replaceRange(1, routes.length, []);
     });
   }
@@ -265,7 +262,7 @@ class WizardScopeState extends State<WizardScope> {
         '`Wizard.back()` called from the first route ${routes.last.name}');
 
     // go back to a specific route, or pick the previous route on the list
-    final previous = widget._onBack?.call(routes.last);
+    final previous = widget._route.onBack?.call(routes.last);
     if (previous != null) {
       assert(widget._routes.contains(previous),
           '`Wizard.routes` is missing route \'$previous\'.');
@@ -276,7 +273,7 @@ class WizardScopeState extends State<WizardScope> {
         : routes.length - 1;
 
     _updateRoutes((state) {
-      final copy = List<_WizardRoute>.of(state);
+      final copy = List<_WizardRouteSettings>.of(state);
       copy[start].result.complete(result);
       return copy..replaceRange(start, routes.length, []);
     });
@@ -295,7 +292,7 @@ class WizardScopeState extends State<WizardScope> {
     final previous = routes.last.copyWith(arguments: arguments);
 
     // advance to a specific route
-    String? onNext() => widget._onNext?.call(previous);
+    String? onNext() => widget._route.onNext?.call(previous);
 
     // pick the next route on the list
     String nextRoute() {
@@ -305,7 +302,7 @@ class WizardScopeState extends State<WizardScope> {
       return widget._routes[index + 1];
     }
 
-    final next = _WizardRoute<T?>(
+    final next = _WizardRouteSettings<T?>(
       name: onNext() ?? nextRoute(),
       arguments: arguments,
     );
@@ -314,19 +311,20 @@ class WizardScopeState extends State<WizardScope> {
         '`Wizard.routes` is missing route \'${next.name}\'.');
 
     _updateRoutes((state) {
-      final copy = List<_WizardRoute>.of(state);
+      final copy = List<_WizardRouteSettings>.of(state);
       return copy..add(next);
     });
 
     return next.result.future;
   }
 
-  List<_WizardRoute> _getRoutes() => context.flow<List<_WizardRoute>>().state;
+  List<_WizardRouteSettings> _getRoutes() =>
+      context.flow<List<_WizardRouteSettings>>().state;
 
   void _updateRoutes(
-    List<_WizardRoute> Function(List<_WizardRoute>) callback,
+    List<_WizardRouteSettings> Function(List<_WizardRouteSettings>) callback,
   ) {
-    context.flow<List<_WizardRoute>>().update(callback);
+    context.flow<List<_WizardRouteSettings>>().update(callback);
   }
 
   /// Returns `false` if the wizard is currently on the first page.
@@ -339,13 +337,13 @@ class WizardScopeState extends State<WizardScope> {
   Widget build(BuildContext context) {
     return Provider<WizardScopeState>.value(
       value: this,
-      child: widget._child,
+      child: widget._route.builder(context),
     );
   }
 }
 
-class _WizardRoute<T extends Object?> extends RouteSettings {
-  _WizardRoute({
+class _WizardRouteSettings<T extends Object?> extends RouteSettings {
+  _WizardRouteSettings({
     String? name,
     Object? arguments,
   }) : super(name: name, arguments: arguments);

@@ -22,9 +22,9 @@ MaterialApp(
   home: Scaffold(
     body: Wizard(
       routes: {
-        '/foo': (context) => FooPage(),
-        '/bar': (context) => BarPage(),
-        '/baz': (context) => BazPage(),
+        '/foo': WizardRoute(builder: (context) => FooPage()),
+        '/bar': WizardRoute(builder: (context) => BarPage()),
+        '/baz': WizardRoute(builder: (context) => BazPage()),
       },
     ),
   ),
@@ -63,21 +63,19 @@ the wizard pages, the order can be customized with the `Wizard.onNext` and
 ```dart
 Wizard(
   routes: {
-    '/foo': (context) => FooPage(),
-    '/bar': (context) => BarPage(),
-    '/baz': (context) => BazPage(),
-    '/qux': (context) => QuxPage(),
+    '/foo': WizardRoute(
+      builder: (context) => FooPage(),
+      // conditionally skip the _Bar_ page when stepping forward from the _Foo_ page
+      onNext: (settings) => skipBar) ? '/baz' : null,
+    ),
+    '/bar': WizardRoute(builder: (context) => BarPage()),
+    '/baz': WizardRoute(builder: (context) => BazPage()),
+    '/qux': WizardRoute(
+      builder: (context) => QuxPage(),
+      // always skip the Baz page when stepping back from the Qux page
+      onBack: (settings) => '/bar',
+    ),
   },
-  onNext: (settings) {
-    // conditionally skip the _Bar_ page when stepping forward from the _Foo_ page
-    if (settings.name == '/foo' && skipBar) return '/baz';
-    return null;
-  }
-  onBack: (settings) {
-    // always skip the Baz page when stepping back from the Qux page
-    if (settings.name == '/qux') return '/bar';
-    return null;
-  }
 )
 ```
 
