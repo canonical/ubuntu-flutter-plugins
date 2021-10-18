@@ -1,3 +1,7 @@
+## 0.5.0
+
+* Move onNext and onBack to WizardRoute.
+
 ## 0.4.0
 
 * Add result argument to Wizard.back()

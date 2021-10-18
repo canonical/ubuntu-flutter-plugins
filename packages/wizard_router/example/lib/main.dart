@@ -25,16 +25,13 @@ class WizardApp extends StatelessWidget {
     return MaterialApp(
       home: Wizard(
         initialRoute: Routes.initial,
-        routes: const <String, WidgetBuilder>{
-          Routes.welcome: WelcomePage.create,
-          Routes.chooser: ChooserPage.create,
-          Routes.preview: PreviewPage.create,
-          Routes.connect: ConnectPage.create,
-          Routes.install: InstallPage.create,
-        },
-        onNext: (settings) {
-          switch (settings.name) {
-            case Routes.chooser:
+        routes: <String, WizardRoute>{
+          Routes.welcome: WizardRoute(
+            builder: WelcomePage.create,
+          ),
+          Routes.chooser: WizardRoute(
+            builder: ChooserPage.create,
+            onNext: (settings) {
               switch (settings.arguments as Choice?) {
                 case Choice.preview:
                   return Routes.preview;
@@ -46,19 +43,19 @@ class WizardApp extends StatelessWidget {
                 default:
                   throw ArgumentError(settings.arguments);
               }
-            default:
-              return null;
-          }
-        },
-        onBack: (settings) {
-          switch (settings.name) {
-            case Routes.connect:
-              return Routes.chooser;
-            case Routes.install:
-              return Routes.chooser;
-            default:
-              return null;
-          }
+            },
+          ),
+          Routes.preview: WizardRoute(
+            builder: PreviewPage.create,
+          ),
+          Routes.connect: WizardRoute(
+            builder: ConnectPage.create,
+            onBack: (_) => Routes.chooser,
+          ),
+          Routes.install: WizardRoute(
+            builder: InstallPage.create,
+            onBack: (_) => Routes.chooser,
+          ),
         },
       ),
     );

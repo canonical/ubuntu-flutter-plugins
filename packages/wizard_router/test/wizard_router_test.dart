@@ -14,17 +14,13 @@ void main() {
   Future<void> pumpWizardApp(
     WidgetTester tester, {
     String? initialRoute,
-    required Map<String, WidgetBuilder> routes,
-    WizardRouteCallback? onNext,
-    WizardRouteCallback? onBack,
+    required Map<String, WizardRoute> routes,
   }) {
     return tester.pumpWidget(
       MaterialApp(
         home: Wizard(
           initialRoute: initialRoute,
           routes: routes,
-          onNext: onNext,
-          onBack: onBack,
         ),
       ),
     );
@@ -34,9 +30,9 @@ void main() {
     await pumpWizardApp(
       tester,
       routes: {
-        Routes.first: (_) => const Text(Routes.first),
-        Routes.second: (_) => const Text(Routes.second),
-        Routes.third: (_) => const Text(Routes.third),
+        Routes.first: WizardRoute(builder: (_) => const Text(Routes.first)),
+        Routes.second: WizardRoute(builder: (_) => const Text(Routes.second)),
+        Routes.third: WizardRoute(builder: (_) => const Text(Routes.third)),
       },
     );
 
@@ -50,9 +46,9 @@ void main() {
       tester,
       initialRoute: Routes.first,
       routes: {
-        Routes.first: (_) => const Text(Routes.first),
-        Routes.second: (_) => const Text(Routes.second),
-        Routes.third: (_) => const Text(Routes.third),
+        Routes.first: WizardRoute(builder: (_) => const Text(Routes.first)),
+        Routes.second: WizardRoute(builder: (_) => const Text(Routes.second)),
+        Routes.third: WizardRoute(builder: (_) => const Text(Routes.third)),
       },
     );
 
@@ -66,9 +62,9 @@ void main() {
       tester,
       initialRoute: Routes.second,
       routes: {
-        Routes.first: (_) => const Text(Routes.first),
-        Routes.second: (_) => const Text(Routes.second),
-        Routes.third: (_) => const Text(Routes.third),
+        Routes.first: WizardRoute(builder: (_) => const Text(Routes.first)),
+        Routes.second: WizardRoute(builder: (_) => const Text(Routes.second)),
+        Routes.third: WizardRoute(builder: (_) => const Text(Routes.third)),
       },
     );
 
@@ -81,9 +77,9 @@ void main() {
     await pumpWizardApp(
       tester,
       routes: {
-        Routes.first: (_) => const Text(Routes.first),
-        Routes.second: (_) => const Text(Routes.second),
-        Routes.third: (_) => const Text(Routes.third),
+        Routes.first: WizardRoute(builder: (_) => const Text(Routes.first)),
+        Routes.second: WizardRoute(builder: (_) => const Text(Routes.second)),
+        Routes.third: WizardRoute(builder: (_) => const Text(Routes.third)),
       },
     );
 
@@ -141,9 +137,9 @@ void main() {
     await pumpWizardApp(
       tester,
       routes: {
-        Routes.first: (_) => const Text(Routes.first),
-        Routes.second: (_) => const Text(Routes.second),
-        Routes.third: (_) => const Text(Routes.third),
+        Routes.first: WizardRoute(builder: (_) => const Text(Routes.first)),
+        Routes.second: WizardRoute(builder: (_) => const Text(Routes.second)),
+        Routes.third: WizardRoute(builder: (_) => const Text(Routes.third)),
       },
     );
 
@@ -169,38 +165,32 @@ void main() {
     await pumpWizardApp(
       tester,
       routes: {
-        Routes.first: (_) => const Text(Routes.first),
-        Routes.second: (_) => const Text(Routes.second),
-        Routes.third: (_) => const Text(Routes.third),
-        Routes.fourth: (_) => const Text(Routes.fourth),
-      },
-      onNext: (settings) {
-        switch (settings.name) {
-          case Routes.first:
+        Routes.first: WizardRoute(
+          builder: (_) => const Text(Routes.first),
+          onNext: (settings) {
             return !skipSecond
                 ? Routes.second
                 : !skipThird
                     ? Routes.third
                     : Routes.fourth;
-          case Routes.second:
-            return skipThird ? Routes.fourth : Routes.second;
-          default:
-            return null;
-        }
-      },
-      onBack: (settings) {
-        switch (settings.name) {
-          case Routes.third:
-            return skipSecond ? Routes.first : Routes.second;
-          case Routes.fourth:
-            return !skipThird
-                ? Routes.third
-                : !skipSecond
-                    ? Routes.second
-                    : Routes.first;
-          default:
-            return null;
-        }
+          },
+        ),
+        Routes.second: WizardRoute(
+          builder: (_) => const Text(Routes.second),
+          onNext: (_) => skipThird ? Routes.fourth : Routes.second,
+        ),
+        Routes.third: WizardRoute(
+          builder: (_) => const Text(Routes.third),
+          onBack: (_) => skipSecond ? Routes.first : Routes.second,
+        ),
+        Routes.fourth: WizardRoute(
+          builder: (_) => const Text(Routes.fourth),
+          onBack: (_) => !skipThird
+              ? Routes.third
+              : !skipSecond
+                  ? Routes.second
+                  : Routes.first,
+        ),
       },
     );
 
@@ -262,11 +252,15 @@ void main() {
     await pumpWizardApp(
       tester,
       routes: {
-        Routes.first: (_) => const Text(Routes.first),
-        Routes.second: (_) => const Text(Routes.second),
+        Routes.first: WizardRoute(
+          builder: (_) => const Text(Routes.first),
+          onNext: (_) => nextRoute,
+        ),
+        Routes.second: WizardRoute(
+          builder: (_) => const Text(Routes.second),
+          onBack: (_) => backRoute,
+        ),
       },
-      onNext: (_) => nextRoute,
-      onBack: (_) => backRoute,
     );
 
     final firstPage = find.text(Routes.first);
@@ -289,8 +283,8 @@ void main() {
     await pumpWizardApp(
       tester,
       routes: {
-        Routes.first: (_) => const Text(Routes.first),
-        Routes.second: (_) => const Text(Routes.second),
+        Routes.first: WizardRoute(builder: (_) => const Text(Routes.first)),
+        Routes.second: WizardRoute(builder: (_) => const Text(Routes.second)),
       },
     );
 
@@ -310,9 +304,9 @@ void main() {
     await pumpWizardApp(
       tester,
       routes: {
-        Routes.first: (_) => const Text(Routes.first),
-        Routes.second: (_) => const Text(Routes.second),
-        Routes.third: (_) => const Text(Routes.third),
+        Routes.first: WizardRoute(builder: (_) => const Text(Routes.first)),
+        Routes.second: WizardRoute(builder: (_) => const Text(Routes.second)),
+        Routes.third: WizardRoute(builder: (_) => const Text(Routes.third)),
       },
     );
 
@@ -362,9 +356,9 @@ void main() {
     await pumpWizardApp(
       tester,
       routes: {
-        Routes.first: (_) => const Text(Routes.first),
-        Routes.second: (_) => const Text(Routes.second),
-        Routes.third: (_) => const Text(Routes.third),
+        Routes.first: WizardRoute(builder: (_) => const Text(Routes.first)),
+        Routes.second: WizardRoute(builder: (_) => const Text(Routes.second)),
+        Routes.third: WizardRoute(builder: (_) => const Text(Routes.third)),
       },
     );
 
@@ -394,8 +388,8 @@ void main() {
     await pumpWizardApp(
       tester,
       routes: {
-        Routes.first: (_) => const Text(Routes.first),
-        Routes.second: (_) => const Text(Routes.second),
+        Routes.first: WizardRoute(builder: (_) => const Text(Routes.first)),
+        Routes.second: WizardRoute(builder: (_) => const Text(Routes.second)),
       },
     );
 
