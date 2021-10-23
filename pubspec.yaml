@@ -1,0 +1,19 @@
+name: xdg_icons
+description: XDG icon theme lookup.
+homepage: https://github.com/jpnurmi/xdg_icons.dart
+repository: https://github.com/jpnurmi/xdg_icons.dart
+issue_tracker: https://github.com/jpnurmi/xdg_icons.dart/issues
+version: 0.0.1
+
+environment:
+  sdk: '>=2.12.0 <3.0.0'
+
+dependencies:
+  collection: ^1.15.0
+  dbus: ^0.6.3
+  gsettings: ^0.2.0
+  ini: ^2.1.0
+  path: ^1.8.0
+
+dev_dependencies:
+  lints: ^1.0.0
