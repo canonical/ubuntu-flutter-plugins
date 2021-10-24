@@ -31,7 +31,7 @@ class MyHomePage extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             FutureBuilder(
-              future: XdgIconTheme.fromName('Yaru'),
+              future: XdgIconThemeData.fromName('Yaru'),
               builder: (context, snapshot) {
                 if (!snapshot.hasData || snapshot.data == null) {
                   return SizedBox.shrink();
@@ -40,7 +40,7 @@ class MyHomePage extends StatelessWidget {
                   name: 'computer',
                   size: 64,
                   scale: 1,
-                  theme: snapshot.data as XdgIconTheme,
+                  theme: snapshot.data as XdgIconThemeData,
                 );
               },
             ),

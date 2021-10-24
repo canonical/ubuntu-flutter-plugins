@@ -39,7 +39,7 @@ class XdgIcon extends StatelessWidget {
   final String name;
   final int size;
   final int scale;
-  final XdgIconTheme theme;
+  final XdgIconThemeData theme;
 
   final Future<XdgIconData?> _data;
 

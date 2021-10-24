@@ -8,8 +8,8 @@ import 'icon.dart';
 import 'icons.dart';
 import 'lookup.dart';
 
-class XdgIconTheme {
-  const XdgIconTheme({
+class XdgIconThemeData {
+  const XdgIconThemeData({
     required this.name,
     required this.path,
     required this.description,
@@ -20,14 +20,14 @@ class XdgIconTheme {
     this.example,
   });
 
-  static Future<XdgIconTheme> system() async {
+  static Future<XdgIconThemeData> system() async {
     final settings = GSettings('org.gnome.desktop.interface');
     final theme = await settings.get('icon-theme');
     await settings.close();
     return fromName((theme as DBusString?)?.value ?? 'hicolor');
   }
 
-  static Future<XdgIconTheme> fromName(String name) async {
+  static Future<XdgIconThemeData> fromName(String name) async {
     for (final searchPath in XdgIcons.searchPaths) {
       final path = p.join(searchPath, name);
       if (await XdgIcons.fs.file(p.join(path, 'index.theme')).exists()) {
@@ -37,7 +37,7 @@ class XdgIconTheme {
     throw UnsupportedError('Icon theme $name not found');
   }
 
-  static Future<XdgIconTheme> fromPath(String path) async {
+  static Future<XdgIconThemeData> fromPath(String path) async {
     final file = XdgIcons.fs.file(p.join(path, 'index.theme'));
     if (!await file.exists()) {
       throw UnsupportedError('Icon theme ${file.path} not found');
@@ -46,15 +46,15 @@ class XdgIconTheme {
 
     const section = 'Icon Theme';
 
-    Future<List<XdgIconTheme>?> readThemes(String key) async {
+    Future<List<XdgIconThemeData>?> readThemes(String key) async {
       final names = config
           .get(section, key)
           ?.split(',')
           .where((name) => name.trim().isNotEmpty);
       if (names == null) return null;
-      final themes = <XdgIconTheme>[];
+      final themes = <XdgIconThemeData>[];
       for (final name in names) {
-        themes.add(await XdgIconTheme.fromName(name.trim()));
+        themes.add(await XdgIconThemeData.fromName(name.trim()));
       }
       return themes;
     }
@@ -69,7 +69,7 @@ class XdgIconTheme {
           .toList();
     }
 
-    return XdgIconTheme(
+    return XdgIconThemeData(
       name: config.get(section, 'Name')!,
       path: path,
       description: config.get(section, 'Comment')!,
@@ -96,7 +96,7 @@ class XdgIconTheme {
   /// If no theme is specified implementations are required to add the "hicolor"
   /// theme to the inheritance tree. An implementation may optionally add other
   /// default themes in between the last specified theme and the hicolor theme.
-  final List<XdgIconTheme>? parents;
+  final List<XdgIconThemeData>? parents;
 
   /// List of subdirectories for this theme. For every subdirectory there must
   /// be a section in the `index.theme` file describing that directory.
