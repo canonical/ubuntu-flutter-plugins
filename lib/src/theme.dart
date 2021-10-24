@@ -3,7 +3,7 @@ import 'package:gsettings/gsettings.dart';
 import 'package:ini/ini.dart';
 import 'package:path/path.dart' as p;
 
-import 'directory.dart';
+import 'dir.dart';
 import 'icon.dart';
 import 'icons.dart';
 import 'lookup.dart';
@@ -14,8 +14,8 @@ class XdgIconTheme {
     required this.path,
     required this.description,
     this.parents,
-    required this.directories,
-    this.scaledDirectories,
+    required this.dirs,
+    this.scaledDirs,
     this.hidden,
     this.example,
   });
@@ -59,14 +59,13 @@ class XdgIconTheme {
       return themes;
     }
 
-    List<XdgIconDirectory>? readDirectories(String key) {
-      final directories = config
+    List<XdgIconDir>? readDirs(String key) {
+      final dirs = config
           .get(section, key)
           ?.split(',')
           .where((dir) => dir.trim().isNotEmpty);
-      return directories
-          ?.map(
-              (section) => XdgIconDirectory.fromConfig(config, section.trim()))
+      return dirs
+          ?.map((section) => XdgIconDir.fromConfig(config, section.trim()))
           .toList();
     }
 
@@ -75,8 +74,8 @@ class XdgIconTheme {
       path: path,
       description: config.get(section, 'Comment')!,
       parents: await readThemes('Inherits'),
-      directories: readDirectories('Directories')!,
-      scaledDirectories: readDirectories('ScaledDirectories'),
+      dirs: readDirs('Directories')!,
+      scaledDirs: readDirs('ScaledDirectories'),
       hidden: config.get(section, 'Hidden')?.toLowerCase() == 'true',
       example: config.get(section, 'Example'),
     );
@@ -101,13 +100,13 @@ class XdgIconTheme {
 
   /// List of subdirectories for this theme. For every subdirectory there must
   /// be a section in the `index.theme` file describing that directory.
-  final List<XdgIconDirectory> directories;
+  final List<XdgIconDir> dirs;
 
   /// Additional list of subdirectories for this theme, in addition to the ones
-  /// in [directories]. These directories should only be read by implementations
+  /// in [dirs]. These directories should only be read by implementations
   /// supporting scaled directories and was added to keep compatibility with old
   /// implementations that don't support these.
-  final List<XdgIconDirectory>? scaledDirectories;
+  final List<XdgIconDir>? scaledDirs;
 
   /// Whether to hide the theme in a theme selection user interface. This is
   /// used for things such as fallback-themes that are not supposed to be
@@ -126,5 +125,5 @@ class XdgIconTheme {
 
   @override
   String toString() =>
-      'XdgIconTheme(name: $name, description: $description, parents: $parents, directories: $directories, scaledDirectories: $scaledDirectories, hidden: $hidden, example: $example)';
+      'XdgIconTheme(name: $name, description: $description, parents: $parents, dirs: $dirs, scaledDirs: $scaledDirs, hidden: $hidden, example: $example)';
 }

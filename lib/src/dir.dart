@@ -3,8 +3,8 @@ import 'package:ini/ini.dart';
 
 import 'icon.dart';
 
-class XdgIconDirectory {
-  const XdgIconDirectory({
+class XdgIconDir {
+  const XdgIconDir({
     required this.name,
     required this.size,
     int? scale,
@@ -19,9 +19,9 @@ class XdgIconDirectory {
         minSize = minSize ?? size,
         threshold = threshold ?? 2;
 
-  factory XdgIconDirectory.fromConfig(Config config, String section) {
+  factory XdgIconDir.fromConfig(Config config, String section) {
     final type = config.get(section, 'Type')?.toLowerCase();
-    return XdgIconDirectory(
+    return XdgIconDir(
       name: section,
       size: int.parse(config.get(section, 'Size')!),
       scale: int.tryParse(config.get(section, 'Scale') ?? ''),
@@ -43,7 +43,7 @@ class XdgIconDirectory {
 
   /// Target scale of of the icons in this directory. Defaults to the value 1 if
   /// not present. Any directory with a scale other than 1 should be listed in
-  /// the [XdgIconTheme.scaledDirectories] list rather than [XdgIconTheme.directories]
+  /// the [XdgIconTheme.scaledDirs] list rather than [XdgIconTheme.dirs]
   /// for backwards compatibility.
   final int? scale;
 
@@ -71,5 +71,5 @@ class XdgIconDirectory {
 
   @override
   String toString() =>
-      'XdgIconDirectory(name: $name, size: $size, scale: $scale, context: $context, type: $type, maxSize: $maxSize, minSize: $minSize, threshold: $threshold)';
+      'XdgIconDir(name: $name, size: $size, scale: $scale, context: $context, type: $type, maxSize: $maxSize, minSize: $minSize, threshold: $threshold)';
 }

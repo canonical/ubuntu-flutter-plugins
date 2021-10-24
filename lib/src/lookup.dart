@@ -1,6 +1,6 @@
 import 'package:path/path.dart' as p;
 
-import 'directory.dart';
+import 'dir.dart';
 import 'icon.dart';
 import 'icons.dart';
 import 'theme.dart';
@@ -35,19 +35,19 @@ extension XdgIconThemeLookup on XdgIconTheme {
 
   XdgIcon? lookupIcon(String icon, int size, int scale) {
     final basename = p.basename(path);
-    for (final directory in directories) {
-      if (!directory.matchesSize(size, scale)) continue;
+    for (final dir in dirs) {
+      if (!dir.matchesSize(size, scale)) continue;
 
       for (final path in XdgIcons.searchPaths) {
         for (final ext in XdgIcons.extensions) {
-          final filename = '$path/$basename/${directory.name}/$icon.$ext';
+          final filename = '$path/$basename/${dir.name}/$icon.$ext';
           if (XdgIcons.fs.file(filename).existsSync()) {
             return XdgIcon(
               filename,
-              type: directory.type,
+              type: dir.type,
               size: size,
-              scale: directory.scale,
-              context: directory.context,
+              scale: dir.scale,
+              context: dir.context,
             );
           }
         }
@@ -56,21 +56,21 @@ extension XdgIconThemeLookup on XdgIconTheme {
 
     XdgIcon? closestIcon;
     var minimalSize = (1 << 63) - 1;
-    for (final directory in directories) {
-      if (directory.sizeDistance(size, scale) >= minimalSize) continue;
+    for (final dir in dirs) {
+      if (dir.sizeDistance(size, scale) >= minimalSize) continue;
 
       for (final path in XdgIcons.searchPaths) {
         for (final ext in XdgIcons.extensions) {
-          final filename = '$path/$basename/$directory/$icon.$ext';
+          final filename = '$path/$basename/$dir/$icon.$ext';
           if (XdgIcons.fs.file(filename).existsSync()) {
             closestIcon = XdgIcon(
               filename,
-              type: directory.type,
+              type: dir.type,
               size: size,
-              scale: directory.scale,
-              context: directory.context,
+              scale: dir.scale,
+              context: dir.context,
             );
-            minimalSize = directory.sizeDistance(size, scale);
+            minimalSize = dir.sizeDistance(size, scale);
           }
         }
       }
@@ -79,7 +79,7 @@ extension XdgIconThemeLookup on XdgIconTheme {
   }
 }
 
-extension XdgIconDirectoryLookup on XdgIconDirectory {
+extension XdgIconDirLookup on XdgIconDir {
   bool matchesSize(int size, int scale) {
     switch (type) {
       case XdgIconType.fixed:
