@@ -1,6 +1,6 @@
 import 'package:file/memory.dart';
+import 'package:flutter_test/flutter_test.dart';
 import 'package:platform/platform.dart';
-import 'package:test/test.dart';
 import 'package:xdg_icons/xdg_icons.dart';
 
 import 'data/birch_theme.dart';

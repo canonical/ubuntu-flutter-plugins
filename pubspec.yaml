@@ -7,11 +7,14 @@ version: 0.0.1
 
 environment:
   sdk: '>=2.12.0 <3.0.0'
+  flutter: '>=1.17.0'
 
 dependencies:
   collection: ^1.15.0
   dbus: ^0.6.3
   file: ^6.1.2
+  flutter:
+    sdk: flutter
   gsettings: ^0.2.0
   ini: ^2.1.0
   meta: ^1.7.0
@@ -19,5 +22,6 @@ dependencies:
   platform: ^3.0.2
 
 dev_dependencies:
-  lints: ^1.0.0
-  test: ^1.19.1
+  flutter_lints: ^1.0.0
+  flutter_test:
+    sdk: flutter
