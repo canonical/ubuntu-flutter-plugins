@@ -3,8 +3,8 @@ import 'package:gsettings/gsettings.dart';
 import 'package:ini/ini.dart';
 import 'package:path/path.dart' as p;
 
-import 'data.dart';
 import 'dir.dart';
+import 'icon.dart';
 import 'icons.dart';
 import 'lookup.dart';
 

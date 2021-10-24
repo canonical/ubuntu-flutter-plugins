@@ -1,7 +1,7 @@
 import 'package:path/path.dart' as p;
 
-import 'data.dart';
 import 'dir.dart';
+import 'icon.dart';
 import 'icons.dart';
 import 'theme.dart';
 
