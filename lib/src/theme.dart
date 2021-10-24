@@ -1,5 +1,3 @@
-import 'dart:io';
-
 import 'package:dbus/dbus.dart';
 import 'package:gsettings/gsettings.dart';
 import 'package:ini/ini.dart';
@@ -27,18 +25,20 @@ class XdgIconTheme {
   }
 
   static Future<XdgIconTheme> fromName(String name) async {
-    for (final path in XdgIcons.searchPaths) {
-      if (await File('$path/$name/index.theme').exists()) {
-        return fromPath('$path/$name');
+    for (final searchPath in XdgIcons.searchPaths) {
+      final path = '$searchPath/$name/index.theme';
+      print(path);
+      if (await XdgIcons.fs.file(path).exists()) {
+        return fromPath(path);
       }
     }
     throw UnsupportedError('Icon theme $name not found');
   }
 
   static Future<XdgIconTheme> fromPath(String path) async {
-    final file = File('$path/index.theme');
+    final file = XdgIcons.fs.file(path);
     if (!await file.exists()) {
-      throw UnsupportedError('Icon theme $path not found');
+      throw UnsupportedError('Icon theme ${file.path} not found');
     }
     return fromConfig(Config.fromStrings(await file.readAsLines()));
   }
@@ -53,8 +53,8 @@ class XdgIconTheme {
           .where((name) => name.trim().isNotEmpty);
       if (names == null) return null;
       final themes = <XdgIconTheme>[];
-      for (final theme in names) {
-        themes.add(await XdgIconTheme.fromName(theme.trim()));
+      for (final name in names) {
+        themes.add(await XdgIconTheme.fromName(name.trim()));
       }
       return themes;
     }
@@ -143,7 +143,7 @@ class XdgIconTheme {
         for (final ext in XdgIcons.extensions) {
           if (subdir.matchesSize(size, scale)) {
             final filename = '$directory/$name/${subdir.name}/$icon.$ext';
-            if (File(filename).existsSync()) {
+            if (XdgIcons.fs.file(filename).existsSync()) {
               return XdgIcon(
                 filename,
                 type: subdir.type,
@@ -162,7 +162,7 @@ class XdgIconTheme {
       for (final directory in XdgIcons.searchPaths) {
         for (final ext in XdgIcons.extensions) {
           final filename = '$directory/$name/$subdir/$icon.$ext';
-          if (File(filename).existsSync() &&
+          if (XdgIcons.fs.file(filename).existsSync() &&
               subdir.sizeDistance(size, scale) < minimalSize) {
             closestIcon = XdgIcon(
               filename,
@@ -181,7 +181,7 @@ class XdgIconTheme {
   static XdgIcon? lookupFallbackIcon(String icon) {
     for (final path in XdgIcons.searchPaths) {
       for (final ext in XdgIcons.extensions) {
-        if (File('$path/$icon.$ext').existsSync()) {
+        if (XdgIcons.fs.file('$path/$icon.$ext').existsSync()) {
           return XdgIcon('$path/$icon.$ext');
         }
       }

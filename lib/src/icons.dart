@@ -1,6 +1,8 @@
-import 'dart:io';
-
+import 'package:file/file.dart';
+import 'package:file/local.dart';
+import 'package:meta/meta.dart';
 import 'package:path/path.dart' as p;
+import 'package:platform/platform.dart';
 
 class XdgIcons {
   static List<String>? _extensions;
@@ -13,11 +15,11 @@ class XdgIcons {
 
   static List<String> get defaultSearchPaths {
     return [
-      p.join(Platform.environment['HOME'] ?? '', '.icons'),
-      ...?Platform.environment['XDG_DATA_DIRS']
+      p.join(platform.environment['HOME'] ?? '', '.icons'),
+      ...?platform.environment['XDG_DATA_DIRS']
           ?.split(':')
-          .map((dir) => p.join(dir + 'icons'))
-          .where((dir) => Directory(dir).existsSync())
+          .map((dir) => p.join(dir, 'icons'))
+          .where((dir) => fs.directory(dir).existsSync())
           .toList(),
       '/usr/share/pixmaps'
     ];
@@ -25,4 +27,10 @@ class XdgIcons {
 
   static List<String> get searchPaths => _searchPaths ??= defaultSearchPaths;
   static set searchPaths(List<String> paths) => _searchPaths = paths;
+
+  @internal
+  static FileSystem fs = LocalFileSystem();
+
+  @internal
+  static Platform platform = LocalPlatform();
 }

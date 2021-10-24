@@ -11,9 +11,13 @@ environment:
 dependencies:
   collection: ^1.15.0
   dbus: ^0.6.3
+  file: ^6.1.2
   gsettings: ^0.2.0
   ini: ^2.1.0
+  meta: ^1.7.0
   path: ^1.8.0
+  platform: ^3.0.2
 
 dev_dependencies:
   lints: ^1.0.0
+  test: ^1.19.1
