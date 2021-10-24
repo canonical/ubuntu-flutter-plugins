@@ -85,40 +85,13 @@ class XdgIconThemeData {
     );
   }
 
-  /// Short name of the icon theme, used in e.g. lists when selecting themes.
   final String name;
-
   final String path;
-
-  /// Longer string describing the theme.
   final String description;
-
-  /// The name of the theme that this theme inherits from. If an icon name is
-  /// not found in the current theme, it is searched for in the inherited theme
-  /// (and recursively in all the inherited themes).
-  ///
-  /// If no theme is specified implementations are required to add the "hicolor"
-  /// theme to the inheritance tree. An implementation may optionally add other
-  /// default themes in between the last specified theme and the hicolor theme.
   final List<XdgIconThemeData>? parents;
-
-  /// List of subdirectories for this theme. For every subdirectory there must
-  /// be a section in the `index.theme` file describing that directory.
   final List<XdgIconDir> dirs;
-
-  /// Additional list of subdirectories for this theme, in addition to the ones
-  /// in [dirs]. These directories should only be read by implementations
-  /// supporting scaled directories and was added to keep compatibility with old
-  /// implementations that don't support these.
   final List<XdgIconDir>? scaledDirs;
-
-  /// Whether to hide the theme in a theme selection user interface. This is
-  /// used for things such as fallback-themes that are not supposed to be
-  /// visible to the user.
   final bool? hidden;
-
-  /// The name of an icon that should be used as an example of how this theme
-  /// looks.
   final String? example;
 
   Future<XdgIconData?> findIcon(String name, int size, int scale) async {
