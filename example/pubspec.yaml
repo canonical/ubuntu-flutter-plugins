@@ -1,0 +1,17 @@
+name: xdg_icons_example
+description: XDG icons example
+publish_to: 'none'
+
+environment:
+  sdk: '>=2.12.0 <3.0.0'
+  flutter: '>=1.17.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  xdg_icons:
+    path: ../
+  yaru: ^0.1.6
+
+flutter:
+  uses-material-design: true
