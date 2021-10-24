@@ -142,19 +142,19 @@ class XdgIconTheme {
   XdgIcon? lookupIcon(String icon, int size, int scale) {
     final basename = p.basename(path);
     for (final directory in directories) {
+      if (!directory.matchesSize(size, scale)) continue;
+
       for (final path in XdgIcons.searchPaths) {
         for (final ext in XdgIcons.extensions) {
-          if (directory.matchesSize(size, scale)) {
-            final filename = '$path/$basename/${directory.name}/$icon.$ext';
-            if (XdgIcons.fs.file(filename).existsSync()) {
-              return XdgIcon(
-                filename,
-                type: directory.type,
-                size: size,
-                scale: directory.scale,
-                context: directory.context,
-              );
-            }
+          final filename = '$path/$basename/${directory.name}/$icon.$ext';
+          if (XdgIcons.fs.file(filename).existsSync()) {
+            return XdgIcon(
+              filename,
+              type: directory.type,
+              size: size,
+              scale: directory.scale,
+              context: directory.context,
+            );
           }
         }
       }
@@ -163,11 +163,12 @@ class XdgIconTheme {
     XdgIcon? closestIcon;
     var minimalSize = (1 << 63) - 1;
     for (final directory in directories) {
+      if (directory.sizeDistance(size, scale) >= minimalSize) continue;
+
       for (final path in XdgIcons.searchPaths) {
         for (final ext in XdgIcons.extensions) {
           final filename = '$path/$basename/$directory/$icon.$ext';
-          if (XdgIcons.fs.file(filename).existsSync() &&
-              directory.sizeDistance(size, scale) < minimalSize) {
+          if (XdgIcons.fs.file(filename).existsSync()) {
             closestIcon = XdgIcon(
               filename,
               type: directory.type,
