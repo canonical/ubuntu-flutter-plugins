@@ -1,15 +1,15 @@
 import 'package:path/path.dart' as p;
 
+import 'data.dart';
 import 'dir.dart';
-import 'icon.dart';
 import 'icons.dart';
 import 'theme.dart';
 
-XdgIcon? lookupFallbackIcon(String icon) {
+XdgIconData? lookupFallbackIcon(String icon) {
   for (final path in XdgIcons.searchPaths) {
     for (final ext in XdgIcons.extensions) {
       if (XdgIcons.fs.file('$path/$icon.$ext').existsSync()) {
-        return XdgIcon('$path/$icon.$ext', type: XdgIconType.fallback);
+        return XdgIconData('$path/$icon.$ext', type: XdgIconType.fallback);
       }
     }
   }
@@ -17,7 +17,7 @@ XdgIcon? lookupFallbackIcon(String icon) {
 }
 
 extension XdgIconThemeLookup on XdgIconTheme {
-  XdgIcon? findIconHelper(
+  XdgIconData? findIconHelper(
       String name, int size, int scale, XdgIconTheme theme) {
     final filename = lookupIcon(name, size, scale);
     if (filename != null) {
@@ -33,7 +33,7 @@ extension XdgIconThemeLookup on XdgIconTheme {
     return null;
   }
 
-  XdgIcon? lookupIcon(String icon, int size, int scale) {
+  XdgIconData? lookupIcon(String icon, int size, int scale) {
     final basename = p.basename(path);
     for (final dir in dirs) {
       if (!dir.matchesSize(size, scale)) continue;
@@ -42,7 +42,7 @@ extension XdgIconThemeLookup on XdgIconTheme {
         for (final ext in XdgIcons.extensions) {
           final filename = '$path/$basename/${dir.name}/$icon.$ext';
           if (XdgIcons.fs.file(filename).existsSync()) {
-            return XdgIcon(
+            return XdgIconData(
               filename,
               type: dir.type,
               size: size,
@@ -54,7 +54,7 @@ extension XdgIconThemeLookup on XdgIconTheme {
       }
     }
 
-    XdgIcon? closestIcon;
+    XdgIconData? closestIcon;
     var minimalSize = (1 << 63) - 1;
     for (final dir in dirs) {
       if (dir.sizeDistance(size, scale) >= minimalSize) continue;
@@ -63,7 +63,7 @@ extension XdgIconThemeLookup on XdgIconTheme {
         for (final ext in XdgIcons.extensions) {
           final filename = '$path/$basename/$dir/$icon.$ext';
           if (XdgIcons.fs.file(filename).existsSync()) {
-            closestIcon = XdgIcon(
+            closestIcon = XdgIconData(
               filename,
               type: dir.type,
               size: size,

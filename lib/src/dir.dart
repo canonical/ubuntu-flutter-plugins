@@ -1,7 +1,7 @@
 import 'package:collection/collection.dart';
 import 'package:ini/ini.dart';
 
-import 'icon.dart';
+import 'data.dart';
 
 class XdgIconDir {
   const XdgIconDir({

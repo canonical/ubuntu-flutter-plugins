@@ -1,7 +1,7 @@
 enum XdgIconType { fixed, scalable, threshold, fallback }
 
-class XdgIcon {
-  const XdgIcon(
+class XdgIconData {
+  const XdgIconData(
     this.path, {
     this.type,
     this.size,

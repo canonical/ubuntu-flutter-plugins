@@ -3,8 +3,8 @@ import 'package:gsettings/gsettings.dart';
 import 'package:ini/ini.dart';
 import 'package:path/path.dart' as p;
 
+import 'data.dart';
 import 'dir.dart';
-import 'icon.dart';
 import 'icons.dart';
 import 'lookup.dart';
 
@@ -117,7 +117,7 @@ class XdgIconTheme {
   /// looks.
   final String? example;
 
-  Future<XdgIcon?> findIcon(String name, int size, int scale) async {
+  Future<XdgIconData?> findIcon(String name, int size, int scale) async {
     return findIconHelper(name, size, scale, this) ??
         findIconHelper(name, size, scale, await fromName('hicolor')) ??
         lookupFallbackIcon(name);
