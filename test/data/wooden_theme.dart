@@ -38,9 +38,10 @@ void writeWoodenTheme(FileSystem fs, String path) {
   fs.directory(path).createSync(recursive: true);
   fs.file('$path/index.theme').writeAsStringSync(woodenTheme);
 
-  fs.file('$path/32x32/apps').createSync(recursive: true);
-  fs.file('$path/32x32@2/apps').createSync(recursive: true);
-  fs.file('$path/48x48/apps').createSync(recursive: true);
-  fs.file('$path/48x48@2/apps').createSync(recursive: true);
   fs.file('$path/48x48/mimetypes').createSync(recursive: true);
+
+  fs.file('$path/32x32/apps/firefox.png').createSync(recursive: true);
+  fs.file('$path/32x32@2/apps/firefox.png').createSync(recursive: true);
+  fs.file('$path/48x48/apps/firefox.png').createSync(recursive: true);
+  fs.file('$path/48x48@2/apps/firefox.png').createSync(recursive: true);
 }

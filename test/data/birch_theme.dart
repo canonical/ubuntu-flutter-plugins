@@ -60,6 +60,7 @@ void writeBirchTheme(FileSystem fs, String path) {
   fs.file('$path/48x48/apps').createSync(recursive: true);
   fs.file('$path/48x48@2/apps').createSync(recursive: true);
   fs.file('$path/48x48/mimetypes').createSync(recursive: true);
-  fs.file('$path/scalable/apps').createSync(recursive: true);
   fs.file('$path/scalable/mimetypes').createSync(recursive: true);
+
+  fs.file('$path/scalable/apps/firefox.svg').createSync(recursive: true);
 }

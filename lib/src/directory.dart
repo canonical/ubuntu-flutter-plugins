@@ -13,7 +13,7 @@ class XdgIconDirectory {
     int? maxSize,
     int? minSize,
     int? threshold,
-  })  : scale = scale ?? 1,
+  })  : scale = scale ?? (type != XdgIconType.scalable ? 1 : null),
         type = type ?? XdgIconType.threshold,
         maxSize = maxSize ?? size,
         minSize = minSize ?? size,
@@ -25,9 +25,9 @@ class XdgIconDirectory {
       name: section,
       size: int.parse(config.get(section, 'Size')!),
       scale: int.tryParse(config.get(section, 'Scale') ?? ''),
-      context: config.get(section, 'context'),
+      context: config.get(section, 'Context'),
       type: XdgIconType.values.firstWhereOrNull(
-        (value) => value.toString().toLowerCase() == type,
+        (value) => value.toString().split('.').last.toLowerCase() == type,
       ),
       maxSize: int.tryParse(config.get(section, 'MaxSize') ?? ''),
       minSize: int.tryParse(config.get(section, 'MinSize') ?? ''),
@@ -45,7 +45,7 @@ class XdgIconDirectory {
   /// not present. Any directory with a scale other than 1 should be listed in
   /// the [XdgIconTheme.scaledDirectories] list rather than [XdgIconTheme.directories]
   /// for backwards compatibility.
-  final int scale;
+  final int? scale;
 
   /// The context the icon is normally used in. This is in detail discussed in
   /// the section called “Context”.
@@ -70,40 +70,40 @@ class XdgIconDirectory {
   final int threshold;
 
   bool matchesSize(int size, int scale) {
-    if (this.scale != scale) return false;
-
     switch (type) {
       case XdgIconType.fixed:
-        return this.size == size;
+        return this.scale == scale && this.size == size;
 
       case XdgIconType.scalable:
         return minSize <= size && size <= maxSize;
 
       case XdgIconType.threshold:
-        return this.size - threshold <= size && size <= this.size + threshold;
+        return this.scale == scale &&
+            this.size - threshold <= size &&
+            size <= this.size + threshold;
     }
   }
 
   int sizeDistance(int size, int scale) {
     switch (type) {
       case XdgIconType.fixed:
-        return (this.size * this.scale - size * scale).abs();
+        return (this.size * this.scale! - size * scale).abs();
 
       case XdgIconType.scalable:
-        if (size * scale < minSize * this.scale) {
-          return minSize * this.scale - size * scale;
+        if (size * scale < minSize) {
+          return minSize - size * scale;
         }
-        if (size * scale > maxSize * this.scale) {
-          return size * scale - maxSize * this.scale;
+        if (size * scale > maxSize) {
+          return size * scale - maxSize;
         }
         return 0;
 
       case XdgIconType.threshold:
-        if (size * scale < (this.size - threshold) * this.scale) {
-          return minSize * this.scale - size * scale;
+        if (size * scale < (this.size - threshold) * this.scale!) {
+          return minSize * this.scale! - size * scale;
         }
-        if (size * size > (this.size + threshold) * this.scale) {
-          return size * size - maxSize * this.scale;
+        if (size * size > (this.size + threshold) * this.scale!) {
+          return size * size - maxSize * this.scale!;
         }
         return 0;
     }

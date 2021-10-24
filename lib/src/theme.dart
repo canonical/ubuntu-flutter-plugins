@@ -1,6 +1,7 @@
 import 'package:dbus/dbus.dart';
 import 'package:gsettings/gsettings.dart';
 import 'package:ini/ini.dart';
+import 'package:path/path.dart' as p;
 
 import 'directory.dart';
 import 'icon.dart';
@@ -9,6 +10,7 @@ import 'icons.dart';
 class XdgIconTheme {
   const XdgIconTheme({
     required this.name,
+    required this.path,
     required this.description,
     this.parents,
     required this.directories,
@@ -26,9 +28,8 @@ class XdgIconTheme {
 
   static Future<XdgIconTheme> fromName(String name) async {
     for (final searchPath in XdgIcons.searchPaths) {
-      final path = '$searchPath/$name/index.theme';
-      print(path);
-      if (await XdgIcons.fs.file(path).exists()) {
+      final path = p.join(searchPath, name);
+      if (await XdgIcons.fs.file(p.join(path, 'index.theme')).exists()) {
         return fromPath(path);
       }
     }
@@ -36,14 +37,12 @@ class XdgIconTheme {
   }
 
   static Future<XdgIconTheme> fromPath(String path) async {
-    final file = XdgIcons.fs.file(path);
+    final file = XdgIcons.fs.file(p.join(path, 'index.theme'));
     if (!await file.exists()) {
       throw UnsupportedError('Icon theme ${file.path} not found');
     }
-    return fromConfig(Config.fromStrings(await file.readAsLines()));
-  }
+    final config = Config.fromStrings(await file.readAsLines());
 
-  static Future<XdgIconTheme> fromConfig(Config config) async {
     const section = 'Icon Theme';
 
     Future<List<XdgIconTheme>?> readThemes(String key) async {
@@ -72,6 +71,7 @@ class XdgIconTheme {
 
     return XdgIconTheme(
       name: config.get(section, 'Name')!,
+      path: path,
       description: config.get(section, 'Comment')!,
       parents: await readThemes('Inherits'),
       directories: readDirectories('Directories')!,
@@ -83,6 +83,8 @@ class XdgIconTheme {
 
   /// Short name of the icon theme, used in e.g. lists when selecting themes.
   final String name;
+
+  final String path;
 
   /// Longer string describing the theme.
   final String description;
@@ -138,17 +140,19 @@ class XdgIconTheme {
   }
 
   XdgIcon? lookupIcon(String icon, int size, int scale) {
-    for (final subdir in directories) {
-      for (final directory in XdgIcons.searchPaths) {
+    final basename = p.basename(path);
+    for (final directory in directories) {
+      for (final path in XdgIcons.searchPaths) {
         for (final ext in XdgIcons.extensions) {
-          if (subdir.matchesSize(size, scale)) {
-            final filename = '$directory/$name/${subdir.name}/$icon.$ext';
+          if (directory.matchesSize(size, scale)) {
+            final filename = '$path/$basename/${directory.name}/$icon.$ext';
             if (XdgIcons.fs.file(filename).existsSync()) {
               return XdgIcon(
                 filename,
-                type: subdir.type,
+                type: directory.type,
                 size: size,
-                scale: scale,
+                scale: directory.scale,
+                context: directory.context,
               );
             }
           }
@@ -158,19 +162,20 @@ class XdgIconTheme {
 
     XdgIcon? closestIcon;
     var minimalSize = (1 << 63) - 1;
-    for (final subdir in directories) {
-      for (final directory in XdgIcons.searchPaths) {
+    for (final directory in directories) {
+      for (final path in XdgIcons.searchPaths) {
         for (final ext in XdgIcons.extensions) {
-          final filename = '$directory/$name/$subdir/$icon.$ext';
+          final filename = '$path/$basename/$directory/$icon.$ext';
           if (XdgIcons.fs.file(filename).existsSync() &&
-              subdir.sizeDistance(size, scale) < minimalSize) {
+              directory.sizeDistance(size, scale) < minimalSize) {
             closestIcon = XdgIcon(
               filename,
-              type: subdir.type,
+              type: directory.type,
               size: size,
-              scale: scale,
+              scale: directory.scale,
+              context: directory.context,
             );
-            minimalSize = subdir.sizeDistance(size, scale);
+            minimalSize = directory.sizeDistance(size, scale);
           }
         }
       }
