@@ -1,6 +1,6 @@
 # XDG Icons
 
-XDG icon theme lookup written in Dart.
+XDG theme icons for Flutter.
 
 https://specifications.freedesktop.org/icon-theme-spec/icon-theme-spec-latest.html
 
