@@ -188,7 +188,7 @@ class XdgIconTheme {
     for (final path in XdgIcons.searchPaths) {
       for (final ext in XdgIcons.extensions) {
         if (XdgIcons.fs.file('$path/$icon.$ext').existsSync()) {
-          return XdgIcon('$path/$icon.$ext');
+          return XdgIcon('$path/$icon.$ext', type: XdgIconType.fallback);
         }
       }
     }

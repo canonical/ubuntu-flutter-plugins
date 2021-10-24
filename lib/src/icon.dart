@@ -1,4 +1,4 @@
-enum XdgIconType { fixed, scalable, threshold }
+enum XdgIconType { fixed, scalable, threshold, fallback }
 
 class XdgIcon {
   const XdgIcon(

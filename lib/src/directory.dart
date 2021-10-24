@@ -81,6 +81,9 @@ class XdgIconDirectory {
         return this.scale == scale &&
             this.size - threshold <= size &&
             size <= this.size + threshold;
+
+      case XdgIconType.fallback:
+        throw ArgumentError('Fallback icons do not have a size');
     }
   }
 
@@ -106,6 +109,9 @@ class XdgIconDirectory {
           return size * size - maxSize * this.scale!;
         }
         return 0;
+
+      case XdgIconType.fallback:
+        throw ArgumentError('Fallback icons do not have a size');
     }
   }
 
