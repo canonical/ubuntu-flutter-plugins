@@ -6,7 +6,9 @@ https://specifications.freedesktop.org/icon-theme-spec/icon-theme-spec-latest.ht
 
 ## TODO
 
-- api
+- flutter integration
+- api cleanup
 - docs
-- caching
-- icon data
+- internal caching
+- cache files (icon-theme.cache)
+- icon data (.icon files)
