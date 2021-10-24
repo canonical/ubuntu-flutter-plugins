@@ -69,52 +69,6 @@ class XdgIconDirectory {
   /// much from the desired (unscaled) size. Defaults to 2 if not present.
   final int threshold;
 
-  bool matchesSize(int size, int scale) {
-    switch (type) {
-      case XdgIconType.fixed:
-        return this.scale == scale && this.size == size;
-
-      case XdgIconType.scalable:
-        return minSize <= size && size <= maxSize;
-
-      case XdgIconType.threshold:
-        return this.scale == scale &&
-            this.size - threshold <= size &&
-            size <= this.size + threshold;
-
-      case XdgIconType.fallback:
-        throw ArgumentError('Fallback icons do not have a size');
-    }
-  }
-
-  int sizeDistance(int size, int scale) {
-    switch (type) {
-      case XdgIconType.fixed:
-        return (this.size * this.scale! - size * scale).abs();
-
-      case XdgIconType.scalable:
-        if (size * scale < minSize) {
-          return minSize - size * scale;
-        }
-        if (size * scale > maxSize) {
-          return size * scale - maxSize;
-        }
-        return 0;
-
-      case XdgIconType.threshold:
-        if (size * scale < (this.size - threshold) * this.scale!) {
-          return minSize * this.scale! - size * scale;
-        }
-        if (size * size > (this.size + threshold) * this.scale!) {
-          return size * size - maxSize * this.scale!;
-        }
-        return 0;
-
-      case XdgIconType.fallback:
-        throw ArgumentError('Fallback icons do not have a size');
-    }
-  }
-
   @override
   String toString() =>
       'XdgIconDirectory(name: $name, size: $size, scale: $scale, context: $context, type: $type, maxSize: $maxSize, minSize: $minSize, threshold: $threshold)';
