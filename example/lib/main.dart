@@ -29,7 +29,22 @@ class MyHomePage extends StatelessWidget {
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[],
+          children: <Widget>[
+            FutureBuilder(
+              future: XdgIconTheme.fromName('Yaru'),
+              builder: (context, snapshot) {
+                if (!snapshot.hasData || snapshot.data == null) {
+                  return SizedBox.shrink();
+                }
+                return XdgIcon(
+                  name: 'computer',
+                  size: 64,
+                  scale: 1,
+                  theme: snapshot.data as XdgIconTheme,
+                );
+              },
+            ),
+          ],
         ),
       ),
     );
