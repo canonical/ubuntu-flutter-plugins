@@ -2,6 +2,24 @@ import 'package:flutter/material.dart';
 import 'package:xdg_icons/xdg_icons.dart';
 import 'package:yaru/yaru.dart' as yaru;
 
+const kThemes = ['Yaru', 'Adwaita', 'HighContrast'];
+const kIcons = [
+  'application-x-executable',
+  'avatar-default',
+  'audio-headphones',
+  'computer',
+  'edit-copy',
+  'edit-cut',
+  'edit-paste',
+  'emblem-favorite',
+  'folder',
+  'input-keyboard',
+  'media-removable',
+  'network-server',
+  'user-trash',
+  'zoom-in',
+];
+
 void main() {
   runApp(const MyApp());
 }
@@ -26,21 +44,37 @@ class MyHomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: Text('XDG icons')),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            const XdgIcon(name: 'computer'),
-            const SizedBox(height: 24),
-            const XdgIconTheme(
-              data: XdgIconThemeData(name: 'Yaru', size: 24),
-              child: XdgIcon(name: 'computer'),
+      body: SingleChildScrollView(
+        padding: const EdgeInsets.all(24),
+        child: Table(
+          defaultVerticalAlignment: TableCellVerticalAlignment.middle,
+          children: [
+            TableRow(
+              children: [
+                const SizedBox.shrink(),
+                for (final theme in kThemes)
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Text(theme,
+                        textAlign: TextAlign.center,
+                        style: Theme.of(context).textTheme.headline6),
+                  ),
+              ],
             ),
-            const SizedBox(height: 24),
-            const XdgIconTheme(
-              data: XdgIconThemeData(name: 'Adwaita'),
-              child: XdgIcon(name: 'computer', size: 48),
-            ),
+            for (final icon in kIcons)
+              TableRow(
+                children: [
+                  Text(icon, style: Theme.of(context).textTheme.caption),
+                  for (final theme in kThemes)
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: XdgIconTheme(
+                        data: XdgIconThemeData(name: theme),
+                        child: XdgIcon(name: icon, size: 48),
+                      ),
+                    ),
+                ],
+              ),
           ],
         ),
       ),
