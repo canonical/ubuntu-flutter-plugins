@@ -25,7 +25,8 @@ void main() {
     writeHicolorTheme(XdgIcons.fs, '/usr/share/icons/hicolor');
 
     final theme = await XdgIconThemeInfo.fromName('wooden');
-    expect(theme.name, 'Wooden');
+    expect(theme, isNotNull);
+    expect(theme!.name, 'Wooden');
     expect(theme.description, 'Icon theme with a wooden look');
 
     for (final sz in [32, 48]) {
@@ -52,7 +53,8 @@ void main() {
     writeWoodenTheme(XdgIcons.fs, '/usr/share/icons/wooden');
 
     final theme = await XdgIconThemeInfo.fromName('birch');
-    expect(theme.name, 'Birch');
+    expect(theme, isNotNull);
+    expect(theme!.name, 'Birch');
     expect(theme.description, 'Icon theme with a birch look');
 
     for (final scale in [1, 2]) {
