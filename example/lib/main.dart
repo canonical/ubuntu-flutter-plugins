@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:xdg_icons/xdg_icons.dart';
 import 'package:yaru/yaru.dart' as yaru;
 
-void main() {
+Future<void> main() async {
+  await XdgIcons.init();
   runApp(const MyApp());
 }
 
@@ -30,19 +31,16 @@ class MyHomePage extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            FutureBuilder(
-              future: XdgIconThemeInfo.fromName('Yaru'),
-              builder: (context, snapshot) {
-                if (!snapshot.hasData || snapshot.data == null) {
-                  return SizedBox.shrink();
-                }
-                return XdgIcon(
-                  name: 'computer',
-                  size: 64,
-                  scale: 1,
-                  theme: snapshot.data as XdgIconThemeInfo,
-                );
-              },
+            const XdgIcon(name: 'computer'),
+            const SizedBox(height: 24),
+            const XdgIconTheme(
+              data: XdgIconThemeData(name: 'Yaru', size: 24),
+              child: XdgIcon(name: 'computer'),
+            ),
+            const SizedBox(height: 24),
+            const XdgIconTheme(
+              data: XdgIconThemeData(name: 'Adwaita'),
+              child: XdgIcon(name: 'computer', size: 48),
             ),
           ],
         ),

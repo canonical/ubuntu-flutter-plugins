@@ -61,7 +61,7 @@ extension XdgIconThemeLookup on XdgIconThemeInfo {
 
       for (final path in XdgIcons.searchPaths) {
         for (final ext in XdgIcons.extensions) {
-          final filename = '$path/$basename/$dir/$icon.$ext';
+          final filename = '$path/$basename/${dir.name}/$icon.$ext';
           if (XdgIcons.fs.file(filename).existsSync()) {
             closestIcon = XdgIconData(
               filename,

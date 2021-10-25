@@ -1,5 +1,3 @@
-import 'package:dbus/dbus.dart';
-import 'package:gsettings/gsettings.dart';
 import 'package:ini/ini.dart';
 import 'package:path/path.dart' as p;
 
@@ -20,23 +18,17 @@ class XdgIconThemeInfo {
     this.example,
   });
 
-  static Future<XdgIconThemeInfo> system() async {
-    final settings = GSettings('org.gnome.desktop.interface');
-    final theme = await settings.get('icon-theme');
-    await settings.close();
-    return fromName((theme as DBusString?)?.value ?? 'hicolor');
-  }
+  static Future<XdgIconThemeInfo> system() =>
+      fromName(XdgIcons.systemTheme).then((theme) => theme!);
 
-  static Future<XdgIconThemeInfo> fallback() => fromName('hicolor');
-
-  static Future<XdgIconThemeInfo> fromName(String name) async {
+  static Future<XdgIconThemeInfo?> fromName(String? name) async {
     for (final searchPath in XdgIcons.searchPaths) {
       final path = p.join(searchPath, name);
       if (await XdgIcons.fs.file(p.join(path, 'index.theme')).exists()) {
         return fromPath(path);
       }
     }
-    throw UnsupportedError('Icon theme $name not found');
+    return null;
   }
 
   static Future<XdgIconThemeInfo> fromPath(String path) async {
@@ -56,7 +48,10 @@ class XdgIconThemeInfo {
       if (names == null) return null;
       final themes = <XdgIconThemeInfo>[];
       for (final name in names) {
-        themes.add(await XdgIconThemeInfo.fromName(name.trim()));
+        final theme = await XdgIconThemeInfo.fromName(name.trim());
+        if (theme != null) {
+          themes.add(theme);
+        }
       }
       return themes;
     }
@@ -93,12 +88,13 @@ class XdgIconThemeInfo {
   final String? example;
 
   Future<XdgIconData?> findIcon(String name, int size, int scale) async {
+    final system = await XdgIconThemeInfo.system();
     return findIconHelper(name, size, scale, this) ??
-        findIconHelper(name, size, scale, await fallback()) ??
+        (system != this ? findIconHelper(name, size, scale, system) : null) ??
         lookupFallbackIcon(name);
   }
 
   @override
   String toString() =>
-      'XdgIconTheme(name: $name, description: $description, parents: $parents, dirs: $dirs, scaledDirs: $scaledDirs, hidden: $hidden, example: $example)';
+      'XdgIconTheme(name: $name, path: $path, description: $description, parents: $parents, dirs: $dirs, scaledDirs: $scaledDirs, hidden: $hidden, example: $example)';
 }
