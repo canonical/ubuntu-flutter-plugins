@@ -42,6 +42,20 @@ class XdgIcon extends StatelessWidget {
   }
 }
 
+class XdgIconThemeData {
+  XdgIconThemeData({
+    this.name,
+    this.path,
+    this.size,
+    this.scale,
+  }) : assert(name != null || path != null);
+
+  final String? name;
+  final String? path;
+  final int? size;
+  final int? scale;
+}
+
 class XdgIconTheme extends InheritedTheme {
   const XdgIconTheme({
     Key? key,
