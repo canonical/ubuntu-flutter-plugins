@@ -2,8 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:xdg_icons/xdg_icons.dart';
 import 'package:yaru/yaru.dart' as yaru;
 
-Future<void> main() async {
-  await XdgIcons.init();
+void main() {
   runApp(const MyApp());
 }
 

@@ -11,15 +11,14 @@ environment:
 
 dependencies:
   collection: ^1.15.0
-  dbus: ^0.6.3
   file: ^6.1.2
   flutter:
     sdk: flutter
-  gsettings: ^0.2.0
   ini: ^2.1.0
   meta: ^1.7.0
   path: ^1.8.0
   platform: ^3.0.2
+  xdg_directories: ^0.2.0
 
 dev_dependencies:
   flutter_lints: ^1.0.0

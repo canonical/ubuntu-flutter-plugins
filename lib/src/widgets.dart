@@ -38,10 +38,7 @@ class _XdgIconState extends State<XdgIcon> {
         : XdgIconThemeInfo.fromPath(theme.path!);
 
     info.then((info) {
-      print('${widget.name}, theme: ${theme.name}, size: $size, scale: $scale');
-
       info?.findIcon(widget.name, size, scale).then((icon) {
-        print('found: $icon');
         setState(() => _icon = icon);
       });
     });
@@ -184,7 +181,7 @@ class XdgIconTheme extends InheritedTheme {
         : theme.copyWith(
             name: theme.name ?? XdgIconThemeData.system().name,
             size: theme.size ?? XdgIconThemeData.system().size,
-            scale: theme.size ?? XdgIconThemeData.system().scale,
+            scale: theme.scale ?? XdgIconThemeData.system().scale,
           );
   }
 
