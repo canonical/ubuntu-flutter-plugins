@@ -1,6 +1,4 @@
 import 'package:dbus/dbus.dart';
-import 'package:flutter/foundation.dart';
-import 'package:flutter/widgets.dart';
 import 'package:gsettings/gsettings.dart';
 import 'package:ini/ini.dart';
 import 'package:path/path.dart' as p;
@@ -103,27 +101,4 @@ class XdgIconThemeInfo {
   @override
   String toString() =>
       'XdgIconTheme(name: $name, description: $description, parents: $parents, dirs: $dirs, scaledDirs: $scaledDirs, hidden: $hidden, example: $example)';
-}
-
-class XdgIconTheme extends InheritedTheme {
-  const XdgIconTheme({
-    Key? key,
-    required this.data,
-    required Widget child,
-  }) : super(key: key, child: child);
-
-  final XdgIconThemeInfo data;
-
-  static XdgIconThemeInfo? of(BuildContext context) {
-    final theme = context.dependOnInheritedWidgetOfExactType<XdgIconTheme>();
-    return theme?.data;
-  }
-
-  @override
-  bool updateShouldNotify(XdgIconTheme oldWidget) => data != oldWidget.data;
-
-  @override
-  Widget wrap(BuildContext context, Widget child) {
-    return XdgIconTheme(data: data, child: child);
-  }
 }
