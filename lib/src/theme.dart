@@ -10,8 +10,8 @@ import 'icon.dart';
 import 'icons.dart';
 import 'lookup.dart';
 
-class XdgIconThemeData {
-  const XdgIconThemeData({
+class XdgIconThemeInfo {
+  const XdgIconThemeInfo({
     required this.name,
     required this.path,
     required this.description,
@@ -22,16 +22,16 @@ class XdgIconThemeData {
     this.example,
   });
 
-  static Future<XdgIconThemeData> system() async {
+  static Future<XdgIconThemeInfo> system() async {
     final settings = GSettings('org.gnome.desktop.interface');
     final theme = await settings.get('icon-theme');
     await settings.close();
     return fromName((theme as DBusString?)?.value ?? 'hicolor');
   }
 
-  static Future<XdgIconThemeData> fallback() => fromName('hicolor');
+  static Future<XdgIconThemeInfo> fallback() => fromName('hicolor');
 
-  static Future<XdgIconThemeData> fromName(String name) async {
+  static Future<XdgIconThemeInfo> fromName(String name) async {
     for (final searchPath in XdgIcons.searchPaths) {
       final path = p.join(searchPath, name);
       if (await XdgIcons.fs.file(p.join(path, 'index.theme')).exists()) {
@@ -41,7 +41,7 @@ class XdgIconThemeData {
     throw UnsupportedError('Icon theme $name not found');
   }
 
-  static Future<XdgIconThemeData> fromPath(String path) async {
+  static Future<XdgIconThemeInfo> fromPath(String path) async {
     final file = XdgIcons.fs.file(p.join(path, 'index.theme'));
     if (!await file.exists()) {
       throw UnsupportedError('Icon theme ${file.path} not found');
@@ -50,15 +50,15 @@ class XdgIconThemeData {
 
     const section = 'Icon Theme';
 
-    Future<List<XdgIconThemeData>?> readThemes(String key) async {
+    Future<List<XdgIconThemeInfo>?> readThemes(String key) async {
       final names = config
           .get(section, key)
           ?.split(',')
           .where((name) => name.trim().isNotEmpty);
       if (names == null) return null;
-      final themes = <XdgIconThemeData>[];
+      final themes = <XdgIconThemeInfo>[];
       for (final name in names) {
-        themes.add(await XdgIconThemeData.fromName(name.trim()));
+        themes.add(await XdgIconThemeInfo.fromName(name.trim()));
       }
       return themes;
     }
@@ -73,7 +73,7 @@ class XdgIconThemeData {
           .toList();
     }
 
-    return XdgIconThemeData(
+    return XdgIconThemeInfo(
       name: config.get(section, 'Name')!,
       path: path,
       description: config.get(section, 'Comment')!,
@@ -88,7 +88,7 @@ class XdgIconThemeData {
   final String name;
   final String path;
   final String description;
-  final List<XdgIconThemeData>? parents;
+  final List<XdgIconThemeInfo>? parents;
   final List<XdgIconDir> dirs;
   final List<XdgIconDir>? scaledDirs;
   final bool? hidden;
@@ -112,9 +112,9 @@ class XdgIconTheme extends InheritedTheme {
     required Widget child,
   }) : super(key: key, child: child);
 
-  final XdgIconThemeData data;
+  final XdgIconThemeInfo data;
 
-  static XdgIconThemeData? of(BuildContext context) {
+  static XdgIconThemeInfo? of(BuildContext context) {
     final theme = context.dependOnInheritedWidgetOfExactType<XdgIconTheme>();
     return theme?.data;
   }

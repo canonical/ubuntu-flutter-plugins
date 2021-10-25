@@ -16,9 +16,9 @@ XdgIconData? lookupFallbackIcon(String icon) {
   return null;
 }
 
-extension XdgIconThemeLookup on XdgIconThemeData {
+extension XdgIconThemeLookup on XdgIconThemeInfo {
   XdgIconData? findIconHelper(
-      String name, int size, int scale, XdgIconThemeData theme) {
+      String name, int size, int scale, XdgIconThemeInfo theme) {
     final filename = lookupIcon(name, size, scale);
     if (filename != null) {
       return filename;
