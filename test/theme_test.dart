@@ -5,6 +5,7 @@ import 'package:xdg_icons/xdg_icons.dart';
 
 import 'data/birch_theme.dart';
 import 'data/hicolor_theme.dart';
+import 'data/system_theme.dart';
 import 'data/wooden_theme.dart';
 
 void main() {
@@ -17,6 +18,7 @@ void main() {
 
   setUp(() {
     XdgIcons.fs = MemoryFileSystem.test();
+    writeSystemTheme(XdgIcons.fs, 'hicolor');
     writeHicolorTheme(XdgIcons.fs, '/usr/share/icons/hicolor');
   });
 
