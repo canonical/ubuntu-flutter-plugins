@@ -1,4 +1,6 @@
+import 'package:collection/collection.dart';
 import 'package:ini/ini.dart';
+import 'package:meta/meta.dart';
 import 'package:path/path.dart' as p;
 
 import 'dir.dart';
@@ -6,6 +8,7 @@ import 'icon.dart';
 import 'icons.dart';
 import 'lookup.dart';
 
+@immutable
 class XdgIconThemeInfo {
   const XdgIconThemeInfo({
     required this.name,
@@ -92,6 +95,34 @@ class XdgIconThemeInfo {
     return findIconHelper(name, size, scale, this) ??
         (system != this ? findIconHelper(name, size, scale, system) : null) ??
         lookupFallbackIcon(name);
+  }
+
+  @override
+  int get hashCode {
+    return Object.hash(
+      name,
+      path,
+      description,
+      parents != null ? Object.hashAll(parents!) : null,
+      Object.hashAll(dirs),
+      scaledDirs != null ? Object.hashAll(scaledDirs!) : null,
+      hidden,
+      example,
+    );
+  }
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(this, other)) return true;
+    return other is XdgIconThemeInfo &&
+        name == other.name &&
+        path == other.path &&
+        description == other.description &&
+        const ListEquality().equals(parents, other.parents) &&
+        const ListEquality().equals(dirs, other.dirs) &&
+        const ListEquality().equals(scaledDirs, other.scaledDirs) &&
+        hidden == other.hidden &&
+        example == other.example;
   }
 
   @override

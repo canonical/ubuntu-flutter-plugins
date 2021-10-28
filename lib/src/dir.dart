@@ -1,8 +1,10 @@
 import 'package:collection/collection.dart';
 import 'package:ini/ini.dart';
+import 'package:meta/meta.dart';
 
 import 'icon.dart';
 
+@immutable
 class XdgIconDir {
   const XdgIconDir({
     required this.name,
@@ -43,6 +45,34 @@ class XdgIconDir {
   final int maxSize;
   final int minSize;
   final int threshold;
+
+  @override
+  int get hashCode {
+    return Object.hash(
+      name,
+      size,
+      scale,
+      context,
+      type,
+      maxSize,
+      minSize,
+      threshold,
+    );
+  }
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(this, other)) return true;
+    return other is XdgIconDir &&
+        name == other.name &&
+        size == other.size &&
+        scale == other.scale &&
+        context == other.context &&
+        type == other.type &&
+        maxSize == other.maxSize &&
+        minSize == other.minSize &&
+        threshold == other.threshold;
+  }
 
   @override
   String toString() =>
