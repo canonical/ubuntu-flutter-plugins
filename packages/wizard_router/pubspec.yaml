@@ -14,7 +14,6 @@ dependencies:
   flutter:
     sdk: flutter
   flow_builder: ^0.0.3
-  provider: ^6.0.0
 
 dev_dependencies:
   flutter_test:

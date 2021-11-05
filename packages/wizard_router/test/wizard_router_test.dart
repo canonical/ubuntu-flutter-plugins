@@ -405,4 +405,13 @@ void main() {
     secondWizardScope.back('result');
     expect(await result, equals('result'));
   });
+
+  testWidgets('throw exception for missing wizard', (tester) async {
+    await tester.pumpWidget(const MaterialApp());
+
+    final context = tester.element(find.byType(MaterialApp));
+    expect(context, isNotNull);
+
+    expect(() => Wizard.of(context), throwsFlutterError);
+  });
 }
