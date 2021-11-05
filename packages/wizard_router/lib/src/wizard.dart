@@ -340,7 +340,7 @@ class WizardScopeState extends State<WizardScope> {
   bool get hasNext => _getRoutes().length < widget._routes.length;
 
   @override
-  Widget build(BuildContext context) => widget._route.builder(context);
+  Widget build(BuildContext context) => Builder(builder: widget._route.builder);
 }
 
 class _WizardRouteSettings<T extends Object?> extends RouteSettings {

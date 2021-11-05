@@ -73,6 +73,18 @@ void main() {
     expect(find.text(Routes.third), findsNothing);
   });
 
+  testWidgets('available in context', (tester) async {
+    await expectLater(
+      () => pumpWizardApp(
+        tester,
+        routes: {
+          '/': WizardRoute(builder: (context) => Text('${Wizard.of(context)}')),
+        },
+      ),
+      returnsNormally,
+    );
+  });
+
   testWidgets('navigate back and forth', (tester) async {
     await pumpWizardApp(
       tester,
