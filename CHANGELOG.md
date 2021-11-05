@@ -1,3 +1,9 @@
+## 0.6.0
+
+* Remove unnecessary provider dependency.
+* Fix Wizard.hasPrevious and Wizard.hasNext.
+* Fix Wizard.of() access in immediate route builder context.
+
 ## 0.5.0
 
 * Move onNext and onBack to WizardRoute.
