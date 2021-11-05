@@ -1,5 +1,6 @@
 import 'dart:async';
 
+import 'package:collection/collection.dart';
 import 'package:flutter/material.dart';
 import 'package:flow_builder/flow_builder.dart';
 
@@ -186,12 +187,13 @@ class _WizardState extends State<Wizard> {
   }
 
   Page _createPage(BuildContext context,
-      {required _WizardRouteSettings settings}) {
+      {required int index, required _WizardRouteSettings settings}) {
     return MaterialPage(
       name: settings.name,
       arguments: settings.arguments,
       key: ValueKey(settings.name),
       child: WizardScope(
+        index: index,
         route: widget.routes[settings.name]!,
         routes: widget.routes.keys.toList(),
       ),
@@ -205,7 +207,8 @@ class _WizardState extends State<Wizard> {
       onGeneratePages: (state, __) {
         _routes = state;
         return state
-            .map((settings) => _createPage(context, settings: settings))
+            .mapIndexed((index, settings) =>
+                _createPage(context, index: index, settings: settings))
             .toList();
       },
     );
@@ -218,12 +221,15 @@ class _WizardState extends State<Wizard> {
 class WizardScope extends StatefulWidget {
   const WizardScope({
     Key? key,
+    required int index,
     required WizardRoute route,
     required List<String> routes,
-  })  : _route = route,
+  })  : _index = index,
+        _route = route,
         _routes = routes,
         super(key: key);
 
+  final int _index;
   final WizardRoute _route;
   final List<String> _routes;
 
@@ -333,11 +339,11 @@ class WizardScopeState extends State<WizardScope> {
     context.flow<List<_WizardRouteSettings>>().update(callback);
   }
 
-  /// Returns `false` if the wizard is currently on the first page.
-  bool get hasPrevious => _getRoutes().length > 1;
+  /// Returns `false` if the wizard page is the first page.
+  bool get hasPrevious => widget._index > 0;
 
-  /// Returns `false` if the wizard is currently on the last page.
-  bool get hasNext => _getRoutes().length < widget._routes.length;
+  /// Returns `false` if the wizard page is the last page.
+  bool get hasNext => widget._index < widget._routes.length - 1;
 
   @override
   Widget build(BuildContext context) => Builder(builder: widget._route.builder);
