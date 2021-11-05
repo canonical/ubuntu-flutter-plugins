@@ -2,7 +2,6 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:flow_builder/flow_builder.dart';
-import 'package:provider/provider.dart';
 
 /// The signature of [WizardRoute.onNext] and [WizardRoute.onBack] callbacks.
 typedef WizardRouteCallback = String? Function(RouteSettings settings);
@@ -157,7 +156,17 @@ class Wizard extends StatefulWidget {
   /// - [WizardScopeState.back]
   /// - [WizardScopeState.home]
   static WizardScopeState of(BuildContext context) {
-    return Provider.of<WizardScopeState>(context, listen: false);
+    final scope = context.findAncestorStateOfType<WizardScopeState>();
+    assert(() {
+      if (scope == null) {
+        throw FlutterError(
+          'Wizard operation requested with a context that does not include a Wizard.\n'
+          'The context passed to Wizard.of(context) must belong to a widget that is a descendant of a Wizard widget.',
+        );
+      }
+      return true;
+    }());
+    return scope!;
   }
 
   @override
@@ -191,17 +200,14 @@ class _WizardState extends State<Wizard> {
 
   @override
   Widget build(BuildContext context) {
-    return Provider.value(
-      value: this,
-      child: FlowBuilder<List<_WizardRouteSettings>>(
-        state: _routes,
-        onGeneratePages: (state, __) {
-          _routes = state;
-          return state
-              .map((settings) => _createPage(context, settings: settings))
-              .toList();
-        },
-      ),
+    return FlowBuilder<List<_WizardRouteSettings>>(
+      state: _routes,
+      onGeneratePages: (state, __) {
+        _routes = state;
+        return state
+            .map((settings) => _createPage(context, settings: settings))
+            .toList();
+      },
     );
   }
 }
@@ -334,12 +340,7 @@ class WizardScopeState extends State<WizardScope> {
   bool get hasNext => _getRoutes().length < widget._routes.length;
 
   @override
-  Widget build(BuildContext context) {
-    return Provider<WizardScopeState>.value(
-      value: this,
-      child: widget._route.builder(context),
-    );
-  }
+  Widget build(BuildContext context) => widget._route.builder(context);
 }
 
 class _WizardRouteSettings<T extends Object?> extends RouteSettings {
