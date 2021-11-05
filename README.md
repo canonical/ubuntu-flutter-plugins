@@ -57,8 +57,8 @@ BarPage(
 
 For unconditional linear wizards, defining the routes is enough. The router
 follows the order the routes are defined in. If there are conditions between
-the wizard pages, the order can be customized with the `Wizard.onNext` and
-`Wizard.onBack` callbacks.
+the wizard pages, the order can be customized with the `WizardRoute.onNext` and
+`WizardRoute.onBack` callbacks.
 
 ```dart
 Wizard(
