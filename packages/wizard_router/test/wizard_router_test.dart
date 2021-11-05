@@ -375,25 +375,31 @@ void main() {
     );
 
     final firstPage = find.text(Routes.first);
-    final wizard = Wizard.of(tester.element(firstPage));
+    final firstScope = Wizard.of(tester.element(firstPage));
 
     // 1st
-    expect(wizard.hasPrevious, isFalse);
-    expect(wizard.hasNext, isTrue);
+    expect(firstScope.hasPrevious, isFalse);
+    expect(firstScope.hasNext, isTrue);
 
     // 2nd
-    wizard.next();
+    firstScope.next();
     await tester.pumpAndSettle();
 
-    expect(wizard.hasPrevious, isTrue);
-    expect(wizard.hasNext, isTrue);
+    final secondPage = find.text(Routes.second);
+    final secondScope = Wizard.of(tester.element(secondPage));
+
+    expect(secondScope.hasPrevious, isTrue);
+    expect(secondScope.hasNext, isTrue);
 
     // 3rd
-    wizard.next();
+    secondScope.next();
     await tester.pumpAndSettle();
 
-    expect(wizard.hasPrevious, isTrue);
-    expect(wizard.hasNext, isFalse);
+    final thirdPage = find.text(Routes.third);
+    final thirdScope = Wizard.of(tester.element(thirdPage));
+
+    expect(thirdScope.hasPrevious, isTrue);
+    expect(thirdScope.hasNext, isFalse);
   });
 
   testWidgets('return result', (tester) async {
