@@ -1,0 +1,9 @@
+{
+  "@@locale": "it",
+  "countryCode": "IT",
+
+  "languageName": "Italiano",
+
+  "backAction": "Torna indietro",
+  "continueAction": "Continua"
+}
