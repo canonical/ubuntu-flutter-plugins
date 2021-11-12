@@ -1,0 +1,15 @@
+name: ubuntu_logger
+description: A logging frontend based on Google's logging library for Dart.
+publish_to: 'none'
+
+environment:
+  sdk: ">=2.12.0 <3.0.0"
+
+dependencies:
+  collection: ^1.15.0
+  logging: ^1.0.1
+  logging_appenders: ^1.0.0
+  path: ^1.8.0
+
+dev_dependencies:
+  flutter_lints: ^1.0.0
