@@ -131,7 +131,7 @@ final seDateTimeSymbols = DateSymbols(
   DATETIMEFORMATS: ['{1} {0}', '{1} {0}', '{1} {0}', '{1} {0}'],
   FIRSTDAYOFWEEK: 0,
   WEEKENDRANGE: [5, 6],
-  FIRSTWEEKCUTOFFDAY: 3,
+  FIRSTWEEKCUTOFFDAY: 0, /* N/A */
 );
 
 const seDateTimePatterns = {

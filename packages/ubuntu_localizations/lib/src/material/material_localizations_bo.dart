@@ -154,7 +154,7 @@ final boDateTimeSymbols = DateSymbols(
   DATETIMEFORMATS: [],
   FIRSTDAYOFWEEK: 6,
   WEEKENDRANGE: const [5, 6],
-  FIRSTWEEKCUTOFFDAY: 5,
+  FIRSTWEEKCUTOFFDAY: 0, /* N/A */
 );
 
 const boDateTimePatterns = {

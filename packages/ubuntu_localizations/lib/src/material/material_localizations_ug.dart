@@ -128,7 +128,7 @@ final ugDateTimeSymbols = DateSymbols(
   DATETIMEFORMATS: ['{1} {0}', '{1} {0}', '{1}، {0}', '{1}، {0}'],
   FIRSTDAYOFWEEK: 6,
   WEEKENDRANGE: [5, 6],
-  FIRSTWEEKCUTOFFDAY: 6,
+  FIRSTWEEKCUTOFFDAY: 0, /* N/A */
 );
 
 const ugDateTimePatterns = {
