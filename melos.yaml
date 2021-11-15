@@ -1,4 +1,4 @@
-name: ubuntu_flutter_packages
+name: ubuntu_flutter_plugins
 
 packages:
   - packages/**

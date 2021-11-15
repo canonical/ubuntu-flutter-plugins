@@ -1,3 +1,3 @@
-# ubuntu-flutter-packages
+# ubuntu-flutter-plugins
 
-A collection of Flutter packages for Ubuntu applications.
+A collection of Flutter plugins and packages for Ubuntu applications.
