@@ -14,6 +14,7 @@ import 'material_localizations_nn.dart';
 import 'material_localizations_oc.dart';
 import 'material_localizations_se.dart';
 import 'material_localizations_tg.dart';
+import 'material_localizations_ug.dart';
 
 abstract class UbuntuMaterialLocalizations {
   static const List<LocalizationsDelegate<dynamic>> delegates =
@@ -25,6 +26,7 @@ abstract class UbuntuMaterialLocalizations {
     UbuntuMaterialLocalizationsDelegateOc(),
     UbuntuMaterialLocalizationsDelegateSe(),
     UbuntuMaterialLocalizationsDelegateTg(),
+    UbuntuMaterialLocalizationsDelegateUg(),
   ];
 }
 
