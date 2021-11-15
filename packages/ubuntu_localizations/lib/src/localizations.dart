@@ -8,7 +8,9 @@ import 'material/material_localizations.dart';
 
 export 'l10n/ubuntu_localizations.dart';
 
+/// Provides localization delegates.
 class GlobalUbuntuLocalizations {
+  /// The list of localization delegates.
   static const List<LocalizationsDelegate<dynamic>> delegates =
       <LocalizationsDelegate<dynamic>>[
     UbuntuLocalizations.delegate,
