@@ -4,7 +4,7 @@ import 'package:ubuntu_localizations/src/material/material_localizations.dart';
 import 'package:ubuntu_localizations/ubuntu_localizations.dart';
 
 // TODO: implement
-const unsupportedLocales = ['bo', 'dz', 'ku'];
+const unsupportedLocales = ['dz', 'ku'];
 
 void main() {
   testWidgets('material supports all ubuntu localizations', (tester) async {
