@@ -9,6 +9,7 @@ import 'package:intl/intl.dart';
 
 import 'material_localizations_bo.dart';
 import 'material_localizations_cy.dart';
+import 'material_localizations_dz.dart';
 import 'material_localizations_eo.dart';
 import 'material_localizations_ga.dart';
 import 'material_localizations_nn.dart';
@@ -22,6 +23,7 @@ abstract class UbuntuMaterialLocalizations {
       <LocalizationsDelegate<dynamic>>[
     UbuntuMaterialLocalizationsDelegateBo(),
     UbuntuMaterialLocalizationsDelegateCy(),
+    UbuntuMaterialLocalizationsDelegateDz(),
     UbuntuMaterialLocalizationsDelegateEo(),
     UbuntuMaterialLocalizationsDelegateGa(),
     UbuntuMaterialLocalizationsDelegateNn(),
