@@ -8,6 +8,7 @@ import 'package:intl/date_symbols.dart';
 import 'package:intl/intl.dart';
 
 import 'material_localizations_cy.dart';
+import 'material_localizations_eo.dart';
 import 'material_localizations_ga.dart';
 import 'material_localizations_nn.dart';
 import 'material_localizations_oc.dart';
@@ -16,6 +17,7 @@ abstract class UbuntuMaterialLocalizations {
   static const List<LocalizationsDelegate<dynamic>> delegates =
       <LocalizationsDelegate<dynamic>>[
     UbuntuMaterialLocalizationsDelegateCy(),
+    UbuntuMaterialLocalizationsDelegateEo(),
     UbuntuMaterialLocalizationsDelegateGa(),
     UbuntuMaterialLocalizationsDelegateNn(),
     UbuntuMaterialLocalizationsDelegateOc(),
