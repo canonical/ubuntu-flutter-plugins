@@ -7,12 +7,16 @@ import 'package:intl/date_time_patterns.dart' as intl;
 import 'package:intl/date_symbols.dart';
 import 'package:intl/intl.dart';
 
+import 'material_localizations_cy.dart';
+import 'material_localizations_ga.dart';
 import 'material_localizations_nn.dart';
 import 'material_localizations_oc.dart';
 
 abstract class UbuntuMaterialLocalizations {
   static const List<LocalizationsDelegate<dynamic>> delegates =
       <LocalizationsDelegate<dynamic>>[
+    UbuntuMaterialLocalizationsDelegateCy(),
+    UbuntuMaterialLocalizationsDelegateGa(),
     UbuntuMaterialLocalizationsDelegateNn(),
     UbuntuMaterialLocalizationsDelegateOc(),
   ];
@@ -52,14 +56,14 @@ abstract class UbuntuMaterialLocalizationsDelegate
   }
 
   DateSymbols _inheritDateTimeSymbols(String localeName) {
-    final baseSymbols = intl.dateTimeSymbolMap()[baseLocaleName] as DateSymbols;
-    final symbols = baseSymbols.serializeToMap();
+    final baseSymbols = intl.dateTimeSymbolMap()[baseLocaleName ?? localeName];
+    final symbols = (baseSymbols as DateSymbols).serializeToMap();
     symbols['NAME'] = localeName;
     return DateSymbols.deserializeFromMap(symbols);
   }
 
   Map<String, String>? _inheritDateTimePatterns(String localeName) {
-    return intl.dateTimePatternMap()[baseLocaleName];
+    return intl.dateTimePatternMap()[baseLocaleName ?? localeName];
   }
 
   @override
