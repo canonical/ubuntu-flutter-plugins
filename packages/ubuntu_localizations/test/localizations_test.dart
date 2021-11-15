@@ -3,9 +3,6 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:ubuntu_localizations/src/material/material_localizations.dart';
 import 'package:ubuntu_localizations/ubuntu_localizations.dart';
 
-// TODO: implement
-const unsupportedLocales = ['ku'];
-
 void main() {
   testWidgets('material supports all ubuntu localizations', (tester) async {
     final delegates = [
@@ -14,9 +11,6 @@ void main() {
     ];
 
     for (final locale in UbuntuLocalizations.supportedLocales) {
-      // TODO: remove
-      if (unsupportedLocales.contains(locale.languageCode)) continue;
-
       expect(
         delegates.any((delegate) => delegate.isSupported(locale)),
         isTrue,

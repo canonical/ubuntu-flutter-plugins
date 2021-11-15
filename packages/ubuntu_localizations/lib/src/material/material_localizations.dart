@@ -12,6 +12,7 @@ import 'material_localizations_cy.dart';
 import 'material_localizations_dz.dart';
 import 'material_localizations_eo.dart';
 import 'material_localizations_ga.dart';
+import 'material_localizations_ku.dart';
 import 'material_localizations_nn.dart';
 import 'material_localizations_oc.dart';
 import 'material_localizations_se.dart';
@@ -26,6 +27,7 @@ abstract class UbuntuMaterialLocalizations {
     UbuntuMaterialLocalizationsDelegateDz(),
     UbuntuMaterialLocalizationsDelegateEo(),
     UbuntuMaterialLocalizationsDelegateGa(),
+    UbuntuMaterialLocalizationsDelegateKu(),
     UbuntuMaterialLocalizationsDelegateNn(),
     UbuntuMaterialLocalizationsDelegateOc(),
     UbuntuMaterialLocalizationsDelegateSe(),
