@@ -1,4 +1,7 @@
-# ubuntu-flutter-plugins
+# Flutter plugins for Ubuntu
+
+[![CI](https://github.com/canonical/ubuntu-flutter-plugins/workflows/Flutter%20CI/badge.svg)](https://github.com/canonical/ubuntu-flutter-plugins/actions)
+[![codecov](https://codecov.io/gh/canonical/ubuntu-flutter-plugins/branch/main/graph/badge.svg)](https://codecov.io/gh/canonical/ubuntu-flutter-plugins)
 
 A collection of Flutter plugins and packages for Ubuntu applications.
 
