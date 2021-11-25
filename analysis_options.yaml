@@ -5,4 +5,8 @@ analyzer:
     - "**/*.freezed.dart"
     - "**/*.g.dart"
     - "**/*.mocks.dart"
-    - "**/l10n/*.dart"
+    - "**/*_localizations*.dart"
+
+linter:
+  rules:
+    public_member_api_docs: true
