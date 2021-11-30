@@ -41,7 +41,7 @@ scripts:
 
   # run gen-l10n to generate localizations in all packages
   gen-l10n:
-    melos exec -c 1 --fail-fast --file-exists="lib/l10n.dart" -- \
+    melos exec -c 1 --fail-fast --depends-on=flutter_localizations -- \
      flutter gen-l10n
 
   # run integration tests in all packages
