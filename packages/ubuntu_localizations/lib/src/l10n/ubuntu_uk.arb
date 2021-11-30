@@ -1,5 +1,19 @@
 {
   "@@locale": "uk",
   "countryCode": "UA",
-  "languageName": "Українська"
+  "@countryCode": {},
+  "languageName": "Українська",
+  "@languageName": {},
+  "backAction": "Назад",
+  "@backAction": {},
+  "continueAction": "Продовжити",
+  "@continueAction": {},
+  "strongPassword": "Міцний пароль",
+  "@strongPassword": {},
+  "fairPassword": "Задовільний пароль",
+  "@fairPassword": {},
+  "weakPassword": "Слабкий пароль",
+  "@weakPassword": {},
+  "goodPassword": "Гарний пароль",
+  "@goodPassword": {}
 }
