@@ -14,20 +14,20 @@ class UbuntuLocalizationsUk extends UbuntuLocalizations {
   String get languageName => 'Українська';
 
   @override
-  String get backAction => 'Go Back';
+  String get backAction => 'Назад';
 
   @override
-  String get continueAction => 'Continue';
+  String get continueAction => 'Продовжити';
 
   @override
-  String get strongPassword => 'Strong password';
+  String get strongPassword => 'Міцний пароль';
 
   @override
-  String get fairPassword => 'Fair password';
+  String get fairPassword => 'Задовільний пароль';
 
   @override
-  String get goodPassword => 'Good password';
+  String get goodPassword => 'Гарний пароль';
 
   @override
-  String get weakPassword => 'Weak password';
+  String get weakPassword => 'Слабкий пароль';
 }
