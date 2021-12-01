@@ -8,6 +8,8 @@ import 'package:path/path.dart' as p;
 // ignore: avoid_classes_with_only_static_members
 /// Defines available logging levels.
 abstract class LogLevel {
+  const LogLevel._();
+
   /// All messages, including debug output.
   static const debug = log.Level('DEBUG', 0);
 
