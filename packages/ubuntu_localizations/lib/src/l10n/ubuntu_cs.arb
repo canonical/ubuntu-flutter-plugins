@@ -1,5 +1,19 @@
 {
   "@@locale": "cs",
   "countryCode": "CZ",
-  "languageName": "Čeština"
+  "@countryCode": {},
+  "languageName": "Čeština",
+  "@languageName": {},
+  "weakPassword": "Snadno prolomitelné heslo",
+  "@weakPassword": {},
+  "goodPassword": "Docela dobré heslo",
+  "@goodPassword": {},
+  "fairPassword": "Dobré heslo",
+  "@fairPassword": {},
+  "strongPassword": "Prolomení odolné heslo",
+  "@strongPassword": {},
+  "backAction": "Jít zpět",
+  "@backAction": {},
+  "continueAction": "Pokračovat",
+  "@continueAction": {}
 }
