@@ -14,20 +14,20 @@ class UbuntuLocalizationsCs extends UbuntuLocalizations {
   String get languageName => 'Čeština';
 
   @override
-  String get backAction => 'Go Back';
+  String get backAction => 'Jít zpět';
 
   @override
-  String get continueAction => 'Continue';
+  String get continueAction => 'Pokračovat';
 
   @override
-  String get strongPassword => 'Strong password';
+  String get strongPassword => 'Prolomení odolné heslo';
 
   @override
-  String get fairPassword => 'Fair password';
+  String get fairPassword => 'Dobré heslo';
 
   @override
-  String get goodPassword => 'Good password';
+  String get goodPassword => 'Docela dobré heslo';
 
   @override
-  String get weakPassword => 'Weak password';
+  String get weakPassword => 'Snadno prolomitelné heslo';
 }
