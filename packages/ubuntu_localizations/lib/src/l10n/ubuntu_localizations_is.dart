@@ -14,20 +14,20 @@ class UbuntuLocalizationsIs extends UbuntuLocalizations {
   String get languageName => 'Íslenska';
 
   @override
-  String get backAction => 'Go Back';
+  String get backAction => 'Til Baka';
 
   @override
-  String get continueAction => 'Continue';
+  String get continueAction => 'Áfram';
 
   @override
-  String get strongPassword => 'Strong password';
+  String get strongPassword => 'Sterkt lykilorð';
 
   @override
-  String get fairPassword => 'Fair password';
+  String get fairPassword => 'Sæmilegt lykilorð';
 
   @override
-  String get goodPassword => 'Good password';
+  String get goodPassword => 'Gott lykilorð';
 
   @override
-  String get weakPassword => 'Weak password';
+  String get weakPassword => 'Veikt lykilorð';
 }
