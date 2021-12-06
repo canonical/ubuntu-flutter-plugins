@@ -1,5 +1,19 @@
 {
   "@@locale": "is",
   "countryCode": "IS",
-  "languageName": "Íslenska"
+  "@countryCode": {},
+  "languageName": "Íslenska",
+  "@languageName": {},
+  "continueAction": "Áfram",
+  "@continueAction": {},
+  "weakPassword": "Veikt lykilorð",
+  "@weakPassword": {},
+  "backAction": "Til Baka",
+  "@backAction": {},
+  "fairPassword": "Sæmilegt lykilorð",
+  "@fairPassword": {},
+  "strongPassword": "Sterkt lykilorð",
+  "@strongPassword": {},
+  "goodPassword": "Gott lykilorð",
+  "@goodPassword": {}
 }
