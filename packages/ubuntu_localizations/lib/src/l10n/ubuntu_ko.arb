@@ -13,5 +13,9 @@
   "continueAction": "계속하기",
   "@continueAction": {},
   "moderatePassword": "양호한 암호",
-  "@moderatePassword": {}
+  "@moderatePassword": {},
+  "goodPassword": "좋은 암호",
+  "@goodPassword": {},
+  "fairPassword": "양호한 암호",
+  "@fairPassword": {}
 }
