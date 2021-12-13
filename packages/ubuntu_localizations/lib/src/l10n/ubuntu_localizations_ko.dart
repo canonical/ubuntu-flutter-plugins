@@ -23,10 +23,10 @@ class UbuntuLocalizationsKo extends UbuntuLocalizations {
   String get strongPassword => '강한 암호';
 
   @override
-  String get fairPassword => 'Fair password';
+  String get fairPassword => '양호한 암호';
 
   @override
-  String get goodPassword => 'Good password';
+  String get goodPassword => '좋은 암호';
 
   @override
   String get weakPassword => '약한 암호';
