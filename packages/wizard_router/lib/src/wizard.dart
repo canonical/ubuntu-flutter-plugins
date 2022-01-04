@@ -134,6 +134,7 @@ class Wizard extends StatefulWidget {
     Key? key,
     this.initialRoute,
     required this.routes,
+    this.observers = const [],
   }) : super(key: key);
 
   /// The name of the first route to show.
@@ -169,6 +170,8 @@ class Wizard extends StatefulWidget {
     }());
     return scope!;
   }
+
+  final List<NavigatorObserver> observers;
 
   @override
   State<Wizard> createState() => _WizardState();
@@ -211,6 +214,7 @@ class _WizardState extends State<Wizard> {
                 _createPage(context, index: index, settings: settings))
             .toList();
       },
+      observers: widget.observers,
     );
   }
 }
