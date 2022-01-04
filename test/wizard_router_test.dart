@@ -10,6 +10,21 @@ abstract class Routes {
   static const fourth = '/fourth';
 }
 
+class TestObserver extends NavigatorObserver {
+  Route? pushed;
+  Route? popped;
+
+  @override
+  void didPush(Route route, Route? previousRoute) {
+    pushed = route;
+  }
+
+  @override
+  void didPop(Route route, Route? previousRoute) {
+    popped = route;
+  }
+}
+
 void main() {
   Future<void> pumpWizardApp(
     WidgetTester tester, {
@@ -431,5 +446,41 @@ void main() {
     expect(context, isNotNull);
 
     expect(() => Wizard.of(context), throwsFlutterError);
+  });
+
+  testWidgets('navigator observers', (tester) async {
+    final observer = TestObserver();
+    await tester.pumpWidget(
+      MaterialApp(
+        home: Wizard(
+          initialRoute: Routes.first,
+          routes: {
+            Routes.first: WizardRoute(builder: (_) => const Text(Routes.first)),
+            Routes.second:
+                WizardRoute(builder: (_) => const Text(Routes.second)),
+          },
+          observers: [observer],
+        ),
+      ),
+    );
+
+    expect(observer.pushed, isNotNull);
+    expect(observer.pushed!.settings.name, Routes.first);
+    expect(observer.popped, isNull);
+
+    Wizard.of(tester.element(find.text(Routes.first))).next();
+    await tester.pumpAndSettle();
+
+    expect(observer.pushed, isNotNull);
+    expect(observer.pushed!.settings.name, Routes.second);
+    expect(observer.popped, isNull);
+    observer.pushed = null;
+
+    Wizard.of(tester.element(find.text(Routes.second))).back();
+    await tester.pumpAndSettle();
+
+    expect(observer.popped, isNotNull);
+    expect(observer.popped!.settings.name, Routes.second);
+    expect(observer.pushed, isNull);
   });
 }
