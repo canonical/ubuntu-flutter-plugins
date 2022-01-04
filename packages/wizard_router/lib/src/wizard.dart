@@ -7,13 +7,17 @@ import 'package:flow_builder/flow_builder.dart';
 /// The signature of [WizardRoute.onNext] and [WizardRoute.onBack] callbacks.
 typedef WizardRouteCallback = String? Function(RouteSettings settings);
 
+/// A wizard route builder and its conditions.
 class WizardRoute {
+  /// Creates wizard route with the specified [builder] and its [onNext] and
+  /// [onBack] conditions.
   const WizardRoute({
     required this.builder,
     this.onNext,
     this.onBack,
   });
 
+  /// The builder of the wizard route.
   final WidgetBuilder builder;
 
   /// The callback invoked when the next page is requested.
@@ -37,7 +41,7 @@ class WizardRoute {
 /// previous wizard page. Thus, adding, removing, or re-ordering pages does not
 /// cause changes in existing pages.
 ///
-/// ![wizard_router](https://github.com/jpnurmi/wizard_router/raw/main/images/wizard_router.png)
+/// ![wizard_router](https://github.com/canonical/ubuntu-flutter-plugins/packages/wizard_router/raw/main/images/wizard_router.png)
 ///
 /// ## Usage
 ///
@@ -171,6 +175,10 @@ class Wizard extends StatefulWidget {
     return scope!;
   }
 
+  /// A list of observers for the wizard.
+  ///
+  /// See also:
+  ///  * [Navigator.observers].
   final List<NavigatorObserver> observers;
 
   @override
@@ -195,7 +203,7 @@ class _WizardState extends State<Wizard> {
       name: settings.name,
       arguments: settings.arguments,
       key: ValueKey(settings.name),
-      child: WizardScope(
+      child: WizardScope._(
         index: index,
         route: widget.routes[settings.name]!,
         routes: widget.routes.keys.toList(),
@@ -223,7 +231,7 @@ class _WizardState extends State<Wizard> {
 ///
 /// Each page is enclosed by a `WizardScope` widget.
 class WizardScope extends StatefulWidget {
-  const WizardScope({
+  const WizardScope._({
     Key? key,
     required int index,
     required WizardRoute route,

@@ -1,9 +1,6 @@
 # Wizard Router for Flutter
 
 [![pub](https://img.shields.io/pub/v/wizard_router.svg)](https://pub.dev/packages/wizard_router)
-[![license: BSD](https://img.shields.io/badge/license-BSD-yellow.svg)](https://opensource.org/licenses/BSD-3-Clause)
-![CI](https://github.com/jpnurmi/wizard_router/workflows/CI/badge.svg)
-[![codecov](https://codecov.io/gh/jpnurmi/wizard_router/branch/main/graph/badge.svg)](https://codecov.io/gh/jpnurmi/wizard_router)
 
 [wizard_router](https://pub.dev/packages/wizard_router) provides routing for
 classic linear wizards in a way that it eliminates dependencies between wizard
@@ -11,7 +8,7 @@ pages. Wizard pages can request the next or previous page without knowing or
 caring what is the next or the previous wizard page. Thus, adding, removing, or
 re-ordering pages does not cause changes in existing pages.
 
-![wizard_router](https://github.com/jpnurmi/wizard_router/raw/main/images/wizard_router.png)
+![wizard_router](https://github.com/canonical/ubuntu-flutter-plugins/packages/wizard_router/raw/main/images/wizard_router.png)
 
 ## Usage
 
