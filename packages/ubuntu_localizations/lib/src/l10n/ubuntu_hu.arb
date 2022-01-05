@@ -1,5 +1,7 @@
 {
   "@@locale": "hu",
   "countryCode": "HU",
-  "languageName": "Magyar"
+  "@countryCode": {},
+  "languageName": "Magyar",
+  "@languageName": {}
 }
