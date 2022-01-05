@@ -23,10 +23,10 @@ class UbuntuLocalizationsCs extends UbuntuLocalizations {
   String get strongPassword => 'Prolomení odolné heslo';
 
   @override
-  String get fairPassword => 'Dobré heslo';
+  String get fairPassword => 'Přijatelné heslo';
 
   @override
-  String get goodPassword => 'Docela dobré heslo';
+  String get goodPassword => 'Dobré heslo';
 
   @override
   String get weakPassword => 'Snadno prolomitelné heslo';
