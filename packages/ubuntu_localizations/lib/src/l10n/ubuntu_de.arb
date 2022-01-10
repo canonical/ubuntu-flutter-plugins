@@ -1,16 +1,23 @@
 {
   "@@locale": "de",
   "countryCode": "DE",
-
+  "@countryCode": {},
   "languageName": "Deutsch",
   "@languageName": {
     "description": "Der Anzeigename für die Sprache. Leer lassen, um die Sprache aus der Liste der Sprachen im Begrüßungsbildschirm auszuschließen."
   },
-
   "backAction": "Zurück",
+  "@backAction": {},
   "continueAction": "Weiter",
-
+  "@continueAction": {},
   "strongPassword": "Starkes Passwort",
+  "@strongPassword": {},
   "moderatePassword": "Mittelmäßiges Passwort",
-  "weakPassword": "Schwaches Passwort"
+  "@moderatePassword": {},
+  "weakPassword": "Schwaches Passwort",
+  "@weakPassword": {},
+  "fairPassword": "Ausreichendes Passwort",
+  "@fairPassword": {},
+  "goodPassword": "Gutes Passwort",
+  "@goodPassword": {}
 }
