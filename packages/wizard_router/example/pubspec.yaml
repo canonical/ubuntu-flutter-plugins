@@ -1,0 +1,17 @@
+name: wizard_router_example
+description: Demonstrates how to use the wizard_router package.
+publish_to: 'none'
+
+environment:
+  sdk: ">=2.12.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_markdown: ^0.6.2
+  provider: ^6.0.0
+  wizard_router:
+    path: ../
+
+flutter:
+  uses-material-design: true
