@@ -1,0 +1,16 @@
+name: ubuntu_widgets
+description: |
+  A collection of widgets developed for Flutter-based Ubuntu applications.
+publish_to: 'none'
+
+environment:
+  sdk: ">=2.15.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^1.0.0
