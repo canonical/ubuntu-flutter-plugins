@@ -1,3 +1,7 @@
+## 0.7.0
+
+* Expose an 'observers' member to enable monitoring a Wizard's navigation.
+
 ## 0.6.0
 
 * Remove unnecessary provider dependency.
