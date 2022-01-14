@@ -10,3 +10,4 @@ analyzer:
 linter:
   rules:
     public_member_api_docs: true
+    sort_pub_dependencies: true
