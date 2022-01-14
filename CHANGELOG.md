@@ -1,3 +1,7 @@
+## 0.7.0+1
+
+* Fix links in README.md
+
 ## 0.7.0
 
 * Expose an 'observers' member to enable monitoring a Wizard's navigation.
