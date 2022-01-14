@@ -3,7 +3,7 @@ description: >-
   Routing for linear wizards. No dependencies between pages. Pages merely
   request the next page. Routes and conditions defined in a central place.
 homepage: https://pub.dev/packages/wizard_router
-repository: https://github.com/canonical/ubuntu-flutter-plugins/packages/wizard_router
+repository: https://github.com/canonical/ubuntu-flutter-plugins/tree/main/packages/wizard_router
 issue_tracker: https://github.com/canonical/ubuntu-flutter-plugins/issues
 version: 0.7.0
 

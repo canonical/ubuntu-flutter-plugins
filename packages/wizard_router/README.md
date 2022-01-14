@@ -8,7 +8,7 @@ pages. Wizard pages can request the next or previous page without knowing or
 caring what is the next or the previous wizard page. Thus, adding, removing, or
 re-ordering pages does not cause changes in existing pages.
 
-![wizard_router](https://github.com/canonical/ubuntu-flutter-plugins/packages/wizard_router/raw/main/images/wizard_router.png)
+![wizard_router](https://raw.githubusercontent.com/canonical/ubuntu-flutter-plugins/main/packages/wizard_router/images/wizard_router.png)
 
 ## Usage
 
