@@ -43,6 +43,28 @@ void main() {
     expect(scrollController.position.maxScrollExtent, greaterThan(0.0));
   });
 
+  testWidgets('do not attempt to scroll when unmounted', (tester) async {
+    final log = StreamController<String>.broadcast(sync: true);
+    for (int i = 0; i < 3; ++i) {
+      log.add('test');
+    }
+
+    await tester.pumpWidget(
+      MaterialApp(home: Scaffold(body: LogView(log: log.stream, maxLines: 2))),
+    );
+
+    FlutterErrorDetails? error;
+    FlutterError.onError = (details) => error = details;
+    addTearDown(() => FlutterError.onError = null);
+
+    // trigger a rebuild and destroy the log view. the asynchronous post-frame
+    // callback must not attempt to scroll an unmounted widget
+    log.add('test');
+
+    await tester.pumpWidget(const MaterialApp(home: Scaffold()));
+    expect(error, isNull);
+  });
+
   testWidgets('user scroll not affected by appended lines', (tester) async {
     final log = StreamController<String>(sync: true);
 

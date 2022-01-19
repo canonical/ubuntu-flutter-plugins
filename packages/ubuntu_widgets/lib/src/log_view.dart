@@ -77,8 +77,8 @@ class _LogViewState extends State<LogView> {
 
   bool _isAtEnd() => _scrollController.position.extentAfter == 0;
   void _scrollToEnd() {
-    if (!mounted) return;
     WidgetsBinding.instance!.addPostFrameCallback((_) {
+      if (!mounted) return;
       _scrollController.jumpTo(_scrollController.position.maxScrollExtent);
     });
   }
