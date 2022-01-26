@@ -1,5 +1,19 @@
 {
   "@@locale": "ar",
   "countryCode": "EG",
-  "languageName": "عربي"
+  "@countryCode": {},
+  "languageName": "عربي",
+  "@languageName": {},
+  "backAction": "العودة",
+  "@backAction": {},
+  "weakPassword": "كلمة مرور ضعيفة",
+  "@weakPassword": {},
+  "continueAction": "المواصلة",
+  "@continueAction": {},
+  "strongPassword": "كلمة مرور قوية",
+  "@strongPassword": {},
+  "fairPassword": "كلمة مرور مقبولة",
+  "@fairPassword": {},
+  "goodPassword": "كلمة مرور جيدة",
+  "@goodPassword": {}
 }
