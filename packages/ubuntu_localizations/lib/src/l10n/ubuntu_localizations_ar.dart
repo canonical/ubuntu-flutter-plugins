@@ -14,20 +14,20 @@ class UbuntuLocalizationsAr extends UbuntuLocalizations {
   String get languageName => 'عربي';
 
   @override
-  String get backAction => 'Go Back';
+  String get backAction => 'العودة';
 
   @override
-  String get continueAction => 'Continue';
+  String get continueAction => 'المواصلة';
 
   @override
-  String get strongPassword => 'Strong password';
+  String get strongPassword => 'كلمة مرور قوية';
 
   @override
-  String get fairPassword => 'Fair password';
+  String get fairPassword => 'كلمة مرور مقبولة';
 
   @override
-  String get goodPassword => 'Good password';
+  String get goodPassword => 'كلمة مرور جيدة';
 
   @override
-  String get weakPassword => 'Weak password';
+  String get weakPassword => 'كلمة مرور ضعيفة';
 }
