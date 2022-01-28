@@ -1,0 +1,22 @@
+name: handy_window_example
+description: Demonstrates how to use the handy_window plugin.
+publish_to: 'none'
+
+environment:
+  sdk: ">=2.15.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_spinbox: ^0.8.0
+  handy_window:
+    path: ../
+  yaru: ^0.2.0
+
+dev_dependencies:
+  flutter_lints: ^1.0.0
+  flutter_test:
+    sdk: flutter
+
+flutter:
+  uses-material-design: true
