@@ -1,0 +1,31 @@
+name: handy_window
+description: |
+  Manages the top-level application window. On Linux, provides an easy
+  way to use Handy windows with modern looking rounded bottom corners.
+homepage: https://github.com/canonical/ubuntu-flutter-plugins
+repository: https://github.com/canonical/ubuntu-flutter-plugins/tree/main/packages/handy_window
+issues: https://github.com/canonical/ubuntu-flutter-plugins/issues
+version: 0.1.0
+
+environment:
+  sdk: ">=2.15.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  plugin_platform_interface: ^2.1.0
+
+dev_dependencies:
+  flutter_lints: ^1.0.0
+  flutter_test:
+    sdk: flutter
+
+flutter:
+  plugin:
+    platforms:
+      linux:
+        pluginClass: HandyWindowPlugin
+      macos:
+        pluginClass: HandyWindowPlugin
+      windows:
+        pluginClass: HandyWindowPlugin
