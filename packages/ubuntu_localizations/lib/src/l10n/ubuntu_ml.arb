@@ -1,5 +1,19 @@
 {
   "@@locale": "ml",
   "countryCode": "IN",
-  "languageName": "മലയാളം"
+  "@countryCode": {},
+  "languageName": "മലയാളം",
+  "@languageName": {},
+  "backAction": "മടങ്ങിപ്പോവുക",
+  "@backAction": {},
+  "strongPassword": "ശക്തമായ പാസ്‌വേഡ്",
+  "@strongPassword": {},
+  "fairPassword": "സാമാന്യം ശക്തമായ പാസ്‌വേഡ്",
+  "@fairPassword": {},
+  "weakPassword": "ദുര്ബലമായ പാസ്സ്വേര്ഡ്",
+  "@weakPassword": {},
+  "continueAction": "തുടരുക",
+  "@continueAction": {},
+  "goodPassword": "നല്ല ശക്തമായ പാസ്‌വേഡ്",
+  "@goodPassword": {}
 }
