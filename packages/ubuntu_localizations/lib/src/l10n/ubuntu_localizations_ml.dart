@@ -14,20 +14,20 @@ class UbuntuLocalizationsMl extends UbuntuLocalizations {
   String get languageName => 'മലയാളം';
 
   @override
-  String get backAction => 'Go Back';
+  String get backAction => 'മടങ്ങിപ്പോവുക';
 
   @override
-  String get continueAction => 'Continue';
+  String get continueAction => 'തുടരുക';
 
   @override
-  String get strongPassword => 'Strong password';
+  String get strongPassword => 'ശക്തമായ പാസ്‌വേഡ്';
 
   @override
-  String get fairPassword => 'Fair password';
+  String get fairPassword => 'സാമാന്യം ശക്തമായ പാസ്‌വേഡ്';
 
   @override
-  String get goodPassword => 'Good password';
+  String get goodPassword => 'നല്ല ശക്തമായ പാസ്‌വേഡ്';
 
   @override
-  String get weakPassword => 'Weak password';
+  String get weakPassword => 'ദുര്ബലമായ പാസ്സ്വേര്ഡ്';
 }
