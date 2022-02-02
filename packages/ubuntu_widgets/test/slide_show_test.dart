@@ -1,15 +1,21 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:ubuntu_widgets/ubuntu_widgets.dart';
 
 extension AppTester on WidgetTester {
-  Future<void> pumpTestApp(
-      {required List<String> slides, Duration? interval, bool wrap = false}) {
+  Future<void> pumpTestApp({
+    required List<String> slides,
+    Duration? interval,
+    bool wrap = false,
+    bool autofocus = false,
+  }) {
     return pumpWidget(MaterialApp(
       home: SlideShow(
         interval: interval ?? const Duration(seconds: 5),
         slides: slides.map(Text.new).toList(),
         wrap: wrap,
+        autofocus: autofocus,
       ),
     ));
   }
@@ -54,6 +60,28 @@ void main() {
     expect(find.text('a'), findsNWidgets(2));
     expect(find.byIcon(Icons.chevron_left), findsNothing);
     expect(find.byIcon(Icons.chevron_right), findsOneWidget);
+  });
+
+  testWidgets('arrow keys', (tester) async {
+    await tester.pumpTestApp(slides: ['a', 'b', 'c'], autofocus: true);
+
+    expect(find.text('a'), findsNWidgets(2));
+
+    await tester.sendKeyEvent(LogicalKeyboardKey.arrowRight);
+    await tester.pumpAndSettle();
+    expect(find.text('b'), findsOneWidget);
+
+    await tester.sendKeyEvent(LogicalKeyboardKey.arrowRight);
+    await tester.pumpAndSettle();
+    expect(find.text('c'), findsOneWidget);
+
+    await tester.sendKeyEvent(LogicalKeyboardKey.arrowLeft);
+    await tester.pumpAndSettle();
+    expect(find.text('b'), findsOneWidget);
+
+    await tester.sendKeyEvent(LogicalKeyboardKey.arrowLeft);
+    await tester.pumpAndSettle();
+    expect(find.text('a'), findsNWidgets(2));
   });
 
   testWidgets('interval', (tester) async {
