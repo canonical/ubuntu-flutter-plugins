@@ -1,6 +1,7 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 const _kButtonColor = Colors.white;
 const _kButtonSize = 80.0;
@@ -22,6 +23,8 @@ class SlideShow extends StatefulWidget {
     required this.slides,
     this.interval = _kSlideInterval,
     this.wrap = false,
+    this.autofocus = false,
+    this.focusNode,
   })  : assert(slides.isNotEmpty),
         super(key: key);
 
@@ -33,6 +36,12 @@ class SlideShow extends StatefulWidget {
 
   /// Whether to wrap around. The default value is false.
   final bool wrap;
+
+  /// Whether to automatically request keyboard focus.
+  final bool autofocus;
+
+  /// Defines the keyboard focus for the slide show.
+  final FocusNode? focusNode;
 
   @override
   State<SlideShow> createState() => _SlideShowState();
@@ -98,51 +107,63 @@ class _SlideShowState extends State<SlideShow> {
 
   @override
   Widget build(BuildContext context) {
-    return Stack(
-      children: <Widget>[
-        // PageView doesn't propagate its content's size. Use the first slide
-        // to determine the size.
-        Opacity(opacity: 0, child: widget.slides.first),
-        Positioned.fill(
-          child: PageView(
-            children: widget.slides,
-            controller: _controller,
-            physics: const NeverScrollableScrollPhysics(),
-          ),
+    return CallbackShortcuts(
+      bindings: {
+        // TODO: these could be SingleActivators after the fix for
+        // flutter/flutter#92717 has reached the stable channel
+        LogicalKeySet(LogicalKeyboardKey.arrowLeft): animateToPreviousSlide,
+        LogicalKeySet(LogicalKeyboardKey.arrowRight): animateToNextSlide,
+      },
+      child: Focus(
+        autofocus: widget.autofocus,
+        focusNode: widget.focusNode,
+        child: Stack(
+          children: <Widget>[
+            // PageView doesn't propagate its content's size. Use the first slide
+            // to determine the size.
+            Opacity(opacity: 0, child: widget.slides.first),
+            Positioned.fill(
+              child: PageView(
+                children: widget.slides,
+                controller: _controller,
+                physics: const NeverScrollableScrollPhysics(),
+              ),
+            ),
+            Positioned(
+              top: 0,
+              bottom: 0,
+              left: -_kButtonSize / 2,
+              child: AnimatedBuilder(
+                animation: _controller,
+                builder: (context, child) {
+                  return _SlideButton(
+                    alignment: Alignment.centerRight,
+                    icon: const Icon(Icons.chevron_left, size: _kIconSize),
+                    opacity: clampOpacity(currentPosition),
+                    onPressed: animateToPreviousSlide,
+                  );
+                },
+              ),
+            ),
+            Positioned(
+              top: 0,
+              bottom: 0,
+              right: -_kButtonSize / 2,
+              child: AnimatedBuilder(
+                animation: _controller,
+                builder: (context, child) {
+                  return _SlideButton(
+                    alignment: Alignment.centerLeft,
+                    icon: const Icon(Icons.chevron_right, size: _kIconSize),
+                    opacity: clampOpacity((slideCount - 1 - currentPosition)),
+                    onPressed: animateToNextSlide,
+                  );
+                },
+              ),
+            ),
+          ],
         ),
-        Positioned(
-          top: 0,
-          bottom: 0,
-          left: -_kButtonSize / 2,
-          child: AnimatedBuilder(
-            animation: _controller,
-            builder: (context, child) {
-              return _SlideButton(
-                alignment: Alignment.centerRight,
-                icon: const Icon(Icons.chevron_left, size: _kIconSize),
-                opacity: clampOpacity(currentPosition),
-                onPressed: animateToPreviousSlide,
-              );
-            },
-          ),
-        ),
-        Positioned(
-          top: 0,
-          bottom: 0,
-          right: -_kButtonSize / 2,
-          child: AnimatedBuilder(
-            animation: _controller,
-            builder: (context, child) {
-              return _SlideButton(
-                alignment: Alignment.centerLeft,
-                icon: const Icon(Icons.chevron_right, size: _kIconSize),
-                opacity: clampOpacity((slideCount - 1 - currentPosition)),
-                onPressed: animateToNextSlide,
-              );
-            },
-          ),
-        ),
-      ],
+      ),
     );
   }
 }
