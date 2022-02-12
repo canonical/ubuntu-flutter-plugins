@@ -1,9 +1,19 @@
 {
   "@@locale": "it",
   "countryCode": "IT",
-
+  "@countryCode": {},
   "languageName": "Italiano",
-
+  "@languageName": {},
   "backAction": "Torna indietro",
-  "continueAction": "Continua"
+  "@backAction": {},
+  "continueAction": "Continua",
+  "@continueAction": {},
+  "strongPassword": "Password robusta",
+  "@strongPassword": {},
+  "fairPassword": "Password discreta",
+  "@fairPassword": {},
+  "goodPassword": "Password buona",
+  "@goodPassword": {},
+  "weakPassword": "Password fragile",
+  "@weakPassword": {}
 }
