@@ -20,14 +20,14 @@ class UbuntuLocalizationsIt extends UbuntuLocalizations {
   String get continueAction => 'Continua';
 
   @override
-  String get strongPassword => 'Strong password';
+  String get strongPassword => 'Password robusta';
 
   @override
-  String get fairPassword => 'Fair password';
+  String get fairPassword => 'Password discreta';
 
   @override
-  String get goodPassword => 'Good password';
+  String get goodPassword => 'Password buona';
 
   @override
-  String get weakPassword => 'Weak password';
+  String get weakPassword => 'Password fragile';
 }
