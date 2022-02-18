@@ -1,5 +1,19 @@
 {
   "@@locale": "vi",
   "countryCode": "VN",
-  "languageName": "Tiếng Việt"
+  "@countryCode": {},
+  "languageName": "Tiếng Việt",
+  "@languageName": {},
+  "continueAction": "tiếp tục",
+  "@continueAction": {},
+  "strongPassword": "mật khẩu mạnh",
+  "@strongPassword": {},
+  "fairPassword": "Mật khẩu hợp lý",
+  "@fairPassword": {},
+  "backAction": "Quay trở lại",
+  "@backAction": {},
+  "goodPassword": "",
+  "@goodPassword": {},
+  "weakPassword": "Mật khẩu yếu",
+  "@weakPassword": {}
 }
