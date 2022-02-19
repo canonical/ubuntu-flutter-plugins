@@ -4,9 +4,10 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
-import 'icon.dart';
+import 'config.dart';
 import 'icons.dart';
-import 'theme.dart';
+import 'info.dart';
+import 'themes.dart';
 
 class XdgIcon extends StatefulWidget {
   const XdgIcon({
@@ -25,22 +26,24 @@ class XdgIcon extends StatefulWidget {
 }
 
 class _XdgIconState extends State<XdgIcon> {
-  XdgIconData? _icon;
+  XdgIconInfo? _icon;
 
   void _lookupIcon() {
     final XdgIconThemeData theme = XdgIconTheme.of(context);
-    final size = widget.size ?? theme.size ?? XdgIcons.defaultSize;
-    final scale = widget.scale ?? theme.scale ?? XdgIcons.defaultScale;
+    final size = widget.size ?? theme.size ?? XdgIconConfig.defaultSize;
+    final scale = widget.scale ?? theme.scale ?? XdgIconConfig.defaultScale;
 
     assert(theme.name != null || theme.path != null);
     final info = theme.name != null
-        ? XdgIconThemeInfo.fromName(theme.name!)
-        : XdgIconThemeInfo.fromPath(theme.path!);
+        ? XdgIconThemes.lookup(theme.name!)
+        : XdgIconThemes.read(theme.path!);
 
     info.then((info) {
-      info?.findIcon(widget.name, size, scale).then((icon) {
-        setState(() => _icon = icon);
-      });
+      if (info != null) {
+        XdgIcons(info).lookup(widget.name, size, scale).then((icon) {
+          setState(() => _icon = icon);
+        });
+      }
     });
   }
 
@@ -63,7 +66,7 @@ class _XdgIconState extends State<XdgIcon> {
   @override
   Widget build(BuildContext context) {
     final XdgIconThemeData theme = XdgIconTheme.of(context);
-    final size = widget.size ?? theme.size ?? XdgIcons.defaultSize;
+    final size = widget.size ?? theme.size ?? XdgIconConfig.defaultSize;
     if (_icon == null) {
       return SizedBox(width: size.toDouble(), height: size.toDouble());
     }
@@ -86,9 +89,9 @@ class XdgIconThemeData with Diagnosticable {
 
   factory XdgIconThemeData.system() {
     return XdgIconThemeData(
-      name: XdgIcons.systemTheme,
-      size: XdgIcons.defaultSize,
-      scale: XdgIcons.defaultScale,
+      name: XdgIconConfig.systemTheme,
+      size: XdgIconConfig.defaultSize,
+      scale: XdgIconConfig.defaultScale,
     );
   }
 

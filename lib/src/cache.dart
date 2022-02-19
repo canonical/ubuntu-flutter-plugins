@@ -1,6 +1,7 @@
 import 'dart:io';
 import 'dart:typed_data';
 
+import 'io.dart';
 import 'mmap.dart';
 
 /// https://github.com/GNOME/gtk/blob/master/docs/iconcache.txt
@@ -44,7 +45,7 @@ class XdgIconCache {
 }
 
 Uint8List _mmap(String path) {
-  final file = File(path);
+  final file = XdgIconsIO.file(path);
   if (!file.existsSync() || file.isOlderThan(file.parent)) {
     return Uint8List(0);
   }

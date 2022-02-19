@@ -1,78 +1,140 @@
-import 'package:file/file.dart';
-import 'package:ini/ini.dart';
-import 'package:file/local.dart';
-import 'package:meta/meta.dart';
 import 'package:path/path.dart' as p;
-import 'package:platform/platform.dart';
-import 'package:xdg_directories/xdg_directories.dart' as xdg;
+
+import 'config.dart';
+import 'io.dart';
+import 'info.dart';
+import 'themes.dart';
 
 class XdgIcons {
-  static bool _initialized = false;
-  static String? _systemTheme;
-  static int? _defaultSize;
-  static int? _defaultScale;
-  static List<String>? _extensions;
-  static List<String>? _searchPaths;
+  XdgIcons(this.theme);
 
-  static void init() {
-    // ### TODO: detect desktop environment
-    final configPaths = [
-      xdg.configHome.path,
-      ...xdg.configDirs.map((dir) => dir.path),
-      platform.environment['GTK_DATA_PREFIX'] ?? '/etc',
-    ];
-    for (final path in configPaths) {
-      final file = fs.file(p.join(path, 'gtk-3.0', 'settings.ini'));
-      if (file.existsSync()) {
-        final ini = Config.fromStrings(file.readAsLinesSync());
-        _systemTheme ??= ini.get('Settings', 'gtk-icon-theme-name');
+  final XdgIconThemeInfo theme;
+
+  Future<XdgIconInfo?> lookup(String name, int size, int scale) async {
+    final system = await XdgIconThemes.system();
+    return theme.lookupIconHelper(name, size, scale) ??
+        (system != theme ? system.lookupIconHelper(name, size, scale) : null) ??
+        _lookupFallbackIcon(name);
+  }
+}
+
+XdgIconInfo? _lookupFallbackIcon(String icon) {
+  for (final path in XdgIconConfig.searchPaths) {
+    for (final ext in XdgIconConfig.extensions) {
+      if (XdgIconsIO.file('$path/$icon.$ext').existsSync()) {
+        return XdgIconInfo('$path/$icon.$ext', type: XdgIconType.fallback);
       }
-      if (_systemTheme != null && _defaultSize != null) break;
     }
-    _defaultScale ??=
-        double.tryParse(platform.environment['GDK_SCALE'] ?? '')?.round() ?? 1;
-    _initialized = true;
+  }
+  return null;
+}
+
+extension _XdgIconThemeLookup on XdgIconThemeInfo {
+  XdgIconInfo? lookupIconHelper(String name, int size, int scale) {
+    final filename = lookupIcon(name, size, scale);
+    if (filename != null) {
+      return filename;
+    }
+
+    for (final parent in parents ?? []) {
+      final filename = parent.lookupIconHelper(name, size, scale);
+      if (filename != null) {
+        return filename;
+      }
+    }
+    return null;
   }
 
-  static int get defaultSize {
-    if (!_initialized) init();
-    return _defaultSize ?? 16;
+  XdgIconInfo? lookupIcon(String icon, int size, int scale) {
+    final basename = p.basename(path);
+    for (final dir in dirs) {
+      if (!dir.matchesSize(size, scale)) continue;
+
+      for (final path in XdgIconConfig.searchPaths) {
+        for (final ext in XdgIconConfig.extensions) {
+          final filename = '$path/$basename/${dir.name}/$icon.$ext';
+          if (XdgIconsIO.file(filename).existsSync()) {
+            return XdgIconInfo(
+              filename,
+              type: dir.type,
+              size: size,
+              scale: dir.scale,
+              context: dir.context,
+            );
+          }
+        }
+      }
+    }
+
+    XdgIconInfo? closestIcon;
+    var minimalSize = (1 << 63) - 1;
+    for (final dir in dirs) {
+      if (dir.sizeDistance(size, scale) >= minimalSize) continue;
+
+      for (final path in XdgIconConfig.searchPaths) {
+        for (final ext in XdgIconConfig.extensions) {
+          final filename = '$path/$basename/${dir.name}/$icon.$ext';
+          if (XdgIconsIO.file(filename).existsSync()) {
+            closestIcon = XdgIconInfo(
+              filename,
+              type: dir.type,
+              size: size,
+              scale: dir.scale,
+              context: dir.context,
+            );
+            minimalSize = dir.sizeDistance(size, scale);
+          }
+        }
+      }
+    }
+    return closestIcon;
+  }
+}
+
+extension _XdgIconDirLookup on XdgIconDirInfo {
+  bool matchesSize(int size, int scale) {
+    switch (type) {
+      case XdgIconType.fixed:
+        return this.scale == scale && this.size == size;
+
+      case XdgIconType.scalable:
+        return minSize <= size && size <= maxSize;
+
+      case XdgIconType.threshold:
+        return this.scale == scale &&
+            this.size - threshold <= size &&
+            size <= this.size + threshold;
+
+      case XdgIconType.fallback:
+        throw ArgumentError('Fallback icons do not have a size');
+    }
   }
 
-  static int get defaultScale {
-    if (!_initialized) init();
-    return _defaultScale ?? 1;
+  int sizeDistance(int size, int scale) {
+    switch (type) {
+      case XdgIconType.fixed:
+        return (this.size * this.scale! - size * scale).abs();
+
+      case XdgIconType.scalable:
+        if (size * scale < minSize) {
+          return minSize - size * scale;
+        }
+        if (size * scale > maxSize) {
+          return size * scale - maxSize;
+        }
+        return 0;
+
+      case XdgIconType.threshold:
+        if (size * scale < (this.size - threshold) * this.scale!) {
+          return minSize * this.scale! - size * scale;
+        }
+        if (size * size > (this.size + threshold) * this.scale!) {
+          return size * size - maxSize * this.scale!;
+        }
+        return 0;
+
+      case XdgIconType.fallback:
+        throw ArgumentError('Fallback icons do not have a size');
+    }
   }
-
-  static String get systemTheme {
-    if (!_initialized) init();
-    assert(_systemTheme != null, 'ERROR: failed to resolve system icon theme');
-    return _systemTheme!;
-  }
-
-  static const List<String> defaultExtensions = ['png', 'svg', 'xpm'];
-
-  static List<String> get extensions => _extensions ??= defaultExtensions;
-  static set extensions(List<String> extensions) => _extensions = extensions;
-
-  static List<String> get defaultSearchPaths {
-    return [
-      p.join(platform.environment['HOME'] ?? '', '.icons'),
-      ...?platform.environment['XDG_DATA_DIRS']
-          ?.split(':')
-          .map((dir) => p.join(dir, 'icons'))
-          .where((dir) => fs.directory(dir).existsSync())
-          .toList(),
-      '/usr/share/pixmaps'
-    ];
-  }
-
-  static List<String> get searchPaths => _searchPaths ??= defaultSearchPaths;
-  static set searchPaths(List<String> paths) => _searchPaths = paths;
-
-  @internal
-  static FileSystem fs = const LocalFileSystem();
-
-  @internal
-  static Platform platform = const LocalPlatform();
 }
