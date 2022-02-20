@@ -1,8 +1,6 @@
-/// Support for doing something awesome.
 ///
-/// More dartdocs go here.
 library gtk_icon_theme;
 
-export 'src/gtk_icon_theme_base.dart';
-
-// TODO: Export any libraries intended for clients of this package.
+export 'src/flags.dart';
+export 'src/icon.dart' show GtkIconInfo;
+export 'src/theme.dart' show GtkIconTheme;
