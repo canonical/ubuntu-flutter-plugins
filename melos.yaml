@@ -1,0 +1,42 @@
+name: xdg_icons
+
+packages:
+  - packages/**
+
+ignore:
+  - synthetic_package
+
+scripts:
+  # analyze all packages
+  analyze: >
+    melos exec -c 1 -- \
+      flutter analyze --no-fatal-infos .
+
+  # collect coverage information for all packages
+  coverage: >
+    melos exec -c 1 --fail-fast --dir-exists=test -- \
+      flutter test --coverage && melos run coverage:cleanup
+
+  # cleanup generated files from coverage
+  coverage:cleanup: >
+    melos exec --file-exists=coverage/lcov.info -- \
+      lcov --remove coverage/lcov.info '**/*.g.dart' '**/*.freezed.dart' -o coverage/lcov.info
+
+  # format all packages
+  format: >
+    find . -name '*.dart' \
+      ! -name '*.g.dart' \
+      ! -name '*.freezed.dart' \
+      ! -path '*/l10n/*' \
+      ! -path "*/.*/*" \
+      | xargs flutter format --set-exit-if-changed
+
+  # run integration tests in all packages
+  integration_test: >
+    melos exec -c 1 --fail-fast --dir-exists=integration_test -- \
+      flutter test integration_test
+
+  # run tests in all packages
+  test: >
+    melos exec -c 1 --fail-fast --dir-exists=test -- \
+      flutter test
