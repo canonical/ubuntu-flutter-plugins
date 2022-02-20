@@ -6,20 +6,14 @@ issue_tracker: https://github.com/jpnurmi/xdg_icons/issues
 version: 0.0.1
 
 environment:
-  sdk: '>=2.12.0 <3.0.0'
-  flutter: '>=1.17.0'
+  sdk: '>=2.15.0 <3.0.0'
+  flutter: '>=2.0.0'
 
 dependencies:
-  collection: ^1.15.0
-  ffi: ^1.1.2
-  file: ^6.1.2
   flutter:
     sdk: flutter
-  ini: ^2.1.0
-  meta: ^1.7.0
-  path: ^1.8.0
-  platform: ^3.0.2
-  xdg_directories: ^0.2.0
+  gtk_icon_theme:
+    path: ../gtk_icon_theme
 
 dev_dependencies:
   flutter_lints: ^1.0.0

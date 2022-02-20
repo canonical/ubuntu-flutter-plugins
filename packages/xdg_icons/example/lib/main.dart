@@ -69,7 +69,7 @@ class MyHomePage extends StatelessWidget {
                     Padding(
                       padding: const EdgeInsets.all(8.0),
                       child: XdgIconTheme(
-                        data: XdgIconThemeData(name: theme),
+                        data: XdgIconThemeData(theme: theme),
                         child: XdgIcon(name: icon, size: 48),
                       ),
                     ),
