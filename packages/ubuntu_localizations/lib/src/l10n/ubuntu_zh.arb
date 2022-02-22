@@ -1,5 +1,19 @@
 {
   "@@locale": "zh",
   "countryCode": "CN",
-  "languageName": "中文(简体)"
+  "@countryCode": {},
+  "languageName": "中文（简体）",
+  "@languageName": {},
+  "backAction": "返回",
+  "@backAction": {},
+  "continueAction": "继续",
+  "@continueAction": {},
+  "strongPassword": "强密码",
+  "@strongPassword": {},
+  "goodPassword": "好的密码",
+  "@goodPassword": {},
+  "weakPassword": "弱密码",
+  "@weakPassword": {},
+  "fairPassword": "公平密码",
+  "@fairPassword": {}
 }
