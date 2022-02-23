@@ -11,23 +11,23 @@ class UbuntuLocalizationsZh extends UbuntuLocalizations {
   String get countryCode => 'CN';
 
   @override
-  String get languageName => '中文(简体)';
+  String get languageName => '中文（简体）';
 
   @override
-  String get backAction => 'Go Back';
+  String get backAction => '返回';
 
   @override
-  String get continueAction => 'Continue';
+  String get continueAction => '继续';
 
   @override
-  String get strongPassword => 'Strong password';
+  String get strongPassword => '强密码';
 
   @override
-  String get fairPassword => 'Fair password';
+  String get fairPassword => '公平密码';
 
   @override
-  String get goodPassword => 'Good password';
+  String get goodPassword => '好的密码';
 
   @override
-  String get weakPassword => 'Weak password';
+  String get weakPassword => '弱密码';
 }
