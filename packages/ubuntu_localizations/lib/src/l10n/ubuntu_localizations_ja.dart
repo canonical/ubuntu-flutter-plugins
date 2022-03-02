@@ -14,20 +14,20 @@ class UbuntuLocalizationsJa extends UbuntuLocalizations {
   String get languageName => '日本語';
 
   @override
-  String get backAction => 'Go Back';
+  String get backAction => '戻る';
 
   @override
-  String get continueAction => 'Continue';
+  String get continueAction => '続ける';
 
   @override
-  String get strongPassword => 'Strong password';
+  String get strongPassword => '強いパスワード';
 
   @override
-  String get fairPassword => 'Fair password';
+  String get fairPassword => 'まあまあのパスワード';
 
   @override
-  String get goodPassword => 'Good password';
+  String get goodPassword => '良いパスワード';
 
   @override
-  String get weakPassword => 'Weak password';
+  String get weakPassword => '弱いパスワード';
 }
