@@ -1,5 +1,19 @@
 {
   "@@locale": "ja",
   "countryCode": "JP",
-  "languageName": "日本語"
+  "@countryCode": {},
+  "languageName": "日本語",
+  "@languageName": {},
+  "backAction": "戻る",
+  "@backAction": {},
+  "strongPassword": "強いパスワード",
+  "@strongPassword": {},
+  "goodPassword": "良いパスワード",
+  "@goodPassword": {},
+  "weakPassword": "弱いパスワード",
+  "@weakPassword": {},
+  "continueAction": "続ける",
+  "@continueAction": {},
+  "fairPassword": "まあまあのパスワード",
+  "@fairPassword": {}
 }
