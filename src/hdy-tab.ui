@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<interface domain="libhandy">
+  <requires lib="gtk+" version="3.24"/>
+  <template class="HdyTab" parent="GtkContainer">
+    <property name="can-focus">True</property>
+    <child>
+      <object class="GtkButton" id="indicator_btn">
+        <property name="visible">True</property>
+        <property name="can-focus">False</property>
+        <property name="valign">center</property>
+        <property name="halign">start</property>
+        <signal name="clicked" handler="indicator_clicked_cb" swapped="true"/>
+        <style>
+          <class name="tab-indicator"/>
+        </style>
+        <child>
+          <object class="GtkImage" id="indicator_icon">
+            <property name="visible">True</property>
+          </object>
+        </child>
+      </object>
+    </child>
+    <child>
+      <object class="GtkStack" id="icon_stack">
+        <property name="visible">True</property>
+        <property name="margin-start">4</property>
+        <property name="margin-end">2</property>
+        <child>
+          <object class="GtkImage" id="icon">
+            <property name="visible">True</property>
+            <style>
+              <class name="tab-icon"/>
+            </style>
+          </object>
+          <packing>
+            <property name="name">icon</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkSpinner" id="spinner">
+            <property name="visible">True</property>
+          </object>
+          <packing>
+            <property name="name">spinner</property>
+          </packing>
+        </child>
+      </object>
+    </child>
+    <child>
+      <object class="HdyFadingLabel" id="title">
+        <property name="visible">True</property>
+        <property name="margin-start">4</property>
+        <property name="margin-end">4</property>
+        <style>
+          <class name="tab-title"/>
+        </style>
+      </object>
+    </child>
+    <child>
+      <object class="GtkButton" id="close_btn">
+        <property name="visible">True</property>
+        <property name="opacity">0</property>
+        <property name="valign">center</property>
+        <property name="can-focus">False</property>
+        <signal name="clicked" handler="close_clicked_cb" swapped="true"/>
+        <style>
+          <class name="tab-close-button"/>
+        </style>
+        <child>
+          <object class="GtkImage">
+            <property name="visible">True</property>
+            <property name="icon-name">window-close-symbolic</property>
+          </object>
+        </child>
+      </object>
+    </child>
+  </template>
+</interface>
