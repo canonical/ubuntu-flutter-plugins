@@ -1,0 +1,1330 @@
+# British English translation for libhandy.
+# Copyright (C) 2020 libhandy's COPYRIGHT HOLDER
+# This file is distributed under the same license as the libhandy package.
+# Zander Brown <zbrown@gnome.org>, 2020.
+# Bruce Cowan <bruce@bcowan.me.uk>, 2020-2021.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: libhandy master\n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/libhandy/issues\n"
+"POT-Creation-Date: 2021-02-06 13:02+0000\n"
+"PO-Revision-Date: 2021-04-05 20:41+0100\n"
+"Last-Translator: Bruce Cowan <bruce@bcowan.me.uk>\n"
+"Language-Team: English - United Kingdom <en@li.org>\n"
+"Language: en_GB\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Gtranslator 40.0\n"
+
+#: glade/glade-hdy-carousel.c:160 glade/glade-hdy-header-bar.c:118
+#: glade/glade-hdy-leaflet.c:184
+#, c-format
+msgid "Insert placeholder to %s"
+msgstr "Insert placeholder to %s"
+
+#: glade/glade-hdy-carousel.c:189 glade/glade-hdy-header-bar.c:144
+#: glade/glade-hdy-leaflet.c:214
+#, c-format
+msgid "Remove placeholder from %s"
+msgstr "Remove placeholder from %s"
+
+#: glade/glade-hdy-header-bar.c:18
+msgid "This property does not apply when a custom title is set"
+msgstr "This property does not apply when a custom title is set"
+
+#: glade/glade-hdy-header-bar.c:289
+#| msgid ""
+#| "The decoration layout does not apply to header bars which do no show "
+#| "window controls"
+msgid ""
+"The decoration layout does not apply to header bars which do not show window "
+"controls"
+msgstr ""
+"The decoration layout does not apply to header bars which do not show window "
+"controls"
+
+#: glade/glade-hdy-leaflet.c:19
+msgid "This property only applies when the leaflet is folded"
+msgstr "This property only applies when the leaflet is folded"
+
+#: glade/glade-hdy-preferences-page.c:160
+#, c-format
+msgid "Add group to %s"
+msgstr "Add group to %s"
+
+#: glade/glade-hdy-preferences-window.c:228
+#, c-format
+msgid "Add page to %s"
+msgstr "Add page to %s"
+
+#: glade/glade-hdy-search-bar.c:101
+msgid "Search bar is already full"
+msgstr "Search bar is already full"
+
+#: glade/glade-hdy-utils.h:13
+#, c-format
+msgid "Only objects of type %s can be added to objects of type %s."
+msgstr "Only objects of type %s can be added to objects of type %s."
+
+#: src/hdy-action-row.c:370 src/hdy-action-row.c:371 src/hdy-expander-row.c:314
+#: src/hdy-expander-row.c:315 src/hdy-preferences-page.c:179
+#: src/hdy-preferences-page.c:180 src/hdy-status-page.c:221
+msgid "Icon name"
+msgstr "Icon name"
+
+#: src/hdy-action-row.c:384
+msgid "Activatable widget"
+msgstr "Activatable widget"
+
+#: src/hdy-action-row.c:385
+msgid "The widget to be activated when the row is activated"
+msgstr "The widget to be activated when the row is activated"
+
+#: src/hdy-action-row.c:398 src/hdy-action-row.c:399 src/hdy-expander-row.c:285
+#: src/hdy-header-bar.c:2107 src/hdy-view-switcher-title.c:272
+msgid "Subtitle"
+msgstr "Subtitle"
+
+#: src/hdy-action-row.c:413 src/hdy-expander-row.c:300
+#: src/hdy-preferences-row.c:130
+msgid "Use underline"
+msgstr "Use underline"
+
+#: src/hdy-action-row.c:414 src/hdy-expander-row.c:301
+#: src/hdy-preferences-row.c:131
+msgid ""
+"If set, an underline in the text indicates the next character should be used "
+"for the mnemonic accelerator key"
+msgstr ""
+"If set, an underline in the text indicates the next character should be used "
+"for the mnemonic accelerator key"
+
+#: src/hdy-action-row.c:428
+#| msgid "Number of pages"
+msgid "Number of title lines"
+msgstr "Number of title lines"
+
+#: src/hdy-action-row.c:429
+msgid "The desired number of title lines"
+msgstr "The desired number of title lines"
+
+#: src/hdy-action-row.c:445
+#| msgid "Number of pages"
+msgid "Number of subtitle lines"
+msgstr "Number of subtitle lines"
+
+#: src/hdy-action-row.c:446
+msgid "The desired number of subtitle lines"
+msgstr "The desired number of subtitle lines"
+
+#: src/hdy-carousel-box.c:1093 src/hdy-carousel-box.c:1094
+#: src/hdy-carousel.c:584 src/hdy-carousel.c:585 src/hdy-tab-view.c:1104
+msgid "Number of pages"
+msgstr "Number of pages"
+
+#: src/hdy-carousel-box.c:1109 src/hdy-carousel.c:601 src/hdy-header-bar.c:2093
+msgid "Position"
+msgstr "Position"
+
+#: src/hdy-carousel-box.c:1110 src/hdy-carousel.c:602
+msgid "Current scrolling position"
+msgstr "Current scrolling position"
+
+#: src/hdy-carousel-box.c:1125 src/hdy-carousel.c:632 src/hdy-header-bar.c:2121
+msgid "Spacing"
+msgstr "Spacing"
+
+#: src/hdy-carousel-box.c:1126 src/hdy-carousel.c:633
+msgid "Spacing between pages"
+msgstr "Spacing between pages"
+
+#: src/hdy-carousel-box.c:1142 src/hdy-carousel.c:692
+msgid "Reveal duration"
+msgstr "Reveal duration"
+
+#: src/hdy-carousel-box.c:1143 src/hdy-carousel.c:693
+msgid "Page reveal duration"
+msgstr "Page reveal duration"
+
+#: src/hdy-carousel.c:618
+msgid "Interactive"
+msgstr "Interactive"
+
+#: src/hdy-carousel.c:619
+msgid "Whether the widget can be swiped"
+msgstr "Whether the widget can be swiped"
+
+#: src/hdy-carousel.c:648
+msgid "Animation duration"
+msgstr "Animation duration"
+
+#: src/hdy-carousel.c:649
+msgid "Default animation duration"
+msgstr "Default animation duration"
+
+#: src/hdy-carousel.c:663 src/hdy-swipe-tracker.c:1088
+msgid "Allow mouse drag"
+msgstr "Allow mouse drag"
+
+#: src/hdy-carousel.c:664 src/hdy-swipe-tracker.c:1089
+msgid "Whether to allow dragging with mouse pointer"
+msgstr "Whether to allow dragging with mouse pointer"
+
+#: src/hdy-carousel.c:678 src/hdy-swipe-tracker.c:1103
+msgid "Allow long swipes"
+msgstr "Allow long swipes"
+
+#: src/hdy-carousel.c:679
+msgid "Whether to allow swiping for more than one page at a time"
+msgstr "Whether to allow swiping for more than one page at a time"
+
+#: src/hdy-carousel-indicator-dots.c:392 src/hdy-carousel-indicator-dots.c:393
+#: src/hdy-carousel-indicator-lines.c:391
+#: src/hdy-carousel-indicator-lines.c:392
+msgid "Carousel"
+msgstr "Carousel"
+
+#: src/hdy-clamp.c:414
+msgid "Maximum size"
+msgstr "Maximum size"
+
+#: src/hdy-clamp.c:415
+msgid "The maximum size allocated to the child"
+msgstr "The maximum size allocated to the child"
+
+#: src/hdy-clamp.c:439
+msgid "Tightening threshold"
+msgstr "Tightening threshold"
+
+#: src/hdy-clamp.c:440
+msgid "The size from which the clamp will tighten its grip on the child"
+msgstr "The size from which the clamp will tighten its grip on the child"
+
+#: src/hdy-combo-row.c:413
+msgid "Selected index"
+msgstr "Selected index"
+
+#: src/hdy-combo-row.c:414
+msgid "The index of the selected item"
+msgstr "The index of the selected item"
+
+#: src/hdy-combo-row.c:432
+msgid "Use subtitle"
+msgstr "Use subtitle"
+
+#: src/hdy-combo-row.c:433
+msgid "Set the current value as the subtitle"
+msgstr "Set the current value as the subtitle"
+
+#: src/hdy-deck.c:963
+msgid "Horizontally homogeneous"
+msgstr "Horizontally homogeneous"
+
+#: src/hdy-deck.c:964
+msgid "Horizontally homogeneous sizing"
+msgstr "Horizontally homogeneous sizing"
+
+#: src/hdy-deck.c:977
+msgid "Vertically homogeneous"
+msgstr "Vertically homogeneous"
+
+#: src/hdy-deck.c:978
+msgid "Vertically homogeneous sizing"
+msgstr "Vertically homogeneous sizing"
+
+#: src/hdy-deck.c:991 src/hdy-leaflet.c:1093 src/hdy-squeezer.c:1098
+#: src/hdy-stackable-box.c:3104
+msgid "Visible child"
+msgstr "Visible child"
+
+#: src/hdy-deck.c:992
+msgid "The widget currently visible"
+msgstr "The widget currently visible"
+
+#: src/hdy-deck.c:1005 src/hdy-leaflet.c:1100 src/hdy-stackable-box.c:3111
+msgid "Name of visible child"
+msgstr "Name of visible child"
+
+#: src/hdy-deck.c:1006
+msgid "The name of the widget currently visible"
+msgstr "The name of the widget currently visible"
+
+#: src/hdy-deck.c:1024 src/hdy-leaflet.c:1119 src/hdy-squeezer.c:1112
+#: src/hdy-stackable-box.c:3130
+msgid "Transition type"
+msgstr "Transition type"
+
+#: src/hdy-deck.c:1025
+msgid "The type of animation used to transition between children"
+msgstr "The type of animation used to transition between children"
+
+#: src/hdy-deck.c:1038 src/hdy-header-bar.c:2203 src/hdy-squeezer.c:1105
+msgid "Transition duration"
+msgstr "Transition duration"
+
+#: src/hdy-deck.c:1039
+msgid "The transition animation duration, in milliseconds"
+msgstr "The transition animation duration, in milliseconds"
+
+#: src/hdy-deck.c:1052 src/hdy-header-bar.c:2210 src/hdy-squeezer.c:1120
+msgid "Transition running"
+msgstr "Transition running"
+
+#: src/hdy-deck.c:1053 src/hdy-header-bar.c:2211 src/hdy-squeezer.c:1121
+msgid "Whether or not the transition is currently running"
+msgstr "Whether or not the transition is currently running"
+
+#: src/hdy-deck.c:1067 src/hdy-header-bar.c:2217 src/hdy-leaflet.c:1147
+#: src/hdy-squeezer.c:1127 src/hdy-stackable-box.c:3158
+msgid "Interpolate size"
+msgstr "Interpolate size"
+
+#: src/hdy-deck.c:1068 src/hdy-header-bar.c:2218 src/hdy-leaflet.c:1148
+#: src/hdy-squeezer.c:1128 src/hdy-stackable-box.c:3159
+msgid ""
+"Whether or not the size should smoothly change when changing between "
+"differently sized children"
+msgstr ""
+"Whether or not the size should smoothly change when changing between "
+"differently sized children"
+
+#: src/hdy-deck.c:1082 src/hdy-leaflet.c:1162 src/hdy-preferences-window.c:556
+#: src/hdy-stackable-box.c:3173
+msgid "Can swipe back"
+msgstr "Can swipe back"
+
+#: src/hdy-deck.c:1083 src/hdy-leaflet.c:1163 src/hdy-stackable-box.c:3174
+msgid ""
+"Whether or not swipe gesture can be used to switch to the previous child"
+msgstr ""
+"Whether or not swipe gesture can be used to switch to the previous child"
+
+#: src/hdy-deck.c:1097 src/hdy-leaflet.c:1177 src/hdy-stackable-box.c:3188
+msgid "Can swipe forward"
+msgstr "Can swipe forward"
+
+#: src/hdy-deck.c:1098 src/hdy-leaflet.c:1178 src/hdy-stackable-box.c:3189
+msgid "Whether or not swipe gesture can be used to switch to the next child"
+msgstr "Whether or not swipe gesture can be used to switch to the next child"
+
+#: src/hdy-deck.c:1106 src/hdy-leaflet.c:1186
+msgid "Name"
+msgstr "Name"
+
+#: src/hdy-deck.c:1107 src/hdy-leaflet.c:1187
+msgid "The name of the child page"
+msgstr "The name of the child page"
+
+#: src/hdy-expander-row.c:286
+msgid "The subtitle for this row"
+msgstr "The subtitle for this row"
+
+#: src/hdy-expander-row.c:326
+msgid "Expanded"
+msgstr "Expanded"
+
+#: src/hdy-expander-row.c:327
+msgid "Whether the row is expanded"
+msgstr "Whether the row is expanded"
+
+#: src/hdy-expander-row.c:338
+msgid "Enable expansion"
+msgstr "Enable expansion"
+
+#: src/hdy-expander-row.c:339
+msgid "Whether the expansion is enabled"
+msgstr "Whether the expansion is enabled"
+
+#: src/hdy-expander-row.c:350
+msgid "Show enable switch"
+msgstr "Show enable switch"
+
+#: src/hdy-expander-row.c:351
+msgid "Whether the switch enabling the expansion is visible"
+msgstr "Whether the switch enabling the expansion is visible"
+
+#: src/hdy-fading-label.c:255 src/hdy-fading-label.c:256
+msgid "Label"
+msgstr "Label"
+
+#: src/hdy-fading-label.c:262 src/hdy-fading-label.c:263
+#| msgid "X align"
+msgid "Align"
+msgstr "Align"
+
+#: src/hdy-flap.c:1488
+msgid "Content"
+msgstr "Content"
+
+#: src/hdy-flap.c:1489
+#| msgid "The end action widget"
+msgid "The content Widget"
+msgstr "The content Widget"
+
+#: src/hdy-flap.c:1503
+msgid "Flap"
+msgstr "Flap"
+
+#: src/hdy-flap.c:1504
+#| msgid "The end action widget"
+msgid "The flap widget"
+msgstr "The flap widget"
+
+#: src/hdy-flap.c:1519
+msgid "Separator"
+msgstr "Separator"
+
+#: src/hdy-flap.c:1520
+#| msgid "The start action widget"
+msgid "The separator widget"
+msgstr "The separator widget"
+
+#: src/hdy-flap.c:1534
+#| msgid "Position"
+msgid "Flap Position"
+msgstr "Flap Position"
+
+#: src/hdy-flap.c:1535
+msgid "The flap position"
+msgstr "The flap position"
+
+#: src/hdy-flap.c:1549
+#| msgid "Reveal"
+msgid "Reveal Flap"
+msgstr "Reveal Flap"
+
+#: src/hdy-flap.c:1550
+#| msgid "Whether the view switcher is revealed"
+msgid "Whether the flap is revealed"
+msgstr "Whether the flap is revealed"
+
+#: src/hdy-flap.c:1563
+#| msgid "Reveal duration"
+msgid "Reveal Duration"
+msgstr "Reveal Duration"
+
+#: src/hdy-flap.c:1564
+#| msgid "The transition animation duration, in milliseconds"
+msgid "The reveal transition animation duration, in milliseconds"
+msgstr "The reveal transition animation duration, in milliseconds"
+
+#: src/hdy-flap.c:1579
+#| msgid "Reveal duration"
+msgid "Reveal Progress"
+msgstr "Reveal Progress"
+
+#: src/hdy-flap.c:1580
+msgid "The current reveal transition progress"
+msgstr "The current reveal transition progress"
+
+#: src/hdy-flap.c:1594
+#| msgid "Policy"
+msgid "Fold Policy"
+msgstr "Fold Policy"
+
+#: src/hdy-flap.c:1595
+msgid "The current fold policy"
+msgstr "The current fold policy"
+
+#: src/hdy-flap.c:1609
+#| msgid "Reveal duration"
+msgid "Fold Duration"
+msgstr "Fold Duration"
+
+#: src/hdy-flap.c:1610
+#| msgid "The mode transition animation duration, in milliseconds"
+msgid "The fold transition animation duration, in milliseconds"
+msgstr "The fold transition animation duration, in milliseconds"
+
+#: src/hdy-flap.c:1626 src/hdy-leaflet.c:1038 src/hdy-stackable-box.c:3049
+msgid "Folded"
+msgstr "Folded"
+
+#: src/hdy-flap.c:1627
+#| msgid "Whether the widget is folded"
+msgid "Whether the flap is currently folded"
+msgstr "Whether the flap is currently folded"
+
+#: src/hdy-flap.c:1644
+msgid "Locked"
+msgstr "Locked"
+
+#: src/hdy-flap.c:1645
+#| msgid "Whether the widget is folded"
+msgid "Whether the flap is locked"
+msgstr "Whether the flap is locked"
+
+#: src/hdy-flap.c:1663
+#| msgid "Transition type"
+msgid "Transition Type"
+msgstr "Transition Type"
+
+#: src/hdy-flap.c:1664
+#| msgid "The type of animation used to transition"
+msgid "The type of animation used for reveal and fold transitions"
+msgstr "The type of animation used for reveal and fold transitions"
+
+#: src/hdy-flap.c:1682
+msgid "Modal"
+msgstr "Modal"
+
+#: src/hdy-flap.c:1683
+#| msgid "Whether the widget is folded"
+msgid "Whether the flap is modal"
+msgstr "Whether the flap is modal"
+
+#: src/hdy-flap.c:1698
+msgid "Swipe to Open"
+msgstr "Swipe to Open"
+
+#: src/hdy-flap.c:1699
+#| msgid "Whether the child can be navigated to"
+msgid "Whether the flap can be opened with a swipe gesture"
+msgstr "Whether the flap can be opened with a swipe gesture"
+
+#: src/hdy-flap.c:1714
+#| msgid "Swipeable"
+msgid "Swipe to Close"
+msgstr "Swipe to Close"
+
+#: src/hdy-flap.c:1715
+#| msgid "Whether the widget can be swiped"
+msgid "Whether the flap can be closed with a swipe gesture"
+msgstr "Whether the flap can be closed with a swipe gesture"
+
+#: src/hdy-header-bar.c:485
+msgid "Application menu"
+msgstr "Application menu"
+
+#: src/hdy-header-bar.c:507 src/hdy-window-handle-controller.c:275
+msgid "Minimize"
+msgstr "Minimise"
+
+#: src/hdy-header-bar.c:529 src/hdy-window-handle-controller.c:241
+msgid "Restore"
+msgstr "Restore"
+
+#: src/hdy-header-bar.c:529 src/hdy-window-handle-controller.c:284
+msgid "Maximize"
+msgstr "Maximise"
+
+#: src/hdy-header-bar.c:547 src/hdy-window-handle-controller.c:311
+msgid "Close"
+msgstr "Close"
+
+#: src/hdy-header-bar.c:563
+msgid "Back"
+msgstr "Back"
+
+#: src/hdy-header-bar.c:2086
+msgid "Pack type"
+msgstr "Pack type"
+
+#: src/hdy-header-bar.c:2087
+msgid ""
+"A GtkPackType indicating whether the child is packed with reference to the "
+"start or end of the parent"
+msgstr ""
+"A GtkPackType indicating whether the child is packed with reference to the "
+"start or end of the parent"
+
+#: src/hdy-header-bar.c:2094
+msgid "The index of the child in the parent"
+msgstr "The index of the child in the parent"
+
+#: src/hdy-header-bar.c:2100 src/hdy-preferences-group.c:287
+#: src/hdy-preferences-group.c:288 src/hdy-preferences-page.c:193
+#: src/hdy-preferences-page.c:194 src/hdy-preferences-row.c:115
+#: src/hdy-status-page.c:235 src/hdy-tab-view.c:432
+#: src/hdy-view-switcher-title.c:258
+msgid "Title"
+msgstr "Title"
+
+#: src/hdy-header-bar.c:2101 src/hdy-view-switcher-title.c:259
+msgid "The title to display"
+msgstr "The title to display"
+
+#: src/hdy-header-bar.c:2108 src/hdy-view-switcher-title.c:273
+msgid "The subtitle to display"
+msgstr "The subtitle to display"
+
+#: src/hdy-header-bar.c:2114
+msgid "Custom Title"
+msgstr "Custom Title"
+
+#: src/hdy-header-bar.c:2115
+msgid "Custom title widget to display"
+msgstr "Custom title widget to display"
+
+#: src/hdy-header-bar.c:2122
+msgid "The amount of space between children"
+msgstr "The amount of space between children"
+
+#: src/hdy-header-bar.c:2141
+msgid "Show decorations"
+msgstr "Show decorations"
+
+#: src/hdy-header-bar.c:2142
+msgid "Whether to show window decorations"
+msgstr "Whether to show window decorations"
+
+#: src/hdy-header-bar.c:2160
+msgid "Decoration Layout"
+msgstr "Decoration Layout"
+
+#: src/hdy-header-bar.c:2161
+msgid "The layout for window decorations"
+msgstr "The layout for window decorations"
+
+#: src/hdy-header-bar.c:2174
+msgid "Decoration Layout Set"
+msgstr "Decoration Layout Set"
+
+#: src/hdy-header-bar.c:2175
+msgid "Whether the decoration-layout property has been set"
+msgstr "Whether the decoration-layout property has been set"
+
+#: src/hdy-header-bar.c:2189
+msgid "Has Subtitle"
+msgstr "Has Subtitle"
+
+#: src/hdy-header-bar.c:2190
+msgid "Whether to reserve space for a subtitle"
+msgstr "Whether to reserve space for a subtitle"
+
+#: src/hdy-header-bar.c:2196
+msgid "Centering policy"
+msgstr "Centring policy"
+
+#: src/hdy-header-bar.c:2197
+msgid "The policy to horizontally align the center widget"
+msgstr "The policy to horizontally align the centre widget"
+
+#: src/hdy-header-bar.c:2204 src/hdy-squeezer.c:1106
+msgid "The animation duration, in milliseconds"
+msgstr "The animation duration, in milliseconds"
+
+#: src/hdy-header-group.c:827
+msgid "Decorate all"
+msgstr "Decorate all"
+
+#: src/hdy-header-group.c:828
+msgid ""
+"Whether the elements of the group should all receive the full decoration"
+msgstr ""
+"Whether the elements of the group should all receive the full decoration"
+
+#: src/hdy-keypad-button.c:225
+msgid "Digit"
+msgstr "Digit"
+
+#: src/hdy-keypad-button.c:226
+msgid "The keypad digit of the button"
+msgstr "The keypad digit of the button"
+
+#: src/hdy-keypad-button.c:232
+msgid "Symbols"
+msgstr "Symbols"
+
+#: src/hdy-keypad-button.c:233
+msgid "The keypad symbols of the button. The first symbol is used as the digit"
+msgstr ""
+"The keypad symbols of the button. The first symbol is used as the digit"
+
+#: src/hdy-keypad-button.c:239
+msgid "Show symbols"
+msgstr "Show symbols"
+
+#: src/hdy-keypad-button.c:240
+msgid "Whether the second line of symbols should be shown or not"
+msgstr "Whether the second line of symbols should be shown or not"
+
+#: src/hdy-keypad.c:258
+msgid "Row spacing"
+msgstr "Row spacing"
+
+#: src/hdy-keypad.c:259
+msgid "The amount of space between two consecutive rows"
+msgstr "The amount of space between two consecutive rows"
+
+#: src/hdy-keypad.c:272
+msgid "Column spacing"
+msgstr "Column spacing"
+
+#: src/hdy-keypad.c:273
+msgid "The amount of space between two consecutive columns"
+msgstr "The amount of space between two consecutive columns"
+
+#: src/hdy-keypad.c:287
+msgid "Letters visible"
+msgstr "Letters visible"
+
+#: src/hdy-keypad.c:288
+msgid "Whether the letters below the digits should be visible"
+msgstr "Whether the letters below the digits should be visible"
+
+#: src/hdy-keypad.c:302
+msgid "Symbols visible"
+msgstr "Symbols visible"
+
+#: src/hdy-keypad.c:303
+msgid "Whether the hash, plus, and asterisk symbols should be visible"
+msgstr "Whether the hash, plus, and asterisk symbols should be visible"
+
+#: src/hdy-keypad.c:317
+msgid "Entry"
+msgstr "Entry"
+
+#: src/hdy-keypad.c:318
+msgid "The entry widget connected to the keypad"
+msgstr "The entry widget connected to the keypad"
+
+#: src/hdy-keypad.c:331
+msgid "End action"
+msgstr "End action"
+
+#: src/hdy-keypad.c:332
+msgid "The end action widget"
+msgstr "The end action widget"
+
+#: src/hdy-keypad.c:345
+msgid "Start action"
+msgstr "Start action"
+
+#: src/hdy-keypad.c:346
+msgid "The start action widget"
+msgstr "The start action widget"
+
+#: src/hdy-leaflet.c:1039 src/hdy-stackable-box.c:3050
+msgid "Whether the widget is folded"
+msgstr "Whether the widget is folded"
+
+#: src/hdy-leaflet.c:1050 src/hdy-stackable-box.c:3061
+msgid "Horizontally homogeneous folded"
+msgstr "Horizontally homogeneous folded"
+
+#: src/hdy-leaflet.c:1051
+msgid "Horizontally homogeneous sizing when the leaflet is folded"
+msgstr "Horizontally homogeneous sizing when the leaflet is folded"
+
+#: src/hdy-leaflet.c:1062 src/hdy-stackable-box.c:3073
+msgid "Vertically homogeneous folded"
+msgstr "Vertically homogeneous folded"
+
+#: src/hdy-leaflet.c:1063
+msgid "Vertically homogeneous sizing when the leaflet is folded"
+msgstr "Vertically homogeneous sizing when the leaflet is folded"
+
+#: src/hdy-leaflet.c:1074 src/hdy-stackable-box.c:3085
+msgid "Box horizontally homogeneous"
+msgstr "Box horizontally homogeneous"
+
+#: src/hdy-leaflet.c:1075
+msgid "Horizontally homogeneous sizing when the leaflet is unfolded"
+msgstr "Horizontally homogeneous sizing when the leaflet is unfolded"
+
+#: src/hdy-leaflet.c:1086 src/hdy-stackable-box.c:3097
+msgid "Box vertically homogeneous"
+msgstr "Box vertically homogeneous"
+
+#: src/hdy-leaflet.c:1087
+msgid "Vertically homogeneous sizing when the leaflet is unfolded"
+msgstr "Vertically homogeneous sizing when the leaflet is unfolded"
+
+#: src/hdy-leaflet.c:1094
+msgid "The widget currently visible when the leaflet is folded"
+msgstr "The widget currently visible when the leaflet is folded"
+
+#: src/hdy-leaflet.c:1101 src/hdy-stackable-box.c:3112
+msgid "The name of the widget currently visible when the children are stacked"
+msgstr "The name of the widget currently visible when the children are stacked"
+
+#: src/hdy-leaflet.c:1120 src/hdy-stackable-box.c:3131
+msgid "The type of animation used to transition between modes and children"
+msgstr "The type of animation used to transition between modes and children"
+
+#: src/hdy-leaflet.c:1126 src/hdy-stackable-box.c:3137
+msgid "Mode transition duration"
+msgstr "Mode transition duration"
+
+#: src/hdy-leaflet.c:1127 src/hdy-stackable-box.c:3138
+msgid "The mode transition animation duration, in milliseconds"
+msgstr "The mode transition animation duration, in milliseconds"
+
+#: src/hdy-leaflet.c:1133 src/hdy-stackable-box.c:3144
+msgid "Child transition duration"
+msgstr "Child transition duration"
+
+#: src/hdy-leaflet.c:1134 src/hdy-stackable-box.c:3145
+msgid "The child transition animation duration, in milliseconds"
+msgstr "The child transition animation duration, in milliseconds"
+
+#: src/hdy-leaflet.c:1140 src/hdy-stackable-box.c:3151
+msgid "Child transition running"
+msgstr "Child transition running"
+
+#: src/hdy-leaflet.c:1141 src/hdy-stackable-box.c:3152
+msgid "Whether or not the child transition is currently running"
+msgstr "Whether or not the child transition is currently running"
+
+#: src/hdy-leaflet.c:1204
+msgid "Navigatable"
+msgstr "Navigable"
+
+#: src/hdy-leaflet.c:1205
+msgid "Whether the child can be navigated to"
+msgstr "Whether the child can be navigated to"
+
+#: src/hdy-preferences-group.c:273 src/hdy-preferences-group.c:274
+#: src/hdy-status-page.c:249
+msgid "Description"
+msgstr "Description"
+
+#: src/hdy-preferences-row.c:116
+msgid "The title of the preference"
+msgstr "The title of the preference"
+
+#: src/hdy-preferences-window.c:192
+msgid "Untitled page"
+msgstr "Untitled page"
+
+#: src/hdy-preferences-window.c:542
+msgid "Search enabled"
+msgstr "Search enabled"
+
+#: src/hdy-preferences-window.c:543
+msgid "Whether search is enabled"
+msgstr "Whether search is enabled"
+
+#: src/hdy-preferences-window.c:557
+msgid ""
+"Whether or not swipe gesture can be used to switch from a subpage to the "
+"preferences"
+msgstr ""
+"Whether or not swipe gesture can be used to switch from a sub-page to the "
+"preferences"
+
+#: src/hdy-preferences-window.ui:9
+msgid "Preferences"
+msgstr "Preferences"
+
+#: src/hdy-preferences-window.ui:81
+msgid "Search"
+msgstr "Search"
+
+#: src/hdy-preferences-window.ui:168
+msgid "No Results Found"
+msgstr "No Results Found"
+
+#: src/hdy-preferences-window.ui:169
+#| msgid "Try a different search"
+msgid "Try a different search."
+msgstr "Try a different search."
+
+#: src/hdy-search-bar.c:451
+msgid "Search Mode Enabled"
+msgstr "Search Mode Enabled"
+
+#: src/hdy-search-bar.c:452
+msgid "Whether the search mode is on and the search bar shown"
+msgstr "Whether the search mode is on and the search bar shown"
+
+#: src/hdy-search-bar.c:463
+msgid "Show Close Button"
+msgstr "Show Close Button"
+
+#: src/hdy-search-bar.c:464
+msgid "Whether to show the close button in the toolbar"
+msgstr "Whether to show the close button in the toolbar"
+
+#: src/hdy-shadow-helper.c:257
+msgid "Widget"
+msgstr "Widget"
+
+#: src/hdy-shadow-helper.c:258
+msgid "The widget the shadow will be drawn for"
+msgstr "The widget the shadow will be drawn for"
+
+#: src/hdy-squeezer.c:1091
+msgid "Homogeneous"
+msgstr "Homogeneous"
+
+#: src/hdy-squeezer.c:1092
+msgid "Homogeneous sizing"
+msgstr "Homogeneous sizing"
+
+#: src/hdy-squeezer.c:1099
+msgid "The widget currently visible in the squeezer"
+msgstr "The widget currently visible in the squeezer"
+
+#: src/hdy-squeezer.c:1113
+msgid "The type of animation used to transition"
+msgstr "The type of animation used to transition"
+
+#: src/hdy-squeezer.c:1148
+msgid "X align"
+msgstr "X align"
+
+#: src/hdy-squeezer.c:1149
+msgid "The horizontal alignment, from 0 (start) to 1 (end)"
+msgstr "The horizontal alignment, from 0 (start) to 1 (end)"
+
+#: src/hdy-squeezer.c:1170
+msgid "Y align"
+msgstr "Y align"
+
+#: src/hdy-squeezer.c:1171
+msgid "The vertical alignment, from 0 (top) to 1 (bottom)"
+msgstr "The vertical alignment, from 0 (top) to 1 (bottom)"
+
+#: src/hdy-squeezer.c:1180 src/hdy-swipe-tracker.c:1058
+msgid "Enabled"
+msgstr "Enabled"
+
+#: src/hdy-squeezer.c:1181
+msgid ""
+"Whether the child can be picked or should be ignored when looking for the "
+"child fitting the available size best"
+msgstr ""
+"Whether the child can be picked or should be ignored when looking for the "
+"child fitting the available size best"
+
+#: src/hdy-stackable-box.c:3062
+msgid "Horizontally homogeneous sizing when the widget is folded"
+msgstr "Horizontally homogeneous sizing when the widget is folded"
+
+#: src/hdy-stackable-box.c:3074
+msgid "Vertically homogeneous sizing when the widget is folded"
+msgstr "Vertically homogeneous sizing when the widget is folded"
+
+#: src/hdy-stackable-box.c:3086
+msgid "Horizontally homogeneous sizing when the widget is unfolded"
+msgstr "Horizontally homogeneous sizing when the widget is unfolded"
+
+#: src/hdy-stackable-box.c:3098
+msgid "Vertically homogeneous sizing when the widget is unfolded"
+msgstr "Vertically homogeneous sizing when the widget is unfolded"
+
+#: src/hdy-stackable-box.c:3105
+msgid "The widget currently visible when the widget is folded"
+msgstr "The widget currently visible when the widget is folded"
+
+#: src/hdy-stackable-box.c:3195 src/hdy-stackable-box.c:3196
+msgid "Orientation"
+msgstr "Orientation"
+
+#: src/hdy-status-page.c:222
+#| msgid "The name of the child page"
+msgid "The name of the icon to be used"
+msgstr "The name of the icon to be used"
+
+#: src/hdy-status-page.c:236
+#| msgid "The title to display"
+msgid "The title to be displayed below the icon"
+msgstr "The title to be displayed below the icon"
+
+#: src/hdy-status-page.c:250
+msgid "The description to be displayed below the title"
+msgstr "The description to be displayed below the title"
+
+#: src/hdy-swipe-tracker.c:1043
+msgid "Swipeable"
+msgstr "Swipe-able"
+
+#: src/hdy-swipe-tracker.c:1044
+msgid "The swipeable the swipe tracker is attached to"
+msgstr "The swipe-able the swipe tracker is attached to"
+
+#: src/hdy-swipe-tracker.c:1059
+msgid "Whether the swipe tracker processes events"
+msgstr "Whether the swipe tracker processes events"
+
+#: src/hdy-swipe-tracker.c:1073
+msgid "Reversed"
+msgstr "Reversed"
+
+#: src/hdy-swipe-tracker.c:1074
+msgid "Whether swipe direction is reversed"
+msgstr "Whether swipe direction is reversed"
+
+#: src/hdy-swipe-tracker.c:1104
+#| msgid "Whether to allow dragging with mouse pointer"
+msgid "Whether to allow swiping for more than one snap point at a time"
+msgstr "Whether to allow swiping for more than one snap point at a time"
+
+#: src/hdy-tab-bar.c:515 src/hdy-tab-box.c:3511 src/hdy-tab-box.c:3512
+#: src/hdy-tab.c:860 src/hdy-tab.c:861
+msgid "View"
+msgstr "View"
+
+#: src/hdy-tab-bar.c:516
+msgid "The view the tab bar controls."
+msgstr "The view the tab bar controls."
+
+#: src/hdy-tab-bar.c:529
+#| msgid "The start action widget"
+msgid "Start action widget"
+msgstr "Start action widget"
+
+#: src/hdy-tab-bar.c:530
+msgid "The widget shown before the tabs"
+msgstr "The widget shown before the tabs"
+
+#: src/hdy-tab-bar.c:543
+#| msgid "The end action widget"
+msgid "End action widget"
+msgstr "End action widget"
+
+#: src/hdy-tab-bar.c:544
+msgid "The widget shown after the tabs"
+msgstr "The widget shown after the tabs"
+
+#: src/hdy-tab-bar.c:562
+msgid "Autohide"
+msgstr "Autohide"
+
+#: src/hdy-tab-bar.c:563
+#| msgid "Whether the widget is folded"
+msgid "Whether the tabs automatically hide"
+msgstr "Whether the tabs automatically hide"
+
+#: src/hdy-tab-bar.c:578
+msgid "Tabs revealed"
+msgstr "Tabs revealed"
+
+#: src/hdy-tab-bar.c:579
+#| msgid "Whether the view switcher is revealed"
+msgid "Whether the tabs are currently revealed"
+msgstr "Whether the tabs are currently revealed"
+
+#: src/hdy-tab-bar.c:595
+#| msgid "Expanded"
+msgid "Expand tabs"
+msgstr "Expand tabs"
+
+#: src/hdy-tab-bar.c:596
+#| msgid "Whether the row is expanded"
+msgid "Whether tabs expand to full width"
+msgstr "Whether tabs expand to full width"
+
+#: src/hdy-tab-bar.c:612 src/hdy-tab.c:902 src/hdy-tab.c:903
+msgid "Inverted"
+msgstr "Inverted"
+
+#: src/hdy-tab-bar.c:613
+msgid "Whether tabs use inverted layout"
+msgstr "Whether tabs use inverted layout"
+
+#: src/hdy-tab-bar.c:635 src/hdy-tab-bar.c:636
+msgid "Extra drag destination targets"
+msgstr "Extra drag destination targets"
+
+#: src/hdy-tab-bar.c:652
+msgid "Is overflowing"
+msgstr "Is overflowing"
+
+#: src/hdy-tab-bar.c:653
+#| msgid "Whether the row is expanded"
+msgid "Whether the tab bar is overflowing"
+msgstr "Whether the tab bar is overflowing"
+
+#: src/hdy-tab-box.c:3497 src/hdy-tab-box.c:3498 src/hdy-tab.c:867
+#: src/hdy-tab.c:868 src/hdy-tab-view.c:415
+msgid "Pinned"
+msgstr "Pinned"
+
+#: src/hdy-tab-box.c:3504 src/hdy-tab-box.c:3505
+msgid "Tab Bar"
+msgstr "Tab Bar"
+
+#: src/hdy-tab-box.c:3518 src/hdy-tab-box.c:3519
+msgid "Adjustment"
+msgstr "Adjustment"
+
+#: src/hdy-tab-box.c:3525 src/hdy-tab-box.c:3526
+#| msgid "Needs attention"
+msgid "Needs Attention Left"
+msgstr "Needs Attention Left"
+
+#: src/hdy-tab-box.c:3532 src/hdy-tab-box.c:3533
+#| msgid "Needs attention"
+msgid "Needs Attention Right"
+msgstr "Needs Attention Right"
+
+#: src/hdy-tab-box.c:3539 src/hdy-tab-box.c:3540
+#| msgid "Resize"
+msgid "Resize Frozen"
+msgstr "Resize Frozen"
+
+#: src/hdy-tab.c:874 src/hdy-tab.c:875
+msgid "Dragging"
+msgstr "Dragging"
+
+#: src/hdy-tab.c:881 src/hdy-tab.c:882
+msgid "Page"
+msgstr "Page"
+
+#: src/hdy-tab.c:888 src/hdy-tab.c:889
+msgid "Display Width"
+msgstr "Display Width"
+
+#: src/hdy-tab.c:895 src/hdy-tab.c:896
+msgid "Hovering"
+msgstr "Hovering"
+
+#: src/hdy-tab-view.c:371
+msgid "Child"
+msgstr "Child"
+
+#: src/hdy-tab-view.c:372
+#| msgid "The name of the child page"
+msgid "The child of the page"
+msgstr "The child of the page"
+
+#: src/hdy-tab-view.c:387
+msgid "Parent"
+msgstr "Parent"
+
+#: src/hdy-tab-view.c:388
+#| msgid "The name of the child page"
+msgid "The parent page of the page"
+msgstr "The parent page of the page"
+
+#: src/hdy-tab-view.c:401
+#| msgid "Selected index"
+msgid "Selected"
+msgstr "Selected"
+
+#: src/hdy-tab-view.c:402
+#| msgid "Whether the widget is folded"
+msgid "Whether the page is selected"
+msgstr "Whether the page is selected"
+
+#: src/hdy-tab-view.c:416
+#| msgid "Whether the row is expanded"
+msgid "Whether the page is pinned"
+msgstr "Whether the page is pinned"
+
+#: src/hdy-tab-view.c:433
+#| msgid "The title of the preference"
+msgid "The title of the page"
+msgstr "The title of the page"
+
+#: src/hdy-tab-view.c:448
+msgid "Tooltip"
+msgstr "Tooltip"
+
+#: src/hdy-tab-view.c:449
+#| msgid "The name of the child page"
+msgid "The tooltip of the page"
+msgstr "The tooltip of the page"
+
+#: src/hdy-tab-view.c:465
+#| msgid "Icon name"
+msgid "Icon"
+msgstr "Icon"
+
+#: src/hdy-tab-view.c:466
+#| msgid "The name of the child page"
+msgid "The icon of the page"
+msgstr "The icon of the page"
+
+#: src/hdy-tab-view.c:484
+msgid "Loading"
+msgstr "Loading"
+
+#: src/hdy-tab-view.c:485
+#| msgid "Whether the widget is folded"
+msgid "Whether the page is loading"
+msgstr "Whether the page is loading"
+
+#: src/hdy-tab-view.c:509
+msgid "Indicator icon"
+msgstr "Indicator icon"
+
+#: src/hdy-tab-view.c:510
+msgid "An indicator icon for the page"
+msgstr "An indicator icon for the page"
+
+#: src/hdy-tab-view.c:528
+#| msgid "Interactive"
+msgid "Indicator activatable"
+msgstr "Indicator activatable"
+
+#: src/hdy-tab-view.c:529
+#| msgid "Whether the expansion is enabled"
+msgid "Whether the indicator icon is activatable"
+msgstr "Whether the indicator icon is activatable"
+
+#: src/hdy-tab-view.c:546 src/hdy-view-switcher-button.c:234
+msgid "Needs attention"
+msgstr "Needs attention"
+
+#: src/hdy-tab-view.c:547
+#| msgid "Hint the view needs attention"
+msgid "Whether the page needs attention"
+msgstr "Whether the page needs attention"
+
+#: src/hdy-tab-view.c:1105
+msgid "The number of pages in the tab view"
+msgstr "The number of pages in the tab view"
+
+#: src/hdy-tab-view.c:1120
+#| msgid "Number of pages"
+msgid "Number of pinned pages"
+msgstr "Number of pinned pages"
+
+#: src/hdy-tab-view.c:1121
+msgid "The number of pinned pages in the tab view"
+msgstr "The number of pinned pages in the tab view"
+
+#: src/hdy-tab-view.c:1140
+msgid "Is transferring page"
+msgstr "Is transferring page"
+
+#: src/hdy-tab-view.c:1141
+#| msgid "Whether search is enabled"
+msgid "Whether a page is being transferred"
+msgstr "Whether a page is being transferred"
+
+#: src/hdy-tab-view.c:1154
+#| msgid "Selected index"
+msgid "Selected page"
+msgstr "Selected page"
+
+#: src/hdy-tab-view.c:1155
+#| msgid "The widget currently visible"
+msgid "The currently selected page"
+msgstr "The currently selected page"
+
+#: src/hdy-tab-view.c:1175
+msgid "Default icon"
+msgstr "Default icon"
+
+#: src/hdy-tab-view.c:1176
+#| msgid "Default animation duration"
+msgid "Default page icon"
+msgstr "Default page icon"
+
+#: src/hdy-tab-view.c:1193
+msgid "Menu model"
+msgstr "Menu model"
+
+#: src/hdy-tab-view.c:1194
+msgid "Tab context menu model"
+msgstr "Tab context menu model"
+
+#: src/hdy-tab-view.c:1222
+#| msgid "The start action widget"
+msgid "Shortcut widget"
+msgstr "Shortcut widget"
+
+#: src/hdy-tab-view.c:1223
+#| msgid "The start action widget"
+msgid "Tab shortcut widget"
+msgstr "Tab shortcut widget"
+
+#: src/hdy-title-bar.c:308
+msgid "Selection mode"
+msgstr "Selection mode"
+
+#: src/hdy-title-bar.c:309
+msgid "Whether or not the title bar is in selection mode"
+msgstr "Whether or not the title bar is in selection mode"
+
+#: src/hdy-value-object.c:191
+msgctxt "HdyValueObjectClass"
+msgid "Value"
+msgstr "Value"
+
+#: src/hdy-value-object.c:192
+msgctxt "HdyValueObjectClass"
+msgid "The contained value"
+msgstr "The contained value"
+
+#: src/hdy-view-switcher-bar.c:178 src/hdy-view-switcher.c:512
+#: src/hdy-view-switcher-title.c:230
+msgid "Policy"
+msgstr "Policy"
+
+#: src/hdy-view-switcher-bar.c:179 src/hdy-view-switcher.c:513
+#: src/hdy-view-switcher-title.c:231
+msgid "The policy to determine the mode to use"
+msgstr "The policy to determine the mode to use"
+
+#: src/hdy-view-switcher-bar.c:192 src/hdy-view-switcher-bar.c:193
+#: src/hdy-view-switcher.c:547 src/hdy-view-switcher.c:548
+#: src/hdy-view-switcher-title.c:244 src/hdy-view-switcher-title.c:245
+msgid "Stack"
+msgstr "Stack"
+
+#: src/hdy-view-switcher-bar.c:206
+msgid "Reveal"
+msgstr "Reveal"
+
+#: src/hdy-view-switcher-bar.c:207
+msgid "Whether the view switcher is revealed"
+msgstr "Whether the view switcher is revealed"
+
+#: src/hdy-view-switcher-button.c:203
+msgid "Icon Name"
+msgstr "Icon Name"
+
+#: src/hdy-view-switcher-button.c:204
+msgid "Icon name for image"
+msgstr "Icon name for image"
+
+#: src/hdy-view-switcher-button.c:217
+msgid "Icon Size"
+msgstr "Icon Size"
+
+#: src/hdy-view-switcher-button.c:218
+msgid "Symbolic size to use for named icon"
+msgstr "Symbolic size to use for named icon"
+
+#: src/hdy-view-switcher-button.c:235
+msgid "Hint the view needs attention"
+msgstr "Hint the view needs attention"
+
+#: src/hdy-view-switcher.c:532
+msgid "Narrow ellipsize"
+msgstr "Narrow ellipsise"
+
+#: src/hdy-view-switcher.c:533
+msgid ""
+"The preferred place to ellipsize the string, if the narrow mode label does "
+"not have enough room to display the entire string"
+msgstr ""
+"The preferred place to ellipsise the string, if the narrow mode label does "
+"not have enough room to display the entire string"
+
+#: src/hdy-view-switcher-title.c:286
+msgid "View switcher enabled"
+msgstr "View switcher enabled"
+
+#: src/hdy-view-switcher-title.c:287
+msgid "Whether the view switcher is enabled"
+msgstr "Whether the view switcher is enabled"
+
+#: src/hdy-view-switcher-title.c:300
+msgid "Title visible"
+msgstr "Title visible"
+
+#: src/hdy-view-switcher-title.c:301
+msgid "Whether the title label is visible"
+msgstr "Whether the title label is visible"
+
+#: src/hdy-window-handle-controller.c:259
+msgid "Move"
+msgstr "Move"
+
+#: src/hdy-window-handle-controller.c:267
+msgid "Resize"
+msgstr "Resize"
+
+#: src/hdy-window-handle-controller.c:298
+msgid "Always on Top"
+msgstr "Always on Top"

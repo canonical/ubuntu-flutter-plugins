@@ -1,0 +1,18 @@
+stacksidebar list {
+  border-left-width: 0px;
+  border-right-width: 0px;
+}
+
+stacksidebar.background list {
+  background: @theme_bg_color;
+}
+
+carousel.vertical .carousel-icon {
+  -gtk-icon-transform: rotate(90deg);
+}
+
+/* Mimick the status page. */
+box.avatar-page { margin: 36px 12px; }
+box.avatar-page > box > avatar { margin-bottom: 36px; }
+box.avatar-page > box > label.title { margin-bottom: 12px; }
+box.avatar-page > box > label.description { margin-bottom: 36px; }
