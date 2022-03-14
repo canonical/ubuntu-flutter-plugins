@@ -22,10 +22,9 @@ jobs:
     runs-on: ubuntu-20.04
     steps:
     - uses: actions/checkout@v2
+    - uses: dart-lang/setup-dart@v1
+    - run: dart pub global activate melos
     - run: sudo snap install --classic flutter
     - run: flutter config --enable-linux-desktop
-    - run: flutter pub global activate melos
-    - run: |
-        echo "PATH=$PATH:$HOME/.pub-cache/bin:$HOME/snap/flutter/common/flutter/.pub-cache/bin" >> $GITHUB_ENV
     - run: melos bootstrap
     - run: melos build
