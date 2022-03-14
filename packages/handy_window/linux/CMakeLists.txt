@@ -18,11 +18,17 @@ target_include_directories(${PLUGIN_NAME} INTERFACE
 target_link_libraries(${PLUGIN_NAME} PRIVATE flutter)
 target_link_libraries(${PLUGIN_NAME} PRIVATE PkgConfig::GTK)
 
-# List of absolute paths to libraries that should be bundled with the plugin
-set(handy_window_bundled_libraries
-  "$<TARGET_FILE:handy>"
-  PARENT_SCOPE
-)
+# libhandy requires g_atomic_ref_count_init/inc/dec available since 2.58
+pkg_check_modules(GLIB glib-2.0>=2.58)
+if(GLIB_FOUND)
+  # List of absolute paths to libraries that should be bundled with the plugin
+  set(handy_window_bundled_libraries
+    "$<TARGET_FILE:handy>"
+    PARENT_SCOPE
+  )
 
-add_subdirectory(libhandy)
-target_link_libraries(${PLUGIN_NAME} PRIVATE handy)
+  add_subdirectory(libhandy)
+  target_link_libraries(${PLUGIN_NAME} PRIVATE handy)
+else()
+  message(WARNING "The `handy_window` package requires libglib2.0-0 >= 2.58 available in Ubuntu 20.04 and later. Using normal Flutter window instead.")
+endif()
