@@ -1,0 +1,77 @@
+include:
+  - project: 'gnome/citemplates'
+    file: 'flatpak/flatpak_ci_initiative.yml'
+
+variables:
+  MANIFEST_PATH: 'examples/sm.puri.Handy.Demo.json'
+  FLATPAK_MODULE: 'libhandy'
+  FLATPAK_BUILD_DIR: build
+
+stages:
+  - build
+  - publish
+
+api-visibility:
+  stage: build
+  before_script: []
+  script:
+    - ./.gitlab-ci/api-visibility.sh
+
+doc:
+  image: fedora:34
+  stage: build
+  variables:
+    MESON_ARGS: >-
+      -Dexamples=false
+      -Dgtk_doc=true
+      -Dtests=false
+      -Dvapi=false
+  before_script:
+    - dnf -y update
+    - dnf -y install gcc git gobject-introspection-devel gtk3-devel meson pip
+    - pip install Jinja2 pygments toml typogrify
+  script:
+    - meson --prefix=/app ${MESON_ARGS} _build
+    - ninja -C _build
+    - mv _build/doc/libhandy-1 _doc/
+  artifacts:
+    paths:
+      - _doc
+
+build-flatpak:
+  extends: '.flatpak'
+  stage: build
+  before_script: []
+  variables:
+    RUNTIME_REPO: 'https://nightly.gnome.org/gnome-nightly.flatpakrepo'
+    APP_ID: 'sm.puri.Handy.Demo'
+    BUNDLE: 'sm.puri.Handy.Demo.flatpak'
+
+build-flatpak-glade:
+  extends: '.flatpak'
+  stage: build
+  before_script: []
+  variables:
+    MANIFEST_PATH: 'glade/sm.puri.Handy.Glade.json'
+    RUNTIME_REPO: 'https://nightly.gnome.org/gnome-nightly.flatpakrepo'
+    APP_ID: 'sm.puri.Handy.Glade'
+    BUNDLE: 'sm.puri.Handy.Glade.flatpak'
+
+abi-check:
+  image: fedora:34
+  stage: build
+  variables:
+    LAST_ABI_BREAK: "b90b5120c5e9e3f5a3b0d228bd7ddb24f053289a"
+  before_script:
+    - dnf -y update
+    - dnf -y install gcc gobject-introspection-devel git gtk3-devel libabigail meson vala
+  script:
+    - ./.gitlab-ci/check-abi ${LAST_ABI_BREAK} $(git rev-parse HEAD)
+
+refresh-doc:
+  stage: publish
+  only:
+    refs:
+    - 'main'
+  script:
+    - "curl -X POST -F token=${PAGES_TRIGGER_TOKEN} -F ref=pages https://gitlab.gnome.org/api/v4/projects/11489/trigger/pipeline"

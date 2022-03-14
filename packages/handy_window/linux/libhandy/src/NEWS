@@ -1,0 +1,579 @@
+==============
+Version 1.5.91
+==============
+
+- HdyAvatar
+  - Fix invalid UTF-8 handling
+- HdyStyleManager
+  - Don't disable non-CSS animations during style changes
+- Fix carousel indicator sizing
+
+==============
+Version 1.5.90
+==============
+
+- Documentation
+  - Port to gi-docgen
+  - Use "Since: 1.0" for pre-1.0 symbols
+  - Various cleanups and consistency updates
+- Demo
+  - Fix keyboard navigation
+  - Don't make rows containing buttons activatable
+  - Set minimum width on the view switcher window
+- HdyCarousel
+  - Properly remove mouse wheel timer
+- HdyClamp
+  - Fix measuring
+- HdyKeypad
+  - Fix keyboard navigation
+- HdyStyleManager
+  - Properly reset animations after style changes
+- HdySwipeTracker
+  - Fix a runtime warning
+- HdyTabView
+  - Propagate Alt+[0-9] when trying to switch to the selected tab
+- HdyViewSwitcher
+  - Properly center button labels
+- Build and CI cleanups
+- Remove unused distro packaging
+- Translation updates:
+  - Czech
+  - Romanian
+  - Slovenian
+  - Spanish
+
+=============
+Version 1.5.0
+=============
+
+- Introduce HdyStyleManager for managing color schemes (light/dark) and
+  high contrast mode.
+  - Support the cross-platform color scheme preference in the
+    settings portal.
+- HdyPreferencesPage
+  - Remove adaptive margins to fix default window sizes
+- HdyTabBar
+  - Handle middle click on button release rather than press
+- Various memory leak fixes
+- Translation updates:
+  - Brazilian Portuguese
+  - Finnish
+  - Indonesian
+  - Portuguese
+  - Serbian
+  - Swedish
+  - Ukrainian
+
+=============
+Version 1.4.0
+=============
+
+- Translation updates:
+  - Brazilian Portuguese
+  - British English
+  - Spanish
+
+==============
+Version 1.3.90
+==============
+
+- HdyAvatar:
+  - Fix giving it the .image style class when needed.
+- HdyCarousel:
+  - Add the allow-scroll-wheel property.
+  - Fix the child size allocation.
+- HdyPreferencesGroup:
+  - Add the use-markup property.
+- HdySqueezer:
+  - Fix the size allocation, not swapping width and height.
+- HdyTabBar:
+  - Fix leaking extra drag destination targets.
+- HdyDeck and HdyLeaflet:
+  - Fix a crash when swiping and empty.
+- Deprecate HdySwipeGroup and HdyTitleBar.
+- Fix translations by setting the translation domain in UI files.
+- Translation updates:
+  - Basque
+  - Brazilian Portuguese
+  - Indonesian
+  - Occitan
+  - Romanian
+  - Spanish
+  - Swedish
+  - Ukrainian
+
+=============
+Version 1.2.2
+=============
+
+- HdySqueezer:
+  - Make the vertical orientation work.
+  - Fix usage of xalign with RTL.
+- HdyComboRow:
+  - Focus selected row when opening the popover.
+- HdyAvatar:
+  - Fix a crash when loading icons.
+- Demo:
+  - Fix RTL sidebar icons.
+
+=============
+Version 1.2.1
+=============
+
+- HdyDeck and HdyLeaflet:
+  - Skip the unfolded allocation phase if there are no visible children,
+    fixing a crash.
+  - Fix the reverse child order.
+- HdyHeaderBar:
+  - Stop force centering an expanded title when loose.
+- HdyFlap:
+  - Fix shadow glitches on flap child resizes.
+- HdyPreferencesWindow:
+  - Give the window the .preferences style class.
+  - Make the search results page's margins adaptive.
+- Demo:
+  - Fix a memory leak in the view switcher demo.
+- Meson:
+  - Avoid trailing slashes in directories if package_subdir is empty.
+- Translation updates:
+  - Basque
+  - Dutch
+  - Finnish
+
+=============
+Version 1.2.0
+=============
+
+- Fix deprecation warnings when including handy.h.
+- Fix warnings with -Wmissing-field-initializers.
+- Fix warnings with --buildtype=optimized.
+- Fix a crash when subclassing HdyPreferencesGroup.
+- Fix a build reproducibility issue by using basenames rather than full
+  paths in generated sources.
+- HdyAvatar:
+  - Fix leaking a GTask.
+  - Fix leaking HdyAvatarIcon.
+- HdyCarousel:
+  - Fix positioning non-expanded children in RTL.
+- HdyDeck and HdyLeaflet:
+  - Fix touchpad swipes when the widget isn't at 0,0.
+- HdyFlap:
+  - Prevent focusing obscured content when modal.
+  - Redraw when allocating to fix glitches when the flap child resizes
+    while the shadow is visible.
+- HdyStatusPage:
+  - Fix the page margins when missing one of the children.
+- HdySwipeTracker:
+  - Fix wrapping back to the first page when reaching the last one on
+    long swipes.
+- HdyTabBar:
+  - Fix drag threshold calculation.
+- Translation updates:
+  - Brazilian Portuguese
+  - German
+  - Spanish
+  - Swedish
+
+==============
+Version 1.1.90
+==============
+
+- Add HdyFlap, allowing to have adaptive tab bars and header bars.
+- Add HdyTabBar and HdyTabView, offering a modern tab bar.
+- Add HdyStatusPage, a convenient widget for welcome pages, empty state
+  pages, or error pages.
+- HdyAvatar:
+  - Add the loadable-icon property to allow setting a GLoadableIcon as
+    the avatar picture.
+  - Deprecate hdy_avatar_set_image_load_func() in favor of the
+    loadable-icon property.
+  - Add hdy_avatar_draw_to_pixbuf() and
+    hdy_avatar_draw_to_pixbuf_async() to export the avatar as a
+    GdkPixbuf.
+  - Take CSS sizing properties into account.
+- HdyPreferencesWindow:
+  - Use HdyStatusPage as the empty search result page to standardize the
+    page's look.
+- HdyPreferencesPage:
+  - Propagate the natural height of the scrolled content.
+  - Make the scrolled window automatically follow the focus.
+  - Implement the margins via CSS so applications can override them.
+  - Make the margins adapt to the available width.
+- HdyPreferencesGroup:
+  - Allow navigating out of the listbox.
+  - Wrap labels on words or characters, preventing long words from
+    breaking the UI.
+  - Take CSS sizing properties into account.
+  - Implement the margins via CSS so applications can override them.
+  - Refine the spacing.
+  - Protect against gtk_widget_show_all().
+  - Fix a leak when destroying the widget.
+  - Add accessibility relationships for the title.
+- HdyClamp:
+  - Fix measuring the widget even without a child.
+  - Take CSS sizing properties into account.
+- HdyActionRow:
+  - Add the title-lines and subtitle-lines properties to set the number
+    of lines the title and subtitle should be limited to, 0 giving an
+    unlimited lines number.
+  - Wrap labels on words or characters, preventing long words from
+    breaking the UI.
+  - Document that hdy_action_row_get_icon_name() doesn't transfer string
+    ownership.
+  - Add accessibility relationships for the title.
+- HdyComboRow:
+  - Fix showing the checkmark on the right item.
+  - Use object-select-symbolic instead of emblem-ok-symbolic as the
+    selected item checkmark icon, as it is more semantically correct.
+- HdySwipeTracker:
+  - Add the allow-long-swipes property to allow swiping more than one
+    snap point at a time.
+  - Calculate the velocity with a scroll history to gain precision.
+  - Fix coordinate transformation for scrolling.
+  - Don't leak the current event.
+- HdyCarousel:
+  - Add the allow-long-swipes property to allow swiping more than one
+    child at a time.
+  - Fix a size invalidation issue.
+- HdyDeck:
+  - Add the hdy_deck_prepend(), hdy_deck_insert_child_after(), and
+    hdy_deck_reorder_child_after() methods.
+  - Increase the edge swipe area from 16px to 32px.
+  - Fix the ntural size calculation.
+- HdyLeaflet:
+  - Add the hdy_leaflet_prepend(), hdy_leaflet_insert_child_after(), and
+    hdy_leaflet_reorder_child_after() methods.
+  - Increase the edge swipe area from 16px to 32px.
+- HdyKeypad:
+  - Beep when typing invalid characters.
+  - Allow pasting and erasing text in the entry.
+  - Fix allowing + when symbols are visible instead of hidden.
+- Transiation updates:
+  - Brazilian Portuguese
+  - Catalan
+  - Finnish
+  - Friulian
+  - Indonesian
+  - Polish
+  - Portuguese
+  - Romanian
+  - Serbian
+  - Swedish
+  - Ukrainian
+
+=============
+Version 1.0.2
+=============
+
+- Fix gtk-doc install path.
+- Code cleanups.
+- HdyCarousel:
+  - Fix pages not being drawn until scrolled on X11.
+- HdyComboRow:
+  - Fix test failures on x86.
+- HdyLeaflet and HdyDeck:
+  - Fix transition shadow on HiDPI.
+- HdySwipeTracker:
+  - Fix touchpad swipes not working after pressing a GtkButton.
+  - Fix swipes in nested swipeable widgets when started from a GtkButton.
+- HdyViewSwitcherTitle:
+  - Mark title and subtitle properties as translatable for Glade.
+- Translation updates:
+  - Catalan
+
+=============
+Version 1.0.1
+=============
+
+- Fix build with Glade 3.37.
+- Fix a Meson version warning.
+- Typo fixes.
+- HdyAvatar:
+  - Minimize the amount of redundant load_image() calls.
+  - Center non-square custom images.
+  - Add .image style class to avatars with custom images.
+  - Allow css border and shadow on avatars with custom images so
+    elementary can style it.
+- HdyCarousel:
+  - Fix drawing cache.
+  - Fix crash when scrolling over empty carousel.
+- HdyComboRow:
+  - Fix popover hiding animation when clicking a row.
+  - Always reserve space for checkmarks.
+- HdyHeaderGroup:
+  - Fix a warning on nesting HdyHeaderGroups.
+- HdyKeypad:
+  - Fix input of the #, @ and + characters.
+- HdyLeaflet and HdyDeck:
+  - Fix minimum size when 'interpolate-size' property is TRUE.
+- HdyPreferencesWindow:
+  - Fix searching rows that have mnemonics.
+- HdySwipeTracker:
+  - Fix swipes not working if started from GtkButton.
+  - Increase drag threshold for touchscreens.
+  - Avoid a jump when starting a drag.
+- HdyViewSwitcher:
+  - Fix sizing with invisible pages.
+- Transiation updates:
+  - French
+  - Friulian
+  - Slovenian
+
+==============
+Version 1.0.0
+==============
+
+- No change.
+
+==============
+Version 0.91.0
+==============
+
+- Update HdyComboRow's state when its model is changed.
+- Fix padding application in HdyHeaderBar.
+- HdyPreferencesWindow:
+  - Translate the keyval properly to ensure keyboard shortcuts work with
+    all keymaps.
+  - Allow closing the window or subpages with the Esc key.
+- HdyWindow and HdyApplicationWindow:
+  - Fix a memory leak when destroying the widget.
+  - Get the state from the correct style context to avoid a contant
+    redraw after changing the text direction and before the window is
+    focused.
+  - Don't force a 0px border-radius on the window to give more freedom
+    to elementary.
+- Translation updates:
+  - Brazilian Portuguese
+  - Basque
+  - Indonesian
+  - Spanish
+  - Ukrainian
+
+==============
+Version 0.90.0
+==============
+
+- Stop requiring the HANDY_USE_UNSTABLE_API guard.
+- Stop transforming close buttons into back buttons for dialogs on the
+  desktop.
+- Give some nice default and minimum sizes to HdyPreferencesWindow.
+- HdyCarousel:
+  - Add HdyCarouselIndicatorDots and HdyCarouselIndicatorLines.
+  - Drop the indicator-style, indicator-spacing, and center-content
+    properties.
+- Revamp the colors of HdyAvatar and augment its colors number to 14.
+- Set the default column and row spacing of HdyKeypad to 6 pixels.
+- Don't present an arrow and a popover in HdyComboRow when its model has
+  less than 2 items.
+- Support CSS sizing properties for HdySqueezer and HdyViewSwitcher.
+- Drop the icon-size properties of HdyViewSwitcher, HdyViewSwitcherTitle
+  and HdyViewSwitcherBar.
+- Give some horizontal margins to the view switcher of
+  HdyViewSwitcherTitle via CSS.
+- Add all files back to tarballs except the debian directory.
+
+==============
+Version 0.85.0
+==============
+
+- HdyAvatar:
+  - Add the icon-name property to allow setting a different default icon
+    than avatar-default-symbolic.
+  - Ship avatar-default-symbolic as a resource to ensure it's there.
+    This shouldn't affect icon themes already offering it.
+  - Check the icon exists before using it to avoid a crash.
+- HdyDeck and HdyLeaflet:
+  - Allow dragging the higher sibling only from the border where it
+    sits, rather than from the anywhere on the currently visible child,
+    reinforcing spatialization.
+  - Add the get_child_by_name() methods.
+- HdyLeaflet:
+  - Rename the 'allow-visible' child property into 'navigatable'.
+- HdySwipeable:
+  - Add a navigation direction param and a gesture type param to
+    get_swipe_area().
+- HdyPreferencesWindow:
+  - Allow presenting a subpage over the window via the new
+    present_subpage() and close_subpage() methods.
+  - Add the 'can-swipe-back' property to allow closing a subpage via a
+    back swipe gesture.
+  - Exclude untitled rows as well as invisible pages, groups, and rows
+    from the search results.
+- HdyKeypad:
+  - Replace the 'show-symbols' property by 'letters-visible'.
+  - Replace the 'only-digits' property by 'symbols-visible', whose
+    boolean meaning is inverted.
+  - Replace the 'left-action' property by 'start-action'.
+  - Replace the 'right-action' property by 'end-action'.
+  - Make the 'entry' property declare it uses the GtkEntry type rather
+    than GtkWidget.
+- HdySqeezer:
+  - Add the 'xalign' and 'yalign' properties to help aligning the
+    children during transitions.
+- HdyViewSwitcherTitle:
+  - Set the 'policy' property default to 'auto' as in HdyViewSwitcher.
+- HdyTitleBar:
+  - Fix an accidental mix of natural and minimum sizes in measure().
+- Harden the ABI by making symbols implicitly private and explicitly
+  public.
+- Translation updates:
+  - Romanian
+  - Ukrainian
+
+==============
+Version 0.84.0
+==============
+
+- HdyHeaderGroup:
+  - Replace GtkHeaderBar as the child type by HdyHeaderGroupChild, and
+    adjust the matching accessors. HdyHeaderGroupChild can hold a
+    GtkHeaderBar, a HdyHeaderBar, and a HdyHeaderGroup, allowing to nest
+    header groups.
+  - Replace the 'focus' property by the 'decorate-all' property.
+  - Add the update-decoration-layouts signal, used when nesting header
+    groups.
+- HdyHeaderBar:
+  - Slight size request fix.
+- Use the window node's radius instead of the decoration node's one to
+  mask HdyWindow and HdyApplicationWindow.
+- Make HdyAvatar, HdyHeaderGroup, HdySqueezer, HdyViewSwitcher,
+  HdyViewSwitcherBar, HdyViewSwitcherTitle, and HdyWindowHandle final.
+- Replace usage of (allow-none) by (nullable) or (optional).
+- Translation updates:
+  - Ukrainian
+
+==============
+Version 0.83.0
+==============
+
+- Initialization:
+  - Add hdy_init() back, with a different prototype. See its
+    documentation to know how to use it.
+  - Drop initializing the library via a constructor as it was causing
+    many issues.
+  - Drop the now useless Python override.
+  - Directly update themes on changes.
+- Add HdySwipeTracker.
+- HdySwipeable:
+  - Drop the begin_swipe(), update_swipe(), end_swipe() and get_range()
+    virtual methods
+  - Add the get_swipe_tracker() and get_swipe_area() virtual methods.
+  - Add the …_switch_child(), …_emit_child_switched(),
+    …_get_swipe_tracker(), …_get_distance(), …_get_snap_points(),
+    …_get_progress(), …_get_cancel_progress(), and …_get_swipe_area()
+    functions.
+  - Make implementing get_snap_points() mandatory by dropping its
+    default implementation, compensating the disparition of get_range().
+  - Rename the switch-child signal to child-switched to avoid a naming
+    collision with the switch_child() method.
+- HdyDeck and HdyLeaflet:
+  - Add an outline to shadows to make them slightly more contrasted yet
+    subtle.
+  - Make shadows work over OpenGL content.
+  - Cache shadows for child transitions.
+  - Stop drawing invisible shadows when no transition is running.
+  - Rewrite the transition code to give a window to all children, fixing
+    numerous issues.
+- HdyExpanderRow:
+  - Add hdy_expander_row_add_prefix().
+- Add libhandy.syms back to tarballs as it was mistakenly removed.
+- Translation updates:
+  - Polish
+  - Spanish
+
+==============
+Version 0.82.0
+==============
+
+- Unblacklist run.in for inclusion into the tarball, fixing the build.
+- HdyClamp:
+  - Rename HdyColumn as HdyClamp.
+  - Make it implement GtkOrientable.
+  - Rename its properties from maximum-width to maximum-size, and
+    linear-growth-width to tightening-threshold.
+  - Rename the style classes it sets on itself from .narrow, .medium and
+    .wide style to .small, .medium and .large.
+  - Set the default value of maximum-size to 600, and of
+    tightening-threshold to 400.
+  - Notify when changing size properties, and guard non-changes.
+- HdyCarousel, HdyDeck and HdyLeaflet:
+  - Move the swipe tracker event handling to the bubble phase, giving
+    the priority to the inner widget.
+- HdyDeck:
+  - Avoid some useless allocation computations.
+- HdyLeaflet:
+  - Don't count children of size 0 to compute the fold state.
+  - Don't fold when there is only 1 visible size.
+- HdySwipeable:
+  - Add the missing direct header inclusion guard.
+- HdyWindow and HdyApplicationWindow:
+  - Implement destroy() to correctly destroy the internal widgets.
+- Drop hdy_list_box_separator_header().
+- Don't install Glade files outside prefix.
+- Update the project description.
+- Translation updates:
+  - Spanish
+  - Ukrainian
+
+==============
+Version 0.81.0
+==============
+
+- Migrated the project to https://gitlab.gnome.org/GNOME/libhandy/.
+  - Archived the project at https://source.puri.sm/Librem5/libhandy/.
+  - Updated URLs and email addresses across the project.
+  - Switch the CI to use GNOME's.
+  - Build and publish the nightly reference manual via GitLab Pages at
+    https://gnome.pages.gitlab.gnome.org/libhandy/.
+- Make the reference manual and the Glade catalog parallel-installable
+  with libhandy 0.0.
+- Add a Python override to ensure the library is initialized on import.
+- Themes:
+  - Add the HighContrast theme.
+  - Split the shared theme into the fallback theme whose style can be
+    overridden by other themes, and the shared theme whose style
+    overrides the themes.
+  - Move window corners from the shared theme to Adwaita, so elementary
+    can do what they want.
+  - Make the leaflet and deck drop shadows darker for dark variants and
+    HighContrast, to ensure it's visible.
+  - Drop the .h4 fallback to avoid conflicts with .heading. Themes are
+    now expected to implement .heading, or optionally .h4.
+  - Fix list.preferences nested list bottom corner rounding issues.
+- CSS support:
+  - Account for the CSS box-shadow property when clipping in HdyAvatar,
+    HdyHeaderBar, and HdyTitleBar.
+  - Support the CSS min-width and min-height properties in HdyHeaderBar,
+    and HdyTitleBar.
+- HdyDeck and HdyLeaflet:
+  - Add *_get_adjacent_child() to get the child a swipe or a call to
+    *_navigate() would present.
+  - Don't skip the swipes with a 0 (child for leaflet) transition
+    duration.
+  - Correctly cancel transitions when the duration is 0 or the
+    transition is NONE.
+- HdyCarousel:
+  - Allow mouse drag by default.
+  - Add the 'reveal-duration' property.
+  - Animate child addition and deletion.
+- HdyExpanderRow:
+  - Move switch to the left of the arrow.
+  - Add hdy_expander_row_add_action_widget() and the 'action' child type
+    to allow adding widgets before the arrow and the switch.
+- HdyHeaderBar:
+  - Add the .titlebar style class by default.
+- HdyKeypad:
+  - Make it inherit from GtkBin instead of GtkGrid, contain one instead.
+  - Add spacing properties to set the grid's spacing.
+  - Don't make it visible by default.
+- HdyPreferencesGroup:
+  - Use the .heading style class for the title in addition to .h4.
+- HdyPreferencesWindow:
+  - Make clicking search rows work again.
+- HdySwipeable:
+  - Add the get_distance(), get_range(), get_snap_points(),
+    get_progress(), and get_cancel_progress() virtual methods.
+- HdyViewSwitcherTitle:
+  - Remove the useless has-subtitle property.
+  - Prevent gtk_widget_show_all() from modifying its internal state.
+  - Make dispose() reentrant.

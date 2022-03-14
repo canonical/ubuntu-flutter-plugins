@@ -1,0 +1,1332 @@
+# Swedish translation for libhandy.
+# Copyright © 2020, 2021 libhandy's COPYRIGHT HOLDER
+# This file is distributed under the same license as the libhandy package.
+# Anders Jonsson <anders.jonsson@norsjovallen.se>, 2020, 2021.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: libhandy master\n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/libhandy/issues\n"
+"POT-Creation-Date: 2021-09-25 09:55+0000\n"
+"PO-Revision-Date: 2021-09-26 15:19+0200\n"
+"Last-Translator: Anders Jonsson <anders.jonsson@norsjovallen.se>\n"
+"Language-Team: Swedish <tp-sv@listor.tp-sv.se>\n"
+"Language: sv\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.0\n"
+
+#: glade/glade-hdy-carousel.c:160 glade/glade-hdy-header-bar.c:118
+#: glade/glade-hdy-leaflet.c:184
+#, c-format
+msgid "Insert placeholder to %s"
+msgstr "Infoga platshållare till %s"
+
+#: glade/glade-hdy-carousel.c:189 glade/glade-hdy-header-bar.c:144
+#: glade/glade-hdy-leaflet.c:214
+#, c-format
+msgid "Remove placeholder from %s"
+msgstr "Ta bort platshållare från %s"
+
+#: glade/glade-hdy-header-bar.c:18
+msgid "This property does not apply when a custom title is set"
+msgstr "Denna egenskap gäller inte när en anpassad titel är satt"
+
+#: glade/glade-hdy-header-bar.c:289
+msgid ""
+"The decoration layout does not apply to header bars which do not show window "
+"controls"
+msgstr ""
+"Dekorationslayouten gäller inte rubrikrader som inte visar fönsterkontroller"
+
+#: glade/glade-hdy-leaflet.c:19
+msgid "This property only applies when the leaflet is folded"
+msgstr "Denna egenskap gäller endast när broschyren är ihopvikt"
+
+#: glade/glade-hdy-preferences-page.c:160
+#, c-format
+msgid "Add group to %s"
+msgstr "Lägg till grupp till %s"
+
+#: glade/glade-hdy-preferences-window.c:228
+#, c-format
+msgid "Add page to %s"
+msgstr "Lägg till sida till %s"
+
+#: glade/glade-hdy-search-bar.c:101
+msgid "Search bar is already full"
+msgstr "Sökraden är redan full"
+
+#: glade/glade-hdy-utils.h:13
+#, c-format
+msgid "Only objects of type %s can be added to objects of type %s."
+msgstr "Endast objekt av typen %s kan läggas till i objekt av typen %s."
+
+#: src/hdy-action-row.c:370 src/hdy-action-row.c:371 src/hdy-expander-row.c:314
+#: src/hdy-expander-row.c:315 src/hdy-preferences-page.c:173
+#: src/hdy-preferences-page.c:174 src/hdy-status-page.c:221
+msgid "Icon name"
+msgstr "Ikonnamn"
+
+#: src/hdy-action-row.c:384
+msgid "Activatable widget"
+msgstr "Aktiverbar gränssnittskomponent"
+
+#: src/hdy-action-row.c:385
+msgid "The widget to be activated when the row is activated"
+msgstr "Den gränssnittskomponent som ska aktiveras då raden aktiveras"
+
+#: src/hdy-action-row.c:398 src/hdy-action-row.c:399 src/hdy-expander-row.c:285
+#: src/hdy-header-bar.c:2104 src/hdy-view-switcher-title.c:272
+msgid "Subtitle"
+msgstr "Undertitel"
+
+#: src/hdy-action-row.c:413 src/hdy-expander-row.c:300
+#: src/hdy-preferences-row.c:130
+msgid "Use underline"
+msgstr "Använd understrykning"
+
+#: src/hdy-action-row.c:414 src/hdy-expander-row.c:301
+#: src/hdy-preferences-row.c:131
+msgid ""
+"If set, an underline in the text indicates the next character should be used "
+"for the mnemonic accelerator key"
+msgstr ""
+"Om detta är angivet kommer en understrykning i texten att indikera att nästa "
+"tecken ska användas som en snabbtangent"
+
+#: src/hdy-action-row.c:428
+msgid "Number of title lines"
+msgstr "Antal titelrader"
+
+#: src/hdy-action-row.c:429
+msgid "The desired number of title lines"
+msgstr "Det önskade antalet titelrader"
+
+#: src/hdy-action-row.c:445
+msgid "Number of subtitle lines"
+msgstr "Antal undertitelrader"
+
+#: src/hdy-action-row.c:446
+msgid "The desired number of subtitle lines"
+msgstr "Det önskade antalet undertitelrader"
+
+#: src/hdy-carousel-box.c:1093 src/hdy-carousel-box.c:1094
+#: src/hdy-carousel.c:598 src/hdy-carousel.c:599 src/hdy-tab-view.c:1104
+msgid "Number of pages"
+msgstr "Antal sidor"
+
+#: src/hdy-carousel-box.c:1109 src/hdy-carousel.c:615 src/hdy-header-bar.c:2090
+msgid "Position"
+msgstr "Position"
+
+#: src/hdy-carousel-box.c:1110 src/hdy-carousel.c:616
+msgid "Current scrolling position"
+msgstr "Aktuell rullningsposition"
+
+#: src/hdy-carousel-box.c:1125 src/hdy-carousel.c:646 src/hdy-header-bar.c:2118
+msgid "Spacing"
+msgstr "Mellanrum"
+
+#: src/hdy-carousel-box.c:1126 src/hdy-carousel.c:647
+msgid "Spacing between pages"
+msgstr "Mellanrum mellan sidor"
+
+#: src/hdy-carousel-box.c:1142 src/hdy-carousel.c:721
+msgid "Reveal duration"
+msgstr "Visningslängd"
+
+#: src/hdy-carousel-box.c:1143 src/hdy-carousel.c:722
+msgid "Page reveal duration"
+msgstr "Visningslängd för sidor"
+
+#: src/hdy-carousel.c:632
+msgid "Interactive"
+msgstr "Interaktiv"
+
+#: src/hdy-carousel.c:633
+msgid "Whether the widget can be swiped"
+msgstr "Huruvida gränssnittskomponenten kan svepas"
+
+#: src/hdy-carousel.c:662
+msgid "Animation duration"
+msgstr "Animeringstid"
+
+#: src/hdy-carousel.c:663
+msgid "Default animation duration"
+msgstr "Animeringstid som standard"
+
+#: src/hdy-carousel.c:677 src/hdy-swipe-tracker.c:1090
+msgid "Allow mouse drag"
+msgstr "Tillåt musdrag"
+
+#: src/hdy-carousel.c:678 src/hdy-swipe-tracker.c:1091
+msgid "Whether to allow dragging with mouse pointer"
+msgstr "Huruvida dragning med muspekaren ska tillåtas"
+
+#: src/hdy-carousel.c:692
+msgid "Allow scroll wheel"
+msgstr "Tillåt rullhjul"
+
+#: src/hdy-carousel.c:693
+msgid "Whether the widget will respond to scroll wheel events"
+msgstr "Huruvida komponenten kommer svara på rullhjulshändelser"
+
+#: src/hdy-carousel.c:707 src/hdy-swipe-tracker.c:1105
+msgid "Allow long swipes"
+msgstr "Tillåt långa svep"
+
+#: src/hdy-carousel.c:708
+msgid "Whether to allow swiping for more than one page at a time"
+msgstr "Huruvida svepning ska tillåtas för mer än en sida åt gången"
+
+#: src/hdy-carousel-indicator-dots.c:392 src/hdy-carousel-indicator-dots.c:393
+#: src/hdy-carousel-indicator-lines.c:391
+#: src/hdy-carousel-indicator-lines.c:392
+msgid "Carousel"
+msgstr "Karusell"
+
+#: src/hdy-clamp.c:412
+msgid "Maximum size"
+msgstr "Maximal storlek"
+
+#: src/hdy-clamp.c:413
+msgid "The maximum size allocated to the child"
+msgstr "Den största storlek som allokeras till den underordnade"
+
+#: src/hdy-clamp.c:437
+msgid "Tightening threshold"
+msgstr "Åtstramningströskelvärde"
+
+#: src/hdy-clamp.c:438
+msgid "The size from which the clamp will tighten its grip on the child"
+msgstr ""
+"Storleken från vilken klämman kommer att strama åt sitt grepp om den "
+"underordnade"
+
+#: src/hdy-combo-row.c:419
+msgid "Selected index"
+msgstr "Markerat index"
+
+#: src/hdy-combo-row.c:420
+msgid "The index of the selected item"
+msgstr "Index för det markerade objektet"
+
+#: src/hdy-combo-row.c:438
+msgid "Use subtitle"
+msgstr "Använd undertitel"
+
+#: src/hdy-combo-row.c:439
+msgid "Set the current value as the subtitle"
+msgstr "Ställ in det aktuella värdet som undertitel"
+
+#: src/hdy-deck.c:949
+msgid "Horizontally homogeneous"
+msgstr "Vågrätt homogen"
+
+#: src/hdy-deck.c:950
+msgid "Horizontally homogeneous sizing"
+msgstr "Vågrätt homogen omformning"
+
+#: src/hdy-deck.c:963
+msgid "Vertically homogeneous"
+msgstr "Lodrätt homogen"
+
+#: src/hdy-deck.c:964
+msgid "Vertically homogeneous sizing"
+msgstr "Lodrätt homogen omformning"
+
+#: src/hdy-deck.c:977 src/hdy-leaflet.c:1079 src/hdy-squeezer.c:1115
+#: src/hdy-stackable-box.c:3091
+msgid "Visible child"
+msgstr "Synlig underordnad"
+
+#: src/hdy-deck.c:978
+msgid "The widget currently visible"
+msgstr "Komponenten som för närvarande är synlig"
+
+#: src/hdy-deck.c:991 src/hdy-leaflet.c:1086 src/hdy-stackable-box.c:3098
+msgid "Name of visible child"
+msgstr "Namn på synlig underordnad"
+
+#: src/hdy-deck.c:992
+msgid "The name of the widget currently visible"
+msgstr "Namnet på gränssnittskomponenten som för närvarande är synlig"
+
+#: src/hdy-deck.c:1010 src/hdy-leaflet.c:1105 src/hdy-squeezer.c:1129
+#: src/hdy-stackable-box.c:3117
+msgid "Transition type"
+msgstr "Övergångstyp"
+
+#: src/hdy-deck.c:1011
+msgid "The type of animation used to transition between children"
+msgstr "Den typ av animering som används vid övergång mellan underordnade"
+
+#: src/hdy-deck.c:1024 src/hdy-header-bar.c:2200 src/hdy-squeezer.c:1122
+msgid "Transition duration"
+msgstr "Övergångstid"
+
+#: src/hdy-deck.c:1025
+msgid "The transition animation duration, in milliseconds"
+msgstr "Längd på övergångsanimeringen i millisekunder"
+
+#: src/hdy-deck.c:1038 src/hdy-header-bar.c:2207 src/hdy-squeezer.c:1137
+msgid "Transition running"
+msgstr "Övergång körs"
+
+#: src/hdy-deck.c:1039 src/hdy-header-bar.c:2208 src/hdy-squeezer.c:1138
+msgid "Whether or not the transition is currently running"
+msgstr "Huruvida övergången körs för närvarande"
+
+#: src/hdy-deck.c:1053 src/hdy-header-bar.c:2214 src/hdy-leaflet.c:1133
+#: src/hdy-squeezer.c:1144 src/hdy-stackable-box.c:3145
+msgid "Interpolate size"
+msgstr "Interpolera storlek"
+
+#: src/hdy-deck.c:1054 src/hdy-header-bar.c:2215 src/hdy-leaflet.c:1134
+#: src/hdy-squeezer.c:1145 src/hdy-stackable-box.c:3146
+msgid ""
+"Whether or not the size should smoothly change when changing between "
+"differently sized children"
+msgstr ""
+"Huruvida storleken mjukt ska ändras vid ändring mellan underordnade av olika "
+"storlekar"
+
+#: src/hdy-deck.c:1068 src/hdy-leaflet.c:1148 src/hdy-preferences-window.c:561
+#: src/hdy-stackable-box.c:3160
+msgid "Can swipe back"
+msgstr "Kan svepa bakåt"
+
+#: src/hdy-deck.c:1069 src/hdy-leaflet.c:1149 src/hdy-stackable-box.c:3161
+msgid ""
+"Whether or not swipe gesture can be used to switch to the previous child"
+msgstr ""
+"Huruvida en svepgest kan användas för att växla till föregående underordnade"
+
+#: src/hdy-deck.c:1083 src/hdy-leaflet.c:1163 src/hdy-stackable-box.c:3175
+msgid "Can swipe forward"
+msgstr "Kan svepa framåt"
+
+#: src/hdy-deck.c:1084 src/hdy-leaflet.c:1164 src/hdy-stackable-box.c:3176
+msgid "Whether or not swipe gesture can be used to switch to the next child"
+msgstr ""
+"Huruvida en svepgest kan användas för att växla till nästa underordnade"
+
+#: src/hdy-deck.c:1092 src/hdy-leaflet.c:1172
+msgid "Name"
+msgstr "Namn"
+
+#: src/hdy-deck.c:1093 src/hdy-leaflet.c:1173
+msgid "The name of the child page"
+msgstr "Namnet på den underordnade sidan"
+
+#: src/hdy-expander-row.c:286
+msgid "The subtitle for this row"
+msgstr "Undertiteln för denna rad"
+
+#: src/hdy-expander-row.c:326
+msgid "Expanded"
+msgstr "Expanderad"
+
+#: src/hdy-expander-row.c:327
+msgid "Whether the row is expanded"
+msgstr "Huruvida raden är expanderad"
+
+#: src/hdy-expander-row.c:338
+msgid "Enable expansion"
+msgstr "Aktivera expansion"
+
+#: src/hdy-expander-row.c:339
+msgid "Whether the expansion is enabled"
+msgstr "Huruvida expansionen är aktiverad"
+
+#: src/hdy-expander-row.c:350
+msgid "Show enable switch"
+msgstr "Visa brytare för aktivering"
+
+#: src/hdy-expander-row.c:351
+msgid "Whether the switch enabling the expansion is visible"
+msgstr "Huruvida brytaren som aktiverar expansionen är synlig"
+
+#: src/hdy-fading-label.c:255 src/hdy-fading-label.c:256
+msgid "Label"
+msgstr "Etikett"
+
+#: src/hdy-fading-label.c:262 src/hdy-fading-label.c:263
+msgid "Align"
+msgstr "Justering"
+
+#: src/hdy-flap.c:1527
+msgid "Content"
+msgstr "Innehåll"
+
+#: src/hdy-flap.c:1528
+msgid "The content Widget"
+msgstr "Innehållskomponenten"
+
+# https://gitlab.gnome.org/GNOME/libhandy/-/issues/202
+# Som en sidopanel, men kan även vara högst upp/längst ner.
+#: src/hdy-flap.c:1542
+msgid "Flap"
+msgstr "Flikpanel"
+
+#: src/hdy-flap.c:1543
+msgid "The flap widget"
+msgstr "Flikpanelskomponenten"
+
+#: src/hdy-flap.c:1558
+msgid "Separator"
+msgstr "Avgränsare"
+
+#: src/hdy-flap.c:1559
+msgid "The separator widget"
+msgstr "Avgränsarkomponenten"
+
+#: src/hdy-flap.c:1573
+msgid "Flap Position"
+msgstr "Flikpanelsposition"
+
+#: src/hdy-flap.c:1574
+msgid "The flap position"
+msgstr "Flikpanelspositionen"
+
+#: src/hdy-flap.c:1588
+msgid "Reveal Flap"
+msgstr "Visa flikpanel"
+
+#: src/hdy-flap.c:1589
+msgid "Whether the flap is revealed"
+msgstr "Huruvida flikpanelen visas"
+
+#: src/hdy-flap.c:1602
+msgid "Reveal Duration"
+msgstr "Visningslängd"
+
+#: src/hdy-flap.c:1603
+msgid "The reveal transition animation duration, in milliseconds"
+msgstr "Längd på visningsövergångsanimeringen i millisekunder"
+
+#: src/hdy-flap.c:1618
+msgid "Reveal Progress"
+msgstr "Visningsförlopp"
+
+# 0 means fully hidden,
+#  * 1 means fully revealed
+#: src/hdy-flap.c:1619
+msgid "The current reveal transition progress"
+msgstr "Det aktuella visningsövergångsförloppet"
+
+#: src/hdy-flap.c:1633
+msgid "Fold Policy"
+msgstr "Vikningspolicy"
+
+#: src/hdy-flap.c:1634
+msgid "The current fold policy"
+msgstr "Aktuell vikningspolicy"
+
+#: src/hdy-flap.c:1648
+msgid "Fold Duration"
+msgstr "Vikningslängd"
+
+#: src/hdy-flap.c:1649
+msgid "The fold transition animation duration, in milliseconds"
+msgstr "Längd på vikningsövergångsanimeringen i millisekunder"
+
+#: src/hdy-flap.c:1665 src/hdy-leaflet.c:1024 src/hdy-stackable-box.c:3036
+msgid "Folded"
+msgstr "Ihopvikt"
+
+#: src/hdy-flap.c:1666
+msgid "Whether the flap is currently folded"
+msgstr "Huruvida flikpanelen är ihopvikt"
+
+#: src/hdy-flap.c:1683
+msgid "Locked"
+msgstr "Låst"
+
+#: src/hdy-flap.c:1684
+msgid "Whether the flap is locked"
+msgstr "Huruvida flikpanelen är låst"
+
+#: src/hdy-flap.c:1702
+msgid "Transition Type"
+msgstr "Övergångstyp"
+
+#: src/hdy-flap.c:1703
+msgid "The type of animation used for reveal and fold transitions"
+msgstr "Den typ av animering som används vid visnings- och vikningsövergångar"
+
+#: src/hdy-flap.c:1721
+msgid "Modal"
+msgstr "Modal"
+
+#: src/hdy-flap.c:1722
+msgid "Whether the flap is modal"
+msgstr "Huruvida flikpanelen är modal"
+
+#: src/hdy-flap.c:1737
+msgid "Swipe to Open"
+msgstr "Svep för att öppna"
+
+#: src/hdy-flap.c:1738
+msgid "Whether the flap can be opened with a swipe gesture"
+msgstr "Huruvida flikpanelen kan öppnas med en svepgest"
+
+#: src/hdy-flap.c:1753
+msgid "Swipe to Close"
+msgstr "Svep för att stänga"
+
+#: src/hdy-flap.c:1754
+msgid "Whether the flap can be closed with a swipe gesture"
+msgstr "Huruvida flikpanelen kan stängas med en svepgest"
+
+#: src/hdy-header-bar.c:485
+msgid "Application menu"
+msgstr "Programmeny"
+
+#: src/hdy-header-bar.c:507 src/hdy-window-handle-controller.c:275
+msgid "Minimize"
+msgstr "Minimera"
+
+#: src/hdy-header-bar.c:529 src/hdy-window-handle-controller.c:241
+msgid "Restore"
+msgstr "Återställ"
+
+#: src/hdy-header-bar.c:529 src/hdy-window-handle-controller.c:284
+msgid "Maximize"
+msgstr "Maximera"
+
+#: src/hdy-header-bar.c:547 src/hdy-window-handle-controller.c:311
+msgid "Close"
+msgstr "Stäng"
+
+#: src/hdy-header-bar.c:563
+msgid "Back"
+msgstr "Bakåt"
+
+#: src/hdy-header-bar.c:2083
+msgid "Pack type"
+msgstr "Packningstyp"
+
+#: src/hdy-header-bar.c:2084
+msgid ""
+"A GtkPackType indicating whether the child is packed with reference to the "
+"start or end of the parent"
+msgstr ""
+"En GtkPackType som indikerar huruvida den underordnade packas med avseende "
+"på början eller slutet på den överordnade"
+
+#: src/hdy-header-bar.c:2091
+msgid "The index of the child in the parent"
+msgstr "Indexet för den underordnade i den överordnade"
+
+#: src/hdy-header-bar.c:2097 src/hdy-preferences-group.c:294
+#: src/hdy-preferences-group.c:295 src/hdy-preferences-page.c:187
+#: src/hdy-preferences-page.c:188 src/hdy-preferences-row.c:115
+#: src/hdy-status-page.c:235 src/hdy-tab-view.c:432
+#: src/hdy-view-switcher-title.c:258
+msgid "Title"
+msgstr "Titel"
+
+#: src/hdy-header-bar.c:2098 src/hdy-view-switcher-title.c:259
+msgid "The title to display"
+msgstr "Titeln att visa"
+
+#: src/hdy-header-bar.c:2105 src/hdy-view-switcher-title.c:273
+msgid "The subtitle to display"
+msgstr "Undertiteln att visa"
+
+#: src/hdy-header-bar.c:2111
+msgid "Custom Title"
+msgstr "Anpassad titel"
+
+#: src/hdy-header-bar.c:2112
+msgid "Custom title widget to display"
+msgstr "Anpassad titelkomponent att visa"
+
+#: src/hdy-header-bar.c:2119
+msgid "The amount of space between children"
+msgstr "Mängden utrymme mellan underordnade"
+
+#: src/hdy-header-bar.c:2138
+msgid "Show decorations"
+msgstr "Visa dekorationer"
+
+#: src/hdy-header-bar.c:2139
+msgid "Whether to show window decorations"
+msgstr "Huruvida fönsterdekorationer ska visas"
+
+#: src/hdy-header-bar.c:2157
+msgid "Decoration Layout"
+msgstr "Dekorationslayout"
+
+#: src/hdy-header-bar.c:2158
+msgid "The layout for window decorations"
+msgstr "Layouten för fönsterdekorationer"
+
+#: src/hdy-header-bar.c:2171
+msgid "Decoration Layout Set"
+msgstr "Dekorationslayout inställd"
+
+#: src/hdy-header-bar.c:2172
+msgid "Whether the decoration-layout property has been set"
+msgstr "Huruvida egenskapen decoration-layout har ställts in"
+
+#: src/hdy-header-bar.c:2186
+msgid "Has Subtitle"
+msgstr "Har undertitel"
+
+#: src/hdy-header-bar.c:2187
+msgid "Whether to reserve space for a subtitle"
+msgstr "Huruvida utrymme för en undertitel ska reserveras"
+
+#: src/hdy-header-bar.c:2193
+msgid "Centering policy"
+msgstr "Centreringspolicy"
+
+#: src/hdy-header-bar.c:2194
+msgid "The policy to horizontally align the center widget"
+msgstr "Policyn för att vågrätt justera centerkomponenten"
+
+#: src/hdy-header-bar.c:2201 src/hdy-squeezer.c:1123
+msgid "The animation duration, in milliseconds"
+msgstr "Animeringstiden i millisekunder"
+
+#: src/hdy-header-group.c:831
+msgid "Decorate all"
+msgstr "Dekorera alla"
+
+#: src/hdy-header-group.c:832
+msgid ""
+"Whether the elements of the group should all receive the full decoration"
+msgstr "Huruvida alla element i gruppen ska få full dekoration"
+
+#: src/hdy-keypad-button.c:225
+msgid "Digit"
+msgstr "Siffra"
+
+#: src/hdy-keypad-button.c:226
+msgid "The keypad digit of the button"
+msgstr "Knappsatssiffran för knappen"
+
+#: src/hdy-keypad-button.c:232
+msgid "Symbols"
+msgstr "Symboler"
+
+#: src/hdy-keypad-button.c:233
+msgid "The keypad symbols of the button. The first symbol is used as the digit"
+msgstr ""
+"Knappsatssymbolerna för knappen. Den första symbolen används för siffran"
+
+#: src/hdy-keypad-button.c:239
+msgid "Show symbols"
+msgstr "Visa symboler"
+
+#: src/hdy-keypad-button.c:240
+msgid "Whether the second line of symbols should be shown or not"
+msgstr "Huruvida den andra raden med symboler ska visas eller inte"
+
+#: src/hdy-keypad.c:258
+msgid "Row spacing"
+msgstr "Radavstånd"
+
+#: src/hdy-keypad.c:259
+msgid "The amount of space between two consecutive rows"
+msgstr "Mängden utrymme mellan två efterföljande rader"
+
+#: src/hdy-keypad.c:272
+msgid "Column spacing"
+msgstr "Kolumnavstånd"
+
+#: src/hdy-keypad.c:273
+msgid "The amount of space between two consecutive columns"
+msgstr "Mängden utrymme mellan två efterföljande kolumner"
+
+#: src/hdy-keypad.c:287
+msgid "Letters visible"
+msgstr "Bokstäver synliga"
+
+#: src/hdy-keypad.c:288
+msgid "Whether the letters below the digits should be visible"
+msgstr "Huruvida bokstäverna under siffrorna ska vara synliga"
+
+#: src/hdy-keypad.c:302
+msgid "Symbols visible"
+msgstr "Symboler synliga"
+
+#: src/hdy-keypad.c:303
+msgid "Whether the hash, plus, and asterisk symbols should be visible"
+msgstr "Huruvida symbolerna fyrkant, plus och asterisk ska vara synliga"
+
+#: src/hdy-keypad.c:317
+msgid "Entry"
+msgstr "Fält"
+
+#: src/hdy-keypad.c:318
+msgid "The entry widget connected to the keypad"
+msgstr "Fältkomponenten som är kopplad till knappsatsen"
+
+# The “right-action” property has been replaced by #HdyHeaderGroup:end-action
+#: src/hdy-keypad.c:331
+msgid "End action"
+msgstr "Slutåtgärd"
+
+#: src/hdy-keypad.c:332
+msgid "The end action widget"
+msgstr "Åtgärdskomponenten i slutet"
+
+# The “left-action” property has been replaced by #HdyHeaderGroup:start-action
+#: src/hdy-keypad.c:345
+msgid "Start action"
+msgstr "Startåtgärd"
+
+#: src/hdy-keypad.c:346
+msgid "The start action widget"
+msgstr "Åtgärdskomponenten i början"
+
+#: src/hdy-leaflet.c:1025 src/hdy-stackable-box.c:3037
+msgid "Whether the widget is folded"
+msgstr "Huruvida komponenten är ihopvikt"
+
+#: src/hdy-leaflet.c:1036 src/hdy-stackable-box.c:3048
+msgid "Horizontally homogeneous folded"
+msgstr "Vågrätt homogent ihopvikt"
+
+#: src/hdy-leaflet.c:1037
+msgid "Horizontally homogeneous sizing when the leaflet is folded"
+msgstr "Vågrätt homogen omformning när broschyren är ihopvikt"
+
+#: src/hdy-leaflet.c:1048 src/hdy-stackable-box.c:3060
+msgid "Vertically homogeneous folded"
+msgstr "Lodrätt homogent ihopvikt"
+
+#: src/hdy-leaflet.c:1049
+msgid "Vertically homogeneous sizing when the leaflet is folded"
+msgstr "Lodrätt homogen omformning när broschyren är ihopvikt"
+
+# #HdyLeaflet widget can display its children like a #GtkBox does or like a #GtkStack does, when unfolded respectively folded
+#: src/hdy-leaflet.c:1060 src/hdy-stackable-box.c:3072
+msgid "Box horizontally homogeneous"
+msgstr "Vågrätt homogent utfälld"
+
+#: src/hdy-leaflet.c:1061
+msgid "Horizontally homogeneous sizing when the leaflet is unfolded"
+msgstr "Vågrätt homogen omformning när broschyren är utfälld"
+
+# #HdyLeaflet widget can display its children like a
+# #GtkBox does or like a #GtkStack does, when
+# unfolded respectively folded
+#: src/hdy-leaflet.c:1072 src/hdy-stackable-box.c:3084
+msgid "Box vertically homogeneous"
+msgstr "Lodrätt homogent utfälld"
+
+#: src/hdy-leaflet.c:1073
+msgid "Vertically homogeneous sizing when the leaflet is unfolded"
+msgstr "Lodrätt homogen omformning när broschyren är utfälld"
+
+#: src/hdy-leaflet.c:1080
+msgid "The widget currently visible when the leaflet is folded"
+msgstr "Komponenten som för närvarande är synlig när broschyren är ihopvikt"
+
+#: src/hdy-leaflet.c:1087 src/hdy-stackable-box.c:3099
+msgid "The name of the widget currently visible when the children are stacked"
+msgstr ""
+"Namnet på komponenten som för närvarande är synlig när de underordnade är "
+"staplade"
+
+#: src/hdy-leaflet.c:1106 src/hdy-stackable-box.c:3118
+msgid "The type of animation used to transition between modes and children"
+msgstr ""
+"Den typ av animering som används vid övergång mellan lägen och underordnade"
+
+#: src/hdy-leaflet.c:1112 src/hdy-stackable-box.c:3124
+msgid "Mode transition duration"
+msgstr "Längd på lägesövergång"
+
+#: src/hdy-leaflet.c:1113 src/hdy-stackable-box.c:3125
+msgid "The mode transition animation duration, in milliseconds"
+msgstr "Längd på lägesövergångsanimeringen i millisekunder"
+
+#: src/hdy-leaflet.c:1119 src/hdy-stackable-box.c:3131
+msgid "Child transition duration"
+msgstr "Längd för övergång mellan underordnade"
+
+#: src/hdy-leaflet.c:1120 src/hdy-stackable-box.c:3132
+msgid "The child transition animation duration, in milliseconds"
+msgstr "Animeringslängden för övergången mellan underordnade i millisekunder"
+
+#: src/hdy-leaflet.c:1126 src/hdy-stackable-box.c:3138
+msgid "Child transition running"
+msgstr "Övergång mellan underordnade körs"
+
+#: src/hdy-leaflet.c:1127 src/hdy-stackable-box.c:3139
+msgid "Whether or not the child transition is currently running"
+msgstr "Huruvida övergången mellan underordnade körs för närvarande"
+
+#: src/hdy-leaflet.c:1190
+msgid "Navigatable"
+msgstr "Navigerbar"
+
+#: src/hdy-leaflet.c:1191
+msgid "Whether the child can be navigated to"
+msgstr "Huruvida det går att navigera till den underordnade"
+
+#: src/hdy-preferences-group.c:280 src/hdy-preferences-group.c:281
+#: src/hdy-status-page.c:249
+msgid "Description"
+msgstr "Beskrivning"
+
+#: src/hdy-preferences-group.c:308
+msgid "Use markup"
+msgstr "Använd markup"
+
+#: src/hdy-preferences-group.c:309
+msgid "Whether to use markup for the title and description"
+msgstr "Huruvida markup ska användas för titeln och beskrivningen"
+
+#: src/hdy-preferences-row.c:116
+msgid "The title of the preference"
+msgstr "Inställningens titel"
+
+#: src/hdy-preferences-window.c:197
+msgid "Untitled page"
+msgstr "Namnlös sida"
+
+#: src/hdy-preferences-window.c:547
+msgid "Search enabled"
+msgstr "Sökning aktiverad"
+
+#: src/hdy-preferences-window.c:548
+msgid "Whether search is enabled"
+msgstr "Huruvida sökning är aktiverad"
+
+#: src/hdy-preferences-window.c:562
+msgid ""
+"Whether or not swipe gesture can be used to switch from a subpage to the "
+"preferences"
+msgstr ""
+"Huruvida en svepgest kan användas för att växla från en undersida till "
+"inställningarna"
+
+#: src/hdy-preferences-window.ui:9
+msgid "Preferences"
+msgstr "Inställningar"
+
+#: src/hdy-preferences-window.ui:84
+msgid "Search"
+msgstr "Sök"
+
+#: src/hdy-preferences-window.ui:167
+msgid "No Results Found"
+msgstr "Inga resultat hittades"
+
+#: src/hdy-preferences-window.ui:168
+msgid "Try a different search."
+msgstr "Försök med en annan sökning."
+
+#: src/hdy-search-bar.c:451
+msgid "Search Mode Enabled"
+msgstr "Sökläge aktiverat"
+
+#: src/hdy-search-bar.c:452
+msgid "Whether the search mode is on and the search bar shown"
+msgstr "Huruvida sökläget är påslaget och sökraden visas"
+
+#: src/hdy-search-bar.c:463
+msgid "Show Close Button"
+msgstr "Visa Stäng-knappen"
+
+#: src/hdy-search-bar.c:464
+msgid "Whether to show the close button in the toolbar"
+msgstr "Huruvida stängknappen ska visas i verktygsfältet"
+
+#: src/hdy-shadow-helper.c:257
+msgid "Widget"
+msgstr "Gränssnittskomponent"
+
+#: src/hdy-shadow-helper.c:258
+msgid "The widget the shadow will be drawn for"
+msgstr "Komponenten som skuggan kommer att ritas för"
+
+#: src/hdy-squeezer.c:1108
+msgid "Homogeneous"
+msgstr "Homogen"
+
+#: src/hdy-squeezer.c:1109
+msgid "Homogeneous sizing"
+msgstr "Homogen omformning"
+
+#  * The HdySqueezer widget is a container which only shows the first of its children that fits in the available size.
+#: src/hdy-squeezer.c:1116
+msgid "The widget currently visible in the squeezer"
+msgstr "Komponenten som för närvarande är synlig i pressen"
+
+#: src/hdy-squeezer.c:1130
+msgid "The type of animation used to transition"
+msgstr "Den typ av animering som används vid en övergång"
+
+#: src/hdy-squeezer.c:1165
+msgid "X align"
+msgstr "X-justering"
+
+#: src/hdy-squeezer.c:1166
+msgid "The horizontal alignment, from 0 (start) to 1 (end)"
+msgstr "Vågrät justering, från 0 (start) till 1 (slut)"
+
+#: src/hdy-squeezer.c:1187
+msgid "Y align"
+msgstr "Y-justering"
+
+#: src/hdy-squeezer.c:1188
+msgid "The vertical alignment, from 0 (top) to 1 (bottom)"
+msgstr "Lodrät justering, från 0 (överst) till 1 (nederst)"
+
+#: src/hdy-squeezer.c:1197 src/hdy-swipe-tracker.c:1060
+msgid "Enabled"
+msgstr "Aktiverad"
+
+#: src/hdy-squeezer.c:1198
+msgid ""
+"Whether the child can be picked or should be ignored when looking for the "
+"child fitting the available size best"
+msgstr ""
+"Huruvida den underordnade kan väljas eller ska ignoreras vid sökning av den "
+"underordnade som passar den tillgängliga storleken bäst"
+
+#: src/hdy-stackable-box.c:3049
+msgid "Horizontally homogeneous sizing when the widget is folded"
+msgstr "Vågrätt homogen omformning när komponenten är ihopvikt"
+
+#: src/hdy-stackable-box.c:3061
+msgid "Vertically homogeneous sizing when the widget is folded"
+msgstr "Lodrätt homogen omformning när komponenten är ihopvikt"
+
+#: src/hdy-stackable-box.c:3073
+msgid "Horizontally homogeneous sizing when the widget is unfolded"
+msgstr "Vågrätt homogen omformning när komponenten är utfälld"
+
+#: src/hdy-stackable-box.c:3085
+msgid "Vertically homogeneous sizing when the widget is unfolded"
+msgstr "Lodrätt homogen omformning när komponenten är utfälld"
+
+#: src/hdy-stackable-box.c:3092
+msgid "The widget currently visible when the widget is folded"
+msgstr "Komponenten som för närvarande är synlig när komponenten är ihopvikt"
+
+#: src/hdy-stackable-box.c:3182 src/hdy-stackable-box.c:3183
+msgid "Orientation"
+msgstr "Orientering"
+
+#: src/hdy-status-page.c:222
+msgid "The name of the icon to be used"
+msgstr "Namnet på ikonen som ska användas"
+
+#: src/hdy-status-page.c:236
+msgid "The title to be displayed below the icon"
+msgstr "Titeln att visa under ikonen"
+
+#: src/hdy-status-page.c:250
+msgid "The description to be displayed below the title"
+msgstr "Beskrivningen som ska visas under titeln"
+
+#: src/hdy-style-manager.c:566
+msgid "Color Scheme"
+msgstr "Färgschema"
+
+#: src/hdy-style-manager.c:567
+msgid "The current color scheme"
+msgstr "Det aktuella färgschemat"
+
+#: src/hdy-style-manager.c:589
+msgid "System supports color schemes"
+msgstr "Systemet stöder färgscheman"
+
+#: src/hdy-style-manager.c:590
+msgid "Whether the system supports color schemes"
+msgstr "Huruvida systemet stöder färgscheman"
+
+#: src/hdy-style-manager.c:606
+msgid "Dark"
+msgstr "Mörk"
+
+#: src/hdy-style-manager.c:607
+msgid "Whether the application is using dark appearance"
+msgstr "Huruvida programmet använder ett mörkt utseende"
+
+#: src/hdy-style-manager.c:622
+msgid "High Contrast"
+msgstr "Hög kontrast"
+
+#: src/hdy-style-manager.c:623
+msgid "Whether the application is using high contrast appearance"
+msgstr "Huruvida programmet använder ett utseende med hög kontrast"
+
+#: src/hdy-swipe-tracker.c:1045
+msgid "Swipeable"
+msgstr "Svepbar"
+
+#: src/hdy-swipe-tracker.c:1046
+msgid "The swipeable the swipe tracker is attached to"
+msgstr "Den svepbara som svepningsspåraren är fäst vid"
+
+#: src/hdy-swipe-tracker.c:1061
+msgid "Whether the swipe tracker processes events"
+msgstr "Huruvida svepningsspåraren bearbetar händelser"
+
+#: src/hdy-swipe-tracker.c:1075
+msgid "Reversed"
+msgstr "Omvänd"
+
+#: src/hdy-swipe-tracker.c:1076
+msgid "Whether swipe direction is reversed"
+msgstr "Huruvida svepriktning är omvänd"
+
+#: src/hdy-swipe-tracker.c:1106
+msgid "Whether to allow swiping for more than one snap point at a time"
+msgstr "Huruvida svepning ska tillåtas för mer än en fästpunkt åt gången"
+
+#: src/hdy-tab-bar.c:517 src/hdy-tab-box.c:3508 src/hdy-tab-box.c:3509
+#: src/hdy-tab.c:906 src/hdy-tab.c:907
+msgid "View"
+msgstr "Vy"
+
+#: src/hdy-tab-bar.c:518
+msgid "The view the tab bar controls."
+msgstr "Vyn som flikraden styr."
+
+#: src/hdy-tab-bar.c:531
+msgid "Start action widget"
+msgstr "Åtgärdskomponent i början"
+
+#: src/hdy-tab-bar.c:532
+msgid "The widget shown before the tabs"
+msgstr "Komponenten som visas innan flikarna"
+
+#: src/hdy-tab-bar.c:545
+msgid "End action widget"
+msgstr "Åtgärdskomponent i slutet"
+
+#: src/hdy-tab-bar.c:546
+msgid "The widget shown after the tabs"
+msgstr "Komponenten som visas efter flikarna"
+
+#: src/hdy-tab-bar.c:564
+msgid "Autohide"
+msgstr "Dölj automatiskt"
+
+#: src/hdy-tab-bar.c:565
+msgid "Whether the tabs automatically hide"
+msgstr "Huruvida flikarna döljs automatiskt"
+
+#: src/hdy-tab-bar.c:580
+msgid "Tabs revealed"
+msgstr "Flikar visas"
+
+#: src/hdy-tab-bar.c:581
+msgid "Whether the tabs are currently revealed"
+msgstr "Huruvida flikarna visas för tillfället"
+
+#: src/hdy-tab-bar.c:597
+msgid "Expand tabs"
+msgstr "Expandera flikar"
+
+#: src/hdy-tab-bar.c:598
+msgid "Whether tabs expand to full width"
+msgstr "Huruvida flikarna expanderas till fullständig bredd"
+
+#: src/hdy-tab-bar.c:614 src/hdy-tab.c:948 src/hdy-tab.c:949
+msgid "Inverted"
+msgstr "Omvänd"
+
+#: src/hdy-tab-bar.c:615
+msgid "Whether tabs use inverted layout"
+msgstr "Huruvida flikar använder omvänd layout"
+
+#: src/hdy-tab-bar.c:637 src/hdy-tab-bar.c:638
+msgid "Extra drag destination targets"
+msgstr "Extra mål för dragning"
+
+#: src/hdy-tab-bar.c:654
+msgid "Is overflowing"
+msgstr "Flödar över"
+
+#: src/hdy-tab-bar.c:655
+msgid "Whether the tab bar is overflowing"
+msgstr "Huruvida flikraden flödar över"
+
+#: src/hdy-tab-box.c:3494 src/hdy-tab-box.c:3495 src/hdy-tab.c:913
+#: src/hdy-tab.c:914 src/hdy-tab-view.c:415
+msgid "Pinned"
+msgstr "Nålad"
+
+#: src/hdy-tab-box.c:3501 src/hdy-tab-box.c:3502
+msgid "Tab Bar"
+msgstr "Flikrad"
+
+#: src/hdy-tab-box.c:3515 src/hdy-tab-box.c:3516
+msgid "Adjustment"
+msgstr "Justering"
+
+#: src/hdy-tab-box.c:3522 src/hdy-tab-box.c:3523
+msgid "Needs Attention Left"
+msgstr "Behöver uppmärksamhet till vänster"
+
+#: src/hdy-tab-box.c:3529 src/hdy-tab-box.c:3530
+msgid "Needs Attention Right"
+msgstr "Behöver uppmärksamhet till höger"
+
+#: src/hdy-tab-box.c:3536 src/hdy-tab-box.c:3537
+msgid "Resize Frozen"
+msgstr "Storleksändring fryst"
+
+#: src/hdy-tab.c:920 src/hdy-tab.c:921
+msgid "Dragging"
+msgstr "Dragning"
+
+#: src/hdy-tab.c:927 src/hdy-tab.c:928
+msgid "Page"
+msgstr "Sida"
+
+#: src/hdy-tab.c:934 src/hdy-tab.c:935
+msgid "Display Width"
+msgstr "Visningsbredd"
+
+#: src/hdy-tab.c:941 src/hdy-tab.c:942
+msgid "Hovering"
+msgstr "Hovring"
+
+#: src/hdy-tab-view.c:371
+msgid "Child"
+msgstr "Underordnad"
+
+#: src/hdy-tab-view.c:372
+msgid "The child of the page"
+msgstr "Sidans underordnade"
+
+#: src/hdy-tab-view.c:387
+msgid "Parent"
+msgstr "Överordnad"
+
+#: src/hdy-tab-view.c:388
+msgid "The parent page of the page"
+msgstr "Den överordnade sidan till sidan"
+
+#: src/hdy-tab-view.c:401
+msgid "Selected"
+msgstr "Vald"
+
+#: src/hdy-tab-view.c:402
+msgid "Whether the page is selected"
+msgstr "Huruvida sidan är vald"
+
+#: src/hdy-tab-view.c:416
+msgid "Whether the page is pinned"
+msgstr "Huruvida sidan är nålad"
+
+#: src/hdy-tab-view.c:433
+msgid "The title of the page"
+msgstr "Sidans titel"
+
+#: src/hdy-tab-view.c:448
+msgid "Tooltip"
+msgstr "Inforuta"
+
+#: src/hdy-tab-view.c:449
+msgid "The tooltip of the page"
+msgstr "Inforutan för sidan"
+
+#: src/hdy-tab-view.c:465
+msgid "Icon"
+msgstr "Ikon"
+
+#: src/hdy-tab-view.c:466
+msgid "The icon of the page"
+msgstr "Sidans ikon"
+
+#: src/hdy-tab-view.c:484
+msgid "Loading"
+msgstr "Läser in"
+
+#: src/hdy-tab-view.c:485
+msgid "Whether the page is loading"
+msgstr "Huruvida sidan läses in"
+
+#: src/hdy-tab-view.c:509
+msgid "Indicator icon"
+msgstr "Indikatorikon"
+
+#: src/hdy-tab-view.c:510
+msgid "An indicator icon for the page"
+msgstr "En indikatorikon för sidan"
+
+#: src/hdy-tab-view.c:528
+msgid "Indicator activatable"
+msgstr "Indikator är aktiverbar"
+
+#: src/hdy-tab-view.c:529
+msgid "Whether the indicator icon is activatable"
+msgstr "Huruvida indikatorikonen är aktiverbar"
+
+#: src/hdy-tab-view.c:546 src/hdy-view-switcher-button.c:234
+msgid "Needs attention"
+msgstr "Behöver uppmärksamhet"
+
+#: src/hdy-tab-view.c:547
+msgid "Whether the page needs attention"
+msgstr "Huruvida sidan behöver uppmärksamhet"
+
+#: src/hdy-tab-view.c:1105
+msgid "The number of pages in the tab view"
+msgstr "Antalet sidor i flikvyn"
+
+#: src/hdy-tab-view.c:1120
+msgid "Number of pinned pages"
+msgstr "Antal nålade sidor"
+
+#: src/hdy-tab-view.c:1121
+msgid "The number of pinned pages in the tab view"
+msgstr "Antalet nålade sidor i flikvyn"
+
+#: src/hdy-tab-view.c:1140
+msgid "Is transferring page"
+msgstr "Överför sida"
+
+#: src/hdy-tab-view.c:1141
+msgid "Whether a page is being transferred"
+msgstr "Huruvida en sida överförs"
+
+#: src/hdy-tab-view.c:1154
+msgid "Selected page"
+msgstr "Vald sida"
+
+#: src/hdy-tab-view.c:1155
+msgid "The currently selected page"
+msgstr "Den för närvarande valda sidan"
+
+#: src/hdy-tab-view.c:1175
+msgid "Default icon"
+msgstr "Standardikon"
+
+#: src/hdy-tab-view.c:1176
+msgid "Default page icon"
+msgstr "Standardikon för sida"
+
+#: src/hdy-tab-view.c:1193
+msgid "Menu model"
+msgstr "Menymodell"
+
+#: src/hdy-tab-view.c:1194
+msgid "Tab context menu model"
+msgstr "Snabbvalsmenymodell för flik"
+
+#: src/hdy-tab-view.c:1222
+msgid "Shortcut widget"
+msgstr "Kortkommandokomponent"
+
+#: src/hdy-tab-view.c:1223
+msgid "Tab shortcut widget"
+msgstr "Kortkommandokomponent för flikar"
+
+#: src/hdy-title-bar.c:321
+msgid "Selection mode"
+msgstr "Markeringsläge"
+
+#: src/hdy-title-bar.c:322
+msgid "Whether or not the title bar is in selection mode"
+msgstr "Huruvida namnlisten är i markeringsläge"
+
+#: src/hdy-value-object.c:191
+msgctxt "HdyValueObjectClass"
+msgid "Value"
+msgstr "Värde"
+
+#: src/hdy-value-object.c:192
+msgctxt "HdyValueObjectClass"
+msgid "The contained value"
+msgstr "Värdet som innehålls"
+
+#: src/hdy-view-switcher-bar.c:178 src/hdy-view-switcher.c:512
+#: src/hdy-view-switcher-title.c:230
+msgid "Policy"
+msgstr "Policy"
+
+#: src/hdy-view-switcher-bar.c:179 src/hdy-view-switcher.c:513
+#: src/hdy-view-switcher-title.c:231
+msgid "The policy to determine the mode to use"
+msgstr "Policyn för att avgöra läget att använda"
+
+#: src/hdy-view-switcher-bar.c:192 src/hdy-view-switcher-bar.c:193
+#: src/hdy-view-switcher.c:547 src/hdy-view-switcher.c:548
+#: src/hdy-view-switcher-title.c:244 src/hdy-view-switcher-title.c:245
+msgid "Stack"
+msgstr "Stack"
+
+#: src/hdy-view-switcher-bar.c:206
+msgid "Reveal"
+msgstr "Visa"
+
+#: src/hdy-view-switcher-bar.c:207
+msgid "Whether the view switcher is revealed"
+msgstr "Huruvida vyväxlaren visas"
+
+#: src/hdy-view-switcher-button.c:203
+msgid "Icon Name"
+msgstr "Ikonnamn"
+
+#: src/hdy-view-switcher-button.c:204
+msgid "Icon name for image"
+msgstr "Ikonnamn för bild"
+
+#: src/hdy-view-switcher-button.c:217
+msgid "Icon Size"
+msgstr "Ikonstorlek"
+
+#: src/hdy-view-switcher-button.c:218
+msgid "Symbolic size to use for named icon"
+msgstr "Symbolisk storlek att använda för namngiven ikon"
+
+#: src/hdy-view-switcher-button.c:235
+msgid "Hint the view needs attention"
+msgstr "Tips om att vyn behöver uppmärksamhet"
+
+#: src/hdy-view-switcher.c:532
+msgid "Narrow ellipsize"
+msgstr "Smal elliptisering"
+
+#: src/hdy-view-switcher.c:533
+msgid ""
+"The preferred place to ellipsize the string, if the narrow mode label does "
+"not have enough room to display the entire string"
+msgstr ""
+"Den föredragna platsen att elliptisera strängen, om etiketten i smalt läge "
+"inte har tillräckligt med utrymme för att visa hela strängen"
+
+#: src/hdy-view-switcher-title.c:286
+msgid "View switcher enabled"
+msgstr "Vyväxlare aktiverad"
+
+#: src/hdy-view-switcher-title.c:287
+msgid "Whether the view switcher is enabled"
+msgstr "Huruvida vyväxlaren är aktiverad"
+
+#: src/hdy-view-switcher-title.c:300
+msgid "Title visible"
+msgstr "Titel synlig"
+
+#: src/hdy-view-switcher-title.c:301
+msgid "Whether the title label is visible"
+msgstr "Huruvida titeletiketten är synlig"
+
+#: src/hdy-window-handle-controller.c:259
+msgid "Move"
+msgstr "Flytta"
+
+#: src/hdy-window-handle-controller.c:267
+msgid "Resize"
+msgstr "Ändra storlek"
+
+#: src/hdy-window-handle-controller.c:298
+msgid "Always on Top"
+msgstr "Alltid överst"

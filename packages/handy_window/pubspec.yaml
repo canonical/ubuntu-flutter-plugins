@@ -1,0 +1,25 @@
+name: handy_window
+description: |
+  This package enhances the looks of Flutter applications on Linux by providing
+  modern-looking Handy windows with rounded bottom corners.
+version: 0.1.0
+
+environment:
+  sdk: ">=2.12.0 <3.0.0"
+  flutter: ">=2.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+dev_dependencies:
+  flutter_lints: ^1.0.0
+
+flutter:
+  plugin:
+    platforms:
+      linux:
+        pluginClass: HandyWindowPlugin
+
+platforms:
+  linux:
