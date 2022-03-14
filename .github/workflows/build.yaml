@@ -1,0 +1,31 @@
+name: Build
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  bundle:
+    runs-on: ubuntu-20.04
+    steps:
+    - uses: actions/checkout@v2
+    - uses: subosito/flutter-action@v1
+    - run: flutter config --enable-linux-desktop
+    - run: flutter pub global activate melos
+    - run: melos bootstrap
+    - run: melos build
+
+  snap:
+    runs-on: ubuntu-20.04
+    steps:
+    - uses: actions/checkout@v2
+    - run: sudo snap install --classic flutter
+    - run: flutter config --enable-linux-desktop
+    - run: flutter pub global activate melos
+    - run: |
+        echo "PATH=$PATH:$HOME/.pub-cache/bin:$HOME/snap/flutter/common/flutter/.pub-cache/bin" >> $GITHUB_ENV
+    - run: melos bootstrap
+    - run: melos build

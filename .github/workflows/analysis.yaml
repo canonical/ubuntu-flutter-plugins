@@ -1,0 +1,40 @@
+name: Analysis
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  analyze:
+    runs-on: ubuntu-20.04
+    steps:
+      - uses: actions/checkout@v2
+      - uses: subosito/flutter-action@v1
+      - run: flutter config --enable-linux-desktop
+      - run: flutter pub global activate melos
+      - run: melos bootstrap
+      - run: melos run analyze
+
+  format:
+    runs-on: ubuntu-20.04
+    steps:
+      - uses: actions/checkout@v2
+      - uses: subosito/flutter-action@v1
+      - run: flutter config --enable-linux-desktop
+      - run: flutter pub global activate melos
+      - run: melos bootstrap
+      - run: melos run format
+
+  pub:
+    runs-on: ubuntu-20.04
+    steps:
+      - uses: actions/checkout@v2
+      - uses: subosito/flutter-action@v1
+      - run: flutter config --enable-linux-desktop
+      - run: flutter pub global activate melos
+      - run: melos bootstrap
+      - run: melos exec --no-private -- \
+          flutter pub publish --dry-run
