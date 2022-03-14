@@ -1,5 +1,7 @@
 #include "include/handy_window/handy_window_plugin.h"
 
+#if HAVE_LIBHANDY
+
 #include <flutter_linux/flutter_linux.h>
 #include <gtk/gtk.h>
 #include <handy.h>
@@ -212,3 +214,6 @@ void handy_window_plugin_register_with_registrar(FlPluginRegistrar* registrar) {
   FlView* view = fl_plugin_registrar_get_view(registrar);
   setup_handy_window(view);
 }
+#else
+void handy_window_plugin_register_with_registrar(FlPluginRegistrar*) {}
+#endif

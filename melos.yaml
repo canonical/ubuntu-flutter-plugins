@@ -14,7 +14,7 @@ scripts:
 
   # build examples in all packages
   build: >
-    melos exec -c 1 --fail-fast --flutter --scope=="*example*" --dir-exists=linux -- \
+    melos exec -c 1 --fail-fast --flutter --scope="*example*" --dir-exists=linux -- \
       flutter build linux
 
   # collect coverage information for all packages

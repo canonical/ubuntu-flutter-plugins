@@ -28,6 +28,7 @@ if(GLIB_FOUND)
   )
 
   add_subdirectory(libhandy)
+  add_definitions(-DHAVE_LIBHANDY)
   target_link_libraries(${PLUGIN_NAME} PRIVATE handy)
 else()
   message(WARNING "The `handy_window` package requires libglib2.0-0 >= 2.58 available in Ubuntu 20.04 and later. Using normal Flutter window instead.")
