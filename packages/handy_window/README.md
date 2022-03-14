@@ -1,5 +1,7 @@
 # Handy Window
 
+[![pub](https://img.shields.io/pub/v/handy_window.svg)](https://pub.dev/packages/handy_window)
+
 This package enhances the looks of Flutter applications on Linux by providing
 modern-looking [Handy](https://gitlab.gnome.org/GNOME/libhandy) windows with
 rounded bottom corners.
