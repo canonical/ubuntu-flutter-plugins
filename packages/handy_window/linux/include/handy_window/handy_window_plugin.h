@@ -11,13 +11,6 @@ G_BEGIN_DECLS
 #define FLUTTER_PLUGIN_EXPORT
 #endif
 
-typedef struct _HandyWindowPlugin HandyWindowPlugin;
-typedef struct {
-  GObjectClass parent_class;
-} HandyWindowPluginClass;
-
-FLUTTER_PLUGIN_EXPORT GType handy_window_plugin_get_type();
-
 FLUTTER_PLUGIN_EXPORT void handy_window_plugin_register_with_registrar(
     FlPluginRegistrar* registrar);
 

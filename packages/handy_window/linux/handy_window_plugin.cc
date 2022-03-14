@@ -10,10 +10,6 @@
 #include "hdy-window-mixin-private.h"
 #undef _HANDY_INSIDE
 
-#define HANDY_WINDOW_PLUGIN(obj)                                     \
-  (G_TYPE_CHECK_INSTANCE_CAST((obj), handy_window_plugin_get_type(), \
-                              HandyWindowPlugin))
-
 class HdyScopeGuard {
  public:
   HdyScopeGuard(std::function<void()>&& func) : func(std::move(func)) {}
@@ -43,22 +39,6 @@ static void (*gtk_window_add)(GtkContainer*, GtkWidget*) = nullptr;
 static void (*gtk_window_remove)(GtkContainer*, GtkWidget*) = nullptr;
 static void (*gtk_window_forall)(GtkContainer*, gboolean, GtkCallback,
                                  gpointer) = nullptr;
-
-struct _HandyWindowPlugin {
-  GObject parent_instance;
-};
-
-G_DEFINE_TYPE(HandyWindowPlugin, handy_window_plugin, g_object_get_type())
-
-static void handy_window_plugin_dispose(GObject* object) {
-  G_OBJECT_CLASS(handy_window_plugin_parent_class)->dispose(object);
-}
-
-static void handy_window_plugin_class_init(HandyWindowPluginClass* klass) {
-  G_OBJECT_CLASS(klass)->dispose = handy_window_plugin_dispose;
-}
-
-static void handy_window_plugin_init(HandyWindowPlugin* self) {}
 
 static void hdy_window_add(GtkContainer* container, GtkWidget* widget) {
   if (IS_REENTRY(container)) {
@@ -208,7 +188,6 @@ static void setup_handy_window(FlView* view) {
   gtk_window_add = container_class->add;
   gtk_window_remove = container_class->remove;
   gtk_window_forall = container_class->forall;
-
   // override
   object_class->finalize = hdy_window_finalize;
   widget_class->draw = hdy_window_draw;
@@ -230,11 +209,6 @@ static void setup_handy_window(FlView* view) {
 }
 
 void handy_window_plugin_register_with_registrar(FlPluginRegistrar* registrar) {
-  HandyWindowPlugin* plugin = HANDY_WINDOW_PLUGIN(
-      g_object_new(handy_window_plugin_get_type(), nullptr));
-
   FlView* view = fl_plugin_registrar_get_view(registrar);
   setup_handy_window(view);
-
-  g_object_unref(plugin);
 }
