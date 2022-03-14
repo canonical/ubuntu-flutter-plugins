@@ -5,7 +5,7 @@ description: |
 homepage: https://pub.dev/packages/handy_window
 repository: https://github.com/canonical/ubuntu-flutter-plugins/tree/main/packages/handy_window
 issue_tracker: https://github.com/canonical/ubuntu-flutter-plugins/issues
-version: 0.1.0
+version: 0.1.0+1
 
 environment:
   sdk: ">=2.12.0 <3.0.0"
