@@ -12,6 +12,11 @@ scripts:
     melos exec -c 1 -- \
       flutter analyze .
 
+  # build examples in all packages
+  build: >
+    melos exec -c 1 --fail-fast --flutter --scope=="*example*" --dir-exists=linux -- \
+      flutter build linux
+
   # collect coverage information for all packages
   coverage: >
     melos exec -c 1 --fail-fast --dir-exists=test -- \
