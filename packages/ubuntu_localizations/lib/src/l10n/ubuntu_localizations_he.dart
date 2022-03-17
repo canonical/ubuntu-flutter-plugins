@@ -23,7 +23,7 @@ class UbuntuLocalizationsHe extends UbuntuLocalizations {
   String get strongPassword => 'סיסמה חזקה';
 
   @override
-  String get fairPassword => 'סיסמה הוגנת';
+  String get fairPassword => 'סיסמה סבירה';
 
   @override
   String get goodPassword => 'סיסמה טובה';
