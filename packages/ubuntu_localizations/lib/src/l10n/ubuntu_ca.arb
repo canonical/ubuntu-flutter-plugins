@@ -1,5 +1,19 @@
 {
   "@@locale": "ca",
   "countryCode": "ES",
-  "languageName": "Català"
+  "@countryCode": {},
+  "languageName": "Català",
+  "@languageName": {},
+  "backAction": "Anar enrera",
+  "@backAction": {},
+  "continueAction": "Continuar",
+  "@continueAction": {},
+  "strongPassword": "Contrasenya forta",
+  "@strongPassword": {},
+  "fairPassword": "Contrasenya justa",
+  "@fairPassword": {},
+  "goodPassword": "Bona contrasenya",
+  "@goodPassword": {},
+  "weakPassword": "Contrasenya feble",
+  "@weakPassword": {}
 }
