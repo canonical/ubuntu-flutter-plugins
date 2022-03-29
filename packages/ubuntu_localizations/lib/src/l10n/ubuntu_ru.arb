@@ -1,9 +1,19 @@
 {
   "@@locale": "ru",
   "countryCode": "RU",
-
+  "@countryCode": {},
   "languageName": "Русский",
-
+  "@languageName": {},
   "backAction": "Назад",
-  "continueAction": "Продолжить"
+  "@backAction": {},
+  "continueAction": "Продолжить",
+  "@continueAction": {},
+  "weakPassword": "Слабый пароль",
+  "@weakPassword": {},
+  "goodPassword": "Хороший пароль",
+  "@goodPassword": {},
+  "fairPassword": "Неплохой пароль",
+  "@fairPassword": {},
+  "strongPassword": "Надёжный пароль",
+  "@strongPassword": {}
 }
