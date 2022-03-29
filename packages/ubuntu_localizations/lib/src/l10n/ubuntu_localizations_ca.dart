@@ -14,20 +14,20 @@ class UbuntuLocalizationsCa extends UbuntuLocalizations {
   String get languageName => 'Català';
 
   @override
-  String get backAction => 'Go Back';
+  String get backAction => 'Anar enrera';
 
   @override
-  String get continueAction => 'Continue';
+  String get continueAction => 'Continuar';
 
   @override
-  String get strongPassword => 'Strong password';
+  String get strongPassword => 'Contrasenya forta';
 
   @override
-  String get fairPassword => 'Fair password';
+  String get fairPassword => 'Contrasenya justa';
 
   @override
-  String get goodPassword => 'Good password';
+  String get goodPassword => 'Bona contrasenya';
 
   @override
-  String get weakPassword => 'Weak password';
+  String get weakPassword => 'Contrasenya feble';
 }
