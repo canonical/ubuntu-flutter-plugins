@@ -14,7 +14,7 @@ class UbuntuLocalizationsHe extends UbuntuLocalizations {
   String get languageName => 'עברית';
 
   @override
-  String get backAction => 'חזרה אחורה';
+  String get backAction => 'חזרה';
 
   @override
   String get continueAction => 'להמשיך';
