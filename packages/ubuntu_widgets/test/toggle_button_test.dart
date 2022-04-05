@@ -299,6 +299,24 @@ void main() {
     expect(data.copyWith(verticalSpacing: 3.4),
         data.copyWith(verticalSpacing: 3.4));
   });
+
+  testWidgets('ellipsize and wrap', (tester) async {
+    await tester.pumpToggleButton(
+      const ToggleButton(
+        leading: SizedBox.shrink(),
+        title: Text('title'),
+        subtitle: Text('subtitle'),
+      ),
+    );
+
+    final title = DefaultTextStyle.of(tester.element(find.text('title')));
+    expect(title.softWrap, isFalse);
+    expect(title.overflow, TextOverflow.ellipsis);
+
+    final subtitle = DefaultTextStyle.of(tester.element(find.text('subtitle')));
+    expect(subtitle.softWrap, isTrue);
+    expect(subtitle.overflow, isNot(TextOverflow.ellipsis));
+  });
 }
 
 extension ToggleButtonTester on WidgetTester {

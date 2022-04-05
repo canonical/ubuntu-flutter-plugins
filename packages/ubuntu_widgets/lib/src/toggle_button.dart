@@ -56,12 +56,14 @@ class ToggleButton extends StatelessWidget {
                 leading: leading,
                 title: _wrapTextStyle(
                   context,
+                  overflow: TextOverflow.ellipsis,
                   style: Theme.of(context).textTheme.subtitle1!,
                   child: title,
                 ),
                 subtitle: subtitle != null
                     ? _wrapTextStyle(
                         context,
+                        softWrap: true,
                         style: Theme.of(context).textTheme.caption!,
                         child: subtitle!,
                       )
@@ -78,11 +80,14 @@ class ToggleButton extends StatelessWidget {
     BuildContext context, {
     required Widget child,
     required TextStyle style,
+    TextOverflow overflow = TextOverflow.clip,
+    bool softWrap = false,
   }) {
     final color = onToggled == null ? Theme.of(context).disabledColor : null;
     return DefaultTextStyle(
       style: style.copyWith(color: color),
-      overflow: TextOverflow.ellipsis,
+      overflow: overflow,
+      softWrap: softWrap,
       child: child,
     );
   }
