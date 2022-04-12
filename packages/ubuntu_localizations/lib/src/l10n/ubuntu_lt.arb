@@ -1,5 +1,19 @@
 {
   "@@locale": "lt",
   "countryCode": "LT",
-  "languageName": "Lietuviškai"
+  "@countryCode": {},
+  "languageName": "Lietuviškai",
+  "@languageName": {},
+  "backAction": "Grįžti",
+  "@backAction": {},
+  "continueAction": "Tęsti",
+  "@continueAction": {},
+  "strongPassword": "Stiprus slaptažodis",
+  "@strongPassword": {},
+  "fairPassword": "Neblogas slaptažodis",
+  "@fairPassword": {},
+  "goodPassword": "Geras slaptažodis",
+  "@goodPassword": {},
+  "weakPassword": "Silpnas slaptažodis",
+  "@weakPassword": {}
 }
