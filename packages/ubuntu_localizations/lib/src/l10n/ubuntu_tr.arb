@@ -1,5 +1,19 @@
 {
   "@@locale": "tr",
   "countryCode": "TR",
-  "languageName": "Türkçe"
+  "@countryCode": {},
+  "languageName": "Türkçe",
+  "@languageName": {},
+  "backAction": "Geri Dön",
+  "@backAction": {},
+  "continueAction": "Devam et",
+  "@continueAction": {},
+  "strongPassword": "Güçlü parola",
+  "@strongPassword": {},
+  "fairPassword": "Makul parola",
+  "@fairPassword": {},
+  "goodPassword": "İyi parola",
+  "@goodPassword": {},
+  "weakPassword": "Zayıf parola",
+  "@weakPassword": {}
 }
