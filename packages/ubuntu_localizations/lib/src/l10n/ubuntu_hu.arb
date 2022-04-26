@@ -1,8 +1,8 @@
 {
   "@@locale": "hu",
-  "countryCode": "HU",
+  "countryCode": "US",
   "@countryCode": {},
-  "languageName": "Magyar",
+  "languageName": "Angol",
   "@languageName": {},
   "backAction": "Vissza",
   "@backAction": {},
