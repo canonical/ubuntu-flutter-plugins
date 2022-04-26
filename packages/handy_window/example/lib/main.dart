@@ -1,7 +1,7 @@
 import 'dart:math' as math;
 
 import 'package:flutter/material.dart';
-import 'package:url_launcher/url_launcher.dart';
+import 'package:url_launcher/url_launcher_string.dart';
 import 'package:yaru/yaru.dart';
 
 void main() {
@@ -59,7 +59,7 @@ class ClickableLink extends StatelessWidget {
     return MouseRegion(
       cursor: SystemMouseCursors.click,
       child: GestureDetector(
-        onTap: () => launch(url),
+        onTap: () => launchUrlString(url),
         child: DefaultTextStyle(
           style: TextStyle(
             color: Colors.blue.shade700,
