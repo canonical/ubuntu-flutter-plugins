@@ -1,7 +1,19 @@
 {
   "@@locale": "hu",
-  "countryCode": "HU",
+  "countryCode": "US",
   "@countryCode": {},
-  "languageName": "Magyar",
-  "@languageName": {}
+  "languageName": "Angol",
+  "@languageName": {},
+  "backAction": "Vissza",
+  "@backAction": {},
+  "continueAction": "Folytatás",
+  "@continueAction": {},
+  "strongPassword": "Erős jelszó",
+  "@strongPassword": {},
+  "fairPassword": "Korrekt jelszó",
+  "@fairPassword": {},
+  "goodPassword": "Jó jelszó",
+  "@goodPassword": {},
+  "weakPassword": "Gyenge jelszó",
+  "@weakPassword": {}
 }
