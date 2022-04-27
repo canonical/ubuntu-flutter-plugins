@@ -14,20 +14,20 @@ class UbuntuLocalizationsTr extends UbuntuLocalizations {
   String get languageName => 'Türkçe';
 
   @override
-  String get backAction => 'Go Back';
+  String get backAction => 'Geri Dön';
 
   @override
-  String get continueAction => 'Continue';
+  String get continueAction => 'Devam et';
 
   @override
-  String get strongPassword => 'Strong password';
+  String get strongPassword => 'Güçlü parola';
 
   @override
-  String get fairPassword => 'Fair password';
+  String get fairPassword => 'Makul parola';
 
   @override
-  String get goodPassword => 'Good password';
+  String get goodPassword => 'İyi parola';
 
   @override
-  String get weakPassword => 'Weak password';
+  String get weakPassword => 'Zayıf parola';
 }
