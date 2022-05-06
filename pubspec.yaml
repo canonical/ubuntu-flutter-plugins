@@ -2,9 +2,9 @@ name: wizard_router
 description: >-
   Routing for linear wizards. No dependencies between pages. Pages merely
   request the next page. Routes and conditions defined in a central place.
-homepage: https://github.com/jpnurmi/wizard_router
-repository: https://github.com/jpnurmi/wizard_router
-issue_tracker: https://github.com/jpnurmi/wizard_router/issues
+homepage: https://github.com/ubuntu-flutter-community/wizard_router
+repository: https://github.com/ubuntu-flutter-community/wizard_router
+issue_tracker: https://github.com/ubuntu-flutter-community/wizard_router/issues
 version: 0.7.0+1
 
 environment:
