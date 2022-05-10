@@ -6,14 +6,14 @@
   "@languageName": {},
   "backAction": "戻る",
   "@backAction": {},
-  "strongPassword": "強いパスワード",
+  "strongPassword": "強力なパスワード",
   "@strongPassword": {},
   "goodPassword": "良いパスワード",
   "@goodPassword": {},
   "weakPassword": "弱いパスワード",
   "@weakPassword": {},
-  "continueAction": "続ける",
+  "continueAction": "次へ",
   "@continueAction": {},
-  "fairPassword": "まあまあのパスワード",
+  "fairPassword": "まあまあなパスワード",
   "@fairPassword": {}
 }
