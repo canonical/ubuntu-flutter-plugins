@@ -91,13 +91,13 @@ void main() {
     await gesture
         .moveTo(tester.getCenter(find.widgetWithText(MouseRegion, 'enabled')));
     await tester.pump();
-    expect(RendererBinding.instance!.mouseTracker.debugDeviceActiveCursor(1),
+    expect(RendererBinding.instance.mouseTracker.debugDeviceActiveCursor(1),
         SystemMouseCursors.click);
 
     await gesture
         .moveTo(tester.getCenter(find.widgetWithText(MouseRegion, 'disabled')));
     await tester.pump();
-    expect(RendererBinding.instance!.mouseTracker.debugDeviceActiveCursor(1),
+    expect(RendererBinding.instance.mouseTracker.debugDeviceActiveCursor(1),
         SystemMouseCursors.basic);
   });
 
