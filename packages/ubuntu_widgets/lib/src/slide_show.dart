@@ -124,9 +124,9 @@ class _SlideShowState extends State<SlideShow> {
             Opacity(opacity: 0, child: widget.slides.first),
             Positioned.fill(
               child: PageView(
-                children: widget.slides,
                 controller: _controller,
                 physics: const NeverScrollableScrollPhysics(),
+                children: widget.slides,
               ),
             ),
             Positioned(
@@ -199,7 +199,6 @@ class _SlideButton extends StatelessWidget {
             height: _kButtonSize,
             child: opacity > 0
                 ? ElevatedButton(
-                    child: icon,
                     style: ElevatedButton.styleFrom(
                       alignment: alignment,
                       padding: EdgeInsets.zero,
@@ -208,6 +207,7 @@ class _SlideButton extends StatelessWidget {
                       onPrimary: _kIconColor,
                     ),
                     onPressed: onPressed,
+                    child: icon,
                   )
                 : null,
           ),
