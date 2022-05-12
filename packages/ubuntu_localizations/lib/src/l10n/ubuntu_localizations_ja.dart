@@ -17,13 +17,13 @@ class UbuntuLocalizationsJa extends UbuntuLocalizations {
   String get backAction => '戻る';
 
   @override
-  String get continueAction => '続ける';
+  String get continueAction => '次へ';
 
   @override
-  String get strongPassword => '強いパスワード';
+  String get strongPassword => '強力なパスワード';
 
   @override
-  String get fairPassword => 'まあまあのパスワード';
+  String get fairPassword => 'まあまあなパスワード';
 
   @override
   String get goodPassword => '良いパスワード';
