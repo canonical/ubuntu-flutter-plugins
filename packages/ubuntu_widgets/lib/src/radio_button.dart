@@ -6,14 +6,14 @@ import 'toggle_button.dart';
 class RadioButton<T> extends StatelessWidget {
   /// Creates a new radio button.
   const RadioButton({
-    Key? key,
+    super.key,
     required this.value,
     required this.groupValue,
     required this.onChanged,
     required this.title,
     this.subtitle,
     this.contentPadding,
-  }) : super(key: key);
+  });
 
   /// See [Radio.value]
   final T value;

@@ -13,13 +13,13 @@ part 'toggle_button_layout.dart';
 class ToggleButton extends StatelessWidget {
   /// Creates a toggle button.
   const ToggleButton({
-    Key? key,
+    super.key,
     required this.leading,
     required this.title,
     this.subtitle,
     this.contentPadding,
     this.onToggled,
-  }) : super(key: key);
+  });
 
   /// The toggle indicator.
   final Widget leading;

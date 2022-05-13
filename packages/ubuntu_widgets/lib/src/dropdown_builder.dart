@@ -25,12 +25,12 @@ class DropdownBuilder<T> extends StatefulWidget {
   /// The `itemBuilder` function is called for each item in the dropdown menu.
   /// The returned widgets are set as children of the dropdown menu items.
   const DropdownBuilder({
-    Key? key,
+    super.key,
     this.selected,
     required this.values,
     required this.onSelected,
     required this.itemBuilder,
-  }) : super(key: key);
+  });
 
   /// The currently selected value or `null` if no value is selected.
   final T? selected;

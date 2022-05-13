@@ -58,10 +58,10 @@ class ToggleButtonTheme extends InheritedWidget {
   /// Constructs a checkbox theme that configures all descendant [ToggleButton]
   /// widgets.
   const ToggleButtonTheme({
-    Key? key,
+    super.key,
     required this.data,
-    required Widget child,
-  }) : super(key: key, child: child);
+    required super.child,
+  });
 
   /// The properties used for all descendant [ToggleButton] widgets.
   final ToggleButtonThemeData data;

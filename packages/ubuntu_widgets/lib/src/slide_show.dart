@@ -19,14 +19,13 @@ const _kSlideInterval = Duration(seconds: 15);
 class SlideShow extends StatefulWidget {
   /// Creates a slide show with the given slides and interval.
   SlideShow({
-    Key? key,
+    super.key,
     required this.slides,
     this.interval = _kSlideInterval,
     this.wrap = false,
     this.autofocus = false,
     this.focusNode,
-  })  : assert(slides.isNotEmpty),
-        super(key: key);
+  })  : assert(slides.isNotEmpty);
 
   /// The list of slides to show.
   final List<Widget> slides;
@@ -170,12 +169,12 @@ class _SlideShowState extends State<SlideShow> {
 
 class _SlideButton extends StatelessWidget {
   const _SlideButton({
-    Key? key,
+    super.key,
     required this.icon,
     required this.alignment,
     required this.opacity,
     required this.onPressed,
-  }) : super(key: key);
+  });
 
   final Widget icon;
   final Alignment alignment;

@@ -33,14 +33,14 @@ enum _ToggleButtonSlot { leading, title, subtitle }
 class _ToggleButtonLayout extends RenderObjectWidget
     with SlottedMultiChildRenderObjectWidgetMixin<_ToggleButtonSlot> {
   const _ToggleButtonLayout({
-    Key? key,
+    super.key,
     required this.leading,
     required this.title,
     required this.subtitle,
     required this.horizontalSpacing,
     required this.verticalSpacing,
     required this.textDirection,
-  }) : super(key: key);
+  });
 
   final Widget leading;
   final Widget title;
