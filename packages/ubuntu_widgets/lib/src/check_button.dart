@@ -6,13 +6,13 @@ import 'toggle_button.dart';
 class CheckButton extends StatelessWidget {
   /// Creates a new check button.
   const CheckButton({
-    Key? key,
+    super.key,
     required this.value,
     required this.onChanged,
     required this.title,
     this.subtitle,
     this.contentPadding,
-  }) : super(key: key);
+  });
 
   /// See [Checkbox.value]
   final bool value;

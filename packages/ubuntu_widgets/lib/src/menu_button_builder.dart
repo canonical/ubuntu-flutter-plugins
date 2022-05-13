@@ -28,13 +28,13 @@ class MenuButtonBuilder<T> extends StatelessWidget {
   /// widget is set as an icon of the menu button.
   ///
   const MenuButtonBuilder({
-    Key? key,
+    super.key,
     required this.selected,
     required this.values,
     required this.onSelected,
     required this.iconBuilder,
     required this.itemBuilder,
-  }) : super(key: key);
+  });
 
   /// The currently selected value.
   final T selected;
