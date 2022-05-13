@@ -2,10 +2,10 @@ name: safe_change_notifier
 description: |
   A safe drop-in replacement for Flutter's ChangeNotifier, that makes
   notifyListeners() a no-op, rather than an error, after its disposal.
-version: 0.1.0
-homepage: https://github.com/jpnurmi/safe_change_notifier
-repository: https://github.com/jpnurmi/safe_change_notifier
-issue_tracker: https://github.com/jpnurmi/safe_change_notifier/issues
+version: 0.1.0+1
+homepage: https://github.com/ubuntu-flutter-community/safe_change_notifier
+repository: https://github.com/ubuntu-flutter-community/safe_change_notifier
+issue_tracker: https://github.com/ubuntu-flutter-community/safe_change_notifier/issues
 
 environment:
   sdk: ">=2.12.0 <3.0.0"
