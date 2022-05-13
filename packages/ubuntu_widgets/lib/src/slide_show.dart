@@ -25,7 +25,7 @@ class SlideShow extends StatefulWidget {
     this.wrap = false,
     this.autofocus = false,
     this.focusNode,
-  })  : assert(slides.isNotEmpty);
+  }) : assert(slides.isNotEmpty);
 
   /// The list of slides to show.
   final List<Widget> slides;
@@ -169,7 +169,6 @@ class _SlideShowState extends State<SlideShow> {
 
 class _SlideButton extends StatelessWidget {
   const _SlideButton({
-    super.key,
     required this.icon,
     required this.alignment,
     required this.opacity,
