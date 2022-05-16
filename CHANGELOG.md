@@ -1,3 +1,10 @@
+## 0.8.0
+
+* Add Wizard.maybeOf()
+* Add Wizard.done()
+* Add WizardObserver
+* Upgrade to Flutter 3.0 & Dart 2.17
+
 ## 0.7.0+1
 
 * Fix links in README.md
