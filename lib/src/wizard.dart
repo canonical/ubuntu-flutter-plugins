@@ -235,7 +235,11 @@ class _WizardFlowObserver extends NavigatorObserver {
   @override
   void didPush(Route route, Route? previousRoute) {
     for (final observer in observers) {
-      observer.onNext(route, previousRoute);
+      if (previousRoute == null) {
+        observer.onInit(route);
+      } else {
+        observer.onNext(route, previousRoute);
+      }
     }
   }
 

@@ -11,6 +11,7 @@ abstract class Routes {
 }
 
 class TestObserver extends WizardObserver {
+  Route? init;
   Route? nextTo;
   Route? nextFrom;
   Route? backTo;
@@ -19,12 +20,18 @@ class TestObserver extends WizardObserver {
   Object? result;
 
   void reset() {
+    init = null;
     nextTo = null;
     nextFrom = null;
     backTo = null;
     backFrom = null;
     done = null;
     result = null;
+  }
+
+  @override
+  void onInit(Route route) {
+    init = route;
   }
 
   @override
@@ -485,8 +492,9 @@ void main() {
       ),
     );
 
+    expect(observer.init?.settings.name, Routes.first);
     expect(observer.nextFrom, isNull);
-    expect(observer.nextTo?.settings.name, Routes.first);
+    expect(observer.nextTo, isNull);
     expect(observer.backFrom, isNull);
     expect(observer.backTo, isNull);
     expect(observer.done, isNull);
@@ -499,6 +507,7 @@ void main() {
     expect(observer.nextTo?.settings.name, Routes.second);
     expect(observer.backFrom, isNull);
     expect(observer.backTo, isNull);
+    expect(observer.init, isNull);
     expect(observer.done, isNull);
     observer.reset();
 
@@ -509,6 +518,7 @@ void main() {
     expect(observer.backTo?.settings.name, Routes.first);
     expect(observer.nextFrom, isNull);
     expect(observer.nextTo, isNull);
+    expect(observer.init, isNull);
     expect(observer.done, isNull);
     observer.reset();
 
@@ -522,6 +532,7 @@ void main() {
     expect(observer.nextTo, isNull);
     expect(observer.backFrom, isNull);
     expect(observer.backTo, isNull);
+    expect(observer.init, isNull);
     observer.reset();
   });
 
