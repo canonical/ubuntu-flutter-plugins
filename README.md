@@ -66,7 +66,7 @@ Wizard(
     '/foo': WizardRoute(
       builder: (context) => FooPage(),
       // conditionally skip the _Bar_ page when stepping forward from the _Foo_ page
-      onNext: (settings) => skipBar) ? '/baz' : null,
+      onNext: (settings) => skipBar ? '/baz' : null,
     ),
     '/bar': WizardRoute(builder: (context) => BarPage()),
     '/baz': WizardRoute(builder: (context) => BazPage()),
