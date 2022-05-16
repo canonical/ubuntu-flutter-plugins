@@ -206,11 +206,11 @@ void main() {
 
     wizard.next();
     wizard.next();
-    await expectLater(() => wizard.next(), throwsAssertionError);
+    await expectLater(wizard.next, throwsAssertionError);
 
     wizard.back();
     wizard.back();
-    await expectLater(() => wizard.back(), throwsAssertionError);
+    await expectLater(wizard.back, throwsAssertionError);
   });
 
   testWidgets('route conditions', (tester) async {
@@ -323,7 +323,7 @@ void main() {
 
     final firstWizardScope = Wizard.of(tester.element(firstPage));
     nextRoute = 'unknown';
-    await expectLater(() => firstWizardScope.next(), throwsAssertionError);
+    await expectLater(firstWizardScope.next, throwsAssertionError);
 
     nextRoute = Routes.second;
     firstWizardScope.next();
@@ -331,7 +331,7 @@ void main() {
 
     final secondWizardScope = Wizard.of(tester.element(secondPage));
     backRoute = 'invalid';
-    await expectLater(() => secondWizardScope.back(), throwsAssertionError);
+    await expectLater(secondWizardScope.back, throwsAssertionError);
   });
 
   testWidgets('pass arguments', (tester) async {
@@ -372,7 +372,7 @@ void main() {
     final wizard = Wizard.of(tester.element(firstPage));
 
     // 1st -> home
-    await expectLater(() => wizard.home(), throwsAssertionError);
+    await expectLater(wizard.home, throwsAssertionError);
 
     // 2nd -> home
     wizard.next();

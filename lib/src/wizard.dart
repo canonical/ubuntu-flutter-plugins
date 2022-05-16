@@ -1,6 +1,6 @@
 import 'package:collection/collection.dart';
-import 'package:flutter/material.dart';
 import 'package:flow_builder/flow_builder.dart';
+import 'package:flutter/material.dart';
 
 import 'observer.dart';
 import 'result.dart';
