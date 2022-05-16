@@ -11,19 +11,32 @@ abstract class Routes {
 }
 
 class TestObserver extends WizardObserver {
-  Route? next;
-  Route? back;
+  Route? nextTo;
+  Route? nextFrom;
+  Route? backTo;
+  Route? backFrom;
   Route? done;
   Object? result;
 
-  @override
-  void onNext(Route nextRoute, Route? previousRoute) {
-    next = nextRoute;
+  void reset() {
+    nextTo = null;
+    nextFrom = null;
+    backTo = null;
+    backFrom = null;
+    done = null;
+    result = null;
   }
 
   @override
-  void onBack(Route previousRoute, Route? nextRoute) {
-    back = previousRoute;
+  void onNext(Route route, Route? previousRoute) {
+    nextTo = route;
+    nextFrom = previousRoute;
+  }
+
+  @override
+  void onBack(Route route, Route previousRoute) {
+    backTo = route;
+    backFrom = previousRoute;
   }
 
   @override
@@ -472,28 +485,32 @@ void main() {
       ),
     );
 
-    expect(observer.next, isNotNull);
-    expect(observer.next!.settings.name, Routes.first);
-    expect(observer.back, isNull);
+    expect(observer.nextFrom, isNull);
+    expect(observer.nextTo?.settings.name, Routes.first);
+    expect(observer.backFrom, isNull);
+    expect(observer.backTo, isNull);
     expect(observer.done, isNull);
+    observer.reset();
 
     Wizard.of(tester.element(find.text(Routes.first))).next();
     await tester.pumpAndSettle();
 
-    expect(observer.next, isNotNull);
-    expect(observer.next!.settings.name, Routes.second);
-    expect(observer.back, isNull);
+    expect(observer.nextFrom?.settings.name, Routes.first);
+    expect(observer.nextTo?.settings.name, Routes.second);
+    expect(observer.backFrom, isNull);
+    expect(observer.backTo, isNull);
     expect(observer.done, isNull);
-    observer.next = null;
+    observer.reset();
 
     Wizard.of(tester.element(find.text(Routes.second))).back();
     await tester.pumpAndSettle();
 
-    expect(observer.back, isNotNull);
-    expect(observer.back!.settings.name, Routes.second);
-    expect(observer.next, isNull);
+    expect(observer.backFrom?.settings.name, Routes.second);
+    expect(observer.backTo?.settings.name, Routes.first);
+    expect(observer.nextFrom, isNull);
+    expect(observer.nextTo, isNull);
     expect(observer.done, isNull);
-    observer.back = null;
+    observer.reset();
 
     Wizard.of(tester.element(find.text(Routes.first))).done(result: 'done');
     await tester.pumpAndSettle();
@@ -501,8 +518,11 @@ void main() {
     expect(observer.done, isNotNull);
     expect(observer.done!.settings.name, Routes.first);
     expect(observer.result, 'done');
-    expect(observer.next, isNull);
-    expect(observer.back, isNull);
+    expect(observer.nextFrom, isNull);
+    expect(observer.nextTo, isNull);
+    expect(observer.backFrom, isNull);
+    expect(observer.backTo, isNull);
+    observer.reset();
   });
 
   testWidgets('maybe of', (tester) async {

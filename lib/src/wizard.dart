@@ -242,7 +242,7 @@ class _WizardFlowObserver extends NavigatorObserver {
   @override
   void didPop(Route route, Route? previousRoute) {
     for (final observer in observers) {
-      observer.onBack(route, previousRoute);
+      observer.onBack(previousRoute!, route);
     }
   }
 }
