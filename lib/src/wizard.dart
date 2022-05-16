@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flow_builder/flow_builder.dart';
 
 import 'observer.dart';
+import 'result.dart';
 import 'route.dart';
 import 'scope.dart';
 import 'settings.dart';
@@ -140,6 +141,7 @@ class Wizard extends StatefulWidget {
   /// - [WizardScopeState.arguments]
   /// - [WizardScopeState.back]
   /// - [WizardScopeState.home]
+  /// - [WizardScopeState.done]
   static WizardScopeState of(BuildContext context) {
     final scope = context.findAncestorStateOfType<WizardScopeState>();
     assert(() {
@@ -166,6 +168,7 @@ class Wizard extends StatefulWidget {
   /// - [WizardScopeState.arguments]
   /// - [WizardScopeState.back]
   /// - [WizardScopeState.home]
+  /// - [WizardScopeState.done]
   static WizardScopeState? maybeOf(BuildContext context) {
     return context.findAncestorStateOfType<WizardScopeState>();
   }
@@ -214,6 +217,12 @@ class _WizardState extends State<Wizard> {
             .toList();
       },
       observers: [_WizardFlowObserver(widget.observers)],
+      onComplete: (state) async {
+        final result = state.lastOrNull as WizardRouteResult;
+        for (final observer in widget.observers) {
+          await observer.onDone(result.route, result.result);
+        }
+      },
     );
   }
 }

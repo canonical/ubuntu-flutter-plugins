@@ -8,5 +8,5 @@ class WizardRouteSettings<T extends Object?> extends RouteSettings {
     super.arguments,
   });
 
-  final result = Completer<T?>();
+  final completer = Completer<T?>();
 }

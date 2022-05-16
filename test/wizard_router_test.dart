@@ -13,6 +13,8 @@ abstract class Routes {
 class TestObserver extends WizardObserver {
   Route? next;
   Route? back;
+  Route? done;
+  Object? result;
 
   @override
   void onNext(Route nextRoute, Route? previousRoute) {
@@ -22,6 +24,12 @@ class TestObserver extends WizardObserver {
   @override
   void onBack(Route previousRoute, Route? nextRoute) {
     back = previousRoute;
+  }
+
+  @override
+  void onDone(Route route, Object? res) {
+    done = route;
+    result = res;
   }
 }
 
@@ -467,6 +475,7 @@ void main() {
     expect(observer.next, isNotNull);
     expect(observer.next!.settings.name, Routes.first);
     expect(observer.back, isNull);
+    expect(observer.done, isNull);
 
     Wizard.of(tester.element(find.text(Routes.first))).next();
     await tester.pumpAndSettle();
@@ -474,6 +483,7 @@ void main() {
     expect(observer.next, isNotNull);
     expect(observer.next!.settings.name, Routes.second);
     expect(observer.back, isNull);
+    expect(observer.done, isNull);
     observer.next = null;
 
     Wizard.of(tester.element(find.text(Routes.second))).back();
@@ -482,6 +492,17 @@ void main() {
     expect(observer.back, isNotNull);
     expect(observer.back!.settings.name, Routes.second);
     expect(observer.next, isNull);
+    expect(observer.done, isNull);
+    observer.back = null;
+
+    Wizard.of(tester.element(find.text(Routes.first))).done(result: 'done');
+    await tester.pumpAndSettle();
+
+    expect(observer.done, isNotNull);
+    expect(observer.done!.settings.name, Routes.first);
+    expect(observer.result, 'done');
+    expect(observer.next, isNull);
+    expect(observer.back, isNull);
   });
 
   testWidgets('maybe of', (tester) async {

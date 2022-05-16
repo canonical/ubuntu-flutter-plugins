@@ -3,6 +3,7 @@ import 'dart:async';
 import 'package:flutter/widgets.dart';
 import 'package:flow_builder/flow_builder.dart';
 
+import 'result.dart';
 import 'route.dart';
 import 'settings.dart';
 
@@ -76,7 +77,7 @@ class WizardScopeState extends State<WizardScope> {
 
     _updateRoutes((state) {
       final copy = List<WizardRouteSettings>.of(state);
-      copy[start].result.complete(result);
+      copy[start].completer.complete(result);
       return copy..replaceRange(start, routes.length, []);
     });
   }
@@ -117,7 +118,32 @@ class WizardScopeState extends State<WizardScope> {
       return copy..add(next);
     });
 
-    return next.result.future;
+    return next.completer.future;
+  }
+
+  /// Sets the wizard done. Optionally, a `result` can be passed to the route.
+  ///
+  /// ```dart
+  /// onPressed: Wizard.of(context).done
+  /// ```
+  FutureOr<void> done({Object? result}) async {
+    final routes = _getRoutes();
+    assert(routes.isNotEmpty, routes.length.toString());
+
+    final flow = context.flow<List<WizardRouteSettings>>();
+
+    await widget._route.onDone?.call(result);
+
+    flow.complete((state) {
+      final copy = List<WizardRouteSettings>.of(state);
+      final settings = copy.removeLast();
+      return copy
+        ..add(WizardRouteResult(
+          settings,
+          result: result,
+          route: ModalRoute.of(context)!,
+        ));
+    });
   }
 
   List<WizardRouteSettings> _getRoutes() =>
@@ -134,6 +160,9 @@ class WizardScopeState extends State<WizardScope> {
 
   /// Returns `false` if the wizard page is the last page.
   bool get hasNext => widget._index < widget._routes.length - 1;
+
+  /// Returns `true` if the wizard is done.
+  bool get isDone => context.flow<List<WizardRouteSettings>>().completed;
 
   @override
   Widget build(BuildContext context) => Builder(builder: widget._route.builder);
