@@ -109,11 +109,11 @@ import 'settings.dart';
 class Wizard extends StatefulWidget {
   /// Creates an instance of a wizard. The `routes` argument is required.
   const Wizard({
-    Key? key,
+    super.key,
     this.initialRoute,
     required this.routes,
     this.observers = const [],
-  }) : super(key: key);
+  });
 
   /// The name of the first route to show.
   ///

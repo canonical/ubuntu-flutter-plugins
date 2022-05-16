@@ -11,14 +11,13 @@ import 'settings.dart';
 /// Each page is enclosed by a `WizardScope` widget.
 class WizardScope extends StatefulWidget {
   const WizardScope({
-    Key? key,
+    super.key,
     required int index,
     required WizardRoute route,
     required List<String> routes,
   })  : _index = index,
         _route = route,
-        _routes = routes,
-        super(key: key);
+        _routes = routes;
 
   final int _index;
   final WizardRoute _route;

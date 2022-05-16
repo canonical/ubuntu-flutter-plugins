@@ -4,9 +4,9 @@ import 'package:flutter/widgets.dart';
 
 class WizardRouteSettings<T extends Object?> extends RouteSettings {
   WizardRouteSettings({
-    String? name,
-    Object? arguments,
-  }) : super(name: name, arguments: arguments);
+    super.name,
+    super.arguments,
+  });
 
   final result = Completer<T?>();
 }
