@@ -483,4 +483,18 @@ void main() {
     expect(observer.popped!.settings.name, Routes.second);
     expect(observer.pushed, isNull);
   });
+
+  testWidgets('maybe of', (tester) async {
+    await pumpWizardApp(
+      tester,
+      routes: {
+        Routes.first: WizardRoute(builder: (_) => const Text(Routes.first)),
+      },
+    );
+
+    expect(Wizard.maybeOf(tester.element(find.byType(MaterialApp))), isNull);
+    expect(Wizard.maybeOf(tester.element(find.text(Routes.first))), isNotNull);
+    expect(Wizard.maybeOf(tester.element(find.text(Routes.first))),
+        Wizard.of(tester.element(find.text(Routes.first))));
+  });
 }

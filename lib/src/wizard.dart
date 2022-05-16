@@ -152,7 +152,12 @@ class Wizard extends StatefulWidget {
   /// The wizard scope from the closest instance of this class that encloses the
   /// given `context`.
   ///
+  /// If no instance of this class encloses the given context, will cause an
+  /// assert in debug mode, and throw an exception in release mode. To return
+  /// `null` if there is no wizard scope, use [maybeOf] instead.
+  ///
   /// See also:
+  /// - [Wizard.maybeOf]
   /// - [WizardScopeState.next]
   /// - [WizardScopeState.arguments]
   /// - [WizardScopeState.back]
@@ -169,6 +174,22 @@ class Wizard extends StatefulWidget {
       return true;
     }());
     return scope!;
+  }
+
+  /// The wizard scope from the closest instance of this class that encloses the
+  /// given `context`.
+  ///
+  /// If no instance of this class encloses the given context, will return
+  /// `null`. To throw an exception instead, use [of] instead of this function.
+  ///
+  /// See also:
+  /// - [Wizard.of]
+  /// - [WizardScopeState.next]
+  /// - [WizardScopeState.arguments]
+  /// - [WizardScopeState.back]
+  /// - [WizardScopeState.home]
+  static WizardScopeState? maybeOf(BuildContext context) {
+    return context.findAncestorStateOfType<WizardScopeState>();
   }
 
   final List<NavigatorObserver> observers;
