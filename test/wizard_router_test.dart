@@ -10,18 +10,18 @@ abstract class Routes {
   static const fourth = '/fourth';
 }
 
-class TestObserver extends NavigatorObserver {
-  Route? pushed;
-  Route? popped;
+class TestObserver extends WizardObserver {
+  Route? next;
+  Route? back;
 
   @override
-  void didPush(Route route, Route? previousRoute) {
-    pushed = route;
+  void onNext(Route nextRoute, Route? previousRoute) {
+    next = nextRoute;
   }
 
   @override
-  void didPop(Route route, Route? previousRoute) {
-    popped = route;
+  void onBack(Route previousRoute, Route? nextRoute) {
+    back = previousRoute;
   }
 }
 
@@ -448,7 +448,7 @@ void main() {
     expect(() => Wizard.of(context), throwsFlutterError);
   });
 
-  testWidgets('navigator observers', (tester) async {
+  testWidgets('observers', (tester) async {
     final observer = TestObserver();
     await tester.pumpWidget(
       MaterialApp(
@@ -464,24 +464,24 @@ void main() {
       ),
     );
 
-    expect(observer.pushed, isNotNull);
-    expect(observer.pushed!.settings.name, Routes.first);
-    expect(observer.popped, isNull);
+    expect(observer.next, isNotNull);
+    expect(observer.next!.settings.name, Routes.first);
+    expect(observer.back, isNull);
 
     Wizard.of(tester.element(find.text(Routes.first))).next();
     await tester.pumpAndSettle();
 
-    expect(observer.pushed, isNotNull);
-    expect(observer.pushed!.settings.name, Routes.second);
-    expect(observer.popped, isNull);
-    observer.pushed = null;
+    expect(observer.next, isNotNull);
+    expect(observer.next!.settings.name, Routes.second);
+    expect(observer.back, isNull);
+    observer.next = null;
 
     Wizard.of(tester.element(find.text(Routes.second))).back();
     await tester.pumpAndSettle();
 
-    expect(observer.popped, isNotNull);
-    expect(observer.popped!.settings.name, Routes.second);
-    expect(observer.pushed, isNull);
+    expect(observer.back, isNotNull);
+    expect(observer.back!.settings.name, Routes.second);
+    expect(observer.next, isNull);
   });
 
   testWidgets('maybe of', (tester) async {

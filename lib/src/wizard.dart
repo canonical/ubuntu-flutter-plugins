@@ -2,6 +2,7 @@ import 'package:collection/collection.dart';
 import 'package:flutter/material.dart';
 import 'package:flow_builder/flow_builder.dart';
 
+import 'observer.dart';
 import 'route.dart';
 import 'scope.dart';
 import 'settings.dart';
@@ -169,7 +170,7 @@ class Wizard extends StatefulWidget {
     return context.findAncestorStateOfType<WizardScopeState>();
   }
 
-  final List<NavigatorObserver> observers;
+  final List<WizardObserver> observers;
 
   @override
   State<Wizard> createState() => _WizardState();
@@ -212,7 +213,27 @@ class _WizardState extends State<Wizard> {
                 _createPage(context, index: index, settings: settings))
             .toList();
       },
-      observers: widget.observers,
+      observers: [_WizardFlowObserver(widget.observers)],
     );
+  }
+}
+
+class _WizardFlowObserver extends NavigatorObserver {
+  _WizardFlowObserver(this.observers);
+
+  final List<WizardObserver> observers;
+
+  @override
+  void didPush(Route route, Route? previousRoute) {
+    for (final observer in observers) {
+      observer.onNext(route, previousRoute);
+    }
+  }
+
+  @override
+  void didPop(Route route, Route? previousRoute) {
+    for (final observer in observers) {
+      observer.onBack(route, previousRoute);
+    }
   }
 }
