@@ -1,8 +1,8 @@
 name: gtk_icon_theme
 description: GtkIconTheme FFI bindings
-homepage: https://github.com/jpnurmi/xdg_icons
-repository: https://github.com/jpnurmi/xdg_icons
-issue_tracker: https://github.com/jpnurmi/xdg_icons/issues
+homepage: https://github.com/ubuntu-flutter-community/xdg_icons
+repository: https://github.com/ubuntu-flutter-community/xdg_icons
+issue_tracker: https://github.com/ubuntu-flutter-community/xdg_icons/issues
 version: 0.0.1
 
 environment:
