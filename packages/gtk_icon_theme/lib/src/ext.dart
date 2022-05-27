@@ -6,10 +6,12 @@ import 'gtk.g.dart' as ffi;
 import 'lib.dart';
 
 extension StringList on List<String> {
-  ffi.Pointer<ffi.Pointer<ffi.Int8>> toArray() {
+  ffi.Pointer<ffi.Pointer<ffi.Int8>> toArray({
+    ffi.Allocator allocator = ffi.malloc,
+  }) {
     final array = ffi.calloc<ffi.Pointer<ffi.Int8>>(length);
     for (int i = 0; i < length; ++i) {
-      array[i] = this[i].toNativeUtf8().cast();
+      array[i] = this[i].toNativeUtf8(allocator: allocator).cast();
     }
     return array;
   }
