@@ -30,6 +30,23 @@ void main() {
     expect(getService<Service>(), equals(service));
   });
 
+  test('reset service', () {
+    Service? wasDisposed1, wasDisposed2;
+    registerService<Service>(Service.new, dispose: (s) => wasDisposed1 = s);
+
+    final s1 = getService<Service>();
+    expect(s1, same(getService<Service>()));
+    resetService<Service>();
+    expect(wasDisposed1, s1);
+
+    final s2 = getService<Service>();
+    expect(s2, same(getService<Service>()));
+    expect(s2, isNot(same(s1)));
+    resetService<Service>(dispose: (s) => wasDisposed2 = s);
+    expect(wasDisposed2, s2);
+    expect(wasDisposed1, s1);
+  });
+
   test('mock service', () {
     final mock1 = Service();
     final mock2 = Service();

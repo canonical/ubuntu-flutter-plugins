@@ -22,6 +22,14 @@ void registerService<T extends Object>(
   _locator.registerLazySingleton<T>(create, dispose: dispose, instanceName: id);
 }
 
+/// Locates and resets an injected service.
+void resetService<T extends Object>({
+  String? id,
+  FutureOr<void> Function(T service)? dispose,
+}) {
+  _locator.resetLazySingleton<T>(instanceName: id, disposingFunction: dispose);
+}
+
 /// Registers a service instance with the locator.
 void registerServiceInstance<T extends Object>(T service, {String? id}) {
   _locator.registerSingleton<T>(service, instanceName: id);
