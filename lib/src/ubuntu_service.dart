@@ -19,13 +19,11 @@ void registerService<T extends Object>(
   String? id,
   FutureOr<void> Function(T service)? dispose,
 }) {
-  unregisterService<T>(id: id);
   _locator.registerLazySingleton<T>(create, dispose: dispose, instanceName: id);
 }
 
 /// Registers a service instance with the locator.
 void registerServiceInstance<T extends Object>(T service, {String? id}) {
-  unregisterService<T>(id: id);
   _locator.registerSingleton<T>(service, instanceName: id);
 }
 
@@ -33,9 +31,7 @@ void registerServiceInstance<T extends Object>(T service, {String? id}) {
 void registerServiceFactory<T extends Object>(
   T Function(dynamic param) create, {
   String? id,
-  FutureOr<void> Function(T service)? dispose,
 }) {
-  unregisterService<T>(id: id);
   _locator.registerFactoryParam<T, Object?, Object?>(
     (param, _) => create(param),
     instanceName: id,
@@ -43,9 +39,12 @@ void registerServiceFactory<T extends Object>(
 }
 
 /// Unregisters a service instance with the locator.
-void unregisterService<T extends Object>({String? id}) {
+void unregisterService<T extends Object>({
+  String? id,
+  FutureOr<void> Function(T service)? dispose,
+}) {
   if (_locator.isRegistered<T>(instanceName: id)) {
-    _locator.unregister<T>(instanceName: id);
+    _locator.unregister<T>(instanceName: id, disposingFunction: dispose);
   }
 }
 

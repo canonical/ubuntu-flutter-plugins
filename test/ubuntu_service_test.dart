@@ -19,19 +19,6 @@ void main() {
     expect(() => getService<Service>(), throwsA(isA<AssertionError>()));
   });
 
-  test('re-register service', () {
-    expect(() => registerService(Service.new), isNot(throwsA(anything)));
-    // re-registration required in integration tests
-    expect(() => registerService(Service.new), isNot(throwsA(anything)));
-  });
-
-  test('re-register service instance', () {
-    final service = Service();
-    expect(() => registerServiceInstance(service), isNot(throwsA(anything)));
-    // re-registration required in integration tests
-    expect(() => registerServiceInstance(service), isNot(throwsA(anything)));
-  });
-
   test('locate service', () {
     registerService(Service.new);
     expect(getService<Service>(), isNotNull);
@@ -51,21 +38,13 @@ void main() {
     registerMockService(mock1);
     expect(getService<Service>(), equals(mock1));
 
+    unregisterMockService<Service>();
+
     registerMockService(mock2);
     expect(getService<Service>(), equals(mock2));
   });
 
   test('service id', () {
-    registerService<Service>(Service.new);
-    registerService<Service>(Service2.new, id: '2');
-    registerServiceInstance<Service>(Service3(), id: '3');
-
-    expect(getService<Service>(), isA<Service>());
-    expect(getService<Service>(id: '2'), isA<Service2>());
-    expect(getService<Service>(id: '3'), isA<Service3>());
-  });
-
-  test('unregister service', () {
     registerService<Service>(Service.new);
     registerService<Service>(Service2.new, id: '2');
     registerServiceInstance<Service>(Service3(), id: '3');
