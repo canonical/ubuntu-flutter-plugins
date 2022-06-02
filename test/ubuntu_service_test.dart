@@ -3,6 +3,10 @@ import 'package:ubuntu_service/ubuntu_service.dart';
 
 class Service extends Object {}
 
+class Service2 extends Service {}
+
+class Service3 extends Service {}
+
 void main() {
   tearDown(() => unregisterMockService<Service>());
 
@@ -44,5 +48,43 @@ void main() {
 
     registerMockService(mock2);
     expect(getService<Service>(), equals(mock2));
+  });
+
+  test('service id', () {
+    registerService<Service>(Service.new);
+    registerService<Service>(Service2.new, id: '2');
+    registerServiceInstance<Service>(Service3(), id: '3');
+
+    expect(getService<Service>(), isA<Service>());
+    expect(getService<Service>(id: '2'), isA<Service2>());
+    expect(getService<Service>(id: '3'), isA<Service3>());
+  });
+
+  test('unregister service', () {
+    registerService<Service>(Service.new);
+    registerService<Service>(Service2.new, id: '2');
+    registerServiceInstance<Service>(Service3(), id: '3');
+
+    expect(getService<Service>(), isA<Service>());
+    expect(getService<Service>(id: '2'), isA<Service2>());
+    expect(getService<Service>(id: '3'), isA<Service3>());
+
+    unregisterService<Service>();
+
+    expect(() => getService<Service>(), throwsA(isA<AssertionError>()));
+    expect(getService<Service>(id: '2'), isA<Service2>());
+    expect(getService<Service>(id: '3'), isA<Service3>());
+
+    unregisterService<Service>(id: '2');
+
+    expect(() => getService<Service>(), throwsA(isA<AssertionError>()));
+    expect(() => getService<Service>(id: '2'), throwsA(isA<AssertionError>()));
+    expect(getService<Service>(id: '3'), isA<Service3>());
+
+    unregisterService<Service>(id: '3');
+
+    expect(() => getService<Service>(), throwsA(isA<AssertionError>()));
+    expect(() => getService<Service>(id: '2'), throwsA(isA<AssertionError>()));
+    expect(() => getService<Service>(id: '3'), throwsA(isA<AssertionError>()));
   });
 }

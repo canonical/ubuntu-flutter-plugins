@@ -6,21 +6,29 @@ import 'package:meta/meta.dart';
 final _locator = GetIt.instance;
 
 /// Locates and returns an injected service.
-T getService<T extends Object>() => _locator<T>();
+T getService<T extends Object>({String? id}) => _locator<T>(instanceName: id);
 
 /// Registers a service with the locator.
 void registerService<T extends Object>(
   T Function() create, {
+  String? id,
   FutureOr<void> Function(T service)? dispose,
 }) {
-  if (_locator.isRegistered<T>()) _locator.unregister<T>();
-  _locator.registerLazySingleton<T>(create, dispose: dispose);
+  unregisterService<T>(id: id);
+  _locator.registerLazySingleton<T>(create, dispose: dispose, instanceName: id);
 }
 
 /// Registers a service instance with the locator.
-void registerServiceInstance<T extends Object>(T service) {
-  if (_locator.isRegistered<T>()) _locator.unregister<T>();
-  _locator.registerSingleton<T>(service);
+void registerServiceInstance<T extends Object>(T service, {String? id}) {
+  unregisterService<T>(id: id);
+  _locator.registerSingleton<T>(service, instanceName: id);
+}
+
+/// Unregisters a service instance with the locator.
+void unregisterService<T extends Object>({String? id}) {
+  if (_locator.isRegistered<T>(instanceName: id)) {
+    _locator.unregister<T>(instanceName: id);
+  }
 }
 
 /// Registers a mock service for testing purposes.
@@ -31,6 +39,6 @@ void registerMockService<T extends Object>(T mock) {
 
 /// Unregisters a mock service for testing purposes.
 @visibleForTesting
-void unregisterMockService<T extends Object>() {
-  if (_locator.isRegistered<T>()) _locator.unregister<T>();
+void unregisterMockService<T extends Object>({String? id}) {
+  unregisterService<T>(id: id);
 }
