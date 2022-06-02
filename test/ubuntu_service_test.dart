@@ -7,6 +7,11 @@ class Service2 extends Service {}
 
 class Service3 extends Service {}
 
+class ServiceParam extends Service {
+  ServiceParam(this.param);
+  final String param;
+}
+
 void main() {
   tearDown(() => unregisterMockService<Service>());
 
@@ -86,5 +91,17 @@ void main() {
     expect(() => getService<Service>(), throwsA(isA<AssertionError>()));
     expect(() => getService<Service>(id: '2'), throwsA(isA<AssertionError>()));
     expect(() => getService<Service>(id: '3'), throwsA(isA<AssertionError>()));
+  });
+
+  test('service factory', () {
+    registerServiceFactory<ServiceParam>(
+      (dynamic param) => ServiceParam(param as String),
+    );
+
+    final s1 = createService<ServiceParam>('p1');
+    expect(s1, isA<ServiceParam>().having((s) => s.param, 'param', 'p1'));
+
+    final s2 = createService<ServiceParam>('p2');
+    expect(s2, isA<ServiceParam>().having((s) => s.param, 'param', 'p2'));
   });
 }
