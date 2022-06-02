@@ -3,7 +3,7 @@ import 'dart:async';
 import 'package:get_it/get_it.dart';
 import 'package:meta/meta.dart';
 
-final _locator = GetIt.instance;
+final _locator = GetIt.asNewInstance();
 
 /// Locates and returns an injected service.
 T getService<T extends Object>({String? id}) => _locator<T>(instanceName: id);
