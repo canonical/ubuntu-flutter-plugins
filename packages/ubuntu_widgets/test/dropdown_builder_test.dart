@@ -88,4 +88,22 @@ void main() {
 
     expect(selectedValue, isNull);
   });
+
+  testWidgets('disabled', (tester) async {
+    await tester.pumpWidget(
+      MaterialApp(
+        home: Material(
+          child: DropdownBuilder<String>(
+            selected: 'foo',
+            values: const ['foo', 'bar', 'baz'],
+            onSelected: null,
+            itemBuilder: (_, value, __) => Text(value),
+          ),
+        ),
+      ),
+    );
+
+    final button = find.byType(DropdownButton<String>);
+    expect(tester.widget<DropdownButton<String>>(button).onChanged, isNull);
+  });
 }
