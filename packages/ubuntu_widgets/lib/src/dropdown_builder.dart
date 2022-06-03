@@ -41,7 +41,9 @@ class DropdownBuilder<T> extends StatefulWidget {
   final List<T> values;
 
   /// Called when the user selects an item.
-  final ValueChanged<T?> onSelected;
+  ///
+  /// If [onSelected] is `null`, the widget will be disabled.
+  final ValueChanged<T?>? onSelected;
 
   /// Builds a dropdown item for the given `value`.
   ///
