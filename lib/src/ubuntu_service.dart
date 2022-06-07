@@ -58,7 +58,8 @@ void unregisterService<T extends Object>({
 
 /// Registers a mock service for testing purposes.
 @visibleForTesting
-void registerMockService<T extends Object>(T mock) {
+void registerMockService<T extends Object>(T mock, {String? id}) {
+  unregisterService<T>(id: id);
   registerServiceInstance<T>(mock);
 }
 
