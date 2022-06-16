@@ -11,8 +11,8 @@ import 'location.dart';
 import 'source.dart';
 
 final _options = BaseOptions(
-  connectTimeout: 1000,
-  receiveTimeout: 1000,
+  connectTimeout: 2000,
+  receiveTimeout: 2000,
   responseType: ResponseType.plain,
 );
 
