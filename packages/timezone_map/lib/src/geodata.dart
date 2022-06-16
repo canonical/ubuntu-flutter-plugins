@@ -35,7 +35,7 @@ class Geodata extends GeoSource {
   /// Constructs geodata from the package's assets.
   factory Geodata.asset({AssetBundle? bundle}) {
     bundle ??= rootBundle;
-    const assetPath = 'packages/timezone_map/assets/';
+    const assetPath = 'packages/timezone_map/assets';
     return Geodata(
       loadCities: () => bundle!.loadString('$assetPath/cities15000.txt'),
       loadAdmins: () => bundle!.loadString('$assetPath/admin1CodesASCII.txt'),
