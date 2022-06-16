@@ -3,6 +3,7 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/annotations.dart';
 import 'package:mockito/mockito.dart';
 import 'package:timezone_map/timezone_map.dart';
+import 'package:xml/xml.dart';
 
 import 'geoip_test.mocks.dart';
 import 'test_data.dart';
@@ -49,7 +50,7 @@ void main() {
 
   test('geodata xml', () async {
     expect(
-      await geodata.fromXml('''
+      await geodata.fromXml(XmlDocument.parse('''
 <Response>
   <Ip>127.0.0.1</Ip>
   <Status>OK</Status>
@@ -65,18 +66,18 @@ void main() {
   <AreaCode>0</AreaCode>
   <TimeZone>Europe/Stockholm</TimeZone>
 </Response>
-'''),
+''').rootElement),
       gothenburg,
     );
 
     expect(
-      await geodata.fromXml('''
+      await geodata.fromXml(XmlDocument.parse('''
 <Response>
   <Ip>127.0.0.1</Ip>
   <Status>OK</Status>
   <City>Göteborg</City>
 </Response>
-'''),
+''').rootElement),
       const GeoLocation(
         name: 'Göteborg',
         admin: null,
@@ -89,12 +90,12 @@ void main() {
     );
 
     expect(
-      await geodata.fromXml('''
+      await geodata.fromXml(XmlDocument.parse('''
 <Response>
   <Ip>127.0.0.1</Ip>
   <Status>ERROR</Status>
 </Response>
-'''),
+''').rootElement),
       isNull,
     );
   });

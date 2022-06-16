@@ -8,7 +8,6 @@ import 'package:xml/xml.dart';
 
 export 'package:latlong2/latlong.dart' show LatLng;
 
-import 'exception.dart';
 import 'location.dart';
 import 'source.dart';
 
@@ -70,25 +69,20 @@ class Geodata extends GeoSource {
     );
   }
 
-  /// Constructs a [GeoLocation] from [xml] data.
-  Future<GeoLocation?> fromXml(String xml) async {
+  /// Constructs a [GeoLocation] from [xml] element.
+  Future<GeoLocation?> fromXml(XmlElement xml) async {
     await _ensureInitialized();
-    try {
-      final element = XmlDocument.parse(xml).rootElement;
-      if (element.getTextOrNull('Status') != 'OK') return null;
-      return GeoLocation(
-        name: element.getTextOrNull('City'),
-        admin: element.getTextOrNull('RegionName'),
-        country: element.getTextOrNull('CountryName'),
-        country2: element.getTextOrNull('CountryCode'),
-        latitude: element.getDoubleOrNull('Latitude'),
-        longitude: element.getDoubleOrNull('Longitude'),
-        timezone: element.getTextOrNull('TimeZone'),
-        offset: _timezones[element.getTextOrNull('TimeZone')]?.offset,
-      );
-    } on XmlException catch (e) {
-      throw GeoException(e.message);
-    }
+    if (xml.getTextOrNull('Status') != 'OK') return null;
+    return GeoLocation(
+      name: xml.getTextOrNull('City'),
+      admin: xml.getTextOrNull('RegionName'),
+      country: xml.getTextOrNull('CountryName'),
+      country2: xml.getTextOrNull('CountryCode'),
+      latitude: xml.getDoubleOrNull('Latitude'),
+      longitude: xml.getDoubleOrNull('Longitude'),
+      timezone: xml.getTextOrNull('TimeZone'),
+      offset: _timezones[xml.getTextOrNull('TimeZone')]?.offset,
+    );
   }
 
   @override

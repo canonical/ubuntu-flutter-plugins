@@ -1,5 +1,6 @@
 import 'package:dio/dio.dart';
 import 'package:meta/meta.dart';
+import 'package:xml/xml.dart';
 
 import 'exception.dart';
 import 'geodata.dart';
@@ -46,7 +47,7 @@ class GeoIP extends GeoSource {
       return _handleResponse(response);
     } on DioError catch (e) {
       if (!CancelToken.isCancel(e)) {
-        throw GeoException(e.message);
+        throw GeoException(e.message, e);
       }
     }
     return null;
@@ -62,8 +63,13 @@ class GeoIP extends GeoSource {
 
   Future<GeoLocation?> _handleResponse(Response response) {
     if (response.statusCode != 200) {
-      throw GeoException('${response.statusCode}: ${response.statusMessage}');
+      throw GeoException.response(response);
     }
-    return _geodata.fromXml(response.data.toString());
+    try {
+      final xml = XmlDocument.parse(response.data.toString());
+      return _geodata.fromXml(xml.rootElement);
+    } on XmlException catch (e) {
+      throw GeoException(e.message, e);
+    }
   }
 }

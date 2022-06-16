@@ -57,7 +57,7 @@ class Geoname extends GeoSource {
       return _handleResponse(response);
     } on DioError catch (e) {
       if (!CancelToken.isCancel(e) && e.error is! SocketException) {
-        throw GeoException(e.message);
+        throw GeoException(e.message, e);
       }
     }
     return const <GeoLocation>[];
@@ -76,15 +76,15 @@ class Geoname extends GeoSource {
 
   Future<Iterable<GeoLocation>> _handleResponse(Response response) async {
     if (response.statusCode != 200) {
-      throw GeoException('${response.statusCode}: ${response.statusMessage}');
+      throw GeoException.response(response);
     }
     try {
       final data = json.decode(response.data.toString());
-      if (data is! Iterable) throw const FormatException();
+      if (data is! Iterable) throw FormatException('$data');
       final locations = data.cast<Map<String, dynamic>>();
       return Future.wait(locations.map(_geodata.fromJson));
     } on FormatException catch (e) {
-      throw GeoException(e.message);
+      throw GeoException(e.message, e);
     }
   }
 }
