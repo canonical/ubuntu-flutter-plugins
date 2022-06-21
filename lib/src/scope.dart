@@ -159,7 +159,12 @@ class WizardScopeState extends State<WizardScope> {
   bool get hasPrevious => widget._index > 0;
 
   /// Returns `false` if the wizard page is the last page.
-  bool get hasNext => widget._index < widget._routes.length - 1;
+  bool get hasNext {
+    if (widget._routes.length == 0) return false;
+    final previous = _getRoutes().last.name!;
+    final previousIndex = widget._routes.indexOf(previous);
+    return previousIndex < widget._routes.length - 1;
+  }
 
   /// Returns `true` if the wizard is done.
   bool get isDone => context.flow<List<WizardRouteSettings>>().completed;
