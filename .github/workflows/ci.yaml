@@ -13,7 +13,7 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v2
     - name: Setup Flutter
-      uses: subosito/flutter-action@v1
+      uses: subosito/flutter-action@v2
     - name: Get dependencies
       run: flutter pub get
     - name: Analyze
@@ -29,11 +29,11 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v2
     - name: Setup Flutter
-      uses: subosito/flutter-action@v1
+      uses: subosito/flutter-action@v2
     - name: Run tests
       run: flutter test --coverage
     - name: Upload coverage
-      uses: codecov/codecov-action@v1
+      uses: codecov/codecov-action@v3
       with:
         file: coverage/lcov.info
         token: ${{secrets.CODECOV_TOKEN}}
