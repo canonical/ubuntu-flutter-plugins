@@ -1,8 +1,5 @@
-import 'dart:io';
+import 'dart:convert';
 
-import 'package:file/local.dart';
-import 'package:file/file.dart';
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:intl/intl.dart';
@@ -31,32 +28,24 @@ class TimezoneMap extends StatelessWidget {
   final void Function(LatLng coordinates)? onPressed;
 
   /// Requests all timezone map SVG assets to be pre-cached.
-  ///
-  /// **Note**: not supported on Web.
-  static Future<void> precacheAssets(BuildContext context,
-      {@visibleForTesting FileSystem fs = const LocalFileSystem()}) {
-    if (kIsWeb) return Future.value();
-    final exePath = Platform.resolvedExecutable;
-    final assetDir = fs.directory(p.join(p.dirname(exePath), 'data',
-        'flutter_assets', 'packages', 'timezone_map', 'assets'));
-    final assets = <String>[];
-    if (assetDir.existsSync()) {
-      assets.addAll(assetDir
-          .listSync()
-          .map((entity) => p.basename(entity.path))
-          .where((asset) => p.extension(asset) == '.svg'));
+  static Future precacheAssets(BuildContext context) async {
+    final manifest = await DefaultAssetBundle.of(context)
+        .loadString('AssetManifest.json')
+        .then((value) => json.decode(value) as Map<String, dynamic>);
+
+    bool filterAsset(String asset) {
+      return p.isWithin('packages/timezone_map', asset) &&
+          p.extension(asset) == '.svg';
     }
-    return Future.wait<void>([
-      for (final asset in assets)
-        precachePicture(
-          ExactAssetPicture(
-            SvgPicture.svgStringDecoderBuilder,
-            'assets/$asset',
-            package: 'timezone_map',
-          ),
-          context,
-        )
-    ]);
+
+    Future<void> precacheAsset(String asset) {
+      return precachePicture(
+        ExactAssetPicture(SvgPicture.svgStringDecoderBuilder, asset),
+        context,
+      );
+    }
+
+    return Future.wait(manifest.keys.where(filterAsset).map(precacheAsset));
   }
 
   @override

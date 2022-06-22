@@ -9,7 +9,6 @@ environment:
 dependencies:
   collection: ^1.16.0
   dio: ^4.0.6
-  file: ^6.1.2
   flutter:
     sdk: flutter
   flutter_svg: ^1.1.0

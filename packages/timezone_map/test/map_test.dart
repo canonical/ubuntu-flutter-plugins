@@ -1,11 +1,7 @@
-import 'dart:io';
-
-import 'package:file/memory.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:latlong2/latlong.dart';
 import 'package:mockito/mockito.dart';
-import 'package:path/path.dart' as p;
 import 'package:timezone_map/timezone_map.dart';
 
 import 'test_utils.dart';
@@ -144,18 +140,17 @@ void main() {
   });
 
   testWidgets('cache', (tester) async {
-    final appPath = p.dirname(Platform.resolvedExecutable);
-    const assetPath = 'data/flutter_assets/packages/timezone_map/assets';
-
-    final fs = MemoryFileSystem.test();
     final assetBundle = MockAssetBundle();
-    String assetKey(int i) => 'packages/timezone_map/assets/tz_$i.svg';
-
-    for (var i = -1; i <= 1; ++i) {
-      fs.file('$appPath/$assetPath/tz_$i.svg').createSync(recursive: true);
-      when(assetBundle.loadString(assetKey(i)))
-          .thenAnswer((_) async => '<svg with="1" height="1"/>');
-    }
+    when(assetBundle.loadString('AssetManifest.json'))
+        .thenAnswer((_) async => '''
+{
+  "packages/timezone_map/assets/tz_-10.svg":["packages/timezone_map/assets/tz_-10.svg"],
+  "packages/timezone_map/assets/tz_0.svg":["packages/timezone_map/assets/tz_0.svg"],
+  "packages/timezone_map/assets/tz_4.5.svg":["packages/timezone_map/assets/tz_4.5.svg"]
+}
+''');
+    when(assetBundle.loadString(argThat(endsWith('.svg'))))
+        .thenAnswer((_) async => '<svg with="1" height="1"/>');
 
     await tester.pumpWidget(DefaultAssetBundle(
       bundle: assetBundle,
@@ -163,17 +158,20 @@ void main() {
     ));
     final context = tester.element(find.byType(MaterialApp));
 
-    await TimezoneMap.precacheAssets(context, fs: fs);
+    await TimezoneMap.precacheAssets(context);
 
-    for (var i = -1; i <= 1; ++i) {
-      verify(assetBundle.loadString(assetKey(i))).called(1);
-    }
+    verify(assetBundle.loadString('packages/timezone_map/assets/tz_-10.svg'))
+        .called(1);
+    verify(assetBundle.loadString('packages/timezone_map/assets/tz_0.svg'))
+        .called(1);
+    verify(assetBundle.loadString('packages/timezone_map/assets/tz_4.5.svg'))
+        .called(1);
   });
 }
 
 class MockAssetBundle extends Mock implements AssetBundle {
   @override
-  Future<String> loadString(String key, {bool cache = true}) {
+  Future<String> loadString(String? key, {bool cache = true}) {
     return super.noSuchMethod(
       Invocation.method(#loadString, [key], {#cache: cache}),
       returnValue: Future.value(''),
