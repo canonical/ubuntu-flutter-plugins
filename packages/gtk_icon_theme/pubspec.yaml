@@ -46,6 +46,9 @@ ffigen:
       - "g_list_free"
       - "g_object_unref"
       - "g_strfreev"
+      - "g_resources_lookup_data"
+      - "g_bytes_get_data"
+      - "g_bytes_unref"
   macros:
     exclude:
       - ".*"

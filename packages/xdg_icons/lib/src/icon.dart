@@ -68,11 +68,21 @@ class _XdgIconState extends State<XdgIcon> {
     if (_icon == null) {
       return SizedBox.square(dimension: widget.size.toDouble());
     }
-    final builder = _icon!.isScalable ? SvgPicture.file : Image.file;
-    return builder(
-      File(_icon!.fileName),
-      height: widget.size.toDouble(),
-      width: widget.size.toDouble(),
-    );
+    final file = File(_icon!.fileName);
+    if (file.existsSync()) {
+      final builder = _icon!.isScalable ? SvgPicture.file : Image.file;
+      return builder(
+        file,
+        height: widget.size.toDouble(),
+        width: widget.size.toDouble(),
+      );
+    } else {
+      final builder = _icon!.isScalable ? SvgPicture.memory : Image.memory;
+      return builder(
+        _icon!.load(),
+        height: widget.size.toDouble(),
+        width: widget.size.toDouble(),
+      );
+    }
   }
 }

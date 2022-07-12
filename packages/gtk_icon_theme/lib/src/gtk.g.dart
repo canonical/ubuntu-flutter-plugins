@@ -18,6 +18,37 @@ class LibGtk {
           lookup)
       : _lookup = lookup;
 
+  gconstpointer g_bytes_get_data(
+    ffi.Pointer<GBytes> bytes,
+    ffi.Pointer<gsize> size,
+  ) {
+    return _g_bytes_get_data(
+      bytes,
+      size,
+    );
+  }
+
+  late final _g_bytes_get_dataPtr = _lookup<
+      ffi.NativeFunction<
+          gconstpointer Function(
+              ffi.Pointer<GBytes>, ffi.Pointer<gsize>)>>('g_bytes_get_data');
+  late final _g_bytes_get_data = _g_bytes_get_dataPtr.asFunction<
+      gconstpointer Function(ffi.Pointer<GBytes>, ffi.Pointer<gsize>)>();
+
+  void g_bytes_unref(
+    ffi.Pointer<GBytes> bytes,
+  ) {
+    return _g_bytes_unref(
+      bytes,
+    );
+  }
+
+  late final _g_bytes_unrefPtr =
+      _lookup<ffi.NativeFunction<ffi.Void Function(ffi.Pointer<GBytes>)>>(
+          'g_bytes_unref');
+  late final _g_bytes_unref =
+      _g_bytes_unrefPtr.asFunction<void Function(ffi.Pointer<GBytes>)>();
+
   void g_free(
     gpointer mem,
   ) {
@@ -71,6 +102,26 @@ class LibGtk {
           'g_object_unref');
   late final _g_object_unref =
       _g_object_unrefPtr.asFunction<void Function(gpointer)>();
+
+  ffi.Pointer<GBytes> g_resources_lookup_data(
+    ffi.Pointer<ffi.Char> path,
+    int lookup_flags,
+    ffi.Pointer<ffi.Pointer<GError>> error,
+  ) {
+    return _g_resources_lookup_data(
+      path,
+      lookup_flags,
+      error,
+    );
+  }
+
+  late final _g_resources_lookup_dataPtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Pointer<GBytes> Function(ffi.Pointer<ffi.Char>, ffi.Int32,
+              ffi.Pointer<ffi.Pointer<GError>>)>>('g_resources_lookup_data');
+  late final _g_resources_lookup_data = _g_resources_lookup_dataPtr.asFunction<
+      ffi.Pointer<GBytes> Function(
+          ffi.Pointer<ffi.Char>, int, ffi.Pointer<ffi.Pointer<GError>>)>();
 
   int gtk_icon_factory_get_type() {
     return _gtk_icon_factory_get_type();
@@ -3211,6 +3262,12 @@ class LibGtk {
       _gtk_icon_view_drop_position_get_typePtr.asFunction<int Function()>();
 }
 
+typedef gconstpointer = ffi.Pointer<ffi.Void>;
+typedef GBytes = _GBytes;
+
+class _GBytes extends ffi.Opaque {}
+
+typedef gsize = ffi.UnsignedLong;
 typedef gpointer = ffi.Pointer<ffi.Void>;
 typedef GList = _GList;
 
@@ -3224,8 +3281,40 @@ class _GList extends ffi.Struct {
 
 typedef GList1 = _GList;
 typedef gchar = ffi.Char;
+
+/// GResourceLookupFlags:
+/// @G_RESOURCE_LOOKUP_FLAGS_NONE: No flags set.
+///
+/// GResourceLookupFlags determine how resource path lookups are handled.
+///
+/// Since: 2.32
+abstract class GResourceLookupFlags {
+  static const int G_RESOURCE_LOOKUP_FLAGS_NONE = 0;
+}
+
+/// GError:
+/// @domain: error domain, e.g. %G_FILE_ERROR
+/// @code: error code, e.g. %G_FILE_ERROR_NOENT
+/// @message: human-readable informative error message
+///
+/// The `GError` structure contains information about
+/// an error that has occurred.
+typedef GError = _GError;
+
+class _GError extends ffi.Struct {
+  @GQuark()
+  external int domain;
+
+  @gint()
+  external int code;
+
+  external ffi.Pointer<gchar> message;
+}
+
+typedef GQuark = guint32;
+typedef guint32 = ffi.UnsignedInt;
+typedef gint = ffi.Int;
 typedef GType = gsize;
-typedef gsize = ffi.UnsignedLong;
 typedef GtkIconFactory = _GtkIconFactory;
 
 class _GtkIconFactory extends ffi.Struct {
@@ -3292,7 +3381,6 @@ typedef GtkIconSet = _GtkIconSet;
 class _GtkIconSet extends ffi.Opaque {}
 
 typedef gboolean = gint;
-typedef gint = ffi.Int;
 
 /// GtkIconSize:
 /// @GTK_ICON_SIZE_INVALID: Invalid size.
@@ -3434,7 +3522,6 @@ class _GdkColor extends ffi.Struct {
   external int blue;
 }
 
-typedef guint32 = ffi.UnsignedInt;
 typedef guint16 = ffi.UnsignedShort;
 
 /// PangoFontDescription:
@@ -3619,7 +3706,6 @@ typedef GdkWindow = _GdkWindow;
 
 class _GdkWindow extends ffi.Opaque {}
 
-typedef GQuark = guint32;
 typedef GtkIconTheme = _GtkIconTheme;
 
 /// GtkIconTheme:
@@ -3689,25 +3775,6 @@ abstract class GtkIconLookupFlags {
   static const int GTK_ICON_LOOKUP_FORCE_SYMBOLIC = 64;
   static const int GTK_ICON_LOOKUP_DIR_LTR = 128;
   static const int GTK_ICON_LOOKUP_DIR_RTL = 256;
-}
-
-/// GError:
-/// @domain: error domain, e.g. %G_FILE_ERROR
-/// @code: error code, e.g. %G_FILE_ERROR_NOENT
-/// @message: human-readable informative error message
-///
-/// The `GError` structure contains information about
-/// an error that has occurred.
-typedef GError = _GError;
-
-class _GError extends ffi.Struct {
-  @GQuark()
-  external int domain;
-
-  @gint()
-  external int code;
-
-  external ffi.Pointer<gchar> message;
 }
 
 typedef GIcon = _GIcon;
