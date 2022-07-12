@@ -94,8 +94,8 @@ class GtkIconTheme {
 
   List<String> getSearchPath() {
     return ffi.using((arena) {
-      final length = arena.allocate<ffi.Int32>(1);
-      final array = arena.allocate<ffi.Pointer<ffi.Pointer<ffi.Int8>>>(1);
+      final length = arena.allocate<ffi.Int>(1);
+      final array = arena.allocate<ffi.Pointer<ffi.Pointer<ffi.Char>>>(1);
       lib.gtk_icon_theme_get_search_path(_icon_theme, array, length);
 
       final paths = <String>[];

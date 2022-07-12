@@ -826,7 +826,7 @@ class LibGtk {
               ffi.Pointer<GtkIconSet>,
               ffi.Pointer<GtkStyleContext>,
               ffi.Int32,
-              ffi.Int32,
+              ffi.Int,
               ffi.Pointer<GdkWindow>)>>('gtk_icon_set_render_icon_surface');
   late final _gtk_icon_set_render_icon_surface =
       _gtk_icon_set_render_icon_surfacePtr.asFunction<
@@ -1377,7 +1377,7 @@ class LibGtk {
   late final _gtk_icon_theme_list_contexts = _gtk_icon_theme_list_contextsPtr
       .asFunction<ffi.Pointer<GList> Function(ffi.Pointer<GtkIconTheme>)>();
 
-  ffi.Pointer<ffi.Int8> gtk_icon_theme_get_example_icon_name(
+  ffi.Pointer<ffi.Char> gtk_icon_theme_get_example_icon_name(
     ffi.Pointer<GtkIconTheme> icon_theme,
   ) {
     return _gtk_icon_theme_get_example_icon_name(
@@ -1387,11 +1387,11 @@ class LibGtk {
 
   late final _gtk_icon_theme_get_example_icon_namePtr = _lookup<
           ffi.NativeFunction<
-              ffi.Pointer<ffi.Int8> Function(ffi.Pointer<GtkIconTheme>)>>(
+              ffi.Pointer<ffi.Char> Function(ffi.Pointer<GtkIconTheme>)>>(
       'gtk_icon_theme_get_example_icon_name');
   late final _gtk_icon_theme_get_example_icon_name =
       _gtk_icon_theme_get_example_icon_namePtr.asFunction<
-          ffi.Pointer<ffi.Int8> Function(ffi.Pointer<GtkIconTheme>)>();
+          ffi.Pointer<ffi.Char> Function(ffi.Pointer<GtkIconTheme>)>();
 
   int gtk_icon_theme_rescan_if_needed(
     ffi.Pointer<GtkIconTheme> icon_theme,
@@ -3223,9 +3223,9 @@ class _GList extends ffi.Struct {
 }
 
 typedef GList1 = _GList;
-typedef gchar = ffi.Int8;
+typedef gchar = ffi.Char;
 typedef GType = gsize;
-typedef gsize = ffi.Uint64;
+typedef gsize = ffi.UnsignedLong;
 typedef GtkIconFactory = _GtkIconFactory;
 
 class _GtkIconFactory extends ffi.Struct {
@@ -3238,8 +3238,18 @@ typedef GObject = _GObject;
 
 /// GObject:
 ///
-/// All the fields in the GObject structure are private
-/// to the #GObject implementation and should never be accessed directly.
+/// The base object type.
+///
+/// All the fields in the `GObject` structure are private to the implementation
+/// and should never be accessed directly.
+///
+/// Since GLib 2.72, all #GObjects are guaranteed to be aligned to at least the
+/// alignment of the largest basic GLib type (typically this is #guint64 or
+/// #gdouble). If you need larger alignment for an element in a #GObject, you
+/// should allocate it on the heap (aligned), or arrange for your #GObject to be
+/// appropriately padded. This guarantee applies to the #GObject (or derived)
+/// struct, the #GObjectClass (or derived) struct, and any private data allocated
+/// by G_ADD_PRIVATE().
 class _GObject extends ffi.Struct {
   external GTypeInstance g_type_instance;
 
@@ -3268,7 +3278,7 @@ class _GTypeClass extends ffi.Struct {
   external int g_type;
 }
 
-typedef guint = ffi.Uint32;
+typedef guint = ffi.UnsignedInt;
 typedef GData = _GData;
 
 class _GData extends ffi.Opaque {}
@@ -3282,7 +3292,7 @@ typedef GtkIconSet = _GtkIconSet;
 class _GtkIconSet extends ffi.Opaque {}
 
 typedef gboolean = gint;
-typedef gint = ffi.Int32;
+typedef gint = ffi.Int;
 
 /// GtkIconSize:
 /// @GTK_ICON_SIZE_INVALID: Invalid size.
@@ -3424,8 +3434,8 @@ class _GdkColor extends ffi.Struct {
   external int blue;
 }
 
-typedef guint32 = ffi.Uint32;
-typedef guint16 = ffi.Uint16;
+typedef guint32 = ffi.UnsignedInt;
+typedef guint16 = ffi.UnsignedShort;
 
 /// PangoFontDescription:
 ///
@@ -3682,7 +3692,7 @@ abstract class GtkIconLookupFlags {
 }
 
 /// GError:
-/// @domain: error domain, e.g. #G_FILE_ERROR
+/// @domain: error domain, e.g. %G_FILE_ERROR
 /// @code: error code, e.g. %G_FILE_ERROR_NOENT
 /// @message: human-readable informative error message
 ///
@@ -3729,6 +3739,10 @@ class _GCancellablePrivate extends ffi.Opaque {}
 /// where the #GTask was created. All other users of
 /// #GAsyncReadyCallback must likewise call it asynchronously in a
 /// later iteration of the main context.
+///
+/// The asynchronous operation is guaranteed to have held a reference to
+/// @source_object from the time when the `*_async()` function was called, until
+/// after this callback returns.
 typedef GAsyncReadyCallback = ffi.Pointer<
     ffi.NativeFunction<
         ffi.Void Function(
@@ -3777,16 +3791,16 @@ typedef cairo_rectangle_int_t = _cairo_rectangle_int;
 ///
 /// Since: 1.10
 class _cairo_rectangle_int extends ffi.Struct {
-  @ffi.Int32()
+  @ffi.Int()
   external int x;
 
-  @ffi.Int32()
+  @ffi.Int()
   external int y;
 
-  @ffi.Int32()
+  @ffi.Int()
   external int width;
 
-  @ffi.Int32()
+  @ffi.Int()
   external int height;
 }
 

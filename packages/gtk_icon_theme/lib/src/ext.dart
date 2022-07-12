@@ -6,10 +6,10 @@ import 'gtk.g.dart' as ffi;
 import 'lib.dart';
 
 extension StringList on List<String> {
-  ffi.Pointer<ffi.Pointer<ffi.Int8>> toArray({
+  ffi.Pointer<ffi.Pointer<ffi.Char>> toArray({
     ffi.Allocator allocator = ffi.malloc,
   }) {
-    final array = ffi.calloc<ffi.Pointer<ffi.Int8>>(length);
+    final array = ffi.calloc<ffi.Pointer<ffi.Char>>(length);
     for (int i = 0; i < length; ++i) {
       array[i] = this[i].toNativeUtf8(allocator: allocator).cast();
     }
@@ -17,7 +17,7 @@ extension StringList on List<String> {
   }
 }
 
-extension StringPointerArray on ffi.Pointer<ffi.Pointer<ffi.Int8>> {
+extension StringPointerArray on ffi.Pointer<ffi.Pointer<ffi.Char>> {
   List<String> toStringList(int length) {
     final list = <String>[];
     for (int i = 0; i < length; ++i) {
@@ -42,7 +42,7 @@ extension StringListArray on ffi.Pointer<ffi.GList> {
   }
 }
 
-extension IntPointerArray on ffi.Pointer<ffi.Int32> {
+extension IntPointerArray on ffi.Pointer<ffi.Int> {
   List<int> toIntList() {
     final list = <int>[];
     if (this != ffi.nullptr) {
