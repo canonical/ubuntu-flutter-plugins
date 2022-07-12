@@ -8,6 +8,7 @@ const kIcons = [
   'avatar-default',
   'audio-headphones',
   'computer',
+  'distributor-logo',
   'edit-copy',
   'edit-cut',
   'edit-paste',

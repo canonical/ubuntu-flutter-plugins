@@ -1,6 +1,7 @@
 import 'dart:io';
 
 import 'package:flutter/widgets.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:gtk_icon_theme/gtk_icon_theme.dart';
 
 import 'theme.dart';
@@ -67,7 +68,8 @@ class _XdgIconState extends State<XdgIcon> {
     if (_icon == null) {
       return SizedBox.square(dimension: widget.size.toDouble());
     }
-    return Image.file(
+    final builder = _icon!.isScalable ? SvgPicture.file : Image.file;
+    return builder(
       File(_icon!.fileName),
       height: widget.size.toDouble(),
       width: widget.size.toDouble(),

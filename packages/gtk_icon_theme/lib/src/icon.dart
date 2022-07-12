@@ -1,6 +1,7 @@
 import 'dart:ffi' as ffi;
 
 import 'package:ffi/ffi.dart' as ffi;
+import 'package:path/path.dart' as path;
 
 import 'gtk.g.dart' as ffi;
 import 'lib.dart';
@@ -37,4 +38,5 @@ class GtkIconInfo {
   }
 
   bool get isSymbolic => lib.gtk_icon_info_is_symbolic(_icon_info) != 0;
+  bool get isScalable => path.extension(fileName).toLowerCase() == '.svg';
 }

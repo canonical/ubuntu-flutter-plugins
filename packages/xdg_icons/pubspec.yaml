@@ -12,6 +12,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  flutter_svg: ^1.1.0
   gtk_icon_theme:
     git:
       url: https://github.com/ubuntu-flutter-community/xdg_icons
