@@ -3,7 +3,7 @@ import 'dart:ffi' as ffi;
 import 'package:ffi/ffi.dart' as ffi;
 
 import 'gtk.g.dart' as ffi;
-import 'lib.dart';
+import 'dylib.dart';
 
 extension StringList on List<String> {
   ffi.Pointer<ffi.Pointer<ffi.Char>> toArray({

@@ -41,13 +41,6 @@ class _XdgIconState extends State<XdgIcon> {
   }
 
   @override
-  void dispose() {
-    _icon?.dispose();
-    _theme?.dispose();
-    super.dispose();
-  }
-
-  @override
   void didChangeDependencies() {
     super.didChangeDependencies();
     _lookupIcon();

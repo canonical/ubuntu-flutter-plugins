@@ -44,6 +44,7 @@ ffigen:
       - "gtk_icon_.*"
       - "g_free"
       - "g_list_free"
+      - "g_object_ref"
       - "g_object_unref"
       - "g_strfreev"
       - "g_resources_lookup_data"

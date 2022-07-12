@@ -89,6 +89,19 @@ class LibGtk {
   late final _g_strfreev = _g_strfreevPtr
       .asFunction<void Function(ffi.Pointer<ffi.Pointer<gchar>>)>();
 
+  gpointer g_object_ref(
+    gpointer object,
+  ) {
+    return _g_object_ref(
+      object,
+    );
+  }
+
+  late final _g_object_refPtr =
+      _lookup<ffi.NativeFunction<gpointer Function(gpointer)>>('g_object_ref');
+  late final _g_object_ref =
+      _g_object_refPtr.asFunction<gpointer Function(gpointer)>();
+
   void g_object_unref(
     gpointer object,
   ) {

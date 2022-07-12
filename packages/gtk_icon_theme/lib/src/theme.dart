@@ -2,15 +2,16 @@ import 'dart:ffi' as ffi;
 
 import 'package:ffi/ffi.dart' as ffi;
 
+import 'dylib.dart';
 import 'ext.dart';
+import 'finalizer.dart';
 import 'flags.dart';
 import 'gtk.g.dart' as ffi;
 import 'icon.dart';
-import 'lib.dart';
 
 // ignore_for_file: non_constant_identifier_names
 
-class GtkIconTheme {
+class GtkIconTheme implements ffi.Finalizable {
   factory GtkIconTheme() => GtkIconTheme._(lib.gtk_icon_theme_get_default());
 
   factory GtkIconTheme.custom(String name) {
@@ -18,14 +19,18 @@ class GtkIconTheme {
       final icon_theme = lib.gtk_icon_theme_new();
       final cstr = name.toNativeUtf8(allocator: arena);
       lib.gtk_icon_theme_set_custom_theme(icon_theme, cstr.cast());
-      return GtkIconTheme._(icon_theme);
+      final theme = GtkIconTheme._(icon_theme);
+      lib.g_object_unref(icon_theme.cast());
+      return theme;
     });
   }
 
-  GtkIconTheme._(this._icon_theme);
-  final ffi.Pointer<ffi.GtkIconTheme> _icon_theme;
+  GtkIconTheme._(this._icon_theme) {
+    final ptr = lib.g_object_ref(_icon_theme.cast());
+    finalizer.attach(this, ptr.cast<ffi.GtkIconTheme>());
+  }
 
-  void dispose() => lib.g_object_unref(_icon_theme.cast());
+  final ffi.Pointer<ffi.GtkIconTheme> _icon_theme;
 
   void addResourcePath(String path) {
     ffi.using((arena) {

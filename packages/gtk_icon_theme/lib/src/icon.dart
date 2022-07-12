@@ -4,22 +4,24 @@ import 'dart:typed_data';
 import 'package:ffi/ffi.dart' as ffi;
 import 'package:path/path.dart' as path;
 
+import 'dylib.dart';
+import 'finalizer.dart';
 import 'gtk.g.dart' as ffi;
 import 'gtk.g.dart';
-import 'lib.dart';
 
 // ignore_for_file: non_constant_identifier_names
 
-class GtkIconInfo {
-  GtkIconInfo._(this._icon_info);
+class GtkIconInfo implements ffi.Finalizable {
+  GtkIconInfo._(this._icon_info) {
+    final ptr = lib.g_object_ref(_icon_info.cast());
+    finalizer.attach(this, ptr.cast<ffi.GtkIconInfo>());
+  }
 
   static GtkIconInfo? fromPointer(ffi.Pointer<ffi.GtkIconInfo> ptr) {
     return ptr != ffi.nullptr ? GtkIconInfo._(ptr) : null;
   }
 
   final ffi.Pointer<ffi.GtkIconInfo> _icon_info;
-
-  void dispose() => lib.g_object_unref(_icon_info.cast());
 
   int get baseScale => lib.gtk_icon_info_get_base_scale(_icon_info);
 
