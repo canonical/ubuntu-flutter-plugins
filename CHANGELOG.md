@@ -1,3 +1,7 @@
+## 0.9.0
+
+- Add WizardScope.replace()
+
 ## 0.8.1
 
 - Fix WizardScope.hasNext
