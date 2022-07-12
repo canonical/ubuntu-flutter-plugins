@@ -12,6 +12,7 @@ class WizardRoute {
   const WizardRoute({
     required this.builder,
     this.onNext,
+    this.onReplace,
     this.onBack,
     this.onDone,
   });
@@ -23,6 +24,12 @@ class WizardRoute {
   /// If `onNext` is not specified or it returns `null`, the order is determined
   /// from [routes].
   final WizardRouteCallback? onNext;
+
+  /// The callback invoked when a replacement page is requested.
+  ///
+  /// If `onReplace` is not specified or it returns `null`, the order is
+  /// determined from [routes].
+  final WizardRouteCallback? onReplace;
 
   /// The callback invoked when the previous page is requested.
   ///

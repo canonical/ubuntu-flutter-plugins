@@ -407,6 +407,64 @@ void main() {
     expect(thirdPage, findsNothing);
   });
 
+  testWidgets('replace', (tester) async {
+    await pumpWizardApp(
+      tester,
+      routes: {
+        Routes.first: WizardRoute(builder: (_) => const Text(Routes.first)),
+        Routes.second: WizardRoute(builder: (_) => const Text(Routes.second)),
+        Routes.third: WizardRoute(builder: (_) => const Text(Routes.third)),
+      },
+    );
+
+    final firstPage = find.text(Routes.first);
+    final secondPage = find.text(Routes.second);
+    final thirdPage = find.text(Routes.third);
+
+    expect(firstPage, findsOneWidget);
+    expect(secondPage, findsNothing);
+    expect(thirdPage, findsNothing);
+
+    // 1st -> 2nd
+    final firstWizardScope = Wizard.of(tester.element(firstPage));
+    expect(firstWizardScope, isNotNull);
+
+    firstWizardScope.replace();
+    await tester.pumpAndSettle();
+
+    expect(firstPage, findsNothing);
+    expect(secondPage, findsOneWidget);
+    expect(thirdPage, findsNothing);
+
+    expect(firstWizardScope.mounted, isFalse);
+
+    final secondWizardScope = Wizard.of(tester.element(secondPage));
+    expect(secondWizardScope, isNotNull);
+    expect(secondWizardScope.hasPrevious, isFalse);
+    expect(secondWizardScope.hasNext, isTrue);
+
+    // 2nd -> 1st
+    await expectLater(secondWizardScope.back, throwsAssertionError);
+
+    // 2nd -> 3rd
+    secondWizardScope.replace();
+    await tester.pumpAndSettle();
+
+    expect(firstPage, findsNothing);
+    expect(secondPage, findsNothing);
+    expect(thirdPage, findsOneWidget);
+
+    expect(secondWizardScope.mounted, isFalse);
+
+    final thirdWizardScope = Wizard.of(tester.element(thirdPage));
+    expect(thirdWizardScope, isNotNull);
+    expect(thirdWizardScope.hasPrevious, isFalse);
+    expect(thirdWizardScope.hasNext, isFalse);
+
+    // 3rd -> 2nd
+    await expectLater(thirdWizardScope.back, throwsAssertionError);
+  });
+
   testWidgets('has next or previous', (tester) async {
     await pumpWizardApp(
       tester,
@@ -486,6 +544,7 @@ void main() {
             Routes.first: WizardRoute(builder: (_) => const Text(Routes.first)),
             Routes.second:
                 WizardRoute(builder: (_) => const Text(Routes.second)),
+            Routes.third: WizardRoute(builder: (_) => const Text(Routes.third)),
           },
           observers: [observer],
         ),
@@ -511,10 +570,21 @@ void main() {
     expect(observer.done, isNull);
     observer.reset();
 
-    Wizard.of(tester.element(find.text(Routes.second))).back();
+    Wizard.of(tester.element(find.text(Routes.second))).replace();
     await tester.pumpAndSettle();
 
-    expect(observer.backFrom?.settings.name, Routes.second);
+    expect(observer.nextFrom?.settings.name, Routes.second);
+    expect(observer.nextTo?.settings.name, Routes.third);
+    expect(observer.backFrom, isNull);
+    expect(observer.backTo, isNull);
+    expect(observer.init, isNull);
+    expect(observer.done, isNull);
+    observer.reset();
+
+    Wizard.of(tester.element(find.text(Routes.third))).back();
+    await tester.pumpAndSettle();
+
+    expect(observer.backFrom?.settings.name, Routes.third);
     expect(observer.backTo?.settings.name, Routes.first);
     expect(observer.nextFrom, isNull);
     expect(observer.nextTo, isNull);

@@ -89,13 +89,27 @@ class WizardScopeState extends State<WizardScope> {
   /// onPressed: Wizard.of(context).next
   /// ```
   Future<T?> next<T extends Object?>({Object? arguments}) {
+    final next = _getNextRoute<T>(arguments, widget._route.onNext);
+
+    _updateRoutes((state) {
+      final copy = List<WizardRouteSettings>.of(state);
+      return copy..add(next);
+    });
+
+    return next.completer.future;
+  }
+
+  WizardRouteSettings<T?> _getNextRoute<T extends Object?>(
+    Object? arguments,
+    WizardRouteCallback? advance,
+  ) {
     final routes = _getRoutes();
     assert(routes.isNotEmpty, routes.length.toString());
 
     final previous = routes.last.copyWith(arguments: arguments);
 
     // advance to a specific route
-    String? onNext() => widget._route.onNext?.call(previous);
+    String? onNext() => advance?.call(previous);
 
     // pick the next route on the list
     String nextRoute() {
@@ -105,20 +119,27 @@ class WizardScopeState extends State<WizardScope> {
       return widget._routes[index + 1];
     }
 
-    final next = WizardRouteSettings<T?>(
-      name: onNext() ?? nextRoute(),
-      arguments: arguments,
-    );
+    final name = onNext() ?? nextRoute();
+    assert(widget._routes.contains(name),
+        '`Wizard.routes` is missing route \'${name}\'.');
 
-    assert(widget._routes.contains(next.name),
-        '`Wizard.routes` is missing route \'${next.name}\'.');
+    return WizardRouteSettings<T?>(name: name, arguments: arguments);
+  }
+
+  /// Requests the wizard to replace the current page with the next one.
+  /// Optionally, `arguments` can be passed to the next page.
+  ///
+  /// ```dart
+  /// onPressed: () => Wizard.of(context).replace(arguments: something),
+  /// ```
+  void replace({Object? arguments}) async {
+    final next = _getNextRoute(arguments, widget._route.onReplace);
 
     _updateRoutes((state) {
       final copy = List<WizardRouteSettings>.of(state);
-      return copy..add(next);
+      copy[copy.length - 1] = next;
+      return copy;
     });
-
-    return next.completer.future;
   }
 
   /// Sets the wizard done. Optionally, a `result` can be passed to the route.
