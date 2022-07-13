@@ -15,7 +15,7 @@ import 'package:flutter/material.dart';
 ///
 /// See also:
 ///  * [MenuButtonBuilder] - A similar builder widget but for menu buttons.
-class DropdownBuilder<T> extends StatefulWidget {
+class DropdownBuilder<T> extends StatelessWidget {
   /// Creates a dropdown with the given `values`.
   ///
   /// The `onSelected` callback is called when the user selects an item.
@@ -51,48 +51,17 @@ class DropdownBuilder<T> extends StatefulWidget {
   final ValueWidgetBuilder<T> itemBuilder;
 
   @override
-  State<DropdownBuilder<T>> createState() => _DropdownBuilderState<T>();
-}
-
-class _DropdownBuilderState<T> extends State<DropdownBuilder<T>> {
-  final _focusNode = FocusNode();
-
-  @override
-  void dispose() {
-    _focusNode.dispose();
-    super.dispose();
-  }
-
-  @override
   Widget build(BuildContext context) {
-    return ButtonTheme(
-      alignedDropdown: true,
-      child: DropdownButtonHideUnderline(
-        child: AnimatedBuilder(
-          animation: _focusNode,
-          builder: (context, child) {
-            return InputDecorator(
-              isFocused: _focusNode.hasFocus,
-              decoration: const InputDecoration(
-                contentPadding: EdgeInsets.zero,
-              ).applyDefaults(Theme.of(context).inputDecorationTheme),
-              child: child,
-            );
-          },
-          child: DropdownButton<T>(
-            value: widget.selected,
-            items: widget.values.map((value) {
-              return DropdownMenuItem<T>(
-                value: value,
-                child: widget.itemBuilder(context, value, null),
-              );
-            }).toList(),
-            onChanged: widget.onSelected,
-            focusNode: _focusNode,
-            focusColor: Colors.transparent,
-          ),
-        ),
-      ),
+    return DropdownButtonFormField<T>(
+      value: selected,
+      items: values.map((value) {
+        return DropdownMenuItem<T>(
+          value: value,
+          child: itemBuilder(context, value, null),
+        );
+      }).toList(),
+      onChanged: onSelected,
+      focusColor: Colors.transparent,
     );
   }
 }
