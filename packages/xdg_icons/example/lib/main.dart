@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:xdg_icons/xdg_icons.dart';
 import 'package:yaru/yaru.dart' as yaru;
 
-const kThemes = ['Yaru', 'Adwaita', 'HighContrast'];
+const kThemes = [null, 'Yaru', 'Adwaita', 'HighContrast'];
 const kIcons = [
   'application-x-executable',
   'avatar-default',
@@ -21,9 +21,7 @@ const kIcons = [
   'zoom-in',
 ];
 
-void main() {
-  runApp(const MyApp());
-}
+void main() => runApp(const MyApp());
 
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
@@ -56,9 +54,11 @@ class MyHomePage extends StatelessWidget {
                 for (final theme in kThemes)
                   Padding(
                     padding: const EdgeInsets.all(8.0),
-                    child: Text(theme,
-                        textAlign: TextAlign.center,
-                        style: Theme.of(context).textTheme.headline6),
+                    child: Text(
+                      theme ?? 'Default',
+                      textAlign: TextAlign.center,
+                      style: Theme.of(context).textTheme.headline6,
+                    ),
                   ),
               ],
             ),
@@ -69,10 +69,7 @@ class MyHomePage extends StatelessWidget {
                   for (final theme in kThemes)
                     Padding(
                       padding: const EdgeInsets.all(8.0),
-                      child: XdgIconTheme(
-                        data: XdgIconThemeData(theme: theme),
-                        child: XdgIcon(name: icon, size: 48),
-                      ),
+                      child: XdgIcon(name: icon, size: 48, theme: theme),
                     ),
                 ],
               ),

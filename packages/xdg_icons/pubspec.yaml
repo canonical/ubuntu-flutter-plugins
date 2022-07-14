@@ -10,15 +10,20 @@ environment:
   flutter: '>=3.0.0'
 
 dependencies:
+  collection: ^1.16.0
   flutter:
     sdk: flutter
   flutter_svg: ^1.1.0
-  gtk_icon_theme:
-    git:
-      url: https://github.com/ubuntu-flutter-community/xdg_icons
-      path: packages/gtk_icon_theme
+  path: ^1.8.0
+  plugin_platform_interface: ^2.1.2
 
 dev_dependencies:
   flutter_lints: ^2.0.0
   flutter_test:
     sdk: flutter
+
+flutter:
+  plugin:
+    platforms:
+      linux:
+        pluginClass: XdgIconsPlugin
