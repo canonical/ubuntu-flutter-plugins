@@ -1,3 +1,0 @@
-dependency_overrides:
-  gtk_icon_theme:
-    path: ../gtk_icon_theme
