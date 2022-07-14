@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:xdg_icons/xdg_icons.dart';
-import 'package:yaru/yaru.dart' as yaru;
+import 'package:yaru/yaru.dart';
 
 const kThemes = [null, 'Yaru', 'Adwaita', 'HighContrast'];
 const kIcons = [
@@ -28,10 +28,14 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      theme: yaru.lightTheme,
-      darkTheme: yaru.darkTheme,
-      home: const MyHomePage(),
+    return YaruTheme(
+      builder: (context, yaru, child) {
+        return MaterialApp(
+          theme: yaru.variant?.theme ?? yaruLight,
+          darkTheme: yaru.variant?.darkTheme ?? yaruDark,
+          home: const MyHomePage(),
+        );
+      },
     );
   }
 }
