@@ -45,7 +45,7 @@ class _XdgIconState extends State<XdgIcon> {
   }
 
   void _updateIcon(XdgIconData? icon) {
-    if (_icon == icon) return;
+    if (_icon == icon || !mounted) return;
     setState(() => _icon = icon);
   }
 
