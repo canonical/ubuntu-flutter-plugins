@@ -4,8 +4,8 @@ import 'package:flutter/services.dart';
 import 'data.dart';
 import 'platform_interface.dart';
 
-/// An implementation of [XdgPlatform] that uses platform channels.
-class XdgMethodChannel extends XdgPlatform {
+/// An implementation of [XdgIconsPlatform] that uses platform channels.
+class XdgIconsMethodChannel extends XdgIconsPlatform {
   /// The method channel used to interact with the native platform.
   @visibleForTesting
   final methodChannel = const MethodChannel('xdg_icons');

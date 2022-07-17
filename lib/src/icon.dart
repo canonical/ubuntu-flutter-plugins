@@ -34,7 +34,7 @@ class _XdgIconState extends State<XdgIcon> {
 
   Future<void> _lookupIcon() {
     final themeData = XdgIconTheme.of(context);
-    return XdgPlatform.instance
+    return XdgIconsPlatform.instance
         .lookupIcon(
           name: widget.name,
           size: widget.size,
@@ -51,7 +51,8 @@ class _XdgIconState extends State<XdgIcon> {
 
   void _listenThemeChanges() {
     if (widget.theme == null && XdgIconTheme.of(context).theme == null) {
-      _themeChange ??= XdgPlatform.instance.onDefaultThemeChanged.listen((_) {
+      _themeChange ??=
+          XdgIconsPlatform.instance.onDefaultThemeChanged.listen((_) {
         if (mounted) _lookupIcon();
       });
     } else {

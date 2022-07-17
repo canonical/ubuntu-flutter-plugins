@@ -1,7 +1,7 @@
 import 'package:collection/collection.dart';
 
 class XdgIconData {
-  XdgIconData({
+  const XdgIconData({
     required this.baseScale,
     required this.baseSize,
     required this.fileName,
