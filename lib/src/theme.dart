@@ -54,7 +54,7 @@ class XdgIconTheme extends InheritedTheme {
     required Widget child,
   }) {
     return Builder(
-      builder: (BuildContext context) {
+      builder: (context) {
         return XdgIconTheme(
           key: key,
           data: _getInheritedTheme(context).merge(data),

@@ -1,5 +1,7 @@
 import 'package:collection/collection.dart';
+import 'package:flutter/material.dart';
 
+@immutable
 class XdgIconData {
   const XdgIconData({
     required this.baseScale,
@@ -8,6 +10,16 @@ class XdgIconData {
     required this.isSymbolic,
     this.data,
   });
+
+  factory XdgIconData.fromJson(Map<String, dynamic> json) {
+    return XdgIconData(
+      baseScale: json['baseScale'] as int,
+      baseSize: json['baseSize'] as int,
+      fileName: json['fileName'] as String,
+      isSymbolic: json['isSymbolic'] as bool,
+      data: (json['data'] as List?)?.cast<int>(),
+    );
+  }
 
   final int baseScale;
   final int baseSize;
@@ -23,16 +35,6 @@ class XdgIconData {
       'isSymbolic': isSymbolic,
       'data': data,
     };
-  }
-
-  factory XdgIconData.fromJson(Map<String, dynamic> json) {
-    return XdgIconData(
-      baseScale: json['baseScale'] as int,
-      baseSize: json['baseSize'] as int,
-      fileName: json['fileName'] as String,
-      isSymbolic: json['isSymbolic'] as bool,
-      data: (json['data'] as List?)?.cast<int>(),
-    );
   }
 
   @override

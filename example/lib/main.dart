@@ -46,7 +46,7 @@ class MyHomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('XDG icons')),
+      appBar: AppBar(title: const Text('XDG icons')),
       body: SingleChildScrollView(
         padding: const EdgeInsets.all(24),
         child: Table(
