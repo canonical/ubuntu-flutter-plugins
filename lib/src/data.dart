@@ -16,7 +16,7 @@ class XdgIconData {
   final List<int>? data;
 
   Map<String, dynamic> toJson() {
-    return {
+    return <String, dynamic>{
       'baseScale': baseScale,
       'baseSize': baseSize,
       'fileName': fileName,
@@ -27,11 +27,11 @@ class XdgIconData {
 
   factory XdgIconData.fromJson(Map<String, dynamic> json) {
     return XdgIconData(
-      baseScale: json['baseScale']?.toInt() ?? 0,
-      baseSize: json['baseSize']?.toInt() ?? 0,
-      fileName: json['fileName'] ?? '',
-      isSymbolic: json['isSymbolic'] ?? false,
-      data: json['data']?.cast<int>(),
+      baseScale: json['baseScale'] as int,
+      baseSize: json['baseSize'] as int,
+      fileName: json['fileName'] as String,
+      isSymbolic: json['isSymbolic'] as bool,
+      data: (json['data'] as List?)?.cast<int>(),
     );
   }
 
@@ -43,7 +43,7 @@ class XdgIconData {
   @override
   bool operator ==(Object other) {
     if (identical(this, other)) return true;
-    final listEquals = const ListEquality().equals;
+    final listEquals = const ListEquality<int>().equals;
     return other is XdgIconData &&
         other.baseScale == baseScale &&
         other.baseSize == baseSize &&
@@ -54,7 +54,7 @@ class XdgIconData {
 
   @override
   int get hashCode {
-    final listHash = const ListEquality().hash;
+    final listHash = const ListEquality<int>().hash;
     return Object.hash(
       baseScale,
       baseSize,

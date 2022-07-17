@@ -52,7 +52,7 @@ class _XdgIconState extends State<XdgIcon> {
   void _listenThemeChanges() {
     if (widget.theme == null && XdgIconTheme.of(context).theme == null) {
       _themeChange ??=
-          XdgIconsPlatform.instance.onDefaultThemeChanged.listen((_) {
+          XdgIconsPlatform.instance.onDefaultThemeChanged.listen((dynamic _) {
         if (mounted) _lookupIcon();
       });
     } else {
