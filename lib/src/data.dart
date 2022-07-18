@@ -39,7 +39,7 @@ class XdgIconData {
 
   @override
   String toString() {
-    return 'GtkIconInfo(baseScale: $baseScale, baseSize: $baseSize, fileName: $fileName, isSymbolic: $isSymbolic, data: $data)';
+    return 'XdgIconData(baseScale: $baseScale, baseSize: $baseSize, fileName: $fileName, isSymbolic: $isSymbolic, data: $data)';
   }
 
   @override
