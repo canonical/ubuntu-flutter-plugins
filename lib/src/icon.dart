@@ -25,12 +25,14 @@ class XdgIcon extends StatefulWidget {
   final String? theme;
 
   @override
-  State<XdgIcon> createState() => _XdgIconState();
+  State<XdgIcon> createState() => XdgIconState();
 }
 
-class _XdgIconState extends State<XdgIcon> {
+class XdgIconState extends State<XdgIcon> {
   XdgIconData? _icon;
   StreamSubscription? _themeChange;
+
+  XdgIconData? get icon => _icon;
 
   Future<void> _lookupIcon() {
     final themeData = XdgIconTheme.of(context);
