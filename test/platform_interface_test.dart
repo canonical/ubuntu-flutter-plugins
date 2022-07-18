@@ -1,6 +1,6 @@
 import 'package:flutter_test/flutter_test.dart';
+import 'package:mocktail/mocktail.dart';
 import 'package:plugin_platform_interface/plugin_platform_interface.dart';
-import 'package:xdg_icons/src/data.dart';
 import 'package:xdg_icons/src/method_channel.dart';
 import 'package:xdg_icons/src/platform_interface.dart';
 
@@ -28,20 +28,7 @@ void main() {
 }
 
 class MockXdgIconsPlatform
-    with MockPlatformInterfaceMixin
-    implements XdgIconsPlatform {
-  @override
-  Future<XdgIconData?> lookupIcon({
-    required String name,
-    required int size,
-    int? scale,
-    String? theme,
-  }) {
-    throw UnimplementedError();
-  }
-
-  @override
-  Stream get onDefaultThemeChanged => throw UnimplementedError();
-}
+    with Mock, MockPlatformInterfaceMixin
+    implements XdgIconsPlatform {}
 
 class FakeXdgIconsPlatform extends XdgIconsPlatform {}
