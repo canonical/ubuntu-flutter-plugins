@@ -12,7 +12,6 @@
 
 struct _XdgIconsPlugin {
   GObject parent_instance;
-  FlEventChannel* event_channel;
   gulong theme_changed_id;
 };
 
