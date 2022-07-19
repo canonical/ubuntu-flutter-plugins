@@ -12,7 +12,7 @@ class XdgIconThemeData with Diagnosticable {
   XdgIconThemeData copyWith({String? theme, int? size, int? scale}) {
     return XdgIconThemeData(
       theme: theme ?? this.theme,
-      size: size ?? size,
+      size: size ?? this.size,
       scale: scale ?? this.scale,
     );
   }

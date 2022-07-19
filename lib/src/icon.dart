@@ -14,13 +14,13 @@ class XdgIcon extends StatefulWidget {
   const XdgIcon({
     super.key,
     required this.name,
-    required this.size,
+    this.size,
     this.scale,
     this.theme,
   });
 
   final String name;
-  final int size;
+  final int? size;
   final int? scale;
   final String? theme;
 
@@ -34,12 +34,21 @@ class XdgIconState extends State<XdgIcon> {
 
   XdgIconData? get icon => _icon;
 
+  int _resolveSize() {
+    int getBoxSize() {
+      final renderBox = context.findRenderObject() as RenderBox;
+      return renderBox.size.shortestSide.ceil();
+    }
+
+    return widget.size ?? XdgIconTheme.of(context).size ?? getBoxSize();
+  }
+
   Future<void> _lookupIcon() {
     final themeData = XdgIconTheme.of(context);
     return XdgIconsPlatform.instance
         .lookupIcon(
           name: widget.name,
-          size: widget.size,
+          size: _resolveSize(),
           scale: widget.scale ?? themeData.scale,
           theme: widget.theme ?? themeData.theme,
         )
@@ -91,22 +100,23 @@ class XdgIconState extends State<XdgIcon> {
   @override
   Widget build(BuildContext context) {
     final file = File(_icon?.fileName ?? '');
+    final size = _resolveSize();
     if (file.existsSync()) {
       final builder = _icon!.isScalable ? SvgPicture.file : Image.file;
       return builder(
         file,
-        height: widget.size.toDouble(),
-        width: widget.size.toDouble(),
+        width: size.toDouble(),
+        height: size.toDouble(),
       );
     } else if (_icon?.data != null) {
       final builder = _icon!.isScalable ? SvgPicture.memory : Image.memory;
       return builder(
         Uint8List.fromList(_icon!.data!),
-        height: widget.size.toDouble(),
-        width: widget.size.toDouble(),
+        width: size.toDouble(),
+        height: size.toDouble(),
       );
     }
-    return SizedBox.square(dimension: widget.size.toDouble());
+    return SizedBox.square(dimension: size.toDouble());
   }
 }
 
