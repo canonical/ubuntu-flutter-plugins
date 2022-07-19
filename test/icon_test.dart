@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mocktail/mocktail.dart';
@@ -230,6 +232,38 @@ void main() {
         isSymbolic: false,
       ),
     );
+  });
+
+  testWidgets('theme change', (tester) async {
+    final mock = MockXdgIconsPlatform();
+    when(() => mock.lookupIcon(name: 'foo', size: 24))
+        .thenAnswer((_) async => const XdgIconData(
+              baseScale: 1,
+              baseSize: 42,
+              fileName: '/path/to/foo.svg',
+              isSymbolic: false,
+            ));
+    final themeChange = StreamController<dynamic>.broadcast(sync: true);
+    when(() => mock.onDefaultThemeChanged)
+        .thenAnswer((_) => themeChange.stream);
+    XdgIconsPlatform.instance = mock;
+
+    await tester.pumpWidget(
+      const MaterialApp(
+        home: Scaffold(
+          body: Center(
+            child: XdgIcon(
+              name: 'foo',
+              size: 24,
+            ),
+          ),
+        ),
+      ),
+    );
+
+    verify(() => mock.lookupIcon(name: 'foo', size: 24)).called(1);
+    themeChange.add(null);
+    verify(() => mock.lookupIcon(name: 'foo', size: 24)).called(1);
   });
 }
 
