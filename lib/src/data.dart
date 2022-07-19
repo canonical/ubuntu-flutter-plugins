@@ -38,11 +38,6 @@ class XdgIconData {
   }
 
   @override
-  String toString() {
-    return 'XdgIconData(baseScale: $baseScale, baseSize: $baseSize, fileName: $fileName, isSymbolic: $isSymbolic, data: $data)';
-  }
-
-  @override
   bool operator ==(Object other) {
     if (identical(this, other)) return true;
     final listEquals = const ListEquality<int>().equals;
