@@ -35,12 +35,28 @@ class XdgIconState extends State<XdgIcon> {
   XdgIconData? get icon => _icon;
 
   int _resolveSize() {
-    int getBoxSize() {
-      final renderBox = context.findRenderObject() as RenderBox;
-      return renderBox.size.shortestSide.ceil();
+    final size = widget.size ?? XdgIconTheme.of(context).size;
+    if (size == null) {
+      throw FlutterError.fromParts(<DiagnosticsNode>[
+        ErrorSummary('Unable to resolve $widget size.'),
+        ErrorDescription('Neither XdgIcon nor XdgIconTheme has size.'),
+        ErrorHint(
+          'Possible solutions:\n\n'
+          '  XdgIcon(\n'
+          '    name: \'${widget.name}\',\n'
+          '    size: 48 // <==\n'
+          '  )\n'
+          '\n'
+          '  XdgIconTheme(\n'
+          '    data: XdgIconThemeData(size: 48), // <==\n'
+          '    child: XdgIcon(\n'
+          '      name: \'${widget.name}\'\n'
+          '    )\n'
+          '  )\n',
+        ),
+      ]);
     }
-
-    return widget.size ?? XdgIconTheme.of(context).size ?? getBoxSize();
+    return size;
   }
 
   Future<void> _lookupIcon() {
