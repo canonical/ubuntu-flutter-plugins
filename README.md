@@ -1,5 +1,6 @@
 # XDG Icons
 
+[![pub](https://img.shields.io/pub/v/xdg_icons.svg)](https://pub.dev/packages/xdg_icons)
 [![license: MPL](https://img.shields.io/badge/license-MPL-magenta.svg)](https://opensource.org/licenses/MPL-2.0)
 [![CI](https://github.com/ubuntu-flutter-community/xdg_icons/actions/workflows/ci.yaml/badge.svg)](https://github.com/ubuntu-flutter-community/xdg_icons/actions/workflows/ci.yaml)
 [![codecov](https://codecov.io/gh/ubuntu-flutter-community/xdg_icons/branch/main/graph/badge.svg?token=kH74iDZapj)](https://codecov.io/gh/ubuntu-flutter-community/xdg_icons)
