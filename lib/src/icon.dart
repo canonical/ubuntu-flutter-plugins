@@ -136,6 +136,6 @@ class XdgIconState extends State<XdgIcon> {
   }
 }
 
-extension XdgIconDataX on XdgIconData {
+extension _XdgIconDataX on XdgIconData {
   bool get isScalable => path.extension(fileName).toLowerCase() == '.svg';
 }
