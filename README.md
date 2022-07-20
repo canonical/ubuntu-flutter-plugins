@@ -6,4 +6,11 @@
 
 [XDG theme icons](https://specifications.freedesktop.org/icon-theme-spec/icon-theme-spec-latest.html) for Flutter.
 
+```dart
+XdgIcon(
+  name: 'computer',
+  size: 48,
+)
+```
+
 ![XDG Icons](https://raw.githubusercontent.com/ubuntu-flutter-community/xdg_icons/main/images/xdg_icons.png "XDG Icons")
