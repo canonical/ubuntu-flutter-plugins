@@ -3,7 +3,7 @@ description: Simple service locator API based on GetIt.
 homepage: https://github.com/ubuntu-flutter-community/ubuntu_service
 repository: https://github.com/ubuntu-flutter-community/ubuntu_service
 issue_tracker: https://github.com/ubuntu-flutter-community/ubuntu_service/issues
-version: 0.1.0
+version: 0.2.0
 
 environment:
   sdk: '>=2.15.0 <3.0.0'
