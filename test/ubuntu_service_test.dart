@@ -47,6 +47,23 @@ void main() {
     expect(wasDisposed1, s1);
   });
 
+  test('reset all services', () async {
+    Service? wasDisposed1, wasDisposed2, wasDisposed3;
+    registerService<Service>(Service.new, dispose: (s) => wasDisposed1 = s);
+    registerService<Service2>(Service2.new, dispose: (s) => wasDisposed2 = s);
+    registerService<Service3>(Service3.new, dispose: (s) => wasDisposed3 = s);
+
+    final s1 = getService<Service>();
+    final s2 = getService<Service2>();
+    final s3 = getService<Service3>();
+
+    await resetAllServices();
+
+    expect(wasDisposed1, s1);
+    expect(wasDisposed2, s2);
+    expect(wasDisposed3, s3);
+  });
+
   test('mock service', () {
     final mock1 = Service();
     final mock2 = Service();

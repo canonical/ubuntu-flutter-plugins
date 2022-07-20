@@ -30,6 +30,9 @@ void resetService<T extends Object>({
   _locator.resetLazySingleton<T>(instanceName: id, disposingFunction: dispose);
 }
 
+/// Resets and disposes all registered services.
+Future<void> resetAllServices() => _locator.reset();
+
 /// Registers a service instance with the locator.
 void registerServiceInstance<T extends Object>(T service, {String? id}) {
   _locator.registerSingleton<T>(service, instanceName: id);
