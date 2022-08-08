@@ -8,7 +8,7 @@ class UbuntuLocalizationsHu extends UbuntuLocalizations {
   UbuntuLocalizationsHu([String locale = 'hu']) : super(locale);
 
   @override
-  String get countryCode => 'US';
+  String get countryCode => 'HU';
 
   @override
   String get languageName => 'Angol';
