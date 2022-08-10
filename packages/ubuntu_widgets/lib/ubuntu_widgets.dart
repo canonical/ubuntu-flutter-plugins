@@ -9,6 +9,7 @@ export 'src/menu_button_builder.dart';
 export 'src/radio_button.dart';
 export 'src/rounded_container.dart';
 export 'src/rounded_list_view.dart';
+export 'src/scoped_focus_traversal.dart';
 export 'src/slide_show.dart';
 export 'src/toggle_button.dart';
 export 'src/toggle_button_theme.dart';
