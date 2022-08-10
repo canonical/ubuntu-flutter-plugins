@@ -93,11 +93,6 @@ class ScopedFocusTraversalPolicy extends FocusTraversalPolicy {
   }
 
   @override
-  FocusNode findLastFocus(FocusNode currentNode) {
-    return findFirstFocus(currentNode) ?? currentNode;
-  }
-
-  @override
   FocusNode? findFirstFocusInDirection(
       FocusNode currentNode, TraversalDirection direction) {
     return findFirstFocus(currentNode);
