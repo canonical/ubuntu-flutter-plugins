@@ -137,4 +137,60 @@ void main() {
     await tester.sendKeyEvent(LogicalKeyboardKey.arrowDown);
     expect(itemNodes[9].hasFocus, isTrue);
   });
+
+  testWidgets('first focus up', (tester) async {
+    final itemNodes = [for (var i = 0; i < 10; ++i) FocusNode()];
+
+    await tester.pumpWidget(MaterialApp(
+      home: Scaffold(
+        body: ScopedFocusTraversalGroup(
+          child: ListView.builder(
+            itemCount: 10,
+            itemBuilder: (context, index) {
+              return ScopedFocusTraversalOrder(
+                focus: index == 5,
+                child: ListTile(
+                  focusNode: itemNodes[index],
+                  onTap: () {},
+                ),
+              );
+            },
+          ),
+        ),
+      ),
+    ));
+
+    expect(itemNodes.every((node) => node.hasFocus), isFalse);
+
+    await tester.sendKeyEvent(LogicalKeyboardKey.arrowUp);
+    expect(itemNodes.last.hasFocus, isTrue);
+  });
+
+  testWidgets('first focus down', (tester) async {
+    final itemNodes = [for (var i = 0; i < 10; ++i) FocusNode()];
+
+    await tester.pumpWidget(MaterialApp(
+      home: Scaffold(
+        body: ScopedFocusTraversalGroup(
+          child: ListView.builder(
+            itemCount: 10,
+            itemBuilder: (context, index) {
+              return ScopedFocusTraversalOrder(
+                focus: index == 5,
+                child: ListTile(
+                  focusNode: itemNodes[index],
+                  onTap: () {},
+                ),
+              );
+            },
+          ),
+        ),
+      ),
+    ));
+
+    expect(itemNodes.every((node) => node.hasFocus), isFalse);
+
+    await tester.sendKeyEvent(LogicalKeyboardKey.arrowDown);
+    expect(itemNodes.first.hasFocus, isTrue);
+  });
 }
