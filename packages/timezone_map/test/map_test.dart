@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
+import 'package:intl/intl.dart';
 import 'package:latlong2/latlong.dart';
 import 'package:mockito/mockito.dart';
 import 'package:timezone_map/timezone_map.dart';
@@ -103,6 +104,14 @@ void main() {
 
     await tester.pumpWidget(buildMap(tester, offset: 1.23));
     expect(tester.takeException(), isFlutterError);
+  });
+
+  testWidgets('locale', (tester) async {
+    Intl.defaultLocale = 'sv_SE'; // decimal separator = ","
+    addTearDown(() => Intl.defaultLocale = null);
+
+    await tester.pumpWidget(buildMap(tester, offset: 5.75));
+    expect(find.svg('tz_5.75.svg'), findsOneWidget);
   });
 
   testWidgets('map size', (tester) async {

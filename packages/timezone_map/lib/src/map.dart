@@ -92,7 +92,7 @@ class TimezoneMap extends StatelessWidget {
 
 // Shortest double (%g) representation: 0, 1, 5.5, 5.75, ...
 String _formatTimezoneOffset(double offset) {
-  final format = NumberFormat();
+  final format = NumberFormat(null, 'en_US'); // decimal separator = "."
   format.minimumFractionDigits = 0;
   format.maximumFractionDigits = 2;
   return format.format(offset);
