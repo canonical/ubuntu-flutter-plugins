@@ -1,5 +1,19 @@
 {
   "@@locale": "ka",
   "countryCode": "GE",
-  "languageName": "ქართული"
+  "@countryCode": {},
+  "languageName": "ქართული",
+  "@languageName": {},
+  "strongPassword": "ძლიერი პაროლი",
+  "@strongPassword": {},
+  "goodPassword": "კარგი პაროლი",
+  "@goodPassword": {},
+  "weakPassword": "სუსტი პაროლი",
+  "@weakPassword": {},
+  "backAction": "უკან",
+  "@backAction": {},
+  "fairPassword": "საშუალო პაროლი",
+  "@fairPassword": {},
+  "continueAction": "გაგრძელება",
+  "@continueAction": {}
 }
