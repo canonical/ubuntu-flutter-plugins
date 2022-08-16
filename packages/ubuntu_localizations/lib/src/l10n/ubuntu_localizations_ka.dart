@@ -14,20 +14,20 @@ class UbuntuLocalizationsKa extends UbuntuLocalizations {
   String get languageName => 'ქართული';
 
   @override
-  String get backAction => 'Go Back';
+  String get backAction => 'უკან';
 
   @override
-  String get continueAction => 'Continue';
+  String get continueAction => 'გაგრძელება';
 
   @override
-  String get strongPassword => 'Strong password';
+  String get strongPassword => 'ძლიერი პაროლი';
 
   @override
-  String get fairPassword => 'Fair password';
+  String get fairPassword => 'საშუალო პაროლი';
 
   @override
-  String get goodPassword => 'Good password';
+  String get goodPassword => 'კარგი პაროლი';
 
   @override
-  String get weakPassword => 'Weak password';
+  String get weakPassword => 'სუსტი პაროლი';
 }
