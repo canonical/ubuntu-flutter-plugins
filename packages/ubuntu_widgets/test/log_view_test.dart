@@ -43,6 +43,32 @@ void main() {
     expect(scrollController.position.maxScrollExtent, greaterThan(0.0));
   });
 
+  testWidgets('rebuild with different stream', (tester) async {
+    Future<void> pumpLog(Stream<String> log) {
+      return tester.pumpWidget(
+        MaterialApp(
+          home: Scaffold(
+            body: LogView(log: log),
+          ),
+        ),
+      );
+    }
+
+    final oldLog = StreamController<String>.broadcast(sync: true);
+    await pumpLog(oldLog.stream);
+
+    final newLog = StreamController<String>.broadcast(sync: true);
+    await pumpLog(newLog.stream);
+
+    final textField = tester.widget<TextField>(find.byType(TextField));
+
+    final controller = textField.controller;
+    expect(controller, isNotNull);
+
+    newLog.add('foo');
+    expect(controller!.text, equals('foo'));
+  });
+
   testWidgets('do not attempt to scroll when unmounted', (tester) async {
     final log = StreamController<String>.broadcast(sync: true);
     for (int i = 0; i < 3; ++i) {
