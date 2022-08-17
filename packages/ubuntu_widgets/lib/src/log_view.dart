@@ -86,6 +86,10 @@ class _LogViewState extends State<LogView> {
   @override
   void didUpdateWidget(LogView oldWidget) {
     super.didUpdateWidget(oldWidget);
+    if (oldWidget.log != widget.log) {
+      _subscription?.cancel();
+      _subscription = widget.log.listen(_appendLine);
+    }
     _scrollToEnd();
   }
 
