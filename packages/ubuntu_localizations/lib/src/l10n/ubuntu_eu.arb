@@ -1,5 +1,19 @@
 {
   "@@locale": "eu",
   "countryCode": "ES",
-  "languageName": "Euskara"
+  "@countryCode": {},
+  "languageName": "Euskara",
+  "@languageName": {},
+  "backAction": "Itzuli",
+  "@backAction": {},
+  "continueAction": "Jarraitu",
+  "@continueAction": {},
+  "strongPassword": "Pasahitz sendoa",
+  "@strongPassword": {},
+  "fairPassword": "Pasahitz onargarria",
+  "@fairPassword": {},
+  "goodPassword": "Pasahitz ona",
+  "@goodPassword": {},
+  "weakPassword": "Pasahitz ahula",
+  "@weakPassword": {}
 }
