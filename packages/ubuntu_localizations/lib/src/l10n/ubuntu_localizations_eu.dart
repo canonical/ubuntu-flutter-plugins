@@ -14,20 +14,20 @@ class UbuntuLocalizationsEu extends UbuntuLocalizations {
   String get languageName => 'Euskara';
 
   @override
-  String get backAction => 'Go Back';
+  String get backAction => 'Itzuli';
 
   @override
-  String get continueAction => 'Continue';
+  String get continueAction => 'Jarraitu';
 
   @override
-  String get strongPassword => 'Strong password';
+  String get strongPassword => 'Pasahitz sendoa';
 
   @override
-  String get fairPassword => 'Fair password';
+  String get fairPassword => 'Pasahitz onargarria';
 
   @override
-  String get goodPassword => 'Good password';
+  String get goodPassword => 'Pasahitz ona';
 
   @override
-  String get weakPassword => 'Weak password';
+  String get weakPassword => 'Pasahitz ahula';
 }
