@@ -1,5 +1,19 @@
 {
   "@@locale": "fa",
   "countryCode": "IR",
-  "languageName": "فارسی"
+  "@countryCode": {},
+  "languageName": "فارسی",
+  "@languageName": {},
+  "fairPassword": "گذرواژهٔ معتدل",
+  "@fairPassword": {},
+  "weakPassword": "گذرواژهٔ ضعیف",
+  "@weakPassword": {},
+  "backAction": "بازگشت",
+  "@backAction": {},
+  "goodPassword": "گذرواژهٔ خوب",
+  "@goodPassword": {},
+  "continueAction": "ادامه",
+  "@continueAction": {},
+  "strongPassword": "گذرواژهٔ قوی",
+  "@strongPassword": {}
 }
