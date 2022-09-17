@@ -1,6 +1,6 @@
 import 'package:flutter/foundation.dart';
 
-/// A safe mixin for Flutter's `ChangeNotifier` and `ValueNotifier`, that makes
+/// A safe mixin for Flutter's `ChangeNotifier` and `ValueNotifier` that makes
 /// `notifyListeners()` a no-op, rather than an error, after disposal.
 ///
 /// ![safe_change_notifier](https://github.com/ubuntu-flutter-community/safe_change_notifier/raw/main/images/safe_change_notifier.png)
