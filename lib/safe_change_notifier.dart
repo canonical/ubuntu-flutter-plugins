@@ -5,3 +5,4 @@
 library safe_change_notifier;
 
 export 'src/change_notifier.dart';
+export 'src/value_notifier.dart';
