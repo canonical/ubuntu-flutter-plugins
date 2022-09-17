@@ -28,7 +28,7 @@ void main() {
     expect(notifier.isDisposed, isTrue);
     expect(notifier.hasListeners, isFalse);
 
-    expect(() => notifier.notifyListeners(), returnsNormally);
+    expect(notifier.notifyListeners, returnsNormally);
     expect(actualNotifications, expectedNotifications);
 
     expect(() => notifier.addListener(() {}), returnsNormally);
