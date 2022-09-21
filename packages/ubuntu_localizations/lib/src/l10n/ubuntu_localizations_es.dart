@@ -1,6 +1,3 @@
-
-
-
 import 'ubuntu_localizations.dart';
 
 /// The translations for Spanish Castilian (`es`).
