@@ -11,20 +11,20 @@ class UbuntuLocalizationsFa extends UbuntuLocalizations {
   String get languageName => 'فارسی';
 
   @override
-  String get backAction => 'Go Back';
+  String get backAction => 'بازگشت';
 
   @override
-  String get continueAction => 'Continue';
+  String get continueAction => 'ادامه';
 
   @override
-  String get strongPassword => 'Strong password';
+  String get strongPassword => 'گذرواژهٔ قوی';
 
   @override
-  String get fairPassword => 'Fair password';
+  String get fairPassword => 'گذرواژهٔ معتدل';
 
   @override
-  String get goodPassword => 'Good password';
+  String get goodPassword => 'گذرواژهٔ خوب';
 
   @override
-  String get weakPassword => 'Weak password';
+  String get weakPassword => 'گذرواژهٔ ضعیف';
 }
