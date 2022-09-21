@@ -45,7 +45,7 @@ class LocalizedLanguage {
   String toString() => 'Language($name, $locale)';
 
   @override
-  int get hashCode => hashValues(name, locale);
+  int get hashCode => Object.hash(name, locale);
 
   @override
   bool operator ==(dynamic other) =>
