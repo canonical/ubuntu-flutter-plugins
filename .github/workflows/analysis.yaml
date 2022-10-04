@@ -12,7 +12,7 @@ jobs:
     runs-on: ubuntu-20.04
     steps:
       - uses: actions/checkout@v3
-      - uses: subosito/flutter-action@v1
+      - uses: subosito/flutter-action@v2
       - run: flutter pub global activate melos
       - run: melos bootstrap
       - run: melos run analyze
@@ -21,7 +21,7 @@ jobs:
     runs-on: ubuntu-20.04
     steps:
       - uses: actions/checkout@v3
-      - uses: subosito/flutter-action@v1
+      - uses: subosito/flutter-action@v2
       - run: flutter pub global activate melos
       - run: melos bootstrap
       - run: melos run format
@@ -30,7 +30,7 @@ jobs:
     runs-on: ubuntu-20.04
     steps:
       - uses: actions/checkout@v3
-      - uses: subosito/flutter-action@v1
+      - uses: subosito/flutter-action@v2
       - run: flutter pub global activate melos
       - run: melos bootstrap
       - run: melos exec --no-private -- \
