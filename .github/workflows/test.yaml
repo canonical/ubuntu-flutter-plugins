@@ -20,7 +20,7 @@ jobs:
         DEBIAN_FRONTEND: noninteractive
     - run: melos bootstrap
     - run: melos run coverage
-    - uses: codecov/codecov-action@v1
+    - uses: codecov/codecov-action@v3
       with:
         token: ${{secrets.CODECOV_TOKEN}}
 
