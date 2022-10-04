@@ -17,8 +17,8 @@ void main() {
   runApp(
     YaruTheme(
       builder: (context, yaru, child) => MaterialApp(
-        theme: yaru.variant?.theme ?? yaruLight,
-        darkTheme: yaru.variant?.darkTheme ?? yaruDark,
+        theme: yaru.theme,
+        darkTheme: yaru.darkTheme,
         home: TimezonePage(service: service),
       ),
     ),
