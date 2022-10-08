@@ -3,7 +3,7 @@
 [![pub](https://img.shields.io/pub/v/wizard_router.svg)](https://pub.dev/packages/wizard_router)
 [![license: BSD](https://img.shields.io/badge/license-BSD-yellow.svg)](https://opensource.org/licenses/BSD-3-Clause)
 ![CI](https://github.com/ubuntu-flutter-community/wizard_router/workflows/CI/badge.svg)
-[![codecov](https://codecov.io/gh/ubuntu-flutter-community/wizard_router/branch/main/graph/badge.svg)](https://codecov.io/gh/ubuntu-flutter-community/wizard_router)
+[![codecov](https://codecov.io/gh/ubuntu-flutter-community/wizard_router/branch/main/graph/badge.svg?token=MrjLartk0G)](https://codecov.io/gh/ubuntu-flutter-community/wizard_router)
 
 [wizard_router](https://pub.dev/packages/wizard_router) provides routing for
 classic linear wizards in a way that it eliminates dependencies between wizard
