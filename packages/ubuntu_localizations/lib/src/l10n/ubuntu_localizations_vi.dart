@@ -14,16 +14,16 @@ class UbuntuLocalizationsVi extends UbuntuLocalizations {
   String get backAction => 'Quay trở lại';
 
   @override
-  String get continueAction => 'tiếp tục';
+  String get continueAction => 'Tiếp tục';
 
   @override
-  String get strongPassword => 'mật khẩu mạnh';
+  String get strongPassword => 'Mật khẩu mạnh';
 
   @override
   String get fairPassword => 'Mật khẩu hợp lý';
 
   @override
-  String get goodPassword => '';
+  String get goodPassword => 'Mật khẩu trung bình';
 
   @override
   String get weakPassword => 'Mật khẩu yếu';
