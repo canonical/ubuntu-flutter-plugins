@@ -1,6 +1,6 @@
 # Ubuntu localizations for Flutter
 
-Provides localizations for Flutter-based Ubuntu applications.
+Provides extra localizations for Flutter-based Ubuntu applications.
 
 The `GlobalUbuntuLocalizations` class provides as list of localization delegates
 for all languages supported by Ubuntu. Furthermore, it provides a few Material
