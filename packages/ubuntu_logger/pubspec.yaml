@@ -1,6 +1,9 @@
 name: ubuntu_logger
 description: A logging frontend based on Google's logging library for Dart.
-publish_to: 'none'
+homepage: https://github.com/canonical/ubuntu-flutter-plugins
+repository: https://github.com/canonical/ubuntu-flutter-plugins/tree/main/packages/ubuntu_logger
+issue_tracker: https://github.com/canonical/ubuntu-flutter-plugins/issues
+version: 0.0.1
 
 environment:
   sdk: ">=2.17.0 <3.0.0"
