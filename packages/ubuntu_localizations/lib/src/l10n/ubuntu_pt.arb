@@ -1,6 +1,19 @@
 {
   "@@locale": "pt",
   "countryCode": "PT",
-
-  "languageName": "Português"
+  "@countryCode": {},
+  "languageName": "Português",
+  "@languageName": {},
+  "backAction": "Voltar",
+  "@backAction": {},
+  "continueAction": "Continuar",
+  "@continueAction": {},
+  "strongPassword": "Palavra-passe forte",
+  "@strongPassword": {},
+  "fairPassword": "Palavra-passe razoável",
+  "@fairPassword": {},
+  "goodPassword": "Boa palavra-passe",
+  "@goodPassword": {},
+  "weakPassword": "Palavra-passe fraca",
+  "@weakPassword": {}
 }
