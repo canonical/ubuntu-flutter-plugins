@@ -11,22 +11,22 @@ class UbuntuLocalizationsPt extends UbuntuLocalizations {
   String get languageName => 'Português';
 
   @override
-  String get backAction => 'Go Back';
+  String get backAction => 'Voltar';
 
   @override
-  String get continueAction => 'Continue';
+  String get continueAction => 'Continuar';
 
   @override
-  String get strongPassword => 'Strong password';
+  String get strongPassword => 'Palavra-passe forte';
 
   @override
-  String get fairPassword => 'Fair password';
+  String get fairPassword => 'Palavra-passe razoável';
 
   @override
-  String get goodPassword => 'Good password';
+  String get goodPassword => 'Boa palavra-passe';
 
   @override
-  String get weakPassword => 'Weak password';
+  String get weakPassword => 'Palavra-passe fraca';
 }
 
 /// The translations for Portuguese, as used in Brazil (`pt_BR`).
