@@ -1,5 +1,19 @@
 {
   "@@locale": "sr",
   "countryCode": "RS",
-  "languageName": "Српски"
+  "@countryCode": {},
+  "languageName": "Српски",
+  "@languageName": {},
+  "fairPassword": "Солидна лозинка",
+  "@fairPassword": {},
+  "backAction": "Назад",
+  "@backAction": {},
+  "goodPassword": "Добра лозинка",
+  "@goodPassword": {},
+  "continueAction": "Настави",
+  "@continueAction": {},
+  "strongPassword": "Јака лозинка",
+  "@strongPassword": {},
+  "weakPassword": "Слаба лозинка",
+  "@weakPassword": {}
 }
