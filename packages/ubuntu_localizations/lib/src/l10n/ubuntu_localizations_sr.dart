@@ -11,20 +11,20 @@ class UbuntuLocalizationsSr extends UbuntuLocalizations {
   String get languageName => 'Српски';
 
   @override
-  String get backAction => 'Go Back';
+  String get backAction => 'Назад';
 
   @override
-  String get continueAction => 'Continue';
+  String get continueAction => 'Настави';
 
   @override
-  String get strongPassword => 'Strong password';
+  String get strongPassword => 'Јака лозинка';
 
   @override
-  String get fairPassword => 'Fair password';
+  String get fairPassword => 'Солидна лозинка';
 
   @override
-  String get goodPassword => 'Good password';
+  String get goodPassword => 'Добра лозинка';
 
   @override
-  String get weakPassword => 'Weak password';
+  String get weakPassword => 'Слаба лозинка';
 }
