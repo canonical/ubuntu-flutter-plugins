@@ -1,5 +1,19 @@
 {
   "@@locale": "gl",
   "countryCode": "ES",
-  "languageName": "Galego"
+  "@countryCode": {},
+  "languageName": "Galego",
+  "@languageName": {},
+  "backAction": "Volver",
+  "@backAction": {},
+  "continueAction": "Continuar",
+  "@continueAction": {},
+  "strongPassword": "Contrasinal forte",
+  "@strongPassword": {},
+  "fairPassword": "Contrasinal xusto",
+  "@fairPassword": {},
+  "goodPassword": "Bo contrasinal",
+  "@goodPassword": {},
+  "weakPassword": "Contrasinal débil",
+  "@weakPassword": {}
 }
