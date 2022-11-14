@@ -11,20 +11,20 @@ class UbuntuLocalizationsGl extends UbuntuLocalizations {
   String get languageName => 'Galego';
 
   @override
-  String get backAction => 'Go Back';
+  String get backAction => 'Volver';
 
   @override
-  String get continueAction => 'Continue';
+  String get continueAction => 'Continuar';
 
   @override
-  String get strongPassword => 'Strong password';
+  String get strongPassword => 'Contrasinal forte';
 
   @override
-  String get fairPassword => 'Fair password';
+  String get fairPassword => 'Contrasinal xusto';
 
   @override
-  String get goodPassword => 'Good password';
+  String get goodPassword => 'Bo contrasinal';
 
   @override
-  String get weakPassword => 'Weak password';
+  String get weakPassword => 'Contrasinal débil';
 }
