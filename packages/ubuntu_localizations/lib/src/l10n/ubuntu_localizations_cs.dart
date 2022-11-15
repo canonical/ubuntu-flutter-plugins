@@ -27,4 +27,16 @@ class UbuntuLocalizationsCs extends UbuntuLocalizations {
 
   @override
   String get weakPassword => 'Snadno prolomitelné heslo';
+
+  @override
+  String get altKey => 'Alt';
+
+  @override
+  String get controlKey => 'Control';
+
+  @override
+  String get metaKey => 'Meta';
+
+  @override
+  String get shiftKey => 'Shift';
 }

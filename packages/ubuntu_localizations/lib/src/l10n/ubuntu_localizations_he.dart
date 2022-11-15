@@ -27,4 +27,16 @@ class UbuntuLocalizationsHe extends UbuntuLocalizations {
 
   @override
   String get weakPassword => 'סיסמה חלשה';
+
+  @override
+  String get altKey => 'Alt';
+
+  @override
+  String get controlKey => 'Control';
+
+  @override
+  String get metaKey => 'Meta';
+
+  @override
+  String get shiftKey => 'Shift';
 }

@@ -27,4 +27,16 @@ class UbuntuLocalizationsRu extends UbuntuLocalizations {
 
   @override
   String get weakPassword => 'Слабый пароль';
+
+  @override
+  String get altKey => 'Alt';
+
+  @override
+  String get controlKey => 'Control';
+
+  @override
+  String get metaKey => 'Meta';
+
+  @override
+  String get shiftKey => 'Shift';
 }

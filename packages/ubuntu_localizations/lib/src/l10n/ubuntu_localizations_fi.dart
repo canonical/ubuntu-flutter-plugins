@@ -27,4 +27,16 @@ class UbuntuLocalizationsFi extends UbuntuLocalizations {
 
   @override
   String get weakPassword => 'Heikko salasana';
+
+  @override
+  String get altKey => 'Alt';
+
+  @override
+  String get controlKey => 'Control';
+
+  @override
+  String get metaKey => 'Meta';
+
+  @override
+  String get shiftKey => 'Shift';
 }

@@ -27,4 +27,16 @@ class UbuntuLocalizationsKo extends UbuntuLocalizations {
 
   @override
   String get weakPassword => '약한 암호';
+
+  @override
+  String get altKey => 'Alt';
+
+  @override
+  String get controlKey => 'Control';
+
+  @override
+  String get metaKey => 'Meta';
+
+  @override
+  String get shiftKey => 'Shift';
 }
