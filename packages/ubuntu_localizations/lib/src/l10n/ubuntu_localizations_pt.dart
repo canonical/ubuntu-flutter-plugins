@@ -27,6 +27,18 @@ class UbuntuLocalizationsPt extends UbuntuLocalizations {
 
   @override
   String get weakPassword => 'Palavra-passe fraca';
+
+  @override
+  String get altKey => 'Alt';
+
+  @override
+  String get controlKey => 'Control';
+
+  @override
+  String get metaKey => 'Meta';
+
+  @override
+  String get shiftKey => 'Shift';
 }
 
 /// The translations for Portuguese, as used in Brazil (`pt_BR`).
