@@ -283,6 +283,30 @@ abstract class UbuntuLocalizations {
   /// In en, this message translates to:
   /// **'Weak password'**
   String get weakPassword;
+
+  /// No description provided for @altKey.
+  ///
+  /// In en, this message translates to:
+  /// **'Alt'**
+  String get altKey;
+
+  /// No description provided for @controlKey.
+  ///
+  /// In en, this message translates to:
+  /// **'Control'**
+  String get controlKey;
+
+  /// No description provided for @metaKey.
+  ///
+  /// In en, this message translates to:
+  /// **'Meta'**
+  String get metaKey;
+
+  /// No description provided for @shiftKey.
+  ///
+  /// In en, this message translates to:
+  /// **'Shift'**
+  String get shiftKey;
 }
 
 class _UbuntuLocalizationsDelegate extends LocalizationsDelegate<UbuntuLocalizations> {

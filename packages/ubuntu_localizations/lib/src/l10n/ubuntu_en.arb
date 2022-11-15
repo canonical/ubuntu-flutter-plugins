@@ -13,5 +13,10 @@
   "strongPassword": "Strong password",
   "fairPassword": "Fair password",
   "goodPassword": "Good password",
-  "weakPassword": "Weak password"
+  "weakPassword": "Weak password",
+
+  "altKey": "Alt",
+  "controlKey": "Control",
+  "metaKey": "Meta",
+  "shiftKey": "Shift"
 }
