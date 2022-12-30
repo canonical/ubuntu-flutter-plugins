@@ -13,7 +13,7 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v3
     - name: Setup Flutter
-      uses: subosito/flutter-action@v1
+      uses: subosito/flutter-action@v2
     - name: Get dependencies
       run: flutter pub get
     - name: Analyze
@@ -29,7 +29,7 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v3
     - name: Setup Flutter
-      uses: subosito/flutter-action@v1
+      uses: subosito/flutter-action@v2
     - name: Run tests
       run: flutter test --coverage
     - name: Upload coverage
