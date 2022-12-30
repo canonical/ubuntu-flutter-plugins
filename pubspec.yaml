@@ -13,7 +13,7 @@ environment:
 
 dependencies:
   collection: ^1.15.0
-  flow_builder: ^0.0.8
+  flow_builder: ^0.0.9
   flutter:
     sdk: flutter
 
