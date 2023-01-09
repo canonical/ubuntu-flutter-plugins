@@ -1,7 +1,6 @@
-library key_search;
-
 import 'dart:async';
 
+import 'package:diacritic/diacritic.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter/widgets.dart';
 
@@ -50,7 +49,9 @@ class _KeySearchState extends State<KeySearch> {
   }
 
   KeyEventResult search(KeyEvent event) {
-    if (event is KeyDownEvent && event.character != null) {
+    if (event is KeyDownEvent &&
+        event.character?.isNotEmpty == true &&
+        !LogicalKeyboardKey.isControlCharacter(event.character!)) {
       _searchQuery += event.character!;
       _searchTimer?.cancel();
       _searchTimer = Timer(widget.interval, () {
@@ -69,5 +70,24 @@ class _KeySearchState extends State<KeySearch> {
       onKeyEvent: (node, event) => search(event),
       child: widget.child,
     );
+  }
+}
+
+/// Searches a list in a way that is most appropriate for keyboard searching.
+extension KeySearchX on List<String> {
+  /// Searches for an element matching the given [query].
+  ///
+  /// The search is case-insensitive, ignores diacritics, starts from the given
+  /// index, and wraps around if not found.
+  int keySearch(String query, [int start = 0]) {
+    String cleanup(String s) => removeDiacritics(s).trim().toLowerCase();
+
+    final q = cleanup(query);
+    bool startsWith(String s) => cleanup(s).startsWith(q);
+
+    final index = indexWhere(startsWith, start);
+    return index != -1 || start == 0
+        ? index
+        : take(start).toList().indexWhere(startsWith);
   }
 }

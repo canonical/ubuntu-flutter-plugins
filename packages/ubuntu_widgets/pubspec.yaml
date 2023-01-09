@@ -9,6 +9,7 @@ environment:
 
 dependencies:
   collection: ^1.16.0
+  diacritic: ^0.1.3
   flutter:
     sdk: flutter
 
