@@ -272,6 +272,9 @@ class UbuntuLocalizationsSe extends UbuntuLocalizations {
   String get restoreLabel => 'Restore';
 
   @override
+  String get retryLabel => 'Retry';
+
+  @override
   String get revertLabel => 'Revert';
 
   @override

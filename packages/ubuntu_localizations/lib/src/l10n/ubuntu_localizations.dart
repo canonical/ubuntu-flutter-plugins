@@ -770,6 +770,12 @@ abstract class UbuntuLocalizations {
   /// **'Restore'**
   String get restoreLabel;
 
+  /// No description provided for @retryLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Retry'**
+  String get retryLabel;
+
   /// No description provided for @revertLabel.
   ///
   /// In en, this message translates to:
