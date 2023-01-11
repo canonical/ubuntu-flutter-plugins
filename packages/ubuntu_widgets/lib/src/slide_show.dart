@@ -25,6 +25,7 @@ class SlideShow extends StatefulWidget {
     this.wrap = false,
     this.autofocus = false,
     this.focusNode,
+    this.onSlide,
   }) : assert(slides.isNotEmpty);
 
   /// The list of slides to show.
@@ -41,6 +42,9 @@ class SlideShow extends StatefulWidget {
 
   /// Defines the keyboard focus for the slide show.
   final FocusNode? focusNode;
+
+  /// Called when the current slide changes.
+  final ValueChanged<int>? onSlide;
 
   @override
   State<SlideShow> createState() => _SlideShowState();
@@ -86,6 +90,7 @@ class _SlideShowState extends State<SlideShow> {
       curve: _kSlideCurve,
       duration: _kSlideDuration,
     );
+    widget.onSlide?.call(slide);
   }
 
   void animateToNextSlide() {

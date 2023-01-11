@@ -9,6 +9,7 @@ extension AppTester on WidgetTester {
     Duration? interval,
     bool wrap = false,
     bool autofocus = false,
+    ValueChanged<int>? onSlide,
   }) {
     return pumpWidget(MaterialApp(
       home: SlideShow(
@@ -16,6 +17,7 @@ extension AppTester on WidgetTester {
         slides: slides.map(Text.new).toList(),
         wrap: wrap,
         autofocus: autofocus,
+        onSlide: onSlide,
       ),
     ));
   }
@@ -178,5 +180,38 @@ void main() {
     await tester.tap(find.byIcon(Icons.chevron_left));
     await tester.pumpAndSettle();
     expect(find.text('a'), findsNWidgets(2));
+  });
+
+  testWidgets('callback', (tester) async {
+    int? slide;
+    await tester.pumpTestApp(
+      slides: ['a', 'b', 'c'],
+      interval: const Duration(seconds: 1),
+      wrap: true,
+      onSlide: (index) => slide = index,
+    );
+
+    expect(find.text('a'), findsNWidgets(2));
+    expect(slide, isNull);
+
+    await tester.tap(find.byIcon(Icons.chevron_right));
+    await tester.pumpAndSettle();
+    expect(find.text('b'), findsOneWidget);
+    expect(slide, 1);
+
+    await tester.pump(const Duration(seconds: 1));
+    await tester.pumpAndSettle();
+    expect(find.text('c'), findsOneWidget);
+    expect(slide, 2);
+
+    await tester.pump(const Duration(seconds: 1));
+    await tester.pumpAndSettle();
+    expect(find.text('a'), findsNWidgets(2));
+    expect(slide, 0);
+
+    await tester.tap(find.byIcon(Icons.chevron_left));
+    await tester.pumpAndSettle();
+    expect(find.text('c'), findsOneWidget);
+    expect(slide, 2);
   });
 }
