@@ -8,12 +8,12 @@
   "@backAction": {},
   "continueAction": "继续",
   "@continueAction": {},
-  "strongPassword": "强密码",
+  "strongPassword": "密码强度：强",
   "@strongPassword": {},
-  "goodPassword": "好的密码",
+  "goodPassword": "密码强度：较好",
   "@goodPassword": {},
-  "weakPassword": "弱密码",
+  "weakPassword": "密码强度：较弱",
   "@weakPassword": {},
-  "fairPassword": "公平密码",
+  "fairPassword": "密码强度：合理",
   "@fairPassword": {}
 }
