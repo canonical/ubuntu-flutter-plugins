@@ -17,16 +17,16 @@ class UbuntuLocalizationsZh extends UbuntuLocalizations {
   String get continueAction => '继续';
 
   @override
-  String get strongPassword => '强密码';
+  String get strongPassword => '密码强度：强';
 
   @override
-  String get fairPassword => '公平密码';
+  String get fairPassword => '密码强度：合理';
 
   @override
-  String get goodPassword => '好的密码';
+  String get goodPassword => '密码强度：较好';
 
   @override
-  String get weakPassword => '弱密码';
+  String get weakPassword => '密码强度：较弱';
 
   @override
   String get altKey => 'Alt';
