@@ -29,19 +29,19 @@ class UbuntuLocalizationsZh extends UbuntuLocalizations {
   String get weakPassword => '密码强度：较弱';
 
   @override
-  String get altKey => 'Alt';
+  String get altKey => 'Alt 键';
 
   @override
-  String get controlKey => 'Control';
+  String get controlKey => 'Control 键';
 
   @override
-  String get metaKey => 'Meta';
+  String get metaKey => 'Meta 键';
 
   @override
-  String get shiftKey => 'Shift';
+  String get shiftKey => 'Shift 键';
 
   @override
-  String get aboutLabel => 'About';
+  String get aboutLabel => '关于';
 
   @override
   String get addLabel => 'Add';
@@ -50,13 +50,13 @@ class UbuntuLocalizationsZh extends UbuntuLocalizations {
   String get allLabel => 'All';
 
   @override
-  String get applyLabel => 'Apply';
+  String get applyLabel => '应用';
 
   @override
-  String get ascendingLabel => 'Ascending';
+  String get ascendingLabel => '向上滚动';
 
   @override
-  String get backLabel => 'Back';
+  String get backLabel => '返回';
 
   @override
   String get boldLabel => 'Bold';
@@ -65,7 +65,7 @@ class UbuntuLocalizationsZh extends UbuntuLocalizations {
   String get bottomLabel => 'Bottom';
 
   @override
-  String get cancelLabel => 'Cancel';
+  String get cancelLabel => '取消';
 
   @override
   String get centerLabel => 'Center';
@@ -74,37 +74,37 @@ class UbuntuLocalizationsZh extends UbuntuLocalizations {
   String get clearLabel => 'Clear';
 
   @override
-  String get closeLabel => 'Close';
+  String get closeLabel => '关闭';
 
   @override
   String get colorLabel => 'Color';
 
   @override
-  String get connectLabel => 'Connect';
+  String get connectLabel => '连接';
 
   @override
-  String get continueLabel => 'Continue';
+  String get continueLabel => '继续';
 
   @override
-  String get copyLabel => 'Copy';
+  String get copyLabel => '复制';
 
   @override
-  String get createLabel => 'Create';
+  String get createLabel => '创建';
 
   @override
-  String get cutLabel => 'Cut';
+  String get cutLabel => '剪切';
 
   @override
   String get decreaseLabel => 'Decrease';
 
   @override
-  String get deleteLabel => 'Delete';
+  String get deleteLabel => '删除';
 
   @override
-  String get descendingLabel => 'Descending';
+  String get descendingLabel => '向下滚动';
 
   @override
-  String get discardLabel => 'Discard';
+  String get discardLabel => '舍弃';
 
   @override
   String get disconnectLabel => 'Disconnect';

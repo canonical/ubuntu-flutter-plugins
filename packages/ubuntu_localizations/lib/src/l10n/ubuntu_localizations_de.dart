@@ -38,19 +38,19 @@ class UbuntuLocalizationsDe extends UbuntuLocalizations {
   String get metaKey => 'Meta';
 
   @override
-  String get shiftKey => 'Shift';
+  String get shiftKey => 'Umschalt';
 
   @override
-  String get aboutLabel => 'About';
+  String get aboutLabel => 'Über';
 
   @override
-  String get addLabel => 'Add';
+  String get addLabel => 'Hinzufügen';
 
   @override
-  String get allLabel => 'All';
+  String get allLabel => 'Alle';
 
   @override
-  String get applyLabel => 'Apply';
+  String get applyLabel => 'Anwenden';
 
   @override
   String get ascendingLabel => 'Ascending';
