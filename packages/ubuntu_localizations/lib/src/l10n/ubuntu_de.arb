@@ -19,5 +19,15 @@
   "fairPassword": "Ausreichendes Passwort",
   "@fairPassword": {},
   "goodPassword": "Gutes Passwort",
-  "@goodPassword": {}
+  "@goodPassword": {},
+  "shiftKey": "Umschalt",
+  "@shiftKey": {},
+  "aboutLabel": "Über",
+  "@aboutLabel": {},
+  "addLabel": "Hinzufügen",
+  "@addLabel": {},
+  "allLabel": "Alle",
+  "@allLabel": {},
+  "applyLabel": "Anwenden",
+  "@applyLabel": {}
 }
