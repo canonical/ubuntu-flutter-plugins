@@ -302,6 +302,9 @@ class UbuntuLocalizationsJa extends UbuntuLocalizations {
   String get sendLabel => 'Send';
 
   @override
+  String get skipLabel => 'Skip';
+
+  @override
   String get sortLabel => 'Sort';
 
   @override

@@ -272,7 +272,7 @@ class UbuntuLocalizationsPl extends UbuntuLocalizations {
   String get restoreLabel => 'Przywróć';
 
   @override
-  String get retryLabel => 'Retry';
+  String get retryLabel => 'Ponów';
 
   @override
   String get revertLabel => 'Przywróć';
@@ -300,6 +300,9 @@ class UbuntuLocalizationsPl extends UbuntuLocalizations {
 
   @override
   String get sendLabel => 'Wyślij';
+
+  @override
+  String get skipLabel => 'Skip';
 
   @override
   String get sortLabel => 'Sortuj';
