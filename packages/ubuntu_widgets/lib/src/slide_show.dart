@@ -9,9 +9,14 @@ const _kButtonSize = 80.0;
 const _kIconColor = Colors.black87;
 const _kIconSize = 48.0;
 
-const _kSlideCurve = Curves.easeInOut;
-const _kSlideDuration = Duration(milliseconds: 250);
-const _kSlideInterval = Duration(seconds: 15);
+/// The default curve for slide transitions.
+const kSlideCurve = Curves.easeInOut;
+
+/// The default duration for slide transitions.
+const kSlideDuration = Duration(milliseconds: 250);
+
+/// The default interval for automatic slide changes.
+const kSlideInterval = Duration(seconds: 15);
 
 /// Displays a set of slides, or any widgets, that animate in and out at a
 /// specified interval. The slides can be manually navigated by pressing arrow
@@ -21,7 +26,9 @@ class SlideShow extends StatefulWidget {
   SlideShow({
     super.key,
     required this.slides,
-    this.interval = _kSlideInterval,
+    this.curve = kSlideCurve,
+    this.duration = kSlideDuration,
+    this.interval = kSlideInterval,
     this.wrap = false,
     this.autofocus = false,
     this.focusNode,
@@ -31,7 +38,13 @@ class SlideShow extends StatefulWidget {
   /// The list of slides to show.
   final List<Widget> slides;
 
-  /// The interval for automatic slide changes. The default is 15 seconds.
+  /// The curve for slide transitions. Defaults to [kSlideCurve].
+  final Curve curve;
+
+  /// The duration for slide transitions. Defaults to [kSlideDuration].
+  final Duration duration;
+
+  /// The interval for automatic slide changes. Defaults to [kSlideInterval].
   final Duration interval;
 
   /// Whether to wrap around. The default value is false.
@@ -87,8 +100,8 @@ class _SlideShowState extends State<SlideShow> {
     restartTimer();
     _controller.animateToPage(
       slide,
-      curve: _kSlideCurve,
-      duration: _kSlideDuration,
+      curve: widget.curve,
+      duration: widget.duration,
     );
     widget.onSlide?.call(slide);
   }
