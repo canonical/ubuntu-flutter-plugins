@@ -110,58 +110,58 @@ class UbuntuLocalizationsZh extends UbuntuLocalizations {
   String get disconnectLabel => 'Disconnect';
 
   @override
-  String get doneLabel => 'Done';
+  String get doneLabel => '完成';
 
   @override
-  String get downloadLabel => 'Download';
+  String get downloadLabel => '下载';
 
   @override
-  String get editLabel => 'Edit';
+  String get editLabel => '编辑';
 
   @override
   String get enterLabel => 'Enter';
 
   @override
-  String get errorLabel => 'Error';
+  String get errorLabel => '错误';
 
   @override
-  String get executeLabel => 'Execute';
+  String get executeLabel => '执行';
 
   @override
-  String get exitLabel => 'Exit';
+  String get exitLabel => '退出';
 
   @override
-  String get fileLabel => 'File';
+  String get fileLabel => '文件';
 
   @override
   String get fillLabel => 'Fill';
 
   @override
-  String get findLabel => 'Find';
+  String get findLabel => '查找';
 
   @override
   String get firstLabel => 'First';
 
   @override
-  String get fontLabel => 'Font';
+  String get fontLabel => '字体';
 
   @override
-  String get forwardLabel => 'Forward';
+  String get forwardLabel => '前进';
 
   @override
-  String get fullscreenLabel => 'Fullscreen';
+  String get fullscreenLabel => '全屏';
 
   @override
-  String get goBackLabel => 'Go Back';
+  String get goBackLabel => '后退';
 
   @override
-  String get helpLabel => 'Help';
+  String get helpLabel => '帮助';
 
   @override
   String get homeLabel => 'Home';
 
   @override
-  String get importLabel => 'Import';
+  String get importLabel => '导入';
 
   @override
   String get increaseLabel => 'Increase';
@@ -170,10 +170,10 @@ class UbuntuLocalizationsZh extends UbuntuLocalizations {
   String get indexLabel => 'Index';
 
   @override
-  String get informationLabel => 'Information';
+  String get informationLabel => '信息';
 
   @override
-  String get insertLabel => 'Insert';
+  String get insertLabel => '插入';
 
   @override
   String get italicLabel => 'Italic';
@@ -300,6 +300,9 @@ class UbuntuLocalizationsZh extends UbuntuLocalizations {
 
   @override
   String get sendLabel => 'Send';
+
+  @override
+  String get skipLabel => 'Skip';
 
   @override
   String get sortLabel => 'Sort';

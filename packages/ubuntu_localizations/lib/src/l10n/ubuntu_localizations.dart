@@ -830,6 +830,12 @@ abstract class UbuntuLocalizations {
   /// **'Send'**
   String get sendLabel;
 
+  /// No description provided for @skipLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Skip'**
+  String get skipLabel;
+
   /// No description provided for @sortLabel.
   ///
   /// In en, this message translates to:
