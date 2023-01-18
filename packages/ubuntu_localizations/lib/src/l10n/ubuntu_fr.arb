@@ -135,5 +135,11 @@
   "yesLabel": "Oui",
   "@yesLabel": {},
   "openLabel": "Ouvrir",
-  "@openLabel": {}
+  "@openLabel": {},
+  "metaKey": "Méta",
+  "@metaKey": {},
+  "connectLabel": "Se connecter",
+  "@connectLabel": {},
+  "exitLabel": "Quitter",
+  "@exitLabel": {}
 }
