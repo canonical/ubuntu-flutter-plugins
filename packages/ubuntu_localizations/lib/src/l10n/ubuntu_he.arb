@@ -227,5 +227,7 @@
   "saveLabel": "שמירה",
   "@saveLabel": {},
   "retryLabel": "ניסיון חוזר",
-  "@retryLabel": {}
+  "@retryLabel": {},
+  "skipLabel": "דילוג",
+  "@skipLabel": {}
 }
