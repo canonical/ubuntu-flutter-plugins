@@ -227,5 +227,7 @@
   "zoomOutLabel": "Pomniejsz",
   "@zoomOutLabel": {},
   "retryLabel": "Ponów",
-  "@retryLabel": {}
+  "@retryLabel": {},
+  "skipLabel": "Pomiń",
+  "@skipLabel": {}
 }
