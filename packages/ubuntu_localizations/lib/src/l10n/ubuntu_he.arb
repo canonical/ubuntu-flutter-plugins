@@ -225,5 +225,9 @@
   "restoreLabel": "שחזור",
   "@restoreLabel": {},
   "saveLabel": "שמירה",
-  "@saveLabel": {}
+  "@saveLabel": {},
+  "retryLabel": "ניסיון חוזר",
+  "@retryLabel": {},
+  "skipLabel": "דילוג",
+  "@skipLabel": {}
 }
