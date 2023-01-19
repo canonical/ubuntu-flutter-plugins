@@ -126,10 +126,10 @@ class _SlideShowState extends State<SlideShow> {
   Widget build(BuildContext context) {
     return CallbackShortcuts(
       bindings: {
-        // TODO: these could be SingleActivators after the fix for
-        // flutter/flutter#92717 has reached the stable channel
-        LogicalKeySet(LogicalKeyboardKey.arrowLeft): animateToPreviousSlide,
-        LogicalKeySet(LogicalKeyboardKey.arrowRight): animateToNextSlide,
+        const SingleActivator(LogicalKeyboardKey.arrowLeft):
+            animateToPreviousSlide,
+        const SingleActivator(LogicalKeyboardKey.arrowRight):
+            animateToNextSlide,
       },
       child: Focus(
         autofocus: widget.autofocus,
