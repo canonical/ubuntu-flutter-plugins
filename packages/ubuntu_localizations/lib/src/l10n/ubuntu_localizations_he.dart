@@ -272,7 +272,7 @@ class UbuntuLocalizationsHe extends UbuntuLocalizations {
   String get restoreLabel => 'שחזור';
 
   @override
-  String get retryLabel => 'Retry';
+  String get retryLabel => 'ניסיון חוזר';
 
   @override
   String get revertLabel => 'החזרה';
@@ -302,7 +302,7 @@ class UbuntuLocalizationsHe extends UbuntuLocalizations {
   String get sendLabel => 'שליחה';
 
   @override
-  String get skipLabel => 'Skip';
+  String get skipLabel => 'דילוג';
 
   @override
   String get sortLabel => 'מיון';

@@ -32,317 +32,317 @@ class UbuntuLocalizationsEo extends UbuntuLocalizations {
   String get altKey => 'Alt';
 
   @override
-  String get controlKey => 'Control';
+  String get controlKey => 'Stir';
 
   @override
   String get metaKey => 'Meta';
 
   @override
-  String get shiftKey => 'Shift';
+  String get shiftKey => 'Maj';
 
   @override
-  String get aboutLabel => 'About';
+  String get aboutLabel => 'Pri';
 
   @override
-  String get addLabel => 'Add';
+  String get addLabel => 'Aldoni';
 
   @override
-  String get allLabel => 'All';
+  String get allLabel => 'Ĉio';
 
   @override
-  String get applyLabel => 'Apply';
+  String get applyLabel => 'Efektivigi';
 
   @override
-  String get ascendingLabel => 'Ascending';
+  String get ascendingLabel => 'Kreskante';
 
   @override
-  String get backLabel => 'Back';
+  String get backLabel => 'Reen';
 
   @override
-  String get boldLabel => 'Bold';
+  String get boldLabel => 'Grasa';
 
   @override
-  String get bottomLabel => 'Bottom';
+  String get bottomLabel => 'Malsupro';
 
   @override
-  String get cancelLabel => 'Cancel';
+  String get cancelLabel => 'Nuligi';
 
   @override
-  String get centerLabel => 'Center';
+  String get centerLabel => 'Centro';
 
   @override
-  String get clearLabel => 'Clear';
+  String get clearLabel => 'Malplenigi';
 
   @override
-  String get closeLabel => 'Close';
+  String get closeLabel => 'Fermi';
 
   @override
-  String get colorLabel => 'Color';
+  String get colorLabel => 'Koloro';
 
   @override
-  String get connectLabel => 'Connect';
+  String get connectLabel => 'Konekti';
 
   @override
-  String get continueLabel => 'Continue';
+  String get continueLabel => 'Daŭrigi';
 
   @override
-  String get copyLabel => 'Copy';
+  String get copyLabel => 'Kopii';
 
   @override
-  String get createLabel => 'Create';
+  String get createLabel => 'Krei';
 
   @override
-  String get cutLabel => 'Cut';
+  String get cutLabel => 'Eltondi';
 
   @override
-  String get decreaseLabel => 'Decrease';
+  String get decreaseLabel => 'Malpliigi';
 
   @override
-  String get deleteLabel => 'Delete';
+  String get deleteLabel => 'Forviŝi';
 
   @override
-  String get descendingLabel => 'Descending';
+  String get descendingLabel => 'Malkreskante';
 
   @override
-  String get discardLabel => 'Discard';
+  String get discardLabel => 'Forĵeti';
 
   @override
-  String get disconnectLabel => 'Disconnect';
+  String get disconnectLabel => 'Malkonekti';
 
   @override
-  String get doneLabel => 'Done';
+  String get doneLabel => 'Farite';
 
   @override
-  String get downloadLabel => 'Download';
+  String get downloadLabel => 'Elŝuti';
 
   @override
-  String get editLabel => 'Edit';
+  String get editLabel => 'Redakti';
 
   @override
-  String get enterLabel => 'Enter';
+  String get enterLabel => 'Tajpi';
 
   @override
-  String get errorLabel => 'Error';
+  String get errorLabel => 'Eraro';
 
   @override
-  String get executeLabel => 'Execute';
+  String get executeLabel => 'Ruli';
 
   @override
-  String get exitLabel => 'Exit';
+  String get exitLabel => 'Forlasi';
 
   @override
-  String get fileLabel => 'File';
+  String get fileLabel => 'Dosiero';
 
   @override
-  String get fillLabel => 'Fill';
+  String get fillLabel => 'Plenigi';
 
   @override
-  String get findLabel => 'Find';
+  String get findLabel => 'Serĉi';
 
   @override
-  String get firstLabel => 'First';
+  String get firstLabel => 'Unua';
 
   @override
-  String get fontLabel => 'Font';
+  String get fontLabel => 'Tiparo';
 
   @override
-  String get forwardLabel => 'Forward';
+  String get forwardLabel => 'Antaŭen';
 
   @override
-  String get fullscreenLabel => 'Fullscreen';
+  String get fullscreenLabel => 'Plenekrane';
 
   @override
-  String get goBackLabel => 'Go Back';
+  String get goBackLabel => 'Reen';
 
   @override
-  String get helpLabel => 'Help';
+  String get helpLabel => 'Helpo';
 
   @override
-  String get homeLabel => 'Home';
+  String get homeLabel => 'Hejmo';
 
   @override
-  String get importLabel => 'Import';
+  String get importLabel => 'Enporti';
 
   @override
-  String get increaseLabel => 'Increase';
+  String get increaseLabel => 'Pliigi';
 
   @override
-  String get indexLabel => 'Index';
+  String get indexLabel => 'Indekso';
 
   @override
-  String get informationLabel => 'Information';
+  String get informationLabel => 'Informo';
 
   @override
-  String get insertLabel => 'Insert';
+  String get insertLabel => 'Enmeti';
 
   @override
-  String get italicLabel => 'Italic';
+  String get italicLabel => 'Kursiva';
 
   @override
-  String get landscapeLabel => 'Landscape';
+  String get landscapeLabel => 'Horizontala formato';
 
   @override
-  String get lastLabel => 'Last';
+  String get lastLabel => 'Lasta';
 
   @override
-  String get leaveLabel => 'Leave';
+  String get leaveLabel => 'Forlasi';
 
   @override
-  String get leftLabel => 'Left';
+  String get leftLabel => 'Maldekstro';
 
   @override
-  String get mediaLabel => 'Media';
+  String get mediaLabel => 'Aŭdvidaĵoj';
 
   @override
-  String get networkLabel => 'Network';
+  String get networkLabel => 'Reto';
 
   @override
-  String get newLabel => 'New';
+  String get newLabel => 'Nova';
 
   @override
-  String get nextLabel => 'Next';
+  String get nextLabel => 'Sekva';
 
   @override
-  String get noLabel => 'No';
+  String get noLabel => 'Ne';
 
   @override
-  String get noneLabel => 'None';
+  String get noneLabel => 'Nenio';
 
   @override
-  String get normalLabel => 'Normal';
+  String get normalLabel => 'Ordinara';
 
   @override
-  String get okLabel => 'OK';
+  String get okLabel => 'Bone';
 
   @override
-  String get openLabel => 'Open';
+  String get openLabel => 'Malfermi';
 
   @override
-  String get pasteLabel => 'Paste';
+  String get pasteLabel => 'Alglui';
 
   @override
-  String get pauseLabel => 'Pause';
+  String get pauseLabel => 'Paŭzigi';
 
   @override
-  String get playLabel => 'Play';
+  String get playLabel => 'Ludi';
 
   @override
-  String get portraitLabel => 'Portrait';
+  String get portraitLabel => 'Vertikala formato';
 
   @override
-  String get preferencesLabel => 'Preferences';
+  String get preferencesLabel => 'Agordoj';
 
   @override
-  String get previousLabel => 'Previous';
+  String get previousLabel => 'Antaŭen';
 
   @override
-  String get printLabel => 'Print';
+  String get printLabel => 'Presi';
 
   @override
-  String get printPreviewLabel => 'Print Preview';
+  String get printPreviewLabel => 'Presantaŭrigardo';
 
   @override
-  String get propertiesLabel => 'Properties';
+  String get propertiesLabel => 'Atributoj';
 
   @override
-  String get questionLabel => 'Question';
+  String get questionLabel => 'Demando';
 
   @override
-  String get quitLabel => 'Quit';
+  String get quitLabel => 'Forlasi';
 
   @override
-  String get recordLabel => 'Record';
+  String get recordLabel => 'Registri';
 
   @override
-  String get redoLabel => 'Redo';
+  String get redoLabel => 'Refari';
 
   @override
-  String get refreshLabel => 'Refresh';
+  String get refreshLabel => 'Reŝargi';
 
   @override
-  String get removeLabel => 'Remove';
+  String get removeLabel => 'Forigi';
 
   @override
-  String get renameLabel => 'Rename';
+  String get renameLabel => 'Ŝanĝi nomon';
 
   @override
-  String get resetLabel => 'Reset';
+  String get resetLabel => 'Apriorigi';
 
   @override
-  String get restoreLabel => 'Restore';
+  String get restoreLabel => 'Restaŭri';
 
   @override
-  String get retryLabel => 'Retry';
+  String get retryLabel => 'Reprovi';
 
   @override
-  String get revertLabel => 'Revert';
+  String get revertLabel => 'Malfari';
 
   @override
-  String get rewindLabel => 'Rewind';
+  String get rewindLabel => 'Revolvi';
 
   @override
-  String get rightLabel => 'Right';
+  String get rightLabel => 'Dekstro';
 
   @override
-  String get saveAsLabel => 'Save As';
+  String get saveAsLabel => 'Konservi kiel';
 
   @override
-  String get saveLabel => 'Save';
+  String get saveLabel => 'Konservi';
 
   @override
-  String get searchLabel => 'Search';
+  String get searchLabel => 'Serĉi';
 
   @override
-  String get selectAllLabel => 'Select All';
+  String get selectAllLabel => 'Elekti ĉion';
 
   @override
-  String get selectLabel => 'Select';
+  String get selectLabel => 'Elekti';
 
   @override
-  String get sendLabel => 'Send';
+  String get sendLabel => 'Sendi';
 
   @override
-  String get skipLabel => 'Skip';
+  String get skipLabel => 'Preterpasi';
 
   @override
-  String get sortLabel => 'Sort';
+  String get sortLabel => 'Ordigi';
 
   @override
-  String get stopLabel => 'Stop';
+  String get stopLabel => 'Ĉezigi';
 
   @override
-  String get strikeThroughLabel => 'Strike Through';
+  String get strikeThroughLabel => 'Trastrekita';
 
   @override
-  String get submitLabel => 'Submit';
+  String get submitLabel => 'Submeti';
 
   @override
-  String get topLabel => 'Top';
+  String get topLabel => 'Supro';
 
   @override
-  String get undoLabel => 'Undo';
+  String get undoLabel => 'Malfari';
 
   @override
-  String get updateLabel => 'Update';
+  String get updateLabel => 'Ĝisdatigi';
 
   @override
-  String get upLabel => 'Up';
+  String get upLabel => 'Supren';
 
   @override
-  String get viewLabel => 'View';
+  String get viewLabel => 'Vidi';
 
   @override
-  String get warningLabel => 'Warning';
+  String get warningLabel => 'Averto';
 
   @override
-  String get windowLabel => 'Window';
+  String get windowLabel => 'Fenestro';
 
   @override
-  String get yesLabel => 'Yes';
+  String get yesLabel => 'Jes';
 
   @override
-  String get zoomInLabel => 'Zoom In';
+  String get zoomInLabel => 'Enzomi';
 
   @override
-  String get zoomOutLabel => 'Zoom Out';
+  String get zoomOutLabel => 'Elzomi';
 }

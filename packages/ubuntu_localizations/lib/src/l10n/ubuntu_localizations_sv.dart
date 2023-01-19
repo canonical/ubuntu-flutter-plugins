@@ -41,130 +41,130 @@ class UbuntuLocalizationsSv extends UbuntuLocalizations {
   String get shiftKey => 'Shift';
 
   @override
-  String get aboutLabel => 'About';
+  String get aboutLabel => 'Om';
 
   @override
-  String get addLabel => 'Add';
+  String get addLabel => 'Lägg till';
 
   @override
-  String get allLabel => 'All';
+  String get allLabel => 'Allt';
 
   @override
-  String get applyLabel => 'Apply';
+  String get applyLabel => 'Verkställ';
 
   @override
   String get ascendingLabel => 'Ascending';
 
   @override
-  String get backLabel => 'Back';
+  String get backLabel => 'Tillbaka';
 
   @override
-  String get boldLabel => 'Bold';
+  String get boldLabel => 'Kursiv';
 
   @override
-  String get bottomLabel => 'Bottom';
+  String get bottomLabel => 'Längst ner';
 
   @override
-  String get cancelLabel => 'Cancel';
+  String get cancelLabel => 'Avbryt';
 
   @override
-  String get centerLabel => 'Center';
+  String get centerLabel => 'Mitten';
 
   @override
-  String get clearLabel => 'Clear';
+  String get clearLabel => 'Rensa';
 
   @override
-  String get closeLabel => 'Close';
+  String get closeLabel => 'Stäng';
 
   @override
-  String get colorLabel => 'Color';
+  String get colorLabel => 'Färg';
 
   @override
-  String get connectLabel => 'Connect';
+  String get connectLabel => 'Anslut';
 
   @override
-  String get continueLabel => 'Continue';
+  String get continueLabel => 'Fortsätt';
 
   @override
-  String get copyLabel => 'Copy';
+  String get copyLabel => 'Kopiera';
 
   @override
-  String get createLabel => 'Create';
+  String get createLabel => 'Skapa';
 
   @override
-  String get cutLabel => 'Cut';
+  String get cutLabel => 'Klipp ut';
 
   @override
-  String get decreaseLabel => 'Decrease';
+  String get decreaseLabel => 'Minska';
 
   @override
-  String get deleteLabel => 'Delete';
+  String get deleteLabel => 'Ta bort';
 
   @override
   String get descendingLabel => 'Descending';
 
   @override
-  String get discardLabel => 'Discard';
+  String get discardLabel => 'Kasta';
 
   @override
-  String get disconnectLabel => 'Disconnect';
+  String get disconnectLabel => 'Koppla ifrån';
 
   @override
-  String get doneLabel => 'Done';
+  String get doneLabel => 'Klart';
 
   @override
-  String get downloadLabel => 'Download';
+  String get downloadLabel => 'Ladda ned';
 
   @override
-  String get editLabel => 'Edit';
+  String get editLabel => 'Redigera';
 
   @override
   String get enterLabel => 'Enter';
 
   @override
-  String get errorLabel => 'Error';
+  String get errorLabel => 'Fel';
 
   @override
-  String get executeLabel => 'Execute';
+  String get executeLabel => 'Kör';
 
   @override
-  String get exitLabel => 'Exit';
+  String get exitLabel => 'Avsluta';
 
   @override
-  String get fileLabel => 'File';
+  String get fileLabel => 'Fil';
 
   @override
-  String get fillLabel => 'Fill';
+  String get fillLabel => 'Fyll';
 
   @override
-  String get findLabel => 'Find';
+  String get findLabel => 'Hitta';
 
   @override
-  String get firstLabel => 'First';
+  String get firstLabel => 'Först';
 
   @override
-  String get fontLabel => 'Font';
+  String get fontLabel => 'Teckensnitt';
 
   @override
-  String get forwardLabel => 'Forward';
+  String get forwardLabel => 'Framåt';
 
   @override
-  String get fullscreenLabel => 'Fullscreen';
+  String get fullscreenLabel => 'Helskärm';
 
   @override
-  String get goBackLabel => 'Go Back';
+  String get goBackLabel => 'Gå tillbaka';
 
   @override
-  String get helpLabel => 'Help';
+  String get helpLabel => 'Hjälp';
 
   @override
-  String get homeLabel => 'Home';
+  String get homeLabel => 'Hem';
 
   @override
-  String get importLabel => 'Import';
+  String get importLabel => 'Importera';
 
   @override
-  String get increaseLabel => 'Increase';
+  String get increaseLabel => 'Öka';
 
   @override
   String get indexLabel => 'Index';
@@ -176,7 +176,7 @@ class UbuntuLocalizationsSv extends UbuntuLocalizations {
   String get insertLabel => 'Insert';
 
   @override
-  String get italicLabel => 'Italic';
+  String get italicLabel => 'Kursiv';
 
   @override
   String get landscapeLabel => 'Landscape';
@@ -185,28 +185,28 @@ class UbuntuLocalizationsSv extends UbuntuLocalizations {
   String get lastLabel => 'Last';
 
   @override
-  String get leaveLabel => 'Leave';
+  String get leaveLabel => 'Lämna';
 
   @override
-  String get leftLabel => 'Left';
+  String get leftLabel => 'Vänster';
 
   @override
   String get mediaLabel => 'Media';
 
   @override
-  String get networkLabel => 'Network';
+  String get networkLabel => 'Nätverk';
 
   @override
-  String get newLabel => 'New';
+  String get newLabel => 'Ny';
 
   @override
-  String get nextLabel => 'Next';
+  String get nextLabel => 'Nästa';
 
   @override
-  String get noLabel => 'No';
+  String get noLabel => 'Nej';
 
   @override
-  String get noneLabel => 'None';
+  String get noneLabel => 'Inget';
 
   @override
   String get normalLabel => 'Normal';
@@ -215,134 +215,134 @@ class UbuntuLocalizationsSv extends UbuntuLocalizations {
   String get okLabel => 'OK';
 
   @override
-  String get openLabel => 'Open';
+  String get openLabel => 'Öppna';
 
   @override
-  String get pasteLabel => 'Paste';
+  String get pasteLabel => 'Klistra in';
 
   @override
-  String get pauseLabel => 'Pause';
+  String get pauseLabel => 'Pausa';
 
   @override
-  String get playLabel => 'Play';
+  String get playLabel => 'Spela';
 
   @override
-  String get portraitLabel => 'Portrait';
+  String get portraitLabel => 'Porträtt';
 
   @override
-  String get preferencesLabel => 'Preferences';
+  String get preferencesLabel => 'Inställningar';
 
   @override
-  String get previousLabel => 'Previous';
+  String get previousLabel => 'Föregående';
 
   @override
-  String get printLabel => 'Print';
+  String get printLabel => 'Skriv ut';
 
   @override
-  String get printPreviewLabel => 'Print Preview';
+  String get printPreviewLabel => 'Utskriftsförhandsgranskning';
 
   @override
-  String get propertiesLabel => 'Properties';
+  String get propertiesLabel => 'Egenskaper';
 
   @override
-  String get questionLabel => 'Question';
+  String get questionLabel => 'Fråga';
 
   @override
-  String get quitLabel => 'Quit';
+  String get quitLabel => 'Avsluta';
 
   @override
-  String get recordLabel => 'Record';
+  String get recordLabel => 'Spela in';
 
   @override
-  String get redoLabel => 'Redo';
+  String get redoLabel => 'Gör om';
 
   @override
-  String get refreshLabel => 'Refresh';
+  String get refreshLabel => 'Uppdatera';
 
   @override
-  String get removeLabel => 'Remove';
+  String get removeLabel => 'Ta bort';
 
   @override
-  String get renameLabel => 'Rename';
+  String get renameLabel => 'Byt namn';
 
   @override
-  String get resetLabel => 'Reset';
+  String get resetLabel => 'Återställa';
 
   @override
-  String get restoreLabel => 'Restore';
+  String get restoreLabel => 'Återställ';
 
   @override
-  String get retryLabel => 'Retry';
+  String get retryLabel => 'Gör om';
 
   @override
-  String get revertLabel => 'Revert';
+  String get revertLabel => 'Återställ';
 
   @override
-  String get rewindLabel => 'Rewind';
+  String get rewindLabel => 'Spola tillbaka';
 
   @override
-  String get rightLabel => 'Right';
+  String get rightLabel => 'Höger';
 
   @override
-  String get saveAsLabel => 'Save As';
+  String get saveAsLabel => 'Spara som';
 
   @override
-  String get saveLabel => 'Save';
+  String get saveLabel => 'Spara';
 
   @override
-  String get searchLabel => 'Search';
+  String get searchLabel => 'Sök';
 
   @override
-  String get selectAllLabel => 'Select All';
+  String get selectAllLabel => 'Välj alla';
 
   @override
-  String get selectLabel => 'Select';
+  String get selectLabel => 'Välj';
 
   @override
-  String get sendLabel => 'Send';
+  String get sendLabel => 'Skicka';
 
   @override
   String get skipLabel => 'Skip';
 
   @override
-  String get sortLabel => 'Sort';
+  String get sortLabel => 'Sortera';
 
   @override
-  String get stopLabel => 'Stop';
+  String get stopLabel => 'Stoppa';
 
   @override
   String get strikeThroughLabel => 'Strike Through';
 
   @override
-  String get submitLabel => 'Submit';
+  String get submitLabel => 'Skicka in';
 
   @override
-  String get topLabel => 'Top';
+  String get topLabel => 'Högst upp';
 
   @override
-  String get undoLabel => 'Undo';
+  String get undoLabel => 'Ångra';
 
   @override
-  String get updateLabel => 'Update';
+  String get updateLabel => 'Uppdatera';
 
   @override
-  String get upLabel => 'Up';
+  String get upLabel => 'Upp';
 
   @override
-  String get viewLabel => 'View';
+  String get viewLabel => 'Visa';
 
   @override
-  String get warningLabel => 'Warning';
+  String get warningLabel => 'Varning';
 
   @override
-  String get windowLabel => 'Window';
+  String get windowLabel => 'Fönster';
 
   @override
-  String get yesLabel => 'Yes';
+  String get yesLabel => 'Ja';
 
   @override
-  String get zoomInLabel => 'Zoom In';
+  String get zoomInLabel => 'Zooma in';
 
   @override
-  String get zoomOutLabel => 'Zoom Out';
+  String get zoomOutLabel => 'Zooma ut';
 }
