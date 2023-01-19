@@ -302,7 +302,7 @@ class UbuntuLocalizationsPl extends UbuntuLocalizations {
   String get sendLabel => 'Wyślij';
 
   @override
-  String get skipLabel => 'Skip';
+  String get skipLabel => 'Pomiń';
 
   @override
   String get sortLabel => 'Sortuj';
