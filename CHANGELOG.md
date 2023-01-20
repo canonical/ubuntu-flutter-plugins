@@ -1,3 +1,7 @@
+## 0.9.1
+
+- Add HeroController
+
 ## 0.9.0
 
 - Add WizardScope.replace()
