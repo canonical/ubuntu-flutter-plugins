@@ -218,7 +218,7 @@ class _WizardState extends State<Wizard> {
                 _createPage(context, index: index, settings: settings))
             .toList();
       },
-      observers: [_WizardFlowObserver(widget.observers)],
+      observers: [_WizardFlowObserver(widget.observers), HeroController()],
       onComplete: (state) async {
         final result = state.lastOrNull as WizardRouteResult;
         for (final observer in widget.observers) {
