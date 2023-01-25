@@ -141,5 +141,21 @@
   "connectLabel": "Se connecter",
   "@connectLabel": {},
   "exitLabel": "Quitter",
-  "@exitLabel": {}
+  "@exitLabel": {},
+  "homeLabel": "Accueil",
+  "@homeLabel": {},
+  "increaseLabel": "Augmenter",
+  "@increaseLabel": {},
+  "noneLabel": "Aucune",
+  "@noneLabel": {},
+  "viewLabel": "Voir",
+  "@viewLabel": {},
+  "warningLabel": "Avertissement",
+  "@warningLabel": {},
+  "windowLabel": "Fenêtre",
+  "@windowLabel": {},
+  "sendLabel": "Envoyer",
+  "@sendLabel": {},
+  "updateLabel": "Mettre à jour",
+  "@updateLabel": {}
 }
