@@ -32,7 +32,7 @@ class UbuntuLocalizationsCs extends UbuntuLocalizations {
   String get altKey => 'Alt';
 
   @override
-  String get controlKey => 'Control';
+  String get controlKey => 'Ctrl';
 
   @override
   String get metaKey => 'Meta';
@@ -41,308 +41,308 @@ class UbuntuLocalizationsCs extends UbuntuLocalizations {
   String get shiftKey => 'Shift';
 
   @override
-  String get aboutLabel => 'About';
+  String get aboutLabel => 'O aplikaci';
 
   @override
-  String get addLabel => 'Add';
+  String get addLabel => 'Přidat';
 
   @override
-  String get allLabel => 'All';
+  String get allLabel => 'Vše';
 
   @override
-  String get applyLabel => 'Apply';
+  String get applyLabel => 'Použít';
 
   @override
-  String get ascendingLabel => 'Ascending';
+  String get ascendingLabel => 'Vzestupně';
 
   @override
-  String get backLabel => 'Back';
+  String get backLabel => 'Zpět';
 
   @override
-  String get boldLabel => 'Bold';
+  String get boldLabel => 'Tučné';
 
   @override
-  String get bottomLabel => 'Bottom';
+  String get bottomLabel => 'Dole';
 
   @override
-  String get cancelLabel => 'Cancel';
+  String get cancelLabel => 'Storno';
 
   @override
-  String get centerLabel => 'Center';
+  String get centerLabel => 'Střed';
 
   @override
-  String get clearLabel => 'Clear';
+  String get clearLabel => 'Vyčistit';
 
   @override
-  String get closeLabel => 'Close';
+  String get closeLabel => 'Zavřít';
 
   @override
-  String get colorLabel => 'Color';
+  String get colorLabel => 'Barva';
 
   @override
-  String get connectLabel => 'Connect';
+  String get connectLabel => 'Připojit';
 
   @override
-  String get continueLabel => 'Continue';
+  String get continueLabel => 'Pokračovat';
 
   @override
-  String get copyLabel => 'Copy';
+  String get copyLabel => 'Zkopírovat';
 
   @override
-  String get createLabel => 'Create';
+  String get createLabel => 'Vytvořit';
 
   @override
-  String get cutLabel => 'Cut';
+  String get cutLabel => 'Vyjmout';
 
   @override
-  String get decreaseLabel => 'Decrease';
+  String get decreaseLabel => 'Snížit';
 
   @override
-  String get deleteLabel => 'Delete';
+  String get deleteLabel => 'Smazat';
 
   @override
-  String get descendingLabel => 'Descending';
+  String get descendingLabel => 'Sestupně';
 
   @override
-  String get discardLabel => 'Discard';
+  String get discardLabel => 'Zahodit';
 
   @override
-  String get disconnectLabel => 'Disconnect';
+  String get disconnectLabel => 'Odpojit';
 
   @override
-  String get doneLabel => 'Done';
+  String get doneLabel => 'Hotovo';
 
   @override
-  String get downloadLabel => 'Download';
+  String get downloadLabel => 'Stáhnout';
 
   @override
-  String get editLabel => 'Edit';
+  String get editLabel => 'Upravit';
 
   @override
-  String get enterLabel => 'Enter';
+  String get enterLabel => 'Vstup';
 
   @override
-  String get errorLabel => 'Error';
+  String get errorLabel => 'Chyba';
 
   @override
-  String get executeLabel => 'Execute';
+  String get executeLabel => 'Spustit';
 
   @override
-  String get exitLabel => 'Exit';
+  String get exitLabel => 'Ukončit';
 
   @override
-  String get fileLabel => 'File';
+  String get fileLabel => 'Soubor';
 
   @override
-  String get fillLabel => 'Fill';
+  String get fillLabel => 'Vyplnit';
 
   @override
-  String get findLabel => 'Find';
+  String get findLabel => 'Najít';
 
   @override
-  String get firstLabel => 'First';
+  String get firstLabel => 'První';
 
   @override
-  String get fontLabel => 'Font';
+  String get fontLabel => 'Písmo';
 
   @override
-  String get forwardLabel => 'Forward';
+  String get forwardLabel => 'Vpřed';
 
   @override
-  String get fullscreenLabel => 'Fullscreen';
+  String get fullscreenLabel => 'Celá obrazovka';
 
   @override
-  String get goBackLabel => 'Go Back';
+  String get goBackLabel => 'Jít zpět';
 
   @override
-  String get helpLabel => 'Help';
+  String get helpLabel => 'Nápověda';
 
   @override
-  String get homeLabel => 'Home';
+  String get homeLabel => 'Domů';
 
   @override
-  String get importLabel => 'Import';
+  String get importLabel => 'Importovat';
 
   @override
-  String get increaseLabel => 'Increase';
+  String get increaseLabel => 'Zvýšit';
 
   @override
-  String get indexLabel => 'Index';
+  String get indexLabel => 'Rejstřík';
 
   @override
-  String get informationLabel => 'Information';
+  String get informationLabel => 'Informace';
 
   @override
-  String get insertLabel => 'Insert';
+  String get insertLabel => 'Vložit';
 
   @override
-  String get italicLabel => 'Italic';
+  String get italicLabel => 'Kurzíva';
 
   @override
-  String get landscapeLabel => 'Landscape';
+  String get landscapeLabel => 'Na šířku';
 
   @override
-  String get lastLabel => 'Last';
+  String get lastLabel => 'Poslední';
 
   @override
-  String get leaveLabel => 'Leave';
+  String get leaveLabel => 'Odejít';
 
   @override
-  String get leftLabel => 'Left';
+  String get leftLabel => 'Vlevo';
 
   @override
-  String get mediaLabel => 'Media';
+  String get mediaLabel => 'Média';
 
   @override
-  String get networkLabel => 'Network';
+  String get networkLabel => 'Síť';
 
   @override
-  String get newLabel => 'New';
+  String get newLabel => 'Nové';
 
   @override
-  String get nextLabel => 'Next';
+  String get nextLabel => 'Další';
 
   @override
-  String get noLabel => 'No';
+  String get noLabel => 'Ne';
 
   @override
-  String get noneLabel => 'None';
+  String get noneLabel => 'Žádné';
 
   @override
-  String get normalLabel => 'Normal';
+  String get normalLabel => 'Normální';
 
   @override
   String get okLabel => 'OK';
 
   @override
-  String get openLabel => 'Open';
+  String get openLabel => 'Otevřít';
 
   @override
-  String get pasteLabel => 'Paste';
+  String get pasteLabel => 'Vložit';
 
   @override
-  String get pauseLabel => 'Pause';
+  String get pauseLabel => 'Pozastavit';
 
   @override
-  String get playLabel => 'Play';
+  String get playLabel => 'Přehrát';
 
   @override
-  String get portraitLabel => 'Portrait';
+  String get portraitLabel => 'Na výšku';
 
   @override
-  String get preferencesLabel => 'Preferences';
+  String get preferencesLabel => 'Předvolby';
 
   @override
-  String get previousLabel => 'Previous';
+  String get previousLabel => 'Předchozí';
 
   @override
-  String get printLabel => 'Print';
+  String get printLabel => 'Tisk';
 
   @override
-  String get printPreviewLabel => 'Print Preview';
+  String get printPreviewLabel => 'Náhled tisku';
 
   @override
-  String get propertiesLabel => 'Properties';
+  String get propertiesLabel => 'Vlastnosti';
 
   @override
-  String get questionLabel => 'Question';
+  String get questionLabel => 'Otázka';
 
   @override
-  String get quitLabel => 'Quit';
+  String get quitLabel => 'Ukončit';
 
   @override
-  String get recordLabel => 'Record';
+  String get recordLabel => 'Záznam';
 
   @override
-  String get redoLabel => 'Redo';
+  String get redoLabel => 'Znovu';
 
   @override
-  String get refreshLabel => 'Refresh';
+  String get refreshLabel => 'Načíst znovu';
 
   @override
-  String get removeLabel => 'Remove';
+  String get removeLabel => 'Odebrat';
 
   @override
-  String get renameLabel => 'Rename';
+  String get renameLabel => 'Přejmenovat';
 
   @override
-  String get resetLabel => 'Reset';
+  String get resetLabel => 'Vrátit na výchozí';
 
   @override
-  String get restoreLabel => 'Restore';
+  String get restoreLabel => 'Obnovit';
 
   @override
-  String get retryLabel => 'Retry';
+  String get retryLabel => 'Zkusit znovu';
 
   @override
-  String get revertLabel => 'Revert';
+  String get revertLabel => 'Vrátit zpět';
 
   @override
-  String get rewindLabel => 'Rewind';
+  String get rewindLabel => 'Vrátit na začátek';
 
   @override
-  String get rightLabel => 'Right';
+  String get rightLabel => 'Vpravo';
 
   @override
-  String get saveAsLabel => 'Save As';
+  String get saveAsLabel => 'Uložit jako';
 
   @override
-  String get saveLabel => 'Save';
+  String get saveLabel => 'Uložit';
 
   @override
-  String get searchLabel => 'Search';
+  String get searchLabel => 'Hledat';
 
   @override
-  String get selectAllLabel => 'Select All';
+  String get selectAllLabel => 'Vybrat vše';
 
   @override
-  String get selectLabel => 'Select';
+  String get selectLabel => 'Vybrat';
 
   @override
-  String get sendLabel => 'Send';
+  String get sendLabel => 'Odeslat';
 
   @override
-  String get skipLabel => 'Skip';
+  String get skipLabel => 'Přeskočit';
 
   @override
-  String get sortLabel => 'Sort';
+  String get sortLabel => 'Seřadit';
 
   @override
-  String get stopLabel => 'Stop';
+  String get stopLabel => 'Zastavit';
 
   @override
-  String get strikeThroughLabel => 'Strike Through';
+  String get strikeThroughLabel => 'Přeškrtnuté';
 
   @override
-  String get submitLabel => 'Submit';
+  String get submitLabel => 'Odeslat';
 
   @override
-  String get topLabel => 'Top';
+  String get topLabel => 'Nahoře';
 
   @override
-  String get undoLabel => 'Undo';
+  String get undoLabel => 'Zpět';
 
   @override
-  String get updateLabel => 'Update';
+  String get updateLabel => 'Zaktualizovat';
 
   @override
-  String get upLabel => 'Up';
+  String get upLabel => 'Nahoru';
 
   @override
-  String get viewLabel => 'View';
+  String get viewLabel => 'Zobrazit';
 
   @override
-  String get warningLabel => 'Warning';
+  String get warningLabel => 'Varování';
 
   @override
-  String get windowLabel => 'Window';
+  String get windowLabel => 'Okno';
 
   @override
-  String get yesLabel => 'Yes';
+  String get yesLabel => 'Ano';
 
   @override
-  String get zoomInLabel => 'Zoom In';
+  String get zoomInLabel => 'Přiblížit';
 
   @override
-  String get zoomOutLabel => 'Zoom Out';
+  String get zoomOutLabel => 'Oddálit';
 }
