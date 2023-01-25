@@ -221,5 +221,13 @@
   "zoomInLabel": "Agrandir",
   "@zoomInLabel": {},
   "zoomOutLabel": "Reduire",
-  "@zoomOutLabel": {}
+  "@zoomOutLabel": {},
+  "forwardLabel": "Avançar",
+  "@forwardLabel": {},
+  "strikeThroughLabel": "Raiat",
+  "@strikeThroughLabel": {},
+  "skipLabel": "Ignorar",
+  "@skipLabel": {},
+  "upLabel": "Amont",
+  "@upLabel": {}
 }
