@@ -41,148 +41,148 @@ class UbuntuLocalizationsRu extends UbuntuLocalizations {
   String get shiftKey => 'Shift';
 
   @override
-  String get aboutLabel => 'About';
+  String get aboutLabel => 'О приложении';
 
   @override
-  String get addLabel => 'Add';
+  String get addLabel => 'Добавить';
 
   @override
-  String get allLabel => 'All';
+  String get allLabel => 'Все';
 
   @override
-  String get applyLabel => 'Apply';
+  String get applyLabel => 'Применить';
 
   @override
-  String get ascendingLabel => 'Ascending';
+  String get ascendingLabel => 'По возрастанию';
 
   @override
-  String get backLabel => 'Back';
+  String get backLabel => 'Назад';
 
   @override
-  String get boldLabel => 'Bold';
+  String get boldLabel => 'Жирный';
 
   @override
   String get bottomLabel => 'Bottom';
 
   @override
-  String get cancelLabel => 'Cancel';
+  String get cancelLabel => 'Отмена';
 
   @override
   String get centerLabel => 'Center';
 
   @override
-  String get clearLabel => 'Clear';
+  String get clearLabel => 'Очистить';
 
   @override
-  String get closeLabel => 'Close';
+  String get closeLabel => 'Закрыть';
 
   @override
-  String get colorLabel => 'Color';
+  String get colorLabel => 'Цвет';
 
   @override
-  String get connectLabel => 'Connect';
+  String get connectLabel => 'Соединение';
 
   @override
-  String get continueLabel => 'Continue';
+  String get continueLabel => 'Продолжить';
 
   @override
-  String get copyLabel => 'Copy';
+  String get copyLabel => 'Копировать';
 
   @override
-  String get createLabel => 'Create';
+  String get createLabel => 'Создать';
 
   @override
-  String get cutLabel => 'Cut';
+  String get cutLabel => 'Вырезать';
 
   @override
   String get decreaseLabel => 'Decrease';
 
   @override
-  String get deleteLabel => 'Delete';
+  String get deleteLabel => 'Удалить';
 
   @override
-  String get descendingLabel => 'Descending';
+  String get descendingLabel => 'По убыванию';
 
   @override
-  String get discardLabel => 'Discard';
+  String get discardLabel => 'Отказаться';
 
   @override
-  String get disconnectLabel => 'Disconnect';
+  String get disconnectLabel => 'Разъединить';
 
   @override
-  String get doneLabel => 'Done';
+  String get doneLabel => 'Готово';
 
   @override
-  String get downloadLabel => 'Download';
+  String get downloadLabel => 'Загрузить';
 
   @override
-  String get editLabel => 'Edit';
+  String get editLabel => 'Правка';
 
   @override
   String get enterLabel => 'Enter';
 
   @override
-  String get errorLabel => 'Error';
+  String get errorLabel => 'Ошибка';
 
   @override
   String get executeLabel => 'Execute';
 
   @override
-  String get exitLabel => 'Exit';
+  String get exitLabel => 'Выход';
 
   @override
-  String get fileLabel => 'File';
+  String get fileLabel => 'Файл';
 
   @override
-  String get fillLabel => 'Fill';
+  String get fillLabel => 'Заполнить';
 
   @override
-  String get findLabel => 'Find';
+  String get findLabel => 'Найти';
 
   @override
-  String get firstLabel => 'First';
+  String get firstLabel => 'Первый';
 
   @override
-  String get fontLabel => 'Font';
+  String get fontLabel => 'Шрифт';
 
   @override
-  String get forwardLabel => 'Forward';
+  String get forwardLabel => 'Вперед';
 
   @override
-  String get fullscreenLabel => 'Fullscreen';
+  String get fullscreenLabel => 'Во весь экран';
 
   @override
-  String get goBackLabel => 'Go Back';
+  String get goBackLabel => 'Назад';
 
   @override
-  String get helpLabel => 'Help';
+  String get helpLabel => 'Справка';
 
   @override
   String get homeLabel => 'Home';
 
   @override
-  String get importLabel => 'Import';
+  String get importLabel => 'Импорт';
 
   @override
-  String get increaseLabel => 'Increase';
+  String get increaseLabel => 'Увеличить';
 
   @override
   String get indexLabel => 'Index';
 
   @override
-  String get informationLabel => 'Information';
+  String get informationLabel => 'Сведения';
 
   @override
-  String get insertLabel => 'Insert';
+  String get insertLabel => 'Вставлять';
 
   @override
-  String get italicLabel => 'Italic';
+  String get italicLabel => 'Курсив';
 
   @override
-  String get landscapeLabel => 'Landscape';
+  String get landscapeLabel => 'Ландшафт';
 
   @override
-  String get lastLabel => 'Last';
+  String get lastLabel => 'Последний';
 
   @override
   String get leaveLabel => 'Leave';
@@ -194,7 +194,7 @@ class UbuntuLocalizationsRu extends UbuntuLocalizations {
   String get mediaLabel => 'Media';
 
   @override
-  String get networkLabel => 'Network';
+  String get networkLabel => 'Сеть';
 
   @override
   String get newLabel => 'New';
@@ -203,7 +203,7 @@ class UbuntuLocalizationsRu extends UbuntuLocalizations {
   String get nextLabel => 'Next';
 
   @override
-  String get noLabel => 'No';
+  String get noLabel => 'Нет';
 
   @override
   String get noneLabel => 'None';
@@ -215,34 +215,34 @@ class UbuntuLocalizationsRu extends UbuntuLocalizations {
   String get okLabel => 'OK';
 
   @override
-  String get openLabel => 'Open';
+  String get openLabel => 'Открыть';
 
   @override
-  String get pasteLabel => 'Paste';
+  String get pasteLabel => 'Вставить';
 
   @override
-  String get pauseLabel => 'Pause';
+  String get pauseLabel => 'Пауза';
 
   @override
   String get playLabel => 'Play';
 
   @override
-  String get portraitLabel => 'Portrait';
+  String get portraitLabel => 'Портрет';
 
   @override
-  String get preferencesLabel => 'Preferences';
+  String get preferencesLabel => 'Параметры';
 
   @override
   String get previousLabel => 'Previous';
 
   @override
-  String get printLabel => 'Print';
+  String get printLabel => 'Печать';
 
   @override
-  String get printPreviewLabel => 'Print Preview';
+  String get printPreviewLabel => 'Предварительный просмотр печати';
 
   @override
-  String get propertiesLabel => 'Properties';
+  String get propertiesLabel => 'Характеристики';
 
   @override
   String get questionLabel => 'Question';
@@ -254,28 +254,28 @@ class UbuntuLocalizationsRu extends UbuntuLocalizations {
   String get recordLabel => 'Record';
 
   @override
-  String get redoLabel => 'Redo';
+  String get redoLabel => 'Вернуть';
 
   @override
-  String get refreshLabel => 'Refresh';
+  String get refreshLabel => 'Обновить';
 
   @override
   String get removeLabel => 'Remove';
 
   @override
-  String get renameLabel => 'Rename';
+  String get renameLabel => 'Переименовать';
 
   @override
-  String get resetLabel => 'Reset';
+  String get resetLabel => 'Сбросить';
 
   @override
-  String get restoreLabel => 'Restore';
+  String get restoreLabel => 'Восстановить';
 
   @override
-  String get retryLabel => 'Retry';
+  String get retryLabel => 'Повторить';
 
   @override
-  String get revertLabel => 'Revert';
+  String get revertLabel => 'Вернуть';
 
   @override
   String get rewindLabel => 'Rewind';
@@ -284,31 +284,31 @@ class UbuntuLocalizationsRu extends UbuntuLocalizations {
   String get rightLabel => 'Right';
 
   @override
-  String get saveAsLabel => 'Save As';
+  String get saveAsLabel => 'Сохранить как';
 
   @override
-  String get saveLabel => 'Save';
+  String get saveLabel => 'Сохранить';
 
   @override
-  String get searchLabel => 'Search';
+  String get searchLabel => 'Поиск';
 
   @override
-  String get selectAllLabel => 'Select All';
+  String get selectAllLabel => 'Выделить все';
 
   @override
-  String get selectLabel => 'Select';
+  String get selectLabel => 'Выделить';
 
   @override
-  String get sendLabel => 'Send';
+  String get sendLabel => 'Отправить';
 
   @override
-  String get skipLabel => 'Skip';
+  String get skipLabel => 'Пропустить';
 
   @override
-  String get sortLabel => 'Sort';
+  String get sortLabel => 'Сортировать';
 
   @override
-  String get stopLabel => 'Stop';
+  String get stopLabel => 'Остановить';
 
   @override
   String get strikeThroughLabel => 'Strike Through';
@@ -320,29 +320,29 @@ class UbuntuLocalizationsRu extends UbuntuLocalizations {
   String get topLabel => 'Top';
 
   @override
-  String get undoLabel => 'Undo';
+  String get undoLabel => 'Отменить';
 
   @override
-  String get updateLabel => 'Update';
+  String get updateLabel => 'Обновить';
 
   @override
   String get upLabel => 'Up';
 
   @override
-  String get viewLabel => 'View';
+  String get viewLabel => 'Вид';
 
   @override
-  String get warningLabel => 'Warning';
+  String get warningLabel => 'Предупреждение';
 
   @override
-  String get windowLabel => 'Window';
+  String get windowLabel => 'Окно';
 
   @override
-  String get yesLabel => 'Yes';
+  String get yesLabel => 'Да';
 
   @override
-  String get zoomInLabel => 'Zoom In';
+  String get zoomInLabel => 'Увеличить';
 
   @override
-  String get zoomOutLabel => 'Zoom Out';
+  String get zoomOutLabel => 'Уменьшить';
 }

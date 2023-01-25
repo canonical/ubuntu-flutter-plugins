@@ -158,13 +158,13 @@ class UbuntuLocalizationsFr extends UbuntuLocalizations {
   String get helpLabel => 'Aide';
 
   @override
-  String get homeLabel => 'Home';
+  String get homeLabel => 'Accueil';
 
   @override
   String get importLabel => 'Importer';
 
   @override
-  String get increaseLabel => 'Increase';
+  String get increaseLabel => 'Augmenter';
 
   @override
   String get indexLabel => 'Index';
@@ -206,7 +206,7 @@ class UbuntuLocalizationsFr extends UbuntuLocalizations {
   String get noLabel => 'Non';
 
   @override
-  String get noneLabel => 'None';
+  String get noneLabel => 'Aucune';
 
   @override
   String get normalLabel => 'Normal';
@@ -299,7 +299,7 @@ class UbuntuLocalizationsFr extends UbuntuLocalizations {
   String get selectLabel => 'Select';
 
   @override
-  String get sendLabel => 'Send';
+  String get sendLabel => 'Envoyer';
 
   @override
   String get skipLabel => 'Skip';
@@ -323,19 +323,19 @@ class UbuntuLocalizationsFr extends UbuntuLocalizations {
   String get undoLabel => 'Undo';
 
   @override
-  String get updateLabel => 'Update';
+  String get updateLabel => 'Mettre à jour';
 
   @override
   String get upLabel => 'Up';
 
   @override
-  String get viewLabel => 'View';
+  String get viewLabel => 'Voir';
 
   @override
-  String get warningLabel => 'Warning';
+  String get warningLabel => 'Avertissement';
 
   @override
-  String get windowLabel => 'Window';
+  String get windowLabel => 'Fenêtre';
 
   @override
   String get yesLabel => 'Oui';

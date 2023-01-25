@@ -11,7 +11,7 @@ class UbuntuLocalizationsPt extends UbuntuLocalizations {
   String get languageName => 'Português';
 
   @override
-  String get backAction => 'Voltar';
+  String get backAction => 'Voltar atrás';
 
   @override
   String get continueAction => 'Continuar';
@@ -41,310 +41,310 @@ class UbuntuLocalizationsPt extends UbuntuLocalizations {
   String get shiftKey => 'Shift';
 
   @override
-  String get aboutLabel => 'About';
+  String get aboutLabel => 'Acerca';
 
   @override
-  String get addLabel => 'Add';
+  String get addLabel => 'Adicionar';
 
   @override
-  String get allLabel => 'All';
+  String get allLabel => 'Tudo';
 
   @override
-  String get applyLabel => 'Apply';
+  String get applyLabel => 'Aplicar';
 
   @override
-  String get ascendingLabel => 'Ascending';
+  String get ascendingLabel => 'Ascendente';
 
   @override
-  String get backLabel => 'Back';
+  String get backLabel => 'Voltar';
 
   @override
-  String get boldLabel => 'Bold';
+  String get boldLabel => 'Negrito';
 
   @override
-  String get bottomLabel => 'Bottom';
+  String get bottomLabel => 'Inferior';
 
   @override
-  String get cancelLabel => 'Cancel';
+  String get cancelLabel => 'Cancelar';
 
   @override
-  String get centerLabel => 'Center';
+  String get centerLabel => 'Centro';
 
   @override
-  String get clearLabel => 'Clear';
+  String get clearLabel => 'Limpar';
 
   @override
-  String get closeLabel => 'Close';
+  String get closeLabel => 'Fechar';
 
   @override
-  String get colorLabel => 'Color';
+  String get colorLabel => 'Cor';
 
   @override
-  String get connectLabel => 'Connect';
+  String get connectLabel => 'Ligar';
 
   @override
-  String get continueLabel => 'Continue';
+  String get continueLabel => 'Continuar';
 
   @override
-  String get copyLabel => 'Copy';
+  String get copyLabel => 'Copiar';
 
   @override
-  String get createLabel => 'Create';
+  String get createLabel => 'Criar';
 
   @override
-  String get cutLabel => 'Cut';
+  String get cutLabel => 'Cortar';
 
   @override
-  String get decreaseLabel => 'Decrease';
+  String get decreaseLabel => 'Diminuir';
 
   @override
-  String get deleteLabel => 'Delete';
+  String get deleteLabel => 'Eliminar';
 
   @override
-  String get descendingLabel => 'Descending';
+  String get descendingLabel => 'Descendente';
 
   @override
-  String get discardLabel => 'Discard';
+  String get discardLabel => 'Descartar';
 
   @override
-  String get disconnectLabel => 'Disconnect';
+  String get disconnectLabel => 'Desligar';
 
   @override
-  String get doneLabel => 'Done';
+  String get doneLabel => 'Concluído';
 
   @override
-  String get downloadLabel => 'Download';
+  String get downloadLabel => 'Transferir';
 
   @override
-  String get editLabel => 'Edit';
+  String get editLabel => 'Editar';
 
   @override
-  String get enterLabel => 'Enter';
+  String get enterLabel => 'Introduzir';
 
   @override
-  String get errorLabel => 'Error';
+  String get errorLabel => 'Erro';
 
   @override
-  String get executeLabel => 'Execute';
+  String get executeLabel => 'Executar';
 
   @override
-  String get exitLabel => 'Exit';
+  String get exitLabel => 'Sair';
 
   @override
-  String get fileLabel => 'File';
+  String get fileLabel => 'Ficheiro';
 
   @override
-  String get fillLabel => 'Fill';
+  String get fillLabel => 'Preencher';
 
   @override
-  String get findLabel => 'Find';
+  String get findLabel => 'Localizar';
 
   @override
-  String get firstLabel => 'First';
+  String get firstLabel => 'Primeiro';
 
   @override
-  String get fontLabel => 'Font';
+  String get fontLabel => 'Tipo de letra';
 
   @override
-  String get forwardLabel => 'Forward';
+  String get forwardLabel => 'Avançar';
 
   @override
-  String get fullscreenLabel => 'Fullscreen';
+  String get fullscreenLabel => 'Ecrã inteiro';
 
   @override
-  String get goBackLabel => 'Go Back';
+  String get goBackLabel => 'Voltar atrás';
 
   @override
-  String get helpLabel => 'Help';
+  String get helpLabel => 'Ajuda';
 
   @override
-  String get homeLabel => 'Home';
+  String get homeLabel => 'Pasta pessoal';
 
   @override
-  String get importLabel => 'Import';
+  String get importLabel => 'Importar';
 
   @override
-  String get increaseLabel => 'Increase';
+  String get increaseLabel => 'Aumentar';
 
   @override
-  String get indexLabel => 'Index';
+  String get indexLabel => 'Índice';
 
   @override
-  String get informationLabel => 'Information';
+  String get informationLabel => 'Informação';
 
   @override
-  String get insertLabel => 'Insert';
+  String get insertLabel => 'Inserir';
 
   @override
-  String get italicLabel => 'Italic';
+  String get italicLabel => 'Itálico';
 
   @override
-  String get landscapeLabel => 'Landscape';
+  String get landscapeLabel => 'Horizontal';
 
   @override
-  String get lastLabel => 'Last';
+  String get lastLabel => 'Último';
 
   @override
-  String get leaveLabel => 'Leave';
+  String get leaveLabel => 'Deixar';
 
   @override
-  String get leftLabel => 'Left';
+  String get leftLabel => 'Esquerda';
 
   @override
-  String get mediaLabel => 'Media';
+  String get mediaLabel => 'Multimédia';
 
   @override
-  String get networkLabel => 'Network';
+  String get networkLabel => 'Rede';
 
   @override
-  String get newLabel => 'New';
+  String get newLabel => 'Novo';
 
   @override
-  String get nextLabel => 'Next';
+  String get nextLabel => 'Seguinte';
 
   @override
-  String get noLabel => 'No';
+  String get noLabel => 'Não';
 
   @override
-  String get noneLabel => 'None';
+  String get noneLabel => 'Nenhum';
 
   @override
   String get normalLabel => 'Normal';
 
   @override
-  String get okLabel => 'OK';
+  String get okLabel => 'Aceitar';
 
   @override
-  String get openLabel => 'Open';
+  String get openLabel => 'Abrir';
 
   @override
-  String get pasteLabel => 'Paste';
+  String get pasteLabel => 'Colar';
 
   @override
-  String get pauseLabel => 'Pause';
+  String get pauseLabel => 'Pausa';
 
   @override
-  String get playLabel => 'Play';
+  String get playLabel => 'Reproduzir';
 
   @override
-  String get portraitLabel => 'Portrait';
+  String get portraitLabel => 'Vertical';
 
   @override
-  String get preferencesLabel => 'Preferences';
+  String get preferencesLabel => 'Preferências';
 
   @override
-  String get previousLabel => 'Previous';
+  String get previousLabel => 'Anterior';
 
   @override
-  String get printLabel => 'Print';
+  String get printLabel => 'Mostrar';
 
   @override
-  String get printPreviewLabel => 'Print Preview';
+  String get printPreviewLabel => 'Mostrar pré-visualização';
 
   @override
-  String get propertiesLabel => 'Properties';
+  String get propertiesLabel => 'Propriedades';
 
   @override
-  String get questionLabel => 'Question';
+  String get questionLabel => 'Questão';
 
   @override
-  String get quitLabel => 'Quit';
+  String get quitLabel => 'Sair';
 
   @override
-  String get recordLabel => 'Record';
+  String get recordLabel => 'Registo';
 
   @override
-  String get redoLabel => 'Redo';
+  String get redoLabel => 'Refazer';
 
   @override
-  String get refreshLabel => 'Refresh';
+  String get refreshLabel => 'Atualizar';
 
   @override
-  String get removeLabel => 'Remove';
+  String get removeLabel => 'Remover';
 
   @override
-  String get renameLabel => 'Rename';
+  String get renameLabel => 'Renomear';
 
   @override
-  String get resetLabel => 'Reset';
+  String get resetLabel => 'Repor';
 
   @override
-  String get restoreLabel => 'Restore';
+  String get restoreLabel => 'Restaurar';
 
   @override
-  String get retryLabel => 'Retry';
+  String get retryLabel => 'Tentar novamente';
 
   @override
-  String get revertLabel => 'Revert';
+  String get revertLabel => 'Reverter';
 
   @override
-  String get rewindLabel => 'Rewind';
+  String get rewindLabel => 'Rebobinar';
 
   @override
-  String get rightLabel => 'Right';
+  String get rightLabel => 'Direita';
 
   @override
-  String get saveAsLabel => 'Save As';
+  String get saveAsLabel => 'Guardar como';
 
   @override
-  String get saveLabel => 'Save';
+  String get saveLabel => 'Guardar';
 
   @override
-  String get searchLabel => 'Search';
+  String get searchLabel => 'Procurar';
 
   @override
-  String get selectAllLabel => 'Select All';
+  String get selectAllLabel => 'Selecionar tudo';
 
   @override
-  String get selectLabel => 'Select';
+  String get selectLabel => 'Selecionar';
 
   @override
-  String get sendLabel => 'Send';
+  String get sendLabel => 'Enviar';
 
   @override
-  String get skipLabel => 'Skip';
+  String get skipLabel => 'Ignorar';
 
   @override
-  String get sortLabel => 'Sort';
+  String get sortLabel => 'Ordenar';
 
   @override
-  String get stopLabel => 'Stop';
+  String get stopLabel => 'Parar';
 
   @override
-  String get strikeThroughLabel => 'Strike Through';
+  String get strikeThroughLabel => 'Sobrepor';
 
   @override
-  String get submitLabel => 'Submit';
+  String get submitLabel => 'Submeter';
 
   @override
-  String get topLabel => 'Top';
+  String get topLabel => 'Superior';
 
   @override
-  String get undoLabel => 'Undo';
+  String get undoLabel => 'Anular';
 
   @override
-  String get updateLabel => 'Update';
+  String get updateLabel => 'Atualizar';
 
   @override
-  String get upLabel => 'Up';
+  String get upLabel => 'Cima';
 
   @override
-  String get viewLabel => 'View';
+  String get viewLabel => 'Ver';
 
   @override
-  String get warningLabel => 'Warning';
+  String get warningLabel => 'Aviso';
 
   @override
-  String get windowLabel => 'Window';
+  String get windowLabel => 'Janela';
 
   @override
-  String get yesLabel => 'Yes';
+  String get yesLabel => 'Sim';
 
   @override
-  String get zoomInLabel => 'Zoom In';
+  String get zoomInLabel => 'Ampliar';
 
   @override
-  String get zoomOutLabel => 'Zoom Out';
+  String get zoomOutLabel => 'Reduzir';
 }
 
 /// The translations for Portuguese, as used in Brazil (`pt_BR`).
