@@ -1,3 +1,7 @@
+## 0.9.2
+
+- Fix Flutter 3.7.0 compatibility
+
 ## 0.9.1
 
 - Add HeroController

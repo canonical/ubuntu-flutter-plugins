@@ -106,7 +106,10 @@ class WizardScopeState extends State<WizardScope> {
     final routes = _getRoutes();
     assert(routes.isNotEmpty, routes.length.toString());
 
-    final previous = routes.last.copyWith(arguments: arguments);
+    final previous = WizardRouteSettings(
+      name: routes.last.name,
+      arguments: arguments,
+    );
 
     // advance to a specific route
     String? onNext() => advance?.call(previous);
