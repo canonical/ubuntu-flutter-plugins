@@ -374,4 +374,310 @@ class UbuntuLocalizationsPtBr extends UbuntuLocalizationsPt {
 
   @override
   String get weakPassword => 'Senha fraca';
+
+  @override
+  String get altKey => 'Alt';
+
+  @override
+  String get controlKey => 'Ctrl';
+
+  @override
+  String get metaKey => 'Meta';
+
+  @override
+  String get shiftKey => 'Shift';
+
+  @override
+  String get aboutLabel => 'Sobre';
+
+  @override
+  String get addLabel => 'Adicionar';
+
+  @override
+  String get allLabel => 'Todos';
+
+  @override
+  String get applyLabel => 'Aplicar';
+
+  @override
+  String get backLabel => 'Voltar';
+
+  @override
+  String get boldLabel => 'Negrito';
+
+  @override
+  String get bottomLabel => 'Inferior';
+
+  @override
+  String get cancelLabel => 'Cancelar';
+
+  @override
+  String get centerLabel => 'Centro';
+
+  @override
+  String get clearLabel => 'Limpar';
+
+  @override
+  String get closeLabel => 'Fechar';
+
+  @override
+  String get colorLabel => 'Cor';
+
+  @override
+  String get connectLabel => 'Conectar';
+
+  @override
+  String get continueLabel => 'Continuar';
+
+  @override
+  String get copyLabel => 'Copiar';
+
+  @override
+  String get createLabel => 'Criar';
+
+  @override
+  String get cutLabel => 'Recortar';
+
+  @override
+  String get decreaseLabel => 'Diminuir';
+
+  @override
+  String get deleteLabel => 'Apagar';
+
+  @override
+  String get discardLabel => 'Descartar';
+
+  @override
+  String get disconnectLabel => 'Desconectar';
+
+  @override
+  String get doneLabel => 'Feito';
+
+  @override
+  String get downloadLabel => 'Download';
+
+  @override
+  String get editLabel => 'Editar';
+
+  @override
+  String get enterLabel => 'Enter';
+
+  @override
+  String get errorLabel => 'Erro';
+
+  @override
+  String get executeLabel => 'Executar';
+
+  @override
+  String get exitLabel => 'Sair';
+
+  @override
+  String get fileLabel => 'Arquivo';
+
+  @override
+  String get fillLabel => 'Preencher';
+
+  @override
+  String get findLabel => 'Procurar';
+
+  @override
+  String get firstLabel => 'Primeiro';
+
+  @override
+  String get fontLabel => 'Fonte';
+
+  @override
+  String get forwardLabel => 'Avançar';
+
+  @override
+  String get fullscreenLabel => 'Tela Cheia';
+
+  @override
+  String get goBackLabel => 'Voltar';
+
+  @override
+  String get helpLabel => 'Ajuda';
+
+  @override
+  String get homeLabel => 'Home';
+
+  @override
+  String get importLabel => 'Importar';
+
+  @override
+  String get increaseLabel => 'Aumentar';
+
+  @override
+  String get indexLabel => 'Índice';
+
+  @override
+  String get informationLabel => 'Informação';
+
+  @override
+  String get insertLabel => 'Inserir';
+
+  @override
+  String get italicLabel => 'Itálico';
+
+  @override
+  String get landscapeLabel => 'Paisagem';
+
+  @override
+  String get lastLabel => 'Anterior';
+
+  @override
+  String get leaveLabel => 'Sair';
+
+  @override
+  String get leftLabel => 'Esquerdo';
+
+  @override
+  String get mediaLabel => 'Mídia';
+
+  @override
+  String get networkLabel => 'Rede';
+
+  @override
+  String get newLabel => 'Novo';
+
+  @override
+  String get nextLabel => 'Próximo';
+
+  @override
+  String get noLabel => 'Não';
+
+  @override
+  String get noneLabel => 'Nenhum(a)';
+
+  @override
+  String get normalLabel => 'Normal';
+
+  @override
+  String get okLabel => 'OK';
+
+  @override
+  String get openLabel => 'Abrir';
+
+  @override
+  String get pasteLabel => 'Colar';
+
+  @override
+  String get pauseLabel => 'Pausar';
+
+  @override
+  String get playLabel => 'Play';
+
+  @override
+  String get portraitLabel => 'Retrato';
+
+  @override
+  String get preferencesLabel => 'Preferências';
+
+  @override
+  String get previousLabel => 'Anterior';
+
+  @override
+  String get printLabel => 'Imprimir';
+
+  @override
+  String get printPreviewLabel => 'Visualizar Impressão';
+
+  @override
+  String get propertiesLabel => 'Propriedades';
+
+  @override
+  String get questionLabel => 'Pergunta';
+
+  @override
+  String get quitLabel => 'Sair';
+
+  @override
+  String get recordLabel => 'Registrar';
+
+  @override
+  String get redoLabel => 'Refazer';
+
+  @override
+  String get refreshLabel => 'Atualizar';
+
+  @override
+  String get removeLabel => 'Remover';
+
+  @override
+  String get renameLabel => 'Renomear';
+
+  @override
+  String get resetLabel => 'Redefinir';
+
+  @override
+  String get restoreLabel => 'Restaurar';
+
+  @override
+  String get retryLabel => 'Tentar Novamente';
+
+  @override
+  String get revertLabel => 'Reverter';
+
+  @override
+  String get rewindLabel => 'Retroceder';
+
+  @override
+  String get rightLabel => 'Direita';
+
+  @override
+  String get saveAsLabel => 'Salvar como';
+
+  @override
+  String get saveLabel => 'Salvar';
+
+  @override
+  String get searchLabel => 'Buscar';
+
+  @override
+  String get selectAllLabel => 'Selecionar Tudo';
+
+  @override
+  String get selectLabel => 'Selecionar';
+
+  @override
+  String get sendLabel => 'Enviar';
+
+  @override
+  String get skipLabel => 'Pular';
+
+  @override
+  String get sortLabel => 'Classificar';
+
+  @override
+  String get stopLabel => 'Parar';
+
+  @override
+  String get submitLabel => 'Submeter';
+
+  @override
+  String get topLabel => 'Topo';
+
+  @override
+  String get undoLabel => 'Desfazer';
+
+  @override
+  String get updateLabel => 'Atualizar';
+
+  @override
+  String get viewLabel => 'Visualizar';
+
+  @override
+  String get warningLabel => 'Aviso';
+
+  @override
+  String get windowLabel => 'Janela';
+
+  @override
+  String get yesLabel => 'Sim';
+
+  @override
+  String get zoomInLabel => 'Aumentar o Zoom';
+
+  @override
+  String get zoomOutLabel => 'Diminuir o Zoom';
 }
