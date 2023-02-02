@@ -211,5 +211,15 @@
   "sortLabel": "Sortera",
   "@sortLabel": {},
   "warningLabel": "Varning",
-  "@warningLabel": {}
+  "@warningLabel": {},
+  "enterLabel": "Enter",
+  "@enterLabel": {},
+  "insertLabel": "Insert",
+  "@insertLabel": {},
+  "landscapeLabel": "Landscape",
+  "@landscapeLabel": {},
+  "lastLabel": "Sista",
+  "@lastLabel": {},
+  "skipLabel": "Hoppa över",
+  "@skipLabel": {}
 }
