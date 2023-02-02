@@ -182,7 +182,7 @@ class UbuntuLocalizationsSv extends UbuntuLocalizations {
   String get landscapeLabel => 'Landscape';
 
   @override
-  String get lastLabel => 'Last';
+  String get lastLabel => 'Sista';
 
   @override
   String get leaveLabel => 'Lämna';
@@ -302,7 +302,7 @@ class UbuntuLocalizationsSv extends UbuntuLocalizations {
   String get sendLabel => 'Skicka';
 
   @override
-  String get skipLabel => 'Skip';
+  String get skipLabel => 'Hoppa över';
 
   @override
   String get sortLabel => 'Sortera';

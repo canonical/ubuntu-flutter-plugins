@@ -146,7 +146,7 @@ class UbuntuLocalizationsOc extends UbuntuLocalizations {
   String get fontLabel => 'Polissa';
 
   @override
-  String get forwardLabel => 'Forward';
+  String get forwardLabel => 'Avançar';
 
   @override
   String get fullscreenLabel => 'Plen ecran';
@@ -302,7 +302,7 @@ class UbuntuLocalizationsOc extends UbuntuLocalizations {
   String get sendLabel => 'Enviar';
 
   @override
-  String get skipLabel => 'Skip';
+  String get skipLabel => 'Ignorar';
 
   @override
   String get sortLabel => 'Triar';
@@ -311,7 +311,7 @@ class UbuntuLocalizationsOc extends UbuntuLocalizations {
   String get stopLabel => 'Arrestar';
 
   @override
-  String get strikeThroughLabel => 'Strike Through';
+  String get strikeThroughLabel => 'Raiat';
 
   @override
   String get submitLabel => 'Mandar';
@@ -326,7 +326,7 @@ class UbuntuLocalizationsOc extends UbuntuLocalizations {
   String get updateLabel => 'Metre a jorn';
 
   @override
-  String get upLabel => 'Up';
+  String get upLabel => 'Amont';
 
   @override
   String get viewLabel => 'Veire';

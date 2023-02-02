@@ -62,13 +62,13 @@ class UbuntuLocalizationsRu extends UbuntuLocalizations {
   String get boldLabel => 'Жирный';
 
   @override
-  String get bottomLabel => 'Bottom';
+  String get bottomLabel => 'Снизу';
 
   @override
   String get cancelLabel => 'Отмена';
 
   @override
-  String get centerLabel => 'Center';
+  String get centerLabel => 'Центр';
 
   @override
   String get clearLabel => 'Очистить';
@@ -95,7 +95,7 @@ class UbuntuLocalizationsRu extends UbuntuLocalizations {
   String get cutLabel => 'Вырезать';
 
   @override
-  String get decreaseLabel => 'Decrease';
+  String get decreaseLabel => 'Уменьшить';
 
   @override
   String get deleteLabel => 'Удалить';
@@ -119,13 +119,13 @@ class UbuntuLocalizationsRu extends UbuntuLocalizations {
   String get editLabel => 'Правка';
 
   @override
-  String get enterLabel => 'Enter';
+  String get enterLabel => 'Ввод';
 
   @override
   String get errorLabel => 'Ошибка';
 
   @override
-  String get executeLabel => 'Execute';
+  String get executeLabel => 'Выполнить';
 
   @override
   String get exitLabel => 'Выход';
@@ -158,7 +158,7 @@ class UbuntuLocalizationsRu extends UbuntuLocalizations {
   String get helpLabel => 'Справка';
 
   @override
-  String get homeLabel => 'Home';
+  String get homeLabel => 'Домой';
 
   @override
   String get importLabel => 'Импорт';
@@ -167,7 +167,7 @@ class UbuntuLocalizationsRu extends UbuntuLocalizations {
   String get increaseLabel => 'Увеличить';
 
   @override
-  String get indexLabel => 'Index';
+  String get indexLabel => 'Индекс';
 
   @override
   String get informationLabel => 'Сведения';
@@ -185,13 +185,13 @@ class UbuntuLocalizationsRu extends UbuntuLocalizations {
   String get lastLabel => 'Последний';
 
   @override
-  String get leaveLabel => 'Leave';
+  String get leaveLabel => 'Покинуть';
 
   @override
-  String get leftLabel => 'Left';
+  String get leftLabel => 'Слева';
 
   @override
-  String get mediaLabel => 'Media';
+  String get mediaLabel => 'Медиа';
 
   @override
   String get networkLabel => 'Сеть';
@@ -224,7 +224,7 @@ class UbuntuLocalizationsRu extends UbuntuLocalizations {
   String get pauseLabel => 'Пауза';
 
   @override
-  String get playLabel => 'Play';
+  String get playLabel => 'Воспроизвести';
 
   @override
   String get portraitLabel => 'Портрет';
@@ -245,13 +245,13 @@ class UbuntuLocalizationsRu extends UbuntuLocalizations {
   String get propertiesLabel => 'Характеристики';
 
   @override
-  String get questionLabel => 'Question';
+  String get questionLabel => 'Вопрос';
 
   @override
-  String get quitLabel => 'Quit';
+  String get quitLabel => 'Завершить';
 
   @override
-  String get recordLabel => 'Record';
+  String get recordLabel => 'Запись';
 
   @override
   String get redoLabel => 'Вернуть';
@@ -260,7 +260,7 @@ class UbuntuLocalizationsRu extends UbuntuLocalizations {
   String get refreshLabel => 'Обновить';
 
   @override
-  String get removeLabel => 'Remove';
+  String get removeLabel => 'Удалить';
 
   @override
   String get renameLabel => 'Переименовать';
@@ -278,10 +278,10 @@ class UbuntuLocalizationsRu extends UbuntuLocalizations {
   String get revertLabel => 'Вернуть';
 
   @override
-  String get rewindLabel => 'Rewind';
+  String get rewindLabel => 'Перемотка';
 
   @override
-  String get rightLabel => 'Right';
+  String get rightLabel => 'Справа';
 
   @override
   String get saveAsLabel => 'Сохранить как';
@@ -311,13 +311,13 @@ class UbuntuLocalizationsRu extends UbuntuLocalizations {
   String get stopLabel => 'Остановить';
 
   @override
-  String get strikeThroughLabel => 'Strike Through';
+  String get strikeThroughLabel => 'Зачеркнуть';
 
   @override
   String get submitLabel => 'Submit';
 
   @override
-  String get topLabel => 'Top';
+  String get topLabel => 'Сверху';
 
   @override
   String get undoLabel => 'Отменить';
@@ -326,7 +326,7 @@ class UbuntuLocalizationsRu extends UbuntuLocalizations {
   String get updateLabel => 'Обновить';
 
   @override
-  String get upLabel => 'Up';
+  String get upLabel => 'Вверх';
 
   @override
   String get viewLabel => 'Вид';
@@ -341,8 +341,8 @@ class UbuntuLocalizationsRu extends UbuntuLocalizations {
   String get yesLabel => 'Да';
 
   @override
-  String get zoomInLabel => 'Увеличить';
+  String get zoomInLabel => 'Увеличить масштаб';
 
   @override
-  String get zoomOutLabel => 'Уменьшить';
+  String get zoomOutLabel => 'Уменьшить масштаб';
 }
