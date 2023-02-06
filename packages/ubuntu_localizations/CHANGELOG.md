@@ -1,3 +1,7 @@
+## 0.0.4
+
+- New translations.
+
 ## 0.0.3
 
 - Add stock labels.
