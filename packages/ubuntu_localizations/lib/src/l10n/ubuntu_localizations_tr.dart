@@ -65,7 +65,7 @@ class UbuntuLocalizationsTr extends UbuntuLocalizations {
   String get bottomLabel => 'Bottom';
 
   @override
-  String get cancelLabel => 'Cancel';
+  String get cancelLabel => 'İptal Et';
 
   @override
   String get centerLabel => 'Center';
@@ -80,58 +80,58 @@ class UbuntuLocalizationsTr extends UbuntuLocalizations {
   String get colorLabel => 'Color';
 
   @override
-  String get connectLabel => 'Connect';
+  String get connectLabel => 'Bağlan';
 
   @override
-  String get continueLabel => 'Continue';
+  String get continueLabel => 'Devam Et';
 
   @override
-  String get copyLabel => 'Copy';
+  String get copyLabel => 'Koryala';
 
   @override
-  String get createLabel => 'Create';
+  String get createLabel => 'Oluştur';
 
   @override
-  String get cutLabel => 'Cut';
+  String get cutLabel => 'Kes';
 
   @override
-  String get decreaseLabel => 'Decrease';
+  String get decreaseLabel => 'Azalt';
 
   @override
-  String get deleteLabel => 'Delete';
+  String get deleteLabel => 'Dil';
 
   @override
-  String get descendingLabel => 'Descending';
+  String get descendingLabel => 'Azalan';
 
   @override
-  String get discardLabel => 'Discard';
+  String get discardLabel => 'Gözden çıkar';
 
   @override
-  String get disconnectLabel => 'Disconnect';
+  String get disconnectLabel => 'Bağlantıyı kes';
 
   @override
-  String get doneLabel => 'Done';
+  String get doneLabel => 'Bitti';
 
   @override
-  String get downloadLabel => 'Download';
+  String get downloadLabel => 'indir';
 
   @override
-  String get editLabel => 'Edit';
+  String get editLabel => 'Düzenle';
 
   @override
   String get enterLabel => 'Enter';
 
   @override
-  String get errorLabel => 'Error';
+  String get errorLabel => 'Hata';
 
   @override
-  String get executeLabel => 'Execute';
+  String get executeLabel => 'Yürüt';
 
   @override
-  String get exitLabel => 'Exit';
+  String get exitLabel => 'Çıkış';
 
   @override
-  String get fileLabel => 'File';
+  String get fileLabel => 'Dosya';
 
   @override
   String get fillLabel => 'Fill';
