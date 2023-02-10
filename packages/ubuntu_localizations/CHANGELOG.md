@@ -1,3 +1,7 @@
+## 0.0.5
+
+- Add localizations delegates for Cupertino.
+
 ## 0.0.4
 
 - New translations.
