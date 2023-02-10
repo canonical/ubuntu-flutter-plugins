@@ -2,11 +2,11 @@ import 'dart:ui';
 
 import 'package:intl/date_symbols.dart';
 
-import 'material_localizations.dart';
+import 'flutter_localizations.dart';
 
-class UbuntuMaterialLocalizationsDelegateEo
-    extends UbuntuMaterialLocalizationsDelegate {
-  const UbuntuMaterialLocalizationsDelegateEo();
+class FlutterLocalizationsDelegateEo<T>
+    extends FlutterLocalizationsDelegate<T> {
+  const FlutterLocalizationsDelegateEo();
 
   @override
   bool isSupported(Locale locale) => locale.languageCode == 'eo';
