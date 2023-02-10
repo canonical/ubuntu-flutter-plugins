@@ -4,7 +4,7 @@ import 'package:intl/intl.dart';
 import 'package:intl/intl_standalone.dart';
 
 import 'l10n/ubuntu_localizations.dart';
-import 'material/material_localizations.dart';
+import 'flutter/flutter_localizations.dart';
 
 export 'l10n/ubuntu_localizations.dart';
 
@@ -14,7 +14,8 @@ class GlobalUbuntuLocalizations {
   static const List<LocalizationsDelegate<dynamic>> delegates =
       <LocalizationsDelegate<dynamic>>[
     UbuntuLocalizations.delegate,
-    ...UbuntuMaterialLocalizations.delegates,
+    ...FlutterMaterialLocalizations.delegates,
+    ...FlutterCupertinoLocalizations.delegates,
   ];
 }
 
