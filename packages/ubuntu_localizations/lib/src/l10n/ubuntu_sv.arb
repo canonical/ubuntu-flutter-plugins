@@ -221,5 +221,11 @@
   "lastLabel": "Sista",
   "@lastLabel": {},
   "skipLabel": "Hoppa över",
-  "@skipLabel": {}
+  "@skipLabel": {},
+  "strikeThroughLabel": "Genomstrykning",
+  "@strikeThroughLabel": {},
+  "ascendingLabel": "Stigande",
+  "@ascendingLabel": {},
+  "descendingLabel": "Nedåtgående",
+  "@descendingLabel": {}
 }
