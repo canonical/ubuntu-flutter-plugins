@@ -714,4 +714,33 @@ void main() {
     expect(find.text(Routes.second), findsNothing);
     expect(find.text(Routes.third), findsOneWidget);
   });
+
+  testWidgets('rebuild with different routes', (tester) async {
+    await pumpWizardApp(
+      tester,
+      routes: {
+        Routes.first: WizardRoute(builder: (_) => const Text(Routes.first)),
+        Routes.second: WizardRoute(builder: (_) => const Text(Routes.second)),
+        Routes.third: WizardRoute(builder: (_) => const Text(Routes.third)),
+      },
+    );
+    await tester.pumpAndSettle();
+
+    expect(find.text(Routes.first), findsOneWidget);
+    expect(find.text(Routes.second), findsNothing);
+    expect(find.text(Routes.third), findsNothing);
+
+    await pumpWizardApp(
+      tester,
+      routes: {
+        Routes.second: WizardRoute(builder: (_) => const Text(Routes.second)),
+        Routes.third: WizardRoute(builder: (_) => const Text(Routes.third)),
+      },
+    );
+    await tester.pumpAndSettle();
+
+    expect(find.text(Routes.first), findsNothing);
+    expect(find.text(Routes.second), findsOneWidget);
+    expect(find.text(Routes.third), findsNothing);
+  });
 }

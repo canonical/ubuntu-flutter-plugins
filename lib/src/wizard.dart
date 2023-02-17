@@ -182,15 +182,28 @@ class Wizard extends StatefulWidget {
 }
 
 class _WizardState extends State<Wizard> {
-  late List<WizardRouteSettings> _routes;
+  List<WizardRouteSettings> _routes = [];
 
   @override
   void initState() {
     super.initState();
-    _routes = <WizardRouteSettings>[
-      WizardRouteSettings(
-          name: widget.initialRoute ?? widget.routes.keys.first),
-    ];
+    _ensureInitialRoute();
+  }
+
+  @override
+  void didUpdateWidget(Wizard oldWidget) {
+    super.didUpdateWidget(oldWidget);
+    _routes.removeWhere((r) => !widget.routes.containsKey(r.name));
+    _ensureInitialRoute();
+  }
+
+  void _ensureInitialRoute() {
+    if (_routes.isEmpty) {
+      _routes = <WizardRouteSettings>[
+        WizardRouteSettings(
+            name: widget.initialRoute ?? widget.routes.keys.first),
+      ];
+    }
   }
 
   Page _createPage(BuildContext context,
