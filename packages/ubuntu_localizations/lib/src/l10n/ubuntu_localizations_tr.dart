@@ -11,7 +11,7 @@ class UbuntuLocalizationsTr extends UbuntuLocalizations {
   String get languageName => 'Türkçe';
 
   @override
-  String get backAction => 'Geri Dön';
+  String get backAction => 'Geri Git';
 
   @override
   String get continueAction => 'Devam et';
@@ -35,49 +35,49 @@ class UbuntuLocalizationsTr extends UbuntuLocalizations {
   String get controlKey => 'Control';
 
   @override
-  String get metaKey => 'Meta';
+  String get metaKey => 'Üst';
 
   @override
   String get shiftKey => 'Shift';
 
   @override
-  String get aboutLabel => 'About';
+  String get aboutLabel => 'Hakkında';
 
   @override
-  String get addLabel => 'Add';
+  String get addLabel => 'Ekle';
 
   @override
-  String get allLabel => 'All';
+  String get allLabel => 'Tümü';
 
   @override
-  String get applyLabel => 'Apply';
+  String get applyLabel => 'Uygula';
 
   @override
-  String get ascendingLabel => 'Ascending';
+  String get ascendingLabel => 'Artan';
 
   @override
-  String get backLabel => 'Back';
+  String get backLabel => 'Geri';
 
   @override
-  String get boldLabel => 'Bold';
+  String get boldLabel => 'Kalın';
 
   @override
-  String get bottomLabel => 'Bottom';
+  String get bottomLabel => 'Alt';
 
   @override
   String get cancelLabel => 'İptal Et';
 
   @override
-  String get centerLabel => 'Center';
+  String get centerLabel => 'Ortala';
 
   @override
-  String get clearLabel => 'Clear';
+  String get clearLabel => 'Temizle';
 
   @override
-  String get closeLabel => 'Close';
+  String get closeLabel => 'Kapat';
 
   @override
-  String get colorLabel => 'Color';
+  String get colorLabel => 'Renk';
 
   @override
   String get connectLabel => 'Bağlan';
@@ -86,7 +86,7 @@ class UbuntuLocalizationsTr extends UbuntuLocalizations {
   String get continueLabel => 'Devam Et';
 
   @override
-  String get copyLabel => 'Koryala';
+  String get copyLabel => 'Kopyala';
 
   @override
   String get createLabel => 'Oluştur';
@@ -98,7 +98,7 @@ class UbuntuLocalizationsTr extends UbuntuLocalizations {
   String get decreaseLabel => 'Azalt';
 
   @override
-  String get deleteLabel => 'Dil';
+  String get deleteLabel => 'Sil';
 
   @override
   String get descendingLabel => 'Azalan';
@@ -113,7 +113,7 @@ class UbuntuLocalizationsTr extends UbuntuLocalizations {
   String get doneLabel => 'Bitti';
 
   @override
-  String get downloadLabel => 'indir';
+  String get downloadLabel => 'İndir';
 
   @override
   String get editLabel => 'Düzenle';
@@ -134,215 +134,215 @@ class UbuntuLocalizationsTr extends UbuntuLocalizations {
   String get fileLabel => 'Dosya';
 
   @override
-  String get fillLabel => 'Fill';
+  String get fillLabel => 'Doldur';
 
   @override
-  String get findLabel => 'Find';
+  String get findLabel => 'Bul';
 
   @override
-  String get firstLabel => 'First';
+  String get firstLabel => 'İlk';
 
   @override
-  String get fontLabel => 'Font';
+  String get fontLabel => 'Yazı Tipi';
 
   @override
-  String get forwardLabel => 'Forward';
+  String get forwardLabel => 'İleri';
 
   @override
-  String get fullscreenLabel => 'Fullscreen';
+  String get fullscreenLabel => 'Tam Ekran';
 
   @override
-  String get goBackLabel => 'Go Back';
+  String get goBackLabel => 'Geri Git';
 
   @override
-  String get helpLabel => 'Help';
+  String get helpLabel => 'Yardım';
 
   @override
-  String get homeLabel => 'Home';
+  String get homeLabel => 'Başlangıç';
 
   @override
-  String get importLabel => 'Import';
+  String get importLabel => 'İçe Aktar';
 
   @override
-  String get increaseLabel => 'Increase';
+  String get increaseLabel => 'Artır';
 
   @override
-  String get indexLabel => 'Index';
+  String get indexLabel => 'İndis';
 
   @override
-  String get informationLabel => 'Information';
+  String get informationLabel => 'Bilgi';
 
   @override
-  String get insertLabel => 'Insert';
+  String get insertLabel => 'Ekle';
 
   @override
-  String get italicLabel => 'Italic';
+  String get italicLabel => 'Eğik';
 
   @override
-  String get landscapeLabel => 'Landscape';
+  String get landscapeLabel => 'Yatay';
 
   @override
-  String get lastLabel => 'Last';
+  String get lastLabel => 'Son';
 
   @override
-  String get leaveLabel => 'Leave';
+  String get leaveLabel => 'Ayrıl';
 
   @override
-  String get leftLabel => 'Left';
+  String get leftLabel => 'Sol';
 
   @override
-  String get mediaLabel => 'Media';
+  String get mediaLabel => 'Ortam';
 
   @override
-  String get networkLabel => 'Network';
+  String get networkLabel => 'Ağ';
 
   @override
-  String get newLabel => 'New';
+  String get newLabel => 'Yeni';
 
   @override
-  String get nextLabel => 'Next';
+  String get nextLabel => 'Sonraki';
 
   @override
-  String get noLabel => 'No';
+  String get noLabel => 'Hayır';
 
   @override
-  String get noneLabel => 'None';
+  String get noneLabel => 'Hiçbiri';
 
   @override
   String get normalLabel => 'Normal';
 
   @override
-  String get okLabel => 'OK';
+  String get okLabel => 'Tamam';
 
   @override
-  String get openLabel => 'Open';
+  String get openLabel => 'Aç';
 
   @override
-  String get pasteLabel => 'Paste';
+  String get pasteLabel => 'Yapıştır';
 
   @override
-  String get pauseLabel => 'Pause';
+  String get pauseLabel => 'Beklet';
 
   @override
-  String get playLabel => 'Play';
+  String get playLabel => 'Oynat';
 
   @override
-  String get portraitLabel => 'Portrait';
+  String get portraitLabel => 'Dikey';
 
   @override
-  String get preferencesLabel => 'Preferences';
+  String get preferencesLabel => 'Tercihler';
 
   @override
-  String get previousLabel => 'Previous';
+  String get previousLabel => 'Önceki';
 
   @override
-  String get printLabel => 'Print';
+  String get printLabel => 'Yazdır';
 
   @override
-  String get printPreviewLabel => 'Print Preview';
+  String get printPreviewLabel => 'Baskı Önizleme';
 
   @override
-  String get propertiesLabel => 'Properties';
+  String get propertiesLabel => 'Özellikler';
 
   @override
-  String get questionLabel => 'Question';
+  String get questionLabel => 'Soru';
 
   @override
-  String get quitLabel => 'Quit';
+  String get quitLabel => 'Çık';
 
   @override
-  String get recordLabel => 'Record';
+  String get recordLabel => 'Kaydet';
 
   @override
-  String get redoLabel => 'Redo';
+  String get redoLabel => 'Yinele';
 
   @override
-  String get refreshLabel => 'Refresh';
+  String get refreshLabel => 'Yenile';
 
   @override
-  String get removeLabel => 'Remove';
+  String get removeLabel => 'Kaldır';
 
   @override
-  String get renameLabel => 'Rename';
+  String get renameLabel => 'Yeniden Adlandır';
 
   @override
-  String get resetLabel => 'Reset';
+  String get resetLabel => 'Sıfırla';
 
   @override
-  String get restoreLabel => 'Restore';
+  String get restoreLabel => 'Geri Yükle';
 
   @override
-  String get retryLabel => 'Retry';
+  String get retryLabel => 'Yeniden Yene';
 
   @override
-  String get revertLabel => 'Revert';
+  String get revertLabel => 'Geri Al';
 
   @override
-  String get rewindLabel => 'Rewind';
+  String get rewindLabel => 'Geri Sar';
 
   @override
-  String get rightLabel => 'Right';
+  String get rightLabel => 'Sağ';
 
   @override
-  String get saveAsLabel => 'Save As';
+  String get saveAsLabel => 'Farklı Kaydet';
 
   @override
-  String get saveLabel => 'Save';
+  String get saveLabel => 'Kaydet';
 
   @override
-  String get searchLabel => 'Search';
+  String get searchLabel => 'Ara';
 
   @override
-  String get selectAllLabel => 'Select All';
+  String get selectAllLabel => 'Tümünü Seç';
 
   @override
-  String get selectLabel => 'Select';
+  String get selectLabel => 'Seç';
 
   @override
-  String get sendLabel => 'Send';
+  String get sendLabel => 'Gönder';
 
   @override
-  String get skipLabel => 'Skip';
+  String get skipLabel => 'Atla';
 
   @override
-  String get sortLabel => 'Sort';
+  String get sortLabel => 'Sırala';
 
   @override
-  String get stopLabel => 'Stop';
+  String get stopLabel => 'Durdur';
 
   @override
-  String get strikeThroughLabel => 'Strike Through';
+  String get strikeThroughLabel => 'Üstü Çizili';
 
   @override
-  String get submitLabel => 'Submit';
+  String get submitLabel => 'Gönder';
 
   @override
-  String get topLabel => 'Top';
+  String get topLabel => 'Üst';
 
   @override
-  String get undoLabel => 'Undo';
+  String get undoLabel => 'Geri Al';
 
   @override
-  String get updateLabel => 'Update';
+  String get updateLabel => 'Güncelle';
 
   @override
-  String get upLabel => 'Up';
+  String get upLabel => 'Yukarı';
 
   @override
-  String get viewLabel => 'View';
+  String get viewLabel => 'Görünüm';
 
   @override
-  String get warningLabel => 'Warning';
+  String get warningLabel => 'Uyarı';
 
   @override
-  String get windowLabel => 'Window';
+  String get windowLabel => 'Pencere';
 
   @override
-  String get yesLabel => 'Yes';
+  String get yesLabel => 'Evet';
 
   @override
-  String get zoomInLabel => 'Zoom In';
+  String get zoomInLabel => 'Yakınlaştır';
 
   @override
-  String get zoomOutLabel => 'Zoom Out';
+  String get zoomOutLabel => 'Uzaklaştır';
 }
