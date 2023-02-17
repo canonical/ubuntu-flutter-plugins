@@ -53,7 +53,7 @@ class UbuntuLocalizationsSv extends UbuntuLocalizations {
   String get applyLabel => 'Verkställ';
 
   @override
-  String get ascendingLabel => 'Ascending';
+  String get ascendingLabel => 'Stigande';
 
   @override
   String get backLabel => 'Tillbaka';
@@ -101,7 +101,7 @@ class UbuntuLocalizationsSv extends UbuntuLocalizations {
   String get deleteLabel => 'Ta bort';
 
   @override
-  String get descendingLabel => 'Descending';
+  String get descendingLabel => 'Nedåtgående';
 
   @override
   String get discardLabel => 'Kasta';
@@ -311,7 +311,7 @@ class UbuntuLocalizationsSv extends UbuntuLocalizations {
   String get stopLabel => 'Stoppa';
 
   @override
-  String get strikeThroughLabel => 'Strike Through';
+  String get strikeThroughLabel => 'Genomstrykning';
 
   @override
   String get submitLabel => 'Skicka in';
