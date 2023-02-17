@@ -1,3 +1,7 @@
+## 0.9.3
+
+- Remove non-existent routes when rebuilt (#29)
+
 ## 0.9.2
 
 - Fix Flutter 3.7.0 compatibility
