@@ -12,6 +12,7 @@ dependencies:
   diacritic: ^0.1.3
   flutter:
     sdk: flutter
+  yaru_icons: ^1.0.3
 
 dev_dependencies:
   flutter_lints: ^2.0.0
