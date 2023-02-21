@@ -68,21 +68,39 @@ class MenuButtonBuilder<T> extends StatefulWidget {
 
 class _MenuButtonBuilderState<T> extends State<MenuButtonBuilder<T>> {
   final _controller = MenuController();
+  double? _width;
 
   @override
   void initState() {
     super.initState();
-    WidgetsBinding.instance.addPostFrameCallback((_) => setState(() {}));
+    _updateWidth();
+  }
+
+  @override
+  void didUpdateWidget(covariant MenuButtonBuilder<T> oldWidget) {
+    super.didUpdateWidget(oldWidget);
+    if (widget.child != oldWidget.child ||
+        widget.selected != oldWidget.selected) {
+      _updateWidth();
+    }
+  }
+
+  void _updateWidth() {
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      final width = (context.findRenderObject() as RenderBox?)?.size.width;
+      if (_width != width) {
+        setState(() => _width = width);
+      }
+    });
   }
 
   @override
   Widget build(BuildContext context) {
-    final box = context.findRenderObject() as RenderBox?;
     return MenuAnchor(
       controller: _controller,
       crossAxisUnconstrained: false,
       style: MenuStyle(
-        minimumSize: MaterialStatePropertyAll(Size(box?.size.width ?? 0, 0)),
+        minimumSize: MaterialStatePropertyAll(Size(_width ?? 0, 0)),
       ),
       menuChildren: widget.values.map(_buildMenuItem).toList(),
       child: OutlinedButton(
