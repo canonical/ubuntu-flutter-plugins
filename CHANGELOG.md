@@ -1,3 +1,7 @@
+## 0.9.4
+
+-  Add user data properties to WizardRoute and Wizard (#30)
+
 ## 0.9.3
 
 - Remove non-existent routes when rebuilt (#29)
