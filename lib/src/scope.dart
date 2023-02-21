@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'dart:collection';
 
 import 'package:flow_builder/flow_builder.dart';
 import 'package:flutter/widgets.dart';
@@ -16,13 +17,16 @@ class WizardScope extends StatefulWidget {
     required int index,
     required WizardRoute route,
     required List<String> routes,
+    required Map<String, dynamic> userData,
   })  : _index = index,
         _route = route,
-        _routes = routes;
+        _routes = routes,
+        _userData = userData;
 
   final int _index;
   final WizardRoute _route;
   final List<String> _routes;
+  final Map<String, dynamic> _userData;
 
   @override
   State<WizardScope> createState() => WizardScopeState();
@@ -192,6 +196,11 @@ class WizardScopeState extends State<WizardScope> {
 
   /// Returns `true` if the wizard is done.
   bool get isDone => context.flow<List<WizardRouteSettings>>().completed;
+
+  UnmodifiableMapView<String, dynamic> get routeData =>
+      UnmodifiableMapView(widget._route.userData);
+  UnmodifiableMapView<String, dynamic> get wizardData =>
+      UnmodifiableMapView(widget._userData);
 
   @override
   Widget build(BuildContext context) => Builder(builder: widget._route.builder);

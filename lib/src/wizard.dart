@@ -114,6 +114,7 @@ class Wizard extends StatefulWidget {
     this.initialRoute,
     required this.routes,
     this.observers = const [],
+    this.userData = const {},
   });
 
   /// The name of the first route to show.
@@ -127,6 +128,9 @@ class Wizard extends StatefulWidget {
   /// The order of `routes` is the order of the wizard pages are shown. The
   /// order can be customized with [WizardRoute.onNext] and [WizardRoute.onBack].
   final Map<String, WizardRoute> routes;
+
+  /// Additional custom data associated with this page.
+  final Map<String, dynamic> userData;
 
   /// The wizard scope from the closest instance of this class that encloses the
   /// given `context`.
@@ -216,6 +220,7 @@ class _WizardState extends State<Wizard> {
         index: index,
         route: widget.routes[settings.name]!,
         routes: widget.routes.keys.toList(),
+        userData: widget.userData,
       ),
     );
   }
