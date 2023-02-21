@@ -114,7 +114,7 @@ class Wizard extends StatefulWidget {
     this.initialRoute,
     required this.routes,
     this.observers = const [],
-    this.userData = const {},
+    this.userData,
   });
 
   /// The name of the first route to show.
@@ -130,7 +130,7 @@ class Wizard extends StatefulWidget {
   final Map<String, WizardRoute> routes;
 
   /// Additional custom data associated with this page.
-  final Map<String, dynamic> userData;
+  final Object? userData;
 
   /// The wizard scope from the closest instance of this class that encloses the
   /// given `context`.

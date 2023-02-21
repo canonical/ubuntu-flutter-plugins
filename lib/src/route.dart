@@ -15,7 +15,7 @@ class WizardRoute {
     this.onReplace,
     this.onBack,
     this.onDone,
-    this.userData = const {},
+    this.userData,
   });
 
   final WidgetBuilder builder;
@@ -42,5 +42,5 @@ class WizardRoute {
   final WizardDoneCallback? onDone;
 
   /// Additional custom data associated with this page.
-  final Map<String, dynamic> userData;
+  final Object? userData;
 }

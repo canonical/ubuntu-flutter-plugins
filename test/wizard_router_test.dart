@@ -58,7 +58,7 @@ void main() {
     WidgetTester tester, {
     String? initialRoute,
     required Map<String, WizardRoute> routes,
-    Map<String, dynamic> userData = const {},
+    Object? userData,
   }) {
     return tester.pumpWidget(
       MaterialApp(
@@ -753,8 +753,9 @@ void main() {
         Routes.first: WizardRoute(
           builder: (context) {
             final wizardScope = Wizard.of(context);
-            final page = wizardScope.routeData['page'] ?? -1;
-            final totalPages = wizardScope.wizardData['totalPages'] ?? -1;
+            final page = (wizardScope.routeData as Map)['page'] ?? -1;
+            final totalPages =
+                (wizardScope.wizardData as Map)['totalPages'] ?? -1;
             return Column(
               children: [
                 Text(Routes.first),
