@@ -221,5 +221,7 @@
   "retryLabel": "Wiederholen",
   "@retryLabel": {},
   "zoomOutLabel": "Herauszoomen",
-  "@zoomOutLabel": {}
+  "@zoomOutLabel": {},
+  "homeLabel": "Zuhause",
+  "@homeLabel": {}
 }
