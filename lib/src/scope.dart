@@ -16,13 +16,16 @@ class WizardScope extends StatefulWidget {
     required int index,
     required WizardRoute route,
     required List<String> routes,
+    Object? userData,
   })  : _index = index,
         _route = route,
-        _routes = routes;
+        _routes = routes,
+        _userData = userData;
 
   final int _index;
   final WizardRoute _route;
   final List<String> _routes;
+  final Object? _userData;
 
   @override
   State<WizardScope> createState() => WizardScopeState();
@@ -192,6 +195,9 @@ class WizardScopeState extends State<WizardScope> {
 
   /// Returns `true` if the wizard is done.
   bool get isDone => context.flow<List<WizardRouteSettings>>().completed;
+
+  Object? get routeData => widget._route.userData;
+  Object? get wizardData => widget._userData;
 
   @override
   Widget build(BuildContext context) => Builder(builder: widget._route.builder);

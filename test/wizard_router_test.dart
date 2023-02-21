@@ -58,12 +58,14 @@ void main() {
     WidgetTester tester, {
     String? initialRoute,
     required Map<String, WizardRoute> routes,
+    Object? userData,
   }) {
     return tester.pumpWidget(
       MaterialApp(
         home: Wizard(
           initialRoute: initialRoute,
           routes: routes,
+          userData: userData,
         ),
       ),
     );
@@ -742,5 +744,38 @@ void main() {
     expect(find.text(Routes.first), findsNothing);
     expect(find.text(Routes.second), findsOneWidget);
     expect(find.text(Routes.third), findsNothing);
+  });
+
+  testWidgets('user data', (tester) async {
+    await pumpWizardApp(
+      tester,
+      routes: {
+        Routes.first: WizardRoute(
+          builder: (context) {
+            final wizardScope = Wizard.of(context);
+            final page = (wizardScope.routeData as Map)['page'] ?? -1;
+            final totalPages =
+                (wizardScope.wizardData as Map)['totalPages'] ?? -1;
+            return Column(
+              children: [
+                Text(Routes.first),
+                Text('Page $page of $totalPages'),
+              ],
+            );
+          },
+          userData: {'page': 1},
+        ),
+        Routes.second: WizardRoute(
+          builder: (_) => const Text(Routes.second),
+        ),
+      },
+      userData: {'totalPages': 3},
+    );
+    await tester.pumpAndSettle();
+
+    expect(find.text(Routes.first), findsOneWidget);
+    expect(find.text(Routes.second), findsNothing);
+
+    expect(find.text('Page 1 of 3'), findsOneWidget);
   });
 }

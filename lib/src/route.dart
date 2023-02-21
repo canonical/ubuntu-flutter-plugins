@@ -15,6 +15,7 @@ class WizardRoute {
     this.onReplace,
     this.onBack,
     this.onDone,
+    this.userData,
   });
 
   final WidgetBuilder builder;
@@ -39,4 +40,7 @@ class WizardRoute {
 
   /// The callback invoked when the wizard is done.
   final WizardDoneCallback? onDone;
+
+  /// Additional custom data associated with this page.
+  final Object? userData;
 }
