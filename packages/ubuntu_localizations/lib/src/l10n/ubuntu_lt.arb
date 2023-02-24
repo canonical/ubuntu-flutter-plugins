@@ -15,5 +15,7 @@
   "goodPassword": "Geras slaptažodis",
   "@goodPassword": {},
   "weakPassword": "Silpnas slaptažodis",
-  "@weakPassword": {}
+  "@weakPassword": {},
+  "altKey": "Alt",
+  "@altKey": {}
 }
