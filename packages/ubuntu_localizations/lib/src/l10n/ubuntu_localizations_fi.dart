@@ -140,7 +140,7 @@ class UbuntuLocalizationsFi extends UbuntuLocalizations {
   String get findLabel => 'Etsi';
 
   @override
-  String get firstLabel => 'First';
+  String get firstLabel => 'Ensimmäinen';
 
   @override
   String get fontLabel => 'Fontti';
@@ -149,13 +149,13 @@ class UbuntuLocalizationsFi extends UbuntuLocalizations {
   String get forwardLabel => 'Forward';
 
   @override
-  String get fullscreenLabel => 'Fullscreen';
+  String get fullscreenLabel => 'Koko näyttö';
 
   @override
   String get goBackLabel => 'Takaisin';
 
   @override
-  String get helpLabel => 'Help';
+  String get helpLabel => 'Ohje';
 
   @override
   String get homeLabel => 'Koti';
@@ -221,7 +221,7 @@ class UbuntuLocalizationsFi extends UbuntuLocalizations {
   String get pasteLabel => 'Liitä';
 
   @override
-  String get pauseLabel => 'Pause';
+  String get pauseLabel => 'Keskeytä';
 
   @override
   String get playLabel => 'Toista';
@@ -230,7 +230,7 @@ class UbuntuLocalizationsFi extends UbuntuLocalizations {
   String get portraitLabel => 'Portrait';
 
   @override
-  String get preferencesLabel => 'Preferences';
+  String get preferencesLabel => 'Asetukset';
 
   @override
   String get previousLabel => 'Edellinen';
@@ -239,10 +239,10 @@ class UbuntuLocalizationsFi extends UbuntuLocalizations {
   String get printLabel => 'Tulosta';
 
   @override
-  String get printPreviewLabel => 'Print Preview';
+  String get printPreviewLabel => 'Tulostuksen esikatselu';
 
   @override
-  String get propertiesLabel => 'Properties';
+  String get propertiesLabel => 'Ominaisuudet';
 
   @override
   String get questionLabel => 'Kysymys';
@@ -269,7 +269,7 @@ class UbuntuLocalizationsFi extends UbuntuLocalizations {
   String get resetLabel => 'Palauta';
 
   @override
-  String get restoreLabel => 'Restore';
+  String get restoreLabel => 'Palauta';
 
   @override
   String get retryLabel => 'Yritä uudelleen';
@@ -302,7 +302,7 @@ class UbuntuLocalizationsFi extends UbuntuLocalizations {
   String get sendLabel => 'Lähetä';
 
   @override
-  String get skipLabel => 'Skip';
+  String get skipLabel => 'Ohita';
 
   @override
   String get sortLabel => 'Järjestä';
