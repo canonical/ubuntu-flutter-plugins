@@ -20,7 +20,7 @@ class UbuntuLocalizationsSi extends UbuntuLocalizations {
   String get strongPassword => 'ශක්තිමත් මුරපදයකි';
 
   @override
-  String get fairPassword => 'Fair password';
+  String get fairPassword => 'සෑහෙන මුරපදයකි';
 
   @override
   String get goodPassword => 'හොඳ මුරපදයකි';
@@ -38,7 +38,7 @@ class UbuntuLocalizationsSi extends UbuntuLocalizations {
   String get metaKey => 'Meta';
 
   @override
-  String get shiftKey => 'Shift';
+  String get shiftKey => 'ලොකුකුරු';
 
   @override
   String get aboutLabel => 'පිළිබඳව';
@@ -95,7 +95,7 @@ class UbuntuLocalizationsSi extends UbuntuLocalizations {
   String get cutLabel => 'කපන්න';
 
   @override
-  String get decreaseLabel => 'Decrease';
+  String get decreaseLabel => 'අඩු කරන්න';
 
   @override
   String get deleteLabel => 'මකන්න';
@@ -125,7 +125,7 @@ class UbuntuLocalizationsSi extends UbuntuLocalizations {
   String get errorLabel => 'දෝෂයකි';
 
   @override
-  String get executeLabel => 'Execute';
+  String get executeLabel => 'ධාවනය';
 
   @override
   String get exitLabel => 'පිටවන්න';
@@ -164,7 +164,7 @@ class UbuntuLocalizationsSi extends UbuntuLocalizations {
   String get importLabel => 'ආයාත කරන්න';
 
   @override
-  String get increaseLabel => 'Increase';
+  String get increaseLabel => 'වැඩි කරන්න';
 
   @override
   String get indexLabel => 'සූචිය';
@@ -179,7 +179,7 @@ class UbuntuLocalizationsSi extends UbuntuLocalizations {
   String get italicLabel => 'ඇල';
 
   @override
-  String get landscapeLabel => 'Landscape';
+  String get landscapeLabel => 'තිරස්';
 
   @override
   String get lastLabel => 'Last';
@@ -227,7 +227,7 @@ class UbuntuLocalizationsSi extends UbuntuLocalizations {
   String get playLabel => 'වාදනය';
 
   @override
-  String get portraitLabel => 'Portrait';
+  String get portraitLabel => 'සිරස්';
 
   @override
   String get preferencesLabel => 'අභිප්‍රේත';
@@ -251,7 +251,7 @@ class UbuntuLocalizationsSi extends UbuntuLocalizations {
   String get quitLabel => 'ඉවත් වන්න';
 
   @override
-  String get recordLabel => 'Record';
+  String get recordLabel => 'පටිගතය';
 
   @override
   String get redoLabel => 'පසුසේ';
@@ -278,7 +278,7 @@ class UbuntuLocalizationsSi extends UbuntuLocalizations {
   String get revertLabel => 'ප්‍රතිවර්තනය';
 
   @override
-  String get rewindLabel => 'Rewind';
+  String get rewindLabel => 'යළි ඔතන්න';
 
   @override
   String get rightLabel => 'දකුණ';
@@ -311,7 +311,7 @@ class UbuntuLocalizationsSi extends UbuntuLocalizations {
   String get stopLabel => 'නවතන්න';
 
   @override
-  String get strikeThroughLabel => 'Strike Through';
+  String get strikeThroughLabel => 'කපා හැරීම';
 
   @override
   String get submitLabel => 'යොමන්න';
