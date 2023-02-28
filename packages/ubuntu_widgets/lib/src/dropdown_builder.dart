@@ -30,6 +30,7 @@ class DropdownBuilder<T> extends StatelessWidget {
     required this.values,
     required this.onSelected,
     required this.itemBuilder,
+    this.decoration,
   });
 
   /// The currently selected value or `null` if no value is selected.
@@ -50,6 +51,9 @@ class DropdownBuilder<T> extends StatelessWidget {
   /// Note: The returned widget is set as a child of [DropDownMenuItem].
   final ValueWidgetBuilder<T> itemBuilder;
 
+  /// An optional input decoration for the dropdown.
+  final InputDecoration? decoration;
+
   @override
   Widget build(BuildContext context) {
     return DropdownButtonFormField<T>(
@@ -62,6 +66,7 @@ class DropdownBuilder<T> extends StatelessWidget {
       }).toList(),
       onChanged: onSelected,
       focusColor: Colors.transparent,
+      decoration: decoration,
     );
   }
 }
