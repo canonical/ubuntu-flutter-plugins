@@ -217,5 +217,7 @@
   "rewindLabel": "යළි ඔතන්න",
   "@rewindLabel": {},
   "strikeThroughLabel": "කපා හැරීම",
-  "@strikeThroughLabel": {}
+  "@strikeThroughLabel": {},
+  "controlKey": "පාලන",
+  "@controlKey": {}
 }
