@@ -32,7 +32,7 @@ class UbuntuLocalizationsSi extends UbuntuLocalizations {
   String get altKey => 'Alt';
 
   @override
-  String get controlKey => 'Control';
+  String get controlKey => 'පාලන';
 
   @override
   String get metaKey => 'Meta';

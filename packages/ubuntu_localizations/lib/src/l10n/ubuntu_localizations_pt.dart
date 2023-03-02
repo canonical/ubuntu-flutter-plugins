@@ -400,6 +400,9 @@ class UbuntuLocalizationsPtBr extends UbuntuLocalizationsPt {
   String get applyLabel => 'Aplicar';
 
   @override
+  String get ascendingLabel => 'Crescente';
+
+  @override
   String get backLabel => 'Voltar';
 
   @override
@@ -443,6 +446,9 @@ class UbuntuLocalizationsPtBr extends UbuntuLocalizationsPt {
 
   @override
   String get deleteLabel => 'Apagar';
+
+  @override
+  String get descendingLabel => 'Decrescente';
 
   @override
   String get discardLabel => 'Descartar';
@@ -662,6 +668,9 @@ class UbuntuLocalizationsPtBr extends UbuntuLocalizationsPt {
 
   @override
   String get updateLabel => 'Atualizar';
+
+  @override
+  String get upLabel => 'Cima';
 
   @override
   String get viewLabel => 'Visualizar';
