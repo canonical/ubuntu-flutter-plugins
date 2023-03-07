@@ -1,3 +1,4 @@
+import 'package:collection/collection.dart';
 import 'package:flutter/material.dart';
 import 'package:yaru_icons/yaru_icons.dart';
 
@@ -68,6 +69,7 @@ class MenuButtonBuilder<T> extends StatefulWidget {
 
 class _MenuButtonBuilderState<T> extends State<MenuButtonBuilder<T>> {
   final _controller = MenuController();
+  final _focusNode = FocusNode();
   double? _width;
 
   @override
@@ -95,32 +97,51 @@ class _MenuButtonBuilderState<T> extends State<MenuButtonBuilder<T>> {
   }
 
   @override
+  void dispose() {
+    _focusNode.dispose();
+    super.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
+    // TODO: Null check operator used on a null value
+    // _MenuDirectionalFocusAction.invoke:
+    // orientation = anchor._parent!._orientation;
     return MenuAnchor(
-      controller: _controller,
-      crossAxisUnconstrained: false,
-      style: MenuStyle(
-        minimumSize: MaterialStatePropertyAll(Size(_width ?? 0, 0)),
-      ),
-      menuChildren: widget.values.map(_buildMenuItem).toList(),
-      child: OutlinedButton(
-        onPressed: () => _controller.open(position: _calculateOffset()),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            DefaultTextStyle(
-              style: _labelStyle,
-              child: Flexible(
-                  child: widget.child != null
-                      ? widget.child!
-                      : widget.selected != null
-                          ? widget.itemBuilder(
-                              context, widget.selected as T, null)
-                          : const SizedBox.shrink()),
-            ),
-            const SizedBox(width: 8),
-            const Icon(YaruIcons.pan_down),
-          ],
+      menuChildren: const [],
+      child: MenuAnchor(
+        controller: _controller,
+        childFocusNode: _focusNode,
+        crossAxisUnconstrained: false,
+        style: MenuStyle(
+          minimumSize: MaterialStatePropertyAll(Size(_width ?? 0, 0)),
+        ),
+        builder: (context, controller, child) {
+          return child!;
+        },
+        menuChildren: widget.values.mapIndexed(_buildMenuItem).toList(),
+        child: OutlinedButton(
+          onPressed: () {
+            _controller.open(position: _calculateOffset());
+            _focusNode.requestFocus();
+          },
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              DefaultTextStyle(
+                style: _labelStyle,
+                child: Flexible(
+                    child: widget.child != null
+                        ? widget.child!
+                        : widget.selected != null
+                            ? widget.itemBuilder(
+                                context, widget.selected as T, null)
+                            : const SizedBox.shrink()),
+              ),
+              const SizedBox(width: 8),
+              const Icon(YaruIcons.pan_down),
+            ],
+          ),
         ),
       ),
     );
@@ -139,7 +160,7 @@ class _MenuButtonBuilderState<T> extends State<MenuButtonBuilder<T>> {
     return Offset(0, -(padding?.top ?? 8));
   }
 
-  Widget _buildMenuItem(T? value) {
+  Widget _buildMenuItem(int index, T? value) {
     if (value == null) {
       return const Divider();
     }
@@ -154,20 +175,17 @@ class _MenuButtonBuilderState<T> extends State<MenuButtonBuilder<T>> {
               const EdgeInsets.symmetric(horizontal: 16),
     );
 
+    final isSelected = (widget.selected == null && index == 0) ||
+        (widget.selected != null && widget.selected == value);
+
     return MenuItemButton(
+      focusNode: isSelected ? _focusNode : null,
       leadingIcon: widget.iconBuilder?.call(context, value, null),
       onPressed: () {
         widget.onSelected?.call(value);
         _controller.close();
       },
-      style: style.copyWith(
-        backgroundColor: value == widget.selected
-            ? MaterialStateProperty.resolveWith(
-                (_) =>
-                    Theme.of(context).colorScheme.onSurface.withOpacity(0.12),
-              )
-            : null,
-      ),
+      style: style,
       child: widget.itemBuilder(context, value, null),
     );
   }

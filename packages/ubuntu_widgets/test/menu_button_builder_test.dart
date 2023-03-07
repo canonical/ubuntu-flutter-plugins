@@ -58,7 +58,7 @@ void main() {
       ),
     );
 
-    await tester.tap(find.byType(MenuAnchor));
+    await tester.tap(find.byType(MenuButtonBuilder<TestEnum>));
     await tester.pumpAndSettle();
 
     for (final value in TestEnum.values) {
@@ -81,15 +81,14 @@ void main() {
       ),
     );
 
-    await tester.tap(find.byType(MenuAnchor));
+    await tester.tap(find.byType(MenuButtonBuilder<TestEnum>));
     await tester.pumpAndSettle();
 
     final item = find.ancestor(
       of: find.text(TestEnum.bar.toString()),
       matching: find.byType(MenuItemButton),
     );
-    expect(
-        tester.widget<MenuItemButton>(item).style?.backgroundColor, isNotNull);
+    expect(tester.widget<MenuItemButton>(item).focusNode?.hasFocus, isTrue);
   });
 
   testWidgets('selects tapped value', (tester) async {
@@ -108,7 +107,7 @@ void main() {
       ),
     );
 
-    await tester.tap(find.byType(MenuAnchor));
+    await tester.tap(find.byType(MenuButtonBuilder<TestEnum>));
     await tester.pumpAndSettle();
 
     await tester.tap(find.text(TestEnum.baz.toString()).last);
