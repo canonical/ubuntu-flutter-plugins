@@ -13,6 +13,11 @@ T createService<T extends Object>(dynamic param, {String? id}) {
   return _locator<T>(param1: param, instanceName: id);
 }
 
+/// Returns whether a service is registered with the locator.
+bool hasService<T extends Object>({String? id}) {
+  return _locator.isRegistered<T>(instanceName: id);
+}
+
 /// Registers a service with the locator.
 void registerService<T extends Object>(
   T Function() create, {
@@ -20,6 +25,17 @@ void registerService<T extends Object>(
   FutureOr<void> Function(T service)? dispose,
 }) {
   _locator.registerLazySingleton<T>(create, dispose: dispose, instanceName: id);
+}
+
+/// Registers a service with the locator but only if not already registered.
+void tryRegisterService<T extends Object>(
+  T Function() create, {
+  String? id,
+  FutureOr<void> Function(T service)? dispose,
+}) {
+  if (!hasService<T>(id: id)) {
+    registerService<T>(create, id: id, dispose: dispose);
+  }
 }
 
 /// Locates and resets an injected service.
@@ -38,6 +54,13 @@ void registerServiceInstance<T extends Object>(T service, {String? id}) {
   _locator.registerSingleton<T>(service, instanceName: id);
 }
 
+/// Registers a service instance with the locator but only if not already registered.
+void tryRegisterServiceInstance<T extends Object>(T service, {String? id}) {
+  if (!hasService<T>(id: id)) {
+    registerServiceInstance<T>(service, id: id);
+  }
+}
+
 /// Registers a service factory with the locator.
 void registerServiceFactory<T extends Object>(
   T Function(dynamic param) create, {
@@ -49,12 +72,22 @@ void registerServiceFactory<T extends Object>(
   );
 }
 
+/// Registers a service factory with the locator but only if not already registered.
+void tryRegisterServiceFactory<T extends Object>(
+  T Function(dynamic param) create, {
+  String? id,
+}) {
+  if (!hasService<T>(id: id)) {
+    registerServiceFactory<T>(create, id: id);
+  }
+}
+
 /// Unregisters a service instance with the locator.
 void unregisterService<T extends Object>({
   String? id,
   FutureOr<void> Function(T service)? dispose,
 }) {
-  if (_locator.isRegistered<T>(instanceName: id)) {
+  if (hasService<T>(id: id)) {
     _locator.unregister<T>(instanceName: id, disposingFunction: dispose);
   }
 }

@@ -117,4 +117,49 @@ void main() {
     final s2 = createService<ServiceParam>('p2');
     expect(s2, isA<ServiceParam>().having((s) => s.param, 'param', 'p2'));
   });
+
+  test('try register', () {
+    expect(hasService<Service>(), isFalse);
+
+    tryRegisterService(Service.new);
+    expect(hasService<Service>(), isTrue);
+
+    final s1 = getService<Service>();
+    tryRegisterService(Service.new); // noop
+
+    final s2 = getService<Service>();
+    expect(s2, same(s1));
+  });
+
+  test('try instance', () {
+    expect(hasService<Service>(), isFalse);
+
+    final s1 = Service();
+    tryRegisterServiceInstance(s1);
+    expect(hasService<Service>(), isTrue);
+
+    final s2 = Service();
+    tryRegisterServiceInstance(s2); // noop
+    expect(getService<Service>(), same(s1));
+  });
+
+  test('try factory', () {
+    expect(hasService<Service>(), isFalse);
+
+    tryRegisterServiceFactory<ServiceParam>(
+      (dynamic param) => ServiceParam(param as String),
+    );
+    expect(hasService<ServiceParam>(), isTrue);
+
+    final s1 = createService<ServiceParam>('p1');
+    expect(s1, isA<ServiceParam>().having((s) => s.param, 'param', 'p1'));
+
+    // noop
+    tryRegisterServiceFactory<ServiceParam>(
+      (dynamic param) => ServiceParam('${param}2'),
+    );
+
+    final s2 = createService<ServiceParam>('p2');
+    expect(s2, isA<ServiceParam>().having((s) => s.param, 'param', 'p2'));
+  });
 }
