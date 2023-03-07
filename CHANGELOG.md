@@ -1,3 +1,8 @@
+## 0.2.1
+
+- Add hasService() and tryRegisterService() & friends for conditional
+  registration if not already registered.
+
 ## 0.2.0
 
 - Add IDs for registering multiple services.
