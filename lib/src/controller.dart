@@ -1,5 +1,4 @@
-// ignore_for_file: public_member_api_docs, sort_constructors_first
-import 'package:flutter/material.dart';
+import 'package:flutter/foundation.dart';
 
 /// The set of actions that a controller can accept
 enum WizardControllerAction {

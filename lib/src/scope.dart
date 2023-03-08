@@ -2,8 +2,8 @@ import 'dart:async';
 
 import 'package:flow_builder/flow_builder.dart';
 import 'package:flutter/widgets.dart';
-import 'package:wizard_router/src/controller.dart';
 
+import 'controller.dart';
 import 'result.dart';
 import 'route.dart';
 import 'settings.dart';
@@ -36,8 +36,7 @@ class WizardScope extends StatefulWidget {
 }
 
 /// The state of a `WizardScope`, accessed via `Wizard.of(context)`.
-class WizardScopeState extends State<WizardScope>
-    with SingleTickerProviderStateMixin {
+class WizardScopeState extends State<WizardScope> {
   /// Arguments passed from the previous page.
   ///
   /// ```dart

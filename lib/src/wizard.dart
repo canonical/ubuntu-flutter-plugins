@@ -1,8 +1,8 @@
 import 'package:collection/collection.dart';
 import 'package:flow_builder/flow_builder.dart';
 import 'package:flutter/material.dart';
-import 'package:wizard_router/src/controller.dart';
 
+import 'controller.dart';
 import 'observer.dart';
 import 'result.dart';
 import 'route.dart';

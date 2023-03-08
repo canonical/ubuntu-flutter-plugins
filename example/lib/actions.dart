@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:wizard_router/wizard_router.dart';
 
 class WizardNextIntent extends Intent {

@@ -1,10 +1,8 @@
-// ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-
 import 'package:wizard_router/wizard_router.dart';
-import 'package:wizard_router_example/actions.dart';
 
+import 'actions.dart';
 import 'models.dart';
 import 'pages.dart';
 import 'routes.dart';
