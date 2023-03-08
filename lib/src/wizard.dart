@@ -1,6 +1,7 @@
 import 'package:collection/collection.dart';
 import 'package:flow_builder/flow_builder.dart';
 import 'package:flutter/material.dart';
+import 'package:wizard_router/src/controller.dart';
 
 import 'observer.dart';
 import 'result.dart';
@@ -115,6 +116,7 @@ class Wizard extends StatefulWidget {
     required this.routes,
     this.observers = const [],
     this.userData,
+    this.controller,
   });
 
   /// The name of the first route to show.
@@ -181,6 +183,8 @@ class Wizard extends StatefulWidget {
 
   final List<WizardObserver> observers;
 
+  final WizardController? controller;
+
   @override
   State<Wizard> createState() => _WizardState();
 }
@@ -221,6 +225,7 @@ class _WizardState extends State<Wizard> {
         route: widget.routes[settings.name]!,
         routes: widget.routes.keys.toList(),
         userData: widget.userData,
+        controller: widget.controller,
       ),
     );
   }

@@ -11,3 +11,4 @@ export 'src/observer.dart';
 export 'src/route.dart';
 export 'src/scope.dart';
 export 'src/wizard.dart';
+export 'src/controller.dart';

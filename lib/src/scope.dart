@@ -2,6 +2,7 @@ import 'dart:async';
 
 import 'package:flow_builder/flow_builder.dart';
 import 'package:flutter/widgets.dart';
+import 'package:wizard_router/src/controller.dart';
 
 import 'result.dart';
 import 'route.dart';
@@ -17,22 +18,26 @@ class WizardScope extends StatefulWidget {
     required WizardRoute route,
     required List<String> routes,
     Object? userData,
+    WizardController? controller,
   })  : _index = index,
         _route = route,
         _routes = routes,
-        _userData = userData;
+        _userData = userData,
+        _controller = controller;
 
   final int _index;
   final WizardRoute _route;
   final List<String> _routes;
   final Object? _userData;
+  final WizardController? _controller;
 
   @override
   State<WizardScope> createState() => WizardScopeState();
 }
 
 /// The state of a `WizardScope`, accessed via `Wizard.of(context)`.
-class WizardScopeState extends State<WizardScope> {
+class WizardScopeState extends State<WizardScope>
+    with SingleTickerProviderStateMixin {
   /// Arguments passed from the previous page.
   ///
   /// ```dart
@@ -198,6 +203,43 @@ class WizardScopeState extends State<WizardScope> {
 
   Object? get routeData => widget._route.userData;
   Object? get wizardData => widget._userData;
+
+  /// Invokes appropriate func based on controller's requested action
+  void _controllerListener() {
+    switch (widget._controller?.action) {
+      case WizardControllerAction.home:
+        home();
+        break;
+      case WizardControllerAction.back:
+        back(widget._controller?.arguments);
+        break;
+      case WizardControllerAction.next:
+        next(arguments: widget._controller?.arguments);
+        break;
+      case WizardControllerAction.replace:
+        replace(arguments: widget._controller?.arguments);
+        break;
+      case WizardControllerAction.done:
+        done(result: widget._controller?.arguments);
+        break;
+      case null:
+      case WizardControllerAction.unknown:
+        debugPrint("Wizard does not know how to handle null or unknown action");
+        break;
+    }
+  }
+
+  @override
+  void initState() {
+    super.initState();
+    widget._controller?.addListener(_controllerListener);
+  }
+
+  @override
+  void dispose() {
+    widget._controller?.removeListener(_controllerListener);
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) => Builder(builder: widget._route.builder);
