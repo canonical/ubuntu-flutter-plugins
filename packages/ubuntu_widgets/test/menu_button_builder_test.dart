@@ -7,7 +7,7 @@ enum TestEnum { foo, bar, baz }
 void main() {
   TestWidgetsFlutterBinding.ensureInitialized();
 
-  testWidgets('builds an item for each value', (tester) async {
+  testWidgets('uses child if supplied', (tester) async {
     await tester.pumpWidget(
       MaterialApp(
         home: Material(
@@ -15,17 +15,52 @@ void main() {
             selected: TestEnum.bar,
             values: TestEnum.values,
             onSelected: (_) {},
-            iconBuilder: (_, value, __) => const Icon(Icons.arrow_drop_down),
-            itemBuilder: (_, value, __) => Text(value.toString()),
+            itemBuilder: (_, value, __) => Text(value.name),
+            child: const Text('child'),
           ),
         ),
       ),
     );
 
-    await tester.tap(find.byType(PopupMenuButton<TestEnum>));
+    expect(find.text(TestEnum.bar.name), findsNothing);
+    expect(find.text('child'), findsOneWidget);
+  });
+
+  testWidgets('builds a selected item', (tester) async {
+    await tester.pumpWidget(
+      MaterialApp(
+        home: Material(
+          child: MenuButtonBuilder<TestEnum>(
+            selected: TestEnum.bar,
+            values: TestEnum.values,
+            onSelected: (_) {},
+            itemBuilder: (_, value, __) => Text(value.name),
+          ),
+        ),
+      ),
+    );
+
+    expect(find.text(TestEnum.bar.name), findsOneWidget);
+  });
+
+  testWidgets('builds an item for each value', (tester) async {
+    await tester.pumpWidget(
+      MaterialApp(
+        home: Material(
+          child: MenuButtonBuilder<TestEnum>(
+            values: TestEnum.values,
+            onSelected: (_) {},
+            iconBuilder: (_, value, __) => const Icon(Icons.arrow_drop_down),
+            itemBuilder: (_, value, __) => Text(value.toString()),
+            child: const SizedBox.shrink(),
+          ),
+        ),
+      ),
+    );
+
+    await tester.tap(find.bySubtype<ButtonStyleButton>());
     await tester.pumpAndSettle();
 
-    expect(find.byIcon(Icons.arrow_drop_down), findsOneWidget);
     for (final value in TestEnum.values) {
       expect(find.text(value.toString()), findsOneWidget);
     }
@@ -46,14 +81,14 @@ void main() {
       ),
     );
 
-    await tester.tap(find.byType(PopupMenuButton<TestEnum>));
+    await tester.tap(find.bySubtype<ButtonStyleButton>());
     await tester.pumpAndSettle();
 
     final item = find.ancestor(
       of: find.text(TestEnum.bar.toString()),
-      matching: find.byType(CheckedPopupMenuItem<TestEnum>),
+      matching: find.byType(MenuItemButton),
     );
-    expect(tester.widget<CheckedPopupMenuItem<TestEnum>>(item).checked, isTrue);
+    expect(tester.widget<MenuItemButton>(item).focusNode?.hasFocus, isTrue);
   });
 
   testWidgets('selects tapped value', (tester) async {
@@ -72,7 +107,7 @@ void main() {
       ),
     );
 
-    await tester.tap(find.byType(PopupMenuButton<TestEnum>));
+    await tester.tap(find.bySubtype<ButtonStyleButton>());
     await tester.pumpAndSettle();
 
     await tester.tap(find.text(TestEnum.baz.toString()).last);
