@@ -108,58 +108,50 @@ class _MenuButtonBuilderState<T> extends State<MenuButtonBuilder<T>> {
 
   @override
   Widget build(BuildContext context) {
-    // TODO: Null check operator used on a null value
-    // _MenuDirectionalFocusAction.invoke:
-    // orientation = anchor._parent!._orientation;
-
     return MenuAnchor(
-      menuChildren: const [],
-      child: MenuAnchor(
-        controller: _controller,
-        childFocusNode: _focusNode,
-        crossAxisUnconstrained: false,
-        style: MenuStyle(
-          minimumSize: MaterialStatePropertyAll(Size(_width ?? 0, 0)),
-        ),
-        builder: (context, controller, child) {
-          return child!;
-        },
-        menuChildren: widget.values.mapIndexed(_buildMenuItem).toList(),
-        child: Stack(
-          children: [
-            Positioned.fill(
-              child: InputDecorator(
-                expands: true,
-                decoration: widget.decoration,
-                isEmpty: widget.selected == null && widget.child == null,
-              ),
+      controller: _controller,
+      crossAxisUnconstrained: false,
+      style: MenuStyle(
+        minimumSize: MaterialStatePropertyAll(Size(_width ?? 0, 0)),
+      ),
+      builder: (context, controller, child) {
+        return child!;
+      },
+      menuChildren: widget.values.mapIndexed(_buildMenuItem).toList(),
+      child: Stack(
+        children: [
+          Positioned.fill(
+            child: InputDecorator(
+              expands: true,
+              decoration: widget.decoration,
+              isEmpty: widget.selected == null && widget.child == null,
             ),
-            OutlinedButton(
-              style: OutlinedButton.styleFrom(side: BorderSide.none),
-              onPressed: () {
-                _controller.open(position: _calculateOffset());
-                _focusNode.requestFocus();
-              },
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  DefaultTextStyle(
-                    style: _labelStyle,
-                    child: Flexible(
-                        child: widget.child != null
-                            ? widget.child!
-                            : widget.selected != null
-                                ? widget.itemBuilder(
-                                    context, widget.selected as T, null)
-                                : const SizedBox.shrink()),
-                  ),
-                  const SizedBox(width: 8),
-                  const Icon(YaruIcons.pan_down, size: 20),
-                ],
-              ),
+          ),
+          OutlinedButton(
+            style: OutlinedButton.styleFrom(side: BorderSide.none),
+            onPressed: () {
+              _controller.open(position: _calculateOffset());
+              _focusNode.requestFocus();
+            },
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                DefaultTextStyle(
+                  style: _labelStyle,
+                  child: Flexible(
+                      child: widget.child != null
+                          ? widget.child!
+                          : widget.selected != null
+                              ? widget.itemBuilder(
+                                  context, widget.selected as T, null)
+                              : const SizedBox.shrink()),
+                ),
+                const SizedBox(width: 8),
+                const Icon(YaruIcons.pan_down, size: 20),
+              ],
             ),
-          ],
-        ),
+          ),
+        ],
       ),
     );
   }
