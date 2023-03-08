@@ -37,6 +37,7 @@ class MenuButtonBuilder<T> extends StatefulWidget {
     this.onSelected,
     this.iconBuilder,
     required this.itemBuilder,
+    this.decoration = const InputDecoration(filled: false),
   });
 
   /// An optional child widget placed as a label of the button.
@@ -62,6 +63,9 @@ class MenuButtonBuilder<T> extends StatefulWidget {
   ///
   /// Note: The returned widget is set as a child of [MenuItemButton].
   final ValueWidgetBuilder<T> itemBuilder;
+
+  /// An optional input decoration for the button.
+  final InputDecoration decoration;
 
   @override
   State<MenuButtonBuilder<T>> createState() => _MenuButtonBuilderState<T>();
@@ -107,6 +111,7 @@ class _MenuButtonBuilderState<T> extends State<MenuButtonBuilder<T>> {
     // TODO: Null check operator used on a null value
     // _MenuDirectionalFocusAction.invoke:
     // orientation = anchor._parent!._orientation;
+
     return MenuAnchor(
       menuChildren: const [],
       child: MenuAnchor(
@@ -120,28 +125,39 @@ class _MenuButtonBuilderState<T> extends State<MenuButtonBuilder<T>> {
           return child!;
         },
         menuChildren: widget.values.mapIndexed(_buildMenuItem).toList(),
-        child: OutlinedButton(
-          onPressed: () {
-            _controller.open(position: _calculateOffset());
-            _focusNode.requestFocus();
-          },
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              DefaultTextStyle(
-                style: _labelStyle,
-                child: Flexible(
-                    child: widget.child != null
-                        ? widget.child!
-                        : widget.selected != null
-                            ? widget.itemBuilder(
-                                context, widget.selected as T, null)
-                            : const SizedBox.shrink()),
+        child: Stack(
+          children: [
+            Positioned.fill(
+              child: InputDecorator(
+                expands: true,
+                decoration: widget.decoration,
               ),
-              const SizedBox(width: 8),
-              const Icon(YaruIcons.pan_down, size: 20),
-            ],
-          ),
+            ),
+            OutlinedButton(
+              style: OutlinedButton.styleFrom(side: BorderSide.none),
+              onPressed: () {
+                _controller.open(position: _calculateOffset());
+                _focusNode.requestFocus();
+              },
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  DefaultTextStyle(
+                    style: _labelStyle,
+                    child: Flexible(
+                        child: widget.child != null
+                            ? widget.child!
+                            : widget.selected != null
+                                ? widget.itemBuilder(
+                                    context, widget.selected as T, null)
+                                : const SizedBox.shrink()),
+                  ),
+                  const SizedBox(width: 8),
+                  const Icon(YaruIcons.pan_down, size: 20),
+                ],
+              ),
+            ),
+          ],
         ),
       ),
     );
