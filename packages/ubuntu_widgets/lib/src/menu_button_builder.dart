@@ -2,6 +2,8 @@ import 'package:collection/collection.dart';
 import 'package:flutter/material.dart';
 import 'package:yaru_icons/yaru_icons.dart';
 
+const _kItemHeight = 40.0;
+
 /// A builder widget that makes it straight-forward to build a menu button
 /// for an arbitrary list of values.
 ///
@@ -169,32 +171,46 @@ class _MenuButtonBuilderState<T> extends State<MenuButtonBuilder<T>> {
     return Offset(0, -(padding?.top ?? 8));
   }
 
+  EdgeInsetsGeometry _scaledPadding(BuildContext context) {
+    return ButtonStyleButton.scaledPadding(
+      const EdgeInsets.symmetric(horizontal: 16),
+      const EdgeInsets.symmetric(horizontal: 8),
+      const EdgeInsets.symmetric(horizontal: 4),
+      MediaQuery.maybeOf(context)?.textScaleFactor ?? 1,
+    );
+  }
+
   Widget _buildMenuItem(int index, T? value) {
     if (value == null) {
       return const Divider();
     }
 
-    final button = OutlinedButtonTheme.of(context).style;
-    final style = MenuItemButton.styleFrom(
-      minimumSize: button?.minimumSize?.resolve({}) ?? const Size(0, 40),
-      maximumSize:
-          button?.maximumSize?.resolve({}) ?? const Size(double.infinity, 40),
-      padding:
-          button?.padding?.resolve({})?.resolve(Directionality.of(context)) ??
-              const EdgeInsets.symmetric(horizontal: 16),
-    );
+    final states = {
+      if (widget.selected == null && index == 0) MaterialState.selected,
+      if (widget.selected != null && widget.selected == value)
+        MaterialState.selected,
+      if (widget.onSelected == null) MaterialState.disabled,
+    };
 
-    final isSelected = (widget.selected == null && index == 0) ||
-        (widget.selected != null && widget.selected == value);
+    final direction = Directionality.of(context);
+
+    final button = OutlinedButtonTheme.of(context).style;
+    final minimumSize = button?.minimumSize?.resolve(states);
+    final maximumSize = button?.maximumSize?.resolve(states);
+    final padding = button?.padding?.resolve(states)?.resolve(direction);
 
     return MenuItemButton(
-      focusNode: isSelected ? _focusNode : null,
+      focusNode: states.contains(MaterialState.selected) ? _focusNode : null,
       leadingIcon: widget.iconBuilder?.call(context, value, null),
       onPressed: () {
         widget.onSelected?.call(value);
         _controller.close();
       },
-      style: style,
+      style: MenuItemButton.styleFrom(
+        minimumSize: minimumSize ?? const Size(0, _kItemHeight),
+        maximumSize: maximumSize ?? const Size(double.infinity, _kItemHeight),
+        padding: padding ?? _scaledPadding(context),
+      ),
       child: widget.itemBuilder(context, value, null),
     );
   }
