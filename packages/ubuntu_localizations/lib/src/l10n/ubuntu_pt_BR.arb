@@ -223,5 +223,11 @@
   "zoomInLabel": "Aumentar o Zoom",
   "@zoomInLabel": {},
   "skipLabel": "Pular",
-  "@skipLabel": {}
+  "@skipLabel": {},
+  "ascendingLabel": "Crescente",
+  "@ascendingLabel": {},
+  "descendingLabel": "Decrescente",
+  "@descendingLabel": {},
+  "upLabel": "Cima",
+  "@upLabel": {}
 }
