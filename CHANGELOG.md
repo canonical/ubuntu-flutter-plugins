@@ -1,3 +1,7 @@
+## 0.10.0
+
+- Add WizardController by @chillbrodev (#32)
+
 ## 0.9.4
 
 -  Add user data properties to WizardRoute and Wizard (#30)
