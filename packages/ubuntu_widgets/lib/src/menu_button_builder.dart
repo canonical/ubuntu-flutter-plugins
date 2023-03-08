@@ -139,7 +139,7 @@ class _MenuButtonBuilderState<T> extends State<MenuButtonBuilder<T>> {
                             : const SizedBox.shrink()),
               ),
               const SizedBox(width: 8),
-              const Icon(YaruIcons.pan_down),
+              const Icon(YaruIcons.pan_down, size: 20),
             ],
           ),
         ),
