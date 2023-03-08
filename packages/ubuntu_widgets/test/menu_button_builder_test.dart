@@ -58,7 +58,7 @@ void main() {
       ),
     );
 
-    await tester.tap(find.byType(MenuButtonBuilder<TestEnum>));
+    await tester.tap(find.bySubtype<ButtonStyleButton>());
     await tester.pumpAndSettle();
 
     for (final value in TestEnum.values) {
@@ -81,7 +81,7 @@ void main() {
       ),
     );
 
-    await tester.tap(find.byType(MenuButtonBuilder<TestEnum>));
+    await tester.tap(find.bySubtype<ButtonStyleButton>());
     await tester.pumpAndSettle();
 
     final item = find.ancestor(
@@ -107,7 +107,7 @@ void main() {
       ),
     );
 
-    await tester.tap(find.byType(MenuButtonBuilder<TestEnum>));
+    await tester.tap(find.bySubtype<ButtonStyleButton>());
     await tester.pumpAndSettle();
 
     await tester.tap(find.text(TestEnum.baz.toString()).last);
