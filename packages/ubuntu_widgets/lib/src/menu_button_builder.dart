@@ -131,6 +131,7 @@ class _MenuButtonBuilderState<T> extends State<MenuButtonBuilder<T>> {
               child: InputDecorator(
                 expands: true,
                 decoration: widget.decoration,
+                isEmpty: widget.selected == null && widget.child == null,
               ),
             ),
             OutlinedButton(
