@@ -11,7 +11,7 @@ class UbuntuLocalizationsNn extends UbuntuLocalizations {
   String get languageName => 'Norsk nynorsk';
 
   @override
-  String get backAction => 'Go Back';
+  String get backAction => 'Go back';
 
   @override
   String get continueAction => 'Continue';

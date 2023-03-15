@@ -11,7 +11,7 @@ class UbuntuLocalizationsKu extends UbuntuLocalizations {
   String get languageName => 'Kurdî';
 
   @override
-  String get backAction => 'Go Back';
+  String get backAction => 'Go back';
 
   @override
   String get continueAction => 'Continue';

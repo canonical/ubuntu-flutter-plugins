@@ -11,22 +11,22 @@ class UbuntuLocalizationsDa extends UbuntuLocalizations {
   String get languageName => 'Dansk';
 
   @override
-  String get backAction => 'Go Back';
+  String get backAction => 'Tilbage';
 
   @override
-  String get continueAction => 'Continue';
+  String get continueAction => 'Fortsæt';
 
   @override
-  String get strongPassword => 'Strong password';
+  String get strongPassword => 'Stærk adgangskode';
 
   @override
-  String get fairPassword => 'Fair password';
+  String get fairPassword => 'Rimelig adgangskode';
 
   @override
-  String get goodPassword => 'Good password';
+  String get goodPassword => 'God adgangskode';
 
   @override
-  String get weakPassword => 'Weak password';
+  String get weakPassword => 'Svag adgangskode';
 
   @override
   String get altKey => 'Alt';
@@ -41,94 +41,94 @@ class UbuntuLocalizationsDa extends UbuntuLocalizations {
   String get shiftKey => 'Shift';
 
   @override
-  String get aboutLabel => 'About';
+  String get aboutLabel => 'Om';
 
   @override
-  String get addLabel => 'Add';
+  String get addLabel => 'Tilføj';
 
   @override
-  String get allLabel => 'All';
+  String get allLabel => 'Alle';
 
   @override
-  String get applyLabel => 'Apply';
+  String get applyLabel => 'Anvend';
 
   @override
-  String get ascendingLabel => 'Ascending';
+  String get ascendingLabel => 'Stigende';
 
   @override
-  String get backLabel => 'Back';
+  String get backLabel => 'Tilbage';
 
   @override
-  String get boldLabel => 'Bold';
+  String get boldLabel => 'Fed';
 
   @override
-  String get bottomLabel => 'Bottom';
+  String get bottomLabel => 'Bund';
 
   @override
-  String get cancelLabel => 'Cancel';
+  String get cancelLabel => 'Annuller';
 
   @override
   String get centerLabel => 'Center';
 
   @override
-  String get clearLabel => 'Clear';
+  String get clearLabel => 'Ryd';
 
   @override
-  String get closeLabel => 'Close';
+  String get closeLabel => 'Luk';
 
   @override
-  String get colorLabel => 'Color';
+  String get colorLabel => 'Farve';
 
   @override
-  String get connectLabel => 'Connect';
+  String get connectLabel => 'Forbind';
 
   @override
-  String get continueLabel => 'Continue';
+  String get continueLabel => 'Fortsæt';
 
   @override
-  String get copyLabel => 'Copy';
+  String get copyLabel => 'Kopier';
 
   @override
-  String get createLabel => 'Create';
+  String get createLabel => 'Opret';
 
   @override
-  String get cutLabel => 'Cut';
+  String get cutLabel => 'Klip';
 
   @override
-  String get decreaseLabel => 'Decrease';
+  String get decreaseLabel => 'Formindsk';
 
   @override
-  String get deleteLabel => 'Delete';
+  String get deleteLabel => 'Slet';
 
   @override
-  String get descendingLabel => 'Descending';
+  String get descendingLabel => 'Aftagende';
 
   @override
-  String get discardLabel => 'Discard';
+  String get discardLabel => 'Kassér';
 
   @override
-  String get disconnectLabel => 'Disconnect';
+  String get disconnectLabel => 'Afbryd';
 
   @override
-  String get doneLabel => 'Done';
+  String get doneLabel => 'Færdig';
 
   @override
-  String get downloadLabel => 'Download';
+  String get downloadLabel => 'Hent';
 
   @override
-  String get editLabel => 'Edit';
+  String get editLabel => 'Rediger';
 
   @override
   String get enterLabel => 'Enter';
 
   @override
-  String get errorLabel => 'Error';
+  String get errorLabel => 'Fejl';
 
   @override
-  String get executeLabel => 'Execute';
+  String get executeLabel => 'Udfør';
 
   @override
-  String get exitLabel => 'Exit';
+  String get exitLabel => 'Afslut';
 
   @override
   String get fileLabel => 'File';
@@ -254,49 +254,49 @@ class UbuntuLocalizationsDa extends UbuntuLocalizations {
   String get recordLabel => 'Record';
 
   @override
-  String get redoLabel => 'Redo';
+  String get redoLabel => 'Gentag';
 
   @override
-  String get refreshLabel => 'Refresh';
+  String get refreshLabel => 'Opdater';
 
   @override
-  String get removeLabel => 'Remove';
+  String get removeLabel => 'Fjern';
 
   @override
-  String get renameLabel => 'Rename';
+  String get renameLabel => 'Omdøb';
 
   @override
-  String get resetLabel => 'Reset';
+  String get resetLabel => 'Nulstil';
 
   @override
-  String get restoreLabel => 'Restore';
+  String get restoreLabel => 'Gendan';
 
   @override
   String get retryLabel => 'Retry';
 
   @override
-  String get revertLabel => 'Revert';
+  String get revertLabel => 'Fortryd ændringer';
 
   @override
-  String get rewindLabel => 'Rewind';
+  String get rewindLabel => 'Spole tilbage';
 
   @override
-  String get rightLabel => 'Right';
+  String get rightLabel => 'Højre';
 
   @override
   String get saveAsLabel => 'Save As';
 
   @override
-  String get saveLabel => 'Save';
+  String get saveLabel => 'Gem';
 
   @override
-  String get searchLabel => 'Search';
+  String get searchLabel => 'Søg';
 
   @override
   String get selectAllLabel => 'Select All';
 
   @override
-  String get selectLabel => 'Select';
+  String get selectLabel => 'Vælg';
 
   @override
   String get sendLabel => 'Send';
@@ -305,7 +305,7 @@ class UbuntuLocalizationsDa extends UbuntuLocalizations {
   String get skipLabel => 'Skip';
 
   @override
-  String get sortLabel => 'Sort';
+  String get sortLabel => 'Sortér';
 
   @override
   String get stopLabel => 'Stop';

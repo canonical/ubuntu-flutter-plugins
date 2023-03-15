@@ -11,7 +11,7 @@ class UbuntuLocalizationsEs extends UbuntuLocalizations {
   String get languageName => 'Español';
 
   @override
-  String get backAction => 'Volver';
+  String get backAction => 'Volver atrás';
 
   @override
   String get continueAction => 'Continuar';

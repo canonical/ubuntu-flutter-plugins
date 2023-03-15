@@ -11,7 +11,7 @@ class UbuntuLocalizationsAm extends UbuntuLocalizations {
   String get languageName => 'አማርኛ';
 
   @override
-  String get backAction => 'Go Back';
+  String get backAction => 'Go back';
 
   @override
   String get continueAction => 'Continue';

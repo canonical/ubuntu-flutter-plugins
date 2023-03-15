@@ -658,6 +658,9 @@ class UbuntuLocalizationsPtBr extends UbuntuLocalizationsPt {
   String get stopLabel => 'Parar';
 
   @override
+  String get strikeThroughLabel => 'Tachado';
+
+  @override
   String get submitLabel => 'Submeter';
 
   @override

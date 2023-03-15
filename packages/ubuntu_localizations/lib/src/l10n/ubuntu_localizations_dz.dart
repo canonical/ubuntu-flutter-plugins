@@ -11,7 +11,7 @@ class UbuntuLocalizationsDz extends UbuntuLocalizations {
   String get languageName => 'རྫོང་ཁ།';
 
   @override
-  String get backAction => 'Go Back';
+  String get backAction => 'Go back';
 
   @override
   String get continueAction => 'Continue';

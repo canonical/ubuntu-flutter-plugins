@@ -11,7 +11,7 @@ class UbuntuLocalizationsMk extends UbuntuLocalizations {
   String get languageName => 'Македонски';
 
   @override
-  String get backAction => 'Go Back';
+  String get backAction => 'Go back';
 
   @override
   String get continueAction => 'Continue';

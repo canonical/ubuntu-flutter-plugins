@@ -11,7 +11,7 @@ class UbuntuLocalizationsBo extends UbuntuLocalizations {
   String get languageName => 'བོད་ཡིག';
 
   @override
-  String get backAction => 'Go Back';
+  String get backAction => 'Go back';
 
   @override
   String get continueAction => 'Continue';

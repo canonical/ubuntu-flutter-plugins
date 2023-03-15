@@ -32,317 +32,317 @@ class UbuntuLocalizationsLt extends UbuntuLocalizations {
   String get altKey => 'Alt';
 
   @override
-  String get controlKey => 'Control';
+  String get controlKey => 'Vald';
 
   @override
   String get metaKey => 'Meta';
 
   @override
-  String get shiftKey => 'Shift';
+  String get shiftKey => 'Lyg2';
 
   @override
-  String get aboutLabel => 'About';
+  String get aboutLabel => 'Apie';
 
   @override
-  String get addLabel => 'Add';
+  String get addLabel => 'Pridėti';
 
   @override
-  String get allLabel => 'All';
+  String get allLabel => 'Visi';
 
   @override
-  String get applyLabel => 'Apply';
+  String get applyLabel => 'Taikyti';
 
   @override
-  String get ascendingLabel => 'Ascending';
+  String get ascendingLabel => 'Didėjančiai';
 
   @override
-  String get backLabel => 'Back';
+  String get backLabel => 'Atgal';
 
   @override
-  String get boldLabel => 'Bold';
+  String get boldLabel => 'Pusjuodis';
 
   @override
-  String get bottomLabel => 'Bottom';
+  String get bottomLabel => 'Apačia';
 
   @override
-  String get cancelLabel => 'Cancel';
+  String get cancelLabel => 'Atsisakyti';
 
   @override
-  String get centerLabel => 'Center';
+  String get centerLabel => 'Centras';
 
   @override
-  String get clearLabel => 'Clear';
+  String get clearLabel => 'Išvalyti';
 
   @override
-  String get closeLabel => 'Close';
+  String get closeLabel => 'Užverti';
 
   @override
-  String get colorLabel => 'Color';
+  String get colorLabel => 'Spalva';
 
   @override
-  String get connectLabel => 'Connect';
+  String get connectLabel => 'Prisijungti';
 
   @override
-  String get continueLabel => 'Continue';
+  String get continueLabel => 'Tęsti';
 
   @override
-  String get copyLabel => 'Copy';
+  String get copyLabel => 'Kopijuoti';
 
   @override
-  String get createLabel => 'Create';
+  String get createLabel => 'Sukurti';
 
   @override
-  String get cutLabel => 'Cut';
+  String get cutLabel => 'Iškirpti';
 
   @override
-  String get decreaseLabel => 'Decrease';
+  String get decreaseLabel => 'Sumažinti';
 
   @override
-  String get deleteLabel => 'Delete';
+  String get deleteLabel => 'Ištrinti';
 
   @override
-  String get descendingLabel => 'Descending';
+  String get descendingLabel => 'Mažėjančiai';
 
   @override
-  String get discardLabel => 'Discard';
+  String get discardLabel => 'Atmesti';
 
   @override
-  String get disconnectLabel => 'Disconnect';
+  String get disconnectLabel => 'Atsijungti';
 
   @override
-  String get doneLabel => 'Done';
+  String get doneLabel => 'Atlikta';
 
   @override
-  String get downloadLabel => 'Download';
+  String get downloadLabel => 'Atsisiųsti';
 
   @override
-  String get editLabel => 'Edit';
+  String get editLabel => 'Taisyti';
 
   @override
-  String get enterLabel => 'Enter';
+  String get enterLabel => 'Įvedimas';
 
   @override
-  String get errorLabel => 'Error';
+  String get errorLabel => 'Klaida';
 
   @override
-  String get executeLabel => 'Execute';
+  String get executeLabel => 'Vykdyti';
 
   @override
-  String get exitLabel => 'Exit';
+  String get exitLabel => 'Išeiti';
 
   @override
-  String get fileLabel => 'File';
+  String get fileLabel => 'Failas';
 
   @override
-  String get fillLabel => 'Fill';
+  String get fillLabel => 'Užpildyti';
 
   @override
-  String get findLabel => 'Find';
+  String get findLabel => 'Rasti';
 
   @override
-  String get firstLabel => 'First';
+  String get firstLabel => 'Pirmas';
 
   @override
-  String get fontLabel => 'Font';
+  String get fontLabel => 'Šriftas';
 
   @override
-  String get forwardLabel => 'Forward';
+  String get forwardLabel => 'Pirmyn';
 
   @override
-  String get fullscreenLabel => 'Fullscreen';
+  String get fullscreenLabel => 'Visas ekranas';
 
   @override
-  String get goBackLabel => 'Go Back';
+  String get goBackLabel => 'Grįžti';
 
   @override
-  String get helpLabel => 'Help';
+  String get helpLabel => 'Žinynas';
 
   @override
-  String get homeLabel => 'Home';
+  String get homeLabel => 'Pradžia';
 
   @override
-  String get importLabel => 'Import';
+  String get importLabel => 'Importuoti';
 
   @override
-  String get increaseLabel => 'Increase';
+  String get increaseLabel => 'Padidinti';
 
   @override
-  String get indexLabel => 'Index';
+  String get indexLabel => 'Indeksas';
 
   @override
-  String get informationLabel => 'Information';
+  String get informationLabel => 'Informacija';
 
   @override
-  String get insertLabel => 'Insert';
+  String get insertLabel => 'Įterpti';
 
   @override
-  String get italicLabel => 'Italic';
+  String get italicLabel => 'Kursyvas';
 
   @override
-  String get landscapeLabel => 'Landscape';
+  String get landscapeLabel => 'Gulsčias';
 
   @override
-  String get lastLabel => 'Last';
+  String get lastLabel => 'Paskutinis';
 
   @override
-  String get leaveLabel => 'Leave';
+  String get leaveLabel => 'Išeiti';
 
   @override
-  String get leftLabel => 'Left';
+  String get leftLabel => 'Kairė';
 
   @override
-  String get mediaLabel => 'Media';
+  String get mediaLabel => 'Medija';
 
   @override
-  String get networkLabel => 'Network';
+  String get networkLabel => 'Tinklas';
 
   @override
-  String get newLabel => 'New';
+  String get newLabel => 'Naujas';
 
   @override
-  String get nextLabel => 'Next';
+  String get nextLabel => 'Kitas';
 
   @override
-  String get noLabel => 'No';
+  String get noLabel => 'Ne';
 
   @override
-  String get noneLabel => 'None';
+  String get noneLabel => 'Nėra';
 
   @override
-  String get normalLabel => 'Normal';
+  String get normalLabel => 'Normalus';
 
   @override
-  String get okLabel => 'OK';
+  String get okLabel => 'Gerai';
 
   @override
-  String get openLabel => 'Open';
+  String get openLabel => 'Atverti';
 
   @override
-  String get pasteLabel => 'Paste';
+  String get pasteLabel => 'Įdėti';
 
   @override
-  String get pauseLabel => 'Pause';
+  String get pauseLabel => 'Pristabdyti';
 
   @override
-  String get playLabel => 'Play';
+  String get playLabel => 'Atkurti';
 
   @override
-  String get portraitLabel => 'Portrait';
+  String get portraitLabel => 'Stačias';
 
   @override
-  String get preferencesLabel => 'Preferences';
+  String get preferencesLabel => 'Nuostatos';
 
   @override
-  String get previousLabel => 'Previous';
+  String get previousLabel => 'Ankstesnis';
 
   @override
-  String get printLabel => 'Print';
+  String get printLabel => 'Spausdinti';
 
   @override
-  String get printPreviewLabel => 'Print Preview';
+  String get printPreviewLabel => 'Spaudinio peržiūra';
 
   @override
-  String get propertiesLabel => 'Properties';
+  String get propertiesLabel => 'Savybės';
 
   @override
-  String get questionLabel => 'Question';
+  String get questionLabel => 'Klausimas';
 
   @override
-  String get quitLabel => 'Quit';
+  String get quitLabel => 'Išeiti';
 
   @override
-  String get recordLabel => 'Record';
+  String get recordLabel => 'Įrašymas';
 
   @override
-  String get redoLabel => 'Redo';
+  String get redoLabel => 'Grąžinti';
 
   @override
-  String get refreshLabel => 'Refresh';
+  String get refreshLabel => 'Įkelti iš naujo';
 
   @override
-  String get removeLabel => 'Remove';
+  String get removeLabel => 'Šalinti';
 
   @override
-  String get renameLabel => 'Rename';
+  String get renameLabel => 'Pervadinti';
 
   @override
-  String get resetLabel => 'Reset';
+  String get resetLabel => 'Atstatyti';
 
   @override
-  String get restoreLabel => 'Restore';
+  String get restoreLabel => 'Atkurti';
 
   @override
-  String get retryLabel => 'Retry';
+  String get retryLabel => 'Bandyti dar kartą';
 
   @override
-  String get revertLabel => 'Revert';
+  String get revertLabel => 'Sugrąžinti';
 
   @override
-  String get rewindLabel => 'Rewind';
+  String get rewindLabel => 'Atsukti';
 
   @override
-  String get rightLabel => 'Right';
+  String get rightLabel => 'Dešinė';
 
   @override
-  String get saveAsLabel => 'Save As';
+  String get saveAsLabel => 'Įrašyti kaip';
 
   @override
-  String get saveLabel => 'Save';
+  String get saveLabel => 'Įrašyti';
 
   @override
-  String get searchLabel => 'Search';
+  String get searchLabel => 'Paieška';
 
   @override
-  String get selectAllLabel => 'Select All';
+  String get selectAllLabel => 'Žymėti viską';
 
   @override
-  String get selectLabel => 'Select';
+  String get selectLabel => 'Žymėti';
 
   @override
-  String get sendLabel => 'Send';
+  String get sendLabel => 'Siųsti';
 
   @override
-  String get skipLabel => 'Skip';
+  String get skipLabel => 'Praleisti';
 
   @override
-  String get sortLabel => 'Sort';
+  String get sortLabel => 'Rikiuoti';
 
   @override
-  String get stopLabel => 'Stop';
+  String get stopLabel => 'Stabdyti';
 
   @override
-  String get strikeThroughLabel => 'Strike Through';
+  String get strikeThroughLabel => 'Perbraukti';
 
   @override
-  String get submitLabel => 'Submit';
+  String get submitLabel => 'Pateikti';
 
   @override
-  String get topLabel => 'Top';
+  String get topLabel => 'Viršus';
 
   @override
-  String get undoLabel => 'Undo';
+  String get undoLabel => 'Atšaukti';
 
   @override
-  String get updateLabel => 'Update';
+  String get updateLabel => 'Atnaujinti';
 
   @override
-  String get upLabel => 'Up';
+  String get upLabel => 'Aukštyn';
 
   @override
-  String get viewLabel => 'View';
+  String get viewLabel => 'Rodyti';
 
   @override
-  String get warningLabel => 'Warning';
+  String get warningLabel => 'Įspėjimas';
 
   @override
-  String get windowLabel => 'Window';
+  String get windowLabel => 'Langas';
 
   @override
-  String get yesLabel => 'Yes';
+  String get yesLabel => 'Taip';
 
   @override
-  String get zoomInLabel => 'Zoom In';
+  String get zoomInLabel => 'Didinti';
 
   @override
-  String get zoomOutLabel => 'Zoom Out';
+  String get zoomOutLabel => 'Mažinti';
 }

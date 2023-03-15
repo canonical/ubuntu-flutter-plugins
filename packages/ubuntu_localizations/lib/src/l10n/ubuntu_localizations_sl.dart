@@ -11,7 +11,7 @@ class UbuntuLocalizationsSl extends UbuntuLocalizations {
   String get languageName => 'Slovenščina';
 
   @override
-  String get backAction => 'Go Back';
+  String get backAction => 'Go back';
 
   @override
   String get continueAction => 'Continue';
