@@ -11,7 +11,7 @@ class UbuntuLocalizationsEt extends UbuntuLocalizations {
   String get languageName => 'Eesti';
 
   @override
-  String get backAction => 'Go Back';
+  String get backAction => 'Go back';
 
   @override
   String get continueAction => 'Continue';

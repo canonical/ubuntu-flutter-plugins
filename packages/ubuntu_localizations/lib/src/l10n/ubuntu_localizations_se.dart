@@ -11,7 +11,7 @@ class UbuntuLocalizationsSe extends UbuntuLocalizations {
   String get languageName => 'Sámegillii';
 
   @override
-  String get backAction => 'Go Back';
+  String get backAction => 'Go back';
 
   @override
   String get continueAction => 'Continue';

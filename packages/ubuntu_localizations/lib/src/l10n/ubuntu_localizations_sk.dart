@@ -11,7 +11,7 @@ class UbuntuLocalizationsSk extends UbuntuLocalizations {
   String get languageName => 'Slovenčina';
 
   @override
-  String get backAction => 'Go Back';
+  String get backAction => 'Go back';
 
   @override
   String get continueAction => 'Continue';

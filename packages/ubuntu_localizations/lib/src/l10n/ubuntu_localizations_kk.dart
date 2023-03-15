@@ -11,7 +11,7 @@ class UbuntuLocalizationsKk extends UbuntuLocalizations {
   String get languageName => 'Қазақ';
 
   @override
-  String get backAction => 'Go Back';
+  String get backAction => 'Go back';
 
   @override
   String get continueAction => 'Continue';

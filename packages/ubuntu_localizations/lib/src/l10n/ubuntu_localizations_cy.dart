@@ -11,7 +11,7 @@ class UbuntuLocalizationsCy extends UbuntuLocalizations {
   String get languageName => 'Cymraeg';
 
   @override
-  String get backAction => 'Go Back';
+  String get backAction => 'Go back';
 
   @override
   String get continueAction => 'Continue';

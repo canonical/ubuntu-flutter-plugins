@@ -11,7 +11,7 @@ class UbuntuLocalizationsGu extends UbuntuLocalizations {
   String get languageName => 'ગુજરાતી';
 
   @override
-  String get backAction => 'Go Back';
+  String get backAction => 'Go back';
 
   @override
   String get continueAction => 'Continue';

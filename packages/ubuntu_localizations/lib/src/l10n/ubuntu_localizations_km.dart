@@ -11,7 +11,7 @@ class UbuntuLocalizationsKm extends UbuntuLocalizations {
   String get languageName => '﻿ខ្មែរ';
 
   @override
-  String get backAction => 'Go Back';
+  String get backAction => 'Go back';
 
   @override
   String get continueAction => 'Continue';

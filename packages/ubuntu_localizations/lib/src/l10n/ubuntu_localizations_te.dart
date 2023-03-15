@@ -11,7 +11,7 @@ class UbuntuLocalizationsTe extends UbuntuLocalizations {
   String get languageName => 'తెలుగు';
 
   @override
-  String get backAction => 'Go Back';
+  String get backAction => 'Go back';
 
   @override
   String get continueAction => 'Continue';

@@ -11,7 +11,7 @@ class UbuntuLocalizationsLo extends UbuntuLocalizations {
   String get languageName => '﻿ລາວ';
 
   @override
-  String get backAction => 'Go Back';
+  String get backAction => 'Go back';
 
   @override
   String get continueAction => 'Continue';

@@ -251,7 +251,7 @@ abstract class UbuntuLocalizations {
   /// No description provided for @backAction.
   ///
   /// In en, this message translates to:
-  /// **'Go Back'**
+  /// **'Go back'**
   String get backAction;
 
   /// No description provided for @continueAction.
