@@ -1,3 +1,8 @@
+## 0.1.0
+
+- Add translations.
+- Bump version to indicate that the package is good enough for production use.
+
 ## 0.0.5
 
 - Add localizations delegates for Cupertino.
