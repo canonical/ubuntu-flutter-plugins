@@ -229,5 +229,7 @@
   "descendingLabel": "Decrescente",
   "@descendingLabel": {},
   "upLabel": "Cima",
-  "@upLabel": {}
+  "@upLabel": {},
+  "strikeThroughLabel": "Tachado",
+  "@strikeThroughLabel": {}
 }
