@@ -5,6 +5,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:intl/intl.dart';
 import 'package:latlong2/latlong.dart';
 import 'package:path/path.dart' as p;
+import 'package:vector_graphics/vector_graphics.dart';
 
 import 'latlng.dart';
 
@@ -64,19 +65,20 @@ class TimezoneMap extends StatelessWidget {
         child: LayoutBuilder(builder: (context, constraints) {
           return Stack(
             children: [
-              Positioned.fill(
-                child: SvgPicture.asset(
-                  'assets/map.svg',
+              const Positioned.fill(
+                child: SvgPicture(
+                  AssetBytesLoader('assets/map.svg.vec',
+                      packageName: 'timezone_map'),
                   fit: BoxFit.fill,
-                  package: 'timezone_map',
                 ),
               ),
               if (offset != null)
                 Positioned.fill(
-                  child: SvgPicture.asset(
-                    'assets/tz_${_formatTimezoneOffset(offset!)}.svg',
+                  child: SvgPicture(
+                    AssetBytesLoader(
+                        'assets/tz_${_formatTimezoneOffset(offset!)}.svg.vec',
+                        packageName: 'timezone_map'),
                     fit: BoxFit.fill,
-                    package: 'timezone_map',
                   ),
                 ),
               if (marker != null)
