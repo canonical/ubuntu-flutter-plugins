@@ -11,13 +11,14 @@ dependencies:
   dio: ^4.0.6
   flutter:
     sdk: flutter
-  flutter_svg: ^1.1.0
+  flutter_svg: ^2.0.4
   intl: ^0.17.0
   latlong2: ^0.8.1
   meta: ^1.7.0
   path: ^1.8.0
   rbush: ^1.1.0
   safe_change_notifier: ^0.2.0
+  vector_graphics: ^1.1.4
   xml: ^6.1.0
 
 dev_dependencies:
@@ -26,6 +27,7 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
   mockito: 5.3.2
+  vector_graphics_compiler: ^1.1.4
 
 flutter:
   uses-material-design: true
