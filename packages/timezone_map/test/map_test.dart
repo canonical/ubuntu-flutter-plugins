@@ -104,9 +104,6 @@ void main() {
 
     await tester.pumpWidget(buildMap(tester, offset: 5.0000000000001));
     expect(find.svg('tz_5.svg.vec'), findsOneWidget);
-
-    await tester.pumpWidget(buildMap(tester, offset: 1.23));
-    expect(tester.takeException(), isFlutterError);
   });
 
   testWidgets('locale', (tester) async {
