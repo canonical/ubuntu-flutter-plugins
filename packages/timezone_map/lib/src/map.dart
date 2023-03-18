@@ -29,20 +29,23 @@ class TimezoneMap extends StatelessWidget {
 
   /// Requests all timezone map SVG assets to be pre-cached.
   static Future precacheAssets(BuildContext context) async {
-    final manifest = await DefaultAssetBundle.of(context)
+    final bundle = DefaultAssetBundle.of(context);
+    final manifest = await bundle
         .loadString('AssetManifest.json')
         .then((value) => json.decode(value) as Map<String, dynamic>);
 
     bool filterAsset(String asset) {
       return p.isWithin('packages/timezone_map', asset) &&
-          p.extension(asset) == '.svg';
+          p.extension(asset) == '.png';
     }
 
-    Future<void> precacheAsset(String asset) {
-      return precachePicture(
-        ExactAssetPicture(SvgPicture.svgStringDecoderBuilder, asset),
-        context,
+    Future<void> precacheAsset(String assetName) async {
+      final asset = AssetImage(
+        p.relative(assetName, from: 'packages/timezone_map'),
+        bundle: bundle,
+        package: 'timezone_map',
       );
+      return precacheImage(asset, context);
     }
 
     return Future.wait(manifest.keys.where(filterAsset).map(precacheAsset));

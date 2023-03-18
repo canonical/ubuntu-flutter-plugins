@@ -1,8 +1,11 @@
+import 'dart:convert';
+import 'dart:io';
+
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:intl/intl.dart';
 import 'package:latlong2/latlong.dart';
-import 'package:mockito/mockito.dart';
 import 'package:timezone_map/timezone_map.dart';
 
 import 'test_utils.dart';
@@ -148,42 +151,57 @@ void main() {
         pressed, isCloseToLatLng(bottomRightLatLng, 10, LengthUnit.Kilometer));
   });
 
-  testWidgets('cache', (tester) async {
-    final assetBundle = MockAssetBundle();
-    when(assetBundle.loadString('AssetManifest.json'))
-        .thenAnswer((_) async => '''
-{
-  "packages/timezone_map/assets/tz_-10.svg":["packages/timezone_map/assets/tz_-10.svg"],
-  "packages/timezone_map/assets/tz_0.svg":["packages/timezone_map/assets/tz_0.svg"],
-  "packages/timezone_map/assets/tz_4.5.svg":["packages/timezone_map/assets/tz_4.5.svg"]
-}
-''');
-    when(assetBundle.loadString(argThat(endsWith('.svg'))))
-        .thenAnswer((_) async => '<svg with="1" height="1"/>');
+  testWidgets('pre-cache', (tester) async {
+    final assetBundle = FakeAssetBundle([
+      'packages/timezone_map/assets/map.png',
+      'packages/timezone_map/assets/tz_-10.png',
+      'packages/timezone_map/assets/tz_0.png',
+      'packages/timezone_map/assets/tz_4.5.png',
+    ]);
 
-    await tester.pumpWidget(DefaultAssetBundle(
-      bundle: assetBundle,
-      child: const MaterialApp(),
-    ));
-    final context = tester.element(find.byType(MaterialApp));
+    await tester.runAsync(() async {
+      await tester.pumpWidget(DefaultAssetBundle(
+        bundle: assetBundle,
+        child: const MaterialApp(),
+      ));
 
-    await TimezoneMap.precacheAssets(context);
+      final context = tester.element(find.byType(MaterialApp));
+      await TimezoneMap.precacheAssets(context);
+    });
 
-    verify(assetBundle.loadString('packages/timezone_map/assets/tz_-10.svg'))
-        .called(1);
-    verify(assetBundle.loadString('packages/timezone_map/assets/tz_0.svg'))
-        .called(1);
-    verify(assetBundle.loadString('packages/timezone_map/assets/tz_4.5.svg'))
-        .called(1);
+    expect(
+      assetBundle.loadedAssets,
+      containsAll([
+        'packages/timezone_map/assets/map.png',
+        'packages/timezone_map/assets/tz_-10.png',
+        'packages/timezone_map/assets/tz_0.png',
+        'packages/timezone_map/assets/tz_4.5.png',
+      ]),
+    );
   });
 }
 
-class MockAssetBundle extends Mock implements AssetBundle {
+class FakeAssetBundle extends CachingAssetBundle {
+  FakeAssetBundle(this._fakeAssets);
+
+  final List<String> _fakeAssets;
+  final loadedAssets = <String>[];
+
   @override
-  Future<String> loadString(String? key, {bool cache = true}) {
-    return super.noSuchMethod(
-      Invocation.method(#loadString, [key], {#cache: cache}),
-      returnValue: Future.value(''),
-    );
+  Future<ByteData> load(String key) async {
+    var bytes = Uint8List(0);
+    switch (key) {
+      case 'AssetManifest.json':
+        final fakes = Map.fromEntries(_fakeAssets.map((e) => MapEntry(e, [e])));
+        bytes = Uint8List.fromList(jsonEncode(fakes).codeUnits);
+        break;
+      default:
+        if (_fakeAssets.contains(key)) {
+          loadedAssets.add(key);
+          bytes = File('test/test.png').readAsBytesSync();
+        }
+        break;
+    }
+    return ByteData.view(bytes.buffer);
   }
 }
