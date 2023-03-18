@@ -1,3 +1,7 @@
+## 0.2.2
+
+- Add tryGetService() and tryCreateService().
+
 ## 0.2.1
 
 - Add hasService() and tryRegisterService() & friends for conditional
