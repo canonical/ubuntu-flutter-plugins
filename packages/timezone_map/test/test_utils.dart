@@ -5,6 +5,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:latlong2/latlong.dart';
 import 'package:timezone_map/timezone_map.dart';
+import 'package:vector_graphics/vector_graphics.dart';
 
 const mapSize = Size(960, 480);
 
@@ -52,8 +53,8 @@ extension SvgFinder on CommonFinders {
   Finder svg(String assetName) {
     return find.byWidgetPredicate((widget) {
       return widget is SvgPicture &&
-          widget.pictureProvider is ExactAssetPicture &&
-          (widget.pictureProvider as ExactAssetPicture)
+          widget.bytesLoader is AssetBytesLoader &&
+          (widget.bytesLoader as AssetBytesLoader)
               .assetName
               .endsWith(assetName);
     });
