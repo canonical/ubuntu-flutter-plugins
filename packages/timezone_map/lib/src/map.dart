@@ -11,10 +11,10 @@ import 'latlng.dart';
 
 /// The size of the timezone map.
 enum TimezoneMapSize {
-  /// 960x480 (PNG)
+  /// Fixed PNG (960x480)
   medium,
 
-  /// default (SVG)
+  /// Scalable SVG (default)
   scalable,
 }
 
@@ -103,18 +103,18 @@ class TimezoneMap extends StatelessWidget {
 
   Widget _buildImage(BuildContext context, String assetName) {
     switch (size) {
-      case TimezoneMapSize.medium:
-        return Image.asset(
-          'assets/$assetName.png',
-          package: 'timezone_map',
-          fit: BoxFit.fill,
-        );
       case TimezoneMapSize.scalable:
         return SvgPicture(
           AssetBytesLoader(
-            'assets/$assetName.svg.vec',
+            'assets/scalable/$assetName.svg.vec',
             packageName: 'timezone_map',
           ),
+          fit: BoxFit.fill,
+        );
+      default:
+        return Image.asset(
+          'assets/${size.name}/$assetName.png',
+          package: 'timezone_map',
           fit: BoxFit.fill,
         );
     }

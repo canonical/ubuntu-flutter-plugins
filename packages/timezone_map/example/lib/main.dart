@@ -138,7 +138,7 @@ class _TimezonePageState extends State<TimezonePage> {
                 ),
                 Expanded(
                   child: TimezoneMap(
-                    size: TimezoneMapSize.normal,
+                    size: TimezoneMapSize.medium,
                     offset: _controller.selectedLocation?.offset,
                     marker: _controller.selectedLocation?.coordinates,
                     onPressed: (coordinates) => _controller
