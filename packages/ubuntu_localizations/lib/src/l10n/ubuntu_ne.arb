@@ -1,5 +1,7 @@
 {
   "@@locale": "ne",
   "countryCode": "NP",
-  "languageName": "नेपाली "
+  "@countryCode": {},
+  "languageName": "नेपाली",
+  "@languageName": {}
 }
