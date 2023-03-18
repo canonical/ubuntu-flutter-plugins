@@ -15,6 +15,13 @@ class GeoService {
   /// Removes the specified [source].
   void removeSource(GeoSource source) => _geosources.remove(source);
 
+  /// Initializes the sources.
+  Future<void> init() {
+    return Future.wait([
+      for (final source in _geosources) source.init(),
+    ]);
+  }
+
   /// Looks up the current geographic location.
   Future<GeoLocation?> lookupLocation() async {
     for (final source in _geosources) {

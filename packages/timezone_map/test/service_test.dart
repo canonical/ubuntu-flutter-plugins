@@ -28,6 +28,10 @@ void main() {
     service.addSource(source1);
     service.addSource(source2);
 
+    await service.init();
+    verify(source1.init()).called(1);
+    verify(source2.init()).called(1);
+
     expect(await service.searchLocation('foo'), [copenhagen, gothenburg]);
     verify(source1.searchLocation('foo')).called(1);
     verify(source2.searchLocation('foo')).called(1);
