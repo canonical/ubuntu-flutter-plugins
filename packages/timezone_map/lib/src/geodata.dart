@@ -86,6 +86,9 @@ class Geodata extends GeoSource {
   }
 
   @override
+  Future<void> init() => _ensureInitialized();
+
+  @override
   Future<Iterable<GeoLocation>> searchLocation(String location) async {
     await _ensureInitialized();
     final key = location.toSearch();

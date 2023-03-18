@@ -2,6 +2,9 @@ import 'location.dart';
 
 /// Geolocation lookup source.
 abstract class GeoSource {
+  /// Initializes the source.
+  Future<void> init() async {}
+
   /// Looks up the sources and returns current location from the first source
   /// that knows it, if any.
   Future<GeoLocation?> lookupLocation() async => null;
