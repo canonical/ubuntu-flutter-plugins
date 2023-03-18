@@ -8,9 +8,19 @@ final _locator = GetIt.asNewInstance();
 /// Locates and returns an injected service.
 T getService<T extends Object>({String? id}) => _locator<T>(instanceName: id);
 
+/// Locates and returns an injected service or null if not found.
+T? tryGetService<T extends Object>({String? id}) {
+  return hasService<T>(id: id) ? getService<T>(id: id) : null;
+}
+
 /// Locates and invokes an injected service factory.
 T createService<T extends Object>(dynamic param, {String? id}) {
   return _locator<T>(param1: param, instanceName: id);
+}
+
+/// Locates and invokes an injected service factory or returns null if not found.
+T? tryCreateService<T extends Object>(dynamic param, {String? id}) {
+  return hasService<T>(id: id) ? createService<T>(param, id: id) : null;
 }
 
 /// Returns whether a service is registered with the locator.

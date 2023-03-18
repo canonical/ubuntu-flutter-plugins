@@ -17,17 +17,20 @@ void main() {
 
   test('unknown service', () {
     expect(() => getService<Service>(), throwsA(isA<AssertionError>()));
+    expect(tryGetService<Service>(), isNull);
   });
 
   test('locate service', () {
     registerService(Service.new);
     expect(getService<Service>(), isNotNull);
+    expect(tryGetService<Service>(), isNotNull);
   });
 
   test('locate service instance', () {
     final service = Service();
     registerServiceInstance(service);
     expect(getService<Service>(), equals(service));
+    expect(tryGetService<Service>(), equals(service));
   });
 
   test('reset service', () {
@@ -107,6 +110,9 @@ void main() {
   });
 
   test('service factory', () {
+    final s0 = tryCreateService<ServiceParam>('p0');
+    expect(s0, isNull);
+
     registerServiceFactory<ServiceParam>(
       (dynamic param) => ServiceParam(param as String),
     );
