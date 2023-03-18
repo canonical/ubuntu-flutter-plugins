@@ -9,6 +9,15 @@ import 'package:vector_graphics/vector_graphics.dart';
 
 import 'latlng.dart';
 
+/// The size of the timezone map.
+enum TimezoneMapSize {
+  /// Fixed PNG (960x480)
+  medium,
+
+  /// Scalable SVG (default)
+  scalable,
+}
+
 /// A widget that displays a map of the world.
 class TimezoneMap extends StatelessWidget {
   /// Creates a map.
@@ -17,6 +26,7 @@ class TimezoneMap extends StatelessWidget {
     this.marker,
     this.offset,
     this.onPressed,
+    this.size = TimezoneMapSize.scalable,
   });
 
   /// Coordinates of a map marker.
@@ -27,6 +37,9 @@ class TimezoneMap extends StatelessWidget {
 
   /// Called when the map is pressed at [coordinates].
   final void Function(LatLng coordinates)? onPressed;
+
+  /// The size of the map.
+  final TimezoneMapSize size;
 
   /// Requests all timezone map SVG assets to be pre-cached.
   static Future precacheAssets(BuildContext context) async {
@@ -65,20 +78,14 @@ class TimezoneMap extends StatelessWidget {
         child: LayoutBuilder(builder: (context, constraints) {
           return Stack(
             children: [
-              const Positioned.fill(
-                child: SvgPicture(
-                  AssetBytesLoader('assets/map.svg.vec',
-                      packageName: 'timezone_map'),
-                  fit: BoxFit.fill,
-                ),
+              Positioned.fill(
+                child: _buildImage(context, 'map'),
               ),
               if (offset != null)
                 Positioned.fill(
-                  child: SvgPicture(
-                    AssetBytesLoader(
-                        'assets/tz_${_formatTimezoneOffset(offset!)}.svg.vec',
-                        packageName: 'timezone_map'),
-                    fit: BoxFit.fill,
+                  child: _buildImage(
+                    context,
+                    'tz_${_formatTimezoneOffset(offset!)}',
                   ),
                 ),
               if (marker != null)
@@ -92,6 +99,25 @@ class TimezoneMap extends StatelessWidget {
         }),
       ),
     );
+  }
+
+  Widget _buildImage(BuildContext context, String assetName) {
+    switch (size) {
+      case TimezoneMapSize.scalable:
+        return SvgPicture(
+          AssetBytesLoader(
+            'assets/scalable/$assetName.svg.vec',
+            packageName: 'timezone_map',
+          ),
+          fit: BoxFit.fill,
+        );
+      default:
+        return Image.asset(
+          'assets/${size.name}/$assetName.png',
+          package: 'timezone_map',
+          fit: BoxFit.fill,
+        );
+    }
   }
 }
 
