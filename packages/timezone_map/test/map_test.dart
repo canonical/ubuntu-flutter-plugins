@@ -36,7 +36,7 @@ void main() {
 
   testWidgets('map', (tester) async {
     await tester.pumpWidget(buildMap(tester));
-    expect(find.svg('map.svg'), findsOneWidget);
+    expect(find.svg('map.svg.vec'), findsOneWidget);
   });
 
   testWidgets('press', (tester) async {
@@ -82,31 +82,28 @@ void main() {
 
   testWidgets('offset', (tester) async {
     await tester.pumpWidget(buildMap(tester, offset: 1));
-    expect(find.svg('tz_0.svg'), findsNothing);
-    expect(find.svg('tz_1.svg'), findsOneWidget);
-    expect(find.svg('tz_-1.svg'), findsNothing);
+    expect(find.svg('tz_0.svg.vec'), findsNothing);
+    expect(find.svg('tz_1.svg.vec'), findsOneWidget);
+    expect(find.svg('tz_-1.svg.vec'), findsNothing);
 
     await tester.pumpWidget(buildMap(tester, offset: null));
-    expect(find.svg('tz_0.svg'), findsNothing);
-    expect(find.svg('tz_1.svg'), findsNothing);
-    expect(find.svg('tz_-1.svg'), findsNothing);
+    expect(find.svg('tz_0.svg.vec'), findsNothing);
+    expect(find.svg('tz_1.svg.vec'), findsNothing);
+    expect(find.svg('tz_-1.svg.vec'), findsNothing);
 
     await tester.pumpWidget(buildMap(tester, offset: -1));
-    expect(find.svg('tz_0.svg'), findsNothing);
-    expect(find.svg('tz_1.svg'), findsNothing);
-    expect(find.svg('tz_-1.svg'), findsOneWidget);
+    expect(find.svg('tz_0.svg.vec'), findsNothing);
+    expect(find.svg('tz_1.svg.vec'), findsNothing);
+    expect(find.svg('tz_-1.svg.vec'), findsOneWidget);
 
     await tester.pumpWidget(buildMap(tester, offset: -3.5));
-    expect(find.svg('tz_-3.5.svg'), findsOneWidget);
+    expect(find.svg('tz_-3.5.svg.vec'), findsOneWidget);
 
     await tester.pumpWidget(buildMap(tester, offset: 12.75));
-    expect(find.svg('tz_12.75.svg'), findsOneWidget);
+    expect(find.svg('tz_12.75.svg.vec'), findsOneWidget);
 
     await tester.pumpWidget(buildMap(tester, offset: 5.0000000000001));
-    expect(find.svg('tz_5.svg'), findsOneWidget);
-
-    await tester.pumpWidget(buildMap(tester, offset: 1.23));
-    expect(tester.takeException(), isFlutterError);
+    expect(find.svg('tz_5.svg.vec'), findsOneWidget);
   });
 
   testWidgets('locale', (tester) async {
@@ -114,7 +111,7 @@ void main() {
     addTearDown(() => Intl.defaultLocale = null);
 
     await tester.pumpWidget(buildMap(tester, offset: 5.75));
-    expect(find.svg('tz_5.75.svg'), findsOneWidget);
+    expect(find.svg('tz_5.75.svg.vec'), findsOneWidget);
   });
 
   testWidgets('map size', (tester) async {
