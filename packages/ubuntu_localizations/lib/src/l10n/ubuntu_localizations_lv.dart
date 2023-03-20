@@ -8,25 +8,25 @@ class UbuntuLocalizationsLv extends UbuntuLocalizations {
   String get countryCode => 'LV';
 
   @override
-  String get languageName => 'Latviski';
+  String get languageName => 'Latviešu';
 
   @override
-  String get backAction => 'Go back';
+  String get backAction => 'Iet atpakaļ';
 
   @override
-  String get continueAction => 'Continue';
+  String get continueAction => 'Turpināt';
 
   @override
-  String get strongPassword => 'Strong password';
+  String get strongPassword => 'Droša parole';
 
   @override
-  String get fairPassword => 'Fair password';
+  String get fairPassword => 'Pieņemama parole';
 
   @override
-  String get goodPassword => 'Good password';
+  String get goodPassword => 'Laba parole';
 
   @override
-  String get weakPassword => 'Weak password';
+  String get weakPassword => 'Vāja parole';
 
   @override
   String get altKey => 'Alt';
@@ -41,10 +41,10 @@ class UbuntuLocalizationsLv extends UbuntuLocalizations {
   String get shiftKey => 'Shift';
 
   @override
-  String get aboutLabel => 'About';
+  String get aboutLabel => 'Par programmu';
 
   @override
-  String get addLabel => 'Add';
+  String get addLabel => 'Pievienot';
 
   @override
   String get allLabel => 'All';

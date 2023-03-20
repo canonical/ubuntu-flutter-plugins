@@ -8,7 +8,7 @@ class UbuntuLocalizationsNe extends UbuntuLocalizations {
   String get countryCode => 'NP';
 
   @override
-  String get languageName => 'नेपाली ';
+  String get languageName => 'नेपाली';
 
   @override
   String get backAction => 'Go back';
