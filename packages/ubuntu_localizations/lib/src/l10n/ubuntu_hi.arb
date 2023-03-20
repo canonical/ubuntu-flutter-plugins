@@ -1,5 +1,7 @@
 {
   "@@locale": "hi",
   "countryCode": "IN",
-  "languageName": "हिन्दी "
+  "@countryCode": {},
+  "languageName": "हिन्दी",
+  "@languageName": {}
 }
