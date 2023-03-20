@@ -8,7 +8,7 @@ class UbuntuLocalizationsHi extends UbuntuLocalizations {
   String get countryCode => 'IN';
 
   @override
-  String get languageName => 'हिन्दी ';
+  String get languageName => 'हिन्दी';
 
   @override
   String get backAction => 'Go back';

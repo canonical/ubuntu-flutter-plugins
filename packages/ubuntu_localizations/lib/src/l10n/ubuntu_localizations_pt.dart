@@ -409,7 +409,7 @@ class UbuntuLocalizationsPtBr extends UbuntuLocalizationsPt {
   String get boldLabel => 'Negrito';
 
   @override
-  String get bottomLabel => 'Inferior';
+  String get bottomLabel => 'Embaixo';
 
   @override
   String get cancelLabel => 'Cancelar';
@@ -571,7 +571,7 @@ class UbuntuLocalizationsPtBr extends UbuntuLocalizationsPt {
   String get pauseLabel => 'Pausar';
 
   @override
-  String get playLabel => 'Play';
+  String get playLabel => 'Reproduzir';
 
   @override
   String get portraitLabel => 'Retrato';
@@ -673,7 +673,7 @@ class UbuntuLocalizationsPtBr extends UbuntuLocalizationsPt {
   String get updateLabel => 'Atualizar';
 
   @override
-  String get upLabel => 'Cima';
+  String get upLabel => 'Acima';
 
   @override
   String get viewLabel => 'Visualizar';
