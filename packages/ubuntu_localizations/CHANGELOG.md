@@ -1,3 +1,7 @@
+## 0.1.1
+
+- Add translations.
+
 ## 0.1.0
 
 - Add translations.
