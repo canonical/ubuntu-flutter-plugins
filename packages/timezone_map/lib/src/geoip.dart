@@ -8,8 +8,8 @@ import 'location.dart';
 import 'source.dart';
 
 final _options = BaseOptions(
-  connectTimeout: 5000,
-  receiveTimeout: 5000,
+  connectTimeout: const Duration(seconds: 5000),
+  receiveTimeout: const Duration(seconds: 5000),
   responseType: ResponseType.plain,
 );
 
@@ -47,7 +47,7 @@ class GeoIP extends GeoSource {
       return _handleResponse(response);
     } on DioError catch (e) {
       if (!CancelToken.isCancel(e)) {
-        throw GeoException(e.message, e);
+        throw GeoException(e.message ?? '', e);
       }
     }
     return null;

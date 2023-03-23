@@ -11,8 +11,8 @@ import 'location.dart';
 import 'source.dart';
 
 final _options = BaseOptions(
-  connectTimeout: 2000,
-  receiveTimeout: 2000,
+  connectTimeout: const Duration(seconds: 2000),
+  receiveTimeout: const Duration(seconds: 2000),
   responseType: ResponseType.plain,
 );
 
@@ -57,7 +57,7 @@ class Geoname extends GeoSource {
       return _handleResponse(response);
     } on DioError catch (e) {
       if (!CancelToken.isCancel(e) && e.error is! SocketException) {
-        throw GeoException(e.message, e);
+        throw GeoException(e.message ?? '', e);
       }
     }
     return const <GeoLocation>[];
