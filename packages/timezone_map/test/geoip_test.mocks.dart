@@ -153,6 +153,7 @@ class MockDio extends _i1.Mock implements _i7.Dio {
   @override
   _i8.Future<_i6.Response<T>> get<T>(
     String? path, {
+    Object? data,
     Map<String, dynamic>? queryParameters,
     _i2.Options? options,
     _i9.CancelToken? cancelToken,
@@ -163,6 +164,7 @@ class MockDio extends _i1.Mock implements _i7.Dio {
           #get,
           [path],
           {
+            #data: data,
             #queryParameters: queryParameters,
             #options: options,
             #cancelToken: cancelToken,
@@ -175,6 +177,7 @@ class MockDio extends _i1.Mock implements _i7.Dio {
             #get,
             [path],
             {
+              #data: data,
               #queryParameters: queryParameters,
               #options: options,
               #cancelToken: cancelToken,
@@ -186,6 +189,7 @@ class MockDio extends _i1.Mock implements _i7.Dio {
   @override
   _i8.Future<_i6.Response<T>> getUri<T>(
     Uri? uri, {
+    Object? data,
     _i2.Options? options,
     _i9.CancelToken? cancelToken,
     _i2.ProgressCallback? onReceiveProgress,
@@ -195,6 +199,7 @@ class MockDio extends _i1.Mock implements _i7.Dio {
           #getUri,
           [uri],
           {
+            #data: data,
             #options: options,
             #cancelToken: cancelToken,
             #onReceiveProgress: onReceiveProgress,
@@ -206,6 +211,7 @@ class MockDio extends _i1.Mock implements _i7.Dio {
             #getUri,
             [uri],
             {
+              #data: data,
               #options: options,
               #cancelToken: cancelToken,
               #onReceiveProgress: onReceiveProgress,
@@ -216,7 +222,7 @@ class MockDio extends _i1.Mock implements _i7.Dio {
   @override
   _i8.Future<_i6.Response<T>> post<T>(
     String? path, {
-    dynamic data,
+    Object? data,
     Map<String, dynamic>? queryParameters,
     _i2.Options? options,
     _i9.CancelToken? cancelToken,
@@ -255,7 +261,7 @@ class MockDio extends _i1.Mock implements _i7.Dio {
   @override
   _i8.Future<_i6.Response<T>> postUri<T>(
     Uri? uri, {
-    dynamic data,
+    Object? data,
     _i2.Options? options,
     _i9.CancelToken? cancelToken,
     _i2.ProgressCallback? onSendProgress,
@@ -291,7 +297,7 @@ class MockDio extends _i1.Mock implements _i7.Dio {
   @override
   _i8.Future<_i6.Response<T>> put<T>(
     String? path, {
-    dynamic data,
+    Object? data,
     Map<String, dynamic>? queryParameters,
     _i2.Options? options,
     _i9.CancelToken? cancelToken,
@@ -330,7 +336,7 @@ class MockDio extends _i1.Mock implements _i7.Dio {
   @override
   _i8.Future<_i6.Response<T>> putUri<T>(
     Uri? uri, {
-    dynamic data,
+    Object? data,
     _i2.Options? options,
     _i9.CancelToken? cancelToken,
     _i2.ProgressCallback? onSendProgress,
@@ -366,7 +372,7 @@ class MockDio extends _i1.Mock implements _i7.Dio {
   @override
   _i8.Future<_i6.Response<T>> head<T>(
     String? path, {
-    dynamic data,
+    Object? data,
     Map<String, dynamic>? queryParameters,
     _i2.Options? options,
     _i9.CancelToken? cancelToken,
@@ -399,7 +405,7 @@ class MockDio extends _i1.Mock implements _i7.Dio {
   @override
   _i8.Future<_i6.Response<T>> headUri<T>(
     Uri? uri, {
-    dynamic data,
+    Object? data,
     _i2.Options? options,
     _i9.CancelToken? cancelToken,
   }) =>
@@ -429,7 +435,7 @@ class MockDio extends _i1.Mock implements _i7.Dio {
   @override
   _i8.Future<_i6.Response<T>> delete<T>(
     String? path, {
-    dynamic data,
+    Object? data,
     Map<String, dynamic>? queryParameters,
     _i2.Options? options,
     _i9.CancelToken? cancelToken,
@@ -462,7 +468,7 @@ class MockDio extends _i1.Mock implements _i7.Dio {
   @override
   _i8.Future<_i6.Response<T>> deleteUri<T>(
     Uri? uri, {
-    dynamic data,
+    Object? data,
     _i2.Options? options,
     _i9.CancelToken? cancelToken,
   }) =>
@@ -492,7 +498,7 @@ class MockDio extends _i1.Mock implements _i7.Dio {
   @override
   _i8.Future<_i6.Response<T>> patch<T>(
     String? path, {
-    dynamic data,
+    Object? data,
     Map<String, dynamic>? queryParameters,
     _i2.Options? options,
     _i9.CancelToken? cancelToken,
@@ -531,7 +537,7 @@ class MockDio extends _i1.Mock implements _i7.Dio {
   @override
   _i8.Future<_i6.Response<T>> patchUri<T>(
     Uri? uri, {
-    dynamic data,
+    Object? data,
     _i2.Options? options,
     _i9.CancelToken? cancelToken,
     _i2.ProgressCallback? onSendProgress,
@@ -565,30 +571,6 @@ class MockDio extends _i1.Mock implements _i7.Dio {
         )),
       ) as _i8.Future<_i6.Response<T>>);
   @override
-  void lock() => super.noSuchMethod(
-        Invocation.method(
-          #lock,
-          [],
-        ),
-        returnValueForMissingStub: null,
-      );
-  @override
-  void unlock() => super.noSuchMethod(
-        Invocation.method(
-          #unlock,
-          [],
-        ),
-        returnValueForMissingStub: null,
-      );
-  @override
-  void clear() => super.noSuchMethod(
-        Invocation.method(
-          #clear,
-          [],
-        ),
-        returnValueForMissingStub: null,
-      );
-  @override
   _i8.Future<_i6.Response<dynamic>> download(
     String? urlPath,
     dynamic savePath, {
@@ -597,7 +579,7 @@ class MockDio extends _i1.Mock implements _i7.Dio {
     _i9.CancelToken? cancelToken,
     bool? deleteOnError = true,
     String? lengthHeader = r'content-length',
-    dynamic data,
+    Object? data,
     _i2.Options? options,
   }) =>
       (super.noSuchMethod(
@@ -646,7 +628,7 @@ class MockDio extends _i1.Mock implements _i7.Dio {
     _i9.CancelToken? cancelToken,
     bool? deleteOnError = true,
     String? lengthHeader = r'content-length',
-    dynamic data,
+    Object? data,
     _i2.Options? options,
   }) =>
       (super.noSuchMethod(
@@ -688,7 +670,7 @@ class MockDio extends _i1.Mock implements _i7.Dio {
   @override
   _i8.Future<_i6.Response<T>> request<T>(
     String? path, {
-    dynamic data,
+    Object? data,
     Map<String, dynamic>? queryParameters,
     _i9.CancelToken? cancelToken,
     _i2.Options? options,
@@ -727,7 +709,7 @@ class MockDio extends _i1.Mock implements _i7.Dio {
   @override
   _i8.Future<_i6.Response<T>> requestUri<T>(
     Uri? uri, {
-    dynamic data,
+    Object? data,
     _i9.CancelToken? cancelToken,
     _i2.Options? options,
     _i2.ProgressCallback? onSendProgress,
