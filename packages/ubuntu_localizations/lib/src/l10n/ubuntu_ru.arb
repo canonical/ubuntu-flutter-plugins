@@ -215,5 +215,11 @@
   "upLabel": "Вверх",
   "@upLabel": {},
   "strikeThroughLabel": "Зачеркнуть",
-  "@strikeThroughLabel": {}
+  "@strikeThroughLabel": {},
+  "nextLabel": "Следующая",
+  "@nextLabel": {},
+  "noneLabel": "Ничего",
+  "@noneLabel": {},
+  "previousLabel": "Предыдущая",
+  "@previousLabel": {}
 }
