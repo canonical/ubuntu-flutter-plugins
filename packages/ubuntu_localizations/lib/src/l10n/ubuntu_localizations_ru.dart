@@ -200,13 +200,13 @@ class UbuntuLocalizationsRu extends UbuntuLocalizations {
   String get newLabel => 'New';
 
   @override
-  String get nextLabel => 'Next';
+  String get nextLabel => 'Следующая';
 
   @override
   String get noLabel => 'Нет';
 
   @override
-  String get noneLabel => 'None';
+  String get noneLabel => 'Ничего';
 
   @override
   String get normalLabel => 'Normal';
@@ -233,7 +233,7 @@ class UbuntuLocalizationsRu extends UbuntuLocalizations {
   String get preferencesLabel => 'Параметры';
 
   @override
-  String get previousLabel => 'Previous';
+  String get previousLabel => 'Предыдущая';
 
   @override
   String get printLabel => 'Печать';

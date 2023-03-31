@@ -41,308 +41,308 @@ class UbuntuLocalizationsKo extends UbuntuLocalizations {
   String get shiftKey => 'Shift';
 
   @override
-  String get aboutLabel => 'About';
+  String get aboutLabel => '소개';
 
   @override
-  String get addLabel => 'Add';
+  String get addLabel => '추가';
 
   @override
-  String get allLabel => 'All';
+  String get allLabel => '모두';
 
   @override
-  String get applyLabel => 'Apply';
+  String get applyLabel => '적용';
 
   @override
-  String get ascendingLabel => 'Ascending';
+  String get ascendingLabel => '오름차순';
 
   @override
-  String get backLabel => 'Back';
+  String get backLabel => '뒤로가기';
 
   @override
-  String get boldLabel => 'Bold';
+  String get boldLabel => '볼드체';
 
   @override
-  String get bottomLabel => 'Bottom';
+  String get bottomLabel => '하단';
 
   @override
-  String get cancelLabel => 'Cancel';
+  String get cancelLabel => '취소';
 
   @override
-  String get centerLabel => 'Center';
+  String get centerLabel => '중앙';
 
   @override
-  String get clearLabel => 'Clear';
+  String get clearLabel => '지우기';
 
   @override
-  String get closeLabel => 'Close';
+  String get closeLabel => '닫기';
 
   @override
-  String get colorLabel => 'Color';
+  String get colorLabel => '색상';
 
   @override
-  String get connectLabel => 'Connect';
+  String get connectLabel => '연결';
 
   @override
-  String get continueLabel => 'Continue';
+  String get continueLabel => '계속';
 
   @override
-  String get copyLabel => 'Copy';
+  String get copyLabel => '복사';
 
   @override
-  String get createLabel => 'Create';
+  String get createLabel => '생성';
 
   @override
-  String get cutLabel => 'Cut';
+  String get cutLabel => '잘라내기';
 
   @override
-  String get decreaseLabel => 'Decrease';
+  String get decreaseLabel => '감소';
 
   @override
-  String get deleteLabel => 'Delete';
+  String get deleteLabel => '삭제';
 
   @override
-  String get descendingLabel => 'Descending';
+  String get descendingLabel => '내림차순';
 
   @override
-  String get discardLabel => 'Discard';
+  String get discardLabel => '버리기';
 
   @override
-  String get disconnectLabel => 'Disconnect';
+  String get disconnectLabel => '연결 해제';
 
   @override
-  String get doneLabel => 'Done';
+  String get doneLabel => '완료';
 
   @override
-  String get downloadLabel => 'Download';
+  String get downloadLabel => '내려받기';
 
   @override
-  String get editLabel => 'Edit';
+  String get editLabel => '수정';
 
   @override
-  String get enterLabel => 'Enter';
+  String get enterLabel => '입력';
 
   @override
-  String get errorLabel => 'Error';
+  String get errorLabel => '오류';
 
   @override
-  String get executeLabel => 'Execute';
+  String get executeLabel => '실행';
 
   @override
-  String get exitLabel => 'Exit';
+  String get exitLabel => '종료';
 
   @override
-  String get fileLabel => 'File';
+  String get fileLabel => '파일';
 
   @override
-  String get fillLabel => 'Fill';
+  String get fillLabel => '채우기';
 
   @override
-  String get findLabel => 'Find';
+  String get findLabel => '찾기';
 
   @override
-  String get firstLabel => 'First';
+  String get firstLabel => '처음';
 
   @override
-  String get fontLabel => 'Font';
+  String get fontLabel => '폰트';
 
   @override
-  String get forwardLabel => 'Forward';
+  String get forwardLabel => '앞으로';
 
   @override
-  String get fullscreenLabel => 'Fullscreen';
+  String get fullscreenLabel => '전체 화면';
 
   @override
-  String get goBackLabel => 'Go Back';
+  String get goBackLabel => '뒤로';
 
   @override
-  String get helpLabel => 'Help';
+  String get helpLabel => '도움';
 
   @override
-  String get homeLabel => 'Home';
+  String get homeLabel => '홈';
 
   @override
-  String get importLabel => 'Import';
+  String get importLabel => '불러오기';
 
   @override
-  String get increaseLabel => 'Increase';
+  String get increaseLabel => '증가';
 
   @override
-  String get indexLabel => 'Index';
+  String get indexLabel => '색인';
 
   @override
-  String get informationLabel => 'Information';
+  String get informationLabel => '정보';
 
   @override
-  String get insertLabel => 'Insert';
+  String get insertLabel => '삽입';
 
   @override
-  String get italicLabel => 'Italic';
+  String get italicLabel => '이탈릭체';
 
   @override
-  String get landscapeLabel => 'Landscape';
+  String get landscapeLabel => '랜드스케이프';
 
   @override
-  String get lastLabel => 'Last';
+  String get lastLabel => '마지막';
 
   @override
-  String get leaveLabel => 'Leave';
+  String get leaveLabel => '나가기';
 
   @override
-  String get leftLabel => 'Left';
+  String get leftLabel => '좌측';
 
   @override
-  String get mediaLabel => 'Media';
+  String get mediaLabel => '미디어';
 
   @override
-  String get networkLabel => 'Network';
+  String get networkLabel => '네트워크';
 
   @override
-  String get newLabel => 'New';
+  String get newLabel => '신규';
 
   @override
-  String get nextLabel => 'Next';
+  String get nextLabel => '다음';
 
   @override
-  String get noLabel => 'No';
+  String get noLabel => '아니요';
 
   @override
   String get noneLabel => 'None';
 
   @override
-  String get normalLabel => 'Normal';
+  String get normalLabel => '보통';
 
   @override
-  String get okLabel => 'OK';
+  String get okLabel => '확인';
 
   @override
-  String get openLabel => 'Open';
+  String get openLabel => '열기';
 
   @override
-  String get pasteLabel => 'Paste';
+  String get pasteLabel => '붙여넣기';
 
   @override
-  String get pauseLabel => 'Pause';
+  String get pauseLabel => '중지';
 
   @override
-  String get playLabel => 'Play';
+  String get playLabel => '재생';
 
   @override
-  String get portraitLabel => 'Portrait';
+  String get portraitLabel => '포트레이트';
 
   @override
-  String get preferencesLabel => 'Preferences';
+  String get preferencesLabel => '환경 설정';
 
   @override
-  String get previousLabel => 'Previous';
+  String get previousLabel => '이전';
 
   @override
-  String get printLabel => 'Print';
+  String get printLabel => '인쇄';
 
   @override
-  String get printPreviewLabel => 'Print Preview';
+  String get printPreviewLabel => '인쇄 미리보기';
 
   @override
-  String get propertiesLabel => 'Properties';
+  String get propertiesLabel => '속성';
 
   @override
-  String get questionLabel => 'Question';
+  String get questionLabel => '질문';
 
   @override
-  String get quitLabel => 'Quit';
+  String get quitLabel => '종료';
 
   @override
-  String get recordLabel => 'Record';
+  String get recordLabel => '기록';
 
   @override
-  String get redoLabel => 'Redo';
+  String get redoLabel => '돌리기';
 
   @override
-  String get refreshLabel => 'Refresh';
+  String get refreshLabel => '새로고침';
 
   @override
-  String get removeLabel => 'Remove';
+  String get removeLabel => '삭제';
 
   @override
-  String get renameLabel => 'Rename';
+  String get renameLabel => '이름 변경';
 
   @override
-  String get resetLabel => 'Reset';
+  String get resetLabel => '초기화';
 
   @override
-  String get restoreLabel => 'Restore';
+  String get restoreLabel => '복구';
 
   @override
-  String get retryLabel => 'Retry';
+  String get retryLabel => '다시시도';
 
   @override
-  String get revertLabel => 'Revert';
+  String get revertLabel => '복구';
 
   @override
-  String get rewindLabel => 'Rewind';
+  String get rewindLabel => '되감기';
 
   @override
-  String get rightLabel => 'Right';
+  String get rightLabel => '우측';
 
   @override
-  String get saveAsLabel => 'Save As';
+  String get saveAsLabel => '다른 이름으로 저장';
 
   @override
-  String get saveLabel => 'Save';
+  String get saveLabel => '저장';
 
   @override
-  String get searchLabel => 'Search';
+  String get searchLabel => '검색';
 
   @override
-  String get selectAllLabel => 'Select All';
+  String get selectAllLabel => '모두 선택';
 
   @override
-  String get selectLabel => 'Select';
+  String get selectLabel => '선택';
 
   @override
-  String get sendLabel => 'Send';
+  String get sendLabel => '전송';
 
   @override
-  String get skipLabel => 'Skip';
+  String get skipLabel => '넘기기';
 
   @override
-  String get sortLabel => 'Sort';
+  String get sortLabel => '정렬';
 
   @override
-  String get stopLabel => 'Stop';
+  String get stopLabel => '중단';
 
   @override
-  String get strikeThroughLabel => 'Strike Through';
+  String get strikeThroughLabel => '취소선';
 
   @override
-  String get submitLabel => 'Submit';
+  String get submitLabel => '제출';
 
   @override
-  String get topLabel => 'Top';
+  String get topLabel => '상위';
 
   @override
-  String get undoLabel => 'Undo';
+  String get undoLabel => '되돌리기';
 
   @override
-  String get updateLabel => 'Update';
+  String get updateLabel => '갱신';
 
   @override
-  String get upLabel => 'Up';
+  String get upLabel => '위로';
 
   @override
-  String get viewLabel => 'View';
+  String get viewLabel => '보기';
 
   @override
-  String get warningLabel => 'Warning';
+  String get warningLabel => '경고';
 
   @override
-  String get windowLabel => 'Window';
+  String get windowLabel => '윈도우';
 
   @override
-  String get yesLabel => 'Yes';
+  String get yesLabel => '예';
 
   @override
-  String get zoomInLabel => 'Zoom In';
+  String get zoomInLabel => '확대';
 
   @override
-  String get zoomOutLabel => 'Zoom Out';
+  String get zoomOutLabel => '축소';
 }
