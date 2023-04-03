@@ -53,13 +53,13 @@ class UbuntuLocalizationsFi extends UbuntuLocalizations {
   String get applyLabel => 'Käytä';
 
   @override
-  String get ascendingLabel => 'Ascending';
+  String get ascendingLabel => 'Nousevasti';
 
   @override
   String get backLabel => 'Takaisin';
 
   @override
-  String get boldLabel => 'Bold';
+  String get boldLabel => 'Lihavoitu';
 
   @override
   String get bottomLabel => 'Bottom';
@@ -101,7 +101,7 @@ class UbuntuLocalizationsFi extends UbuntuLocalizations {
   String get deleteLabel => 'Poista';
 
   @override
-  String get descendingLabel => 'Descending';
+  String get descendingLabel => 'Laskevasti';
 
   @override
   String get discardLabel => 'Hylkää';
@@ -176,10 +176,10 @@ class UbuntuLocalizationsFi extends UbuntuLocalizations {
   String get insertLabel => 'Lisää';
 
   @override
-  String get italicLabel => 'Italic';
+  String get italicLabel => 'Kursivoitu';
 
   @override
-  String get landscapeLabel => 'Landscape';
+  String get landscapeLabel => 'Vaakasuunta';
 
   @override
   String get lastLabel => 'Viimeinen';
@@ -206,7 +206,7 @@ class UbuntuLocalizationsFi extends UbuntuLocalizations {
   String get noLabel => 'Ei';
 
   @override
-  String get noneLabel => 'None';
+  String get noneLabel => 'Ei mitään';
 
   @override
   String get normalLabel => 'Normaali';
@@ -227,7 +227,7 @@ class UbuntuLocalizationsFi extends UbuntuLocalizations {
   String get playLabel => 'Toista';
 
   @override
-  String get portraitLabel => 'Portrait';
+  String get portraitLabel => 'Pystysuunta';
 
   @override
   String get preferencesLabel => 'Asetukset';
@@ -311,7 +311,7 @@ class UbuntuLocalizationsFi extends UbuntuLocalizations {
   String get stopLabel => 'Pysäytä';
 
   @override
-  String get strikeThroughLabel => 'Strike Through';
+  String get strikeThroughLabel => 'Yliviivattu';
 
   @override
   String get submitLabel => 'Lähetä';
