@@ -4,6 +4,25 @@ import 'package:yaru_icons/yaru_icons.dart';
 
 const _kItemHeight = 40.0;
 
+/// A menu button entry.
+class MenuButtonEntry<T> {
+  /// Creates a menu button entry.
+  const MenuButtonEntry({
+    required this.value,
+    this.enabled = true,
+    this.isDivider = false,
+  });
+
+  /// The value of the entry.
+  final T value;
+
+  /// Whether the entry is enabled.
+  final bool enabled;
+
+  /// Whether the entry is a divider.
+  final bool isDivider;
+}
+
 /// A builder widget that makes it straight-forward to build a menu button
 /// for an arbitrary list of values.
 ///
@@ -35,7 +54,7 @@ class MenuButtonBuilder<T> extends StatefulWidget {
     super.key,
     this.child,
     this.selected,
-    required this.values,
+    required this.entries,
     this.onSelected,
     this.iconBuilder,
     required this.itemBuilder,
@@ -48,10 +67,8 @@ class MenuButtonBuilder<T> extends StatefulWidget {
   /// The currently selected value.
   final T? selected;
 
-  /// The list of values.
-  ///
-  /// For enums, use the enum's `values` constant.
-  final List<T> values;
+  /// The list of entries.
+  final List<MenuButtonEntry<T>> entries;
 
   /// Called when the user selects an item.
   final ValueChanged<T>? onSelected;
@@ -119,7 +136,7 @@ class _MenuButtonBuilderState<T> extends State<MenuButtonBuilder<T>> {
       builder: (context, controller, child) {
         return child!;
       },
-      menuChildren: widget.values.mapIndexed(_buildMenuItem).toList(),
+      menuChildren: widget.entries.mapIndexed(_buildMenuItem).toList(),
       child: Stack(
         children: [
           Positioned.fill(
@@ -180,14 +197,14 @@ class _MenuButtonBuilderState<T> extends State<MenuButtonBuilder<T>> {
     );
   }
 
-  Widget _buildMenuItem(int index, T? value) {
-    if (value == null) {
+  Widget _buildMenuItem(int index, MenuButtonEntry<T> item) {
+    if (item.isDivider) {
       return const Divider();
     }
 
     final states = {
       if (widget.selected == null && index == 0) MaterialState.selected,
-      if (widget.selected != null && widget.selected == value)
+      if (widget.selected != null && widget.selected == item.value)
         MaterialState.selected,
       if (widget.onSelected == null) MaterialState.disabled,
     };
@@ -201,17 +218,19 @@ class _MenuButtonBuilderState<T> extends State<MenuButtonBuilder<T>> {
 
     return MenuItemButton(
       focusNode: states.contains(MaterialState.selected) ? _focusNode : null,
-      leadingIcon: widget.iconBuilder?.call(context, value, null),
-      onPressed: () {
-        widget.onSelected?.call(value);
-        _controller.close();
-      },
+      leadingIcon: widget.iconBuilder?.call(context, item.value, null),
+      onPressed: item.enabled
+          ? () {
+              widget.onSelected?.call(item.value);
+              _controller.close();
+            }
+          : null,
       style: MenuItemButton.styleFrom(
         minimumSize: minimumSize ?? const Size(0, _kItemHeight),
         maximumSize: maximumSize ?? const Size(double.infinity, _kItemHeight),
         padding: padding ?? _scaledPadding(context),
       ),
-      child: widget.itemBuilder(context, value, null),
+      child: widget.itemBuilder(context, item.value, null),
     );
   }
 }
