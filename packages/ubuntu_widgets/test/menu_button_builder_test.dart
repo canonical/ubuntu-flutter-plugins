@@ -13,8 +13,7 @@ void main() {
         home: Material(
           child: MenuButtonBuilder<TestEnum>(
             selected: TestEnum.bar,
-            entries:
-                TestEnum.values.map((e) => MenuButtonEntry(value: e)).toList(),
+            values: TestEnum.values,
             onSelected: (_) {},
             itemBuilder: (_, value, __) => Text(value.name),
             child: const Text('child'),
@@ -33,8 +32,7 @@ void main() {
         home: Material(
           child: MenuButtonBuilder<TestEnum>(
             selected: TestEnum.bar,
-            entries:
-                TestEnum.values.map((e) => MenuButtonEntry(value: e)).toList(),
+            values: TestEnum.values,
             onSelected: (_) {},
             itemBuilder: (_, value, __) => Text(value.name),
           ),
@@ -50,8 +48,7 @@ void main() {
       MaterialApp(
         home: Material(
           child: MenuButtonBuilder<TestEnum>(
-            entries:
-                TestEnum.values.map((e) => MenuButtonEntry(value: e)).toList(),
+            values: TestEnum.values,
             onSelected: (_) {},
             iconBuilder: (_, value, __) => const Icon(Icons.arrow_drop_down),
             itemBuilder: (_, value, __) => Text(value.toString()),
@@ -75,8 +72,7 @@ void main() {
         home: Material(
           child: MenuButtonBuilder<TestEnum>(
             selected: TestEnum.bar,
-            entries:
-                TestEnum.values.map((e) => MenuButtonEntry(value: e)).toList(),
+            values: TestEnum.values,
             onSelected: (_) {},
             iconBuilder: (_, value, __) => const Icon(Icons.arrow_drop_down),
             itemBuilder: (_, value, __) => Text(value.toString()),
@@ -102,8 +98,7 @@ void main() {
         home: Material(
           child: MenuButtonBuilder<TestEnum>(
             selected: TestEnum.bar,
-            entries:
-                TestEnum.values.map((e) => MenuButtonEntry(value: e)).toList(),
+            values: TestEnum.values,
             onSelected: (value) => selectedValue = value,
             iconBuilder: (_, value, __) => const Icon(Icons.arrow_drop_down),
             itemBuilder: (_, value, __) => Text(value.toString()),

@@ -50,16 +50,19 @@ class MenuButtonBuilder<T> extends StatefulWidget {
   /// The `iconBuilder` function is called for each item in the menu.
   /// The returned widgets are set as icons of the menu items.
   ///
-  const MenuButtonBuilder({
+  MenuButtonBuilder({
     super.key,
     this.child,
     this.selected,
-    required this.entries,
+    List<T>? values,
+    List<MenuButtonEntry<T>>? entries,
     this.onSelected,
     this.iconBuilder,
     required this.itemBuilder,
     this.decoration = const InputDecoration(filled: false),
-  });
+  })  : assert((entries != null) != (values != null)),
+        entries =
+            entries ?? values!.map((e) => MenuButtonEntry(value: e)).toList();
 
   /// An optional child widget placed as a label of the button.
   final Widget? child;
