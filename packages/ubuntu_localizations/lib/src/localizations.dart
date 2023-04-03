@@ -1,3 +1,5 @@
+import 'dart:collection';
+
 import 'package:diacritic/diacritic.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
@@ -58,9 +60,9 @@ class LocalizedLanguage {
 /// Builds a sorted list of localized languages.
 ///
 /// [locales] must contain the base locale i.e. the template .arb locale.
-Future<List<LocalizedLanguage>> loadLocalizedLanguages(
+Future<Iterable<LocalizedLanguage>> loadLocalizedLanguages(
     List<Locale> locales) async {
-  final languages = <LocalizedLanguage>[];
+  final languages = SplayTreeMap<String, LocalizedLanguage>();
   for (final locale in locales) {
     final localization = await UbuntuLocalizations.delegate.load(locale);
     if (localization.languageName.isNotEmpty) {
@@ -68,12 +70,11 @@ Future<List<LocalizedLanguage>> loadLocalizedLanguages(
         locale.languageCode,
         locale.countryCode ?? localization.countryCode,
       );
-      languages.add(LocalizedLanguage(localization.languageName, fullLocale));
+      final key = removeDiacritics(localization.languageName);
+      languages[key] = LocalizedLanguage(localization.languageName, fullLocale);
     }
   }
-  languages.sort(
-      (a, b) => removeDiacritics(a.name).compareTo(removeDiacritics(b.name)));
-  return languages;
+  return languages.values;
 }
 
 // A fallback locale that must always exist (same as the template .arb).
