@@ -8,7 +8,7 @@ class UbuntuLocalizationsHu extends UbuntuLocalizations {
   String get countryCode => 'HU';
 
   @override
-  String get languageName => 'Angol';
+  String get languageName => 'Magyar';
 
   @override
   String get backAction => 'Vissza';
@@ -41,308 +41,308 @@ class UbuntuLocalizationsHu extends UbuntuLocalizations {
   String get shiftKey => 'Shift';
 
   @override
-  String get aboutLabel => 'About';
+  String get aboutLabel => 'Névjegy';
 
   @override
-  String get addLabel => 'Add';
+  String get addLabel => 'Hozzáadás';
 
   @override
-  String get allLabel => 'All';
+  String get allLabel => 'Összes';
 
   @override
-  String get applyLabel => 'Apply';
+  String get applyLabel => 'Alkalmaz';
 
   @override
-  String get ascendingLabel => 'Ascending';
+  String get ascendingLabel => 'Növekvő';
 
   @override
-  String get backLabel => 'Back';
+  String get backLabel => 'Vissza';
 
   @override
-  String get boldLabel => 'Bold';
+  String get boldLabel => 'Félkövér';
 
   @override
-  String get bottomLabel => 'Bottom';
+  String get bottomLabel => 'Lent';
 
   @override
-  String get cancelLabel => 'Cancel';
+  String get cancelLabel => 'Mégse';
 
   @override
-  String get centerLabel => 'Center';
+  String get centerLabel => 'Középre';
 
   @override
-  String get clearLabel => 'Clear';
+  String get clearLabel => 'Törlés';
 
   @override
-  String get closeLabel => 'Close';
+  String get closeLabel => 'Bezárás';
 
   @override
-  String get colorLabel => 'Color';
+  String get colorLabel => 'Szín';
 
   @override
-  String get connectLabel => 'Connect';
+  String get connectLabel => 'Kapcsolódás';
 
   @override
-  String get continueLabel => 'Continue';
+  String get continueLabel => 'Folytatás';
 
   @override
-  String get copyLabel => 'Copy';
+  String get copyLabel => 'Másolás';
 
   @override
-  String get createLabel => 'Create';
+  String get createLabel => 'Létrehozás';
 
   @override
-  String get cutLabel => 'Cut';
+  String get cutLabel => 'Kivágás';
 
   @override
-  String get decreaseLabel => 'Decrease';
+  String get decreaseLabel => 'Csökkentés';
 
   @override
-  String get deleteLabel => 'Delete';
+  String get deleteLabel => 'Törlés';
 
   @override
-  String get descendingLabel => 'Descending';
+  String get descendingLabel => 'Csökkenő';
 
   @override
-  String get discardLabel => 'Discard';
+  String get discardLabel => 'Elvetés';
 
   @override
-  String get disconnectLabel => 'Disconnect';
+  String get disconnectLabel => 'Leválasztás';
 
   @override
-  String get doneLabel => 'Done';
+  String get doneLabel => 'Kész';
 
   @override
-  String get downloadLabel => 'Download';
+  String get downloadLabel => 'Letöltés';
 
   @override
-  String get editLabel => 'Edit';
+  String get editLabel => 'Szerkesztés';
 
   @override
-  String get enterLabel => 'Enter';
+  String get enterLabel => 'Megadás';
 
   @override
-  String get errorLabel => 'Error';
+  String get errorLabel => 'Hiba';
 
   @override
-  String get executeLabel => 'Execute';
+  String get executeLabel => 'Végrehajtás';
 
   @override
-  String get exitLabel => 'Exit';
+  String get exitLabel => 'Kilépés';
 
   @override
-  String get fileLabel => 'File';
+  String get fileLabel => 'Fájl';
 
   @override
-  String get fillLabel => 'Fill';
+  String get fillLabel => 'Kitöltés';
 
   @override
-  String get findLabel => 'Find';
+  String get findLabel => 'Keresés';
 
   @override
-  String get firstLabel => 'First';
+  String get firstLabel => 'Első';
 
   @override
-  String get fontLabel => 'Font';
+  String get fontLabel => 'Betűkészlet';
 
   @override
-  String get forwardLabel => 'Forward';
+  String get forwardLabel => 'Előre';
 
   @override
-  String get fullscreenLabel => 'Fullscreen';
+  String get fullscreenLabel => 'Teljes képernyő';
 
   @override
-  String get goBackLabel => 'Go Back';
+  String get goBackLabel => 'Vissza';
 
   @override
-  String get helpLabel => 'Help';
+  String get helpLabel => 'Súgó';
 
   @override
-  String get homeLabel => 'Home';
+  String get homeLabel => 'Kezdőoldal';
 
   @override
-  String get importLabel => 'Import';
+  String get importLabel => 'Importálás';
 
   @override
-  String get increaseLabel => 'Increase';
+  String get increaseLabel => 'Növelés';
 
   @override
-  String get indexLabel => 'Index';
+  String get indexLabel => 'Tárgymutató';
 
   @override
-  String get informationLabel => 'Information';
+  String get informationLabel => 'Információ';
 
   @override
-  String get insertLabel => 'Insert';
+  String get insertLabel => 'Beszúrás';
 
   @override
-  String get italicLabel => 'Italic';
+  String get italicLabel => 'Dőlt';
 
   @override
-  String get landscapeLabel => 'Landscape';
+  String get landscapeLabel => 'Fekvő';
 
   @override
-  String get lastLabel => 'Last';
+  String get lastLabel => 'Utolsó';
 
   @override
-  String get leaveLabel => 'Leave';
+  String get leaveLabel => 'Kilépés';
 
   @override
-  String get leftLabel => 'Left';
+  String get leftLabel => 'Balra';
 
   @override
-  String get mediaLabel => 'Media';
+  String get mediaLabel => 'Média';
 
   @override
-  String get networkLabel => 'Network';
+  String get networkLabel => 'Hálózat';
 
   @override
-  String get newLabel => 'New';
+  String get newLabel => 'Új';
 
   @override
-  String get nextLabel => 'Next';
+  String get nextLabel => 'Következő';
 
   @override
-  String get noLabel => 'No';
+  String get noLabel => 'Nem';
 
   @override
-  String get noneLabel => 'None';
+  String get noneLabel => 'Nincs';
 
   @override
-  String get normalLabel => 'Normal';
+  String get normalLabel => 'Normál';
 
   @override
   String get okLabel => 'OK';
 
   @override
-  String get openLabel => 'Open';
+  String get openLabel => 'Megnyitás';
 
   @override
-  String get pasteLabel => 'Paste';
+  String get pasteLabel => 'Beillesztés';
 
   @override
-  String get pauseLabel => 'Pause';
+  String get pauseLabel => 'Szüneteltetés';
 
   @override
-  String get playLabel => 'Play';
+  String get playLabel => 'Lejátszás';
 
   @override
-  String get portraitLabel => 'Portrait';
+  String get portraitLabel => 'Álló';
 
   @override
-  String get preferencesLabel => 'Preferences';
+  String get preferencesLabel => 'Beállítások';
 
   @override
-  String get previousLabel => 'Previous';
+  String get previousLabel => 'Előző';
 
   @override
-  String get printLabel => 'Print';
+  String get printLabel => 'Nyomtatás';
 
   @override
-  String get printPreviewLabel => 'Print Preview';
+  String get printPreviewLabel => 'Nyomtatási kép';
 
   @override
-  String get propertiesLabel => 'Properties';
+  String get propertiesLabel => 'Tulajdonságok';
 
   @override
-  String get questionLabel => 'Question';
+  String get questionLabel => 'Kérdés';
 
   @override
-  String get quitLabel => 'Quit';
+  String get quitLabel => 'Kilépés';
 
   @override
-  String get recordLabel => 'Record';
+  String get recordLabel => 'Rögzítés';
 
   @override
-  String get redoLabel => 'Redo';
+  String get redoLabel => 'Újra';
 
   @override
-  String get refreshLabel => 'Refresh';
+  String get refreshLabel => 'Frissítés';
 
   @override
-  String get removeLabel => 'Remove';
+  String get removeLabel => 'Eltávolítás';
 
   @override
-  String get renameLabel => 'Rename';
+  String get renameLabel => 'Átnevezés';
 
   @override
-  String get resetLabel => 'Reset';
+  String get resetLabel => 'Visszaállítás';
 
   @override
-  String get restoreLabel => 'Restore';
+  String get restoreLabel => 'Visszaállítás';
 
   @override
-  String get retryLabel => 'Retry';
+  String get retryLabel => 'Újrapróbálás';
 
   @override
-  String get revertLabel => 'Revert';
+  String get revertLabel => 'Visszavonás';
 
   @override
-  String get rewindLabel => 'Rewind';
+  String get rewindLabel => 'Visszatekerés';
 
   @override
-  String get rightLabel => 'Right';
+  String get rightLabel => 'Jobbra';
 
   @override
-  String get saveAsLabel => 'Save As';
+  String get saveAsLabel => 'Mentés másként';
 
   @override
-  String get saveLabel => 'Save';
+  String get saveLabel => 'Mentés';
 
   @override
-  String get searchLabel => 'Search';
+  String get searchLabel => 'Keresés';
 
   @override
-  String get selectAllLabel => 'Select All';
+  String get selectAllLabel => 'Összes kijelölése';
 
   @override
-  String get selectLabel => 'Select';
+  String get selectLabel => 'Kijelölés';
 
   @override
-  String get sendLabel => 'Send';
+  String get sendLabel => 'Küldés';
 
   @override
-  String get skipLabel => 'Skip';
+  String get skipLabel => 'Kihagyás';
 
   @override
-  String get sortLabel => 'Sort';
+  String get sortLabel => 'Rendezés';
 
   @override
-  String get stopLabel => 'Stop';
+  String get stopLabel => 'Leállítás';
 
   @override
-  String get strikeThroughLabel => 'Strike Through';
+  String get strikeThroughLabel => 'Áthúzott';
 
   @override
-  String get submitLabel => 'Submit';
+  String get submitLabel => 'Elküldés';
 
   @override
-  String get topLabel => 'Top';
+  String get topLabel => 'Fent';
 
   @override
-  String get undoLabel => 'Undo';
+  String get undoLabel => 'Visszavonás';
 
   @override
-  String get updateLabel => 'Update';
+  String get updateLabel => 'Frissítés';
 
   @override
-  String get upLabel => 'Up';
+  String get upLabel => 'Fel';
 
   @override
-  String get viewLabel => 'View';
+  String get viewLabel => 'Nézet';
 
   @override
-  String get warningLabel => 'Warning';
+  String get warningLabel => 'Figyelmeztetés';
 
   @override
-  String get windowLabel => 'Window';
+  String get windowLabel => 'Ablak';
 
   @override
-  String get yesLabel => 'Yes';
+  String get yesLabel => 'Igen';
 
   @override
-  String get zoomInLabel => 'Zoom In';
+  String get zoomInLabel => 'Nagyítás';
 
   @override
-  String get zoomOutLabel => 'Zoom Out';
+  String get zoomOutLabel => 'Kicsinyítés';
 }
