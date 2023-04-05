@@ -467,6 +467,51 @@ void main() {
     await expectLater(thirdWizardScope.back, throwsAssertionError);
   });
 
+  testWidgets('jump', (tester) async {
+    await pumpWizardApp(
+      tester,
+      routes: {
+        Routes.first: WizardRoute(builder: (_) => const Text(Routes.first)),
+        Routes.second: WizardRoute(builder: (_) => const Text(Routes.second)),
+        Routes.third: WizardRoute(builder: (_) => const Text(Routes.third)),
+      },
+    );
+
+    final firstPage = find.text(Routes.first);
+    final secondPage = find.text(Routes.second);
+    final thirdPage = find.text(Routes.third);
+
+    expect(firstPage, findsOneWidget);
+    expect(secondPage, findsNothing);
+    expect(thirdPage, findsNothing);
+
+    // 1st -> 3rd
+    final firstWizardScope = Wizard.of(tester.element(firstPage));
+    expect(firstWizardScope, isNotNull);
+    expect(firstWizardScope.hasPrevious, isFalse);
+    expect(firstWizardScope.hasNext, isTrue);
+
+    firstWizardScope.jump(Routes.third);
+    await tester.pumpAndSettle();
+
+    expect(firstPage, findsNothing);
+    expect(secondPage, findsNothing);
+    expect(thirdPage, findsOneWidget);
+
+    // 3rd -> 1st
+    final thirdWizardScope = Wizard.of(tester.element(thirdPage));
+    expect(thirdWizardScope, isNotNull);
+    expect(thirdWizardScope.hasPrevious, isTrue);
+    expect(thirdWizardScope.hasNext, isFalse);
+
+    thirdWizardScope.back();
+    await tester.pumpAndSettle();
+
+    expect(firstPage, findsOneWidget);
+    expect(secondPage, findsNothing);
+    expect(thirdPage, findsNothing);
+  });
+
   testWidgets('has next or previous', (tester) async {
     await pumpWizardApp(
       tester,

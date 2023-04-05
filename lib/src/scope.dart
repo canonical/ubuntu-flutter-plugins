@@ -152,6 +152,19 @@ class WizardScopeState extends State<WizardScope> {
     });
   }
 
+  /// Requests the wizard to jump to a specific page. Optionally, `arguments`
+  /// can be passed to the page.
+  void jump(String route, {Object? arguments}) async {
+    assert(widget._routes.contains(route),
+        '`Wizard.jump()` called with an unknown route $route.');
+    final settings = WizardRouteSettings(name: route, arguments: arguments);
+
+    _updateRoutes((state) {
+      final copy = List<WizardRouteSettings>.of(state);
+      return copy..add(settings);
+    });
+  }
+
   /// Sets the wizard done. Optionally, a `result` can be passed to the route.
   ///
   /// ```dart
