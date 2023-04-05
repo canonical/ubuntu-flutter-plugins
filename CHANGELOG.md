@@ -1,3 +1,7 @@
+## 0.10.1
+
+- Add WizardScope.jump()
+
 ## 0.10.0
 
 - Add WizardController by @chillbrodev (#32)
