@@ -36,8 +36,6 @@ void main() {
   });
 
   test('key search', () async {
-    //final model = WelcomeModel(MockSubiquityClient());
-    //await model.loadLanguages();
     final languages = [
       'Dansk',
       'Deutsch',
