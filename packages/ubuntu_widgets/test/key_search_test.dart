@@ -69,6 +69,8 @@ void main() {
     expect(languages[icelandic], equals('Íslenska'));
 
     // no match
+    expect(languages.keySearch(''), isNegative);
+    expect(languages.keySearch(' '), isNegative);
     expect(languages.keySearch('foo'), isNegative);
     expect(languages.keySearch('none'), isNegative);
   });

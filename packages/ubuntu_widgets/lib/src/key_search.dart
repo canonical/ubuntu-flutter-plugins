@@ -83,6 +83,8 @@ extension KeySearchX on List<String> {
     String cleanup(String s) => removeDiacritics(s).trim().toLowerCase();
 
     final q = cleanup(query);
+    if (q.isEmpty) return -1;
+
     bool startsWith(String s) => cleanup(s).startsWith(q);
 
     final index = indexWhere(startsWith, start);
