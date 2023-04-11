@@ -15,5 +15,13 @@
   "continueAction": "次へ",
   "@continueAction": {},
   "fairPassword": "まあまあなパスワード",
-  "@fairPassword": {}
+  "@fairPassword": {},
+  "metaKey": "Meta",
+  "@metaKey": {},
+  "altKey": "Alt",
+  "@altKey": {},
+  "controlKey": "Control",
+  "@controlKey": {},
+  "shiftKey": "Shift",
+  "@shiftKey": {}
 }
