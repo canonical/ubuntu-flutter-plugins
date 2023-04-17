@@ -11,6 +11,7 @@ class MenuButtonEntry<T> {
     required this.value,
     this.enabled = true,
     this.isDivider = false,
+    this.child,
   });
 
   /// The value of the entry.
@@ -21,6 +22,10 @@ class MenuButtonEntry<T> {
 
   /// Whether the entry is a divider.
   final bool isDivider;
+
+  /// An optional child widget placed as a label of the entry.
+  /// If not supplied, the entry will be built using the `itemBuilder` function.
+  final Widget? child;
 }
 
 /// A builder widget that makes it straight-forward to build a menu button
@@ -72,6 +77,10 @@ class MenuButtonBuilder<T> extends StatefulWidget {
 
   /// The list of entries.
   final List<MenuButtonEntry<T>> entries;
+
+  /// The currently selected entry.
+  MenuButtonEntry<T> get selectedEntry =>
+      entries.firstWhereOrNull((e) => e.value == selected)!;
 
   /// Called when the user selects an item.
   final ValueChanged<T>? onSelected;
@@ -164,8 +173,9 @@ class _MenuButtonBuilderState<T> extends State<MenuButtonBuilder<T>> {
                       child: widget.child != null
                           ? widget.child!
                           : widget.selected != null
-                              ? widget.itemBuilder(
-                                  context, widget.selected as T, null)
+                              ? widget.selectedEntry.child ??
+                                  widget.itemBuilder(
+                                      context, widget.selected as T, null)
                               : const SizedBox.shrink()),
                 ),
                 const SizedBox(width: 8),
@@ -233,7 +243,7 @@ class _MenuButtonBuilderState<T> extends State<MenuButtonBuilder<T>> {
         maximumSize: maximumSize ?? const Size(double.infinity, _kItemHeight),
         padding: padding ?? _scaledPadding(context),
       ),
-      child: widget.itemBuilder(context, item.value, null),
+      child: item.child ?? widget.itemBuilder(context, item.value, null),
     );
   }
 }

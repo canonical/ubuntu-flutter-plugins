@@ -26,6 +26,32 @@ void main() {
     expect(find.text('child'), findsOneWidget);
   });
 
+  testWidgets('uses an entries child if supplied', (tester) async {
+    await tester.pumpWidget(
+      MaterialApp(
+        home: Material(
+          child: MenuButtonBuilder<TestEnum>(
+            selected: TestEnum.bar,
+            entries: const [
+              MenuButtonEntry(value: TestEnum.bar, child: Text('child')),
+            ],
+            onSelected: (_) {},
+            itemBuilder: (_, value, __) => Text(value.name),
+          ),
+        ),
+      ),
+    );
+
+    expect(find.text(TestEnum.bar.name), findsNothing);
+    expect(find.text('child'), findsOneWidget);
+
+    await tester.tap(find.bySubtype<ButtonStyleButton>());
+    await tester.pumpAndSettle();
+
+    expect(find.text(TestEnum.bar.name), findsNothing);
+    expect(find.text('child'), findsNWidgets(2));
+  });
+
   testWidgets('builds a selected item', (tester) async {
     await tester.pumpWidget(
       MaterialApp(
