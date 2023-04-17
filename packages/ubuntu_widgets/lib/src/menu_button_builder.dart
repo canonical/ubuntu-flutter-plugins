@@ -79,8 +79,8 @@ class MenuButtonBuilder<T> extends StatefulWidget {
   final List<MenuButtonEntry<T>> entries;
 
   /// The currently selected entry.
-  MenuButtonEntry<T> get selectedEntry =>
-      entries.firstWhereOrNull((e) => e.value == selected)!;
+  MenuButtonEntry<T>? get selectedEntry =>
+      entries.firstWhereOrNull((e) => e.value == selected);
 
   /// Called when the user selects an item.
   final ValueChanged<T>? onSelected;
@@ -173,7 +173,7 @@ class _MenuButtonBuilderState<T> extends State<MenuButtonBuilder<T>> {
                       child: widget.child != null
                           ? widget.child!
                           : widget.selected != null
-                              ? widget.selectedEntry.child ??
+                              ? widget.selectedEntry?.child ??
                                   widget.itemBuilder(
                                       context, widget.selected as T, null)
                               : const SizedBox.shrink()),
