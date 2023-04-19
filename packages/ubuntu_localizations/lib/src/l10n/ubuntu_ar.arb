@@ -15,5 +15,7 @@
   "fairPassword": "كلمة مرور مقبولة",
   "@fairPassword": {},
   "goodPassword": "كلمة مرور جيدة",
-  "@goodPassword": {}
+  "@goodPassword": {},
+  "aboutLabel": "حول",
+  "@aboutLabel": {}
 }
