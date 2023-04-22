@@ -122,7 +122,7 @@
   "@printPreviewLabel": {},
   "propertiesLabel": "Eigenschaften",
   "@propertiesLabel": {},
-  "refreshLabel": "Aktualisieren",
+  "refreshLabel": "Auffrischen",
   "@refreshLabel": {},
   "removeLabel": "Entfernen",
   "@removeLabel": {},
@@ -198,7 +198,7 @@
   "@firstLabel": {},
   "increaseLabel": "Erhöhen",
   "@increaseLabel": {},
-  "forwardLabel": "Vorwärts",
+  "forwardLabel": "Weiter",
   "@forwardLabel": {},
   "lastLabel": "Letzte",
   "@lastLabel": {},
@@ -223,5 +223,13 @@
   "zoomOutLabel": "Herauszoomen",
   "@zoomOutLabel": {},
   "homeLabel": "Zuhause",
-  "@homeLabel": {}
+  "@homeLabel": {},
+  "recordLabel": "Aufnehmen",
+  "@recordLabel": {},
+  "topLabel": "Oben",
+  "@topLabel": {},
+  "upLabel": "Nach oben",
+  "@upLabel": {},
+  "updateLabel": "Aktualisieren",
+  "@updateLabel": {}
 }
