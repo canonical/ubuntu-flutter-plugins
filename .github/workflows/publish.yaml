@@ -9,14 +9,20 @@ on:
 jobs:
   ubuntu_localizations:
     if: ${{startsWith(github.ref_name, 'ubuntu_localizations')}}
-    uses: dart-lang/setup-dart/.github/workflows/publish.yml@v1
-    with:
-      environment: pub.dev
-      working-directory: packages/ubuntu_localizations
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: dart-lang/setup-dart@v1
+      - uses: subosito/flutter-action@v2
+      - run: flutter pub publish --force
+        working-directory: packages/ubuntu_localizations
 
   ubuntu_logger:
     if: ${{startsWith(github.ref_name, 'ubuntu_logger')}}
-    uses: dart-lang/setup-dart/.github/workflows/publish.yml@v1
-    with:
-      environment: pub.dev
-      working-directory: packages/ubuntu_logger
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: dart-lang/setup-dart@v1
+      - uses: subosito/flutter-action@v2
+      - run: flutter pub publish --force
+        working-directory: packages/ubuntu_logger
