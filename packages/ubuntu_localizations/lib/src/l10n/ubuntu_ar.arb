@@ -4,7 +4,7 @@
   "@countryCode": {},
   "languageName": "عربي",
   "@languageName": {},
-  "backAction": "العودة",
+  "backAction": "الرجوع للخلف",
   "@backAction": {},
   "weakPassword": "كلمة مرور ضعيفة",
   "@weakPassword": {},
@@ -15,5 +15,7 @@
   "fairPassword": "كلمة مرور مقبولة",
   "@fairPassword": {},
   "goodPassword": "كلمة مرور جيدة",
-  "@goodPassword": {}
+  "@goodPassword": {},
+  "aboutLabel": "حول",
+  "@aboutLabel": {}
 }
