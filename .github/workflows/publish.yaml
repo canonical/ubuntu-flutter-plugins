@@ -10,6 +10,7 @@ jobs:
   ubuntu_localizations:
     if: ${{startsWith(github.ref_name, 'ubuntu_localizations')}}
     runs-on: ubuntu-latest
+    environment: pub.dev
     permissions:
       id-token: write
     steps:
@@ -22,6 +23,7 @@ jobs:
   ubuntu_logger:
     if: ${{startsWith(github.ref_name, 'ubuntu_logger')}}
     runs-on: ubuntu-latest
+    environment: pub.dev
     permissions:
       id-token: write
     steps:
