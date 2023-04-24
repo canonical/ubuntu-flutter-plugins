@@ -233,7 +233,8 @@ abstract class UbuntuLocalizations {
     Locale('ug'),
     Locale('uk'),
     Locale('vi'),
-    Locale('zh')
+    Locale('zh'),
+    Locale('zh', 'TW')
   ];
 
   /// No description provided for @countryCode.
@@ -943,6 +944,12 @@ UbuntuLocalizations lookupUbuntuLocalizations(Locale locale) {
     case 'pt': {
   switch (locale.countryCode) {
     case 'BR': return UbuntuLocalizationsPtBr();
+   }
+  break;
+   }
+    case 'zh': {
+  switch (locale.countryCode) {
+    case 'TW': return UbuntuLocalizationsZhTw();
    }
   break;
    }
