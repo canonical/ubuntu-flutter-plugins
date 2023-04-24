@@ -346,3 +346,14 @@ class UbuntuLocalizationsZh extends UbuntuLocalizations {
   @override
   String get zoomOutLabel => '缩小';
 }
+
+/// The translations for Chinese, as used in Taiwan (`zh_TW`).
+class UbuntuLocalizationsZhTw extends UbuntuLocalizationsZh {
+  UbuntuLocalizationsZhTw(): super('zh_TW');
+
+  @override
+  String get countryCode => 'TW';
+
+  @override
+  String get languageName => '中文（繁體）';
+}
