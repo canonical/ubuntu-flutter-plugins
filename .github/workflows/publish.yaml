@@ -1,0 +1,22 @@
+name: Publish
+
+on:
+  push:
+    tags:
+      - 'ubuntu_localizations-v[0-9]+.[0-9]+.[0-9]+*'
+      - 'ubuntu_logger-v[0-9]+.[0-9]+.[0-9]+*'
+
+jobs:
+  ubuntu_localizations:
+    if: ${{startsWith(github.ref_name, 'ubuntu_localizations')}}
+    uses: dart-lang/setup-dart/.github/workflows/publish.yml@v1
+    with:
+      environment: pub.dev
+      working-directory: packages/ubuntu_localizations
+
+  ubuntu_logger:
+    if: ${{startsWith(github.ref_name, 'ubuntu_logger')}}
+    uses: dart-lang/setup-dart/.github/workflows/publish.yml@v1
+    with:
+      environment: pub.dev
+      working-directory: packages/ubuntu_logger
