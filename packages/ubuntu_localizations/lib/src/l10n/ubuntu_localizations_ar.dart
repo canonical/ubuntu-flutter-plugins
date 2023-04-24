@@ -11,7 +11,7 @@ class UbuntuLocalizationsAr extends UbuntuLocalizations {
   String get languageName => 'عربي';
 
   @override
-  String get backAction => 'العودة';
+  String get backAction => 'الرجوع للخلف';
 
   @override
   String get continueAction => 'المواصلة';
@@ -41,7 +41,7 @@ class UbuntuLocalizationsAr extends UbuntuLocalizations {
   String get shiftKey => 'Shift';
 
   @override
-  String get aboutLabel => 'About';
+  String get aboutLabel => 'حول';
 
   @override
   String get addLabel => 'Add';
