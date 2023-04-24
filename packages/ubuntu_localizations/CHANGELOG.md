@@ -1,3 +1,8 @@
+## 0.1.5
+
+- Add zh_TW.
+- Update translations.
+
 ## 0.1.4
 
 - Update translations.
