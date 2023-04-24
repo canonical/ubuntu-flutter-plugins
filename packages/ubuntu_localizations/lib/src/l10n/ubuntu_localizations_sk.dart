@@ -200,7 +200,7 @@ class UbuntuLocalizationsSk extends UbuntuLocalizations {
   String get newLabel => 'Nové';
 
   @override
-  String get nextLabel => 'Ďalšie';
+  String get nextLabel => 'Ďalej';
 
   @override
   String get noLabel => 'Nie';
@@ -233,7 +233,7 @@ class UbuntuLocalizationsSk extends UbuntuLocalizations {
   String get preferencesLabel => 'Predvoľby';
 
   @override
-  String get previousLabel => 'Predchádzajúce';
+  String get previousLabel => 'Späť';
 
   @override
   String get printLabel => 'Tlač';

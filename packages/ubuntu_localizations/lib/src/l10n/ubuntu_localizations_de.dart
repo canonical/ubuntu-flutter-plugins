@@ -146,7 +146,7 @@ class UbuntuLocalizationsDe extends UbuntuLocalizations {
   String get fontLabel => 'Schriftart';
 
   @override
-  String get forwardLabel => 'Vorwärts';
+  String get forwardLabel => 'Weiter';
 
   @override
   String get fullscreenLabel => 'Vollbild';
@@ -200,7 +200,7 @@ class UbuntuLocalizationsDe extends UbuntuLocalizations {
   String get newLabel => 'Neu';
 
   @override
-  String get nextLabel => 'Nächste';
+  String get nextLabel => 'Weiter';
 
   @override
   String get noLabel => 'Nein';
@@ -233,7 +233,7 @@ class UbuntuLocalizationsDe extends UbuntuLocalizations {
   String get preferencesLabel => 'Einstellungen';
 
   @override
-  String get previousLabel => 'Vorherige';
+  String get previousLabel => 'Zurück';
 
   @override
   String get printLabel => 'Drucken';
@@ -251,13 +251,13 @@ class UbuntuLocalizationsDe extends UbuntuLocalizations {
   String get quitLabel => 'Beenden';
 
   @override
-  String get recordLabel => 'Record';
+  String get recordLabel => 'Aufnehmen';
 
   @override
   String get redoLabel => 'Rückgängig';
 
   @override
-  String get refreshLabel => 'Aktualisieren';
+  String get refreshLabel => 'Auffrischen';
 
   @override
   String get removeLabel => 'Entfernen';
@@ -317,16 +317,16 @@ class UbuntuLocalizationsDe extends UbuntuLocalizations {
   String get submitLabel => 'Absenden';
 
   @override
-  String get topLabel => 'Top';
+  String get topLabel => 'Oben';
 
   @override
   String get undoLabel => 'Rückgängig';
 
   @override
-  String get updateLabel => 'Update';
+  String get updateLabel => 'Aktualisieren';
 
   @override
-  String get upLabel => 'Up';
+  String get upLabel => 'Nach oben';
 
   @override
   String get viewLabel => 'Ansicht';
