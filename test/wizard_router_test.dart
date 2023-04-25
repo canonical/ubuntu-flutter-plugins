@@ -823,4 +823,108 @@ void main() {
 
     expect(find.text('Page 1 of 3'), findsOneWidget);
   });
+
+  testWidgets('nested wizard', (tester) async {
+    await pumpWizardApp(
+      tester,
+      routes: {
+        Routes.first: WizardRoute(builder: (_) => const Text(Routes.first)),
+        Routes.second: WizardRoute(
+          builder: (_) => Wizard(
+            routes: {
+              'nested1': WizardRoute(builder: (_) => const Text('nested1')),
+              'nested2': WizardRoute(builder: (_) => const Text('nested2')),
+              'nested3': WizardRoute(builder: (_) => const Text('nested3')),
+            },
+          ),
+        ),
+        Routes.third: WizardRoute(builder: (_) => const Text(Routes.third)),
+      },
+    );
+    await tester.pumpAndSettle();
+
+    final firstPage = find.text(Routes.first);
+    expect(firstPage, findsOneWidget);
+
+    final firstScope = Wizard.of(tester.element(firstPage));
+    expect(firstScope, isNotNull);
+    expect(firstScope.hasPrevious, isFalse);
+    expect(firstScope.hasNext, isTrue);
+
+    firstScope.next();
+    await tester.pumpAndSettle();
+
+    final nested1Page = find.text('nested1');
+    expect(nested1Page, findsOneWidget);
+
+    final nested1Scope = Wizard.of(tester.element(nested1Page));
+    expect(nested1Scope, isNotNull);
+    expect(nested1Scope.hasPrevious, isFalse);
+    expect(nested1Scope.hasNext, isTrue);
+
+    final root1Scope = Wizard.of(tester.element(nested1Page), root: true);
+    expect(root1Scope, isNotNull);
+    expect(root1Scope.hasPrevious, isTrue);
+    expect(root1Scope.hasNext, isTrue);
+
+    nested1Scope.next();
+    await tester.pumpAndSettle();
+
+    final nested2Page = find.text('nested2');
+    expect(nested2Page, findsOneWidget);
+
+    final nested2Scope = Wizard.of(tester.element(nested2Page));
+    expect(nested2Scope, isNotNull);
+    expect(nested2Scope.hasPrevious, isTrue);
+    expect(nested2Scope.hasNext, isTrue);
+
+    final root2Scope = Wizard.of(tester.element(nested2Page), root: true);
+    expect(root2Scope, same(root1Scope));
+    expect(root2Scope.hasPrevious, isTrue);
+    expect(root2Scope.hasNext, isTrue);
+
+    nested2Scope.next();
+    await tester.pumpAndSettle();
+
+    final nested3Page = find.text('nested3');
+    expect(nested3Page, findsOneWidget);
+
+    final nested3Scope = Wizard.of(tester.element(nested3Page));
+    expect(nested3Scope, isNotNull);
+    expect(nested3Scope.hasPrevious, isTrue);
+    expect(nested3Scope.hasNext, isFalse);
+
+    final root3Scope = Wizard.of(tester.element(nested3Page), root: true);
+    expect(root3Scope, same(root1Scope));
+    expect(root3Scope.hasPrevious, isTrue);
+    expect(root3Scope.hasNext, isTrue);
+
+    await expectLater(nested3Scope.next, throwsAssertionError);
+
+    root3Scope.next();
+    await tester.pumpAndSettle();
+
+    final thirdPage = find.text(Routes.third);
+    expect(thirdPage, findsOneWidget);
+
+    final thirdScope = Wizard.of(tester.element(thirdPage));
+    expect(thirdScope, isNotNull);
+    expect(thirdScope.hasPrevious, isTrue);
+    expect(thirdScope.hasNext, isFalse);
+
+    thirdScope.back();
+    await tester.pumpAndSettle();
+
+    expect(nested3Page, findsOneWidget);
+
+    nested3Scope.back();
+    await tester.pumpAndSettle();
+
+    expect(nested2Page, findsOneWidget);
+
+    root2Scope.back();
+    await tester.pumpAndSettle();
+
+    expect(firstPage, findsOneWidget);
+  });
 }

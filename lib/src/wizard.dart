@@ -149,8 +149,8 @@ class Wizard extends StatefulWidget {
   /// - [WizardScopeState.back]
   /// - [WizardScopeState.home]
   /// - [WizardScopeState.done]
-  static WizardScopeState of(BuildContext context) {
-    final scope = context.findAncestorStateOfType<WizardScopeState>();
+  static WizardScopeState of(BuildContext context, {bool root = false}) {
+    final scope = maybeOf(context, root: root);
     assert(() {
       if (scope == null) {
         throw FlutterError(
@@ -177,8 +177,10 @@ class Wizard extends StatefulWidget {
   /// - [WizardScopeState.back]
   /// - [WizardScopeState.home]
   /// - [WizardScopeState.done]
-  static WizardScopeState? maybeOf(BuildContext context) {
-    return context.findAncestorStateOfType<WizardScopeState>();
+  static WizardScopeState? maybeOf(BuildContext context, {bool root = false}) {
+    return root
+        ? context.findRootAncestorStateOfType<WizardScopeState>()
+        : context.findAncestorStateOfType<WizardScopeState>();
   }
 
   final List<WizardObserver> observers;
