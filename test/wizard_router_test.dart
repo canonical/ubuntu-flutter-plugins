@@ -675,7 +675,7 @@ void main() {
         Routes.first: WizardRoute(builder: (_) => const Text(Routes.first)),
         Routes.second: WizardRoute(
           builder: (context) => ElevatedButton(
-            child: Text(Routes.second),
+            child: const Text(Routes.second),
             onPressed: () {
               final wiz = Wizard.of(context);
               if (wiz.hasNext) wiz.next();
@@ -684,7 +684,7 @@ void main() {
         ),
         Routes.third: WizardRoute(
           builder: (context) => TextButton(
-            child: Text(Routes.third),
+            child: const Text(Routes.third),
             onPressed: () {
               final wiz = Wizard.of(context);
               // Third should never call next() because it's the last route.
@@ -721,7 +721,7 @@ void main() {
       routes: {
         Routes.first: WizardRoute(
           builder: (context) => ElevatedButton(
-            child: Text(Routes.first),
+            child: const Text(Routes.first),
             onPressed: () {
               final wiz = Wizard.of(context);
               if (wiz.hasNext) wiz.next();
@@ -733,7 +733,7 @@ void main() {
         Routes.second: WizardRoute(builder: (_) => const Text(Routes.second)),
         Routes.third: WizardRoute(
           builder: (context) => TextButton(
-            child: Text(Routes.third),
+            child: const Text(Routes.third),
             onPressed: () {
               final wiz = Wizard.of(context);
               // Third should never call next() because it's the last route.
@@ -803,7 +803,7 @@ void main() {
                 (wizardScope.wizardData as Map)['totalPages'] ?? -1;
             return Column(
               children: [
-                Text(Routes.first),
+                const Text(Routes.first),
                 Text('Page $page of $totalPages'),
               ],
             );

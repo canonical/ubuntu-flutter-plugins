@@ -131,7 +131,7 @@ class WizardScopeState extends State<WizardScope> {
 
     final name = onNext() ?? nextRoute();
     assert(widget._routes.contains(name),
-        '`Wizard.routes` is missing route \'${name}\'.');
+        '`Wizard.routes` is missing route \'$name\'.');
 
     return WizardRouteSettings<T?>(name: name, arguments: arguments);
   }
@@ -204,7 +204,7 @@ class WizardScopeState extends State<WizardScope> {
 
   /// Returns `false` if the wizard page is the last page.
   bool get hasNext {
-    if (widget._routes.length == 0) return false;
+    if (widget._routes.isEmpty) return false;
     final previous = _getRoutes().last.name!;
     final previousIndex = widget._routes.indexOf(previous);
     return previousIndex < widget._routes.length - 1;
@@ -236,7 +236,7 @@ class WizardScopeState extends State<WizardScope> {
         break;
       case null:
       case WizardControllerAction.unknown:
-        debugPrint("Wizard does not know how to handle null or unknown action");
+        debugPrint('Wizard does not know how to handle null or unknown action');
         break;
     }
   }

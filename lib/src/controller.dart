@@ -35,7 +35,7 @@ class WizardController extends ChangeNotifier {
 
   void done({Object? result}) {
     action = WizardControllerAction.done;
-    this.arguments = result;
+    arguments = result;
     notifyListeners();
   }
 
