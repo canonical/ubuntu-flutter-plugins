@@ -41,9 +41,6 @@ class MenuButtonEntry<T> {
 ///   itemBuilder: (context, value, _) => Text(value.toString()),
 /// )
 /// ```
-///
-/// See also:
-///  * [DropdownBuilder] - A similar builder widget but for dropdowns.
 class MenuButtonBuilder<T> extends StatefulWidget {
   /// Creates a menu button with the given `values`.
   ///
