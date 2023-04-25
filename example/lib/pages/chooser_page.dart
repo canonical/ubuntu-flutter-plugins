@@ -10,11 +10,11 @@ import '../widgets.dart';
 enum Choice { none, preview, install }
 
 class ChooserModel extends ValueNotifier<Choice> {
-  ChooserModel(Choice choice) : super(choice);
+  ChooserModel(super.choice);
 }
 
 class ChooserPage extends StatelessWidget {
-  const ChooserPage({Key? key}) : super(key: key);
+  const ChooserPage({super.key});
 
   static Widget create(BuildContext context) {
     return ChangeNotifierProvider(

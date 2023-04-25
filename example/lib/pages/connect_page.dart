@@ -6,7 +6,7 @@ import '../models.dart';
 import '../widgets.dart';
 
 class ConnectPage extends StatelessWidget {
-  const ConnectPage({Key? key}) : super(key: key);
+  const ConnectPage({super.key});
 
   static Widget create(BuildContext context) => const ConnectPage();
 

@@ -6,7 +6,7 @@ import 'package:wizard_router/wizard_router.dart';
 import '../widgets.dart';
 
 class PreviewPage extends StatelessWidget {
-  const PreviewPage({Key? key}) : super(key: key);
+  const PreviewPage({super.key});
 
   static Widget create(BuildContext context) => const PreviewPage();
 

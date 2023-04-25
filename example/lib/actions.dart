@@ -2,9 +2,9 @@ import 'package:flutter/widgets.dart';
 import 'package:wizard_router/wizard_router.dart';
 
 class WizardNextIntent extends Intent {
-  final Object? arguments;
+  const WizardNextIntent({this.arguments});
 
-  WizardNextIntent({this.arguments});
+  final Object? arguments;
 
   static void invoke({required BuildContext context, Object? arguments}) {
     Actions.invoke(
@@ -15,10 +15,9 @@ class WizardNextIntent extends Intent {
 }
 
 class WizardBackIntent extends Intent {
+  const WizardBackIntent({this.arguments});
+
   final Object? arguments;
-  WizardBackIntent({
-    this.arguments,
-  });
 
   static void invoke({required BuildContext context, Object? arguments}) {
     Actions.invoke(
@@ -28,7 +27,9 @@ class WizardBackIntent extends Intent {
   }
 }
 
-wizardActions({required WizardController controller}) => {
+Map<Type, Action<Intent>> wizardActions(
+        {required WizardController controller}) =>
+    {
       WizardNextIntent: CallbackAction<WizardNextIntent>(
         onInvoke: (intent) => controller.next(arguments: intent.arguments),
       ),

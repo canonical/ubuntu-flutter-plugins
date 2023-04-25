@@ -8,11 +8,11 @@ class WizardAction {
 
 class WizardPage extends StatelessWidget {
   const WizardPage({
-    Key? key,
+    super.key,
     this.title,
     this.body,
     this.actions = const <WizardAction>[],
-  }) : super(key: key);
+  });
 
   final Widget? title;
   final Widget? body;
@@ -50,11 +50,11 @@ class WizardPage extends StatelessWidget {
 
 class WizardCheckbox extends StatelessWidget {
   const WizardCheckbox({
-    Key? key,
+    super.key,
     this.title,
     required this.value,
     required this.onChanged,
-  }) : super(key: key);
+  });
 
   final Widget? title;
   final bool value;

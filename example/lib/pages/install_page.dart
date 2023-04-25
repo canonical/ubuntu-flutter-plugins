@@ -27,7 +27,7 @@ class InstallModel extends ValueNotifier<int> {
 }
 
 class InstallPage extends StatelessWidget {
-  const InstallPage({Key? key}) : super(key: key);
+  const InstallPage({super.key});
 
   static Widget create(BuildContext context) {
     return ChangeNotifierProvider(

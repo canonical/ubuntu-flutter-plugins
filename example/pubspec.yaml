@@ -3,7 +3,8 @@ description: Demonstrates how to use the wizard_router package.
 publish_to: 'none'
 
 environment:
-  sdk: ">=2.12.0 <3.0.0"
+  sdk: ">=2.17.0 <3.0.0"
+  flutter: '>=3.0.0'
 
 dependencies:
   flutter:
@@ -12,6 +13,9 @@ dependencies:
   provider: ^6.0.0
   wizard_router:
     path: ../
+
+dev_dependencies:
+  flutter_lints: ^2.0.0
 
 flutter:
   uses-material-design: true

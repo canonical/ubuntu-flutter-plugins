@@ -19,7 +19,7 @@ void main() {
 }
 
 class WizardApp extends StatelessWidget {
-  WizardApp({Key? key}) : super(key: key);
+  WizardApp({super.key});
 
   /// Optional to show use of Actions + controller in example
   /// Off by default to not affect tests.
@@ -36,7 +36,7 @@ class WizardApp extends StatelessWidget {
           controller: controller,
           initialRoute: Routes.initial,
           routes: <String, WizardRoute>{
-            Routes.welcome: WizardRoute(
+            Routes.welcome: const WizardRoute(
               builder: WelcomePage.create,
             ),
             Routes.chooser: WizardRoute(
@@ -55,7 +55,7 @@ class WizardApp extends StatelessWidget {
                 }
               },
             ),
-            Routes.preview: WizardRoute(
+            Routes.preview: const WizardRoute(
               builder: PreviewPage.create,
             ),
             Routes.connect: WizardRoute(

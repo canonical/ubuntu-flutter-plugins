@@ -7,7 +7,7 @@ import '../main.dart';
 import '../widgets.dart';
 
 class WelcomePage extends StatelessWidget {
-  const WelcomePage({Key? key}) : super(key: key);
+  const WelcomePage({super.key});
 
   static Widget create(BuildContext context) => const WelcomePage();
 
