@@ -214,12 +214,16 @@
   "@topLabel": {},
   "upLabel": "Вверх",
   "@upLabel": {},
-  "strikeThroughLabel": "Зачеркнуть",
+  "strikeThroughLabel": "Зачёркнутый",
   "@strikeThroughLabel": {},
   "nextLabel": "Следующая",
   "@nextLabel": {},
   "noneLabel": "Ничего",
   "@noneLabel": {},
   "previousLabel": "Предыдущая",
-  "@previousLabel": {}
+  "@previousLabel": {},
+  "newLabel": "Новый",
+  "@newLabel": {},
+  "submitLabel": "Отправить",
+  "@submitLabel": {}
 }
