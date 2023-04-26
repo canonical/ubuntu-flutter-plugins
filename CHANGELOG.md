@@ -1,3 +1,7 @@
+## 0.10.2
+
+- Add root argument to Wizard.of() and Wizard.maybeOf()
+
 ## 0.10.1
 
 - Add WizardScope.jump()
