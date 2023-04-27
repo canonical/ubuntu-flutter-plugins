@@ -16,7 +16,6 @@ class TestObserver extends WizardObserver {
   Route? nextFrom;
   Route? backTo;
   Route? backFrom;
-  Route? done;
   Object? result;
 
   void reset() {
@@ -25,7 +24,6 @@ class TestObserver extends WizardObserver {
     nextFrom = null;
     backTo = null;
     backFrom = null;
-    done = null;
     result = null;
   }
 
@@ -44,12 +42,6 @@ class TestObserver extends WizardObserver {
   void onBack(Route route, Route previousRoute) {
     backTo = route;
     backFrom = previousRoute;
-  }
-
-  @override
-  void onDone(Route route, Object? res) {
-    done = route;
-    result = res;
   }
 }
 
@@ -603,7 +595,6 @@ void main() {
     expect(observer.nextTo, isNull);
     expect(observer.backFrom, isNull);
     expect(observer.backTo, isNull);
-    expect(observer.done, isNull);
     observer.reset();
 
     Wizard.of(tester.element(find.text(Routes.first))).next();
@@ -614,7 +605,6 @@ void main() {
     expect(observer.backFrom, isNull);
     expect(observer.backTo, isNull);
     expect(observer.init, isNull);
-    expect(observer.done, isNull);
     observer.reset();
 
     Wizard.of(tester.element(find.text(Routes.second))).replace();
@@ -625,7 +615,6 @@ void main() {
     expect(observer.backFrom, isNull);
     expect(observer.backTo, isNull);
     expect(observer.init, isNull);
-    expect(observer.done, isNull);
     observer.reset();
 
     Wizard.of(tester.element(find.text(Routes.third))).back();
@@ -635,20 +624,6 @@ void main() {
     expect(observer.backTo?.settings.name, Routes.first);
     expect(observer.nextFrom, isNull);
     expect(observer.nextTo, isNull);
-    expect(observer.init, isNull);
-    expect(observer.done, isNull);
-    observer.reset();
-
-    Wizard.of(tester.element(find.text(Routes.first))).done(result: 'done');
-    await tester.pumpAndSettle();
-
-    expect(observer.done, isNotNull);
-    expect(observer.done!.settings.name, Routes.first);
-    expect(observer.result, 'done');
-    expect(observer.nextFrom, isNull);
-    expect(observer.nextTo, isNull);
-    expect(observer.backFrom, isNull);
-    expect(observer.backTo, isNull);
     expect(observer.init, isNull);
     observer.reset();
   });

@@ -4,7 +4,6 @@ import 'package:flow_builder/flow_builder.dart';
 import 'package:flutter/widgets.dart';
 
 import 'controller.dart';
-import 'result.dart';
 import 'route.dart';
 import 'settings.dart';
 
@@ -165,31 +164,6 @@ class WizardScopeState extends State<WizardScope> {
     });
   }
 
-  /// Sets the wizard done. Optionally, a `result` can be passed to the route.
-  ///
-  /// ```dart
-  /// onPressed: Wizard.of(context).done
-  /// ```
-  FutureOr<void> done({Object? result}) async {
-    final routes = _getRoutes();
-    assert(routes.isNotEmpty, routes.length.toString());
-
-    final flow = context.flow<List<WizardRouteSettings>>();
-
-    await widget._route.onDone?.call(result);
-
-    flow.complete((state) {
-      final copy = List<WizardRouteSettings>.of(state);
-      final settings = copy.removeLast();
-      return copy
-        ..add(WizardRouteResult(
-          settings,
-          result: result,
-          route: ModalRoute.of(context)!,
-        ));
-    });
-  }
-
   List<WizardRouteSettings> _getRoutes() =>
       context.flow<List<WizardRouteSettings>>().state;
 
@@ -210,9 +184,6 @@ class WizardScopeState extends State<WizardScope> {
     return previousIndex < widget._routes.length - 1;
   }
 
-  /// Returns `true` if the wizard is done.
-  bool get isDone => context.flow<List<WizardRouteSettings>>().completed;
-
   Object? get routeData => widget._route.userData;
   Object? get wizardData => widget._userData;
 
@@ -230,9 +201,6 @@ class WizardScopeState extends State<WizardScope> {
         break;
       case WizardControllerAction.replace:
         replace(arguments: widget._controller?.arguments);
-        break;
-      case WizardControllerAction.done:
-        done(result: widget._controller?.arguments);
         break;
       case null:
       case WizardControllerAction.unknown:

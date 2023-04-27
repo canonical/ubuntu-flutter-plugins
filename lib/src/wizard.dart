@@ -4,7 +4,6 @@ import 'package:flutter/material.dart';
 
 import 'controller.dart';
 import 'observer.dart';
-import 'result.dart';
 import 'route.dart';
 import 'scope.dart';
 import 'settings.dart';
@@ -148,7 +147,6 @@ class Wizard extends StatefulWidget {
   /// - [WizardScopeState.replace]
   /// - [WizardScopeState.back]
   /// - [WizardScopeState.home]
-  /// - [WizardScopeState.done]
   static WizardScopeState of(BuildContext context, {bool root = false}) {
     final scope = maybeOf(context, root: root);
     assert(() {
@@ -176,7 +174,6 @@ class Wizard extends StatefulWidget {
   /// - [WizardScopeState.replace]
   /// - [WizardScopeState.back]
   /// - [WizardScopeState.home]
-  /// - [WizardScopeState.done]
   static WizardScopeState? maybeOf(BuildContext context, {bool root = false}) {
     return root
         ? context.findRootAncestorStateOfType<WizardScopeState>()
@@ -244,12 +241,6 @@ class _WizardState extends State<Wizard> {
             .toList();
       },
       observers: [_WizardFlowObserver(widget.observers), HeroController()],
-      onComplete: (state) async {
-        final result = state.lastOrNull as WizardRouteResult;
-        for (final observer in widget.observers) {
-          await observer.onDone(result.route, result.result);
-        }
-      },
     );
   }
 }
