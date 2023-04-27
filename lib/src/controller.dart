@@ -6,7 +6,6 @@ enum WizardControllerAction {
   back,
   next,
   replace,
-  done,
   unknown,
 }
 
@@ -30,12 +29,6 @@ class WizardController extends ChangeNotifier {
 
   void home() {
     action = WizardControllerAction.home;
-    notifyListeners();
-  }
-
-  void done({Object? result}) {
-    action = WizardControllerAction.done;
-    arguments = result;
     notifyListeners();
   }
 
