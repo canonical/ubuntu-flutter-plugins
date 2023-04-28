@@ -88,6 +88,9 @@ class WizardScopeState extends State<WizardScope> {
     return previousIndex < routes.length - 1;
   }
 
+  /// Returns `true` if the wizard is awaiting an asynchronous callback.
+  bool get isBusy => widget._controller.isBusy;
+
   Object? get routeData => widget._route.userData;
   Object? get wizardData => widget._userData;
 

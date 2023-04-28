@@ -898,7 +898,8 @@ void main() {
 
   testWidgets('busy state', (tester) async {
     final completer = Completer<void>();
-    final controller = WizardController(routes: {
+
+    await pumpWizardApp(tester, routes: {
       Routes.first: WizardRoute(
           builder: (_) => const Text(Routes.first),
           onNext: (_) async {
@@ -907,22 +908,27 @@ void main() {
           }),
       Routes.second: WizardRoute(builder: (_) => const Text(Routes.second)),
     });
-
-    await pumpWizardApp(tester, controller: controller);
     await tester.pumpAndSettle();
 
-    expect(find.text(Routes.first), findsOneWidget);
-    expect(find.text(Routes.second), findsNothing);
-    expect(controller.isBusy, isFalse);
+    final firstPage = find.text(Routes.first);
+    final secondPage = find.text(Routes.second);
 
-    controller.next();
+    expect(firstPage, findsOneWidget);
+    expect(secondPage, findsNothing);
+
+    final firstScope = Wizard.of(tester.element(firstPage));
+    expect(firstScope.isBusy, isFalse);
+
+    firstScope.next();
     await tester.pumpAndSettle();
-    expect(controller.isBusy, isTrue);
+    expect(firstScope.isBusy, isTrue);
 
     completer.complete();
     await tester.pumpAndSettle();
-    expect(controller.isBusy, isFalse);
     expect(find.text(Routes.first), findsNothing);
     expect(find.text(Routes.second), findsOneWidget);
+
+    final secondScope = Wizard.of(tester.element(secondPage));
+    expect(secondScope.isBusy, isFalse);
   });
 }
