@@ -110,7 +110,7 @@ class WizardController extends ChangeNotifier {
 
   /// Requests the wizard to replace the current page with the next one.
   /// Optionally, `arguments` can be passed to the next page.
-  void replace({Object? arguments}) async {
+  Future<T?> replace<T extends Object>({T? arguments}) async {
     final next =
         await _getNextRoute(arguments, routes[currentRoute]!.onReplace);
 
@@ -119,18 +119,20 @@ class WizardController extends ChangeNotifier {
       copy[copy.length - 1] = next;
       return copy;
     });
+    return next.completer.future;
   }
 
   /// Requests the wizard to jump to a specific page. Optionally, `arguments`
   /// can be passed to the page.
-  void jump(String route, {Object? arguments}) async {
+  Future<T?> jump<T extends Object>(String route, {T? arguments}) async {
     assert(routes.keys.contains(route),
         '`Wizard.jump()` called with an unknown route $route.');
-    final settings = WizardRouteSettings(name: route, arguments: arguments);
+    final settings = WizardRouteSettings<T>(name: route, arguments: arguments);
 
     _updateState((state) {
       final copy = List<WizardRouteSettings>.of(state);
       return copy..add(settings);
     });
+    return settings.completer.future;
   }
 }
