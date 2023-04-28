@@ -34,6 +34,6 @@ Map<Type, Action<Intent>> wizardActions(
         onInvoke: (intent) => controller.next(arguments: intent.arguments),
       ),
       WizardBackIntent: CallbackAction<WizardBackIntent>(
-        onInvoke: (intent) => controller.back(arguments: intent.arguments),
+        onInvoke: (intent) => controller.back(intent.arguments),
       )
     };

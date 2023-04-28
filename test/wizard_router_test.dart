@@ -49,8 +49,9 @@ void main() {
   Future<void> pumpWizardApp(
     WidgetTester tester, {
     String? initialRoute,
-    required Map<String, WizardRoute> routes,
+    Map<String, WizardRoute>? routes,
     Object? userData,
+    WizardController? controller,
   }) {
     return tester.pumpWidget(
       MaterialApp(
@@ -58,6 +59,7 @@ void main() {
           initialRoute: initialRoute,
           routes: routes,
           userData: userData,
+          controller: controller,
         ),
       ),
     );
@@ -901,5 +903,31 @@ void main() {
     await tester.pumpAndSettle();
 
     expect(firstPage, findsOneWidget);
+  });
+
+  testWidgets('controller', (tester) async {
+    final controller = WizardController(routes: {
+      Routes.first: WizardRoute(builder: (_) => const Text(Routes.first)),
+      Routes.second: WizardRoute(builder: (_) => const Text(Routes.second)),
+      Routes.third: WizardRoute(builder: (_) => const Text(Routes.third)),
+    });
+
+    await pumpWizardApp(
+      tester,
+      controller: controller,
+    );
+    await tester.pumpAndSettle();
+
+    controller.next();
+    await tester.pumpAndSettle();
+    expect(find.text(Routes.second), findsOneWidget);
+
+    controller.replace();
+    await tester.pumpAndSettle();
+    expect(find.text(Routes.third), findsOneWidget);
+
+    controller.back();
+    await tester.pumpAndSettle();
+    expect(find.text(Routes.first), findsOneWidget);
   });
 }

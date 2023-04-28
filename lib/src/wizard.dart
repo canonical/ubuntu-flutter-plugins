@@ -2,11 +2,12 @@ import 'package:collection/collection.dart';
 import 'package:flow_builder/flow_builder.dart';
 import 'package:flutter/material.dart';
 
-import 'controller.dart';
 import 'observer.dart';
 import 'route.dart';
 import 'scope.dart';
 import 'settings.dart';
+
+part 'controller.dart';
 
 /// A wizard is a flow of steps that the user can navigate through.
 ///
@@ -112,11 +113,12 @@ class Wizard extends StatefulWidget {
   const Wizard({
     super.key,
     this.initialRoute,
-    required this.routes,
+    this.routes,
     this.observers = const [],
     this.userData,
     this.controller,
-  });
+  }) : assert((routes == null) != (controller == null),
+            'Either routes or controller must be specified');
 
   /// The name of the first route to show.
   ///
@@ -128,7 +130,7 @@ class Wizard extends StatefulWidget {
   ///
   /// The order of `routes` is the order of the wizard pages are shown. The
   /// order can be customized with [WizardRoute.onNext] and [WizardRoute.onBack].
-  final Map<String, WizardRoute> routes;
+  final Map<String, WizardRoute>? routes;
 
   /// Additional custom data associated with this page.
   final Object? userData;
@@ -189,27 +191,46 @@ class Wizard extends StatefulWidget {
 }
 
 class _WizardState extends State<Wizard> {
-  List<WizardRouteSettings> _routes = [];
+  late WizardController _controller;
 
   @override
   void initState() {
     super.initState();
-    _ensureInitialRoute();
+    _controller = widget.controller ??
+        WizardController(
+            routes: widget.routes!, initialRoute: widget.initialRoute);
+  }
+
+  @override
+  void dispose() {
+    if (widget.controller == null) {
+      _controller.dispose();
+    }
+    super.dispose();
   }
 
   @override
   void didUpdateWidget(Wizard oldWidget) {
     super.didUpdateWidget(oldWidget);
-    _routes.removeWhere((r) => !widget.routes.containsKey(r.name));
-    _ensureInitialRoute();
-  }
-
-  void _ensureInitialRoute() {
-    if (_routes.isEmpty) {
-      _routes = <WizardRouteSettings>[
-        WizardRouteSettings(
-            name: widget.initialRoute ?? widget.routes.keys.first),
-      ];
+    if (widget.initialRoute != oldWidget.initialRoute ||
+        widget.controller != oldWidget.controller ||
+        !const IterableEquality()
+            .equals(widget.routes?.keys, oldWidget.routes?.keys)) {
+      if (oldWidget.controller == null) {
+        _controller.dispose();
+      }
+      _controller = widget.controller ??
+          WizardController(
+              routes: widget.routes!, initialRoute: widget.initialRoute);
+      _controller._flowController.update((state) {
+        final newState =
+            state.where((r) => _controller.routes.containsKey(r.name)).toList();
+        if (newState.isEmpty) {
+          newState.add(WizardRouteSettings(
+              name: widget.initialRoute ?? _controller.routes.keys.first));
+        }
+        return newState;
+      });
     }
   }
 
@@ -221,10 +242,9 @@ class _WizardState extends State<Wizard> {
       key: ValueKey(settings.name),
       child: WizardScope(
         index: index,
-        route: widget.routes[settings.name]!,
-        routes: widget.routes.keys.toList(),
         userData: widget.userData,
-        controller: widget.controller,
+        route: _controller.routes[settings.name]!,
+        controller: _controller,
       ),
     );
   }
@@ -232,9 +252,8 @@ class _WizardState extends State<Wizard> {
   @override
   Widget build(BuildContext context) {
     return FlowBuilder<List<WizardRouteSettings>>(
-      state: _routes,
+      controller: _controller._flowController,
       onGeneratePages: (state, __) {
-        _routes = state;
         return state
             .mapIndexed((index, settings) =>
                 _createPage(context, index: index, settings: settings))
