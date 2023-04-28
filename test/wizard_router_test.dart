@@ -10,38 +10,18 @@ abstract class Routes {
   static const fourth = '/fourth';
 }
 
-class TestObserver extends WizardObserver {
-  Route? init;
-  Route? nextTo;
-  Route? nextFrom;
-  Route? backTo;
-  Route? backFrom;
-  Object? result;
+class TestObserver extends NavigatorObserver {
+  Route? pushed;
+  Route? popped;
 
-  void reset() {
-    init = null;
-    nextTo = null;
-    nextFrom = null;
-    backTo = null;
-    backFrom = null;
-    result = null;
+  @override
+  void didPush(Route route, Route? previousRoute) {
+    pushed = route;
   }
 
   @override
-  void onInit(Route route) {
-    init = route;
-  }
-
-  @override
-  void onNext(Route route, Route? previousRoute) {
-    nextTo = route;
-    nextFrom = previousRoute;
-  }
-
-  @override
-  void onBack(Route route, Route previousRoute) {
-    backTo = route;
-    backFrom = previousRoute;
+  void didPop(Route route, Route? previousRoute) {
+    popped = route;
   }
 }
 
@@ -575,7 +555,7 @@ void main() {
     expect(() => Wizard.of(context), throwsFlutterError);
   });
 
-  testWidgets('observers', (tester) async {
+  testWidgets('navigator observers', (tester) async {
     final observer = TestObserver();
     await tester.pumpWidget(
       MaterialApp(
@@ -585,49 +565,30 @@ void main() {
             Routes.first: WizardRoute(builder: (_) => const Text(Routes.first)),
             Routes.second:
                 WizardRoute(builder: (_) => const Text(Routes.second)),
-            Routes.third: WizardRoute(builder: (_) => const Text(Routes.third)),
           },
           observers: [observer],
         ),
       ),
     );
 
-    expect(observer.init?.settings.name, Routes.first);
-    expect(observer.nextFrom, isNull);
-    expect(observer.nextTo, isNull);
-    expect(observer.backFrom, isNull);
-    expect(observer.backTo, isNull);
-    observer.reset();
+    expect(observer.pushed, isNotNull);
+    expect(observer.pushed!.settings.name, Routes.first);
+    expect(observer.popped, isNull);
 
     Wizard.of(tester.element(find.text(Routes.first))).next();
     await tester.pumpAndSettle();
 
-    expect(observer.nextFrom?.settings.name, Routes.first);
-    expect(observer.nextTo?.settings.name, Routes.second);
-    expect(observer.backFrom, isNull);
-    expect(observer.backTo, isNull);
-    expect(observer.init, isNull);
-    observer.reset();
+    expect(observer.pushed, isNotNull);
+    expect(observer.pushed!.settings.name, Routes.second);
+    expect(observer.popped, isNull);
+    observer.pushed = null;
 
-    Wizard.of(tester.element(find.text(Routes.second))).replace();
+    Wizard.of(tester.element(find.text(Routes.second))).back();
     await tester.pumpAndSettle();
 
-    expect(observer.nextFrom?.settings.name, Routes.second);
-    expect(observer.nextTo?.settings.name, Routes.third);
-    expect(observer.backFrom, isNull);
-    expect(observer.backTo, isNull);
-    expect(observer.init, isNull);
-    observer.reset();
-
-    Wizard.of(tester.element(find.text(Routes.third))).back();
-    await tester.pumpAndSettle();
-
-    expect(observer.backFrom?.settings.name, Routes.third);
-    expect(observer.backTo?.settings.name, Routes.first);
-    expect(observer.nextFrom, isNull);
-    expect(observer.nextTo, isNull);
-    expect(observer.init, isNull);
-    observer.reset();
+    expect(observer.popped, isNotNull);
+    expect(observer.popped!.settings.name, Routes.second);
+    expect(observer.pushed, isNull);
   });
 
   testWidgets('maybe of', (tester) async {
