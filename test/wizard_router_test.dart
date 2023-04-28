@@ -187,7 +187,9 @@ void main() {
     await expectLater(wizard.next, throwsAssertionError);
 
     wizard.back();
+    await tester.pumpAndSettle();
     wizard.back();
+    await tester.pumpAndSettle();
     await expectLater(wizard.back, throwsAssertionError);
   });
 
