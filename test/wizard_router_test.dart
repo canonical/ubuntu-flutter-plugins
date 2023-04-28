@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:wizard_router/wizard_router.dart';
@@ -892,5 +894,35 @@ void main() {
     controller.back();
     await tester.pumpAndSettle();
     expect(find.text(Routes.first), findsOneWidget);
+  });
+
+  testWidgets('busy state', (tester) async {
+    final completer = Completer<void>();
+    final controller = WizardController(routes: {
+      Routes.first: WizardRoute(
+          builder: (_) => const Text(Routes.first),
+          onNext: (_) async {
+            await completer.future;
+            return null;
+          }),
+      Routes.second: WizardRoute(builder: (_) => const Text(Routes.second)),
+    });
+
+    await pumpWizardApp(tester, controller: controller);
+    await tester.pumpAndSettle();
+
+    expect(find.text(Routes.first), findsOneWidget);
+    expect(find.text(Routes.second), findsNothing);
+    expect(controller.isBusy, isFalse);
+
+    controller.next();
+    await tester.pumpAndSettle();
+    expect(controller.isBusy, isTrue);
+
+    completer.complete();
+    await tester.pumpAndSettle();
+    expect(controller.isBusy, isFalse);
+    expect(find.text(Routes.first), findsNothing);
+    expect(find.text(Routes.second), findsOneWidget);
   });
 }

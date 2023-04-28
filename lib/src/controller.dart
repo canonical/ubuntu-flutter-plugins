@@ -13,6 +13,15 @@ class WizardController extends ChangeNotifier {
   final Map<String, WizardRoute> routes;
   late final FlowController<List<WizardRouteSettings>> _flowController;
 
+  bool _isBusy = false;
+  bool get isBusy => _isBusy;
+  void _setBusy(bool value) {
+    if (_isBusy != value) {
+      _isBusy = value;
+      notifyListeners();
+    }
+  }
+
   List<WizardRouteSettings> get state => _flowController.state;
   String get currentRoute => state.last.name!;
 
@@ -101,7 +110,9 @@ class WizardController extends ChangeNotifier {
       return routeNames[index + 1];
     }
 
+    _setBusy(true);
     final name = await onNext() ?? nextRoute();
+    _setBusy(false);
     assert(routes.keys.contains(name),
         '`Wizard.routes` is missing route \'$name\'.');
 
