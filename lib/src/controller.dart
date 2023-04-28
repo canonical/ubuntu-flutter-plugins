@@ -42,12 +42,12 @@ class WizardController extends ChangeNotifier {
 
   /// Requests the wizard to show the previous page. Optionally, `result` can be
   /// returned to the previous page.
-  void back<T extends Object?>([T? result]) {
+  void back<T extends Object?>([T? result]) async {
     assert(state.length > 1,
         '`Wizard.back()` called from the first route ${state.last.name}');
 
     // go back to a specific route, or pick the previous route on the list
-    final previous = routes[currentRoute]!.onBack?.call(state.last);
+    final previous = await routes[currentRoute]!.onBack?.call(state.last);
     if (previous != null) {
       assert(routes.keys.contains(previous),
           '`Wizard.routes` is missing route \'$previous\'.');
