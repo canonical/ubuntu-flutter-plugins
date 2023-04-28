@@ -66,8 +66,9 @@ class WizardController extends ChangeNotifier {
 
   /// Requests the wizard to show the next page. Optionally, `arguments` can be
   /// passed to the next page.
-  Future<T?> next<T extends Object?>({T? arguments}) {
-    final next = _getNextRoute<T>(arguments, routes[currentRoute]!.onNext);
+  Future<T?> next<T extends Object?>({T? arguments}) async {
+    final next =
+        await _getNextRoute<T>(arguments, routes[currentRoute]!.onNext);
 
     _updateState((state) {
       final copy = List<WizardRouteSettings>.of(state);
@@ -77,10 +78,10 @@ class WizardController extends ChangeNotifier {
     return next.completer.future;
   }
 
-  WizardRouteSettings<T?> _getNextRoute<T extends Object?>(
+  Future<WizardRouteSettings<T?>> _getNextRoute<T extends Object?>(
     T? arguments,
     WizardRouteCallback? advance,
-  ) {
+  ) async {
     assert(state.isNotEmpty, state.length.toString());
 
     final previous = WizardRouteSettings(
@@ -89,7 +90,7 @@ class WizardController extends ChangeNotifier {
     );
 
     // advance to a specific route
-    String? onNext() => advance?.call(previous);
+    FutureOr<String?> onNext() => advance?.call(previous);
 
     // pick the next route on the list
     String nextRoute() {
@@ -100,7 +101,7 @@ class WizardController extends ChangeNotifier {
       return routeNames[index + 1];
     }
 
-    final name = onNext() ?? nextRoute();
+    final name = await onNext() ?? nextRoute();
     assert(routes.keys.contains(name),
         '`Wizard.routes` is missing route \'$name\'.');
 
@@ -110,7 +111,8 @@ class WizardController extends ChangeNotifier {
   /// Requests the wizard to replace the current page with the next one.
   /// Optionally, `arguments` can be passed to the next page.
   void replace({Object? arguments}) async {
-    final next = _getNextRoute(arguments, routes[currentRoute]!.onReplace);
+    final next =
+        await _getNextRoute(arguments, routes[currentRoute]!.onReplace);
 
     _updateState((state) {
       final copy = List<WizardRouteSettings>.of(state);

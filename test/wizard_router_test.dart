@@ -201,7 +201,9 @@ void main() {
     expect(wizard, isNotNull);
 
     wizard.next();
+    await tester.pumpAndSettle();
     wizard.next();
+    await tester.pumpAndSettle();
     await expectLater(wizard.next, throwsAssertionError);
 
     wizard.back();
