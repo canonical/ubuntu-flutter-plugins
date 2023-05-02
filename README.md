@@ -103,6 +103,41 @@ BarPageState extends State<BarPage>(
 )
 ```
 
+### Controller
+
+The wizard can be accessed from anywhere in the widget tree by using a `WizardController`.
+
+```dart
+class FooPage extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    final controller = WizardController(
+      routes: {
+        '/foo': WizardRoute(builder: (context) => FooPage()),
+        '/bar': WizardRoute(builder: (context) => BarPage()),
+      },
+    );
+    return Column(
+      children: [
+        Wizard(controller: controller),
+        ButtonBar(
+          children: [
+            ElevatedButton(
+              onPressed: controller.back,
+              child: const Text('Back'),
+            ),
+            ElevatedButton(
+              onPressed: controller.next,
+              child: const Text('Next'),
+            ),
+          ],
+        ),
+      ],
+    );
+  }
+}
+```
+
 ## Credits
 
 `wizard_router` is based on [flow_builder](https://pub.dev/packages/flow_builder).
