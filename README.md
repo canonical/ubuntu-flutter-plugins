@@ -109,19 +109,13 @@ The wizard can be accessed from anywhere in the widget tree by using a `WizardCo
 
 ```dart
 class FooPage extends StatefulWidget {
-  late final WizardController _controller;
+  final _controller = WizardController(
+    routes: {
+      '/foo': WizardRoute(builder: (context) => FooPage()),
+      '/bar': WizardRoute(builder: (context) => BarPage()),
+    },
+  );
   
-  @override
-  initState() {
-    super.initState();
-    _controller = WizardController(
-      routes: {
-        '/foo': WizardRoute(builder: (context) => FooPage()),
-        '/bar': WizardRoute(builder: (context) => BarPage()),
-      },
-    );
-  }
-
   @override
   void dispose() {
     _controller.dispose();
