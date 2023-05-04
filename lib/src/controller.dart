@@ -70,6 +70,8 @@ class WizardController extends ChangeNotifier {
     final next =
         await _getNextRoute<T>(arguments, routes[currentRoute]!.onNext);
 
+    await routes[next.name]!.onLoad?.call(next);
+
     _updateState((state) {
       final copy = List<WizardRouteSettings>.of(state);
       return copy..add(next);
@@ -114,6 +116,8 @@ class WizardController extends ChangeNotifier {
     final next =
         await _getNextRoute<T>(arguments, routes[currentRoute]!.onReplace);
 
+    await routes[next.name]!.onLoad?.call(next);
+
     _updateState((state) {
       final copy = List<WizardRouteSettings>.of(state);
       copy[copy.length - 1] = next;
@@ -128,6 +132,8 @@ class WizardController extends ChangeNotifier {
     assert(routes.keys.contains(route),
         '`Wizard.jump()` called with an unknown route $route.');
     final settings = WizardRouteSettings<T>(name: route, arguments: arguments);
+
+    await routes[route]!.onLoad?.call(settings);
 
     _updateState((state) {
       final copy = List<WizardRouteSettings>.of(state);

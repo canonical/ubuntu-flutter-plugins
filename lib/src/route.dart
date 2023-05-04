@@ -6,12 +6,15 @@ import 'package:flutter/widgets.dart';
 typedef WizardRouteCallback = FutureOr<String?> Function(
     RouteSettings settings);
 
+typedef WizardRouteLoader = FutureOr<void> Function(RouteSettings settings);
+
 class WizardRoute {
   const WizardRoute({
     required this.builder,
     this.onNext,
     this.onReplace,
     this.onBack,
+    this.onLoad,
     this.userData,
   });
 
@@ -34,6 +37,9 @@ class WizardRoute {
   /// If `onBack` is not specified or it returns `null`, the order is determined
   /// from [routes].
   final WizardRouteCallback? onBack;
+
+  /// The callback invoked when the page is loaded.
+  final WizardRouteLoader? onLoad;
 
   /// Additional custom data associated with this page.
   final Object? userData;
