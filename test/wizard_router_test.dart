@@ -895,4 +895,46 @@ void main() {
     await tester.pumpAndSettle();
     expect(find.text(Routes.first), findsOneWidget);
   });
+
+  testWidgets('onLoad', (tester) async {
+    var calls = 0;
+    final controller = WizardController(
+      routes: {
+        Routes.first: WizardRoute(builder: (_) => const Text(Routes.first)),
+        Routes.second: WizardRoute(
+          builder: (_) => const Text(Routes.second),
+          onLoad: (_) => calls++,
+        ),
+        Routes.third: WizardRoute(builder: (_) => const Text(Routes.third)),
+      },
+    );
+    await pumpWizardApp(tester, controller: controller);
+    await tester.pumpAndSettle();
+    expect(calls, 0);
+
+    controller.next();
+    await tester.pumpAndSettle();
+    expect(calls, 1);
+
+    controller.next();
+    await tester.pumpAndSettle();
+    expect(calls, 1);
+
+    controller.back();
+    await tester.pumpAndSettle();
+    expect(calls, 1);
+
+    controller.home();
+    await tester.pumpAndSettle();
+    expect(calls, 1);
+
+    controller.jump(Routes.second);
+    await tester.pumpAndSettle();
+    expect(calls, 2);
+
+    controller.home();
+    controller.replace();
+    await tester.pumpAndSettle();
+    expect(calls, 3);
+  });
 }
