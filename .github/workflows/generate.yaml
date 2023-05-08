@@ -9,7 +9,6 @@ on:
 
 jobs:
   build-runner:
-    if: github.event_name != 'push'
     runs-on: ubuntu-20.04
     steps:
     - uses: actions/checkout@v3
@@ -18,9 +17,21 @@ jobs:
     - run: melos bootstrap
     - run: melos run generate
     - run: ./.github/scripts/check-outdated-files.sh
+      if: github.event_name == 'pull_request'
+    - uses: peter-evans/create-pull-request@v5
+      if: github.event_name == 'push'
+      id: create-pr
+      with:
+        title: 'chore: regenerate l10n'
+        commit-message: 'chore: regenerate l10n'
+    - name: Auto-merge PR
+      if: ${{steps.create-pr.outputs.pull-request-number}}
+      run: gh pr merge --auto --merge "$PR_URL"
+      env:
+        PR_URL: ${{steps.create-pr.outputs.pull-request-url}}
+        GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
 
   gen-l10n:
-    if: github.event_name != 'push'
     runs-on: ubuntu-20.04
     steps:
     - uses: actions/checkout@v3
@@ -29,18 +40,16 @@ jobs:
     - run: melos bootstrap
     - run: melos run gen-l10n
     - run: ./.github/scripts/check-outdated-files.sh
-
-  pull-request:
-    if: github.event_name != 'pull_request'
-    runs-on: ubuntu-20.04
-    steps:
-    - uses: actions/checkout@v3
-    - uses: subosito/flutter-action@v2
-    - run: flutter pub global activate melos
-    - run: melos bootstrap
-    - run: melos run generate
-    - run: melos run gen-l10n
+      if: github.event_name == 'pull_request'
     - uses: peter-evans/create-pull-request@v5
+      if: github.event_name == 'push'
+      id: create-pr
       with:
-        title: 'Regenerate files'
-        commit-message: 'Regenerate files'
+        title: 'chore: regenerate l10n'
+        commit-message: 'chore: regenerate l10n'
+    - name: Auto-merge PR
+      if: ${{steps.create-pr.outputs.pull-request-number}}
+      run: gh pr merge --auto --merge "$PR_URL"
+      env:
+        PR_URL: ${{steps.create-pr.outputs.pull-request-url}}
+        GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
