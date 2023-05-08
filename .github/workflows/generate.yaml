@@ -17,17 +17,11 @@ jobs:
     - run: melos bootstrap
     - run: melos run generate
     - uses: peter-evans/create-pull-request@v5
-      if: github.event_name == 'push'
+      if: github.event_name != 'pull_request'
       id: create-pr
       with:
-        title: 'chore: regenerate l10n'
-        commit-message: 'chore: regenerate l10n'
-    - name: Auto-merge PR
-      if: ${{steps.create-pr.outputs.pull-request-number}}
-      run: gh pr merge --auto --merge "$PR_URL"
-      env:
-        PR_URL: ${{steps.create-pr.outputs.pull-request-url}}
-        GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+        title: 'chore: regenerate mocks'
+        commit-message: 'chore: regenerate mocks'
     - run: ./.github/scripts/check-outdated-files.sh
       if: github.event_name == 'pull_request'
 
@@ -40,16 +34,10 @@ jobs:
     - run: melos bootstrap
     - run: melos run gen-l10n
     - uses: peter-evans/create-pull-request@v5
-      if: github.event_name == 'push'
+      if: github.event_name != 'pull_request'
       id: create-pr
       with:
         title: 'chore: regenerate l10n'
         commit-message: 'chore: regenerate l10n'
-    - name: Auto-merge PR
-      if: ${{steps.create-pr.outputs.pull-request-number}}
-      run: gh pr merge --auto --merge "$PR_URL"
-      env:
-        PR_URL: ${{steps.create-pr.outputs.pull-request-url}}
-        GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
     - run: ./.github/scripts/check-outdated-files.sh
       if: github.event_name == 'pull_request'
