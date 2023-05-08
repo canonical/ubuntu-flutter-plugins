@@ -16,8 +16,6 @@ jobs:
     - run: flutter pub global activate melos
     - run: melos bootstrap
     - run: melos run generate
-    - run: ./.github/scripts/check-outdated-files.sh
-      if: github.event_name == 'pull_request'
     - uses: peter-evans/create-pull-request@v5
       if: github.event_name == 'push'
       id: create-pr
@@ -30,6 +28,8 @@ jobs:
       env:
         PR_URL: ${{steps.create-pr.outputs.pull-request-url}}
         GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+    - run: ./.github/scripts/check-outdated-files.sh
+      if: github.event_name == 'pull_request'
 
   gen-l10n:
     runs-on: ubuntu-20.04
@@ -39,8 +39,6 @@ jobs:
     - run: flutter pub global activate melos
     - run: melos bootstrap
     - run: melos run gen-l10n
-    - run: ./.github/scripts/check-outdated-files.sh
-      if: github.event_name == 'pull_request'
     - uses: peter-evans/create-pull-request@v5
       if: github.event_name == 'push'
       id: create-pr
@@ -53,3 +51,5 @@ jobs:
       env:
         PR_URL: ${{steps.create-pr.outputs.pull-request-url}}
         GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+    - run: ./.github/scripts/check-outdated-files.sh
+      if: github.event_name == 'pull_request'
