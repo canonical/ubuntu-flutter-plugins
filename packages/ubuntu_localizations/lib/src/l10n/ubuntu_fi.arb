@@ -205,5 +205,9 @@
   "strikeThroughLabel": "Yliviivattu",
   "@strikeThroughLabel": {},
   "noneLabel": "Ei mitään",
-  "@noneLabel": {}
+  "@noneLabel": {},
+  "decreaseLabel": "Vähennä",
+  "@decreaseLabel": {},
+  "increaseLabel": "Lisää",
+  "@increaseLabel": {}
 }
