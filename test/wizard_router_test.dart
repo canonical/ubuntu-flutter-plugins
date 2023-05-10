@@ -942,15 +942,19 @@ void main() {
 
   testWidgets('loading state', (tester) async {
     final completer = Completer<void>();
-
-    await pumpWizardApp(tester, routes: {
+    final controller = WizardController(routes: {
       Routes.first: WizardRoute(builder: (_) => const Text(Routes.first)),
       Routes.second: WizardRoute(
         builder: (_) => const Text(Routes.second),
         onLoad: (_) => completer.future,
       ),
     });
+
+    await pumpWizardApp(tester, controller: controller);
     await tester.pumpAndSettle();
+
+    var wasNotified = 0;
+    controller.addListener(() => ++wasNotified);
 
     final firstPage = find.text(Routes.first);
     final secondPage = find.text(Routes.second);
@@ -960,17 +964,23 @@ void main() {
 
     final firstScope = Wizard.of(tester.element(firstPage));
     expect(firstScope.isLoading, isFalse);
+    expect(controller.isLoading, isFalse);
+    expect(wasNotified, isZero);
 
     firstScope.next();
     await tester.pumpAndSettle();
     expect(firstScope.isLoading, isTrue);
+    expect(controller.isLoading, isTrue);
+    expect(wasNotified, equals(1));
 
     completer.complete();
     await tester.pumpAndSettle();
-    expect(find.text(Routes.first), findsNothing);
-    expect(find.text(Routes.second), findsOneWidget);
+    expect(firstPage, findsNothing);
+    expect(secondPage, findsOneWidget);
 
     final secondScope = Wizard.of(tester.element(secondPage));
     expect(secondScope.isLoading, isFalse);
+    expect(controller.isLoading, isFalse);
+    expect(wasNotified, equals(3)); // route + loading state changes
   });
 }
