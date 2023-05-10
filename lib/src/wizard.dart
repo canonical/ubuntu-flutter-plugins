@@ -260,7 +260,7 @@ class _WizardState extends State<Wizard> {
                 _createPage(context, index: index, settings: settings))
             .toList();
       },
-      observers: widget.observers,
+      observers: [...widget.observers, HeroController()],
     );
   }
 }
