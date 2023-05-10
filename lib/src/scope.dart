@@ -90,8 +90,8 @@ class WizardScopeState extends State<WizardScope> {
 
   WizardController get controller => widget._controller;
 
-  /// Returns `true` if the wizard is awaiting an asynchronous callback.
-  bool get isBusy => widget._controller.isBusy;
+  /// Returns `true` if the wizard is awaiting an `onLoad` callback.
+  bool get isLoading => widget._controller.isLoading;
 
   Object? get routeData => widget._route.userData;
   Object? get wizardData => widget._userData;

@@ -940,17 +940,15 @@ void main() {
     expect(calls, 3);
   });
 
-  testWidgets('busy state', (tester) async {
+  testWidgets('loading state', (tester) async {
     final completer = Completer<void>();
 
     await pumpWizardApp(tester, routes: {
-      Routes.first: WizardRoute(
-          builder: (_) => const Text(Routes.first),
-          onNext: (_) async {
-            await completer.future;
-            return null;
-          }),
-      Routes.second: WizardRoute(builder: (_) => const Text(Routes.second)),
+      Routes.first: WizardRoute(builder: (_) => const Text(Routes.first)),
+      Routes.second: WizardRoute(
+        builder: (_) => const Text(Routes.second),
+        onLoad: (_) => completer.future,
+      ),
     });
     await tester.pumpAndSettle();
 
@@ -961,11 +959,11 @@ void main() {
     expect(secondPage, findsNothing);
 
     final firstScope = Wizard.of(tester.element(firstPage));
-    expect(firstScope.isBusy, isFalse);
+    expect(firstScope.isLoading, isFalse);
 
     firstScope.next();
     await tester.pumpAndSettle();
-    expect(firstScope.isBusy, isTrue);
+    expect(firstScope.isLoading, isTrue);
 
     completer.complete();
     await tester.pumpAndSettle();
@@ -973,6 +971,6 @@ void main() {
     expect(find.text(Routes.second), findsOneWidget);
 
     final secondScope = Wizard.of(tester.element(secondPage));
-    expect(secondScope.isBusy, isFalse);
+    expect(secondScope.isLoading, isFalse);
   });
 }

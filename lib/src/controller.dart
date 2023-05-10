@@ -13,12 +13,14 @@ class WizardController extends ChangeNotifier {
   final Map<String, WizardRoute> routes;
   late final FlowController<List<WizardRouteSettings>> _flowController;
 
-  int _asyncOps = 0;
-  bool get isBusy => _asyncOps > 0;
-  void _addAsyncOps(int count) {
-    _asyncOps += count;
-    if (_asyncOps == 0 || (_asyncOps == 1 && count > 0)) {
-      notifyListeners();
+  int _loading = 0;
+  bool get isLoading => _loading > 0;
+  Future<void> _loadRoute(WizardRouteSettings settings) async {
+    if (++_loading == 1) notifyListeners();
+    try {
+      await routes[settings.name]!.onLoad?.call(settings);
+    } finally {
+      if (--_loading == 0) notifyListeners();
     }
   }
 
@@ -79,7 +81,7 @@ class WizardController extends ChangeNotifier {
     final next =
         await _getNextRoute<T>(arguments, routes[currentRoute]!.onNext);
 
-    await routes[next.name]!.onLoad?.call(next);
+    await _loadRoute(next);
 
     _updateState((state) {
       final copy = List<WizardRouteSettings>.of(state);
@@ -112,9 +114,7 @@ class WizardController extends ChangeNotifier {
       return routeNames[index + 1];
     }
 
-    _addAsyncOps(1);
     final name = await onNext() ?? nextRoute();
-    _addAsyncOps(-1);
     assert(routes.keys.contains(name),
         '`Wizard.routes` is missing route \'$name\'.');
 
@@ -127,7 +127,7 @@ class WizardController extends ChangeNotifier {
     final next =
         await _getNextRoute<T>(arguments, routes[currentRoute]!.onReplace);
 
-    await routes[next.name]!.onLoad?.call(next);
+    await _loadRoute(next);
 
     _updateState((state) {
       final copy = List<WizardRouteSettings>.of(state);
@@ -144,7 +144,7 @@ class WizardController extends ChangeNotifier {
         '`Wizard.jump()` called with an unknown route $route.');
     final settings = WizardRouteSettings<T>(name: route, arguments: arguments);
 
-    await routes[route]!.onLoad?.call(settings);
+    await _loadRoute(settings);
 
     _updateState((state) {
       final copy = List<WizardRouteSettings>.of(state);
