@@ -1,3 +1,9 @@
+## 1.0.0-beta.2
+
+- Add WizardRoute.onLoad callback (#48)
+- Add WizardScope.isLoading & WizardController.isLoading (#42)
+- Restore HeroController (#49)
+
 ## 1.0.0-beta
 
 - Remove Wizard.done() (#38)
