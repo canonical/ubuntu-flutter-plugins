@@ -59,7 +59,7 @@ class WizardScopeState extends State<WizardScope> {
   /// ```dart
   /// onPressed: Wizard.of(context).next
   /// ```
-  Future<T?> next<T extends Object?>({T? arguments}) =>
+  Future<T?> next<T extends Object?>({Object? arguments}) =>
       widget._controller.next(arguments: arguments);
 
   /// Requests the wizard to replace the current page with the next one.
@@ -68,12 +68,12 @@ class WizardScopeState extends State<WizardScope> {
   /// ```dart
   /// onPressed: () => Wizard.of(context).replace(arguments: something),
   /// ```
-  void replace({Object? arguments}) =>
+  Future<T?> replace<T extends Object?>({Object? arguments}) =>
       widget._controller.replace(arguments: arguments);
 
   /// Requests the wizard to jump to a specific page. Optionally, `arguments`
   /// can be passed to the page.
-  void jump(String route, {Object? arguments}) =>
+  Future<T?> jump<T extends Object?>(String route, {Object? arguments}) =>
       widget._controller.jump(route, arguments: arguments);
 
   /// Returns `false` if the wizard page is the first page.
@@ -87,6 +87,8 @@ class WizardScopeState extends State<WizardScope> {
     final previousIndex = routes.keys.toList().indexOf(previous);
     return previousIndex < routes.length - 1;
   }
+
+  WizardController get controller => widget._controller;
 
   /// Returns `true` if the wizard is awaiting an asynchronous callback.
   bool get isBusy => widget._controller.isBusy;

@@ -1,3 +1,12 @@
+## 1.0.0-beta
+
+- Remove Wizard.done() (#38)
+- Refactor WizardController (#39)
+- Remove WizardObserver, use NavigatorObservers instead (#40)
+- Add support for optionally asynchronous callbacks (#41, #43)
+- Expose WizardController on WizardScopeState (#45)
+- Add WizardController example to README
+
 ## 0.10.2
 
 - Add root argument to Wizard.of() and Wizard.maybeOf()
