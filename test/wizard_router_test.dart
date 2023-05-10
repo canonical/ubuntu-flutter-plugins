@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:wizard_router/wizard_router.dart';
@@ -936,5 +938,49 @@ void main() {
     controller.replace();
     await tester.pumpAndSettle();
     expect(calls, 3);
+  });
+
+  testWidgets('loading state', (tester) async {
+    final completer = Completer<void>();
+    final controller = WizardController(routes: {
+      Routes.first: WizardRoute(builder: (_) => const Text(Routes.first)),
+      Routes.second: WizardRoute(
+        builder: (_) => const Text(Routes.second),
+        onLoad: (_) => completer.future,
+      ),
+    });
+
+    await pumpWizardApp(tester, controller: controller);
+    await tester.pumpAndSettle();
+
+    var wasNotified = 0;
+    controller.addListener(() => ++wasNotified);
+
+    final firstPage = find.text(Routes.first);
+    final secondPage = find.text(Routes.second);
+
+    expect(firstPage, findsOneWidget);
+    expect(secondPage, findsNothing);
+
+    final firstScope = Wizard.of(tester.element(firstPage));
+    expect(firstScope.isLoading, isFalse);
+    expect(controller.isLoading, isFalse);
+    expect(wasNotified, isZero);
+
+    firstScope.next();
+    await tester.pumpAndSettle();
+    expect(firstScope.isLoading, isTrue);
+    expect(controller.isLoading, isTrue);
+    expect(wasNotified, equals(1));
+
+    completer.complete();
+    await tester.pumpAndSettle();
+    expect(firstPage, findsNothing);
+    expect(secondPage, findsOneWidget);
+
+    final secondScope = Wizard.of(tester.element(secondPage));
+    expect(secondScope.isLoading, isFalse);
+    expect(controller.isLoading, isFalse);
+    expect(wasNotified, equals(3)); // route + loading state changes
   });
 }

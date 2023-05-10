@@ -13,6 +13,17 @@ class WizardController extends ChangeNotifier {
   final Map<String, WizardRoute> routes;
   late final FlowController<List<WizardRouteSettings>> _flowController;
 
+  int _loading = 0;
+  bool get isLoading => _loading > 0;
+  Future<void> _loadRoute(WizardRouteSettings settings) async {
+    if (++_loading == 1) notifyListeners();
+    try {
+      await routes[settings.name]!.onLoad?.call(settings);
+    } finally {
+      if (--_loading == 0) notifyListeners();
+    }
+  }
+
   List<WizardRouteSettings> get state => _flowController.state;
   String get currentRoute => state.last.name!;
 
@@ -70,7 +81,7 @@ class WizardController extends ChangeNotifier {
     final next =
         await _getNextRoute<T>(arguments, routes[currentRoute]!.onNext);
 
-    await routes[next.name]!.onLoad?.call(next);
+    await _loadRoute(next);
 
     _updateState((state) {
       final copy = List<WizardRouteSettings>.of(state);
@@ -116,7 +127,7 @@ class WizardController extends ChangeNotifier {
     final next =
         await _getNextRoute<T>(arguments, routes[currentRoute]!.onReplace);
 
-    await routes[next.name]!.onLoad?.call(next);
+    await _loadRoute(next);
 
     _updateState((state) {
       final copy = List<WizardRouteSettings>.of(state);
@@ -133,7 +144,7 @@ class WizardController extends ChangeNotifier {
         '`Wizard.jump()` called with an unknown route $route.');
     final settings = WizardRouteSettings<T>(name: route, arguments: arguments);
 
-    await routes[route]!.onLoad?.call(settings);
+    await _loadRoute(settings);
 
     _updateState((state) {
       final copy = List<WizardRouteSettings>.of(state);
