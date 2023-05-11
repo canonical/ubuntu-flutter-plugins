@@ -34,7 +34,7 @@ scripts:
       ! -name '*.freezed.dart' \
       ! -path '*/l10n/*' \
       ! -path "*/.*/*" \
-      | xargs flutter format --set-exit-if-changed
+      | xargs dart format --set-exit-if-changed
 
   # run build_runner to generate code in all packages
   generate: >
