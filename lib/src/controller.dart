@@ -15,10 +15,17 @@ class WizardController extends ChangeNotifier {
 
   int _loading = 0;
   bool get isLoading => _loading > 0;
-  Future<void> _loadRoute(WizardRouteSettings settings) async {
+  Future<WizardRouteSettings<T>> _loadRoute<T>(
+    String name,
+    Future<WizardRouteSettings<T>> Function(String name) getRoute,
+  ) async {
     if (++_loading == 1) notifyListeners();
     try {
-      await routes[settings.name]!.onLoad?.call(settings);
+      var next = await getRoute(name);
+      while (await routes[next.name]!.onLoad?.call(next) == false) {
+        next = await getRoute(next.name!);
+      }
+      return next;
     } finally {
       if (--_loading == 0) notifyListeners();
     }
@@ -78,10 +85,9 @@ class WizardController extends ChangeNotifier {
   /// Requests the wizard to show the next page. Optionally, `arguments` can be
   /// passed to the next page.
   Future<T?> next<T extends Object?>({Object? arguments}) async {
-    final next =
-        await _getNextRoute<T>(arguments, routes[currentRoute]!.onNext);
-
-    await _loadRoute(next);
+    final next = await _loadRoute<T>(currentRoute, (name) {
+      return _getNextRoute<T>(name, arguments, routes[name]!.onNext);
+    });
 
     _updateState((state) {
       final copy = List<WizardRouteSettings>.of(state);
@@ -91,14 +97,15 @@ class WizardController extends ChangeNotifier {
     return next.completer.future;
   }
 
-  Future<WizardRouteSettings<T?>> _getNextRoute<T extends Object?>(
+  Future<WizardRouteSettings<T>> _getNextRoute<T extends Object?>(
+    String from,
     Object? arguments,
     WizardRouteCallback? advance,
   ) async {
     assert(state.isNotEmpty, state.length.toString());
 
     final previous = WizardRouteSettings(
-      name: state.last.name,
+      name: from,
       arguments: arguments,
     );
 
@@ -118,16 +125,15 @@ class WizardController extends ChangeNotifier {
     assert(routes.keys.contains(name),
         '`Wizard.routes` is missing route \'$name\'.');
 
-    return WizardRouteSettings<T?>(name: name, arguments: arguments);
+    return WizardRouteSettings<T>(name: name, arguments: arguments);
   }
 
   /// Requests the wizard to replace the current page with the next one.
   /// Optionally, `arguments` can be passed to the next page.
   Future<T?> replace<T extends Object?>({Object? arguments}) async {
-    final next =
-        await _getNextRoute<T>(arguments, routes[currentRoute]!.onReplace);
-
-    await _loadRoute(next);
+    final next = await _loadRoute<T>(currentRoute, (name) {
+      return _getNextRoute<T>(name, arguments, routes[name]!.onReplace);
+    });
 
     _updateState((state) {
       final copy = List<WizardRouteSettings>.of(state);
@@ -142,9 +148,9 @@ class WizardController extends ChangeNotifier {
   Future<T?> jump<T extends Object?>(String route, {Object? arguments}) async {
     assert(routes.keys.contains(route),
         '`Wizard.jump()` called with an unknown route $route.');
-    final settings = WizardRouteSettings<T>(name: route, arguments: arguments);
-
-    await _loadRoute(settings);
+    final settings = await _loadRoute(route, (name) async {
+      return WizardRouteSettings<T>(name: name, arguments: arguments);
+    });
 
     _updateState((state) {
       final copy = List<WizardRouteSettings>.of(state);

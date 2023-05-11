@@ -905,43 +905,54 @@ void main() {
         Routes.first: WizardRoute(builder: (_) => const Text(Routes.first)),
         Routes.second: WizardRoute(
           builder: (_) => const Text(Routes.second),
-          onLoad: (_) => calls++,
+          onLoad: (_) => ++calls > 0,
         ),
-        Routes.third: WizardRoute(builder: (_) => const Text(Routes.third)),
+        Routes.third: WizardRoute(
+          builder: (_) => const Text(Routes.third),
+          onLoad: (_) => false,
+        ),
+        Routes.fourth: WizardRoute(builder: (_) => const Text(Routes.fourth)),
       },
     );
     await pumpWizardApp(tester, controller: controller);
     await tester.pumpAndSettle();
     expect(calls, 0);
+    expect(find.text(Routes.first), findsOneWidget);
 
     controller.next();
     await tester.pumpAndSettle();
     expect(calls, 1);
+    expect(find.text(Routes.second), findsOneWidget);
 
     controller.next();
     await tester.pumpAndSettle();
     expect(calls, 1);
+    expect(find.text(Routes.fourth), findsOneWidget);
 
     controller.back();
     await tester.pumpAndSettle();
     expect(calls, 1);
+    expect(find.text(Routes.second), findsOneWidget);
 
     controller.home();
     await tester.pumpAndSettle();
     expect(calls, 1);
+    expect(find.text(Routes.first), findsOneWidget);
 
     controller.jump(Routes.second);
     await tester.pumpAndSettle();
     expect(calls, 2);
+    expect(find.text(Routes.second), findsOneWidget);
 
     controller.home();
     controller.replace();
     await tester.pumpAndSettle();
     expect(calls, 3);
+    expect(find.text(Routes.second), findsOneWidget);
   });
 
   testWidgets('loading state', (tester) async {
-    final completer = Completer<void>();
+    final completer = Completer<bool>();
     final controller = WizardController(routes: {
       Routes.first: WizardRoute(builder: (_) => const Text(Routes.first)),
       Routes.second: WizardRoute(
@@ -973,7 +984,7 @@ void main() {
     expect(controller.isLoading, isTrue);
     expect(wasNotified, equals(1));
 
-    completer.complete();
+    completer.complete(true);
     await tester.pumpAndSettle();
     expect(firstPage, findsNothing);
     expect(secondPage, findsOneWidget);

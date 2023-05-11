@@ -6,7 +6,8 @@ import 'package:flutter/widgets.dart';
 typedef WizardRouteCallback = FutureOr<String?> Function(
     RouteSettings settings);
 
-typedef WizardRouteLoader = FutureOr<void> Function(RouteSettings settings);
+/// The signature of [WizardRoute.onLoad] callback.
+typedef WizardRouteLoader = FutureOr<bool> Function(RouteSettings settings);
 
 class WizardRoute {
   const WizardRoute({
@@ -39,6 +40,8 @@ class WizardRoute {
   final WizardRouteCallback? onBack;
 
   /// The callback invoked when the page is loaded.
+  ///
+  /// If `onLoad` is specified and returns `false`, the page is skipped.
   final WizardRouteLoader? onLoad;
 
   /// Additional custom data associated with this page.
