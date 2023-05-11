@@ -6,8 +6,8 @@ import 'package:ubuntu_widgets/ubuntu_widgets.dart';
 
 void main() {
   testWidgets('layout', (tester) async {
-    tester.binding.window.devicePixelRatioTestValue = 1;
-    tester.binding.window.physicalSizeTestValue = const Size(600, 400);
+    tester.view.devicePixelRatio = 1;
+    tester.view.physicalSize = const Size(600, 400);
 
     await tester.pumpWidget(
       const Directionality(
