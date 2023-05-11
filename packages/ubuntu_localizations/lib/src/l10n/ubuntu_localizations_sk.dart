@@ -110,7 +110,7 @@ class UbuntuLocalizationsSk extends UbuntuLocalizations {
   String get disconnectLabel => 'Odpojiť';
 
   @override
-  String get doneLabel => 'Hotové';
+  String get doneLabel => 'Dokončiť';
 
   @override
   String get downloadLabel => 'Stiahnuť';

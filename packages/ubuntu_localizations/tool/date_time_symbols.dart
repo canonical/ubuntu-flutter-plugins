@@ -41,13 +41,13 @@ Reads the given CLDR file and prints the date and time symbols.
         .single
         .findAllElements('era')
         .where((era) => era.getAttribute('alt') != 'variant')
-        .map((era) => '\'${era.text}\'');
+        .map((era) => '\'${era.innerText}\'');
     if (eras.isNotEmpty) return eras;
     return calendar
         .findAllElements(context)
         .single
         .findAllElements('era')
-        .map((era) => '\'${era.text}\'');
+        .map((era) => '\'${era.innerText}\'');
   }
 
   printArray('ERAS', () => getEras('eraAbbr'));
@@ -61,7 +61,7 @@ Reads the given CLDR file and prints the date and time symbols.
         .findAllElements('monthWidth')
         .singleWhere((e) => e.getAttribute('type') == width)
         .findAllElements('month')
-        .map((month) => '\'${month.text}\'');
+        .map((month) => '\'${month.innerText}\'');
   }
 
   printArray('NARROWMONTHS', () => getMonths('format', 'narrow'));
@@ -80,7 +80,7 @@ Reads the given CLDR file and prints the date and time symbols.
         .findAllElements('dayWidth')
         .singleWhere((e) => e.getAttribute('type') == width)
         .findAllElements('day')
-        .map((day) => '\'${day.text}\'');
+        .map((day) => '\'${day.innerText}\'');
   }
 
   printArray('WEEKDAYS', () => getDays('format', 'wide'));
@@ -99,7 +99,7 @@ Reads the given CLDR file and prints the date and time symbols.
         .findAllElements('quarterWidth')
         .singleWhere((e) => e.getAttribute('type') == width)
         .findAllElements('quarter')
-        .map((quarter) => '\'${quarter.text}\'');
+        .map((quarter) => '\'${quarter.innerText}\'');
   }
 
   printArray('SHORTQUARTERS', () => getQuarters('format', 'abbreviated'));
@@ -114,7 +114,7 @@ Reads the given CLDR file and prints the date and time symbols.
         .findAllElements('dayPeriod')
         .where((e) =>
             e.getAttribute('type') == 'am' || e.getAttribute('type') == 'pm')
-        .map((quarter) => '\'${quarter.text}\'');
+        .map((quarter) => '\'${quarter.innerText}\'');
   }
 
   printArray('AMPMS', () => getAmPm('format', 'abbreviated'));
@@ -125,7 +125,7 @@ Reads the given CLDR file and prints the date and time symbols.
         .map((format) => format
             .findAllElements('pattern')
             .singleWhere((pattern) => pattern.getAttribute('alt') != 'variant')
-            .text
+            .innerText
             .replaceAll('\'', '\\\''))
         .map((pattern) => '\'$pattern\'');
   }

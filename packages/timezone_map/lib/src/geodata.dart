@@ -6,10 +6,10 @@ import 'package:latlong2/latlong.dart';
 import 'package:rbush/rbush.dart';
 import 'package:xml/xml.dart';
 
-export 'package:latlong2/latlong.dart' show LatLng;
-
 import 'location.dart';
 import 'source.dart';
+
+export 'package:latlong2/latlong.dart' show LatLng;
 
 /// https://en.wikipedia.org/wiki/Haversine_formula
 final haversine = const Haversine().distance;
@@ -281,7 +281,7 @@ extension _TrieSet<T> on Map<String, Set<T>> {
 }
 
 extension _XmlValue on XmlElement? {
-  String? getTextOrNull(String name) => this?.getElement(name)?.text;
+  String? getTextOrNull(String name) => this?.getElement(name)?.innerText;
   double? getDoubleOrNull(String name) =>
       double.tryParse(getTextOrNull(name) ?? '');
 }

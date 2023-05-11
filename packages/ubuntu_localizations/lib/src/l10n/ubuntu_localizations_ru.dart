@@ -197,7 +197,7 @@ class UbuntuLocalizationsRu extends UbuntuLocalizations {
   String get networkLabel => 'Сеть';
 
   @override
-  String get newLabel => 'New';
+  String get newLabel => 'Новый';
 
   @override
   String get nextLabel => 'Следующая';
@@ -311,10 +311,10 @@ class UbuntuLocalizationsRu extends UbuntuLocalizations {
   String get stopLabel => 'Остановить';
 
   @override
-  String get strikeThroughLabel => 'Зачеркнуть';
+  String get strikeThroughLabel => 'Зачёркнутый';
 
   @override
-  String get submitLabel => 'Submit';
+  String get submitLabel => 'Отправить';
 
   @override
   String get topLabel => 'Сверху';

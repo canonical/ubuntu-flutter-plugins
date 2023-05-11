@@ -21,7 +21,7 @@ Reads the given CLDR file and prints the date and time patterns.
 
   calendar.findAllElements('dateFormatItem').forEach((format) {
     final id = format.getAttribute('id');
-    final dateFormat = format.text.replaceAll('\'', '\\\'');
+    final dateFormat = format.innerText.replaceAll('\'', '\\\'');
     stdout.write('\'$id\': \'$dateFormat\',\n');
   });
 }
