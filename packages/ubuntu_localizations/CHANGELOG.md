@@ -1,3 +1,8 @@
+## 0.1.6
+
+- Migrate to Flutter 3.10.
+- Update translations.
+
 ## 0.1.5
 
 - Add zh_TW.
