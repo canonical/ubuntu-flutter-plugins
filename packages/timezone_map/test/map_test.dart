@@ -187,9 +187,13 @@ class FakeAssetBundle extends CachingAssetBundle {
   @override
   Future<ByteData> load(String key) async {
     var bytes = Uint8List(0);
+    final fakes = Map.fromEntries(_fakeAssets.map((e) => MapEntry(e, [
+          {'asset': e, 'dpr': 1.0}
+        ])));
     switch (key) {
+      case 'AssetManifest.bin':
+        return const StandardMessageCodec().encodeMessage(fakes)!;
       case 'AssetManifest.json':
-        final fakes = Map.fromEntries(_fakeAssets.map((e) => MapEntry(e, [e])));
         bytes = Uint8List.fromList(jsonEncode(fakes).codeUnits);
         break;
       default:
