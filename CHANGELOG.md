@@ -1,3 +1,7 @@
+## 1.0.0-beta.3
+
+- onLoad: add return value to allow guarding routes (#51)
+
 ## 1.0.0-beta.2
 
 - Add WizardRoute.onLoad callback (#48)
