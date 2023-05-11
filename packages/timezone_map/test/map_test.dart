@@ -18,8 +18,8 @@ void main() {
     LatLng? coordinates,
     void Function(LatLng)? onPressed,
   }) {
-    tester.binding.window.devicePixelRatioTestValue = 1;
-    tester.binding.window.physicalSizeTestValue = size ?? mapSize;
+    tester.view.devicePixelRatio = 1;
+    tester.view.physicalSize = size ?? mapSize;
 
     return MaterialApp(
       home: Scaffold(
