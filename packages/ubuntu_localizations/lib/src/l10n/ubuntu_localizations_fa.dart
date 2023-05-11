@@ -29,320 +29,320 @@ class UbuntuLocalizationsFa extends UbuntuLocalizations {
   String get weakPassword => 'گذرواژهٔ ضعیف';
 
   @override
-  String get altKey => 'Alt';
+  String get altKey => 'دگرساز';
 
   @override
-  String get controlKey => 'Control';
+  String get controlKey => 'مهار';
 
   @override
-  String get metaKey => 'Meta';
+  String get metaKey => 'متا';
 
   @override
-  String get shiftKey => 'Shift';
+  String get shiftKey => 'تبدیل';
 
   @override
-  String get aboutLabel => 'About';
+  String get aboutLabel => 'درباره';
 
   @override
-  String get addLabel => 'Add';
+  String get addLabel => 'افزودن';
 
   @override
-  String get allLabel => 'All';
+  String get allLabel => 'همه';
 
   @override
-  String get applyLabel => 'Apply';
+  String get applyLabel => 'اِعمال';
 
   @override
-  String get ascendingLabel => 'Ascending';
+  String get ascendingLabel => 'پیش‌رونده';
 
   @override
-  String get backLabel => 'Back';
+  String get backLabel => 'بازگشت';
 
   @override
-  String get boldLabel => 'Bold';
+  String get boldLabel => 'سیاه';
 
   @override
-  String get bottomLabel => 'Bottom';
+  String get bottomLabel => 'پایین';
 
   @override
-  String get cancelLabel => 'Cancel';
+  String get cancelLabel => 'لغو';
 
   @override
-  String get centerLabel => 'Center';
+  String get centerLabel => 'مرکز';
 
   @override
-  String get clearLabel => 'Clear';
+  String get clearLabel => 'پاک‌سازی';
 
   @override
-  String get closeLabel => 'Close';
+  String get closeLabel => 'بستن';
 
   @override
-  String get colorLabel => 'Color';
+  String get colorLabel => 'رنگ';
 
   @override
-  String get connectLabel => 'Connect';
+  String get connectLabel => 'وصل شدن';
 
   @override
-  String get continueLabel => 'Continue';
+  String get continueLabel => 'ادامه';
 
   @override
-  String get copyLabel => 'Copy';
+  String get copyLabel => 'رونوشت';
 
   @override
-  String get createLabel => 'Create';
+  String get createLabel => 'ایجاد';
 
   @override
-  String get cutLabel => 'Cut';
+  String get cutLabel => 'برش';
 
   @override
-  String get decreaseLabel => 'Decrease';
+  String get decreaseLabel => 'کاهش';
 
   @override
-  String get deleteLabel => 'Delete';
+  String get deleteLabel => 'حذف';
 
   @override
-  String get descendingLabel => 'Descending';
+  String get descendingLabel => 'پس‌رونده';
 
   @override
-  String get discardLabel => 'Discard';
+  String get discardLabel => 'دور انداختن';
 
   @override
-  String get disconnectLabel => 'Disconnect';
+  String get disconnectLabel => 'قطع شدن';
 
   @override
-  String get doneLabel => 'Done';
+  String get doneLabel => 'انجام شد';
 
   @override
-  String get downloadLabel => 'Download';
+  String get downloadLabel => 'بارگیری';
 
   @override
-  String get editLabel => 'Edit';
+  String get editLabel => 'ویرایش';
 
   @override
-  String get enterLabel => 'Enter';
+  String get enterLabel => 'ورود';
 
   @override
-  String get errorLabel => 'Error';
+  String get errorLabel => 'خطا';
 
   @override
-  String get executeLabel => 'Execute';
+  String get executeLabel => 'اجرا';
 
   @override
-  String get exitLabel => 'Exit';
+  String get exitLabel => 'خروج';
 
   @override
-  String get fileLabel => 'File';
+  String get fileLabel => 'پرونده';
 
   @override
-  String get fillLabel => 'Fill';
+  String get fillLabel => 'پر کردن';
 
   @override
-  String get findLabel => 'Find';
+  String get findLabel => 'یافتن';
 
   @override
-  String get firstLabel => 'First';
+  String get firstLabel => 'نخستین';
 
   @override
-  String get fontLabel => 'Font';
+  String get fontLabel => 'قلم';
 
   @override
-  String get forwardLabel => 'Forward';
+  String get forwardLabel => 'پیشروی';
 
   @override
-  String get fullscreenLabel => 'Fullscreen';
+  String get fullscreenLabel => 'تمام‌صفحه';
 
   @override
-  String get goBackLabel => 'Go Back';
+  String get goBackLabel => 'بازگشت';
 
   @override
-  String get helpLabel => 'Help';
+  String get helpLabel => 'راهنما';
 
   @override
-  String get homeLabel => 'Home';
+  String get homeLabel => 'خانه';
 
   @override
-  String get importLabel => 'Import';
+  String get importLabel => 'درون‌ریزی';
 
   @override
-  String get increaseLabel => 'Increase';
+  String get increaseLabel => 'افزایش';
 
   @override
-  String get indexLabel => 'Index';
+  String get indexLabel => 'نمایه';
 
   @override
-  String get informationLabel => 'Information';
+  String get informationLabel => 'اطّلاعات';
 
   @override
-  String get insertLabel => 'Insert';
+  String get insertLabel => 'درج';
 
   @override
-  String get italicLabel => 'Italic';
+  String get italicLabel => 'کج';
 
   @override
-  String get landscapeLabel => 'Landscape';
+  String get landscapeLabel => 'افقی';
 
   @override
-  String get lastLabel => 'Last';
+  String get lastLabel => 'واپسین';
 
   @override
-  String get leaveLabel => 'Leave';
+  String get leaveLabel => 'ترک';
 
   @override
-  String get leftLabel => 'Left';
+  String get leftLabel => 'راست';
 
   @override
-  String get mediaLabel => 'Media';
+  String get mediaLabel => 'رسانه';
 
   @override
-  String get networkLabel => 'Network';
+  String get networkLabel => 'شبکه';
 
   @override
-  String get newLabel => 'New';
+  String get newLabel => 'جدید';
 
   @override
-  String get nextLabel => 'Next';
+  String get nextLabel => 'بعدی';
 
   @override
-  String get noLabel => 'No';
+  String get noLabel => 'نه';
 
   @override
-  String get noneLabel => 'None';
+  String get noneLabel => 'هیچ‌کدام';
 
   @override
-  String get normalLabel => 'Normal';
+  String get normalLabel => 'معمولی';
 
   @override
-  String get okLabel => 'OK';
+  String get okLabel => 'قبول';
 
   @override
-  String get openLabel => 'Open';
+  String get openLabel => 'گشودن';
 
   @override
-  String get pasteLabel => 'Paste';
+  String get pasteLabel => 'جایگذاری';
 
   @override
-  String get pauseLabel => 'Pause';
+  String get pauseLabel => 'مکث';
 
   @override
-  String get playLabel => 'Play';
+  String get playLabel => 'پخش';
 
   @override
-  String get portraitLabel => 'Portrait';
+  String get portraitLabel => 'عمودی';
 
   @override
-  String get preferencesLabel => 'Preferences';
+  String get preferencesLabel => 'ترجیحات';
 
   @override
-  String get previousLabel => 'Previous';
+  String get previousLabel => 'پیشین';
 
   @override
-  String get printLabel => 'Print';
+  String get printLabel => 'چاپ';
 
   @override
-  String get printPreviewLabel => 'Print Preview';
+  String get printPreviewLabel => 'پیش‌نمای چاپ';
 
   @override
-  String get propertiesLabel => 'Properties';
+  String get propertiesLabel => 'ویژگی‌ها';
 
   @override
-  String get questionLabel => 'Question';
+  String get questionLabel => 'پرسش';
 
   @override
-  String get quitLabel => 'Quit';
+  String get quitLabel => 'خروج';
 
   @override
-  String get recordLabel => 'Record';
+  String get recordLabel => 'ضبط';
 
   @override
-  String get redoLabel => 'Redo';
+  String get redoLabel => 'انجام دوباره';
 
   @override
-  String get refreshLabel => 'Refresh';
+  String get refreshLabel => 'بازخوانی';
 
   @override
-  String get removeLabel => 'Remove';
+  String get removeLabel => 'برداشتن';
 
   @override
-  String get renameLabel => 'Rename';
+  String get renameLabel => 'تغییر نام';
 
   @override
-  String get resetLabel => 'Reset';
+  String get resetLabel => 'بازنشانی';
 
   @override
-  String get restoreLabel => 'Restore';
+  String get restoreLabel => 'بازگردانی';
 
   @override
-  String get retryLabel => 'Retry';
+  String get retryLabel => 'تلاش دوباره';
 
   @override
-  String get revertLabel => 'Revert';
+  String get revertLabel => 'بازگردانی';
 
   @override
-  String get rewindLabel => 'Rewind';
+  String get rewindLabel => 'پس‌روی';
 
   @override
-  String get rightLabel => 'Right';
+  String get rightLabel => 'چپ';
 
   @override
-  String get saveAsLabel => 'Save As';
+  String get saveAsLabel => 'ذخیره به شکل';
 
   @override
-  String get saveLabel => 'Save';
+  String get saveLabel => 'ذخیره';
 
   @override
-  String get searchLabel => 'Search';
+  String get searchLabel => 'جست‌وجو';
 
   @override
-  String get selectAllLabel => 'Select All';
+  String get selectAllLabel => 'گزینش همه';
 
   @override
-  String get selectLabel => 'Select';
+  String get selectLabel => 'گزینش';
 
   @override
-  String get sendLabel => 'Send';
+  String get sendLabel => 'فرستادن';
 
   @override
-  String get skipLabel => 'Skip';
+  String get skipLabel => 'پرش';
 
   @override
-  String get sortLabel => 'Sort';
+  String get sortLabel => 'چینش';
 
   @override
-  String get stopLabel => 'Stop';
+  String get stopLabel => 'توقّف';
 
   @override
-  String get strikeThroughLabel => 'Strike Through';
+  String get strikeThroughLabel => 'خط زدن';
 
   @override
-  String get submitLabel => 'Submit';
+  String get submitLabel => 'ثبت';
 
   @override
-  String get topLabel => 'Top';
+  String get topLabel => 'بالا';
 
   @override
-  String get undoLabel => 'Undo';
+  String get undoLabel => 'برگردان';
 
   @override
-  String get updateLabel => 'Update';
+  String get updateLabel => 'به‌روز رسانی';
 
   @override
-  String get upLabel => 'Up';
+  String get upLabel => 'بالا';
 
   @override
-  String get viewLabel => 'View';
+  String get viewLabel => 'نما';
 
   @override
-  String get warningLabel => 'Warning';
+  String get warningLabel => 'هشدار';
 
   @override
-  String get windowLabel => 'Window';
+  String get windowLabel => 'پنجره';
 
   @override
-  String get yesLabel => 'Yes';
+  String get yesLabel => 'بله';
 
   @override
-  String get zoomInLabel => 'Zoom In';
+  String get zoomInLabel => 'بزرگ‌نمایی';
 
   @override
-  String get zoomOutLabel => 'Zoom Out';
+  String get zoomOutLabel => 'کوچک‌نمایی';
 }
