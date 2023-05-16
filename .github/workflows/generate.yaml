@@ -22,6 +22,7 @@ jobs:
       with:
         title: 'chore: regenerate mocks'
         commit-message: 'chore: regenerate mocks'
+        branch: create-pull-request/mocks
     - run: ./.github/scripts/check-outdated-files.sh
       if: github.event_name == 'pull_request'
 
@@ -39,5 +40,6 @@ jobs:
       with:
         title: 'chore: regenerate l10n'
         commit-message: 'chore: regenerate l10n'
+        branch: create-pull-request/l10n
     - run: ./.github/scripts/check-outdated-files.sh
       if: github.event_name == 'pull_request'
