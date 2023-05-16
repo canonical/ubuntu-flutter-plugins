@@ -95,7 +95,7 @@ class UbuntuLocalizationsFi extends UbuntuLocalizations {
   String get cutLabel => 'Leikkaa';
 
   @override
-  String get decreaseLabel => 'Decrease';
+  String get decreaseLabel => 'Vähennä';
 
   @override
   String get deleteLabel => 'Poista';
@@ -164,7 +164,7 @@ class UbuntuLocalizationsFi extends UbuntuLocalizations {
   String get importLabel => 'Tuo';
 
   @override
-  String get increaseLabel => 'Increase';
+  String get increaseLabel => 'Lisää';
 
   @override
   String get indexLabel => 'Index';
