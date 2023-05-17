@@ -6,8 +6,8 @@ issue_tracker: https://github.com/canonical/ubuntu-flutter-plugins/issues
 version: 0.1.6
 
 environment:
-  sdk: '>=2.17.0 <4.0.0'
-  flutter: '>=3.3.0'
+  sdk: '>=3.0.0 <4.0.0'
+  flutter: '>=3.10.0'
 
 dependencies:
   diacritic: ^0.1.3
