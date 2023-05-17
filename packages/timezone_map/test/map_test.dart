@@ -191,7 +191,8 @@ class FakeAssetBundle extends CachingAssetBundle {
           {'asset': e, 'dpr': 1.0}
         ])));
     switch (key) {
-      case 'AssetManifest.bin':
+      case 'AssetManifest.bin': // 3.10.0
+      case 'AssetManifest.smcbin': // 3.10.1+
         return const StandardMessageCodec().encodeMessage(fakes)!;
       case 'AssetManifest.json':
         bytes = Uint8List.fromList(jsonEncode(fakes).codeUnits);
