@@ -6,22 +6,34 @@ import 'package:ubuntu_test/ubuntu_test.dart';
 
 void main() async {
   testWidgets('ubuntu localizations', (tester) async {
-    await expectLater(() => tester.ulang.okLabel, throwsStateError);
+    expect(find.ul10n((l10n) => l10n.okLabel), findsNothing);
 
     await tester.pumpWidget(
       MaterialApp(
         localizationsDelegates: UbuntuLocalizations.localizationsDelegates,
-        builder: (context, child) =>
-            Text(UbuntuLocalizations.of(context).okLabel),
+        builder: (context, child) => Column(
+          children: [
+            Text(UbuntuLocalizations.of(context).languageName),
+            Localizations.override(
+              context: context,
+              locale: const Locale('fr'),
+              child: Builder(
+                builder: (context) =>
+                    Text(UbuntuLocalizations.of(context).languageName),
+              ),
+            ),
+          ],
+        ),
       ),
     );
 
-    expect(tester.ulang.okLabel, 'OK');
-    expect(find.text(tester.ulang.okLabel), findsOneWidget);
+    expect(find.text('English'), findsOneWidget);
+    expect(find.text('Français'), findsOneWidget);
+    expect(find.ul10n((l10n) => l10n.languageName), findsNWidgets(2));
   });
 
   testWidgets('app localizations', (tester) async {
-    await expectLater(() => tester.al10n.testLabel, throwsStateError);
+    expect(find.l10n<AppLocalizations>((l10n) => l10n.testLabel), findsNothing);
 
     await tester.pumpWidget(
       MaterialApp(
@@ -31,19 +43,21 @@ void main() async {
       ),
     );
 
-    expect(tester.al10n.testLabel, 'test');
-    expect(find.text(tester.al10n.testLabel), findsOneWidget);
+    expect(
+        find.l10n<AppLocalizations>((l10n) => l10n.testLabel), findsOneWidget);
   });
 
   testWidgets('tap buttons', (tester) async {
-    const labels = [
-      'Back',
-      'Cancel',
-      'Close',
-      'Continue',
-      'Next',
-      'OK',
-      'Previous',
+    final ul10n = await UbuntuLocalizations.delegate.load(const Locale('en'));
+
+    final labels = [
+      ul10n.backLabel,
+      ul10n.cancelLabel,
+      ul10n.closeLabel,
+      ul10n.continueLabel,
+      ul10n.nextLabel,
+      ul10n.okLabel,
+      ul10n.previousLabel,
     ];
 
     final actual = <String>[];
@@ -63,25 +77,25 @@ void main() async {
     ));
 
     await tester.tapBack();
-    expect(actual, expected..add(tester.ulang.backLabel));
+    expect(actual, expected..add(ul10n.backLabel));
 
     await tester.tapCancel();
-    expect(actual, expected..add(tester.ulang.cancelLabel));
+    expect(actual, expected..add(ul10n.cancelLabel));
 
     await tester.tapClose();
-    expect(actual, expected..add(tester.ulang.closeLabel));
+    expect(actual, expected..add(ul10n.closeLabel));
 
     await tester.tapContinue();
-    expect(actual, expected..add(tester.ulang.continueLabel));
+    expect(actual, expected..add(ul10n.continueLabel));
 
     await tester.tapNext();
-    expect(actual, expected..add(tester.ulang.nextLabel));
+    expect(actual, expected..add(ul10n.nextLabel));
 
     await tester.tapOk();
-    expect(actual, expected..add(tester.ulang.okLabel));
+    expect(actual, expected..add(ul10n.okLabel));
 
     await tester.tapPrevious();
-    expect(actual, expected..add(tester.ulang.previousLabel));
+    expect(actual, expected..add(ul10n.previousLabel));
   });
 }
 
@@ -115,9 +129,4 @@ class AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {
   @override
   bool shouldReload(covariant LocalizationsDelegate<AppLocalizations> old) =>
       false;
-}
-
-extension AppLocalizationsTester on WidgetTester {
-  AppLocalizations get al10n =>
-      localizations<AppLocalizations>(AppLocalizations);
 }
