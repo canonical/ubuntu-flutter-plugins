@@ -28,6 +28,27 @@ extension UbuntuCommonFinders on CommonFinders {
               .matches(element);
     });
   }
+
+  /// Finds a _Back_ label.
+  Finder get backLabel => ul10n((l10n) => l10n.backLabel);
+
+  /// Finds a _Cancel_ label.
+  Finder get cancelLabel => ul10n((l10n) => l10n.cancelLabel);
+
+  /// Finds a _Close_ label.
+  Finder get closeLabel => ul10n((l10n) => l10n.closeLabel);
+
+  /// Finds a _Continue_ label.
+  Finder get continueLabel => ul10n((l10n) => l10n.continueLabel);
+
+  /// Finds a _Next_ label.
+  Finder get nextLabel => ul10n((l10n) => l10n.nextLabel);
+
+  /// Finds an _Ok_ label.
+  Finder get okLabel => ul10n((l10n) => l10n.okLabel);
+
+  /// Finds a _Previous_ label.
+  Finder get previousLabel => ul10n((l10n) => l10n.previousLabel);
 }
 
 extension on Element {
