@@ -2,6 +2,7 @@
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
     "github>ubuntu-flutter-community/renovate-config",
+    ":semanticCommits",
     ":semanticCommitTypeAll(chore)"
   ]
 }
