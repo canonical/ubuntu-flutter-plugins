@@ -6,27 +6,23 @@ import 'common_finders.dart';
 /// Widget test extensions.
 extension UbuntuWidgetTester on WidgetTester {
   /// Taps a _Back_ button.
-  Future<void> tapBack() => _tapUbuntuButton((l10n) => l10n.backLabel);
+  Future<void> tapBack() => tapButton(find.backLabel);
 
   /// Taps a _Cancel_ button.
-  Future<void> tapCancel() => _tapUbuntuButton((l10n) => l10n.cancelLabel);
+  Future<void> tapCancel() => tapButton(find.cancelLabel);
 
   /// Taps a _Close_ button.
-  Future<void> tapClose() => _tapUbuntuButton((l10n) => l10n.closeLabel);
+  Future<void> tapClose() => tapButton(find.closeLabel);
 
   /// Taps a _Continue_ button.
-  Future<void> tapContinue() => _tapUbuntuButton((l10n) => l10n.continueLabel);
+  Future<void> tapContinue() => tapButton(find.continueLabel);
 
   /// Taps a _Next_ button.
-  Future<void> tapNext() => _tapUbuntuButton((l10n) => l10n.nextLabel);
+  Future<void> tapNext() => tapButton(find.nextLabel);
 
   /// Taps an _Ok_ button.
-  Future<void> tapOk() => _tapUbuntuButton((l10n) => l10n.okLabel);
+  Future<void> tapOk() => tapButton(find.okLabel);
 
   /// Taps a _Previous_ button.
-  Future<void> tapPrevious() => _tapUbuntuButton((l10n) => l10n.previousLabel);
-
-  Future<void> _tapUbuntuButton(UbuntuLocalizationFunction tr) {
-    return tapButton(find.ul10n(tr));
-  }
+  Future<void> tapPrevious() => tapButton(find.previousLabel);
 }
