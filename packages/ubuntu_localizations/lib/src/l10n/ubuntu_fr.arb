@@ -203,5 +203,17 @@
   "stopLabel": "Arrêter",
   "@stopLabel": {},
   "undoLabel": "Annuler",
-  "@undoLabel": {}
+  "@undoLabel": {},
+  "allLabel": "Tous",
+  "@allLabel": {},
+  "backLabel": "Retour",
+  "@backLabel": {},
+  "discardLabel": "Abandonner",
+  "@discardLabel": {},
+  "leaveLabel": "Quitter",
+  "@leaveLabel": {},
+  "decreaseLabel": "Diminuer",
+  "@decreaseLabel": {},
+  "doneLabel": "Terminé",
+  "@doneLabel": {}
 }
