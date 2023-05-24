@@ -47,7 +47,7 @@ class UbuntuLocalizationsFr extends UbuntuLocalizations {
   String get addLabel => 'Ajouter';
 
   @override
-  String get allLabel => 'All';
+  String get allLabel => 'Tous';
 
   @override
   String get applyLabel => 'Appliquer';
@@ -56,7 +56,7 @@ class UbuntuLocalizationsFr extends UbuntuLocalizations {
   String get ascendingLabel => 'Ascendant';
 
   @override
-  String get backLabel => 'Back';
+  String get backLabel => 'Retour';
 
   @override
   String get boldLabel => 'Gras';
@@ -95,7 +95,7 @@ class UbuntuLocalizationsFr extends UbuntuLocalizations {
   String get cutLabel => 'Couper';
 
   @override
-  String get decreaseLabel => 'Decrease';
+  String get decreaseLabel => 'Diminuer';
 
   @override
   String get deleteLabel => 'Supprimer';
@@ -104,13 +104,13 @@ class UbuntuLocalizationsFr extends UbuntuLocalizations {
   String get descendingLabel => 'Descendant';
 
   @override
-  String get discardLabel => 'Discard';
+  String get discardLabel => 'Abandonner';
 
   @override
   String get disconnectLabel => 'Déconnecter';
 
   @override
-  String get doneLabel => 'Done';
+  String get doneLabel => 'Terminé';
 
   @override
   String get downloadLabel => 'Télécharger';
@@ -185,7 +185,7 @@ class UbuntuLocalizationsFr extends UbuntuLocalizations {
   String get lastLabel => 'Dernier';
 
   @override
-  String get leaveLabel => 'Leave';
+  String get leaveLabel => 'Quitter';
 
   @override
   String get leftLabel => 'Gauche';
