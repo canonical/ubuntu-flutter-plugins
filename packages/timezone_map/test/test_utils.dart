@@ -9,25 +9,25 @@ import 'package:vector_graphics/vector_graphics.dart';
 
 const mapSize = Size(960, 480);
 
-final bottomLeftLatLng = LatLng(-58.73638, -168);
+const bottomLeftLatLng = LatLng(-58.73638, -168);
 const bottomLeftOffset = Offset(0, 479);
 
-final bottomRightLatLng = LatLng(-58.73638, -168.375);
+const bottomRightLatLng = LatLng(-58.73638, -168.375);
 const bottomRightOffset = Offset(959, 479);
 
-final centerLatLng = LatLng(25.30062, 12);
+const centerLatLng = LatLng(25.30062, 12);
 const centerOffset = Offset(480, 240);
 
-final londonLatLng = LatLng(51.5072, 0.1276);
+const londonLatLng = LatLng(51.5072, 0.1276);
 const londonOffset = Offset(448.34027, 160.50975);
 
-final nullLatLng = LatLng(0, 0);
+const nullLatLng = LatLng(0, 0);
 const nullOffset = Offset(448, 306.74102);
 
-final topLeftLatLng = LatLng(85.545283, -168);
+const topLeftLatLng = LatLng(85.545283, -168);
 const topLeftOffset = Offset(0, 0);
 
-final topRightLatLng = LatLng(85.545283, -168.375);
+const topRightLatLng = LatLng(85.545283, -168.375);
 const topRightOffset = Offset(959, 0);
 
 Matcher isCloseToOffset(Offset value, [double distance = 1e-5]) {

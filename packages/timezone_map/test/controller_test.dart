@@ -100,7 +100,8 @@ void main() {
     when(service.searchCoordinates(any)).thenAnswer((_) async => locations);
 
     final model = TimezoneController(service: service);
-    expect(await model.searchCoordinates(LatLng(56, 78)), equals(locations));
-    verify(service.searchCoordinates(LatLng(56, 78))).called(1);
+    expect(
+        await model.searchCoordinates(const LatLng(56, 78)), equals(locations));
+    verify(service.searchCoordinates(const LatLng(56, 78))).called(1);
   });
 }
