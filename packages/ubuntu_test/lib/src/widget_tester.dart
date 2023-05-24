@@ -1,3 +1,5 @@
+import 'package:flutter/gestures.dart';
+import 'package:flutter/widgets.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:yaru_test/yaru_test.dart';
 
@@ -20,9 +22,38 @@ extension UbuntuWidgetTester on WidgetTester {
   /// Taps a _Next_ button.
   Future<void> tapNext() => tapButton(find.nextLabel);
 
+  /// Taps a link with the given [label].
+  Future<void> tapLink(dynamic label) async {
+    expect(find.byWidgetPredicate((widget) {
+      if (widget is RichText) {
+        final link = widget.findLink(label);
+        if (link != null) {
+          (link.recognizer as TapGestureRecognizer).onTap!();
+          return true;
+        }
+      }
+      return false;
+    }), findsOneWidget);
+  }
+
   /// Taps an _Ok_ button.
   Future<void> tapOk() => tapButton(find.okLabel);
 
   /// Taps a _Previous_ button.
   Future<void> tapPrevious() => tapButton(find.previousLabel);
+}
+
+extension on RichText {
+  TextSpan? findLink(String label) {
+    TextSpan? span;
+    text.visitChildren((child) {
+      if (child is TextSpan &&
+          child.text == label &&
+          child.recognizer is TapGestureRecognizer) {
+        span = child;
+      }
+      return span == null;
+    });
+    return span;
+  }
 }
