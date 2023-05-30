@@ -1,3 +1,9 @@
+## 0.1.7
+
+- Update translations.
+- Bump Dart SDK & Flutter version constraints.
+- Import parseLocale() from UDI.
+
 ## 0.1.6
 
 - Migrate to Flutter 3.10.
