@@ -22,15 +22,15 @@ class GlobalUbuntuLocalizations {
   ];
 }
 
-/// Finds the Locale of Operating System i.e. Platform. and assigns it to
-/// [Intl.systemLocale] and [Intl.defaultLocale].
+/// Initializes [Intl.defaultLocale] for formatting dates, times, and numbers.
 ///
-/// Must See,
+/// If [locale] is not specified, the system locale is used.
+///
+/// See also:
 /// * [Intl.defaultLocale]
 /// * [Intl.systemLocale]
-Future<void> setupAppLocalizations() async {
-  await findSystemLocale();
-  Intl.defaultLocale = Intl.systemLocale;
+Future<void> initDefaultLocale([String? locale]) async {
+  Intl.defaultLocale = locale ?? await findSystemLocale();
 }
 
 /// A localized language and its locale.
