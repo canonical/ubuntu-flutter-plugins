@@ -32,7 +32,7 @@ class UbuntuLocalizationsDa extends UbuntuLocalizations {
   String get altKey => 'Alt';
 
   @override
-  String get controlKey => 'Control';
+  String get controlKey => 'Ctrl';
 
   @override
   String get metaKey => 'Meta';
@@ -65,10 +65,10 @@ class UbuntuLocalizationsDa extends UbuntuLocalizations {
   String get bottomLabel => 'Bund';
 
   @override
-  String get cancelLabel => 'Annuller';
+  String get cancelLabel => 'Afbryd';
 
   @override
-  String get centerLabel => 'Center';
+  String get centerLabel => 'Midte';
 
   @override
   String get clearLabel => 'Ryd';
@@ -80,13 +80,13 @@ class UbuntuLocalizationsDa extends UbuntuLocalizations {
   String get colorLabel => 'Farve';
 
   @override
-  String get connectLabel => 'Forbind';
+  String get connectLabel => 'Opret forbindelse';
 
   @override
   String get continueLabel => 'Fortsæt';
 
   @override
-  String get copyLabel => 'Kopier';
+  String get copyLabel => 'Kopiér';
 
   @override
   String get createLabel => 'Opret';
@@ -101,13 +101,13 @@ class UbuntuLocalizationsDa extends UbuntuLocalizations {
   String get deleteLabel => 'Slet';
 
   @override
-  String get descendingLabel => 'Aftagende';
+  String get descendingLabel => 'Faldende';
 
   @override
   String get discardLabel => 'Kassér';
 
   @override
-  String get disconnectLabel => 'Afbryd';
+  String get disconnectLabel => 'Afbryd forbindelse';
 
   @override
   String get doneLabel => 'Færdig';
@@ -116,7 +116,7 @@ class UbuntuLocalizationsDa extends UbuntuLocalizations {
   String get downloadLabel => 'Hent';
 
   @override
-  String get editLabel => 'Rediger';
+  String get editLabel => 'Redigér';
 
   @override
   String get enterLabel => 'Enter';
@@ -128,85 +128,85 @@ class UbuntuLocalizationsDa extends UbuntuLocalizations {
   String get executeLabel => 'Udfør';
 
   @override
-  String get exitLabel => 'Afslut';
+  String get exitLabel => 'Forlad';
 
   @override
-  String get fileLabel => 'File';
+  String get fileLabel => 'Fil';
 
   @override
-  String get fillLabel => 'Fill';
+  String get fillLabel => 'Fyld';
 
   @override
   String get findLabel => 'Find';
 
   @override
-  String get firstLabel => 'First';
+  String get firstLabel => 'Først';
 
   @override
-  String get fontLabel => 'Font';
+  String get fontLabel => 'Skrifttype';
 
   @override
-  String get forwardLabel => 'Forward';
+  String get forwardLabel => 'Fremad';
 
   @override
-  String get fullscreenLabel => 'Fullscreen';
+  String get fullscreenLabel => 'Fuld skærm';
 
   @override
-  String get goBackLabel => 'Go Back';
+  String get goBackLabel => 'Tilbage';
 
   @override
-  String get helpLabel => 'Help';
+  String get helpLabel => 'Hjælp';
 
   @override
-  String get homeLabel => 'Home';
+  String get homeLabel => 'Hjem';
 
   @override
-  String get importLabel => 'Import';
+  String get importLabel => 'Importér';
 
   @override
-  String get increaseLabel => 'Increase';
+  String get increaseLabel => 'Forøg';
 
   @override
-  String get indexLabel => 'Index';
+  String get indexLabel => 'Indeks';
 
   @override
   String get informationLabel => 'Information';
 
   @override
-  String get insertLabel => 'Insert';
+  String get insertLabel => 'Indsæt';
 
   @override
-  String get italicLabel => 'Italic';
+  String get italicLabel => 'Kursiv';
 
   @override
-  String get landscapeLabel => 'Landscape';
+  String get landscapeLabel => 'Liggende';
 
   @override
-  String get lastLabel => 'Last';
+  String get lastLabel => 'Sidste';
 
   @override
-  String get leaveLabel => 'Leave';
+  String get leaveLabel => 'Forlad';
 
   @override
-  String get leftLabel => 'Left';
+  String get leftLabel => 'Venstre';
 
   @override
-  String get mediaLabel => 'Media';
+  String get mediaLabel => 'Medier';
 
   @override
-  String get networkLabel => 'Network';
+  String get networkLabel => 'Netværk';
 
   @override
-  String get newLabel => 'New';
+  String get newLabel => 'Ny';
 
   @override
-  String get nextLabel => 'Next';
+  String get nextLabel => 'Næste';
 
   @override
-  String get noLabel => 'No';
+  String get noLabel => 'Nej';
 
   @override
-  String get noneLabel => 'None';
+  String get noneLabel => 'Ingen';
 
   @override
   String get normalLabel => 'Normal';
@@ -215,49 +215,49 @@ class UbuntuLocalizationsDa extends UbuntuLocalizations {
   String get okLabel => 'OK';
 
   @override
-  String get openLabel => 'Open';
+  String get openLabel => 'Åbn';
 
   @override
-  String get pasteLabel => 'Paste';
+  String get pasteLabel => 'Indsæt';
 
   @override
   String get pauseLabel => 'Pause';
 
   @override
-  String get playLabel => 'Play';
+  String get playLabel => 'Afspil';
 
   @override
-  String get portraitLabel => 'Portrait';
+  String get portraitLabel => 'Stående';
 
   @override
-  String get preferencesLabel => 'Preferences';
+  String get preferencesLabel => 'Præferencer';
 
   @override
-  String get previousLabel => 'Previous';
+  String get previousLabel => 'Forrige';
 
   @override
-  String get printLabel => 'Print';
+  String get printLabel => 'Udskriv';
 
   @override
-  String get printPreviewLabel => 'Print Preview';
+  String get printPreviewLabel => 'Forhåndsvisning af Udskrift';
 
   @override
-  String get propertiesLabel => 'Properties';
+  String get propertiesLabel => 'Egenskaber';
 
   @override
-  String get questionLabel => 'Question';
+  String get questionLabel => 'Spørgsmål';
 
   @override
-  String get quitLabel => 'Quit';
+  String get quitLabel => 'Forlad';
 
   @override
-  String get recordLabel => 'Record';
+  String get recordLabel => 'Optag';
 
   @override
-  String get redoLabel => 'Gentag';
+  String get redoLabel => 'Omgør';
 
   @override
-  String get refreshLabel => 'Opdater';
+  String get refreshLabel => 'Genopfrisk';
 
   @override
   String get removeLabel => 'Fjern';
@@ -272,19 +272,19 @@ class UbuntuLocalizationsDa extends UbuntuLocalizations {
   String get restoreLabel => 'Gendan';
 
   @override
-  String get retryLabel => 'Retry';
+  String get retryLabel => 'Prøv Igen';
 
   @override
-  String get revertLabel => 'Fortryd ændringer';
+  String get revertLabel => 'Tilbagefør';
 
   @override
-  String get rewindLabel => 'Spole tilbage';
+  String get rewindLabel => 'Spol tilbage';
 
   @override
   String get rightLabel => 'Højre';
 
   @override
-  String get saveAsLabel => 'Save As';
+  String get saveAsLabel => 'Gem Som';
 
   @override
   String get saveLabel => 'Gem';
@@ -293,7 +293,7 @@ class UbuntuLocalizationsDa extends UbuntuLocalizations {
   String get searchLabel => 'Søg';
 
   @override
-  String get selectAllLabel => 'Select All';
+  String get selectAllLabel => 'Vælg Alle';
 
   @override
   String get selectLabel => 'Vælg';
@@ -302,7 +302,7 @@ class UbuntuLocalizationsDa extends UbuntuLocalizations {
   String get sendLabel => 'Send';
 
   @override
-  String get skipLabel => 'Skip';
+  String get skipLabel => 'Spring Over';
 
   @override
   String get sortLabel => 'Sortér';
@@ -311,38 +311,38 @@ class UbuntuLocalizationsDa extends UbuntuLocalizations {
   String get stopLabel => 'Stop';
 
   @override
-  String get strikeThroughLabel => 'Strike Through';
+  String get strikeThroughLabel => 'Gennemstreg';
 
   @override
-  String get submitLabel => 'Submit';
+  String get submitLabel => 'Indsend';
 
   @override
   String get topLabel => 'Top';
 
   @override
-  String get undoLabel => 'Undo';
+  String get undoLabel => 'Fortryd';
 
   @override
-  String get updateLabel => 'Update';
+  String get updateLabel => 'Opdatér';
 
   @override
-  String get upLabel => 'Up';
+  String get upLabel => 'Op';
 
   @override
-  String get viewLabel => 'View';
+  String get viewLabel => 'Vis';
 
   @override
-  String get warningLabel => 'Warning';
+  String get warningLabel => 'Advarsel';
 
   @override
-  String get windowLabel => 'Window';
+  String get windowLabel => 'Vindue';
 
   @override
-  String get yesLabel => 'Yes';
+  String get yesLabel => 'Ja';
 
   @override
-  String get zoomInLabel => 'Zoom In';
+  String get zoomInLabel => 'Zoom Ind';
 
   @override
-  String get zoomOutLabel => 'Zoom Out';
+  String get zoomOutLabel => 'Zoom Ud';
 }
