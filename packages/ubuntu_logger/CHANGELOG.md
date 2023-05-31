@@ -1,3 +1,7 @@
+## 0.0.3
+
+- Make the name optional, default to executable.
+
 ## 0.0.2
 
 - Migrate to Dart 3.0.
