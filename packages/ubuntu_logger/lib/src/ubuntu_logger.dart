@@ -40,7 +40,11 @@ RotatingFileAppender? _fileLog;
 /// A logger that prints to the console and writes to a log file.
 class Logger {
   /// Creates a named logger.
-  Logger(String name) : _logger = log.Logger(name);
+  ///
+  /// If no [name] is specified, the name of the executable is used.
+  Logger([String? name]) : _logger = log.Logger(name ?? _defaultName);
+
+  static final _defaultName = p.basename(Platform.resolvedExecutable);
 
   final log.Logger _logger;
 
