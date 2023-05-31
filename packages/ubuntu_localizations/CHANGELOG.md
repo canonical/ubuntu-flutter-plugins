@@ -1,3 +1,7 @@
+## 0.2.0
+
+- refactor: revise and rename setupAppLocalizations() (#233)
+
 ## 0.1.7
 
 - Update translations.
