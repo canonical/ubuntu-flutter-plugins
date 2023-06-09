@@ -12,7 +12,7 @@ env:
 
 jobs:
   analyze:
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-22.04
     steps:
     - uses: actions/checkout@v3
     - uses: subosito/flutter-action@v2
@@ -24,7 +24,7 @@ jobs:
     - run: melos run analyze
 
   build:
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-22.04
     steps:
     - uses: actions/checkout@v3
     - uses: subosito/flutter-action@v2
@@ -40,7 +40,7 @@ jobs:
     - run: melos build
 
   coverage:
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-22.04
     steps:
     - uses: actions/checkout@v3
     - uses: subosito/flutter-action@v2
@@ -59,7 +59,7 @@ jobs:
         token: ${{secrets.CODECOV_TOKEN}}
 
   format:
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-22.04
     steps:
     - uses: actions/checkout@v3
     - uses: subosito/flutter-action@v2
@@ -71,7 +71,7 @@ jobs:
     - run: melos run format
 
   integration:
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-22.04
     steps:
     - uses: actions/checkout@v3
     - uses: subosito/flutter-action@v2
@@ -89,7 +89,7 @@ jobs:
             flutter test integration_test
 
   mocks:
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-22.04
     steps:
     - uses: actions/checkout@v3
     - uses: subosito/flutter-action@v2
@@ -112,7 +112,7 @@ jobs:
         delete-branch: true
 
   l10n:
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-22.04
     steps:
     - uses: actions/checkout@v3
     - uses: subosito/flutter-action@v2
@@ -135,7 +135,7 @@ jobs:
         delete-branch: true
 
   pub:
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-22.04
     steps:
     - uses: actions/checkout@v3
     - uses: subosito/flutter-action@v2
@@ -148,7 +148,7 @@ jobs:
         flutter pub publish --dry-run
 
   test:
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-22.04
     steps:
     - uses: actions/checkout@v3
     - uses: subosito/flutter-action@v2
