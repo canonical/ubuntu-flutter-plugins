@@ -45,7 +45,7 @@ class GeoIP extends GeoSource {
     try {
       final response = await _sendRequest();
       return _handleResponse(response);
-    } on DioError catch (e) {
+    } on DioException catch (e) {
       if (!CancelToken.isCancel(e)) {
         throw GeoException(e.message ?? '', e);
       }
