@@ -55,7 +55,7 @@ class Geoname extends GeoSource {
     try {
       final response = await _sendRequest(location);
       return _handleResponse(response);
-    } on DioError catch (e) {
+    } on DioException catch (e) {
       if (!CancelToken.isCancel(e) && e.error is! SocketException) {
         throw GeoException(e.message ?? '', e);
       }
