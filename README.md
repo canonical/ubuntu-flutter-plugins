@@ -1,8 +1,6 @@
 # Flutter plugins for Ubuntu
 
-[![CI](https://github.com/canonical/ubuntu-flutter-plugins/workflows/Build/badge.svg)](https://github.com/canonical/ubuntu-flutter-plugins/actions/workflows/build.yaml)
-[![CI](https://github.com/canonical/ubuntu-flutter-plugins/workflows/Analysis/badge.svg)](https://github.com/canonical/ubuntu-flutter-plugins/actions/workflows/analysis.yaml)
-[![CI](https://github.com/canonical/ubuntu-flutter-plugins/workflows/Test/badge.svg)](https://github.com/canonical/ubuntu-flutter-plugins/actions/workflows/test.yaml)
+[![CI](https://github.com/canonical/ubuntu-flutter-plugins/workflows/CI/badge.svg)](https://github.com/canonical/ubuntu-flutter-plugins/actions/workflows/ci.yaml)
 [![codecov](https://codecov.io/gh/canonical/ubuntu-flutter-plugins/branch/main/graph/badge.svg)](https://codecov.io/gh/canonical/ubuntu-flutter-plugins)
 
 A collection of Flutter plugins and packages for Ubuntu applications.
