@@ -65,7 +65,7 @@ class UbuntuLocalizationsFi extends UbuntuLocalizations {
   String get bottomLabel => 'Bottom';
 
   @override
-  String get cancelLabel => 'Peruuta';
+  String get cancelLabel => 'Peru';
 
   @override
   String get centerLabel => 'Keskitä';

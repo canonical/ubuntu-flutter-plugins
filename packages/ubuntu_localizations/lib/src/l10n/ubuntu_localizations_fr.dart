@@ -212,7 +212,7 @@ class UbuntuLocalizationsFr extends UbuntuLocalizations {
   String get normalLabel => 'Normal';
 
   @override
-  String get okLabel => 'OK';
+  String get okLabel => 'Ok';
 
   @override
   String get openLabel => 'Ouvrir';

@@ -65,7 +65,7 @@ class UbuntuLocalizationsTr extends UbuntuLocalizations {
   String get bottomLabel => 'Alt';
 
   @override
-  String get cancelLabel => 'İptal Et';
+  String get cancelLabel => 'İptal et';
 
   @override
   String get centerLabel => 'Ortala';

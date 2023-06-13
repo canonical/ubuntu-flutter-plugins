@@ -212,7 +212,7 @@ class UbuntuLocalizationsHu extends UbuntuLocalizations {
   String get normalLabel => 'Normál';
 
   @override
-  String get okLabel => 'OK';
+  String get okLabel => 'Rendben';
 
   @override
   String get openLabel => 'Megnyitás';

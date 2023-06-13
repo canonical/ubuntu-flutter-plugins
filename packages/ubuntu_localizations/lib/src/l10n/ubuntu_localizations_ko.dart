@@ -203,7 +203,7 @@ class UbuntuLocalizationsKo extends UbuntuLocalizations {
   String get nextLabel => '다음';
 
   @override
-  String get noLabel => '아니요';
+  String get noLabel => '아니오';
 
   @override
   String get noneLabel => 'None';

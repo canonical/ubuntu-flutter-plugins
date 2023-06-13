@@ -212,7 +212,7 @@ class UbuntuLocalizationsZh extends UbuntuLocalizations {
   String get normalLabel => '标准';
 
   @override
-  String get okLabel => '确定';
+  String get okLabel => '好';
 
   @override
   String get openLabel => '打开';
@@ -338,7 +338,7 @@ class UbuntuLocalizationsZh extends UbuntuLocalizations {
   String get windowLabel => '窗口';
 
   @override
-  String get yesLabel => '确定';
+  String get yesLabel => '是';
 
   @override
   String get zoomInLabel => '放大';
