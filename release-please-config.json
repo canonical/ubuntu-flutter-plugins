@@ -1,4 +1,5 @@
 {
+  "$schema": "https://github.com/googleapis/release-please/raw/main/schemas/config.json",
   "release-type": "dart",
   "separate-pull-requests": true,
   "packages": {
