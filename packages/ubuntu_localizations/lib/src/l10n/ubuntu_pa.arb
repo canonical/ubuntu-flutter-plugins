@@ -1,5 +1,11 @@
 {
   "@@locale": "pa",
   "countryCode": "IN",
-  "languageName": "ਪੰਜਾਬੀ"
+  "languageName": "ਪੰਜਾਬੀ",
+  "cancelLabel": "ਰੱਦ ਕਰੋ",
+  "@cancelLabel": {},
+  "yesLabel": "ਹਾਂ",
+  "@yesLabel": {},
+  "noLabel": "ਨਹੀਂ",
+  "@noLabel": {}
 }

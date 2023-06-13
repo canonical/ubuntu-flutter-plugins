@@ -1,5 +1,13 @@
 {
   "@@locale": "ta",
   "countryCode": "IN",
-  "languageName": "தமிழ்"
+  "languageName": "தமிழ்",
+  "okLabel": "சரி",
+  "@okLabel": {},
+  "cancelLabel": "ரத்து செய்",
+  "@cancelLabel": {},
+  "yesLabel": "ஆம்",
+  "@yesLabel": {},
+  "noLabel": "இல்லை",
+  "@noLabel": {}
 }

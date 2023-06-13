@@ -1,5 +1,13 @@
 {
   "@@locale": "cy",
   "countryCode": "GB",
-  "languageName": "Cymraeg"
+  "languageName": "Cymraeg",
+  "okLabel": "Iawn",
+  "@okLabel": {},
+  "cancelLabel": "Diddymu",
+  "@cancelLabel": {},
+  "yesLabel": "Ie",
+  "@yesLabel": {},
+  "noLabel": "Na",
+  "@noLabel": {}
 }

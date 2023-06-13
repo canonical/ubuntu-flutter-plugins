@@ -15,5 +15,13 @@
   "goodPassword": "Godt passord",
   "@goodPassword": {},
   "fairPassword": "Middels sterkt passord",
-  "@fairPassword": {}
+  "@fairPassword": {},
+  "okLabel": "OK",
+  "@okLabel": {},
+  "cancelLabel": "Avbryt",
+  "@cancelLabel": {},
+  "yesLabel": "Ja",
+  "@yesLabel": {},
+  "noLabel": "Nei",
+  "@noLabel": {}
 }

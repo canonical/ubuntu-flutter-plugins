@@ -17,5 +17,13 @@
   "goodPassword": "كلمة مرور جيدة",
   "@goodPassword": {},
   "aboutLabel": "حول",
-  "@aboutLabel": {}
+  "@aboutLabel": {},
+  "okLabel": "موافق",
+  "@okLabel": {},
+  "cancelLabel": "الغاء",
+  "@cancelLabel": {},
+  "yesLabel": "نعم",
+  "@yesLabel": {},
+  "noLabel": "لا",
+  "@noLabel": {}
 }

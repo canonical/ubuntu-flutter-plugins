@@ -15,5 +15,13 @@
   "strongPassword": "Јака лозинка",
   "@strongPassword": {},
   "weakPassword": "Слаба лозинка",
-  "@weakPassword": {}
+  "@weakPassword": {},
+  "okLabel": "ОК",
+  "@okLabel": {},
+  "cancelLabel": "Одустани",
+  "@cancelLabel": {},
+  "yesLabel": "Да",
+  "@yesLabel": {},
+  "noLabel": "Не",
+  "@noLabel": {}
 }

@@ -15,5 +15,13 @@
   "goodPassword": "Pasahitz ona",
   "@goodPassword": {},
   "weakPassword": "Pasahitz ahula",
-  "@weakPassword": {}
+  "@weakPassword": {},
+  "okLabel": "Ondo",
+  "@okLabel": {},
+  "cancelLabel": "Utzi",
+  "@cancelLabel": {},
+  "yesLabel": "Bai",
+  "@yesLabel": {},
+  "noLabel": "Ez",
+  "@noLabel": {}
 }

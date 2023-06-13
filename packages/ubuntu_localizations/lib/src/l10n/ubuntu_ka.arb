@@ -15,5 +15,13 @@
   "fairPassword": "საშუალო პაროლი",
   "@fairPassword": {},
   "continueAction": "გაგრძელება",
-  "@continueAction": {}
+  "@continueAction": {},
+  "okLabel": "დიახ",
+  "@okLabel": {},
+  "cancelLabel": "გაუქმება",
+  "@cancelLabel": {},
+  "yesLabel": "დიახ",
+  "@yesLabel": {},
+  "noLabel": "არა",
+  "@noLabel": {}
 }

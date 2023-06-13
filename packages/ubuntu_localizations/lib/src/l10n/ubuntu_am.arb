@@ -1,5 +1,13 @@
 {
   "@@locale": "am",
   "countryCode": "ET",
-  "languageName": "አማርኛ"
+  "languageName": "አማርኛ",
+  "okLabel": "እሺ",
+  "@okLabel": {},
+  "cancelLabel": "ተወው",
+  "@cancelLabel": {},
+  "yesLabel": "አዎ",
+  "@yesLabel": {},
+  "noLabel": "አይ",
+  "@noLabel": {}
 }

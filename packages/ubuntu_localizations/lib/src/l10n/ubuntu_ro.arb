@@ -1,5 +1,9 @@
 {
   "@@locale": "ro",
   "countryCode": "RO",
-  "languageName": "Română"
+  "languageName": "Română",
+  "cancelLabel": "Renunță",
+  "@cancelLabel": {},
+  "noLabel": "Nu",
+  "@noLabel": {}
 }

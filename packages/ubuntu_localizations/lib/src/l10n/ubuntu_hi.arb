@@ -3,5 +3,13 @@
   "countryCode": "IN",
   "@countryCode": {},
   "languageName": "हिन्दी",
-  "@languageName": {}
+  "@languageName": {},
+  "okLabel": "ठीक है",
+  "@okLabel": {},
+  "cancelLabel": "रद्द करें",
+  "@cancelLabel": {},
+  "yesLabel": "हाँ",
+  "@yesLabel": {},
+  "noLabel": "नहीं",
+  "@noLabel": {}
 }

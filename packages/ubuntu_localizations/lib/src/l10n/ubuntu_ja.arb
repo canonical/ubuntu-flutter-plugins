@@ -23,5 +23,13 @@
   "controlKey": "Control",
   "@controlKey": {},
   "shiftKey": "Shift",
-  "@shiftKey": {}
+  "@shiftKey": {},
+  "okLabel": "OK",
+  "@okLabel": {},
+  "cancelLabel": "キャンセル",
+  "@cancelLabel": {},
+  "yesLabel": "はい",
+  "@yesLabel": {},
+  "noLabel": "いいえ",
+  "@noLabel": {}
 }

@@ -15,5 +15,13 @@
   "weakPassword": "Слабкий пароль",
   "@weakPassword": {},
   "goodPassword": "Гарний пароль",
-  "@goodPassword": {}
+  "@goodPassword": {},
+  "okLabel": "Гаразд",
+  "@okLabel": {},
+  "cancelLabel": "Скасувати",
+  "@cancelLabel": {},
+  "yesLabel": "Так",
+  "@yesLabel": {},
+  "noLabel": "Ні",
+  "@noLabel": {}
 }

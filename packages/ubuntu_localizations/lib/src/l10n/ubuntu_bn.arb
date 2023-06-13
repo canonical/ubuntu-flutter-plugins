@@ -1,5 +1,13 @@
 {
   "@@locale": "bn",
   "countryCode": "BD",
-  "languageName": "বাংলা"
+  "languageName": "বাংলা",
+  "okLabel": "ঠিক আছে",
+  "@okLabel": {},
+  "cancelLabel": "বাতিল",
+  "@cancelLabel": {},
+  "yesLabel": "হ্যাঁ",
+  "@yesLabel": {},
+  "noLabel": "না",
+  "@noLabel": {}
 }

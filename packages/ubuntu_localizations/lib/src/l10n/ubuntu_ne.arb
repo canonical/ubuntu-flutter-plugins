@@ -3,5 +3,13 @@
   "countryCode": "NP",
   "@countryCode": {},
   "languageName": "नेपाली",
-  "@languageName": {}
+  "@languageName": {},
+  "okLabel": "हुन्छ",
+  "@okLabel": {},
+  "cancelLabel": "रद्द गर्नुहोस्",
+  "@cancelLabel": {},
+  "yesLabel": "हो",
+  "@yesLabel": {},
+  "noLabel": "नगर्नुहोस्",
+  "@noLabel": {}
 }

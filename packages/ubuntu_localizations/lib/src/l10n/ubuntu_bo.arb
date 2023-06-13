@@ -1,5 +1,9 @@
 {
   "@@locale": "bo",
   "countryCode": "IN",
-  "languageName": "བོད་ཡིག"
+  "languageName": "བོད་ཡིག",
+  "okLabel": "འགྲིག",
+  "@okLabel": {},
+  "cancelLabel": "ཕྱིར་འཐེན།",
+  "@cancelLabel": {}
 }
