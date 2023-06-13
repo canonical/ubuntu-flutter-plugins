@@ -65,7 +65,7 @@ class UbuntuLocalizationsRu extends UbuntuLocalizations {
   String get bottomLabel => 'Снизу';
 
   @override
-  String get cancelLabel => 'Отмена';
+  String get cancelLabel => 'Отменить';
 
   @override
   String get centerLabel => 'Центр';

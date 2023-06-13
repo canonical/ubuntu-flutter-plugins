@@ -65,7 +65,7 @@ class UbuntuLocalizationsUk extends UbuntuLocalizations {
   String get bottomLabel => 'Bottom';
 
   @override
-  String get cancelLabel => 'Cancel';
+  String get cancelLabel => 'Скасувати';
 
   @override
   String get centerLabel => 'Center';
@@ -203,7 +203,7 @@ class UbuntuLocalizationsUk extends UbuntuLocalizations {
   String get nextLabel => 'Next';
 
   @override
-  String get noLabel => 'No';
+  String get noLabel => 'Ні';
 
   @override
   String get noneLabel => 'None';
@@ -212,7 +212,7 @@ class UbuntuLocalizationsUk extends UbuntuLocalizations {
   String get normalLabel => 'Normal';
 
   @override
-  String get okLabel => 'OK';
+  String get okLabel => 'Гаразд';
 
   @override
   String get openLabel => 'Open';
@@ -338,7 +338,7 @@ class UbuntuLocalizationsUk extends UbuntuLocalizations {
   String get windowLabel => 'Window';
 
   @override
-  String get yesLabel => 'Yes';
+  String get yesLabel => 'Так';
 
   @override
   String get zoomInLabel => 'Zoom In';

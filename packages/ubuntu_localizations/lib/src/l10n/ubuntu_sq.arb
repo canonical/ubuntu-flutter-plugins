@@ -1,5 +1,13 @@
 {
   "@@locale": "sq",
   "countryCode": "AL",
-  "languageName": "Shqip"
+  "languageName": "Shqip",
+  "okLabel": "Në rregull",
+  "@okLabel": {},
+  "cancelLabel": "Anulo",
+  "@cancelLabel": {},
+  "yesLabel": "Po",
+  "@yesLabel": {},
+  "noLabel": "Jo",
+  "@noLabel": {}
 }

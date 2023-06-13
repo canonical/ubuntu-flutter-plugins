@@ -1,5 +1,9 @@
 {
   "@@locale": "th",
   "countryCode": "TH",
-  "languageName": "ภาษาไทย"
+  "languageName": "ภาษาไทย",
+  "okLabel": "ตกลง",
+  "@okLabel": {},
+  "cancelLabel": "ยกเลิก",
+  "@cancelLabel": {}
 }

@@ -17,5 +17,13 @@
   "goodPassword": "Kata sandi yang baik",
   "@goodPassword": {},
   "fairPassword": "Kata sandi yang lumayan",
-  "@fairPassword": {}
+  "@fairPassword": {},
+  "okLabel": "Ok",
+  "@okLabel": {},
+  "cancelLabel": "Batal",
+  "@cancelLabel": {},
+  "yesLabel": "Ya",
+  "@yesLabel": {},
+  "noLabel": "Tidak",
+  "@noLabel": {}
 }

@@ -15,5 +15,13 @@
   "strongPassword": "Sterkt lykilorð",
   "@strongPassword": {},
   "goodPassword": "Gott lykilorð",
-  "@goodPassword": {}
+  "@goodPassword": {},
+  "okLabel": "Í Lagi",
+  "@okLabel": {},
+  "cancelLabel": "Hætta Við",
+  "@cancelLabel": {},
+  "yesLabel": "Já",
+  "@yesLabel": {},
+  "noLabel": "Nei",
+  "@noLabel": {}
 }

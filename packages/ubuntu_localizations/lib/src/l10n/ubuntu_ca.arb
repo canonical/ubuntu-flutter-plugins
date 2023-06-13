@@ -15,5 +15,13 @@
   "goodPassword": "Bona contrasenya",
   "@goodPassword": {},
   "weakPassword": "Contrasenya feble",
-  "@weakPassword": {}
+  "@weakPassword": {},
+  "okLabel": "D'acord",
+  "@okLabel": {},
+  "cancelLabel": "Cancel·la",
+  "@cancelLabel": {},
+  "yesLabel": "Sí",
+  "@yesLabel": {},
+  "noLabel": "No",
+  "@noLabel": {}
 }

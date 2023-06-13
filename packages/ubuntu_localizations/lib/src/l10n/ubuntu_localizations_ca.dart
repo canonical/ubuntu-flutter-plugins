@@ -65,7 +65,7 @@ class UbuntuLocalizationsCa extends UbuntuLocalizations {
   String get bottomLabel => 'Bottom';
 
   @override
-  String get cancelLabel => 'Cancel';
+  String get cancelLabel => 'Cancel·la';
 
   @override
   String get centerLabel => 'Center';
@@ -212,7 +212,7 @@ class UbuntuLocalizationsCa extends UbuntuLocalizations {
   String get normalLabel => 'Normal';
 
   @override
-  String get okLabel => 'OK';
+  String get okLabel => 'D\'acord';
 
   @override
   String get openLabel => 'Open';
@@ -338,7 +338,7 @@ class UbuntuLocalizationsCa extends UbuntuLocalizations {
   String get windowLabel => 'Window';
 
   @override
-  String get yesLabel => 'Yes';
+  String get yesLabel => 'Sí';
 
   @override
   String get zoomInLabel => 'Zoom In';

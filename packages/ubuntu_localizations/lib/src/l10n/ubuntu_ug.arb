@@ -1,5 +1,9 @@
 {
   "@@locale": "ug",
   "countryCode": "CN",
-  "languageName": "ئۇيغۇرچە"
+  "languageName": "ئۇيغۇرچە",
+  "yesLabel": "ھەئە",
+  "@yesLabel": {},
+  "noLabel": "ياق",
+  "@noLabel": {}
 }

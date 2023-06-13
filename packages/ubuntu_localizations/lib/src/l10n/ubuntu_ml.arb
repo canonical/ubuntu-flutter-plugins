@@ -15,5 +15,13 @@
   "continueAction": "തുടരുക",
   "@continueAction": {},
   "goodPassword": "നല്ല ശക്തമായ പാസ്‌വേഡ്",
-  "@goodPassword": {}
+  "@goodPassword": {},
+  "okLabel": "തുടരുക",
+  "@okLabel": {},
+  "cancelLabel": "റദ്ദാക്കുക",
+  "@cancelLabel": {},
+  "yesLabel": "അതെ",
+  "@yesLabel": {},
+  "noLabel": "ഇല്ല",
+  "@noLabel": {}
 }

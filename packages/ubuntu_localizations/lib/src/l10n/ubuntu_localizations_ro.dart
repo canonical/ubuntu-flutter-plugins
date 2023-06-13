@@ -65,7 +65,7 @@ class UbuntuLocalizationsRo extends UbuntuLocalizations {
   String get bottomLabel => 'Bottom';
 
   @override
-  String get cancelLabel => 'Cancel';
+  String get cancelLabel => 'Renunță';
 
   @override
   String get centerLabel => 'Center';
@@ -203,7 +203,7 @@ class UbuntuLocalizationsRo extends UbuntuLocalizations {
   String get nextLabel => 'Next';
 
   @override
-  String get noLabel => 'No';
+  String get noLabel => 'Nu';
 
   @override
   String get noneLabel => 'None';

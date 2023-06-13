@@ -1,5 +1,11 @@
 {
   "@@locale": "ga",
   "countryCode": "IE",
-  "languageName": "Gaeilge"
+  "languageName": "Gaeilge",
+  "cancelLabel": "Cealaigh",
+  "@cancelLabel": {},
+  "yesLabel": "Tá",
+  "@yesLabel": {},
+  "noLabel": "Níl",
+  "@noLabel": {}
 }

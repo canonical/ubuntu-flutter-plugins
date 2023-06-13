@@ -15,5 +15,13 @@
   "goodPassword": "Password buona",
   "@goodPassword": {},
   "weakPassword": "Password fragile",
-  "@weakPassword": {}
+  "@weakPassword": {},
+  "okLabel": "Ok",
+  "@okLabel": {},
+  "cancelLabel": "Annulla",
+  "@cancelLabel": {},
+  "yesLabel": "Sì",
+  "@yesLabel": {},
+  "noLabel": "No",
+  "@noLabel": {}
 }

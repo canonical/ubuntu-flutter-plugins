@@ -1,5 +1,11 @@
 {
   "@@locale": "nn",
   "countryCode": "NO",
-  "languageName": "Norsk nynorsk"
+  "languageName": "Norsk nynorsk",
+  "cancelLabel": "Avbryt",
+  "@cancelLabel": {},
+  "yesLabel": "Ja",
+  "@yesLabel": {},
+  "noLabel": "Nei",
+  "@noLabel": {}
 }

@@ -15,5 +15,13 @@
   "goodPassword": "Mật khẩu trung bình",
   "@goodPassword": {},
   "weakPassword": "Mật khẩu yếu",
-  "@weakPassword": {}
+  "@weakPassword": {},
+  "okLabel": "Đống ý",
+  "@okLabel": {},
+  "cancelLabel": "Hủy bỏ",
+  "@cancelLabel": {},
+  "yesLabel": "Có",
+  "@yesLabel": {},
+  "noLabel": "Không",
+  "@noLabel": {}
 }

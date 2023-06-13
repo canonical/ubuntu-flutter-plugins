@@ -203,7 +203,7 @@ class UbuntuLocalizationsUg extends UbuntuLocalizations {
   String get nextLabel => 'Next';
 
   @override
-  String get noLabel => 'No';
+  String get noLabel => 'ياق';
 
   @override
   String get noneLabel => 'None';
@@ -338,7 +338,7 @@ class UbuntuLocalizationsUg extends UbuntuLocalizations {
   String get windowLabel => 'Window';
 
   @override
-  String get yesLabel => 'Yes';
+  String get yesLabel => 'ھەئە';
 
   @override
   String get zoomInLabel => 'Zoom In';

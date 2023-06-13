@@ -65,7 +65,7 @@ class UbuntuLocalizationsSk extends UbuntuLocalizations {
   String get bottomLabel => 'Dole';
 
   @override
-  String get cancelLabel => 'Storno';
+  String get cancelLabel => 'Zrušiť';
 
   @override
   String get centerLabel => 'Stred';
