@@ -1,0 +1,10 @@
+{
+  "packages": {
+    "packages/ubuntu_localizations": {
+      "release-type": "dart"
+    },
+    "packages/ubuntu_logger": {
+      "release-type": "dart"
+    }
+  }
+}
