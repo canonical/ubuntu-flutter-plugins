@@ -55,9 +55,12 @@ void main() async {
       ul10n.cancelLabel,
       ul10n.closeLabel,
       ul10n.continueLabel,
+      ul10n.doneLabel,
       ul10n.nextLabel,
+      ul10n.noLabel,
       ul10n.okLabel,
       ul10n.previousLabel,
+      ul10n.yesLabel,
     ];
 
     final actual = <String>[];
@@ -88,14 +91,23 @@ void main() async {
     await tester.tapContinue();
     expect(actual, expected..add(ul10n.continueLabel));
 
+    await tester.tapDone();
+    expect(actual, expected..add(ul10n.doneLabel));
+
     await tester.tapNext();
     expect(actual, expected..add(ul10n.nextLabel));
+
+    await tester.tapNo();
+    expect(actual, expected..add(ul10n.noLabel));
 
     await tester.tapOk();
     expect(actual, expected..add(ul10n.okLabel));
 
     await tester.tapPrevious();
     expect(actual, expected..add(ul10n.previousLabel));
+
+    await tester.tapYes();
+    expect(actual, expected..add(ul10n.yesLabel));
   });
 }
 

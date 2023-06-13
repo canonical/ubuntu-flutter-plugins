@@ -43,14 +43,23 @@ extension UbuntuCommonFinders on CommonFinders {
   /// Finds a _Continue_ label.
   Finder get continueLabel => ul10n((l10n) => l10n.continueLabel);
 
+  /// Finds a _Done_ label.
+  Finder get doneLabel => ul10n((l10n) => l10n.doneLabel);
+
   /// Finds a _Next_ label.
   Finder get nextLabel => ul10n((l10n) => l10n.nextLabel);
+
+  /// Finds a _No_ label.
+  Finder get noLabel => ul10n((l10n) => l10n.noLabel);
 
   /// Finds an _Ok_ label.
   Finder get okLabel => ul10n((l10n) => l10n.okLabel);
 
   /// Finds a _Previous_ label.
   Finder get previousLabel => ul10n((l10n) => l10n.previousLabel);
+
+  /// Finds a _Yes_ label.
+  Finder get yesLabel => ul10n((l10n) => l10n.yesLabel);
 
   /// Finds [Image] by [assetName].
   Finder asset(String assetName, {bool skipOffstage = true}) {
