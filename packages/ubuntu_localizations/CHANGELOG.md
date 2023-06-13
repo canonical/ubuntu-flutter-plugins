@@ -1,3 +1,8 @@
+## 0.2.1
+
+- Update translations.
+- l10n: import ok/cancel/yes/no translations from udi (#243)
+
 ## 0.2.0
 
 - refactor: revise and rename setupAppLocalizations() (#233)
