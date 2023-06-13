@@ -1,10 +1,8 @@
 {
+  "release-type": "dart",
+  "separate-pull-requests": true,
   "packages": {
-    "packages/ubuntu_localizations": {
-      "release-type": "dart"
-    },
-    "packages/ubuntu_logger": {
-      "release-type": "dart"
-    }
+    "packages/ubuntu_localizations": {},
+    "packages/ubuntu_logger": {}
   }
 }
