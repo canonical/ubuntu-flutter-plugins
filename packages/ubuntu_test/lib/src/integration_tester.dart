@@ -12,6 +12,7 @@ extension UbuntuIntegrationTester on WidgetTester {
     assert(binding is LiveTestWidgetsFlutterBinding);
 
     final sw = Stopwatch()..start();
+    final stackTrace = StackTrace.current;
 
     await Future.doWhile(() async {
       if (any(finder)) return false;
@@ -20,7 +21,7 @@ extension UbuntuIntegrationTester on WidgetTester {
     });
 
     if (sw.elapsed >= timeout) {
-      fail('UbuntuIntegrationTester.pumpUntil() timed out ($timeout).');
+      fail('IntegrationTester.pumpUntil() timed out ($timeout).\n$stackTrace');
     }
   }
 }
