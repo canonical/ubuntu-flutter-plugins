@@ -54,4 +54,10 @@ void main() {
     expect(find.text('loading...'), findsOneWidget);
     expect(find.text('home'), findsNothing);
   });
+
+  testWidgets('run app', (tester) async {
+    final onError = FlutterError.onError;
+    await tester.runApp(() => FlutterError.onError = (details) {});
+    expect(FlutterError.onError, onError);
+  });
 }
