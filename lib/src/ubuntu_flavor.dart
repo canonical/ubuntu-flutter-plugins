@@ -85,10 +85,10 @@ class UbuntuFlavor {
     );
   }
 
-  factory UbuntuFlavor.fromJson(Map<String, dynamic> map) {
+  factory UbuntuFlavor.fromJson(Map<String, dynamic> json) {
     return UbuntuFlavor(
-      id: map['id'] as String,
-      name: map['name'] as String,
+      id: json['id'] as String,
+      name: json['name'] as String,
     );
   }
 

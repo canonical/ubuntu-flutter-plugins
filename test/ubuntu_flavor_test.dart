@@ -21,6 +21,12 @@ void main() {
     expect(copy1, isNot(flavor1));
   });
 
+  test('json', () {
+    const flavor1 = UbuntuFlavor(id: 'id1', name: 'Name 1');
+    expect(flavor1.toJson(), {'id': 'id1', 'name': 'Name 1'});
+    expect(UbuntuFlavor.fromJson({'id': 'id1', 'name': 'Name 1'}), flavor1);
+  });
+
   test('none', () async {
     expect(await UbuntuFlavor.detect(env: {}), isNull);
   });
