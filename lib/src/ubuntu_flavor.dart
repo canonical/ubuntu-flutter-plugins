@@ -85,20 +85,6 @@ class UbuntuFlavor {
     );
   }
 
-  factory UbuntuFlavor.fromJson(Map<String, dynamic> json) {
-    return UbuntuFlavor(
-      id: json['id'] as String,
-      name: json['name'] as String,
-    );
-  }
-
-  Map<String, dynamic> toJson() {
-    return {
-      'id': id,
-      'name': name,
-    };
-  }
-
   @override
   String toString() => 'UbuntuFlavor(id: $id, name: $name)';
 
