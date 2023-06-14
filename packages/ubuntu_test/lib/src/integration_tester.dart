@@ -1,3 +1,6 @@
+import 'dart:async';
+
+import 'package:flutter/foundation.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 /// Integration test extensions.
@@ -23,5 +26,15 @@ extension UbuntuIntegrationTester on WidgetTester {
     if (sw.elapsed >= timeout) {
       fail('IntegrationTester.pumpUntil() timed out ($timeout).\n$stackTrace');
     }
+  }
+
+  /// Runs the specified application entry-point for integration testing.
+  ///
+  /// It restores [FlutterError.onError] after calling the specified [entryPoint]
+  /// to avoid that integration tests hang due to uncaught timeouts.
+  Future<void> runApp(FutureOr<void> Function() entryPoint) async {
+    final onError = FlutterError.onError;
+    await entryPoint();
+    FlutterError.onError = onError;
   }
 }
