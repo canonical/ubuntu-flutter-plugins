@@ -25,6 +25,16 @@ void main() {
     expect(await UbuntuFlavor.detect(env: {}), isNull);
   });
 
+  test('original', () async {
+    expect(
+      await UbuntuFlavor.detect(env: {
+        'ORIGINAL_XDG_CURRENT_DESKTOP': 'ubuntu:GNOME',
+        'XDG_CURRENT_DESKTOP': 'Unity',
+      }),
+      UbuntuFlavor.ubuntu,
+    );
+  });
+
   test('ubuntu', () async {
     expect(
       await UbuntuFlavor.detect(env: {

@@ -4,7 +4,9 @@ import 'ubuntu_flavor.dart';
 
 Future<UbuntuFlavor?> detectUbuntuFlavor(Map<String, String>? env) async {
   env ??= Platform.environment;
-  final desktop = env['XDG_CURRENT_DESKTOP']?.toLowerCase();
+  final desktop =
+      (env['ORIGINAL_XDG_CURRENT_DESKTOP'] ?? env['XDG_CURRENT_DESKTOP'])
+          ?.toLowerCase();
   if (desktop == null) {
     return null;
   }
