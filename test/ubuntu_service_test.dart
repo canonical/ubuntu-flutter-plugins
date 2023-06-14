@@ -16,7 +16,7 @@ void main() {
   tearDown(() => unregisterMockService<Service>());
 
   test('unknown service', () {
-    expect(() => getService<Service>(), throwsA(isA<AssertionError>()));
+    expect(() => getService<Service>(), throwsStateError);
     expect(tryGetService<Service>(), isNull);
   });
 
@@ -92,21 +92,21 @@ void main() {
 
     unregisterService<Service>();
 
-    expect(() => getService<Service>(), throwsA(isA<AssertionError>()));
+    expect(() => getService<Service>(), throwsStateError);
     expect(getService<Service>(id: '2'), isA<Service2>());
     expect(getService<Service>(id: '3'), isA<Service3>());
 
     unregisterService<Service>(id: '2');
 
-    expect(() => getService<Service>(), throwsA(isA<AssertionError>()));
-    expect(() => getService<Service>(id: '2'), throwsA(isA<AssertionError>()));
+    expect(() => getService<Service>(), throwsStateError);
+    expect(() => getService<Service>(id: '2'), throwsStateError);
     expect(getService<Service>(id: '3'), isA<Service3>());
 
     unregisterService<Service>(id: '3');
 
-    expect(() => getService<Service>(), throwsA(isA<AssertionError>()));
-    expect(() => getService<Service>(id: '2'), throwsA(isA<AssertionError>()));
-    expect(() => getService<Service>(id: '3'), throwsA(isA<AssertionError>()));
+    expect(() => getService<Service>(), throwsStateError);
+    expect(() => getService<Service>(id: '2'), throwsStateError);
+    expect(() => getService<Service>(id: '3'), throwsStateError);
   });
 
   test('service factory', () {
