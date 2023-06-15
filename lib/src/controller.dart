@@ -3,7 +3,7 @@ part of 'wizard.dart';
 /// Allows widgets such as the AppBar to invoke functionality on the Wizard
 /// This is useful for widgets that are defined above the Wizard, such as a mobile
 /// app's AppBar.
-class WizardController extends ChangeNotifier {
+class WizardController extends SafeChangeNotifier {
   WizardController({required this.routes, this.initialRoute}) {
     _flowController = FlowController(
         [WizardRouteSettings(name: initialRoute ?? routes.keys.first)]);
@@ -37,7 +37,7 @@ class WizardController extends ChangeNotifier {
   void _updateState(
     List<WizardRouteSettings> Function(List<WizardRouteSettings>) callback,
   ) {
-    _flowController.update(callback);
+    if (!isDisposed) _flowController.update(callback);
   }
 
   @override

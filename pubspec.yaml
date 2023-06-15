@@ -16,6 +16,7 @@ dependencies:
   flow_builder: ^0.0.9
   flutter:
     sdk: flutter
+  safe_change_notifier: ^0.2.0
 
 dev_dependencies:
   flutter_lints: ^2.0.0
