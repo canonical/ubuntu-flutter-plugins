@@ -1,3 +1,5 @@
+# Changelog
+
 ## 1.0.0-beta.3
 
 - onLoad: add return value to allow guarding routes (#51)
