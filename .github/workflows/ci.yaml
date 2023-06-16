@@ -70,7 +70,6 @@ jobs:
           release-type: dart
           changelog-notes-type: github
           pull-request-title-pattern: 'chore: release v${version}'
-          release-as: 1.0.0
 
   test:
     runs-on: ubuntu-22.04
