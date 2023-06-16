@@ -1,5 +1,32 @@
 # Changelog
 
+## 1.0.0 (2023-06-15)
+
+## What's Changed
+* Add root argument to Wizard.of() and Wizard.maybeOf() by @jpnurmi in https://github.com/ubuntu-flutter-community/wizard_router/pull/34
+* Fix lints by @jpnurmi in https://github.com/ubuntu-flutter-community/wizard_router/pull/35
+* Example: enable & fix lints by @jpnurmi in https://github.com/ubuntu-flutter-community/wizard_router/pull/36
+* Update CI by @jpnurmi in https://github.com/ubuntu-flutter-community/wizard_router/pull/37
+* remove Wizard.done() by @d-loose in https://github.com/ubuntu-flutter-community/wizard_router/pull/38
+* Refactor WizardController by @d-loose in https://github.com/ubuntu-flutter-community/wizard_router/pull/39
+* remove WizardObserver by @d-loose in https://github.com/ubuntu-flutter-community/wizard_router/pull/40
+* add support for optionally async callbacks by @d-loose in https://github.com/ubuntu-flutter-community/wizard_router/pull/41
+* WizardController: await potentially async onBack callback by @d-loose in https://github.com/ubuntu-flutter-community/wizard_router/pull/43
+* WizardController: return results in jump and replace by @d-loose in https://github.com/ubuntu-flutter-community/wizard_router/pull/44
+* WizardScopeState: expose WizardController by @d-loose in https://github.com/ubuntu-flutter-community/wizard_router/pull/45
+* README: add controller example by @d-loose in https://github.com/ubuntu-flutter-community/wizard_router/pull/46
+* Release 1.0.0-beta by @d-loose in https://github.com/ubuntu-flutter-community/wizard_router/pull/47
+* add onLoad callback by @d-loose in https://github.com/ubuntu-flutter-community/wizard_router/pull/48
+* Add `isLoading` to `WizardController` and `WizardScopeState` by @d-loose in https://github.com/ubuntu-flutter-community/wizard_router/pull/42
+* Restore HeroController by @jpnurmi in https://github.com/ubuntu-flutter-community/wizard_router/pull/49
+* Release 1.0.0-beta.2 by @jpnurmi in https://github.com/ubuntu-flutter-community/wizard_router/pull/50
+* ci: switch from deprecated `flutter format` to `dart format` by @jpnurmi in https://github.com/ubuntu-flutter-community/wizard_router/pull/52
+* onLoad: add return value to allow guarding routes by @jpnurmi in https://github.com/ubuntu-flutter-community/wizard_router/pull/51
+* fix(controller): prevent notifying listeners after being disposed by @jpnurmi in https://github.com/ubuntu-flutter-community/wizard_router/pull/55
+
+
+**Full Changelog**: https://github.com/ubuntu-flutter-community/wizard_router/compare/v0.10.1...v1.0.0
+
 ## 1.0.0-beta.3
 
 - onLoad: add return value to allow guarding routes (#51)
