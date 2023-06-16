@@ -7,6 +7,7 @@
 /// ![wizard_router](https://github.com/ubuntu-flutter-community/wizard_router/raw/main/images/wizard_router.png)
 library wizard_router;
 
+export 'src/exception.dart';
 export 'src/route.dart';
 export 'src/scope.dart';
 export 'src/wizard.dart';

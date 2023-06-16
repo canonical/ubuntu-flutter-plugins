@@ -186,13 +186,13 @@ void main() {
     await tester.pumpAndSettle();
     wizard.next();
     await tester.pumpAndSettle();
-    await expectLater(wizard.next, throwsAssertionError);
+    await expectLater(wizard.next, throwsA(isA<WizardException>()));
 
     wizard.back();
     await tester.pumpAndSettle();
     wizard.back();
     await tester.pumpAndSettle();
-    await expectLater(wizard.back, throwsAssertionError);
+    await expectLater(wizard.back, throwsA(isA<WizardException>()));
   });
 
   testWidgets('route conditions', (tester) async {
@@ -305,7 +305,7 @@ void main() {
 
     final firstWizardScope = Wizard.of(tester.element(firstPage));
     nextRoute = 'unknown';
-    await expectLater(firstWizardScope.next, throwsAssertionError);
+    await expectLater(firstWizardScope.next, throwsA(isA<WizardException>()));
 
     nextRoute = Routes.second;
     firstWizardScope.next();
@@ -313,7 +313,7 @@ void main() {
 
     final secondWizardScope = Wizard.of(tester.element(secondPage));
     backRoute = 'invalid';
-    await expectLater(secondWizardScope.back, throwsAssertionError);
+    await expectLater(secondWizardScope.back, throwsA(isA<WizardException>()));
   });
 
   testWidgets('pass arguments', (tester) async {
@@ -354,7 +354,7 @@ void main() {
     final wizard = Wizard.of(tester.element(firstPage));
 
     // 1st -> home
-    await expectLater(wizard.home, throwsAssertionError);
+    await expectLater(wizard.home, throwsA(isA<WizardException>()));
 
     // 2nd -> home
     wizard.next();
@@ -426,7 +426,7 @@ void main() {
     expect(secondWizardScope.hasNext, isTrue);
 
     // 2nd -> 1st
-    await expectLater(secondWizardScope.back, throwsAssertionError);
+    await expectLater(secondWizardScope.back, throwsA(isA<WizardException>()));
 
     // 2nd -> 3rd
     secondWizardScope.replace();
@@ -444,7 +444,7 @@ void main() {
     expect(thirdWizardScope.hasNext, isFalse);
 
     // 3rd -> 2nd
-    await expectLater(thirdWizardScope.back, throwsAssertionError);
+    await expectLater(thirdWizardScope.back, throwsA(isA<WizardException>()));
   });
 
   testWidgets('jump', (tester) async {
@@ -490,6 +490,10 @@ void main() {
     expect(firstPage, findsOneWidget);
     expect(secondPage, findsNothing);
     expect(thirdPage, findsNothing);
+
+    // unknown
+    await expectLater(
+        firstWizardScope.jump('/unknown'), throwsA(isA<WizardException>()));
   });
 
   testWidgets('has next or previous', (tester) async {
@@ -843,7 +847,7 @@ void main() {
     expect(root3Scope.hasPrevious, isTrue);
     expect(root3Scope.hasNext, isTrue);
 
-    await expectLater(nested3Scope.next, throwsAssertionError);
+    await expectLater(nested3Scope.next, throwsA(isA<WizardException>()));
 
     root3Scope.next();
     await tester.pumpAndSettle();

@@ -49,8 +49,10 @@ class WizardController extends SafeChangeNotifier {
 
   /// Requests the wizard to show the first page.
   void home() {
-    assert(state.length > 1,
-        '`Wizard.home()` called from the first route ${state.last.name}');
+    if (state.length <= 1) {
+      throw WizardException(
+          '`Wizard.home()` called from the first route ${state.last.name}');
+    }
 
     _updateState((state) {
       final copy = List<WizardRouteSettings>.of(state);
@@ -61,14 +63,18 @@ class WizardController extends SafeChangeNotifier {
   /// Requests the wizard to show the previous page. Optionally, `result` can be
   /// returned to the previous page.
   void back<T extends Object?>([T? result]) async {
-    assert(state.length > 1,
-        '`Wizard.back()` called from the first route ${state.last.name}');
+    if (state.length <= 1) {
+      throw WizardException(
+          '`Wizard.back()` called from the first route ${state.last.name}');
+    }
 
     // go back to a specific route, or pick the previous route on the list
     final previous = await routes[currentRoute]!.onBack?.call(state.last);
     if (previous != null) {
-      assert(routes.keys.contains(previous),
-          '`Wizard.routes` is missing route \'$previous\'.');
+      if (!routes.keys.contains(previous)) {
+        throw WizardException(
+            '`Wizard.routes` is missing route \'$previous\'.');
+      }
     }
 
     final start = previous != null
@@ -116,14 +122,17 @@ class WizardController extends SafeChangeNotifier {
     String nextRoute() {
       final routeNames = routes.keys.toList();
       final index = routeNames.indexOf(previous.name!);
-      assert(index < routeNames.length - 1,
-          '`Wizard.next()` called from the last route ${previous.name}.');
+      if (index == routeNames.length - 1) {
+        throw WizardException(
+            '`Wizard.next()` called from the last route ${previous.name}.');
+      }
       return routeNames[index + 1];
     }
 
     final name = await onNext() ?? nextRoute();
-    assert(routes.keys.contains(name),
-        '`Wizard.routes` is missing route \'$name\'.');
+    if (!routes.keys.contains(name)) {
+      throw WizardException('`Wizard.routes` is missing route \'$name\'.');
+    }
 
     return WizardRouteSettings<T>(name: name, arguments: arguments);
   }
@@ -146,8 +155,10 @@ class WizardController extends SafeChangeNotifier {
   /// Requests the wizard to jump to a specific page. Optionally, `arguments`
   /// can be passed to the page.
   Future<T?> jump<T extends Object?>(String route, {Object? arguments}) async {
-    assert(routes.keys.contains(route),
-        '`Wizard.jump()` called with an unknown route $route.');
+    if (!routes.keys.contains(route)) {
+      throw WizardException(
+          '`Wizard.jump()` called with an unknown route $route.');
+    }
     final settings = await _loadRoute(route, (name) async {
       return WizardRouteSettings<T>(name: name, arguments: arguments);
     });
