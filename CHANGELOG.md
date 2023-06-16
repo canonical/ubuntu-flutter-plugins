@@ -1,5 +1,13 @@
 # Changelog
 
+## 1.0.1 (2023-06-16)
+
+## What's Changed
+* refactor: replace asserts with exceptions by @jpnurmi in https://github.com/ubuntu-flutter-community/wizard_router/pull/58
+
+
+**Full Changelog**: https://github.com/ubuntu-flutter-community/wizard_router/compare/v1.0.0...v1.0.1
+
 ## 1.0.0 (2023-06-15)
 
 ## What's Changed
