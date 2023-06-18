@@ -39,7 +39,6 @@ jobs:
       - run: dart format --set-exit-if-changed .
 
   pub:
-    if: ${{false}}
     runs-on: ubuntu-22.04
     steps:
       - uses: actions/checkout@v3
