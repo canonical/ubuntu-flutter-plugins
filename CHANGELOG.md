@@ -9,5 +9,3 @@
 * @jpnurmi made their first contribution in https://github.com/ubuntu-flutter-community/ubuntu_flavor/pull/4
 
 **Full Changelog**: https://github.com/ubuntu-flutter-community/ubuntu_flavor/commits/v0.1.0
-
-## Changelog
