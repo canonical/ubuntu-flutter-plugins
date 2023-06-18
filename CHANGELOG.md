@@ -1,5 +1,14 @@
 # Changelog
 
+## 0.1.1 (2023-06-18)
+
+## What's Changed
+* chore(deps): remove unused gsettings dependency by @jpnurmi in https://github.com/ubuntu-flutter-community/ubuntu_flavor/pull/6
+* refactor: port to platform_linux by @jpnurmi in https://github.com/ubuntu-flutter-community/ubuntu_flavor/pull/8
+
+
+**Full Changelog**: https://github.com/ubuntu-flutter-community/ubuntu_flavor/compare/v0.1.0...v0.1.1
+
 ## 0.1.0 (2023-06-14)
 
 ## What's Changed

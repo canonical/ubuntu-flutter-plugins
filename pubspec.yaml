@@ -3,7 +3,7 @@ description: Detect Ubuntu flavor
 homepage: https://github.com/ubuntu-flutter-community/ubuntu_flavor
 repository: https://github.com/ubuntu-flutter-community/ubuntu_flavor
 issue_tracker: https://github.com/ubuntu-flutter-community/ubuntu_flavor/issues
-version: 0.1.0
+version: 0.1.1
 
 environment:
   sdk: '>=3.0.0 <4.0.0'
