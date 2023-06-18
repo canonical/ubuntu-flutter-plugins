@@ -10,6 +10,7 @@ environment:
 
 dependencies:
   meta: ^1.7.0
+  platform_linux: ^0.1.0
 
 dev_dependencies:
   lints: ^2.0.0

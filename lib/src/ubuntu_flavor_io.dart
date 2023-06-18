@@ -1,44 +1,37 @@
-import 'dart:io';
+import 'package:platform_linux/platform.dart';
 
 import 'ubuntu_flavor.dart';
 
-Future<UbuntuFlavor?> detectUbuntuFlavor(Map<String, String>? env) async {
-  env ??= Platform.environment;
-  final desktop =
-      (env['ORIGINAL_XDG_CURRENT_DESKTOP'] ?? env['XDG_CURRENT_DESKTOP'])
-          ?.toLowerCase();
-  if (desktop == null) {
-    return null;
-  }
-  if (desktop.contains('budgie')) {
+Future<UbuntuFlavor?> detectUbuntuFlavor(Platform? platform) async {
+  platform ??= const LocalPlatform();
+  if (platform.isBudgie) {
     return UbuntuFlavor.budgie;
   }
-  if (desktop.contains('cinnamon')) {
+  if (platform.isCinnamon) {
     return UbuntuFlavor.cinnamon;
   }
-  if (desktop.contains('gnome')) {
+  if (platform.isGNOME) {
     // TODO: detect edubuntu
     return UbuntuFlavor.ubuntu;
   }
-  if (desktop.contains('kde')) {
+  if (platform.isKDE) {
     // TODO: detect studio
     return UbuntuFlavor.kubuntu;
   }
-  if (desktop.contains('ukui')) {
+  if (platform.isUKUI) {
     return UbuntuFlavor.kylin;
   }
-  if (desktop.contains('lxqt') || desktop.contains('lxde')) {
+  if (platform.isLXQt) {
     return UbuntuFlavor.lubuntu;
   }
-  if (desktop.contains('mate')) {
+  if (platform.isMATE) {
     return UbuntuFlavor.mate;
   }
-  if (desktop.contains('unity')) {
+  if (platform.isUnity) {
     return UbuntuFlavor.unity;
   }
-  if (desktop.contains('xfce')) {
+  if (platform.isXfce) {
     return UbuntuFlavor.xubuntu;
   }
-  stderr.write('ubuntu_flavor: unknown XDG_CURRENT_DESKTOP: "$desktop"\n');
   return null;
 }

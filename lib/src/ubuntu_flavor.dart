@@ -1,6 +1,7 @@
 import 'dart:async';
 
 import 'package:meta/meta.dart';
+import 'package:platform_linux/platform.dart';
 
 import 'ubuntu_flavor_stub.dart' if (dart.library.io) 'ubuntu_flavor_io.dart';
 
@@ -66,10 +67,8 @@ class UbuntuFlavor {
     name: 'Xubuntu',
   );
 
-  static Future<UbuntuFlavor?> detect({
-    @visibleForTesting Map<String, String>? env,
-  }) {
-    return detectUbuntuFlavor(env);
+  static Future<UbuntuFlavor?> detect([@visibleForTesting Platform? platform]) {
+    return detectUbuntuFlavor(platform);
   }
 
   final String id;
