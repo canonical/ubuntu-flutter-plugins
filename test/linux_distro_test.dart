@@ -2,8 +2,7 @@ import 'dart:convert';
 import 'dart:io';
 
 import 'package:mockito/mockito.dart';
-import 'package:platform/platform.dart';
-import 'package:platform_linux/platform_linux.dart';
+import 'package:platform_linux/platform.dart';
 import 'package:test/test.dart';
 
 void main() {
