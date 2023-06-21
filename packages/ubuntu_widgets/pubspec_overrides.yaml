@@ -1,0 +1,3 @@
+dependency_overrides:
+  ubuntu_localizations:
+    path: ../ubuntu_localizations
