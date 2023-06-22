@@ -1,6 +1,6 @@
 import 'package:ubuntu_flavor/ubuntu_flavor.dart';
 
-void main() async {
-  final flavor = await UbuntuFlavor.detect();
+void main() {
+  final flavor = UbuntuFlavor.detect();
   print(flavor);
 }

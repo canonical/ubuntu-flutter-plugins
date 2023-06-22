@@ -22,13 +22,13 @@ void main() {
     expect(copy1, isNot(flavor1));
   });
 
-  test('none', () async {
-    expect(await UbuntuFlavor.detect(FakePlatform(environment: {})), isNull);
+  test('none', () {
+    expect(UbuntuFlavor.detect(FakePlatform(environment: {})), isNull);
   });
 
-  test('original', () async {
+  test('original', () {
     expect(
-      await UbuntuFlavor.detect(FakePlatform(environment: {
+      UbuntuFlavor.detect(FakePlatform(environment: {
         'ORIGINAL_XDG_CURRENT_DESKTOP': 'ubuntu:GNOME',
         'XDG_CURRENT_DESKTOP': 'Unity',
       })),
@@ -36,27 +36,27 @@ void main() {
     );
   });
 
-  test('ubuntu', () async {
+  test('ubuntu', () {
     expect(
-      await UbuntuFlavor.detect(FakePlatform(environment: {
+      UbuntuFlavor.detect(FakePlatform(environment: {
         'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME',
       })),
       UbuntuFlavor.ubuntu,
     );
   });
 
-  test('budgie', () async {
+  test('budgie', () {
     expect(
-      await UbuntuFlavor.detect(FakePlatform(environment: {
+      UbuntuFlavor.detect(FakePlatform(environment: {
         'XDG_CURRENT_DESKTOP': 'Budgie:GNOME',
       })),
       UbuntuFlavor.budgie,
     );
   });
 
-  test('cinnamon', () async {
+  test('cinnamon', () {
     expect(
-      await UbuntuFlavor.detect(FakePlatform(environment: {
+      UbuntuFlavor.detect(FakePlatform(environment: {
         'XDG_CURRENT_DESKTOP': 'X-Cinnamon',
       })),
       UbuntuFlavor.cinnamon,
@@ -65,36 +65,36 @@ void main() {
 
   // TODO: edubuntu
 
-  test('kubuntu', () async {
+  test('kubuntu', () {
     expect(
-      await UbuntuFlavor.detect(FakePlatform(environment: {
+      UbuntuFlavor.detect(FakePlatform(environment: {
         'XDG_CURRENT_DESKTOP': 'KDE',
       })),
       UbuntuFlavor.kubuntu,
     );
   });
 
-  test('kylin', () async {
+  test('kylin', () {
     expect(
-      await UbuntuFlavor.detect(FakePlatform(environment: {
+      UbuntuFlavor.detect(FakePlatform(environment: {
         'XDG_CURRENT_DESKTOP': 'ukui',
       })),
       UbuntuFlavor.kylin,
     );
   });
 
-  test('lubuntu', () async {
+  test('lubuntu', () {
     expect(
-      await UbuntuFlavor.detect(FakePlatform(environment: {
+      UbuntuFlavor.detect(FakePlatform(environment: {
         'XDG_CURRENT_DESKTOP': 'LXQt',
       })),
       UbuntuFlavor.lubuntu,
     );
   });
 
-  test('mate', () async {
+  test('mate', () {
     expect(
-      await UbuntuFlavor.detect(FakePlatform(environment: {
+      UbuntuFlavor.detect(FakePlatform(environment: {
         'XDG_CURRENT_DESKTOP': 'MATE',
       })),
       UbuntuFlavor.mate,
@@ -103,27 +103,27 @@ void main() {
 
   // TODO: studio
 
-  test('unity', () async {
+  test('unity', () {
     expect(
-      await UbuntuFlavor.detect(FakePlatform(environment: {
+      UbuntuFlavor.detect(FakePlatform(environment: {
         'XDG_CURRENT_DESKTOP': 'Unity:Unity7:ubuntu',
       })),
       UbuntuFlavor.unity,
     );
   });
 
-  test('xubuntu', () async {
+  test('xubuntu', () {
     expect(
-      await UbuntuFlavor.detect(FakePlatform(environment: {
+      UbuntuFlavor.detect(FakePlatform(environment: {
         'XDG_CURRENT_DESKTOP': 'XFCE',
       })),
       UbuntuFlavor.xubuntu,
     );
   });
 
-  test('unknown', () async {
+  test('unknown', () {
     expect(
-      await UbuntuFlavor.detect(FakePlatform(environment: {
+      UbuntuFlavor.detect(FakePlatform(environment: {
         'XDG_CURRENT_DESKTOP': 'foo:bar',
       })),
       isNull,

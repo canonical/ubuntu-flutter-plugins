@@ -2,7 +2,7 @@ import 'package:platform_linux/platform.dart';
 
 import 'ubuntu_flavor.dart';
 
-Future<UbuntuFlavor?> detectUbuntuFlavor(Platform? platform) async {
+UbuntuFlavor? detectUbuntuFlavor(Platform? platform) {
   platform ??= const LocalPlatform();
   if (platform.isBudgie) {
     return UbuntuFlavor.budgie;
