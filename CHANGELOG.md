@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.2.0 (2023-06-22)
+
+## What's Changed
+* refactor: make detect() synchronous by @jpnurmi in https://github.com/ubuntu-flutter-community/ubuntu_flavor/pull/9
+
+
+**Full Changelog**: https://github.com/ubuntu-flutter-community/ubuntu_flavor/compare/v0.1.1...v0.2.0
+
 ## 0.1.1 (2023-06-18)
 
 ## What's Changed
