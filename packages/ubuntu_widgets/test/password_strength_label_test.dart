@@ -107,7 +107,7 @@ void main() {
 
     final widget = tester.widget<Text>(find.text(text));
     expect(widget.style?.color, isNotNull);
-    expect(widget.style!.color, equals(Theme.of(context).successColor));
+    expect(widget.style!.color, equals(Theme.of(context).colorScheme.success));
   });
 }
 
