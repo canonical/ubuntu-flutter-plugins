@@ -141,6 +141,7 @@ class _MenuButtonBuilderState<T> extends State<MenuButtonBuilder<T>> {
       crossAxisUnconstrained: false,
       style: MenuStyle(
         minimumSize: MaterialStatePropertyAll(Size(_width ?? 0, 0)),
+        visualDensity: const VisualDensity(horizontal: 0, vertical: 0),
       ),
       builder: (context, controller, child) {
         return child!;
@@ -239,6 +240,7 @@ class _MenuButtonBuilderState<T> extends State<MenuButtonBuilder<T>> {
         minimumSize: minimumSize ?? const Size(0, _kItemHeight),
         maximumSize: maximumSize ?? const Size(double.infinity, _kItemHeight),
         padding: padding ?? _scaledPadding(context),
+        textStyle: Theme.of(context).textTheme.labelLarge,
       ),
       child: item.child ?? widget.itemBuilder(context, item.value, null),
     );
