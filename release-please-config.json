@@ -2,8 +2,23 @@
   "$schema": "https://github.com/googleapis/release-please/raw/main/schemas/config.json",
   "release-type": "dart",
   "separate-pull-requests": true,
+  "pull-request-title-pattern": "chore: release${component} v${version}",
+  "changelog-sections": [
+    {
+      "type": "feat",
+      "section": ""
+    },
+    {
+      "type": "fix",
+      "section": ""
+    }
+  ],
   "packages": {
-    "packages/ubuntu_localizations": {},
-    "packages/ubuntu_logger": {}
+    "packages/ubuntu_localizations": {
+      "monorepo-tags": true
+    },
+    "packages/ubuntu_logger": {
+      "monorepo-tags": true
+    }
   }
 }
