@@ -11,6 +11,10 @@
     {
       "type": "fix",
       "section": ""
+    },
+    {
+      "type": "l10n",
+      "section": ""
     }
   ],
   "packages": {
