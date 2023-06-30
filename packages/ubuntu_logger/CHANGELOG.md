@@ -1,3 +1,5 @@
+# Changelog
+
 ## 0.0.3
 
 - Make the name optional, default to executable.
