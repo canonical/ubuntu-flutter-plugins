@@ -10,5 +10,6 @@ export 'src/log_view.dart';
 export 'src/menu_button_builder.dart';
 export 'src/override_mouse_cursor.dart';
 export 'src/password_strength_label.dart';
+export 'src/push_button.dart';
 export 'src/slide_show.dart';
 export 'src/validated_form_field.dart';
