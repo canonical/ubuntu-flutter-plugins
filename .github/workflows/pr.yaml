@@ -1,0 +1,8 @@
+name: PR
+
+on:
+  workflow_call:
+
+jobs:
+  semantic-pr:
+    uses: ubuntu-flutter-community/actions/.github/workflows/semantic-pr.yaml@main
