@@ -7,5 +7,5 @@ import 'notifier_mixin.dart';
 ///
 /// ![safe_change_notifier](https://github.com/ubuntu-flutter-community/safe_change_notifier/raw/main/images/safe_change_notifier.png)
 class SafeValueNotifier<T> extends ValueNotifier<T> with SafeNotifierMixin {
-  SafeValueNotifier(T value) : super(value);
+  SafeValueNotifier(super.value);
 }
