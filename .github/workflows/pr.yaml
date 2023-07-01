@@ -4,5 +4,5 @@ on:
   pull_request_target:
 
 jobs:
-  semantic-pr:
+  title:
     uses: ubuntu-flutter-community/actions/.github/workflows/semantic-pr.yaml@main
