@@ -345,4 +345,16 @@ class UbuntuLocalizationsFa extends UbuntuLocalizations {
 
   @override
   String get zoomOutLabel => 'کوچک‌نمایی';
+
+  @override
+  String get byte => 'ب';
+
+  @override
+  String get kilobyte => 'ک‌ب';
+
+  @override
+  String get megabyte => 'م‌ب';
+
+  @override
+  String get gigabyte => 'گ‌ب';
 }

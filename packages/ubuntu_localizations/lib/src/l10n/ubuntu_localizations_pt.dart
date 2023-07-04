@@ -345,6 +345,18 @@ class UbuntuLocalizationsPt extends UbuntuLocalizations {
 
   @override
   String get zoomOutLabel => 'Reduzir';
+
+  @override
+  String get byte => 'B';
+
+  @override
+  String get kilobyte => 'kB';
+
+  @override
+  String get megabyte => 'MB';
+
+  @override
+  String get gigabyte => 'GB';
 }
 
 /// The translations for Portuguese, as used in Brazil (`pt_BR`).
@@ -692,4 +704,16 @@ class UbuntuLocalizationsPtBr extends UbuntuLocalizationsPt {
 
   @override
   String get zoomOutLabel => 'Diminuir o Zoom';
+
+  @override
+  String get byte => 'B';
+
+  @override
+  String get kilobyte => 'kB';
+
+  @override
+  String get megabyte => 'MB';
+
+  @override
+  String get gigabyte => 'GB';
 }

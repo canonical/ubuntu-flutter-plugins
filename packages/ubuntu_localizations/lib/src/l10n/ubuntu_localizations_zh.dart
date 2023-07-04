@@ -345,6 +345,18 @@ class UbuntuLocalizationsZh extends UbuntuLocalizations {
 
   @override
   String get zoomOutLabel => '缩小';
+
+  @override
+  String get byte => 'B';
+
+  @override
+  String get kilobyte => 'kB';
+
+  @override
+  String get megabyte => 'MB';
+
+  @override
+  String get gigabyte => 'GB';
 }
 
 /// The translations for Chinese, as used in Taiwan (`zh_TW`).

@@ -345,4 +345,16 @@ class UbuntuLocalizationsFr extends UbuntuLocalizations {
 
   @override
   String get zoomOutLabel => 'Dézoomer';
+
+  @override
+  String get byte => 'o';
+
+  @override
+  String get kilobyte => 'Ko';
+
+  @override
+  String get megabyte => 'Mo';
+
+  @override
+  String get gigabyte => 'Go';
 }

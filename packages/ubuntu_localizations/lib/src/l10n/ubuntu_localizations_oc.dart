@@ -345,4 +345,16 @@ class UbuntuLocalizationsOc extends UbuntuLocalizations {
 
   @override
   String get zoomOutLabel => 'Reduire';
+
+  @override
+  String get byte => 'o';
+
+  @override
+  String get kilobyte => 'kB';
+
+  @override
+  String get megabyte => 'Mo';
+
+  @override
+  String get gigabyte => 'Go';
 }
