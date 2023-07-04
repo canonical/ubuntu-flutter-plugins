@@ -1,0 +1,12 @@
+name: PR
+
+on:
+  pull_request_target:
+    types:
+      - opened
+      - edited
+      - synchronize
+
+jobs:
+  title:
+    uses: ubuntu-flutter-community/actions/.github/workflows/semantic-pr.yaml@main
