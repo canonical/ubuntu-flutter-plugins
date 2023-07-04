@@ -217,5 +217,9 @@
   "megabyte": "Mt",
   "@megabyte": {},
   "gigabyte": "Gt",
-  "@gigabyte": {}
+  "@gigabyte": {},
+  "terabyte": "Tt",
+  "@terabyte": {},
+  "petabyte": "Pt",
+  "@petabyte": {}
 }

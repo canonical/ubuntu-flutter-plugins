@@ -944,6 +944,18 @@ abstract class UbuntuLocalizations {
   /// In en, this message translates to:
   /// **'GB'**
   String get gigabyte;
+
+  /// No description provided for @terabyte.
+  ///
+  /// In en, this message translates to:
+  /// **'TB'**
+  String get terabyte;
+
+  /// No description provided for @petabyte.
+  ///
+  /// In en, this message translates to:
+  /// **'PB'**
+  String get petabyte;
 }
 
 class _UbuntuLocalizationsDelegate extends LocalizationsDelegate<UbuntuLocalizations> {

@@ -357,4 +357,10 @@ class UbuntuLocalizationsSi extends UbuntuLocalizations {
 
   @override
   String get gigabyte => 'ගි.බ.';
+
+  @override
+  String get terabyte => 'TB';
+
+  @override
+  String get petabyte => 'PB';
 }

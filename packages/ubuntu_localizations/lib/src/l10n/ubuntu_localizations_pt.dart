@@ -357,6 +357,12 @@ class UbuntuLocalizationsPt extends UbuntuLocalizations {
 
   @override
   String get gigabyte => 'GB';
+
+  @override
+  String get terabyte => 'TB';
+
+  @override
+  String get petabyte => 'PB';
 }
 
 /// The translations for Portuguese, as used in Brazil (`pt_BR`).

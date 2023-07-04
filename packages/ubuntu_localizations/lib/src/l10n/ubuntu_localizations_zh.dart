@@ -357,6 +357,12 @@ class UbuntuLocalizationsZh extends UbuntuLocalizations {
 
   @override
   String get gigabyte => 'GB';
+
+  @override
+  String get terabyte => 'TB';
+
+  @override
+  String get petabyte => 'PB';
 }
 
 /// The translations for Chinese, as used in Taiwan (`zh_TW`).

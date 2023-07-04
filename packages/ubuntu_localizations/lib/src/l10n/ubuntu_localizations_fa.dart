@@ -357,4 +357,10 @@ class UbuntuLocalizationsFa extends UbuntuLocalizations {
 
   @override
   String get gigabyte => 'گ‌ب';
+
+  @override
+  String get terabyte => 'TB';
+
+  @override
+  String get petabyte => 'PB';
 }
