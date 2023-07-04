@@ -8,6 +8,7 @@ void main() {
   final fi = UbuntuLocalizationsFi();
 
   test('b', () {
+    expect(en.formatByteSize(0), '0 B');
     expect(en.formatByteSize(1), '1 B');
     expect(en.formatByteSize(1, precision: 1), '1.0 B');
     expect(en.formatByteSize(1, precision: 3), '1.000 B');
