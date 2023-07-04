@@ -229,5 +229,13 @@
   "zoomOutLabel": "축소",
   "@zoomOutLabel": {},
   "skipLabel": "넘기기",
-  "@skipLabel": {}
+  "@skipLabel": {},
+  "byte": "B",
+  "@byte": {},
+  "kilobyte": "kB",
+  "@kilobyte": {},
+  "megabyte": "MB",
+  "@megabyte": {},
+  "gigabyte": "GB",
+  "@gigabyte": {}
 }

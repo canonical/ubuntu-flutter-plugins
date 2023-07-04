@@ -215,5 +215,13 @@
   "decreaseLabel": "Diminuer",
   "@decreaseLabel": {},
   "doneLabel": "Terminé",
-  "@doneLabel": {}
+  "@doneLabel": {},
+  "byte": "o",
+  "@byte": {},
+  "kilobyte": "Ko",
+  "@kilobyte": {},
+  "megabyte": "Mo",
+  "@megabyte": {},
+  "gigabyte": "Go",
+  "@gigabyte": {}
 }

@@ -23,5 +23,13 @@
   "yesLabel": "Sì",
   "@yesLabel": {},
   "noLabel": "No",
-  "@noLabel": {}
+  "@noLabel": {},
+  "byte": "B",
+  "@byte": {},
+  "kilobyte": "kB",
+  "@kilobyte": {},
+  "megabyte": "MB",
+  "@megabyte": {},
+  "gigabyte": "GB",
+  "@gigabyte": {}
 }

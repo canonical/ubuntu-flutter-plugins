@@ -227,5 +227,13 @@
   "zoomInLabel": "放大",
   "@zoomInLabel": {},
   "zoomOutLabel": "缩小",
-  "@zoomOutLabel": {}
+  "@zoomOutLabel": {},
+  "byte": "B",
+  "@byte": {},
+  "kilobyte": "kB",
+  "@kilobyte": {},
+  "megabyte": "MB",
+  "@megabyte": {},
+  "gigabyte": "GB",
+  "@gigabyte": {}
 }

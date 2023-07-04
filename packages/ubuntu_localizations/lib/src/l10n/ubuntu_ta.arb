@@ -9,5 +9,9 @@
   "yesLabel": "ஆம்",
   "@yesLabel": {},
   "noLabel": "இல்லை",
-  "@noLabel": {}
+  "@noLabel": {},
+  "megabyte": "எம்பி",
+  "@megabyte": {},
+  "gigabyte": "ஜிபி",
+  "@gigabyte": {}
 }

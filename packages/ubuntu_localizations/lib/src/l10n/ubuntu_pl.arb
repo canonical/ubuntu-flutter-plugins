@@ -229,5 +229,13 @@
   "retryLabel": "Ponów",
   "@retryLabel": {},
   "skipLabel": "Pomiń",
-  "@skipLabel": {}
+  "@skipLabel": {},
+  "byte": "B",
+  "@byte": {},
+  "kilobyte": "kB",
+  "@kilobyte": {},
+  "megabyte": "MB",
+  "@megabyte": {},
+  "gigabyte": "GB",
+  "@gigabyte": {}
 }

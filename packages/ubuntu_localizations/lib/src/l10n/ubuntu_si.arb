@@ -219,5 +219,13 @@
   "strikeThroughLabel": "කපා හැරීම",
   "@strikeThroughLabel": {},
   "controlKey": "පාලන",
-  "@controlKey": {}
+  "@controlKey": {},
+  "byte": "බ.",
+  "@byte": {},
+  "kilobyte": "කි.බ.",
+  "@kilobyte": {},
+  "megabyte": "මෙ.බ.",
+  "@megabyte": {},
+  "gigabyte": "ගි.බ.",
+  "@gigabyte": {}
 }

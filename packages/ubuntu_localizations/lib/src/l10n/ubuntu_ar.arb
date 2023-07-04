@@ -25,5 +25,7 @@
   "yesLabel": "نعم",
   "@yesLabel": {},
   "noLabel": "لا",
-  "@noLabel": {}
+  "@noLabel": {},
+  "megabyte": "م.ب",
+  "@megabyte": {}
 }

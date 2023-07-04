@@ -229,5 +229,13 @@
   "zoomInLabel": "Zoom In",
   "@zoomInLabel": {},
   "zoomOutLabel": "Zoom Out",
-  "@zoomOutLabel": {}
+  "@zoomOutLabel": {},
+  "byte": "B",
+  "@byte": {},
+  "kilobyte": "kB",
+  "@kilobyte": {},
+  "megabyte": "MB",
+  "@megabyte": {},
+  "gigabyte": "GB",
+  "@gigabyte": {}
 }

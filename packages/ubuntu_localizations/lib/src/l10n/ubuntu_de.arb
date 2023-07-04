@@ -231,5 +231,13 @@
   "upLabel": "Nach oben",
   "@upLabel": {},
   "updateLabel": "Aktualisieren",
-  "@updateLabel": {}
+  "@updateLabel": {},
+  "byte": "B",
+  "@byte": {},
+  "kilobyte": "kB",
+  "@kilobyte": {},
+  "megabyte": "MB",
+  "@megabyte": {},
+  "gigabyte": "GB",
+  "@gigabyte": {}
 }

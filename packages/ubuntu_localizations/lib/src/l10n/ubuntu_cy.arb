@@ -9,5 +9,13 @@
   "yesLabel": "Ie",
   "@yesLabel": {},
   "noLabel": "Na",
-  "@noLabel": {}
+  "@noLabel": {},
+  "byte": "B",
+  "@byte": {},
+  "kilobyte": "kB",
+  "@kilobyte": {},
+  "megabyte": "MB",
+  "@megabyte": {},
+  "gigabyte": "GB",
+  "@gigabyte": {}
 }

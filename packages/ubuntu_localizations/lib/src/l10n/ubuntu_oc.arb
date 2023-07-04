@@ -229,5 +229,13 @@
   "skipLabel": "Ignorar",
   "@skipLabel": {},
   "upLabel": "Amont",
-  "@upLabel": {}
+  "@upLabel": {},
+  "byte": "o",
+  "@byte": {},
+  "kilobyte": "kB",
+  "@kilobyte": {},
+  "megabyte": "Mo",
+  "@megabyte": {},
+  "gigabyte": "Go",
+  "@gigabyte": {}
 }

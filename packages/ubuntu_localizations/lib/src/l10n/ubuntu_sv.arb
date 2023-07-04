@@ -227,5 +227,13 @@
   "ascendingLabel": "Stigande",
   "@ascendingLabel": {},
   "descendingLabel": "Nedåtgående",
-  "@descendingLabel": {}
+  "@descendingLabel": {},
+  "byte": "B",
+  "@byte": {},
+  "kilobyte": "kB",
+  "@kilobyte": {},
+  "megabyte": "MB",
+  "@megabyte": {},
+  "gigabyte": "GB",
+  "@gigabyte": {}
 }
