@@ -229,5 +229,13 @@
   "skipLabel": "Preterpasi",
   "@skipLabel": {},
   "warningLabel": "Averto",
-  "@warningLabel": {}
+  "@warningLabel": {},
+  "byte": "B",
+  "@byte": {},
+  "kilobyte": "kB",
+  "@kilobyte": {},
+  "megabyte": "MB",
+  "@megabyte": {},
+  "gigabyte": "GB",
+  "@gigabyte": {}
 }

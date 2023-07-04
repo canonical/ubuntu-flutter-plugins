@@ -227,5 +227,13 @@
   "zoomInLabel": "Priblížiť",
   "@zoomInLabel": {},
   "zoomOutLabel": "Oddialiť",
-  "@zoomOutLabel": {}
+  "@zoomOutLabel": {},
+  "byte": "B",
+  "@byte": {},
+  "kilobyte": "kB",
+  "@kilobyte": {},
+  "megabyte": "MB",
+  "@megabyte": {},
+  "gigabyte": "GB",
+  "@gigabyte": {}
 }

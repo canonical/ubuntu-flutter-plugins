@@ -225,5 +225,13 @@
   "newLabel": "Новый",
   "@newLabel": {},
   "submitLabel": "Отправить",
-  "@submitLabel": {}
+  "@submitLabel": {},
+  "byte": "Б",
+  "@byte": {},
+  "kilobyte": "КБ",
+  "@kilobyte": {},
+  "megabyte": "МБ",
+  "@megabyte": {},
+  "gigabyte": "ГБ",
+  "@gigabyte": {}
 }

@@ -227,5 +227,13 @@
   "zoomInLabel": "Přiblížit",
   "@zoomInLabel": {},
   "insertLabel": "Vložit",
-  "@insertLabel": {}
+  "@insertLabel": {},
+  "byte": "B",
+  "@byte": {},
+  "kilobyte": "kB",
+  "@kilobyte": {},
+  "megabyte": "MB",
+  "@megabyte": {},
+  "gigabyte": "GB",
+  "@gigabyte": {}
 }

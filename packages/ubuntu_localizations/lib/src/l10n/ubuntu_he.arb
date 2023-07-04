@@ -229,5 +229,13 @@
   "retryLabel": "ניסיון חוזר",
   "@retryLabel": {},
   "skipLabel": "דילוג",
-  "@skipLabel": {}
+  "@skipLabel": {},
+  "byte": "ב׳",
+  "@byte": {},
+  "kilobyte": "ק״ב",
+  "@kilobyte": {},
+  "megabyte": "מ״ב",
+  "@megabyte": {},
+  "gigabyte": "ג״ב",
+  "@gigabyte": {}
 }

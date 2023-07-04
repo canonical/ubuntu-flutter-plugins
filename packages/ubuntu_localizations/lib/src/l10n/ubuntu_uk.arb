@@ -23,5 +23,13 @@
   "yesLabel": "Так",
   "@yesLabel": {},
   "noLabel": "Ні",
-  "@noLabel": {}
+  "@noLabel": {},
+  "byte": "Б",
+  "@byte": {},
+  "kilobyte": "КБ",
+  "@kilobyte": {},
+  "megabyte": "МБ",
+  "@megabyte": {},
+  "gigabyte": "ГБ",
+  "@gigabyte": {}
 }

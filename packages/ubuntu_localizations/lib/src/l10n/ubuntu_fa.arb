@@ -227,5 +227,13 @@
   "skipLabel": "پرش",
   "@skipLabel": {},
   "zoomInLabel": "بزرگ‌نمایی",
-  "@zoomInLabel": {}
+  "@zoomInLabel": {},
+  "byte": "ب",
+  "@byte": {},
+  "kilobyte": "ک‌ب",
+  "@kilobyte": {},
+  "megabyte": "م‌ب",
+  "@megabyte": {},
+  "gigabyte": "گ‌ب",
+  "@gigabyte": {}
 }

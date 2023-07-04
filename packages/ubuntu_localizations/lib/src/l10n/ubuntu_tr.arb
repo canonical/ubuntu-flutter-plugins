@@ -227,5 +227,13 @@
   "zoomInLabel": "Yakınlaştır",
   "@zoomInLabel": {},
   "zoomOutLabel": "Uzaklaştır",
-  "@zoomOutLabel": {}
+  "@zoomOutLabel": {},
+  "byte": "B",
+  "@byte": {},
+  "kilobyte": "kB",
+  "@kilobyte": {},
+  "megabyte": "MB",
+  "@megabyte": {},
+  "gigabyte": "GB",
+  "@gigabyte": {}
 }

@@ -209,5 +209,13 @@
   "decreaseLabel": "Vähennä",
   "@decreaseLabel": {},
   "increaseLabel": "Lisää",
-  "@increaseLabel": {}
+  "@increaseLabel": {},
+  "byte": "t",
+  "@byte": {},
+  "kilobyte": "kt",
+  "@kilobyte": {},
+  "megabyte": "Mt",
+  "@megabyte": {},
+  "gigabyte": "Gt",
+  "@gigabyte": {}
 }
