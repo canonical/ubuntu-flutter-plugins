@@ -1,5 +1,10 @@
 # Changelog
 
+## [0.3.3](https://github.com/canonical/ubuntu-flutter-plugins/compare/ubuntu_localizations-v0.3.2...ubuntu_localizations-v0.3.3) (2023-07-04)
+
+
+* **ubuntu_localizations:** fix formatByteSize(0) ([#272](https://github.com/canonical/ubuntu-flutter-plugins/issues/272)) ([b7c05a9](https://github.com/canonical/ubuntu-flutter-plugins/commit/b7c05a9c74d949f90aa2342e9207c2ed15b9e233))
+
 ## [0.3.2](https://github.com/canonical/ubuntu-flutter-plugins/compare/ubuntu_localizations-v0.3.1...ubuntu_localizations-v0.3.2) (2023-07-04)
 
 
