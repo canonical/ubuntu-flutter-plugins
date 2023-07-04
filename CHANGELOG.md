@@ -1,5 +1,15 @@
 # Changelog
 
+## 1.0.2 (2023-07-04)
+
+## What's Changed
+* ci: specify flutter version as env var by @jpnurmi in https://github.com/ubuntu-flutter-community/wizard_router/pull/61
+* chore(deps): update dependency safe_change_notifier to ^0.3.0 by @renovate in https://github.com/ubuntu-flutter-community/wizard_router/pull/63
+* ci: reuse pr title & release actions from ufc/actions by @jpnurmi in https://github.com/ubuntu-flutter-community/wizard_router/pull/64
+
+
+**Full Changelog**: https://github.com/ubuntu-flutter-community/wizard_router/compare/v1.0.1...v1.0.2
+
 ## 1.0.1 (2023-06-16)
 
 ## What's Changed
