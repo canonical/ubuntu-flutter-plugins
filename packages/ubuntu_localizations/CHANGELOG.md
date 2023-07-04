@@ -1,5 +1,10 @@
 # Changelog
 
+## [0.3.2](https://github.com/canonical/ubuntu-flutter-plugins/compare/ubuntu_localizations-v0.3.1...ubuntu_localizations-v0.3.2) (2023-07-04)
+
+
+* add context.formatByteSize() extension for convenience ([#270](https://github.com/canonical/ubuntu-flutter-plugins/issues/270)) ([c665f1e](https://github.com/canonical/ubuntu-flutter-plugins/commit/c665f1ef6750c04961eeae44ef4705c20a7b5168))
+
 ## [0.3.1](https://github.com/canonical/ubuntu-flutter-plugins/compare/ubuntu_localizations-v0.3.0...ubuntu_localizations-v0.3.1) (2023-07-04)
 
 
