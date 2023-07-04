@@ -29,6 +29,8 @@
 
 import 'dart:math' as math;
 
+import 'package:flutter/widgets.dart';
+
 import 'localizations.dart';
 
 /// Localized data size formatting.
@@ -45,5 +47,14 @@ extension UbuntuDataSizeLocalizations on UbuntuLocalizations {
     final sz =
         (bytes / math.pow(divider, idx)).toStringAsFixed(p ?? idx.clamp(0, 2));
     return '$sz ${units[idx]}';
+  }
+}
+
+/// Localized data size formatting.
+extension UbuntuDataSizeContext on BuildContext {
+  /// Formats [bytes] as a localized human readable string.
+  String formatByteSize(num bytes, {int? precision}) {
+    return UbuntuLocalizations.of(this)
+        .formatByteSize(bytes, precision: precision);
   }
 }
