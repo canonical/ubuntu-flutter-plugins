@@ -357,4 +357,10 @@ class UbuntuLocalizationsFi extends UbuntuLocalizations {
 
   @override
   String get gigabyte => 'Gt';
+
+  @override
+  String get terabyte => 'Tt';
+
+  @override
+  String get petabyte => 'Pt';
 }

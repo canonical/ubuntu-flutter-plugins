@@ -357,4 +357,10 @@ class UbuntuLocalizationsFr extends UbuntuLocalizations {
 
   @override
   String get gigabyte => 'Go';
+
+  @override
+  String get terabyte => 'TB';
+
+  @override
+  String get petabyte => 'PB';
 }
