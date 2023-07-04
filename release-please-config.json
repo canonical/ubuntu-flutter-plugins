@@ -5,6 +5,10 @@
   "pull-request-title-pattern": "chore: release${component} v${version}",
   "changelog-sections": [
     {
+      "type": "chore",
+      "section": ""
+    },
+    {
       "type": "feat",
       "section": ""
     },
