@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.3.0](https://github.com/canonical/ubuntu-flutter-plugins/compare/ubuntu_localizations-v0.2.1...ubuntu_localizations-v0.3.0) (2023-07-04)
+
+
+* add tera & peta ([cc5a871](https://github.com/canonical/ubuntu-flutter-plugins/commit/cc5a871e9755a00806fc06bdd2a352336a6631a0))
+* add UbuntuLocalizations.formatByteSize() ([0c1b39a](https://github.com/canonical/ubuntu-flutter-plugins/commit/0c1b39aebc16eb4863e4f4d62077c9c17a120229))
+* copyright ([c36c4fe](https://github.com/canonical/ubuntu-flutter-plugins/commit/c36c4feeebe7977cfacc5451cec19e6671e835d0))
+* import translated data units from udi ([#262](https://github.com/canonical/ubuntu-flutter-plugins/issues/262)) ([4519543](https://github.com/canonical/ubuntu-flutter-plugins/commit/45195437c53037eccd5658c59ed08be524ee5949))
+
 ## 0.2.1
 
 - Update translations.
