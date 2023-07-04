@@ -39,8 +39,10 @@ extension UbuntuDataSizeLocalizations on UbuntuLocalizations {
   String formatByteSize(num bytes, {int? precision}) {
     const divider = 1000;
     final units = [byte, kilobyte, megabyte, gigabyte, terabyte, petabyte];
-    final idx =
-        (math.log(bytes.abs()) ~/ math.log(divider)).clamp(0, units.length - 1);
+    final idx = bytes == 0
+        ? 0
+        : (math.log(bytes.abs()) ~/ math.log(divider))
+            .clamp(0, units.length - 1);
     final p = precision == null && (bytes < divider || bytes % divider == 0)
         ? 0
         : precision;
