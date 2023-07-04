@@ -345,4 +345,16 @@ class UbuntuLocalizationsRu extends UbuntuLocalizations {
 
   @override
   String get zoomOutLabel => 'Уменьшить масштаб';
+
+  @override
+  String get byte => 'Б';
+
+  @override
+  String get kilobyte => 'КБ';
+
+  @override
+  String get megabyte => 'МБ';
+
+  @override
+  String get gigabyte => 'ГБ';
 }

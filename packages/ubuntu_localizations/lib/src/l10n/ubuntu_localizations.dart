@@ -920,6 +920,30 @@ abstract class UbuntuLocalizations {
   /// In en, this message translates to:
   /// **'Zoom Out'**
   String get zoomOutLabel;
+
+  /// No description provided for @byte.
+  ///
+  /// In en, this message translates to:
+  /// **'B'**
+  String get byte;
+
+  /// No description provided for @kilobyte.
+  ///
+  /// In en, this message translates to:
+  /// **'kB'**
+  String get kilobyte;
+
+  /// No description provided for @megabyte.
+  ///
+  /// In en, this message translates to:
+  /// **'MB'**
+  String get megabyte;
+
+  /// No description provided for @gigabyte.
+  ///
+  /// In en, this message translates to:
+  /// **'GB'**
+  String get gigabyte;
 }
 
 class _UbuntuLocalizationsDelegate extends LocalizationsDelegate<UbuntuLocalizations> {

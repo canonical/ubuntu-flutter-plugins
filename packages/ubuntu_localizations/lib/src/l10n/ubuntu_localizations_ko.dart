@@ -345,4 +345,16 @@ class UbuntuLocalizationsKo extends UbuntuLocalizations {
 
   @override
   String get zoomOutLabel => '축소';
+
+  @override
+  String get byte => 'B';
+
+  @override
+  String get kilobyte => 'kB';
+
+  @override
+  String get megabyte => 'MB';
+
+  @override
+  String get gigabyte => 'GB';
 }

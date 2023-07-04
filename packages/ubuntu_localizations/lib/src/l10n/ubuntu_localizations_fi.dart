@@ -345,4 +345,16 @@ class UbuntuLocalizationsFi extends UbuntuLocalizations {
 
   @override
   String get zoomOutLabel => 'Loitonna';
+
+  @override
+  String get byte => 't';
+
+  @override
+  String get kilobyte => 'kt';
+
+  @override
+  String get megabyte => 'Mt';
+
+  @override
+  String get gigabyte => 'Gt';
 }

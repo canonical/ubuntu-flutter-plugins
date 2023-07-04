@@ -345,4 +345,16 @@ class UbuntuLocalizationsSi extends UbuntuLocalizations {
 
   @override
   String get zoomOutLabel => 'කුඩාලනය';
+
+  @override
+  String get byte => 'බ.';
+
+  @override
+  String get kilobyte => 'කි.බ.';
+
+  @override
+  String get megabyte => 'මෙ.බ.';
+
+  @override
+  String get gigabyte => 'ගි.බ.';
 }

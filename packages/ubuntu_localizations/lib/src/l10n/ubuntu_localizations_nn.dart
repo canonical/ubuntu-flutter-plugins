@@ -345,4 +345,16 @@ class UbuntuLocalizationsNn extends UbuntuLocalizations {
 
   @override
   String get zoomOutLabel => 'Zoom Out';
+
+  @override
+  String get byte => 'B';
+
+  @override
+  String get kilobyte => 'kB';
+
+  @override
+  String get megabyte => 'MB';
+
+  @override
+  String get gigabyte => 'GB';
 }
