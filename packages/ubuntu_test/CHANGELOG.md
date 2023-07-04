@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.1.0-beta.5
+
+- chore(deps): update dependency ubuntu_localizations to ^0.3.0 (#266)
+
 ## 0.1.0-beta.4
 
 - feat(ubuntu_test): import flutter_html & flutter_svg deps from yaru_test (#228)
