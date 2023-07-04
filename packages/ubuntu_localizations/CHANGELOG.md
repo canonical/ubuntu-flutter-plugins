@@ -1,5 +1,10 @@
 # Changelog
 
+## [0.3.1](https://github.com/canonical/ubuntu-flutter-plugins/compare/ubuntu_localizations-v0.3.0...ubuntu_localizations-v0.3.1) (2023-07-04)
+
+
+* **ubuntu_localizations:** add missing export ([b561eee](https://github.com/canonical/ubuntu-flutter-plugins/commit/b561eee7a329c1b7c4a2144cc58656498f2649b5))
+
 ## [0.3.0](https://github.com/canonical/ubuntu-flutter-plugins/compare/ubuntu_localizations-v0.2.1...ubuntu_localizations-v0.3.0) (2023-07-04)
 
 
