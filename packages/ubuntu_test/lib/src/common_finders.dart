@@ -1,5 +1,6 @@
 import 'package:flutter/widgets.dart';
 import 'package:flutter_html/flutter_html.dart';
+import 'package:flutter_markdown/flutter_markdown.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:ubuntu_localizations/ubuntu_localizations.dart';
@@ -76,6 +77,14 @@ extension UbuntuCommonFinders on CommonFinders {
   Finder html(String data, {bool skipOffstage = true}) {
     return byWidgetPredicate(
       (w) => w is Html && w.data == data,
+      skipOffstage: skipOffstage,
+    );
+  }
+
+  /// Finds [MarkdownBody] by [data].
+  Finder markdownBody(String data, {bool skipOffstage = true}) {
+    return byWidgetPredicate(
+      (w) => w is MarkdownBody && w.data == data,
       skipOffstage: skipOffstage,
     );
   }
