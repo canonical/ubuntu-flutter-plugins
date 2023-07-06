@@ -235,5 +235,9 @@
   "megabyte": "MB",
   "@megabyte": {},
   "gigabyte": "GB",
-  "@gigabyte": {}
+  "@gigabyte": {},
+  "terabyte": "TB",
+  "@terabyte": {},
+  "petabyte": "PB",
+  "@petabyte": {}
 }
