@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.1.0-beta.6
+
+- feat(ubuntu_test): add markdownBody finder (#274)
+
 ## 0.1.0-beta.5
 
 - chore(deps): update dependency ubuntu_localizations to ^0.3.0 (#266)
