@@ -30,8 +30,7 @@
     },
     "packages/ubuntu_test": {
       "monorepo-tags": true,
-      "prerelease": true,
-      "release-as": "0.1.0-beta.6"
+      "prerelease": true
     },
     "packages/ubuntu_widgets": {
       "monorepo-tags": true
