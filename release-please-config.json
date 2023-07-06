@@ -28,10 +28,6 @@
     "packages/ubuntu_logger": {
       "monorepo-tags": true
     },
-    "packages/ubuntu_test": {
-      "monorepo-tags": true,
-      "prerelease": true
-    },
     "packages/ubuntu_widgets": {
       "monorepo-tags": true
     }
