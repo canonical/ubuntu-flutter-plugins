@@ -233,5 +233,9 @@
   "megabyte": "МБ",
   "@megabyte": {},
   "gigabyte": "ГБ",
-  "@gigabyte": {}
+  "@gigabyte": {},
+  "terabyte": "ТБ",
+  "@terabyte": {},
+  "petabyte": "ПБ",
+  "@petabyte": {}
 }
