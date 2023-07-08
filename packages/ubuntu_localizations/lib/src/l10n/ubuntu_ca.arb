@@ -31,5 +31,13 @@
   "megabyte": "MB",
   "@megabyte": {},
   "gigabyte": "GB",
-  "@gigabyte": {}
+  "@gigabyte": {},
+  "altKey": "Alt",
+  "@altKey": {},
+  "controlKey": "Control",
+  "@controlKey": {},
+  "shiftKey": "Maj",
+  "@shiftKey": {},
+  "aboutLabel": "Quant a",
+  "@aboutLabel": {}
 }
