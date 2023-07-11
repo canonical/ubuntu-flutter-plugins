@@ -31,5 +31,11 @@
   "megabyte": "МБ",
   "@megabyte": {},
   "gigabyte": "ГБ",
-  "@gigabyte": {}
+  "@gigabyte": {},
+  "connectLabel": "З'єднатися",
+  "@connectLabel": {},
+  "revertLabel": "Відбій",
+  "@revertLabel": {},
+  "restartLabel": "Перезавантажити",
+  "@restartLabel": {}
 }

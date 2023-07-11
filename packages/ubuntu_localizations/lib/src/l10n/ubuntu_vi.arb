@@ -23,5 +23,7 @@
   "yesLabel": "Có",
   "@yesLabel": {},
   "noLabel": "Không",
-  "@noLabel": {}
+  "@noLabel": {},
+  "restartLabel": "Khởi động lại",
+  "@restartLabel": {}
 }

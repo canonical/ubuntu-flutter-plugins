@@ -221,5 +221,7 @@
   "terabyte": "Tt",
   "@terabyte": {},
   "petabyte": "Pt",
-  "@petabyte": {}
+  "@petabyte": {},
+  "restartLabel": "Käynnistä uudelleen",
+  "@restartLabel": {}
 }

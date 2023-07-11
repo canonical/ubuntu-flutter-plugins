@@ -5,5 +5,7 @@
   "okLabel": "འགྲིག",
   "@okLabel": {},
   "cancelLabel": "ཕྱིར་འཐེན།",
-  "@cancelLabel": {}
+  "@cancelLabel": {},
+  "revertLabel": "སླར་གསོ",
+  "@revertLabel": {}
 }

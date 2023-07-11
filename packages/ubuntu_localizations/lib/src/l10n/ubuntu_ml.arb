@@ -31,5 +31,11 @@
   "megabyte": "MB",
   "@megabyte": {},
   "gigabyte": "GB",
-  "@gigabyte": {}
+  "@gigabyte": {},
+  "connectLabel": "ബന്ധിപ്പിക്കുക",
+  "@connectLabel": {},
+  "revertLabel": "തിരിച്ചെടുക്കുക",
+  "@revertLabel": {},
+  "restartLabel": "പുനരാരംഭിക്കുക",
+  "@restartLabel": {}
 }

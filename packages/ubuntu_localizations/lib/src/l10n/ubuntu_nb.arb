@@ -31,5 +31,11 @@
   "megabyte": "MB",
   "@megabyte": {},
   "gigabyte": "GB",
-  "@gigabyte": {}
+  "@gigabyte": {},
+  "connectLabel": "Tilkoble",
+  "@connectLabel": {},
+  "revertLabel": "Tilbakefør",
+  "@revertLabel": {},
+  "restartLabel": "Start på nytt",
+  "@restartLabel": {}
 }

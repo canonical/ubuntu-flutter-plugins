@@ -23,5 +23,9 @@
   "yesLabel": "დიახ",
   "@yesLabel": {},
   "noLabel": "არა",
-  "@noLabel": {}
+  "@noLabel": {},
+  "revertLabel": "აღდგენა",
+  "@revertLabel": {},
+  "restartLabel": "გადატვირთვა",
+  "@restartLabel": {}
 }

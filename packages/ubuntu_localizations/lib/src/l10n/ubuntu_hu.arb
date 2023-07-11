@@ -76,7 +76,7 @@
   "@quitLabel": {},
   "restoreLabel": "Visszaállítás",
   "@restoreLabel": {},
-  "revertLabel": "Visszavonás",
+  "revertLabel": "Visszaállítás",
   "@revertLabel": {},
   "rewindLabel": "Visszatekerés",
   "@rewindLabel": {},
@@ -235,5 +235,7 @@
   "megabyte": "MB",
   "@megabyte": {},
   "gigabyte": "GB",
-  "@gigabyte": {}
+  "@gigabyte": {},
+  "restartLabel": "Újraindítás",
+  "@restartLabel": {}
 }

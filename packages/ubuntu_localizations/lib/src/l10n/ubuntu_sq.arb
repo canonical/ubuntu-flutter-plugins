@@ -17,5 +17,11 @@
   "megabyte": "MB",
   "@megabyte": {},
   "gigabyte": "GB",
-  "@gigabyte": {}
+  "@gigabyte": {},
+  "connectLabel": "Lidhu",
+  "@connectLabel": {},
+  "revertLabel": "Rikthe",
+  "@revertLabel": {},
+  "restartLabel": "Rinis",
+  "@restartLabel": {}
 }

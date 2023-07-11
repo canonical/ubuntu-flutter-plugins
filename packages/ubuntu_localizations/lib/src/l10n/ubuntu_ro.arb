@@ -5,5 +5,7 @@
   "cancelLabel": "Renunță",
   "@cancelLabel": {},
   "noLabel": "Nu",
-  "@noLabel": {}
+  "@noLabel": {},
+  "restartLabel": "Repornește",
+  "@restartLabel": {}
 }

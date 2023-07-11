@@ -23,5 +23,9 @@
   "yesLabel": "Да",
   "@yesLabel": {},
   "noLabel": "Не",
-  "@noLabel": {}
+  "@noLabel": {},
+  "revertLabel": "Поврати",
+  "@revertLabel": {},
+  "restartLabel": "Рестартуј",
+  "@restartLabel": {}
 }

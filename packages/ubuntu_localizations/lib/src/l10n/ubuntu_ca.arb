@@ -207,5 +207,7 @@
   "zoomOutLabel": "Redueix",
   "@zoomOutLabel": {},
   "skipLabel": "Omet",
-  "@skipLabel": {}
+  "@skipLabel": {},
+  "restartLabel": "Reinicia",
+  "@restartLabel": {}
 }

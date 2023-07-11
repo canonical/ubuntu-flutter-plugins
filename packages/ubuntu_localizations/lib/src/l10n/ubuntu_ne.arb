@@ -11,5 +11,9 @@
   "yesLabel": "हो",
   "@yesLabel": {},
   "noLabel": "नगर्नुहोस्",
-  "@noLabel": {}
+  "@noLabel": {},
+  "revertLabel": "फिर्ता गर्नुहोस्",
+  "@revertLabel": {},
+  "restartLabel": "फेरि सुरु गर्नुहोस्",
+  "@restartLabel": {}
 }

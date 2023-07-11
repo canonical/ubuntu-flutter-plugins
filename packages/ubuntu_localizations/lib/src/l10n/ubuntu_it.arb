@@ -31,5 +31,11 @@
   "megabyte": "MB",
   "@megabyte": {},
   "gigabyte": "GB",
-  "@gigabyte": {}
+  "@gigabyte": {},
+  "connectLabel": "Connetti",
+  "@connectLabel": {},
+  "revertLabel": "Ripristina",
+  "@revertLabel": {},
+  "restartLabel": "Riavvia",
+  "@restartLabel": {}
 }

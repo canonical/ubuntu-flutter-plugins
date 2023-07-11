@@ -26,7 +26,7 @@
   "@connectLabel": {},
   "newLabel": "Novo",
   "@newLabel": {},
-  "revertLabel": "Reverter",
+  "revertLabel": "Desfazer",
   "@revertLabel": {},
   "retryLabel": "Tentar Novamente",
   "@retryLabel": {},
@@ -239,5 +239,7 @@
   "megabyte": "MB",
   "@megabyte": {},
   "gigabyte": "GB",
-  "@gigabyte": {}
+  "@gigabyte": {},
+  "restartLabel": "Reiniciar",
+  "@restartLabel": {}
 }

@@ -241,5 +241,7 @@
   "petabyte": "פ״ב",
   "@petabyte": {},
   "terabyte": "ט״ב",
-  "@terabyte": {}
+  "@terabyte": {},
+  "restartLabel": "הפעלה מחדש",
+  "@restartLabel": {}
 }

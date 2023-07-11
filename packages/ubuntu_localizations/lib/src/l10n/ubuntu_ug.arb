@@ -5,5 +5,7 @@
   "yesLabel": "ھەئە",
   "@yesLabel": {},
   "noLabel": "ياق",
-  "@noLabel": {}
+  "@noLabel": {},
+  "revertLabel": "ئەسلىگە قايتۇر",
+  "@revertLabel": {}
 }

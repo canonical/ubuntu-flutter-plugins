@@ -9,5 +9,9 @@
   "yesLabel": "አዎ",
   "@yesLabel": {},
   "noLabel": "አይ",
-  "@noLabel": {}
+  "@noLabel": {},
+  "revertLabel": "ወደ ነበረበት መመለስ",
+  "@revertLabel": {},
+  "restartLabel": "እንደገና ጀምር",
+  "@restartLabel": {}
 }

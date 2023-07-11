@@ -3,5 +3,7 @@
   "countryCode": "NL",
   "languageName": "Nederlands",
   "backAction": "Terug",
-  "continueAction": "Volgende"
+  "continueAction": "Volgende",
+  "restartLabel": "Opnieuw opstarten",
+  "@restartLabel": {}
 }

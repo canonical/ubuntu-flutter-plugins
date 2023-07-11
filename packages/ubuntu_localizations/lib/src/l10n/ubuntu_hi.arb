@@ -11,5 +11,7 @@
   "yesLabel": "हाँ",
   "@yesLabel": {},
   "noLabel": "नहीं",
-  "@noLabel": {}
+  "@noLabel": {},
+  "revertLabel": "प्रत्यावर्त",
+  "@revertLabel": {}
 }

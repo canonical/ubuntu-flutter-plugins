@@ -39,5 +39,11 @@
   "megabyte": "MB",
   "@megabyte": {},
   "gigabyte": "GB",
-  "@gigabyte": {}
+  "@gigabyte": {},
+  "connectLabel": "接続",
+  "@connectLabel": {},
+  "revertLabel": "元に戻す",
+  "@revertLabel": {},
+  "restartLabel": "再起動",
+  "@restartLabel": {}
 }

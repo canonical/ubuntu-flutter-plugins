@@ -227,5 +227,7 @@
   "megabyte": "මෙ.බ.",
   "@megabyte": {},
   "gigabyte": "ගි.බ.",
-  "@gigabyte": {}
+  "@gigabyte": {},
+  "restartLabel": "යළි අරඹන්න",
+  "@restartLabel": {}
 }

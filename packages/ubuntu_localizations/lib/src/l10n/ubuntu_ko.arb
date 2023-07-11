@@ -42,7 +42,7 @@
   "@propertiesLabel": {},
   "restoreLabel": "복구",
   "@restoreLabel": {},
-  "revertLabel": "복구",
+  "revertLabel": "되돌리기",
   "@revertLabel": {},
   "submitLabel": "제출",
   "@submitLabel": {},
@@ -62,7 +62,7 @@
   "@applyLabel": {},
   "clearLabel": "지우기",
   "@clearLabel": {},
-  "connectLabel": "연결",
+  "connectLabel": "연결하기",
   "@connectLabel": {},
   "errorLabel": "오류",
   "@errorLabel": {},
@@ -237,5 +237,7 @@
   "megabyte": "MB",
   "@megabyte": {},
   "gigabyte": "GB",
-  "@gigabyte": {}
+  "@gigabyte": {},
+  "restartLabel": "다시 시작",
+  "@restartLabel": {}
 }

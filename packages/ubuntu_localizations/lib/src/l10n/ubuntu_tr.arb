@@ -172,7 +172,7 @@
   "@resetLabel": {},
   "restoreLabel": "Geri Yükle",
   "@restoreLabel": {},
-  "revertLabel": "Geri Al",
+  "revertLabel": "Geri al",
   "@revertLabel": {},
   "stopLabel": "Durdur",
   "@stopLabel": {},
@@ -235,5 +235,7 @@
   "megabyte": "MB",
   "@megabyte": {},
   "gigabyte": "GB",
-  "@gigabyte": {}
+  "@gigabyte": {},
+  "restartLabel": "Yeniden başlat",
+  "@restartLabel": {}
 }
