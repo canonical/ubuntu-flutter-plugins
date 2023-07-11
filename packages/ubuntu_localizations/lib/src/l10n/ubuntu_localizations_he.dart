@@ -269,6 +269,9 @@ class UbuntuLocalizationsHe extends UbuntuLocalizations {
   String get resetLabel => 'איפוס';
 
   @override
+  String get restartLabel => 'הפעלה מחדש';
+
+  @override
   String get restoreLabel => 'שחזור';
 
   @override

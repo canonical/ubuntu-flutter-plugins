@@ -269,13 +269,16 @@ class UbuntuLocalizationsSr extends UbuntuLocalizations {
   String get resetLabel => 'Reset';
 
   @override
+  String get restartLabel => 'Рестартуј';
+
+  @override
   String get restoreLabel => 'Restore';
 
   @override
   String get retryLabel => 'Retry';
 
   @override
-  String get revertLabel => 'Revert';
+  String get revertLabel => 'Поврати';
 
   @override
   String get rewindLabel => 'Rewind';

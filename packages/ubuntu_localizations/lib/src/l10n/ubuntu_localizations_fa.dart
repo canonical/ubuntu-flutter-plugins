@@ -269,6 +269,9 @@ class UbuntuLocalizationsFa extends UbuntuLocalizations {
   String get resetLabel => 'بازنشانی';
 
   @override
+  String get restartLabel => 'آغاز دوباره';
+
+  @override
   String get restoreLabel => 'بازگردانی';
 
   @override

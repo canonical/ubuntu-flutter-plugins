@@ -269,6 +269,9 @@ class UbuntuLocalizationsVi extends UbuntuLocalizations {
   String get resetLabel => 'Reset';
 
   @override
+  String get restartLabel => 'Khởi động lại';
+
+  @override
   String get restoreLabel => 'Restore';
 
   @override

@@ -269,13 +269,16 @@ class UbuntuLocalizationsTa extends UbuntuLocalizations {
   String get resetLabel => 'Reset';
 
   @override
+  String get restartLabel => 'மீண்டும் இயக்கு';
+
+  @override
   String get restoreLabel => 'Restore';
 
   @override
   String get retryLabel => 'Retry';
 
   @override
-  String get revertLabel => 'Revert';
+  String get revertLabel => 'மீட்டல்';
 
   @override
   String get rewindLabel => 'Rewind';

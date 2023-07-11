@@ -269,6 +269,9 @@ class UbuntuLocalizationsEl extends UbuntuLocalizations {
   String get resetLabel => 'Reset';
 
   @override
+  String get restartLabel => 'Restart';
+
+  @override
   String get restoreLabel => 'Restore';
 
   @override

@@ -269,13 +269,16 @@ class UbuntuLocalizationsZh extends UbuntuLocalizations {
   String get resetLabel => '重置';
 
   @override
+  String get restartLabel => '重启';
+
+  @override
   String get restoreLabel => '恢复';
 
   @override
   String get retryLabel => '重试';
 
   @override
-  String get revertLabel => '回滚';
+  String get revertLabel => '撤销';
 
   @override
   String get rewindLabel => '倒回';

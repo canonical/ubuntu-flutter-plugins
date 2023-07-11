@@ -80,7 +80,7 @@ class UbuntuLocalizationsAr extends UbuntuLocalizations {
   String get colorLabel => 'Color';
 
   @override
-  String get connectLabel => 'Connect';
+  String get connectLabel => 'اتّصل';
 
   @override
   String get continueLabel => 'Continue';
@@ -269,13 +269,16 @@ class UbuntuLocalizationsAr extends UbuntuLocalizations {
   String get resetLabel => 'Reset';
 
   @override
+  String get restartLabel => 'إعادة تشغيل';
+
+  @override
   String get restoreLabel => 'Restore';
 
   @override
   String get retryLabel => 'Retry';
 
   @override
-  String get revertLabel => 'Revert';
+  String get revertLabel => 'يرجع';
 
   @override
   String get rewindLabel => 'Rewind';

@@ -269,6 +269,9 @@ class UbuntuLocalizationsCa extends UbuntuLocalizations {
   String get resetLabel => 'Restrableix';
 
   @override
+  String get restartLabel => 'Reinicia';
+
+  @override
   String get restoreLabel => 'Restaurar';
 
   @override

@@ -269,6 +269,9 @@ class UbuntuLocalizationsSi extends UbuntuLocalizations {
   String get resetLabel => 'යළි සකසන්න';
 
   @override
+  String get restartLabel => 'යළි අරඹන්න';
+
+  @override
   String get restoreLabel => 'ප්‍රත්‍යර්පණය';
 
   @override

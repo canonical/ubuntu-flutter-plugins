@@ -80,7 +80,7 @@ class UbuntuLocalizationsId extends UbuntuLocalizations {
   String get colorLabel => 'Color';
 
   @override
-  String get connectLabel => 'Connect';
+  String get connectLabel => 'Sambungkan';
 
   @override
   String get continueLabel => 'Continue';
@@ -269,13 +269,16 @@ class UbuntuLocalizationsId extends UbuntuLocalizations {
   String get resetLabel => 'Reset';
 
   @override
+  String get restartLabel => 'Jalankan Ulang';
+
+  @override
   String get restoreLabel => 'Restore';
 
   @override
   String get retryLabel => 'Retry';
 
   @override
-  String get revertLabel => 'Revert';
+  String get revertLabel => 'Kembalikan';
 
   @override
   String get rewindLabel => 'Rewind';

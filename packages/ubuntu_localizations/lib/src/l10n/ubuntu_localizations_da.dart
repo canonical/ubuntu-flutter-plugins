@@ -269,6 +269,9 @@ class UbuntuLocalizationsDa extends UbuntuLocalizations {
   String get resetLabel => 'Nulstil';
 
   @override
+  String get restartLabel => 'Genstart';
+
+  @override
   String get restoreLabel => 'Gendan';
 
   @override

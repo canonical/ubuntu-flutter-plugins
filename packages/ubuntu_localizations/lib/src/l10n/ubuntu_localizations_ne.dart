@@ -269,13 +269,16 @@ class UbuntuLocalizationsNe extends UbuntuLocalizations {
   String get resetLabel => 'Reset';
 
   @override
+  String get restartLabel => 'फेरि सुरु गर्नुहोस्';
+
+  @override
   String get restoreLabel => 'Restore';
 
   @override
   String get retryLabel => 'Retry';
 
   @override
-  String get revertLabel => 'Revert';
+  String get revertLabel => 'फिर्ता गर्नुहोस्';
 
   @override
   String get rewindLabel => 'Rewind';

@@ -80,7 +80,7 @@ class UbuntuLocalizationsNb extends UbuntuLocalizations {
   String get colorLabel => 'Color';
 
   @override
-  String get connectLabel => 'Connect';
+  String get connectLabel => 'Tilkoble';
 
   @override
   String get continueLabel => 'Continue';
@@ -269,13 +269,16 @@ class UbuntuLocalizationsNb extends UbuntuLocalizations {
   String get resetLabel => 'Reset';
 
   @override
+  String get restartLabel => 'Start på nytt';
+
+  @override
   String get restoreLabel => 'Restore';
 
   @override
   String get retryLabel => 'Retry';
 
   @override
-  String get revertLabel => 'Revert';
+  String get revertLabel => 'Tilbakefør';
 
   @override
   String get rewindLabel => 'Rewind';

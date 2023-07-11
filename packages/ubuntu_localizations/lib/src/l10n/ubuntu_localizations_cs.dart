@@ -269,6 +269,9 @@ class UbuntuLocalizationsCs extends UbuntuLocalizations {
   String get resetLabel => 'Vrátit na výchozí';
 
   @override
+  String get restartLabel => 'Restartovat';
+
+  @override
   String get restoreLabel => 'Obnovit';
 
   @override
