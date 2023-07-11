@@ -9,5 +9,7 @@
   "yesLabel": "হ্যাঁ",
   "@yesLabel": {},
   "noLabel": "না",
-  "@noLabel": {}
+  "@noLabel": {},
+  "revertLabel": "পূর্বাবস্থায় প্রত্যাবর্তন",
+  "@revertLabel": {}
 }

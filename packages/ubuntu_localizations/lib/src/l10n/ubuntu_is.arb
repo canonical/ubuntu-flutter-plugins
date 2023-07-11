@@ -23,5 +23,9 @@
   "yesLabel": "Já",
   "@yesLabel": {},
   "noLabel": "Nei",
-  "@noLabel": {}
+  "@noLabel": {},
+  "revertLabel": "Afturkalla",
+  "@revertLabel": {},
+  "restartLabel": "Endurræsa",
+  "@restartLabel": {}
 }

@@ -142,7 +142,7 @@
   "@rightLabel": {},
   "resetLabel": "重置",
   "@resetLabel": {},
-  "revertLabel": "回滚",
+  "revertLabel": "撤销",
   "@revertLabel": {},
   "rewindLabel": "倒回",
   "@rewindLabel": {},
@@ -235,5 +235,7 @@
   "megabyte": "MB",
   "@megabyte": {},
   "gigabyte": "GB",
-  "@gigabyte": {}
+  "@gigabyte": {},
+  "restartLabel": "重启",
+  "@restartLabel": {}
 }

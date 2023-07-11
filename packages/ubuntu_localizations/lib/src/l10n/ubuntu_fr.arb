@@ -223,5 +223,7 @@
   "megabyte": "Mo",
   "@megabyte": {},
   "gigabyte": "Go",
-  "@gigabyte": {}
+  "@gigabyte": {},
+  "restartLabel": "Redémarrer",
+  "@restartLabel": {}
 }

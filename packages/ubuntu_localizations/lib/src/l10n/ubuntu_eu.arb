@@ -23,5 +23,11 @@
   "yesLabel": "Bai",
   "@yesLabel": {},
   "noLabel": "Ez",
-  "@noLabel": {}
+  "@noLabel": {},
+  "connectLabel": "Konektatu",
+  "@connectLabel": {},
+  "revertLabel": "Berrezarri",
+  "@revertLabel": {},
+  "restartLabel": "Berrabiarazi",
+  "@restartLabel": {}
 }

@@ -27,5 +27,11 @@
   "noLabel": "لا",
   "@noLabel": {},
   "megabyte": "م.ب",
-  "@megabyte": {}
+  "@megabyte": {},
+  "connectLabel": "اتّصل",
+  "@connectLabel": {},
+  "revertLabel": "يرجع",
+  "@revertLabel": {},
+  "restartLabel": "إعادة تشغيل",
+  "@restartLabel": {}
 }

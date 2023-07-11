@@ -237,5 +237,7 @@
   "megabyte": "Mo",
   "@megabyte": {},
   "gigabyte": "Go",
-  "@gigabyte": {}
+  "@gigabyte": {},
+  "restartLabel": "Reaviar",
+  "@restartLabel": {}
 }

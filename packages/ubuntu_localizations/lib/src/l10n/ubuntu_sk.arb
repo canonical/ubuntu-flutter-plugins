@@ -239,5 +239,7 @@
   "petabyte": "PB",
   "@petabyte": {},
   "terabyte": "TB",
-  "@terabyte": {}
+  "@terabyte": {},
+  "restartLabel": "Reštartovať",
+  "@restartLabel": {}
 }

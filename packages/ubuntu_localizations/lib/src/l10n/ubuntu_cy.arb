@@ -17,5 +17,11 @@
   "megabyte": "MB",
   "@megabyte": {},
   "gigabyte": "GB",
-  "@gigabyte": {}
+  "@gigabyte": {},
+  "connectLabel": "Cysylltu",
+  "@connectLabel": {},
+  "revertLabel": "Dychwelyd",
+  "@revertLabel": {},
+  "restartLabel": "Ailgychwyn",
+  "@restartLabel": {}
 }

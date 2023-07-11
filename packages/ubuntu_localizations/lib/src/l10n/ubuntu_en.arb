@@ -178,6 +178,8 @@
   "@renameLabel": {},
   "resetLabel": "Reset",
   "@resetLabel": {},
+  "restartLabel": "Restart",
+  "@restartLabel": {},
   "restoreLabel": "Restore",
   "@restoreLabel": {},
   "retryLabel": "Retry",

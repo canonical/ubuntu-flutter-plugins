@@ -13,5 +13,9 @@
   "megabyte": "எம்பி",
   "@megabyte": {},
   "gigabyte": "ஜிபி",
-  "@gigabyte": {}
+  "@gigabyte": {},
+  "revertLabel": "மீட்டல்",
+  "@revertLabel": {},
+  "restartLabel": "மீண்டும் இயக்கு",
+  "@restartLabel": {}
 }

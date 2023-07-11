@@ -7,5 +7,7 @@
   "yesLabel": "Tá",
   "@yesLabel": {},
   "noLabel": "Níl",
-  "@noLabel": {}
+  "@noLabel": {},
+  "revertLabel": "Fill",
+  "@revertLabel": {}
 }

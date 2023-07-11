@@ -237,5 +237,7 @@
   "megabyte": "MB",
   "@megabyte": {},
   "gigabyte": "GB",
-  "@gigabyte": {}
+  "@gigabyte": {},
+  "restartLabel": "Restartigi",
+  "@restartLabel": {}
 }
