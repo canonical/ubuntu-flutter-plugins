@@ -547,7 +547,7 @@ class UbuntuLocalizationsPtBr extends UbuntuLocalizationsPt {
   String get landscapeLabel => 'Paisagem';
 
   @override
-  String get lastLabel => 'Anterior';
+  String get lastLabel => 'Último';
 
   @override
   String get leaveLabel => 'Sair';
