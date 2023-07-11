@@ -237,5 +237,9 @@
   "megabyte": "מ״ב",
   "@megabyte": {},
   "gigabyte": "ג״ב",
-  "@gigabyte": {}
+  "@gigabyte": {},
+  "petabyte": "פ״ב",
+  "@petabyte": {},
+  "terabyte": "ט״ב",
+  "@terabyte": {}
 }
