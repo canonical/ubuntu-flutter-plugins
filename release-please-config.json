@@ -23,7 +23,8 @@
   ],
   "packages": {
     "packages/ubuntu_localizations": {
-      "monorepo-tags": true
+      "monorepo-tags": true,
+      "release-as": "0.3.4"
     },
     "packages/ubuntu_logger": {
       "monorepo-tags": true
