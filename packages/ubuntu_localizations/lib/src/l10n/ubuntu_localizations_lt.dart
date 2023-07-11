@@ -269,6 +269,9 @@ class UbuntuLocalizationsLt extends UbuntuLocalizations {
   String get resetLabel => 'Atstatyti';
 
   @override
+  String get restartLabel => 'Paleisti iš naujo';
+
+  @override
   String get restoreLabel => 'Atkurti';
 
   @override

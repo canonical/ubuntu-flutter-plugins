@@ -765,6 +765,12 @@ abstract class UbuntuLocalizations {
   /// **'Reset'**
   String get resetLabel;
 
+  /// No description provided for @restartLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Restart'**
+  String get restartLabel;
+
   /// No description provided for @restoreLabel.
   ///
   /// In en, this message translates to:

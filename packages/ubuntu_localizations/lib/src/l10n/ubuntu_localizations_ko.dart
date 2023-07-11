@@ -80,7 +80,7 @@ class UbuntuLocalizationsKo extends UbuntuLocalizations {
   String get colorLabel => '색상';
 
   @override
-  String get connectLabel => '연결';
+  String get connectLabel => '연결하기';
 
   @override
   String get continueLabel => '계속';
@@ -269,13 +269,16 @@ class UbuntuLocalizationsKo extends UbuntuLocalizations {
   String get resetLabel => '초기화';
 
   @override
+  String get restartLabel => '다시 시작';
+
+  @override
   String get restoreLabel => '복구';
 
   @override
   String get retryLabel => '다시시도';
 
   @override
-  String get revertLabel => '복구';
+  String get revertLabel => '되돌리기';
 
   @override
   String get rewindLabel => '되감기';

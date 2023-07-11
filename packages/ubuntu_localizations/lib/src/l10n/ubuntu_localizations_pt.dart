@@ -269,6 +269,9 @@ class UbuntuLocalizationsPt extends UbuntuLocalizations {
   String get resetLabel => 'Repor';
 
   @override
+  String get restartLabel => 'Reiniciar';
+
+  @override
   String get restoreLabel => 'Restaurar';
 
   @override
@@ -634,13 +637,16 @@ class UbuntuLocalizationsPtBr extends UbuntuLocalizationsPt {
   String get resetLabel => 'Redefinir';
 
   @override
+  String get restartLabel => 'Reiniciar';
+
+  @override
   String get restoreLabel => 'Restaurar';
 
   @override
   String get retryLabel => 'Tentar Novamente';
 
   @override
-  String get revertLabel => 'Reverter';
+  String get revertLabel => 'Desfazer';
 
   @override
   String get rewindLabel => 'Retroceder';

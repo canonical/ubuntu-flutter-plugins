@@ -269,6 +269,9 @@ class UbuntuLocalizationsSk extends UbuntuLocalizations {
   String get resetLabel => 'Vrátiť na predvolené';
 
   @override
+  String get restartLabel => 'Reštartovať';
+
+  @override
   String get restoreLabel => 'Obnoviť';
 
   @override

@@ -269,13 +269,16 @@ class UbuntuLocalizationsAm extends UbuntuLocalizations {
   String get resetLabel => 'Reset';
 
   @override
+  String get restartLabel => 'እንደገና ጀምር';
+
+  @override
   String get restoreLabel => 'Restore';
 
   @override
   String get retryLabel => 'Retry';
 
   @override
-  String get revertLabel => 'Revert';
+  String get revertLabel => 'ወደ ነበረበት መመለስ';
 
   @override
   String get rewindLabel => 'Rewind';

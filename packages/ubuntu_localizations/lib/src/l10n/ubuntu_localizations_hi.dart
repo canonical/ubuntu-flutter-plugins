@@ -269,13 +269,16 @@ class UbuntuLocalizationsHi extends UbuntuLocalizations {
   String get resetLabel => 'Reset';
 
   @override
+  String get restartLabel => 'Restart';
+
+  @override
   String get restoreLabel => 'Restore';
 
   @override
   String get retryLabel => 'Retry';
 
   @override
-  String get revertLabel => 'Revert';
+  String get revertLabel => 'प्रत्यावर्त';
 
   @override
   String get rewindLabel => 'Rewind';

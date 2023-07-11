@@ -269,6 +269,9 @@ class UbuntuLocalizationsFi extends UbuntuLocalizations {
   String get resetLabel => 'Palauta';
 
   @override
+  String get restartLabel => 'Käynnistä uudelleen';
+
+  @override
   String get restoreLabel => 'Palauta';
 
   @override

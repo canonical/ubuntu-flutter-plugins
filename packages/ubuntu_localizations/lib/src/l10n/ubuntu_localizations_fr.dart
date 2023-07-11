@@ -269,6 +269,9 @@ class UbuntuLocalizationsFr extends UbuntuLocalizations {
   String get resetLabel => 'Réinitialiser';
 
   @override
+  String get restartLabel => 'Redémarrer';
+
+  @override
   String get restoreLabel => 'Restaurer';
 
   @override

@@ -269,6 +269,9 @@ class UbuntuLocalizationsSv extends UbuntuLocalizations {
   String get resetLabel => 'Återställa';
 
   @override
+  String get restartLabel => 'Starta om';
+
+  @override
   String get restoreLabel => 'Återställ';
 
   @override

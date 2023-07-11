@@ -269,6 +269,9 @@ class UbuntuLocalizationsOc extends UbuntuLocalizations {
   String get resetLabel => 'Reïnicializar';
 
   @override
+  String get restartLabel => 'Reaviar';
+
+  @override
   String get restoreLabel => 'Restaurar';
 
   @override

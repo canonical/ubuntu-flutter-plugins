@@ -269,6 +269,9 @@ class UbuntuLocalizationsRu extends UbuntuLocalizations {
   String get resetLabel => 'Сбросить';
 
   @override
+  String get restartLabel => 'Перезагрузить';
+
+  @override
   String get restoreLabel => 'Восстановить';
 
   @override

@@ -269,6 +269,9 @@ class UbuntuLocalizationsDe extends UbuntuLocalizations {
   String get resetLabel => 'Zurücksetzen';
 
   @override
+  String get restartLabel => 'Neustart';
+
+  @override
   String get restoreLabel => 'Wiederherstellen';
 
   @override

@@ -269,6 +269,9 @@ class UbuntuLocalizationsEo extends UbuntuLocalizations {
   String get resetLabel => 'Apriorigi';
 
   @override
+  String get restartLabel => 'Restartigi';
+
+  @override
   String get restoreLabel => 'Restaŭri';
 
   @override

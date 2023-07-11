@@ -269,13 +269,16 @@ class UbuntuLocalizationsKa extends UbuntuLocalizations {
   String get resetLabel => 'Reset';
 
   @override
+  String get restartLabel => 'გადატვირთვა';
+
+  @override
   String get restoreLabel => 'Restore';
 
   @override
   String get retryLabel => 'Retry';
 
   @override
-  String get revertLabel => 'Revert';
+  String get revertLabel => 'აღდგენა';
 
   @override
   String get rewindLabel => 'Rewind';
