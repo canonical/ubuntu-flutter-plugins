@@ -22,14 +22,31 @@
     }
   ],
   "packages": {
+    "packages/platform_linux": {
+      "monorepo-tags": true
+    },
+    "packages/safe_change_notifier": {
+      "monorepo-tags": true
+    },
+    "packages/ubuntu_flavor": {
+      "monorepo-tags": true
+    },
     "packages/ubuntu_localizations": {
-      "monorepo-tags": true,
-      "release-as": "0.3.4"
+      "monorepo-tags": true
     },
     "packages/ubuntu_logger": {
       "monorepo-tags": true
     },
+    "packages/ubuntu_service": {
+      "monorepo-tags": true
+    },
     "packages/ubuntu_widgets": {
+      "monorepo-tags": true
+    },
+    "packages/wizard_router": {
+      "monorepo-tags": true
+    },
+    "packages/xdg_icons": {
       "monorepo-tags": true
     }
   }
