@@ -3,3 +3,4 @@ coverage/
 *.iml
 .vscode/
 .dart_tool/
+pubspec_overrides.yaml
