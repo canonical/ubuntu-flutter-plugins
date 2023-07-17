@@ -1,5 +1,10 @@
 # Ubuntu Logger for Dart
 
+[![pub](https://img.shields.io/pub/v/ubuntu_logger.svg)](https://pub.dev/packages/ubuntu_logger)
+[![license: MPL](https://img.shields.io/badge/license-MPL-magenta.svg)](https://opensource.org/licenses/MPL-2.0)
+[![CI](https://github.com/canonical/ubuntu-flutter-plugins/workflows/CI/badge.svg)](https://github.com/canonical/ubuntu-flutter-plugins/actions/workflows/ci.yaml)
+[![codecov](https://codecov.io/gh/canonical/ubuntu-flutter-plugins/branch/main/graph/badge.svg)](https://codecov.io/gh/canonical/ubuntu-flutter-plugins)
+
 A logging frontend based on Google's [logging](https://pub.dev/packages/logging)
 library for Dart.
 
