@@ -2,9 +2,9 @@ name: platform_linux
 description: |
   Linux-specific extensions on the platform package for detecting Linux distro
   and desktop environment.
-homepage: https://github.com/ubuntu-flutter-community/platform_linux
-repository: https://github.com/ubuntu-flutter-community/platform_linux
-issue_tracker: https://github.com/ubuntu-flutter-community/platform_linux/issues
+homepage: https://github.com/canonical/ubuntu-flutter-plugins
+repository: https://github.com/canonical/ubuntu-flutter-plugins/tree/main/packages/platform_linux
+issue_tracker: https://github.com/canonical/ubuntu-flutter-plugins/issues
 version: 0.1.0
 
 environment:
