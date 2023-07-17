@@ -2,8 +2,8 @@
 
 [![pub](https://img.shields.io/pub/v/wizard_router.svg)](https://pub.dev/packages/wizard_router)
 [![license: BSD](https://img.shields.io/badge/license-BSD-yellow.svg)](https://opensource.org/licenses/BSD-3-Clause)
-![CI](https://github.com/ubuntu-flutter-community/wizard_router/workflows/CI/badge.svg)
-[![codecov](https://codecov.io/gh/ubuntu-flutter-community/wizard_router/branch/main/graph/badge.svg?token=MrjLartk0G)](https://codecov.io/gh/ubuntu-flutter-community/wizard_router)
+[![CI](https://github.com/canonical/ubuntu-flutter-plugins/workflows/CI/badge.svg)](https://github.com/canonical/ubuntu-flutter-plugins/actions/workflows/ci.yaml)
+[![codecov](https://codecov.io/gh/canonical/ubuntu-flutter-plugins/branch/main/graph/badge.svg)](https://codecov.io/gh/canonical/ubuntu-flutter-plugins)
 
 [wizard_router](https://pub.dev/packages/wizard_router) provides routing for
 classic linear wizards in a way that it eliminates dependencies between wizard
@@ -11,7 +11,7 @@ pages. Wizard pages can request the next or previous page without knowing or
 caring what is the next or the previous wizard page. Thus, adding, removing, or
 re-ordering pages does not cause changes in existing pages.
 
-![wizard_router](https://github.com/ubuntu-flutter-community/wizard_router/raw/main/images/wizard_router.png)
+![wizard_router](https://github.com/canonical/ubuntu-flutter-plugins/raw/main/packages/wizard_router/images/wizard_router.png)
 
 ## Usage
 
