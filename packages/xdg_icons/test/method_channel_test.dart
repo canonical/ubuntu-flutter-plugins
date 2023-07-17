@@ -6,6 +6,9 @@ import 'package:xdg_icons/src/method_channel.dart';
 void main() {
   TestWidgetsFlutterBinding.ensureInitialized();
 
+  final messenger =
+      TestDefaultBinaryMessengerBinding.instance.defaultBinaryMessenger;
+
   test('name and size', () async {
     final instance = XdgIconsMethodChannel();
 
@@ -16,7 +19,7 @@ void main() {
       isSymbolic: false,
     );
 
-    instance.methodChannel.setMockMethodCallHandler((call) async {
+    messenger.setMockMethodCallHandler(instance.methodChannel, (call) async {
       expect(call.method, 'lookupIcon');
       expect(call.arguments, {'name': 'foo', 'size': 42});
       return testIcon.toJson();
@@ -35,7 +38,7 @@ void main() {
       isSymbolic: false,
     );
 
-    instance.methodChannel.setMockMethodCallHandler((call) async {
+    messenger.setMockMethodCallHandler(instance.methodChannel, (call) async {
       expect(call.method, 'lookupIcon');
       expect(call.arguments, {
         'name': 'bar',
@@ -57,8 +60,6 @@ void main() {
 
     const codec = StandardMethodCodec();
     final channel = instance.eventChannel.name;
-    final messenger =
-        TestDefaultBinaryMessengerBinding.instance!.defaultBinaryMessenger;
 
     Future<void> emitEvent(Object? event) {
       return messenger.handlePlatformMessage(

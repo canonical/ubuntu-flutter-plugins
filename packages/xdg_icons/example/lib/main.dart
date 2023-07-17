@@ -61,7 +61,7 @@ class MyHomePage extends StatelessWidget {
                     child: Text(
                       theme ?? 'Default',
                       textAlign: TextAlign.center,
-                      style: Theme.of(context).textTheme.headline6,
+                      style: Theme.of(context).textTheme.titleLarge,
                     ),
                   ),
               ],
@@ -69,7 +69,7 @@ class MyHomePage extends StatelessWidget {
             for (final icon in kIcons)
               TableRow(
                 children: [
-                  Text(icon, style: Theme.of(context).textTheme.caption),
+                  Text(icon, style: Theme.of(context).textTheme.bodySmall),
                   for (final theme in kThemes)
                     Padding(
                       padding: const EdgeInsets.all(8.0),
