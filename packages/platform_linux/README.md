@@ -32,9 +32,3 @@ void main() {
   }
 }
 ```
-
-## Contributing
-
-The list of supported distros and desktop environments is not exhaustive. If you
-would like to add support for a distro or desktop environment, please see our
-[contribution guidelines](CONTRIBUTING.md).

@@ -18,3 +18,7 @@ A collection of Flutter plugins and packages for Ubuntu applications.
 | [ubuntu_widgets](https://github.com/canonical/ubuntu-flutter-plugins/tree/main/packages/ubuntu_widgets) | [![pub](https://img.shields.io/pub/v/ubuntu_widgets.svg)](https://pub.dev/packages/ubuntu_widgets) | [![license: MPL](https://img.shields.io/badge/license-MPL-magenta.svg)](https://opensource.org/licenses/MPL-2.0) |
 | [wizard_router](https://github.com/canonical/ubuntu-flutter-plugins/tree/main/packages/wizard_router) | [![pub](https://img.shields.io/pub/v/wizard_router.svg)](https://pub.dev/packages/wizard_router) | [![license: BSD](https://img.shields.io/badge/license-BSD-yellow.svg)](https://opensource.org/licenses/BSD-3-Clause) |
 | [xdg_icons](https://github.com/canonical/ubuntu-flutter-plugins/tree/main/packages/xdg_icons) | [![pub](https://img.shields.io/pub/v/xdg_icons.svg)](https://pub.dev/packages/xdg_icons) | [![license: MPL](https://img.shields.io/badge/license-MPL-magenta.svg)](https://opensource.org/licenses/MPL-2.0) |
+
+## Contributing
+
+We welcome contributions! See the [contribution guide](CONTRIBUTING.md) for more details.
