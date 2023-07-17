@@ -4,7 +4,7 @@ import 'package:state_notifier/state_notifier.dart';
 /// A safe drop-in replacement for Riverpod's `StateNotifier` that makes
 /// state changes no-op, rather than an error, after its disposal.
 ///
-/// ![safe_change_notifier](https://github.com/ubuntu-flutter-community/safe_change_notifier/raw/main/images/safe_change_notifier.png)
+/// ![safe_change_notifier](https://github.com/canonical/ubuntu-flutter-plugins/raw/main/packages/safe_change_notifier/images/safe_change_notifier.png)
 class SafeStateNotifier<T> extends StateNotifier<T> {
   SafeStateNotifier(super.value);
 

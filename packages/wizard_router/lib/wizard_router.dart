@@ -4,7 +4,7 @@
 /// previous wizard page. Thus, adding, removing, or re-ordering pages does not
 /// cause changes in existing pages.
 ///
-/// ![wizard_router](https://github.com/ubuntu-flutter-community/wizard_router/raw/main/images/wizard_router.png)
+/// ![wizard_router](https://github.com/canonical/ubuntu-flutter-plugins/raw/main/packages/wizard_router/images/wizard_router.png)
 library wizard_router;
 
 export 'src/exception.dart';

@@ -1,8 +1,8 @@
 name: ubuntu_flavor
 description: Detect Ubuntu flavor
-homepage: https://github.com/ubuntu-flutter-community/ubuntu_flavor
-repository: https://github.com/ubuntu-flutter-community/ubuntu_flavor
-issue_tracker: https://github.com/ubuntu-flutter-community/ubuntu_flavor/issues
+homepage: https://github.com/canonical/ubuntu-flutter-plugins
+repository: https://github.com/canonical/ubuntu-flutter-plugins/tree/main/packages/ubuntu_flavor
+issue_tracker: https://github.com/canonical/ubuntu-flutter-plugins/issues
 version: 0.2.0
 
 environment:
