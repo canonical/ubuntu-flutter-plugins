@@ -1,11 +1,5 @@
 # Changelog
 
-## 0.2.0
-
-* Add `SafeNotifierMixin`
-* Mix `SafeChangeNotifier` with `SafeNotifierMixin`
-* Add `SafeValueNotifier`
-
 ## 0.3.0 (2023-07-03)
 
 ## What's Changed
@@ -22,6 +16,12 @@
 * @renovate made their first contribution in https://github.com/ubuntu-flutter-community/safe_change_notifier/pull/5
 
 **Full Changelog**: https://github.com/ubuntu-flutter-community/safe_change_notifier/compare/v0.2.0...v0.3.0
+
+## 0.2.0
+
+* Add `SafeNotifierMixin`
+* Mix `SafeChangeNotifier` with `SafeNotifierMixin`
+* Add `SafeValueNotifier`
 
 ## 0.1.0+1
 

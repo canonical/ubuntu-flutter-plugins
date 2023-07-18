@@ -1,9 +1,5 @@
 # Changelog
 
-## 0.2.2
-
-- Add tryGetService() and tryCreateService().
-
 ## 0.2.3 (2023-06-14)
 
 ## What's Changed
@@ -13,6 +9,10 @@
 
 
 **Full Changelog**: https://github.com/ubuntu-flutter-community/ubuntu_service/compare/v0.2.2...v0.2.3
+
+## 0.2.2
+
+- Add tryGetService() and tryCreateService().
 
 ## 0.2.1
 
