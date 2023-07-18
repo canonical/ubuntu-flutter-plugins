@@ -1,5 +1,5 @@
 {
-  "packages/platform_linux": "0.1.0",
+  "packages/platform_linux": "0.1.1",
   "packages/safe_change_notifier": "0.3.0",
   "packages/ubuntu_flavor": "0.2.0",
   "packages/ubuntu_localizations": "0.3.4",
