@@ -37,6 +37,25 @@ abstract class LogLevel {
 PrintAppender? _consoleLog;
 RotatingFileAppender? _fileLog;
 
+const _kReleaseMode = bool.fromEnvironment('dart.vm.product');
+const _kProfileMode = bool.fromEnvironment('dart.vm.profime');
+const _kDebugMode = !_kReleaseMode && !_kProfileMode;
+
+String _resolveLogFile(Map<String, String> env, String? path) {
+  var log = env['LOG_FILE'];
+  if (log == null) {
+    final exe = p.basename(Platform.resolvedExecutable);
+    path ??= '${p.dirname(Platform.resolvedExecutable)}/.$exe';
+    log = '$path/$exe.log';
+  }
+  return log;
+}
+
+log.Level? _resolveLogLevel(Map<String, String> env) {
+  final level = env['LOG_LEVEL'] ?? (_kDebugMode ? 'debug' : 'info');
+  return LogLevel.fromString(level);
+}
+
 /// A logger that prints to the console and writes to a log file.
 class Logger {
   /// Creates a named logger.
@@ -49,10 +68,20 @@ class Logger {
   final log.Logger _logger;
 
   /// Setup logging with the given level and log file path.
-  static void setup({
+  ///
+  /// The following environment variables are supported as fallbacks:
+  ///  - `LOG_FILE`: Log file path.
+  ///  - `LOG_LEVEL`: Logging level (debug, info, warning, error).
+  factory Logger.setup({
+    String? name,
     String? path,
     log.Level? level,
+    Map<String, String>? env,
   }) {
+    env ??= Platform.environment;
+    path ??= _resolveLogFile(env, path);
+    level ??= _resolveLogLevel(env);
+
     if (level != null) {
       log.Logger.root.level = level;
     }
@@ -65,7 +94,7 @@ class Logger {
     }
 
     // log file
-    if (path != null) {
+    if (path.isNotEmpty) {
       final appName = p.basenameWithoutExtension(path);
       try {
         _createDirectory(p.dirname(path));
@@ -87,6 +116,8 @@ class Logger {
             LogLevel.error, 'Logging to $path failed (${e.message})', appName));
       }
     }
+
+    return Logger(name);
   }
 
   /// Outputs a debug [message].
