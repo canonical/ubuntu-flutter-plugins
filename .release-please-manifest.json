@@ -3,7 +3,7 @@
   "packages/safe_change_notifier": "0.3.1",
   "packages/ubuntu_flavor": "0.2.1",
   "packages/ubuntu_localizations": "0.3.4",
-  "packages/ubuntu_logger": "0.0.3",
+  "packages/ubuntu_logger": "0.1.0",
   "packages/ubuntu_service": "0.2.4",
   "packages/ubuntu_widgets": "0.1.2",
   "packages/wizard_router": "1.0.3",
