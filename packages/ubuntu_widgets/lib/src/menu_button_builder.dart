@@ -62,6 +62,10 @@ class MenuButtonBuilder<T> extends StatefulWidget {
     this.iconBuilder,
     required this.itemBuilder,
     this.decoration = const InputDecoration(filled: false),
+    this.style,
+    this.menuStyle,
+    this.menuPosition = PopupMenuPosition.over,
+    this.itemStyle,
   })  : assert((entries != null) != (values != null)),
         entries =
             entries ?? values!.map((e) => MenuButtonEntry(value: e)).toList();
@@ -95,6 +99,18 @@ class MenuButtonBuilder<T> extends StatefulWidget {
   /// An optional input decoration for the button.
   final InputDecoration decoration;
 
+  /// An optional style for the button.
+  final ButtonStyle? style;
+
+  /// An optional style for the menu.
+  final MenuStyle? menuStyle;
+
+  /// The position of the menu. Defaults to [PopupMenuPosition.over].
+  final PopupMenuPosition menuPosition;
+
+  /// An optional style for the menu items.
+  final ButtonStyle? itemStyle;
+
   @override
   State<MenuButtonBuilder<T>> createState() => _MenuButtonBuilderState<T>();
 }
@@ -102,12 +118,12 @@ class MenuButtonBuilder<T> extends StatefulWidget {
 class _MenuButtonBuilderState<T> extends State<MenuButtonBuilder<T>> {
   final _controller = MenuController();
   final _focusNode = FocusNode();
-  double? _width;
+  Size? _size;
 
   @override
   void initState() {
     super.initState();
-    _updateWidth();
+    _updateSize();
   }
 
   @override
@@ -115,15 +131,15 @@ class _MenuButtonBuilderState<T> extends State<MenuButtonBuilder<T>> {
     super.didUpdateWidget(oldWidget);
     if (widget.child != oldWidget.child ||
         widget.selected != oldWidget.selected) {
-      _updateWidth();
+      _updateSize();
     }
   }
 
-  void _updateWidth() {
+  void _updateSize() {
     WidgetsBinding.instance.addPostFrameCallback((_) {
-      final width = (context.findRenderObject() as RenderBox?)?.size.width;
-      if (_width != width) {
-        setState(() => _width = width);
+      final size = (context.findRenderObject() as RenderBox?)?.size;
+      if (_size != size) {
+        setState(() => _size = size);
       }
     });
   }
@@ -139,10 +155,11 @@ class _MenuButtonBuilderState<T> extends State<MenuButtonBuilder<T>> {
     return MenuAnchor(
       controller: _controller,
       crossAxisUnconstrained: false,
-      style: MenuStyle(
-        minimumSize: MaterialStatePropertyAll(Size(_width ?? 0, 0)),
-        visualDensity: const VisualDensity(horizontal: 0, vertical: 0),
-      ),
+      style: widget.menuStyle ??
+          MenuStyle(
+            minimumSize: MaterialStatePropertyAll(Size(_size?.width ?? 0, 0)),
+            visualDensity: const VisualDensity(horizontal: 0, vertical: 0),
+          ),
       builder: (context, controller, child) {
         return child!;
       },
@@ -157,10 +174,15 @@ class _MenuButtonBuilderState<T> extends State<MenuButtonBuilder<T>> {
             ),
           ),
           OutlinedButton(
-            style: OutlinedButton.styleFrom(side: BorderSide.none),
+            style:
+                widget.style ?? OutlinedButton.styleFrom(side: BorderSide.none),
             onPressed: () {
-              _controller.open(position: _calculateOffset());
-              _focusNode.requestFocus();
+              if (_controller.isOpen) {
+                _controller.close();
+              } else {
+                _controller.open(position: _calculateOffset());
+                _focusNode.requestFocus();
+              }
             },
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -192,11 +214,16 @@ class _MenuButtonBuilderState<T> extends State<MenuButtonBuilder<T>> {
       .copyWith(overflow: TextOverflow.ellipsis);
 
   Offset _calculateOffset() {
-    final padding = MenuTheme.of(context)
-        .style
-        ?.padding
-        ?.resolve({})?.resolve(Directionality.of(context));
-    return Offset(0, -(padding?.top ?? 8));
+    switch (widget.menuPosition) {
+      case PopupMenuPosition.under:
+        return Offset(0, _size?.height ?? 0);
+      case PopupMenuPosition.over:
+        final padding = MenuTheme.of(context)
+            .style
+            ?.padding
+            ?.resolve({})?.resolve(Directionality.of(context));
+        return Offset(0, -(padding?.top ?? 8));
+    }
   }
 
   EdgeInsetsGeometry _scaledPadding(BuildContext context) {
@@ -236,12 +263,14 @@ class _MenuButtonBuilderState<T> extends State<MenuButtonBuilder<T>> {
               _controller.close();
             }
           : null,
-      style: MenuItemButton.styleFrom(
-        minimumSize: minimumSize ?? const Size(0, _kItemHeight),
-        maximumSize: maximumSize ?? const Size(double.infinity, _kItemHeight),
-        padding: padding ?? _scaledPadding(context),
-        textStyle: Theme.of(context).textTheme.labelLarge,
-      ),
+      style: widget.itemStyle ??
+          MenuItemButton.styleFrom(
+            minimumSize: minimumSize ?? const Size(0, _kItemHeight),
+            maximumSize:
+                maximumSize ?? const Size(double.infinity, _kItemHeight),
+            padding: padding ?? _scaledPadding(context),
+            textStyle: Theme.of(context).textTheme.labelLarge,
+          ),
       child: item.child ?? widget.itemBuilder(context, item.value, null),
     );
   }
