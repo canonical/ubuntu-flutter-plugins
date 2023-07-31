@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 /// The minimum size of a push button.
-const kPushButtonSize = Size(136, 36);
+const kPushButtonSize = Size(136, 40);
 
 /// A classic push button for desktop.
 abstract class PushButton extends ButtonStyleButton {
