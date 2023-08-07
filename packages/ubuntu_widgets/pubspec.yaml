@@ -4,7 +4,7 @@ description: |
 homepage: https://github.com/canonical/ubuntu-flutter-plugins
 repository: https://github.com/canonical/ubuntu-flutter-plugins/tree/main/packages/ubuntu_widgets
 issue_tracker: https://github.com/canonical/ubuntu-flutter-plugins/issues
-version: 0.1.2
+version: 0.2.0
 
 environment:
   sdk: ">=3.0.0 <4.0.0"

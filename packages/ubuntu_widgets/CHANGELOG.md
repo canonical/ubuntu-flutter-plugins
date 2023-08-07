@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.2.0](https://github.com/canonical/ubuntu-flutter-plugins/compare/ubuntu_widgets-v0.1.2...ubuntu_widgets-v0.2.0) (2023-08-07)
+
+
+* allow customizing MenuButtonBuilder style & position ([#310](https://github.com/canonical/ubuntu-flutter-plugins/issues/310)) ([b482711](https://github.com/canonical/ubuntu-flutter-plugins/commit/b48271190a6eb6fca3834bc4ae28ea25c0bab01d))
+* increase push button height to 40px ([#312](https://github.com/canonical/ubuntu-flutter-plugins/issues/312)) ([354338e](https://github.com/canonical/ubuntu-flutter-plugins/commit/354338ecd8c49d3c786b04ce859c0f755d69da36))
+* relax yaru_icons version constraint ([#315](https://github.com/canonical/ubuntu-flutter-plugins/issues/315)) ([2875be4](https://github.com/canonical/ubuntu-flutter-plugins/commit/2875be4b9ffa63bfed26ca90ebe4ed724316be03))
+* remove & ignore pubspec overrides ([#284](https://github.com/canonical/ubuntu-flutter-plugins/issues/284)) ([7921750](https://github.com/canonical/ubuntu-flutter-plugins/commit/79217505c362ec206d987e030ac48a9eb0f4ea6a))
+
 ## [0.1.2](https://github.com/canonical/ubuntu-flutter-plugins/compare/ubuntu_widgets-v0.1.1...ubuntu_widgets-v0.1.2) (2023-07-04)
 
 
