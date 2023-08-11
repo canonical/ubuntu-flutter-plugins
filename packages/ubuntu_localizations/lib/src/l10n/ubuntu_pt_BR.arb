@@ -240,6 +240,10 @@
   "@megabyte": {},
   "gigabyte": "GB",
   "@gigabyte": {},
+  "terabyte": "TB",
+  "@terabyte": {},
+  "petabyte": "PB",
+  "@petabyte": {},
   "restartLabel": "Reiniciar",
   "@restartLabel": {}
 }
