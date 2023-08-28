@@ -45,5 +45,9 @@
   "revertLabel": "元に戻す",
   "@revertLabel": {},
   "restartLabel": "再起動",
-  "@restartLabel": {}
+  "@restartLabel": {},
+  "terabyte": "TB",
+  "@terabyte": {},
+  "petabyte": "PB",
+  "@petabyte": {}
 }
