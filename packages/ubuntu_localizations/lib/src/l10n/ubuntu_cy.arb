@@ -1,7 +1,9 @@
 {
   "@@locale": "cy",
   "countryCode": "GB",
+  "@countryCode": {},
   "languageName": "Cymraeg",
+  "@languageName": {},
   "okLabel": "Iawn",
   "@okLabel": {},
   "cancelLabel": "Diddymu",
@@ -23,5 +25,9 @@
   "revertLabel": "Dychwelyd",
   "@revertLabel": {},
   "restartLabel": "Ailgychwyn",
-  "@restartLabel": {}
+  "@restartLabel": {},
+  "terabyte": "TB",
+  "@terabyte": {},
+  "petabyte": "PB",
+  "@petabyte": {}
 }
