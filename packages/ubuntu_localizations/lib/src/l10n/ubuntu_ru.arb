@@ -239,5 +239,7 @@
   "petabyte": "ПБ",
   "@petabyte": {},
   "restartLabel": "Перезагрузить",
-  "@restartLabel": {}
+  "@restartLabel": {},
+  "normalLabel": "Обычный",
+  "@normalLabel": {}
 }
