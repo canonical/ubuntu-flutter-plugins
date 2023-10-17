@@ -18,12 +18,12 @@ dependencies:
   form_field_validator: ^1.1.0
   password_strength: ^0.2.0
   ubuntu_localizations: ^0.3.0
-  yaru: ^0.9.0
+  yaru: ^1.1.0
   yaru_icons: ">1.0.0 <3.0.0"
-  yaru_widgets: ^2.5.0
+  yaru_widgets: ^3.2.0
 
 dev_dependencies:
   flutter_lints: ^2.0.0
   flutter_test:
     sdk: flutter
-  yaru_test: ^0.1.1
+  yaru_test: ^0.1.5
