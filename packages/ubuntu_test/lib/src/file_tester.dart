@@ -2,7 +2,7 @@ import 'dart:io';
 
 import 'package:flutter/foundation.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:test_api/src/expect/async_matcher.dart'; // ignore: implementation_imports
+import 'package:matcher/src/expect/async_matcher.dart'; // ignore: implementation_imports
 
 /// Matches a text file.
 Matcher matchesTextFile(String path) => _TextFileMatcher(path);
