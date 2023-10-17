@@ -239,5 +239,7 @@
   "editLabel": "Rediger",
   "@editLabel": {},
   "viewLabel": "Vis",
-  "@viewLabel": {}
+  "@viewLabel": {},
+  "enterLabel": "Åpne",
+  "@enterLabel": {}
 }
