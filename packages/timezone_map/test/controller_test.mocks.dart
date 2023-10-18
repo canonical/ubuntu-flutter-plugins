@@ -37,6 +37,7 @@ class MockGeoService extends _i1.Mock implements _i2.GeoService {
         ),
         returnValueForMissingStub: null,
       );
+
   @override
   void removeSource(_i3.GeoSource? source) => super.noSuchMethod(
         Invocation.method(
@@ -45,6 +46,7 @@ class MockGeoService extends _i1.Mock implements _i2.GeoService {
         ),
         returnValueForMissingStub: null,
       );
+
   @override
   _i4.Future<void> init() => (super.noSuchMethod(
         Invocation.method(
@@ -54,6 +56,7 @@ class MockGeoService extends _i1.Mock implements _i2.GeoService {
         returnValue: _i4.Future<void>.value(),
         returnValueForMissingStub: _i4.Future<void>.value(),
       ) as _i4.Future<void>);
+
   @override
   _i4.Future<_i5.GeoLocation?> lookupLocation() => (super.noSuchMethod(
         Invocation.method(
@@ -62,6 +65,7 @@ class MockGeoService extends _i1.Mock implements _i2.GeoService {
         ),
         returnValue: _i4.Future<_i5.GeoLocation?>.value(),
       ) as _i4.Future<_i5.GeoLocation?>);
+
   @override
   _i4.Future<Iterable<_i5.GeoLocation>> searchLocation(String? location) =>
       (super.noSuchMethod(
@@ -72,6 +76,7 @@ class MockGeoService extends _i1.Mock implements _i2.GeoService {
         returnValue:
             _i4.Future<Iterable<_i5.GeoLocation>>.value(<_i5.GeoLocation>[]),
       ) as _i4.Future<Iterable<_i5.GeoLocation>>);
+
   @override
   _i4.Future<Iterable<_i5.GeoLocation>> searchCoordinates(
           _i5.LatLng? coordinates) =>
@@ -83,6 +88,7 @@ class MockGeoService extends _i1.Mock implements _i2.GeoService {
         returnValue:
             _i4.Future<Iterable<_i5.GeoLocation>>.value(<_i5.GeoLocation>[]),
       ) as _i4.Future<Iterable<_i5.GeoLocation>>);
+
   @override
   _i4.Future<Iterable<_i5.GeoLocation>> searchTimezone(String? timezone) =>
       (super.noSuchMethod(
@@ -93,6 +99,7 @@ class MockGeoService extends _i1.Mock implements _i2.GeoService {
         returnValue:
             _i4.Future<Iterable<_i5.GeoLocation>>.value(<_i5.GeoLocation>[]),
       ) as _i4.Future<Iterable<_i5.GeoLocation>>);
+
   @override
   _i4.Future<void> cancelSearch() => (super.noSuchMethod(
         Invocation.method(
