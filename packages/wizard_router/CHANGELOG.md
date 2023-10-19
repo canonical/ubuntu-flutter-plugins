@@ -1,5 +1,10 @@
 # Changelog
 
+## [1.0.4](https://github.com/canonical/ubuntu-flutter-plugins/compare/wizard_router-v1.0.3...wizard_router-v1.0.4) (2023-10-19)
+
+
+* **deps:** update flutter in wizard_router ([73cbbd8](https://github.com/canonical/ubuntu-flutter-plugins/commit/73cbbd84c20cf4e380c7ead59a1a79dd812562e6))
+
 ## [1.0.3](https://github.com/canonical/ubuntu-flutter-plugins/compare/wizard_router-v1.0.2...wizard_router-v1.0.3) (2023-07-18)
 
 
