@@ -1,5 +1,11 @@
 # Changelog
 
+## [0.0.3](https://github.com/canonical/ubuntu-flutter-plugins/compare/xdg_icons-v0.0.2...xdg_icons-v0.0.3) (2023-10-18)
+
+
+* **deps:** bump flutter/yaru versions in xdg_icons ([41bbe62](https://github.com/canonical/ubuntu-flutter-plugins/commit/41bbe62bd17a36bfbe9d255f0e2cf5d21dc4759c))
+* **deps:** update dependency mocktail to v1 ([#313](https://github.com/canonical/ubuntu-flutter-plugins/issues/313)) ([7e0f079](https://github.com/canonical/ubuntu-flutter-plugins/commit/7e0f079290673734ee63ac3e3f8ebb20733c3262))
+
 ## [0.0.2](https://github.com/canonical/ubuntu-flutter-plugins/compare/xdg_icons-v0.0.1...xdg_icons-v0.0.2) (2023-07-18)
 
 

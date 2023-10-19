@@ -7,5 +7,5 @@
   "packages/ubuntu_service": "0.2.4",
   "packages/ubuntu_widgets": "0.2.0",
   "packages/wizard_router": "1.0.3",
-  "packages/xdg_icons": "0.0.2"
+  "packages/xdg_icons": "0.0.3"
 }
