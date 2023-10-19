@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.1.0-beta.7
+
+- chore(deps): update broken import in ubuntu_test (0774d51)
+
 ## 0.1.0-beta.6
 
 - feat(ubuntu_test): add markdownBody finder (#274)
