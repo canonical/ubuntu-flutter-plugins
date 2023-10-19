@@ -1,5 +1,10 @@
 # Changelog
 
+## [0.2.1](https://github.com/canonical/ubuntu-flutter-plugins/compare/ubuntu_widgets-v0.2.0...ubuntu_widgets-v0.2.1) (2023-10-19)
+
+
+* **deps:** bump yaru* in ubuntu_widgets ([31684dc](https://github.com/canonical/ubuntu-flutter-plugins/commit/31684dcb3f9e3c8627c800db5c6af98f681bee34))
+
 ## [0.2.0](https://github.com/canonical/ubuntu-flutter-plugins/compare/ubuntu_widgets-v0.1.2...ubuntu_widgets-v0.2.0) (2023-08-07)
 
 
