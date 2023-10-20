@@ -225,5 +225,7 @@
   "gigabyte": "Go",
   "@gigabyte": {},
   "restartLabel": "Redémarrer",
-  "@restartLabel": {}
+  "@restartLabel": {},
+  "bottomLabel": "Debas",
+  "@bottomLabel": {}
 }
