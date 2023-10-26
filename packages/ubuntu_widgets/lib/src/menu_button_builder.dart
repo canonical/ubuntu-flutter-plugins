@@ -247,12 +247,9 @@ class _MenuButtonBuilderState<T> extends State<MenuButtonBuilder<T>> {
       if (widget.onSelected == null) MaterialState.disabled,
     };
 
-    final direction = Directionality.of(context);
-
     final button = OutlinedButtonTheme.of(context).style;
     final minimumSize = button?.minimumSize?.resolve(states);
     final maximumSize = button?.maximumSize?.resolve(states);
-    final padding = button?.padding?.resolve(states)?.resolve(direction);
 
     return MenuItemButton(
       focusNode: states.contains(MaterialState.selected) ? _focusNode : null,
@@ -268,7 +265,7 @@ class _MenuButtonBuilderState<T> extends State<MenuButtonBuilder<T>> {
             minimumSize: minimumSize ?? const Size(0, _kItemHeight),
             maximumSize:
                 maximumSize ?? const Size(double.infinity, _kItemHeight),
-            padding: padding ?? _scaledPadding(context),
+            padding: _scaledPadding(context),
             textStyle: Theme.of(context).textTheme.labelLarge,
           ),
       child: item.child ?? widget.itemBuilder(context, item.value, null),
