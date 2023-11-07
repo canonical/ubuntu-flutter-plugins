@@ -1,0 +1,6 @@
+include: lib/analysis_options.yaml
+
+analyzer:
+  language:
+    strict-casts: false
+    strict-raw-types: false
