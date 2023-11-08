@@ -1,5 +1,10 @@
 # Changelog
 
+## [0.3.0](https://github.com/canonical/ubuntu-flutter-plugins/compare/ubuntu_widgets-v0.2.1...ubuntu_widgets-v0.3.0) (2023-10-30)
+
+
+* **ubuntu_widgets:** use fixed padding for MenuButtonBuilder ([#334](https://github.com/canonical/ubuntu-flutter-plugins/issues/334)) ([5856134](https://github.com/canonical/ubuntu-flutter-plugins/commit/5856134426d43b7590bce107e62a0841e1c6548f))
+
 ## [0.2.1](https://github.com/canonical/ubuntu-flutter-plugins/compare/ubuntu_widgets-v0.2.0...ubuntu_widgets-v0.2.1) (2023-10-19)
 
 
