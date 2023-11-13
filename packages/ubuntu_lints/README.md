@@ -13,5 +13,5 @@ dart pub add ubuntu_lints --dev
 - Then include it on your `analysis_options.yaml` file:
 
 ```yaml
-include: package:flame_lint/analysis_options.yaml
+include: package:ubuntu_lints/analysis_options.yaml
 ```
