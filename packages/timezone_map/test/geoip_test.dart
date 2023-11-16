@@ -34,7 +34,9 @@ void main() {
     final geoip = GeoIP(url: kGeoIPUrl, geodata: geodata, dio: dio);
 
     await expectLater(
-        () => geoip.lookupLocation(), throwsA(isA<GeoException>()));
+      () => geoip.lookupLocation(),
+      throwsA(isA<GeoException>()),
+    );
   });
 
   test('invalid geoip data', () async {
@@ -45,7 +47,9 @@ void main() {
     final geoip = GeoIP(url: kGeoIPUrl, geodata: geodata, dio: dio);
 
     await expectLater(
-        () => geoip.lookupLocation(), throwsA(isA<GeoException>()));
+      () => geoip.lookupLocation(),
+      throwsA(isA<GeoException>()),
+    );
   });
 
   test('geodata xml', () async {
@@ -101,8 +105,8 @@ void main() {
   });
 }
 
-Response xmlResponse(GeoLocation city) {
-  return Response(
+Response<String> xmlResponse(GeoLocation city) {
+  return Response<String>(
     data: '''
 <Response>
   <Ip>127.0.0.1</Ip>
@@ -114,7 +118,7 @@ Response xmlResponse(GeoLocation city) {
   <Latitude>${city.latitude}</Latitude>
   <Longitude>${city.longitude}</Longitude>
   <TimeZone>${city.timezone}</TimeZone>
-  </Response>
+</Response>
 ''',
     statusCode: 200,
     requestOptions: RequestOptions(path: '/'),

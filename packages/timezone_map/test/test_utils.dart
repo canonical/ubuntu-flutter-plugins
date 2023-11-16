@@ -61,7 +61,7 @@ extension SvgFinder on CommonFinders {
   }
 }
 
-Response jsonResponse(GeoLocation city) {
+Response<String> jsonResponse(GeoLocation city) {
   return Response(
     data: '''
 [
@@ -81,7 +81,7 @@ Response jsonResponse(GeoLocation city) {
   );
 }
 
-final errorResponse = Response(
+final errorResponse = Response<Null>(
   data: null,
   statusCode: 500,
   requestOptions: RequestOptions(path: '/'),

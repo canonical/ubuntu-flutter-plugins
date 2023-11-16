@@ -110,6 +110,7 @@ extension on Element {
       }
       return scope == null;
     });
-    return ((scope as dynamic)?.typeToResources as Map?)?[T];
+
+    return ((scope as dynamic)?.typeToResources as Map?)?[T] as T?;
   }
 }
