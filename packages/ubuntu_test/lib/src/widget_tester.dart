@@ -23,7 +23,7 @@ extension UbuntuWidgetTester on WidgetTester {
   Future<void> tapDone() => tapButton(find.doneLabel);
 
   /// Taps a link with the given [label].
-  Future<void> tapLink(dynamic label) async {
+  Future<void> tapLink(String label) async {
     expect(find.byWidgetPredicate((widget) {
       if (widget is RichText) {
         final link = widget.findLink(label);

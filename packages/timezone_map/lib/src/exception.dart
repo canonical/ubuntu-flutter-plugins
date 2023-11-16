@@ -3,15 +3,13 @@ import 'package:meta/meta.dart';
 
 /// Exception thrown for a geo lookup errors.
 @immutable
-class GeoException implements Exception {
+class GeoException<T> implements Exception {
   /// Creates a new exception with [message].
   const GeoException(this.message, [this.error]);
 
   /// Creates a new exception from a DIO response.
-  factory GeoException.response(Response response) {
-    final message = '${response.statusCode}: ${response.statusMessage}';
-    return GeoException(message, response);
-  }
+  GeoException.response(Response<T> response)
+      : this('${response.statusCode}: ${response.statusMessage}', response);
 
   /// A message describing the exception.
   final String message;

@@ -237,8 +237,11 @@ class _WizardState extends State<Wizard> {
     }
   }
 
-  Page _createPage(BuildContext context,
-      {required int index, required WizardRouteSettings settings}) {
+  Page<void> _createPage(
+    BuildContext context, {
+    required int index,
+    required WizardRouteSettings settings,
+  }) {
     return MaterialPage(
       name: settings.name,
       arguments: settings.arguments,

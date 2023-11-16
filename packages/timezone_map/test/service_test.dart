@@ -154,7 +154,9 @@ void main() {
     );
 
     await expectLater(
-        () => geoname.searchLocation('foo'), throwsA(isA<GeoException>()));
+      () => geoname.searchLocation('foo'),
+      throwsA(isA<GeoException<Null>>()),
+    );
   });
 
   test('invalid geoname data', () async {
@@ -168,7 +170,9 @@ void main() {
     final geoname = Geoname(url: kGeonameUrl, geodata: geodata, dio: dio);
 
     await expectLater(
-        () => geoname.searchLocation('foo'), throwsA(isA<GeoException>()));
+      () => geoname.searchLocation('foo'),
+      throwsA(isA<GeoException<String>>()),
+    );
   });
 
   test('geolocation copy with', () async {

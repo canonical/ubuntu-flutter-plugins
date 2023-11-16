@@ -122,7 +122,7 @@ class PasswordStrengthMatcher extends Matcher {
   final PasswordStrength strength;
 
   @override
-  bool matches(dynamic item, Map matchState) => item == strength;
+  bool matches(dynamic item, _) => item == strength;
 
   @override
   Description describe(Description description) =>

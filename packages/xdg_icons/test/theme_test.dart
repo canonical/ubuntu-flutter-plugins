@@ -27,8 +27,9 @@ void main() {
               isSymbolic: false,
             ));
 
-    when(() => mock.onDefaultThemeChanged)
-        .thenAnswer((_) => const Stream<dynamic>.empty());
+    when(() => mock.onDefaultThemeChanged).thenAnswer(
+      (_) => const Stream.empty(),
+    );
     XdgIconsPlatform.instance = mock;
 
     await tester.pumpWidget(

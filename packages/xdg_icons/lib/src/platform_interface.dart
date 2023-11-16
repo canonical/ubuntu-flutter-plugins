@@ -38,7 +38,7 @@ abstract class XdgIconsPlatform extends PlatformInterface {
 
   /// A broadcast stream that emits an event whenever the default icon theme
   /// changes.
-  Stream get onDefaultThemeChanged {
+  Stream<Null> get onDefaultThemeChanged {
     throw UnimplementedError(
         'XdgIconsPlatform.onThemeChanged has not been implemented.');
   }

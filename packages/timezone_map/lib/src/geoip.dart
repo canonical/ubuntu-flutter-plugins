@@ -57,13 +57,13 @@ class GeoIP extends GeoSource {
   @override
   Future<void> cancel() async => _token?.cancel();
 
-  Future<Response> _sendRequest() {
-    return _dio.get(url, cancelToken: _token = CancelToken());
+  Future<Response<T>> _sendRequest<T>() {
+    return _dio.get<T>(url, cancelToken: _token = CancelToken());
   }
 
-  Future<GeoLocation?> _handleResponse(Response response) {
+  Future<GeoLocation?> _handleResponse<T>(Response<T> response) {
     if (response.statusCode != 200) {
-      throw GeoException.response(response);
+      throw GeoException<T>.response(response);
     }
     try {
       final xml = XmlDocument.parse(response.data.toString());

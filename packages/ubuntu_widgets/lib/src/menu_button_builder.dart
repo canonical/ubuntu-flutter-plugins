@@ -231,7 +231,10 @@ class _MenuButtonBuilderState<T> extends State<MenuButtonBuilder<T>> {
       const EdgeInsets.symmetric(horizontal: 16),
       const EdgeInsets.symmetric(horizontal: 8),
       const EdgeInsets.symmetric(horizontal: 4),
-      MediaQuery.maybeOf(context)?.textScaleFactor ?? 1,
+      // TODO: Move to textScaler.scale, but what fontsize should be sent in?
+      // https://stackoverflow.com/questions/77494443/how-to-migrate-from-textscalefactor-to-textscalar-scale
+      // ignore: deprecated_member_use
+      MediaQuery.maybeOf(context)?.textScaler.textScaleFactor ?? 1,
     );
   }
 

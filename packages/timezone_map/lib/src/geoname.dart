@@ -66,15 +66,17 @@ class Geoname extends GeoSource {
   @override
   Future<void> cancel() async => _token?.cancel();
 
-  Future<Response> _sendRequest(String query) {
-    return _dio.get(
+  Future<Response<T>> _sendRequest<T>(String query) {
+    return _dio.get<T>(
       url,
       queryParameters: <String, String>{'query': query, ...?parameters},
       cancelToken: _token = CancelToken(),
     );
   }
 
-  Future<Iterable<GeoLocation>> _handleResponse(Response response) async {
+  Future<Iterable<GeoLocation>> _handleResponse<T>(
+    Response<T> response,
+  ) async {
     if (response.statusCode != 200) {
       throw GeoException.response(response);
     }
