@@ -21,8 +21,9 @@ void main() {
               fileName: '/path/to/foo.svg',
               isSymbolic: false,
             ));
-    when(() => mock.onDefaultThemeChanged)
-        .thenAnswer((_) => const Stream<dynamic>.empty());
+    when(() => mock.onDefaultThemeChanged).thenAnswer(
+      (_) => const Stream.empty(),
+    );
     XdgIconsPlatform.instance = mock;
 
     await tester.pumpWidget(
@@ -58,8 +59,9 @@ void main() {
               fileName: '/path/to/bar/foo.svg',
               isSymbolic: false,
             ));
-    when(() => mock.onDefaultThemeChanged)
-        .thenAnswer((_) => const Stream<dynamic>.empty());
+    when(() => mock.onDefaultThemeChanged).thenAnswer(
+      (_) => const Stream.empty(),
+    );
     XdgIconsPlatform.instance = mock;
 
     await tester.pumpWidget(
@@ -102,8 +104,9 @@ void main() {
               '/path/to/${i.namedArguments[#theme]}/${i.namedArguments[#name]}.svg',
           isSymbolic: false,
         ));
-    when(() => mock.onDefaultThemeChanged)
-        .thenAnswer((_) => const Stream<dynamic>.empty());
+    when(() => mock.onDefaultThemeChanged).thenAnswer(
+      (_) => const Stream.empty(),
+    );
     XdgIconsPlatform.instance = mock;
 
     // first build
@@ -247,8 +250,9 @@ void main() {
               isSymbolic: false,
             ));
     final themeChange = StreamController<dynamic>.broadcast(sync: true);
-    when(() => mock.onDefaultThemeChanged)
-        .thenAnswer((_) => themeChange.stream);
+    when(() => mock.onDefaultThemeChanged).thenAnswer(
+      (_) => themeChange.stream,
+    );
     XdgIconsPlatform.instance = mock;
 
     await tester.pumpWidget(
@@ -280,8 +284,9 @@ void main() {
               fileName: fileName,
               isSymbolic: false,
             ));
-    when(() => mock.onDefaultThemeChanged)
-        .thenAnswer((_) => const Stream<dynamic>.empty());
+    when(() => mock.onDefaultThemeChanged).thenAnswer(
+      (_) => const Stream.empty(),
+    );
     XdgIconsPlatform.instance = mock;
 
     await tester.pumpWidget(
@@ -314,8 +319,9 @@ void main() {
               data: bytes,
               isSymbolic: false,
             ));
-    when(() => mock.onDefaultThemeChanged)
-        .thenAnswer((_) => const Stream<dynamic>.empty());
+    when(() => mock.onDefaultThemeChanged).thenAnswer(
+      (_) => const Stream.empty(),
+    );
     XdgIconsPlatform.instance = mock;
 
     await tester.pumpWidget(
@@ -348,8 +354,9 @@ void main() {
               fileName: fileName,
               isSymbolic: false,
             ));
-    when(() => mock.onDefaultThemeChanged)
-        .thenAnswer((_) => const Stream<dynamic>.empty());
+    when(() => mock.onDefaultThemeChanged).thenAnswer(
+      (_) => const Stream.empty(),
+    );
     XdgIconsPlatform.instance = mock;
 
     await tester.pumpWidget(
@@ -384,8 +391,9 @@ void main() {
               data: bytes,
               isSymbolic: false,
             ));
-    when(() => mock.onDefaultThemeChanged)
-        .thenAnswer((_) => const Stream<dynamic>.empty());
+    when(() => mock.onDefaultThemeChanged).thenAnswer(
+      (_) => const Stream.empty(),
+    );
     XdgIconsPlatform.instance = mock;
 
     await tester.pumpWidget(

@@ -42,7 +42,7 @@ class TimezoneMap extends StatelessWidget {
   final TimezoneMapSize size;
 
   /// Requests all timezone map SVG assets to be pre-cached.
-  static Future precacheAssets(BuildContext context) async {
+  static Future<void> precacheAssets(BuildContext context) async {
     final bundle = DefaultAssetBundle.of(context);
     final manifest = await bundle
         .loadString('AssetManifest.json')
@@ -62,7 +62,7 @@ class TimezoneMap extends StatelessWidget {
       return precacheImage(asset, context);
     }
 
-    return Future.wait(manifest.keys.where(filterAsset).map(precacheAsset));
+    await Future.wait(manifest.keys.where(filterAsset).map(precacheAsset));
   }
 
   @override
