@@ -155,7 +155,7 @@ void main() {
 
     await expectLater(
       () => geoname.searchLocation('foo'),
-      throwsA(isA<GeoException<Null>>()),
+      throwsA(isA<GeoException>()),
     );
   });
 
@@ -171,7 +171,7 @@ void main() {
 
     await expectLater(
       () => geoname.searchLocation('foo'),
-      throwsA(isA<GeoException<String>>()),
+      throwsA(isA<GeoException>()),
     );
   });
 

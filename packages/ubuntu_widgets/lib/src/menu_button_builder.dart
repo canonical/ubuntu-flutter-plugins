@@ -234,7 +234,7 @@ class _MenuButtonBuilderState<T> extends State<MenuButtonBuilder<T>> {
       // TODO: Move to textScaler.scale, but what fontsize should be sent in?
       // https://stackoverflow.com/questions/77494443/how-to-migrate-from-textscalefactor-to-textscalar-scale
       // ignore: deprecated_member_use
-      MediaQuery.maybeOf(context)?.textScaler.textScaleFactor ?? 1,
+      MediaQuery.maybeOf(context)?.textScaleFactor ?? 1,
     );
   }
 

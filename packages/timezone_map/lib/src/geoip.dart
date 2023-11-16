@@ -63,7 +63,7 @@ class GeoIP extends GeoSource {
 
   Future<GeoLocation?> _handleResponse<T>(Response<T> response) {
     if (response.statusCode != 200) {
-      throw GeoException<T>.response(response);
+      throw GeoException.response(response);
     }
     try {
       final xml = XmlDocument.parse(response.data.toString());

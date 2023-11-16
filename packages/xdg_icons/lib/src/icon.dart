@@ -30,7 +30,7 @@ class XdgIcon extends StatefulWidget {
 
 class XdgIconState extends State<XdgIcon> {
   XdgIconData? _icon;
-  StreamSubscription<Null>? _themeChange;
+  StreamSubscription<dynamic>? _themeChange;
 
   XdgIconData? get icon => _icon;
 

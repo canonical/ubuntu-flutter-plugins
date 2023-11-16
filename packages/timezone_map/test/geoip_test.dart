@@ -35,7 +35,7 @@ void main() {
 
     await expectLater(
       () => geoip.lookupLocation(),
-      throwsA(isA<GeoException<String>>()),
+      throwsA(isA<GeoException>()),
     );
   });
 
@@ -48,7 +48,7 @@ void main() {
 
     await expectLater(
       () => geoip.lookupLocation(),
-      throwsA(isA<GeoException<String>>()),
+      throwsA(isA<GeoException>()),
     );
   });
 

@@ -33,7 +33,7 @@ class XdgIconsMethodChannel extends XdgIconsPlatform {
   }
 
   @override
-  Stream<Null> get onDefaultThemeChanged => _onDefaultThemeChanged ??=
-      eventChannel.receiveBroadcastStream() as Stream<Null>;
-  Stream<Null>? _onDefaultThemeChanged;
+  Stream<dynamic> get onDefaultThemeChanged =>
+      _onDefaultThemeChanged ??= eventChannel.receiveBroadcastStream();
+  Stream<dynamic>? _onDefaultThemeChanged;
 }

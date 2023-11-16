@@ -249,7 +249,7 @@ void main() {
               fileName: '/path/to/foo.svg',
               isSymbolic: false,
             ));
-    final themeChange = StreamController<Null>.broadcast(sync: true);
+    final themeChange = StreamController<dynamic>.broadcast(sync: true);
     when(() => mock.onDefaultThemeChanged).thenAnswer(
       (_) => themeChange.stream,
     );
@@ -355,7 +355,7 @@ void main() {
               isSymbolic: false,
             ));
     when(() => mock.onDefaultThemeChanged).thenAnswer(
-      (_) => const Stream<Null>.empty(),
+      (_) => const Stream.empty(),
     );
     XdgIconsPlatform.instance = mock;
 

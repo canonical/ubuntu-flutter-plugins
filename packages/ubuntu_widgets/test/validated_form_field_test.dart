@@ -172,16 +172,20 @@ void main() {
 
     expect(
       tester.getRect(find.byType(SuccessIcon)).center.dy,
-      moreOrLessEquals(tester.getRect(find.byType(EditableText)).center.dy,
-          epsilon: 1),
+      moreOrLessEquals(
+        tester.getRect(find.byType(EditableText)).center.dy,
+        epsilon: 1,
+      ),
     );
 
     await tester.pumpWidget(buildWithHelperText('helper'));
 
     expect(
       tester.getRect(find.byType(SuccessIcon)).center.dy,
-      moreOrLessEquals(tester.getRect(find.byType(EditableText)).center.dy,
-          epsilon: 1),
+      moreOrLessEquals(
+        tester.getRect(find.byType(EditableText)).center.dy,
+        epsilon: 1,
+      ),
     );
   });
 
