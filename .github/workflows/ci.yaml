@@ -7,52 +7,37 @@ on:
   pull_request:
   workflow_dispatch:
 
-env:
-  FLUTTER_VERSION: '3.13.x'
-
 jobs:
   analyze:
     runs-on: ubuntu-22.04
     steps:
     - uses: actions/checkout@v3
-    - uses: subosito/flutter-action@v2
-      with:
-        channel: 'stable'
-        flutter-version: ${{env.FLUTTER_VERSION}}
-    - run: flutter pub global activate melos
-    - run: melos bootstrap
-    - run: melos run analyze
+    - uses: asdf-vm/actions/install@v2
+    - uses: bluefireteam/melos-action@v2
+    - run: melos analyze
 
   build:
     runs-on: ubuntu-22.04
     steps:
     - uses: actions/checkout@v3
-    - uses: subosito/flutter-action@v2
-      with:
-        channel: 'stable'
-        flutter-version: ${{env.FLUTTER_VERSION}}
-    - run: flutter pub global activate melos
+    - uses: asdf-vm/actions/install@v2
+    - uses: bluefireteam/melos-action@v2
     - run: sudo apt update
     - run: sudo apt install -y clang cmake curl libgtk-3-dev ninja-build pkg-config unzip xvfb
       env:
         DEBIAN_FRONTEND: noninteractive
-    - run: melos bootstrap
     - run: melos build
 
   coverage:
     runs-on: ubuntu-22.04
     steps:
     - uses: actions/checkout@v3
-    - uses: subosito/flutter-action@v2
-      with:
-        channel: 'stable'
-        flutter-version: ${{env.FLUTTER_VERSION}}
-    - run: flutter pub global activate melos
+    - uses: asdf-vm/actions/install@v2
+    - uses: bluefireteam/melos-action@v2
     - run: sudo apt update
     - run: sudo apt install -y lcov
       env:
         DEBIAN_FRONTEND: noninteractive
-    - run: melos bootstrap
     - run: melos run coverage
     - uses: codecov/codecov-action@v3
       with:
@@ -62,28 +47,20 @@ jobs:
     runs-on: ubuntu-22.04
     steps:
     - uses: actions/checkout@v3
-    - uses: subosito/flutter-action@v2
-      with:
-        channel: 'stable'
-        flutter-version: ${{env.FLUTTER_VERSION}}
-    - run: flutter pub global activate melos
-    - run: melos bootstrap
+    - uses: asdf-vm/actions/install@v2
+    - uses: bluefireteam/melos-action@v2
     - run: melos run format
 
   integration:
     runs-on: ubuntu-22.04
     steps:
     - uses: actions/checkout@v3
-    - uses: subosito/flutter-action@v2
-      with:
-        channel: 'stable'
-        flutter-version: ${{env.FLUTTER_VERSION}}
-    - run: flutter pub global activate melos
+    - uses: asdf-vm/actions/install@v2
+    - uses: bluefireteam/melos-action@v2
     - run: sudo apt update
     - run: sudo apt install -y clang cmake curl libgtk-3-dev ninja-build pkg-config unzip xvfb
       env:
         DEBIAN_FRONTEND: noninteractive
-    - run: melos bootstrap
     - run: melos exec -c 1 --dir-exists=integration_test -- \
         xvfb-run -a xvfb-run -a -s '-screen 0 1024x768x24 +extension GLX' \
             flutter test integration_test
@@ -92,13 +69,9 @@ jobs:
     runs-on: ubuntu-22.04
     steps:
     - uses: actions/checkout@v3
-    - uses: subosito/flutter-action@v2
-      with:
-        channel: 'stable'
-        flutter-version: ${{env.FLUTTER_VERSION}}
-    - run: flutter pub global activate melos
-    - run: melos bootstrap
-    - run: melos run generate
+    - uses: asdf-vm/actions/install@v2
+    - uses: bluefireteam/melos-action@v2
+    - run: melos generate
     - run: ./.github/scripts/check-outdated-files.sh
       if: github.event_name == 'pull_request'
     - uses: peter-evans/create-pull-request@v5
@@ -115,13 +88,9 @@ jobs:
     runs-on: ubuntu-22.04
     steps:
     - uses: actions/checkout@v3
-    - uses: subosito/flutter-action@v2
-      with:
-        channel: 'stable'
-        flutter-version: ${{env.FLUTTER_VERSION}}
-    - run: flutter pub global activate melos
-    - run: melos bootstrap
-    - run: melos run gen-l10n
+    - uses: asdf-vm/actions/install@v2
+    - uses: bluefireteam/melos-action@v2
+    - run: melos gen-l10n
     - run: ./.github/scripts/check-outdated-files.sh
       if: github.event_name == 'pull_request'
     - uses: peter-evans/create-pull-request@v5
@@ -138,23 +107,14 @@ jobs:
     runs-on: ubuntu-22.04
     steps:
     - uses: actions/checkout@v3
-    - uses: subosito/flutter-action@v2
-      with:
-        channel: 'stable'
-        flutter-version: ${{env.FLUTTER_VERSION}}
-    - run: flutter pub global activate melos
-    - run: melos bootstrap
-    - run: melos exec --no-private -- \
-        flutter pub publish --dry-run
+    - uses: asdf-vm/actions/install@v2
+    - uses: bluefireteam/melos-action@v2
+    - run: melos exec --no-private -- flutter pub publish --dry-run
 
   test:
     runs-on: ubuntu-22.04
     steps:
     - uses: actions/checkout@v3
-    - uses: subosito/flutter-action@v2
-      with:
-        channel: 'stable'
-        flutter-version: ${{env.FLUTTER_VERSION}}
-    - run: flutter pub global activate melos
-    - run: melos bootstrap
-    - run: melos run test
+    - uses: asdf-vm/actions/install@v2
+    - uses: bluefireteam/melos-action@v2
+    - run: melos test
