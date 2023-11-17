@@ -1,5 +1,11 @@
 # Changelog
 
+## [0.3.0](https://github.com/canonical/ubuntu-flutter-plugins/compare/ubuntu_service-v0.2.4...ubuntu_service-v0.3.0) (2023-11-16)
+
+
+* **ubuntu_service:** Add generics for parameters ([#338](https://github.com/canonical/ubuntu-flutter-plugins/issues/338)) ([762f05c](https://github.com/canonical/ubuntu-flutter-plugins/commit/762f05cefaad72083063c61728a1c4db6daee95b))
+* **ubuntu_service:** Add parameter generics ([762f05c](https://github.com/canonical/ubuntu-flutter-plugins/commit/762f05cefaad72083063c61728a1c4db6daee95b))
+
 ## [0.2.4](https://github.com/canonical/ubuntu-flutter-plugins/compare/ubuntu_service-v0.2.3...ubuntu_service-v0.2.4) (2023-07-18)
 
 
