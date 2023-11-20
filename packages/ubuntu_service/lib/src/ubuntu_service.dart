@@ -14,13 +14,13 @@ T? tryGetService<T extends Object>({String? id}) {
 }
 
 /// Locates and invokes an injected service factory.
-T createService<T extends Object>(dynamic param, {String? id}) {
+T createService<T extends Object, P extends Object>(P param, {String? id}) {
   return _locator<T>(param1: param, instanceName: id);
 }
 
 /// Locates and invokes an injected service factory or returns null if not found.
-T? tryCreateService<T extends Object>(dynamic param, {String? id}) {
-  return hasService<T>(id: id) ? createService<T>(param, id: id) : null;
+T? tryCreateService<T extends Object, P extends Object>(P param, {String? id}) {
+  return hasService<T>(id: id) ? createService<T, P>(param, id: id) : null;
 }
 
 /// Returns whether a service is registered with the locator.
@@ -72,23 +72,23 @@ void tryRegisterServiceInstance<T extends Object>(T service, {String? id}) {
 }
 
 /// Registers a service factory with the locator.
-void registerServiceFactory<T extends Object>(
-  T Function(dynamic param) create, {
+void registerServiceFactory<T extends Object, P extends Object>(
+  T Function(P param) create, {
   String? id,
 }) {
-  _locator.registerFactoryParam<T, Object?, Object?>(
+  _locator.registerFactoryParam<T, P, Object?>(
     (param, _) => create(param),
     instanceName: id,
   );
 }
 
 /// Registers a service factory with the locator but only if not already registered.
-void tryRegisterServiceFactory<T extends Object>(
-  T Function(dynamic param) create, {
+void tryRegisterServiceFactory<T extends Object, P extends Object>(
+  T Function(P param) create, {
   String? id,
 }) {
   if (!hasService<T>(id: id)) {
-    registerServiceFactory<T>(create, id: id);
+    registerServiceFactory<T, P>(create, id: id);
   }
 }
 

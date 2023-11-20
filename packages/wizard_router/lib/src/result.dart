@@ -9,7 +9,7 @@ class WizardRouteResult<T extends Object?> extends WizardRouteSettings<T> {
     required this.result,
   }) : super(name: settings.name, arguments: settings.arguments);
 
-  final Route route;
+  final Route<void> route;
   final Object? result;
 
   @override

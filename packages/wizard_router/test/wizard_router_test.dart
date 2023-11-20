@@ -13,16 +13,16 @@ abstract class Routes {
 }
 
 class TestObserver extends NavigatorObserver {
-  Route? pushed;
-  Route? popped;
+  Route<void>? pushed;
+  Route<void>? popped;
 
   @override
-  void didPush(Route route, Route? previousRoute) {
+  void didPush(Route<void> route, Route<void>? previousRoute) {
     pushed = route;
   }
 
   @override
-  void didPop(Route route, Route? previousRoute) {
+  void didPop(Route<void> route, Route<void>? previousRoute) {
     popped = route;
   }
 }

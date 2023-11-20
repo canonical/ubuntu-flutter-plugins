@@ -8,10 +8,8 @@ class GeoException implements Exception {
   const GeoException(this.message, [this.error]);
 
   /// Creates a new exception from a DIO response.
-  factory GeoException.response(Response response) {
-    final message = '${response.statusCode}: ${response.statusMessage}';
-    return GeoException(message, response);
-  }
+  GeoException.response(Response<dynamic> response)
+      : this('${response.statusCode}: ${response.statusMessage}', response);
 
   /// A message describing the exception.
   final String message;

@@ -110,17 +110,15 @@ void main() {
   });
 
   test('service factory', () {
-    final s0 = tryCreateService<ServiceParam>('p0');
+    final s0 = tryCreateService<ServiceParam, String>('p0');
     expect(s0, isNull);
 
-    registerServiceFactory<ServiceParam>(
-      (dynamic param) => ServiceParam(param as String),
-    );
+    registerServiceFactory<ServiceParam, String>(ServiceParam.new);
 
-    final s1 = createService<ServiceParam>('p1');
+    final s1 = createService<ServiceParam, String>('p1');
     expect(s1, isA<ServiceParam>().having((s) => s.param, 'param', 'p1'));
 
-    final s2 = createService<ServiceParam>('p2');
+    final s2 = createService<ServiceParam, String>('p2');
     expect(s2, isA<ServiceParam>().having((s) => s.param, 'param', 'p2'));
   });
 
@@ -152,20 +150,18 @@ void main() {
   test('try factory', () {
     expect(hasService<Service>(), isFalse);
 
-    tryRegisterServiceFactory<ServiceParam>(
-      (dynamic param) => ServiceParam(param as String),
-    );
+    tryRegisterServiceFactory<ServiceParam, String>(ServiceParam.new);
     expect(hasService<ServiceParam>(), isTrue);
 
-    final s1 = createService<ServiceParam>('p1');
+    final s1 = createService<ServiceParam, String>('p1');
     expect(s1, isA<ServiceParam>().having((s) => s.param, 'param', 'p1'));
 
     // noop
-    tryRegisterServiceFactory<ServiceParam>(
-      (dynamic param) => ServiceParam('${param}2'),
+    tryRegisterServiceFactory<ServiceParam, String>(
+      (param) => ServiceParam('${param}2'),
     );
 
-    final s2 = createService<ServiceParam>('p2');
+    final s2 = createService<ServiceParam, String>('p2');
     expect(s2, isA<ServiceParam>().having((s) => s.param, 'param', 'p2'));
   });
 }
