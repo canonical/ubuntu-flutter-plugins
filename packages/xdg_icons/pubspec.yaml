@@ -16,7 +16,7 @@ dependencies:
   collection: ^1.16.0
   flutter:
     sdk: flutter
-  flutter_svg: ^1.1.0
+  flutter_svg: ^2.0.0
   mocktail: ^1.0.0
   path: ^1.8.0
   plugin_platform_interface: ^2.1.2
