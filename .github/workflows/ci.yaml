@@ -11,7 +11,7 @@ jobs:
   analyze:
     runs-on: ubuntu-22.04
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
     - uses: asdf-vm/actions/install@v2
     - uses: bluefireteam/melos-action@v3
     - run: melos analyze
@@ -19,7 +19,7 @@ jobs:
   build:
     runs-on: ubuntu-22.04
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
     - uses: asdf-vm/actions/install@v2
     - uses: bluefireteam/melos-action@v3
     - run: sudo apt update
@@ -31,7 +31,7 @@ jobs:
   coverage:
     runs-on: ubuntu-22.04
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
     - uses: asdf-vm/actions/install@v2
     - uses: bluefireteam/melos-action@v3
     - run: sudo apt update
@@ -46,7 +46,7 @@ jobs:
   format:
     runs-on: ubuntu-22.04
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
     - uses: asdf-vm/actions/install@v2
     - uses: bluefireteam/melos-action@v3
     - run: melos run format
@@ -54,7 +54,7 @@ jobs:
   integration:
     runs-on: ubuntu-22.04
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
     - uses: asdf-vm/actions/install@v2
     - uses: bluefireteam/melos-action@v3
     - run: sudo apt update
@@ -68,7 +68,7 @@ jobs:
   mocks:
     runs-on: ubuntu-22.04
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
     - uses: asdf-vm/actions/install@v2
     - uses: bluefireteam/melos-action@v3
     - run: melos generate
@@ -87,7 +87,7 @@ jobs:
   l10n:
     runs-on: ubuntu-22.04
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
     - uses: asdf-vm/actions/install@v2
     - uses: bluefireteam/melos-action@v3
     - run: melos gen-l10n
@@ -106,7 +106,7 @@ jobs:
   pub:
     runs-on: ubuntu-22.04
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
     - uses: asdf-vm/actions/install@v2
     - uses: bluefireteam/melos-action@v3
     - run: melos exec --no-private -- flutter pub publish --dry-run
@@ -114,7 +114,7 @@ jobs:
   test:
     runs-on: ubuntu-22.04
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
     - uses: asdf-vm/actions/install@v2
     - uses: bluefireteam/melos-action@v3
     - run: melos test
