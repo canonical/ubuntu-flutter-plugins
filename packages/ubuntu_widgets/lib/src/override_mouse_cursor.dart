@@ -1,3 +1,5 @@
+// ignore_for_file: always_put_required_named_parameters_first
+
 import 'package:flutter/widgets.dart';
 
 /// Overrides the mouse cursor for a subtree of widgets by stacking a mouse

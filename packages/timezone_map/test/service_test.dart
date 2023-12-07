@@ -54,7 +54,7 @@ void main() {
     final service = GeoService();
     service.addSource(source1);
     service.addSource(source2);
-    service.searchLocation('foo');
+    await service.searchLocation('foo');
     await service.cancelSearch();
 
     verify(source1.cancel()).called(1);

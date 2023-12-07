@@ -4,8 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:intl/date_symbol_data_custom.dart' as intl;
 import 'package:intl/date_symbol_data_local.dart' as intl;
-import 'package:intl/date_time_patterns.dart' as intl;
 import 'package:intl/date_symbols.dart';
+import 'package:intl/date_time_patterns.dart' as intl;
 import 'package:intl/intl.dart';
 
 import 'flutter_localizations_bo.dart';
@@ -77,15 +77,16 @@ abstract class FlutterLocalizationsDelegate<T>
 
   @override
   Future<T> load(Locale locale) async {
-    final String localeName = Intl.canonicalizedLocale(locale.toString());
+    final localeName = Intl.canonicalizedLocale(locale.toString());
     await intl.initializeDateFormatting();
     intl.initializeDateFormattingCustom(
       locale: localeName,
       patterns: dateTimePatterns ?? _inheritDateTimePatterns(localeName),
       symbols: dateTimeSymbols ?? _inheritDateTimeSymbols(localeName),
     );
-    switch (T) {
-      case MaterialLocalizations:
+
+    switch (this) {
+      case LocalizationsDelegate<MaterialLocalizations> _:
         return SynchronousFuture<T>(
           MaterialLocalizationNb(
             localeName: localeName,
@@ -102,7 +103,7 @@ abstract class FlutterLocalizationsDelegate<T>
                 NumberFormat('00', baseLocaleName ?? 'en_US'),
           ) as T,
         );
-      case CupertinoLocalizations:
+      case LocalizationsDelegate<CupertinoLocalizations> _:
         return SynchronousFuture(
           CupertinoLocalizationNb(
             localeName: localeName,

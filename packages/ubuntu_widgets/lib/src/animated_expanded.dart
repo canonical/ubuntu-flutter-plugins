@@ -7,11 +7,11 @@ const _kDefaultDuration = Duration(milliseconds: 200);
 class AnimatedExpanded extends StatefulWidget {
   /// Control whether the given [child] is [expanded].
   const AnimatedExpanded({
-    super.key,
     required this.child,
     required this.expanded,
     this.curve = _kDefaultCurve,
     this.duration = _kDefaultDuration,
+    super.key,
   });
 
   /// The child that expands or collapses.
@@ -35,7 +35,6 @@ class _AnimatedExpandedState extends State<AnimatedExpanded>
   @override
   Widget build(BuildContext context) {
     return Flexible(
-      fit: FlexFit.loose,
       flex: widget.expanded ? 1 : 0,
       child: AnimatedSize(
         curve: widget.curve,

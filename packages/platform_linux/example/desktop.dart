@@ -1,3 +1,5 @@
+// ignore_for_file: avoid_print
+
 import 'package:platform_linux/platform.dart';
 
 void main() {

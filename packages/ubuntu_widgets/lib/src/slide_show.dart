@@ -1,3 +1,5 @@
+// ignore_for_file: always_put_required_named_parameters_first
+
 import 'dart:async';
 
 import 'package:flutter/material.dart';
@@ -172,7 +174,7 @@ class _SlideShowState extends State<SlideShow> {
                   return _SlideButton(
                     alignment: Alignment.centerLeft,
                     icon: const Icon(Icons.chevron_right, size: _kIconSize),
-                    opacity: clampOpacity((slideCount - 1 - currentPosition)),
+                    opacity: clampOpacity(slideCount - 1 - currentPosition),
                     onPressed: animateToNextSlide,
                   );
                 },

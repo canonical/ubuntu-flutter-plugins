@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:ubuntu_widgets/ubuntu_widgets.dart';
 import 'package:yaru_widgets/yaru_widgets.dart';
+
+import '../ubuntu_widgets.dart';
 
 // assumes dense list tiles
 const _kTileHeight = kMinInteractiveDimension;
@@ -10,9 +11,9 @@ const _kTileHeight = kMinInteractiveDimension;
 class ListWidget extends StatefulWidget {
   /// Creates a new list widget with an item builder.
   const ListWidget.builder({
-    super.key,
     required this.itemCount,
     required this.itemBuilder,
+    super.key,
     this.selectedIndex = -1,
     this.onKeySearch,
   });

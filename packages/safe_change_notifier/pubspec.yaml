@@ -17,6 +17,6 @@ dependencies:
   state_notifier: ^0.7.0
 
 dev_dependencies:
-  ubuntu_lints: ^0.1.0
   flutter_test:
     sdk: flutter
+  ubuntu_lints: ^0.1.0

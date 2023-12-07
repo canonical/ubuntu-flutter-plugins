@@ -18,7 +18,7 @@ void main() {
 
     await tester.sendKeyEvent(LogicalKeyboardKey.keyA);
     expect(searchQuery, isNull);
-    await tester.pumpAndSettle(const Duration(milliseconds: 100));
+    await tester.pumpAndSettle();
     expect(searchQuery, 'a');
     searchQuery = null;
 
@@ -31,7 +31,7 @@ void main() {
     expect(searchQuery, isNull);
 
     await tester.sendKeyEvent(LogicalKeyboardKey.keyO);
-    await tester.pumpAndSettle(const Duration(milliseconds: 100));
+    await tester.pumpAndSettle();
     expect(searchQuery, 'foo');
   });
 

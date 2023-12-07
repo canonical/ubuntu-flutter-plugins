@@ -35,7 +35,7 @@ class TimezoneMap extends StatelessWidget {
   /// UTC-offset of the highlighted timezone.
   final double? offset;
 
-  /// Called when the map is pressed at [coordinates].
+  /// Called when the map is pressed at coordinates.
   final void Function(LatLng coordinates)? onPressed;
 
   /// The size of the map.

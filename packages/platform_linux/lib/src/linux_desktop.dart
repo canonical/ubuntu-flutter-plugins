@@ -45,7 +45,7 @@ extension PlatformLinuxDesktop on Platform {
   bool get isXfce => _isDesktop('xfce');
 
   bool _isDesktop(String name) {
-    return _getXdgCurrentDesktop(this)?.contains(name) == true;
+    return _getXdgCurrentDesktop(this)?.contains(name) ?? false;
   }
 
   static int? _xdgCurrentDesktopCacheId;

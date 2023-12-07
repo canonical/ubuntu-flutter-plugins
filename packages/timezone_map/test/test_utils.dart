@@ -25,7 +25,7 @@ const nullLatLng = LatLng(0, 0);
 const nullOffset = Offset(448, 306.74102);
 
 const topLeftLatLng = LatLng(85.545283, -168);
-const topLeftOffset = Offset(0, 0);
+const topLeftOffset = Offset.zero;
 
 const topRightLatLng = LatLng(85.545283, -168.375);
 const topRightOffset = Offset(959, 0);
@@ -42,7 +42,7 @@ Matcher isCloseToLatLng(
   return within(
     from: value,
     distance: distance,
-    distanceFunction: (LatLng a, LatLng b) {
+    distanceFunction: (a, b) {
       final haversine = const DistanceHaversine().as;
       return haversine(LengthUnit.Kilometer, a, b);
     },
@@ -81,8 +81,7 @@ Response<String> jsonResponse(GeoLocation city) {
   );
 }
 
-final errorResponse = Response<Null>(
-  data: null,
+final errorResponse = Response<void>(
   statusCode: 500,
   requestOptions: RequestOptions(path: '/'),
 );

@@ -1,3 +1,5 @@
+// ignore_for_file: always_put_required_named_parameters_first
+
 import 'package:flutter/material.dart';
 
 /// The minimum size of a push button.

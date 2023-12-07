@@ -11,12 +11,12 @@ const kKeySearchInterval = Duration(milliseconds: 500);
 class KeySearch extends StatefulWidget {
   /// Creates a key search widget.
   const KeySearch({
-    super.key,
+    required this.onSearch,
+    required this.child,
     this.autofocus = false,
     this.focusNode,
     this.interval = kKeySearchInterval,
-    required this.onSearch,
-    required this.child,
+    super.key,
   });
 
   /// Whether to autofocus the key search.
@@ -50,7 +50,7 @@ class _KeySearchState extends State<KeySearch> {
 
   KeyEventResult search(KeyEvent event) {
     if (event is KeyDownEvent &&
-        event.character?.isNotEmpty == true &&
+        (event.character?.isNotEmpty ?? false) &&
         !LogicalKeyboardKey.isControlCharacter(event.character!)) {
       _searchQuery += event.character!;
       _searchTimer?.cancel();

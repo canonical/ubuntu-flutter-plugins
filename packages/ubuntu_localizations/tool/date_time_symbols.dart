@@ -36,7 +36,7 @@ Reads the given CLDR file and prints the date and time symbols.
   }
 
   Iterable<String> getEras(String context) {
-    var eras = calendar
+    final eras = calendar
         .findAllElements(context)
         .single
         .findAllElements('era')

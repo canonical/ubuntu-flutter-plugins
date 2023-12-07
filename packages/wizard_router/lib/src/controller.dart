@@ -62,7 +62,7 @@ class WizardController extends SafeChangeNotifier {
 
   /// Requests the wizard to show the previous page. Optionally, `result` can be
   /// returned to the previous page.
-  void back<T extends Object?>([T? result]) async {
+  Future<void> back<T extends Object?>([T? result]) async {
     if (state.length <= 1) {
       throw WizardException(
           '`Wizard.back()` called from the first route ${state.last.name}');

@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:yaru/yaru.dart';
 
+import 'validated_form_field.dart';
+
 /// Presents successful form validation state.
 ///
 /// See also:

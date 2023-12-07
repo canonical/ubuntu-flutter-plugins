@@ -1,3 +1,5 @@
+// ignore_for_file: always_put_required_named_parameters_first
+
 import 'package:flutter/material.dart';
 import 'package:password_strength/password_strength.dart' as pws;
 import 'package:ubuntu_localizations/ubuntu_localizations.dart';

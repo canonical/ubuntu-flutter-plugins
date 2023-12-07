@@ -1,3 +1,5 @@
+// ignore_for_file: avoid_redundant_argument_values
+
 import 'package:dio/dio.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/annotations.dart';
@@ -34,7 +36,7 @@ void main() {
     final geoip = GeoIP(url: kGeoIPUrl, geodata: geodata, dio: dio);
 
     await expectLater(
-      () => geoip.lookupLocation(),
+      geoip.lookupLocation,
       throwsA(isA<GeoException>()),
     );
   });
@@ -47,7 +49,7 @@ void main() {
     final geoip = GeoIP(url: kGeoIPUrl, geodata: geodata, dio: dio);
 
     await expectLater(
-      () => geoip.lookupLocation(),
+      geoip.lookupLocation,
       throwsA(isA<GeoException>()),
     );
   });

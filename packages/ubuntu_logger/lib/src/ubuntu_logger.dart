@@ -45,8 +45,9 @@ String _resolveLogFile(Map<String, String> env, String? path) {
   var log = env['LOG_FILE'];
   if (log == null) {
     final exe = p.basename(Platform.resolvedExecutable);
-    path ??= '${p.dirname(Platform.resolvedExecutable)}/.$exe';
-    log = '$path/$exe.log';
+    final definitePath =
+        path ?? '${p.dirname(Platform.resolvedExecutable)}/.$exe';
+    log = '$definitePath/$exe.log';
   }
   return log;
 }
@@ -62,10 +63,6 @@ class Logger {
   ///
   /// If no [name] is specified, the name of the executable is used.
   Logger([String? name]) : _logger = log.Logger(name ?? _defaultName);
-
-  static final _defaultName = p.basename(Platform.resolvedExecutable);
-
-  final log.Logger _logger;
 
   /// Setup logging with the given level and log file path.
   ///
@@ -102,7 +99,7 @@ class Logger {
         if (_fileLog == null) {
           _fileLog = RotatingFileAppender(
             baseFilePath: '$path.$pid',
-            formatter: const _LogFormatter(verbose: true),
+            formatter: const _LogFormatter(),
           );
           _fileLog!.attachToLogger(log.Logger.root);
 
@@ -119,6 +116,10 @@ class Logger {
 
     return Logger(name);
   }
+
+  static final _defaultName = p.basename(Platform.resolvedExecutable);
+
+  final log.Logger _logger;
 
   /// Outputs a debug [message].
   void debug(Object? message, [Object? error, StackTrace? stackTrace]) {

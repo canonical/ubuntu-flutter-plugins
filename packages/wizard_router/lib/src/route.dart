@@ -23,25 +23,25 @@ class WizardRoute {
 
   /// The callback invoked when the next page is requested.
   ///
-  /// If `onNext` is not specified or it returns `null`, the order is determined
-  /// from [routes].
+  /// If [onNext] is not specified or it returns `null`, the order is determined
+  /// from `routes`.
   final WizardRouteCallback? onNext;
 
   /// The callback invoked when a replacement page is requested.
   ///
-  /// If `onReplace` is not specified or it returns `null`, the order is
-  /// determined from [routes].
+  /// If [onReplace] is not specified or it returns `null`, the order is
+  /// determined from `routes`.
   final WizardRouteCallback? onReplace;
 
   /// The callback invoked when the previous page is requested.
   ///
-  /// If `onBack` is not specified or it returns `null`, the order is determined
-  /// from [routes].
+  /// If [onBack] is not specified or it returns `null`, the order is determined
+  /// from `routes`.
   final WizardRouteCallback? onBack;
 
   /// The callback invoked when the page is loaded.
   ///
-  /// If `onLoad` is specified and returns `false`, the page is skipped.
+  /// If [onLoad] is specified and returns `false`, the page is skipped.
   final WizardRouteLoader? onLoad;
 
   /// Additional custom data associated with this page.
