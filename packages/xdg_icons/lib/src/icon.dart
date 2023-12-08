@@ -12,11 +12,11 @@ import 'theme.dart';
 
 class XdgIcon extends StatefulWidget {
   const XdgIcon({
-    super.key,
     required this.name,
     this.size,
     this.scale,
     this.theme,
+    super.key,
   });
 
   final String name;

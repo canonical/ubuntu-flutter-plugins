@@ -46,7 +46,7 @@ ALMALINUX_MANTISBT_PROJECT_VERSION="9.2"
 REDHAT_SUPPORT_PRODUCT="AlmaLinux"
 REDHAT_SUPPORT_PRODUCT_VERSION="9.2"
 ''')
-        }));
+        }).call);
   });
 
   test('Arch', () {
@@ -69,7 +69,7 @@ BUG_REPORT_URL="https://bugs.archlinux.org/"
 PRIVACY_POLICY_URL="https://terms.archlinux.org/docs/privacy-policy/"
 LOGO=archlinux-logo
 ''')
-        }));
+        }).call);
   });
 
   test('Debian', () {
@@ -89,7 +89,7 @@ HOME_URL="https://www.debian.org/"
 SUPPORT_URL="https://www.debian.org/support"
 BUG_REPORT_URL="https://bugs.debian.org/"
 ''')
-        }));
+        }).call);
   });
 
   test('Fedora', () {
@@ -122,7 +122,7 @@ SUPPORT_END=2024-05-14
 VARIANT="Container Image"
 VARIANT_ID=container
 ''')
-        }));
+        }).call);
   });
 
   test('Manjaro', () {
@@ -145,7 +145,7 @@ BUG_REPORT_URL="https://docs.manjaro.org/reporting-bugs/"
 PRIVACY_POLICY_URL="https://manjaro.org/privacy-policy/"
 LOGO=manjarolinux
 ''')
-        }));
+        }).call);
   });
 
   test('openSUSE', () {
@@ -168,7 +168,7 @@ HOME_URL="https://www.opensuse.org/"
 DOCUMENTATION_URL="https://en.opensuse.org/Portal:Leap"
 LOGO="distributor-logo-Leap"
 ''')
-        }));
+        }).call);
   });
 
   test('Pop OS', () {
@@ -192,7 +192,7 @@ VERSION_CODENAME=jammy
 UBUNTU_CODENAME=jammy
 LOGO=distributor-logo-pop-os
 ''')
-        }));
+        }).call);
   });
 
   test('Ubuntu', () {
@@ -216,7 +216,7 @@ PRIVACY_POLICY_URL="https://www.ubuntu.com/legal/terms-and-policies/privacy-poli
 UBUNTU_CODENAME=lunar
 LOGO=ubuntu-logo
 ''')
-        }));
+        }).call);
   });
 }
 

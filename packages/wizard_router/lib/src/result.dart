@@ -13,5 +13,6 @@ class WizardRouteResult<T extends Object?> extends WizardRouteSettings<T> {
   final Object? result;
 
   @override
+  // ignore: no_runtimetype_tostring
   String toString() => '$runtimeType("$name", $arguments, $result)';
 }

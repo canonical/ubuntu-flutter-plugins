@@ -10,5 +10,6 @@ void main() {
 
 void somewhereElse() {
   final service = getService<MyService>();
+  // ignore: avoid_print
   print(service);
 }

@@ -65,7 +65,9 @@ class UbuntuFlavor {
     name: 'Xubuntu',
   );
 
-  static UbuntuFlavor? detect([@visibleForTesting Platform? platform]) {
+  static UbuntuFlavor? detect([
+    @visibleForTesting Platform platform = const LocalPlatform(),
+  ]) {
     return detectUbuntuFlavor(platform);
   }
 

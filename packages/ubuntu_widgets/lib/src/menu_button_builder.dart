@@ -53,19 +53,19 @@ class MenuButtonBuilder<T> extends StatefulWidget {
   /// The returned widgets are set as icons of the menu items.
   ///
   MenuButtonBuilder({
-    super.key,
+    required this.itemBuilder,
     this.child,
     this.selected,
     List<T>? values,
     List<MenuButtonEntry<T>>? entries,
     this.onSelected,
     this.iconBuilder,
-    required this.itemBuilder,
     this.decoration = const InputDecoration(filled: false),
     this.style,
     this.menuStyle,
     this.menuPosition = PopupMenuPosition.over,
     this.itemStyle,
+    super.key,
   })  : assert((entries != null) != (values != null)),
         entries =
             entries ?? values!.map((e) => MenuButtonEntry(value: e)).toList();
@@ -158,7 +158,7 @@ class _MenuButtonBuilderState<T> extends State<MenuButtonBuilder<T>> {
       style: widget.menuStyle ??
           MenuStyle(
             minimumSize: MaterialStatePropertyAll(Size(_size?.width ?? 0, 0)),
-            visualDensity: const VisualDensity(horizontal: 0, vertical: 0),
+            visualDensity: VisualDensity.standard,
           ),
       builder: (context, controller, child) {
         return child!;
@@ -231,10 +231,7 @@ class _MenuButtonBuilderState<T> extends State<MenuButtonBuilder<T>> {
       const EdgeInsets.symmetric(horizontal: 16),
       const EdgeInsets.symmetric(horizontal: 8),
       const EdgeInsets.symmetric(horizontal: 4),
-      // TODO: Move to textScaler.scale, but what fontsize should be sent in?
-      // https://stackoverflow.com/questions/77494443/how-to-migrate-from-textscalefactor-to-textscalar-scale
-      // ignore: deprecated_member_use
-      MediaQuery.maybeOf(context)?.textScaleFactor ?? 1,
+      (MediaQuery.maybeOf(context)?.textScaler.scale(1) ?? 1) / 1,
     );
   }
 

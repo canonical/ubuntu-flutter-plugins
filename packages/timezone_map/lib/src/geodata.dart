@@ -108,7 +108,7 @@ class Geodata extends GeoSource {
     final key = timezone.toSearch();
     if (key.isEmpty) return _timezones.values;
     return _timezones.values.where((location) {
-      return location.timezone?.toSearch().contains(key) == true;
+      return location.timezone?.toSearch().contains(key) ?? false;
     });
   }
 

@@ -3,6 +3,8 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:form_field_validator/form_field_validator.dart';
 
+import '../ubuntu_widgets.dart';
+
 // The spacing between the form field and the success icon.
 const _kIconSpacing = 10.0;
 
@@ -12,6 +14,30 @@ const _kIconSpacing = 10.0;
 ///  * [SuccessIcon]
 ///  * [EqualValidator]
 class ValidatedFormField extends StatefulWidget {
+  /// Creates a [TextFormField] and a check mark.
+  ///
+  /// The `validator' helps to decide when to show the check mark.
+  ValidatedFormField({
+    super.key,
+    this.controller,
+    this.initialValue,
+    this.onChanged,
+    this.onEditingComplete,
+    FieldValidator<String?>? validator,
+    this.autofocus = false,
+    this.focusNode,
+    this.labelText,
+    this.helperText,
+    this.obscureText = false,
+    this.successWidget,
+    double? spacing,
+    this.fieldWidth,
+    this.autovalidateMode = AutovalidateMode.onUserInteraction,
+    this.enabled = true,
+    this.suffixIcon,
+  })  : validator = validator ?? _NoValidator(),
+        spacing = spacing ?? (successWidget != null ? _kIconSpacing : null);
+
   /// The controller used to get the [TextField] values. If [controller] is
   /// null, a controller is created internally and its text is set to
   /// [initialValue].
@@ -64,30 +90,6 @@ class ValidatedFormField extends StatefulWidget {
 
   /// An optional Widget placed inside the text input.
   final Widget? suffixIcon;
-
-  /// Creates a [TextFormField] and a check mark.
-  ///
-  /// The `validator' helps to decide when to show the check mark.
-  ValidatedFormField({
-    super.key,
-    this.controller,
-    this.initialValue,
-    this.onChanged,
-    this.onEditingComplete,
-    FieldValidator<String?>? validator,
-    this.autofocus = false,
-    this.focusNode,
-    this.labelText,
-    this.helperText,
-    this.obscureText = false,
-    this.successWidget,
-    double? spacing,
-    this.fieldWidth,
-    this.autovalidateMode = AutovalidateMode.onUserInteraction,
-    this.enabled = true,
-    this.suffixIcon,
-  })  : validator = validator ?? _NoValidator(),
-        spacing = spacing ?? (successWidget != null ? _kIconSpacing : null);
 
   @override
   State<ValidatedFormField> createState() => _ValidatedFormFieldState();
@@ -152,7 +154,7 @@ class _ValidatedFormFieldState extends State<ValidatedFormField> {
       focusNode: focusNode,
       onChanged: widget.onChanged,
       onEditingComplete: widget.onEditingComplete,
-      validator: widget.validator,
+      validator: widget.validator.call,
       obscureText: widget.obscureText,
       enabled: widget.enabled,
       decoration: InputDecoration(
