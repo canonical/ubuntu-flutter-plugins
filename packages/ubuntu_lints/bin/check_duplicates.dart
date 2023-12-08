@@ -99,8 +99,7 @@ List<String> yamlToRules(String content) {
 Map<String, bool> yamlToOverrideRules(String content) {
   final yaml = loadYaml(content) as YamlMap;
   return (yaml['linter']['rules'] as Map).map<String, bool>(
-    // ignore: unnecessary_lambdas
-    (key, value) => MapEntry(key, value),
+    (key, value) => MapEntry(key as String, value as bool),
   );
 }
 

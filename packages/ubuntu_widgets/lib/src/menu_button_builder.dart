@@ -1,5 +1,3 @@
-// ignore_for_file: always_put_required_named_parameters_first
-
 import 'package:collection/collection.dart';
 import 'package:flutter/material.dart';
 import 'package:yaru_icons/yaru_icons.dart';
@@ -233,10 +231,7 @@ class _MenuButtonBuilderState<T> extends State<MenuButtonBuilder<T>> {
       const EdgeInsets.symmetric(horizontal: 16),
       const EdgeInsets.symmetric(horizontal: 8),
       const EdgeInsets.symmetric(horizontal: 4),
-      // TODO: Move to textScaler.scale, but what fontsize should be sent in?
-      // https://stackoverflow.com/questions/77494443/how-to-migrate-from-textscalefactor-to-textscalar-scale
-      // ignore: deprecated_member_use
-      MediaQuery.maybeOf(context)?.textScaleFactor ?? 1,
+      (MediaQuery.maybeOf(context)?.textScaler.scale(1) ?? 1) / 1,
     );
   }
 

@@ -162,7 +162,6 @@ class _LogFormatter extends LogRecordFormatter {
       buffer.write(record.error);
     }
 
-    // ignore: avoid_as
     final stackTrace = record.stackTrace ??
         (record.error is Error ? (record.error as Error).stackTrace : null);
     if (stackTrace != null) {

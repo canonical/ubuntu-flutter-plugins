@@ -1,5 +1,3 @@
-// ignore_for_file: always_put_required_named_parameters_first
-
 import 'dart:async';
 
 import 'package:flutter/material.dart';
@@ -26,7 +24,6 @@ const kSlideInterval = Duration(seconds: 15);
 class SlideShow extends StatefulWidget {
   /// Creates a slide show with the given slides and interval.
   SlideShow({
-    super.key,
     required this.slides,
     this.curve = kSlideCurve,
     this.duration = kSlideDuration,
@@ -35,6 +32,7 @@ class SlideShow extends StatefulWidget {
     this.autofocus = false,
     this.focusNode,
     this.onSlide,
+    super.key,
   }) : assert(slides.isNotEmpty);
 
   /// The list of slides to show.

@@ -1,5 +1,3 @@
-// ignore_for_file: always_put_required_named_parameters_first
-
 import 'package:flutter/widgets.dart';
 
 /// Overrides the mouse cursor for a subtree of widgets by stacking a mouse
@@ -11,9 +9,9 @@ import 'package:flutter/widgets.dart';
 class OverrideMouseCursor extends StatelessWidget {
   /// Creates an instance.
   const OverrideMouseCursor({
-    super.key,
     required this.child,
     required this.cursor,
+    super.key,
   });
 
   /// The child widget.
