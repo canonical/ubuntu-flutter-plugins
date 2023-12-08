@@ -1,5 +1,10 @@
 # Changelog
 
+## [0.1.0](https://github.com/canonical/ubuntu-flutter-plugins/compare/xdg_icons-v0.0.3...xdg_icons-v0.1.0) (2023-12-08)
+
+
+* Activate ubuntu_lints ([2b6179d](https://github.com/canonical/ubuntu-flutter-plugins/commit/2b6179dfda6fbe9795907e34d0f5b4cb20539a6b))
+
 ## [0.0.3](https://github.com/canonical/ubuntu-flutter-plugins/compare/xdg_icons-v0.0.2...xdg_icons-v0.0.3) (2023-10-18)
 
 
