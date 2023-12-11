@@ -23,7 +23,7 @@ dependencies:
   yaru_test: ^0.1.5
 
 dev_dependencies:
-  ubuntu_lints: ^0.2.0
+  ubuntu_lints: ^0.3.0
 
 flutter:
   assets:
