@@ -1,5 +1,14 @@
 # Changelog
 
+## [0.4.0](https://github.com/canonical/ubuntu-flutter-plugins/compare/ubuntu_localizations-v0.3.4...ubuntu_localizations-v0.4.0) (2023-12-11)
+
+
+* Activate ubuntu_lints ([2b6179d](https://github.com/canonical/ubuntu-flutter-plugins/commit/2b6179dfda6fbe9795907e34d0f5b4cb20539a6b))
+* regenerate l10n ([#317](https://github.com/canonical/ubuntu-flutter-plugins/issues/317)) ([97d48ac](https://github.com/canonical/ubuntu-flutter-plugins/commit/97d48acc9cef1e427630a8fc1d7a6ddfac811a76))
+* Release ubuntu_lints v0.2.0 ([393e87d](https://github.com/canonical/ubuntu-flutter-plugins/commit/393e87d3ea377cf4f9ffdf86b09f9617625050ec))
+* translated using Weblate (Portuguese (Brazil)) ([8fca65f](https://github.com/canonical/ubuntu-flutter-plugins/commit/8fca65f70831bf1298be1ff27887cef7291546ac))
+* **ubuntu_localizations:** add readme badges ([87b4e88](https://github.com/canonical/ubuntu-flutter-plugins/commit/87b4e88ae4ad228b53a69f7b3877843fdf1a2058))
+
 ## [0.3.4](https://github.com/canonical/ubuntu-flutter-plugins/compare/ubuntu_localizations-v0.3.3...ubuntu_localizations-v0.3.4) (2023-07-11)
 
 
