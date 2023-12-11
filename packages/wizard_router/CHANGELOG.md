@@ -1,5 +1,11 @@
 # Changelog
 
+## [1.1.0](https://github.com/canonical/ubuntu-flutter-plugins/compare/wizard_router-v1.0.4...wizard_router-v1.1.0) (2023-12-11)
+
+
+* Activate ubuntu_lints ([2b6179d](https://github.com/canonical/ubuntu-flutter-plugins/commit/2b6179dfda6fbe9795907e34d0f5b4cb20539a6b))
+* Release ubuntu_lints v0.2.0 ([393e87d](https://github.com/canonical/ubuntu-flutter-plugins/commit/393e87d3ea377cf4f9ffdf86b09f9617625050ec))
+
 ## [1.0.4](https://github.com/canonical/ubuntu-flutter-plugins/compare/wizard_router-v1.0.3...wizard_router-v1.0.4) (2023-10-19)
 
 
