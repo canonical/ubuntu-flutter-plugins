@@ -6,9 +6,9 @@ import 'package:flutter/widgets.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:path/path.dart' as path;
 
-import 'data.dart';
-import 'platform_interface.dart';
-import 'theme.dart';
+import 'package:xdg_icons/src/data.dart';
+import 'package:xdg_icons/src/platform_interface.dart';
+import 'package:xdg_icons/src/theme.dart';
 
 class XdgIcon extends StatefulWidget {
   const XdgIcon({

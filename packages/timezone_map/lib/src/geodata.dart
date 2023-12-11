@@ -4,10 +4,9 @@ import 'dart:convert';
 import 'package:flutter/services.dart';
 import 'package:latlong2/latlong.dart';
 import 'package:rbush/rbush.dart';
+import 'package:timezone_map/src/location.dart';
+import 'package:timezone_map/src/source.dart';
 import 'package:xml/xml.dart';
-
-import 'location.dart';
-import 'source.dart';
 
 export 'package:latlong2/latlong.dart' show LatLng;
 

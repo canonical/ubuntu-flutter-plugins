@@ -1,6 +1,6 @@
 import 'dart:ui';
 
-import 'flutter_localizations.dart';
+import 'package:ubuntu_localizations/src/flutter/flutter_localizations.dart';
 
 class FlutterLocalizationsDelegateOc<T>
     extends FlutterLocalizationsDelegate<T> {

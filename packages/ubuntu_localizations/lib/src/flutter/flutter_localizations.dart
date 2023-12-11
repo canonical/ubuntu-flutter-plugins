@@ -8,17 +8,17 @@ import 'package:intl/date_symbols.dart';
 import 'package:intl/date_time_patterns.dart' as intl;
 import 'package:intl/intl.dart';
 
-import 'flutter_localizations_bo.dart';
-import 'flutter_localizations_cy.dart';
-import 'flutter_localizations_dz.dart';
-import 'flutter_localizations_eo.dart';
-import 'flutter_localizations_ga.dart';
-import 'flutter_localizations_ku.dart';
-import 'flutter_localizations_nn.dart';
-import 'flutter_localizations_oc.dart';
-import 'flutter_localizations_se.dart';
-import 'flutter_localizations_tg.dart';
-import 'flutter_localizations_ug.dart';
+import 'package:ubuntu_localizations/src/flutter/flutter_localizations_bo.dart';
+import 'package:ubuntu_localizations/src/flutter/flutter_localizations_cy.dart';
+import 'package:ubuntu_localizations/src/flutter/flutter_localizations_dz.dart';
+import 'package:ubuntu_localizations/src/flutter/flutter_localizations_eo.dart';
+import 'package:ubuntu_localizations/src/flutter/flutter_localizations_ga.dart';
+import 'package:ubuntu_localizations/src/flutter/flutter_localizations_ku.dart';
+import 'package:ubuntu_localizations/src/flutter/flutter_localizations_nn.dart';
+import 'package:ubuntu_localizations/src/flutter/flutter_localizations_oc.dart';
+import 'package:ubuntu_localizations/src/flutter/flutter_localizations_se.dart';
+import 'package:ubuntu_localizations/src/flutter/flutter_localizations_tg.dart';
+import 'package:ubuntu_localizations/src/flutter/flutter_localizations_ug.dart';
 
 abstract class FlutterMaterialLocalizations {
   static const List<LocalizationsDelegate<dynamic>> delegates =

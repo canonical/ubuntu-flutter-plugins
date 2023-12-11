@@ -1,6 +1,6 @@
 import 'package:flutter/widgets.dart';
 
-import 'settings.dart';
+import 'package:wizard_router/src/settings.dart';
 
 class WizardRouteResult<T extends Object?> extends WizardRouteSettings<T> {
   WizardRouteResult(
