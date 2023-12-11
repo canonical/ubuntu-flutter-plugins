@@ -3,7 +3,7 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:form_field_validator/form_field_validator.dart';
 
-import '../ubuntu_widgets.dart';
+import 'package:ubuntu_widgets/ubuntu_widgets.dart';
 
 // The spacing between the form field and the success icon.
 const _kIconSpacing = 10.0;

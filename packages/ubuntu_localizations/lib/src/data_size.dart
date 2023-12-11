@@ -31,7 +31,7 @@ import 'dart:math' as math;
 
 import 'package:flutter/widgets.dart';
 
-import 'localizations.dart';
+import 'package:ubuntu_localizations/src/localizations.dart';
 
 /// Localized data size formatting.
 extension UbuntuDataSizeLocalizations on UbuntuLocalizations {

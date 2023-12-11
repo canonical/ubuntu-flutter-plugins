@@ -2,8 +2,8 @@ import 'dart:async';
 
 import 'package:flutter/widgets.dart';
 
-import 'route.dart';
-import 'wizard.dart';
+import 'package:wizard_router/src/route.dart';
+import 'package:wizard_router/src/wizard.dart';
 
 /// The scope of a wizard page.
 ///

@@ -1,9 +1,8 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_test/flutter_test.dart';
+import 'package:ubuntu_test/src/common_finders.dart';
 import 'package:yaru_test/yaru_test.dart';
-
-import 'common_finders.dart';
 
 /// Widget test extensions.
 extension UbuntuWidgetTester on WidgetTester {

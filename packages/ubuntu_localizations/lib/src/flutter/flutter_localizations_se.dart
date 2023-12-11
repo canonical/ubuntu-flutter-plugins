@@ -2,7 +2,7 @@ import 'dart:ui';
 
 import 'package:intl/date_symbols.dart';
 
-import 'flutter_localizations.dart';
+import 'package:ubuntu_localizations/src/flutter/flutter_localizations.dart';
 
 class FlutterLocalizationsDelegateSe<T>
     extends FlutterLocalizationsDelegate<T> {

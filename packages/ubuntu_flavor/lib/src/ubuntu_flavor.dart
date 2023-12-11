@@ -1,7 +1,8 @@
 import 'package:meta/meta.dart';
 import 'package:platform_linux/platform.dart';
 
-import 'ubuntu_flavor_stub.dart' if (dart.library.io) 'ubuntu_flavor_io.dart';
+import 'package:ubuntu_flavor/src/ubuntu_flavor_stub.dart'
+    if (dart.library.io) 'ubuntu_flavor_io.dart';
 
 @immutable
 class UbuntuFlavor {

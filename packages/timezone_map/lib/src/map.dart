@@ -5,9 +5,8 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:intl/intl.dart';
 import 'package:latlong2/latlong.dart';
 import 'package:path/path.dart' as p;
+import 'package:timezone_map/src/latlng.dart';
 import 'package:vector_graphics/vector_graphics.dart';
-
-import 'latlng.dart';
 
 /// The size of the timezone map.
 enum TimezoneMapSize {
