@@ -1,5 +1,11 @@
 # Changelog
 
+## [0.3.0](https://github.com/canonical/ubuntu-flutter-plugins/compare/ubuntu_flavor-v0.2.1...ubuntu_flavor-v0.3.0) (2023-12-11)
+
+
+* Activate ubuntu_lints ([2b6179d](https://github.com/canonical/ubuntu-flutter-plugins/commit/2b6179dfda6fbe9795907e34d0f5b4cb20539a6b))
+* Release ubuntu_lints v0.2.0 ([393e87d](https://github.com/canonical/ubuntu-flutter-plugins/commit/393e87d3ea377cf4f9ffdf86b09f9617625050ec))
+
 ## [0.2.1](https://github.com/canonical/ubuntu-flutter-plugins/compare/ubuntu_flavor-v0.2.0...ubuntu_flavor-v0.2.1) (2023-07-18)
 
 
