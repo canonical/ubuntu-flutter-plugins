@@ -1,3 +1,7 @@
+## 0.3.0
+ 
+ - **FEAT**: Add `always_use_package_imports` to the ruleset
+
 ## 0.2.0
 
  - **FIX**: Remove and fix all unnecessary ignores.
