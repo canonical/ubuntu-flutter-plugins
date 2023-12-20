@@ -1,3 +1,10 @@
+## 0.3.1
+
+ - **REFACTOR**: Apply ubuntu lints to all packages (#340).
+ - **FIX**: Remove and fix all unnecessary ignores.
+ - **FEAT**: The MenuButtonBuilder should scale depending on his childrens.
+ - **FEAT**: Activate ubuntu_lints.
+
 # Changelog
 
 ## [0.3.0](https://github.com/canonical/ubuntu-flutter-plugins/compare/ubuntu_widgets-v0.2.1...ubuntu_widgets-v0.3.0) (2023-10-30)
