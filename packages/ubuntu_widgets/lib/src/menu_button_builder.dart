@@ -185,6 +185,7 @@ class _MenuButtonBuilderState<T> extends State<MenuButtonBuilder<T>> {
               }
             },
             child: Row(
+              mainAxisSize: MainAxisSize.min,
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 DefaultTextStyle(
