@@ -3,6 +3,27 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 2024-01-04
+
+### Changes
+
+---
+
+Packages with breaking changes:
+
+ - There are no breaking changes in this release.
+
+Packages with other changes:
+
+ - [`ubuntu_widgets` - `v0.3.2`](#ubuntu_widgets---v032)
+
+---
+
+#### `ubuntu_widgets` - `v0.3.2`
+
+ - **FIX**: returning to original behavior, with a parameter ‘expanded’ to determine the width of the button.
+
+
 ## 2023-12-20
 
 ### Changes

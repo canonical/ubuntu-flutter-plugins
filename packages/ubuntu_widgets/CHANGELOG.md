@@ -1,3 +1,7 @@
+## 0.3.2
+
+ - **FIX**: returning to original behavior, with a parameter ‘expanded’ to determine the width of the button.
+
 ## 0.3.1
 
  - **REFACTOR**: Apply ubuntu lints to all packages (#340).
