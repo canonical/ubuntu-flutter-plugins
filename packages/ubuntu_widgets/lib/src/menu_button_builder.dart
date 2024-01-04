@@ -65,6 +65,7 @@ class MenuButtonBuilder<T> extends StatefulWidget {
     this.menuStyle,
     this.menuPosition = PopupMenuPosition.over,
     this.itemStyle,
+    this.expanded = true,
     super.key,
   })  : assert((entries != null) != (values != null)),
         entries =
@@ -110,6 +111,9 @@ class MenuButtonBuilder<T> extends StatefulWidget {
 
   /// An optional style for the menu items.
   final ButtonStyle? itemStyle;
+
+  /// Whether the menu should be expanded to the full width of the button. Defaults to true.
+  final bool expanded;
 
   @override
   State<MenuButtonBuilder<T>> createState() => _MenuButtonBuilderState<T>();
@@ -185,7 +189,8 @@ class _MenuButtonBuilderState<T> extends State<MenuButtonBuilder<T>> {
               }
             },
             child: Row(
-              mainAxisSize: MainAxisSize.min,
+              mainAxisSize:
+                  widget.expanded ? MainAxisSize.max : MainAxisSize.min,
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 DefaultTextStyle(
