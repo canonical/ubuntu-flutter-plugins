@@ -74,7 +74,7 @@ jobs:
     - run: melos generate
     - run: ./.github/scripts/check-outdated-files.sh
       if: github.event_name == 'pull_request'
-    - uses: peter-evans/create-pull-request@v5
+    - uses: peter-evans/create-pull-request@v6
       if: github.event_name != 'pull_request'
       id: create-pr
       with:
@@ -93,7 +93,7 @@ jobs:
     - run: melos gen-l10n
     - run: ./.github/scripts/check-outdated-files.sh
       if: github.event_name == 'pull_request'
-    - uses: peter-evans/create-pull-request@v5
+    - uses: peter-evans/create-pull-request@v6
       if: github.event_name != 'pull_request'
       id: create-pr
       with:
