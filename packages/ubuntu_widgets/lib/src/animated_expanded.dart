@@ -34,22 +34,19 @@ class _AnimatedExpandedState extends State<AnimatedExpanded>
     with SingleTickerProviderStateMixin {
   @override
   Widget build(BuildContext context) {
-    return Flexible(
-      flex: widget.expanded ? 1 : 0,
-      child: AnimatedSize(
+    return AnimatedSize(
+      curve: widget.curve,
+      duration: widget.duration,
+      child: AnimatedOpacity(
         curve: widget.curve,
         duration: widget.duration,
-        child: AnimatedOpacity(
-          curve: widget.curve,
-          duration: widget.duration,
-          opacity: widget.expanded ? 1 : 0,
-          child: Container(
-            constraints: BoxConstraints(
-              maxWidth: widget.expanded ? double.infinity : 0,
-              maxHeight: widget.expanded ? double.infinity : 0,
-            ),
-            child: widget.child,
+        opacity: widget.expanded ? 1 : 0,
+        child: ConstrainedBox(
+          constraints: BoxConstraints(
+            maxWidth: widget.expanded ? double.infinity : 0,
+            maxHeight: widget.expanded ? double.infinity : 0,
           ),
+          child: widget.child,
         ),
       ),
     );
