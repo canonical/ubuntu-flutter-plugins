@@ -73,7 +73,7 @@ final geodata = Geodata(
   loadTimezones: () => kTimezones,
 );
 
-const kCities = r'''
+const kCities = '''
 3161732	Bergen	Bergen	BGO,Bargen,Berga,Bergen,Bergen (Hordaland Fylke),Bergena,Bergenas,Bergeno,Bergn,Bernken,Birgon,Bjoergvin,Björgvin,baragena,bargana,bei er gen,beleugen,bergeni,berugen,brghn,brgn,perkan,Μπέργκεν,Берген,ברגן,برغن,برگن,बार्गन,বারগেন,பேர்கன்,แบร์เกน,ბერგენი,ベルゲン,卑爾根,베르겐	60.39299	5.32415	P	PPLA	NO		46	4601			213585		20	Europe/Oslo	2021-07-30
 2618425	Copenhagen	Copenhagen	CPH,Cobanhavan,Copenaga,Copenaghen,Copenaguen,Copenhaga,Copenhagen,Copenhague,Copenhaguen,Copenhaguen - Kobenhavn,Copenhaguen - København,Cóbanhávan,Hafnia,Kapehngagen,Kaupmannahoefn,Kaupmannahöfn,Keypmannahavn,Kjobenhavn,Kjopenhamn,Kjøpenhamn,Kobenhamman,Kobenhaven,Kobenhavn,Kodan,Kodaň,Koebenhavn,Koeoepenhamina,Koepenhamn,Kopenage,Kopenchage,Kopengagen,Kopenhaagen,Kopenhag,Kopenhaga,Kopenhage,Kopenhagen,Kopenhagena,Kopenhago,Kopenhāgena,Kopenkhagen,Koppenhaga,Koppenhága,Kòpenhaga,Köbenhavn,Köpenhamn,Kööpenhamina,København,Københámman,ge ben ha gen,khopenheken,kopanahagana,kopenahagena,kopenahegena,kopenhagen,kwbnhaghn,kwpnhgn,qwpnhgn,Κοπεγχάγη,Капэнгаген,Копенгаген,Копенхаген,Կոպենհագեն,קופנהאגן,קופנהגן,كوبنهاغن,كوپېنھاگېن,ܟܘܦܢܗܓܢ,कोपनहागन,কোপেনহাগেন,কোপেনহেগেন,โคเปนเฮเกน,ཀའོ་པེན་ཧ་ཀེན,კოპენჰაგენი,ኮፐንሀገን,ኮፕንሀግ,コペンハーゲン,哥本哈根,코펜하겐	55.67594	12.56553	P	PPLC	DK		17	101			1153615		14	Europe/Copenhagen	2012-11-26
 2711537	Göteborg	Goeteborg	G'oteborg,GOT,Gautaborg,Geteborg,Geteborga,Geteborgas,Geuteborgo,Geŭteborgo,Gjoteborg,Gjotehbarg,Goeteborg,Goeteborq,Goteborg,Goteburg,Gotemburgo,Gotenburg,Gothembourg,Gothenburg,Gothoburgum,Gotnburg,Gottenborg,Göteborg,Göteborq,Gøteborg,Gēteborga,Nketempornk,ge de bao,ghwtnbrgh,gtbwrg,jwtnbrj,kx then beirk,yeteboli,yohateborya,yotebori,ywtbry,Γκέτεμποργκ,Гетеборг,Гьотеборг,Гётеборг,Гётэбарг,גטבורג,געטעבארג,جوتنبرج,غوتنبرغ,گووتھنبرگ,یوتبری,योहतेबोर्य,กอเทนเบิร์ก,გეტებორგი,ዬተቦርይ,ᐃᐅᑕᐳᕆ,ヨーテボリ,哥德堡,예테보리	57.70716	11.96679	P	PPLA	SE		28	1480			572799		10	Europe/Stockholm	2021-08-02
@@ -88,7 +88,7 @@ const kCities = r'''
 633679	Turku	Turku	Abo,Aboa,TKU,Tourkou,Turcu,Turku,Turkù,Turu,Túrcú,touruku,trkw,tu er ku,tu rku,tuleuku,turku,twrkw,twrqw,Åbo,Τούρκου,Турку,Տուրկու,טורקו,ترکو,توركو,تورکو,तुर्कू,টুর্কু,ตุรกุ,တားကူးမြို့,ტურკუ,ቱርኩ,トゥルク,图尔库,圖爾庫,투르쿠	60.45148	22.26869	P	PPLA	FI		02	023	853		175945		22	Europe/Helsinki	2019-09-05
 ''';
 
-const kAdmins = r'''
+const kAdmins = '''
 DK.17	Capital Region	Capital Region	6418538
 FI.01	Uusimaa	Uusimaa	830709
 IS.39	Capital Region	Capital Region	3426182
@@ -105,7 +105,7 @@ NO	NOR	578	NO	Norway	Oslo	324220	5009150	EU	.no	NOK	Krone	47	####	^(\d{4})$	no,n
 SE	SWE	752	SW	Sweden	Stockholm	449964	9555893	EU	.se	SEK	Krona	46	SE-### ##	^(?:SE)*(\d{5})$	sv-SE,se,sma,fi-SE	2661886	NO,FI	
 ''';
 
-const kTimezones = r'''
+const kTimezones = '''
 CountryCode	TimeZoneId	GMT offset 1. Jan 2021	DST offset 1. Jul 2021	rawOffset (independant of DST)
 DK	Europe/Copenhagen	1.0	2.0	1.0
 FI	Europe/Helsinki	2.0	3.0	2.0

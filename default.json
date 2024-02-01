@@ -8,5 +8,6 @@
   "enabledManagers": [
     "github-actions",
     "pub"
-  ]
+  ],
+  "ignoreDeps": ["async", "collection", "meta", "intl", "path"]
 }

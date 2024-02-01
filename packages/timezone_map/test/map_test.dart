@@ -1,3 +1,5 @@
+// ignore_for_file: avoid_redundant_argument_values
+
 import 'dart:convert';
 import 'dart:io';
 
@@ -130,7 +132,7 @@ void main() {
     await tester.tap(find.byType(TimezoneMap));
     expect(pressed, isCloseToLatLng(centerLatLng));
 
-    await tester.tapAt(customSize.topLeft(const Offset(0, 0)));
+    await tester.tapAt(customSize.topLeft(Offset.zero));
     expect(pressed, isCloseToLatLng(topLeftLatLng));
 
     // The expected coordinates are specifically for a 960x480 map. Tolerate

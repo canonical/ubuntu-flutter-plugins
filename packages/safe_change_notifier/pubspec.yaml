@@ -14,9 +14,9 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  state_notifier: ^0.7.0
+  state_notifier: ^1.0.0
 
 dev_dependencies:
-  ubuntu_lints: ^0.1.0
   flutter_test:
     sdk: flutter
+  ubuntu_lints: ^0.3.0

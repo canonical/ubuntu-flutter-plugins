@@ -1,5 +1,5 @@
-import 'location.dart';
-import 'source.dart';
+import 'package:timezone_map/src/location.dart';
+import 'package:timezone_map/src/source.dart';
 
 /// Provides geolocation lookups.
 class GeoService {

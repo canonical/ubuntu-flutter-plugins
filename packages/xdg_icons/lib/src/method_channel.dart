@@ -1,8 +1,8 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
-import 'data.dart';
-import 'platform_interface.dart';
+import 'package:xdg_icons/src/data.dart';
+import 'package:xdg_icons/src/platform_interface.dart';
 
 /// An implementation of [XdgIconsPlatform] that uses platform channels.
 class XdgIconsMethodChannel extends XdgIconsPlatform {

@@ -21,7 +21,7 @@ void main() {
       final delegate =
           delegates.firstWhere((delegate) => delegate.isSupported(locale));
       await expectLater(
-        () async => await delegate.load(locale),
+        () async => delegate.load(locale),
         returnsNormally,
         reason:
             'MaterialLocalizations failed to load "$locale". Missing date time patters/symbols?',
@@ -46,7 +46,7 @@ void main() {
       final delegate =
           delegates.firstWhere((delegate) => delegate.isSupported(locale));
       await expectLater(
-        () async => await delegate.load(locale),
+        () async => delegate.load(locale),
         returnsNormally,
         reason:
             'CupertinoLocalizations failed to load "$locale". Missing date time patters/symbols?',

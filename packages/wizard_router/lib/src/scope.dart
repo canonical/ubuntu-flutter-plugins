@@ -2,19 +2,19 @@ import 'dart:async';
 
 import 'package:flutter/widgets.dart';
 
-import 'route.dart';
-import 'wizard.dart';
+import 'package:wizard_router/src/route.dart';
+import 'package:wizard_router/src/wizard.dart';
 
 /// The scope of a wizard page.
 ///
 /// Each page is enclosed by a `WizardScope` widget.
 class WizardScope extends StatefulWidget {
   const WizardScope({
-    super.key,
     required int index,
-    Object? userData,
     required WizardController controller,
     required WizardRoute route,
+    Object? userData,
+    super.key,
   })  : _index = index,
         _userData = userData,
         _route = route,

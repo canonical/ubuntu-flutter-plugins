@@ -1,4 +1,4 @@
-import 'location.dart';
+import 'package:timezone_map/src/location.dart';
 
 /// Geolocation lookup source.
 abstract class GeoSource {

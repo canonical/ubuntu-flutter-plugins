@@ -35,10 +35,7 @@ PasswordStrength estimatePasswordStrength(String password) {
 /// A widget that visualizes the strength of a password.
 class PasswordStrengthLabel extends StatelessWidget {
   /// Creates a new label with the given [strength].
-  const PasswordStrengthLabel({
-    super.key,
-    required this.strength,
-  });
+  const PasswordStrengthLabel({required this.strength, super.key});
 
   /// The strength of the password.
   final PasswordStrength strength;

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ubuntu_widgets/src/validated_form_field.dart';
 import 'package:yaru/yaru.dart';
 
 /// Presents successful form validation state.

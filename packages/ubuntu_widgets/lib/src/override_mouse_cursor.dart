@@ -9,9 +9,9 @@ import 'package:flutter/widgets.dart';
 class OverrideMouseCursor extends StatelessWidget {
   /// Creates an instance.
   const OverrideMouseCursor({
-    super.key,
     required this.child,
     required this.cursor,
+    super.key,
   });
 
   /// The child widget.

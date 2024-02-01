@@ -23,10 +23,10 @@ import 'package:flutter/material.dart';
 class FormLayout extends StatelessWidget {
   /// Creates a form layout with the given rows and spacings.
   const FormLayout({
-    super.key,
     required this.rows,
     this.rowSpacing = 0,
     this.columnSpacing = 0,
+    super.key,
   });
 
   /// Spacing between rows.

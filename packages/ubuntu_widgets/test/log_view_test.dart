@@ -1,3 +1,5 @@
+// ignore_for_file: close_sinks
+
 import 'dart:async';
 
 import 'package:flutter/material.dart';
@@ -71,7 +73,7 @@ void main() {
 
   testWidgets('do not attempt to scroll when unmounted', (tester) async {
     final log = StreamController<String>.broadcast(sync: true);
-    for (int i = 0; i < 3; ++i) {
+    for (var i = 0; i < 3; ++i) {
       log.add('test');
     }
 
@@ -110,7 +112,7 @@ void main() {
     final scrollController = textField.scrollController;
     expect(scrollController, isNotNull);
 
-    for (int i = 1; i < 6; i++) {
+    for (var i = 1; i < 6; i++) {
       log.add('line $i');
       await tester.pump();
     }

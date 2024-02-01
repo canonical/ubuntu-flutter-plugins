@@ -271,6 +271,7 @@ void main() {
     verify(() => mock.lookupIcon(name: 'foo', size: 24)).called(1);
     themeChange.add(null);
     verify(() => mock.lookupIcon(name: 'foo', size: 24)).called(1);
+    await themeChange.close();
   });
 
   testWidgets('png file', (tester) async {
