@@ -9,11 +9,11 @@ version: 1.0.4
 
 environment:
   sdk: '>=3.0.0 <4.0.0'
-  flutter: '>=3.10.0'
+  flutter: ">=3.13.0"
 
 dependencies:
-  collection: ^1.15.0
-  flow_builder: ^0.0.9
+  collection: ^1.17.0
+  flow_builder: ^0.0.10
   flutter:
     sdk: flutter
   safe_change_notifier: ^0.3.0

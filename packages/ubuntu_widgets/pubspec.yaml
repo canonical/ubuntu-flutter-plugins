@@ -8,10 +8,10 @@ version: 0.3.2
 
 environment:
   sdk: ">=3.0.0 <4.0.0"
-  flutter: ">=3.10.0"
+  flutter: ">=3.13.0"
 
 dependencies:
-  collection: ^1.16.0
+  collection: ^1.17.0
   diacritic: ^0.1.3
   flutter:
     sdk: flutter
