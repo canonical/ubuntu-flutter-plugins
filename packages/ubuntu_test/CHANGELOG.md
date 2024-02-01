@@ -1,3 +1,14 @@
+## 0.1.0-beta.8
+
+ - **REFACTOR**: Apply ubuntu lints to all packages (#340).
+ - **REFACTOR**(ubuntu_test): finder-based localizations (#218).
+ - **FEAT**(ubuntu_test): add markdownBody finder.
+ - **FEAT**(ubuntu_test): import IntegrationTester.runApp() from UDI (#251).
+ - **FEAT**(ubuntu_test): print original pumpUntil() stack trace on timeout (#249).
+ - **FEAT**(ubuntu_test): add test helpers for done/no/yes (#244).
+ - **FEAT**(ubuntu_test): import flutter_html & flutter_svg deps from yaru_test (#228).
+ - **FEAT**(ubuntu_test): add convenience finders for common stock labels (#220).
+
 # Changelog
 
 ## 0.1.0-beta.7

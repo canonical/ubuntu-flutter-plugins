@@ -1,3 +1,8 @@
+## 0.2.2
+
+ - **REFACTOR**: Apply ubuntu lints to all packages (#340).
+ - **FEAT**: Activate ubuntu_lints.
+
 # Changelog
 
 ## [0.2.1](https://github.com/canonical/ubuntu-flutter-plugins/compare/ubuntu_flavor-v0.2.0...ubuntu_flavor-v0.2.1) (2023-07-18)

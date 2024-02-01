@@ -1,3 +1,8 @@
+## 0.3.5
+
+ - **REFACTOR**: Apply ubuntu lints to all packages (#340).
+ - **FEAT**: Activate ubuntu_lints.
+
 # Changelog
 
 ## [0.3.4](https://github.com/canonical/ubuntu-flutter-plugins/compare/ubuntu_localizations-v0.3.3...ubuntu_localizations-v0.3.4) (2023-07-11)

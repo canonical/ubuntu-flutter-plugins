@@ -3,14 +3,14 @@ description: Detect Ubuntu flavor
 homepage: https://github.com/canonical/ubuntu-flutter-plugins
 repository: https://github.com/canonical/ubuntu-flutter-plugins/tree/main/packages/ubuntu_flavor
 issue_tracker: https://github.com/canonical/ubuntu-flutter-plugins/issues
-version: 0.2.1
+version: 0.2.2
 
 environment:
   sdk: '>=3.0.0 <4.0.0'
 
 dependencies:
   meta: ^1.10.0
-  platform_linux: ^0.1.0
+  platform_linux: ^0.1.2
 
 dev_dependencies:
   test: ^1.21.1

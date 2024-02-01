@@ -1,3 +1,7 @@
+## 0.3.1
+
+ - **FEAT**: Activate ubuntu_lints.
+
 # Changelog
 
 ## [0.3.0](https://github.com/canonical/ubuntu-flutter-plugins/compare/ubuntu_service-v0.2.4...ubuntu_service-v0.3.0) (2023-11-16)

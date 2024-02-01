@@ -1,3 +1,7 @@
+## 0.3.3
+
+ - **FIX**: Remove Flexible from AnimatedExpanded.
+
 ## 0.3.2
 
  - **FIX**: returning to original behavior, with a parameter ‘expanded’ to determine the width of the button.
