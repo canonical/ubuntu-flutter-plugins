@@ -1,7 +1,7 @@
 import 'package:safe_change_notifier/safe_change_notifier.dart';
 
-import 'location.dart';
-import 'service.dart';
+import 'package:timezone_map/src/location.dart';
+import 'package:timezone_map/src/service.dart';
 
 /// Controls a timezone map widget.
 class TimezoneController extends SafeChangeNotifier {

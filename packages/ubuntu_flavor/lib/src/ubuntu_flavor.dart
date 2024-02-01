@@ -1,7 +1,8 @@
 import 'package:meta/meta.dart';
 import 'package:platform_linux/platform.dart';
 
-import 'ubuntu_flavor_stub.dart' if (dart.library.io) 'ubuntu_flavor_io.dart';
+import 'package:ubuntu_flavor/src/ubuntu_flavor_stub.dart'
+    if (dart.library.io) 'ubuntu_flavor_io.dart';
 
 @immutable
 class UbuntuFlavor {
@@ -65,7 +66,9 @@ class UbuntuFlavor {
     name: 'Xubuntu',
   );
 
-  static UbuntuFlavor? detect([@visibleForTesting Platform? platform]) {
+  static UbuntuFlavor? detect([
+    @visibleForTesting Platform platform = const LocalPlatform(),
+  ]) {
     return detectUbuntuFlavor(platform);
   }
 

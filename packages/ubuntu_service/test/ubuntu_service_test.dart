@@ -34,7 +34,8 @@ void main() {
   });
 
   test('reset service', () {
-    Service? wasDisposed1, wasDisposed2;
+    Service? wasDisposed1;
+    Service? wasDisposed2;
     registerService<Service>(Service.new, dispose: (s) => wasDisposed1 = s);
 
     final s1 = getService<Service>();
@@ -51,7 +52,9 @@ void main() {
   });
 
   test('reset all services', () async {
-    Service? wasDisposed1, wasDisposed2, wasDisposed3;
+    Service? wasDisposed1;
+    Service? wasDisposed2;
+    Service? wasDisposed3;
     registerService<Service>(Service.new, dispose: (s) => wasDisposed1 = s);
     registerService<Service2>(Service2.new, dispose: (s) => wasDisposed2 = s);
     registerService<Service3>(Service3.new, dispose: (s) => wasDisposed3 = s);

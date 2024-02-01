@@ -6,13 +6,13 @@ import 'package:flutter/material.dart';
 class LogView extends StatefulWidget {
   /// Creates a log view. A stream of [log] lines is required.
   const LogView({
-    super.key,
     required this.log,
     this.maxLines,
     this.padding,
     this.decoration,
     this.background,
     this.style,
+    super.key,
   });
 
   /// The stream of log lines to show.

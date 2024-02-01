@@ -10,7 +10,7 @@ abstract class PushButton extends ButtonStyleButton {
   /// See also:
   ///  * [ElevatedButton]
   const factory PushButton.elevated({
-    Key? key,
+    required Widget child,
     required VoidCallback? onPressed,
     VoidCallback? onLongPress,
     ValueChanged<bool>? onHover,
@@ -20,7 +20,7 @@ abstract class PushButton extends ButtonStyleButton {
     bool autofocus,
     Clip clipBehavior,
     MaterialStatesController? statesController,
-    required Widget child,
+    Key? key,
   }) = _ElevatedPushButton;
 
   /// A filled push button.
@@ -28,7 +28,7 @@ abstract class PushButton extends ButtonStyleButton {
   /// See also:
   ///  * [FilledButton]
   const factory PushButton.filled({
-    Key? key,
+    required Widget child,
     required VoidCallback? onPressed,
     VoidCallback? onLongPress,
     ValueChanged<bool>? onHover,
@@ -38,7 +38,7 @@ abstract class PushButton extends ButtonStyleButton {
     bool autofocus,
     Clip clipBehavior,
     MaterialStatesController? statesController,
-    required Widget child,
+    Key? key,
   }) = _FilledPushButton;
 
   /// An outlined push button.
@@ -46,7 +46,7 @@ abstract class PushButton extends ButtonStyleButton {
   /// See also:
   ///  * [OutlinedButton]
   const factory PushButton.outlined({
-    Key? key,
+    required Widget child,
     required VoidCallback? onPressed,
     VoidCallback? onLongPress,
     ValueChanged<bool>? onHover,
@@ -56,13 +56,13 @@ abstract class PushButton extends ButtonStyleButton {
     bool autofocus,
     Clip clipBehavior,
     MaterialStatesController? statesController,
-    required Widget child,
+    Key? key,
   }) = _OutlinedPushButton;
 }
 
 class _ElevatedPushButton extends ElevatedButton implements PushButton {
   const _ElevatedPushButton({
-    super.key,
+    required super.child,
     required super.onPressed,
     super.onLongPress,
     super.onHover,
@@ -72,7 +72,7 @@ class _ElevatedPushButton extends ElevatedButton implements PushButton {
     super.autofocus = false,
     super.clipBehavior = Clip.none,
     super.statesController,
-    required super.child,
+    super.key,
   });
 
   @override
@@ -90,7 +90,7 @@ class _ElevatedPushButton extends ElevatedButton implements PushButton {
 
 class _FilledPushButton extends FilledButton implements PushButton {
   const _FilledPushButton({
-    super.key,
+    required super.child,
     required super.onPressed,
     super.onLongPress,
     super.onHover,
@@ -100,7 +100,7 @@ class _FilledPushButton extends FilledButton implements PushButton {
     super.autofocus = false,
     super.clipBehavior = Clip.none,
     super.statesController,
-    required super.child,
+    super.key,
   });
 
   @override
@@ -118,7 +118,7 @@ class _FilledPushButton extends FilledButton implements PushButton {
 
 class _OutlinedPushButton extends OutlinedButton implements PushButton {
   const _OutlinedPushButton({
-    super.key,
+    required super.child,
     required super.onPressed,
     super.onLongPress,
     super.onHover,
@@ -128,7 +128,7 @@ class _OutlinedPushButton extends OutlinedButton implements PushButton {
     super.autofocus = false,
     super.clipBehavior = Clip.none,
     super.statesController,
-    required super.child,
+    super.key,
   });
 
   @override

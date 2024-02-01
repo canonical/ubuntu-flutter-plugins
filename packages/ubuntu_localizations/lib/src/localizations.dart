@@ -6,8 +6,8 @@ import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:intl/intl_standalone.dart';
 
-import 'l10n/ubuntu_localizations.dart';
-import 'flutter/flutter_localizations.dart';
+import 'package:ubuntu_localizations/src/flutter/flutter_localizations.dart';
+import 'package:ubuntu_localizations/src/l10n/ubuntu_localizations.dart';
 
 export 'l10n/ubuntu_localizations.dart';
 

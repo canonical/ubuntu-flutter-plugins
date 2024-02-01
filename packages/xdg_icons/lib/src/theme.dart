@@ -44,14 +44,18 @@ class XdgIconThemeData with Diagnosticable {
 }
 
 class XdgIconTheme extends InheritedTheme {
-  const XdgIconTheme({super.key, required this.data, required super.child});
+  const XdgIconTheme({
+    required this.data,
+    required super.child,
+    super.key,
+  });
 
   final XdgIconThemeData data;
 
   static Widget merge({
-    Key? key,
     required XdgIconThemeData data,
     required Widget child,
+    Key? key,
   }) {
     return Builder(
       builder: (context) {

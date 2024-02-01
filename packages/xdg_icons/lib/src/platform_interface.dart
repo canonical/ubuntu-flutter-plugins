@@ -1,7 +1,7 @@
 import 'package:plugin_platform_interface/plugin_platform_interface.dart';
 
-import 'data.dart';
-import 'method_channel.dart';
+import 'package:xdg_icons/src/data.dart';
+import 'package:xdg_icons/src/method_channel.dart';
 
 abstract class XdgIconsPlatform extends PlatformInterface {
   /// Constructs a XdgIconsPlatform.

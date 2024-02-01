@@ -72,7 +72,7 @@ class GeoLocation {
 
   /// Formats the location for display (e.g. "San Francisco (California, United States)")
   String toDisplayString() {
-    final parts = [name, admin, country].where((s) => s?.isNotEmpty == true);
+    final parts = [name, admin, country].where((s) => s?.isNotEmpty ?? false);
     if (parts.length <= 1) {
       return parts.singleOrNull ?? '';
     } else {

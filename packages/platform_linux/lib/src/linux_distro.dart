@@ -36,7 +36,8 @@ extension PlatformLinuxDistro on Platform {
 
   bool _isDistro(String id) {
     final os = _getOsRelease(this);
-    return os?['ID'] == id || os?['ID_LIKE']?.split(' ').contains(id) == true;
+    return os?['ID'] == id ||
+        (os?['ID_LIKE']?.split(' ').contains(id) ?? false);
   }
 
   static int? _osReleaseCacheId;

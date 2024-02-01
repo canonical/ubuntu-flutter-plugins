@@ -54,14 +54,14 @@ void main() {
 
     final locations = await model.searchLocation(location.name!);
     expect(locations, equals([location]));
-    verify(service.searchLocation(location.name!)).called(1);
+    verify(service.searchLocation(location.name)).called(1);
 
     await model.searchLocation(location.name!);
     expect(model.locations, equals([location]));
-    verifyNever(service.searchLocation(location.name!));
+    verifyNever(service.searchLocation(location.name));
 
     await model.searchLocation(location.country!);
-    verify(service.searchLocation(location.country!)).called(1);
+    verify(service.searchLocation(location.country)).called(1);
   });
 
   test('search timezone', () async {
@@ -73,7 +73,7 @@ void main() {
     );
 
     final service = MockGeoService();
-    when(service.searchTimezone(location.timezone!))
+    when(service.searchTimezone(location.timezone))
         .thenAnswer((_) async => [location]);
 
     final model = TimezoneController(service: service);
@@ -83,11 +83,11 @@ void main() {
 
     final timezones = await model.searchTimezone(location.timezone!);
     expect(timezones, equals([location]));
-    verify(service.searchTimezone(location.timezone!)).called(1);
+    verify(service.searchTimezone(location.timezone)).called(1);
 
     await model.searchTimezone(location.timezone!);
     expect(model.timezones, equals([location]));
-    verifyNever(service.searchTimezone(location.timezone!));
+    verifyNever(service.searchTimezone(location.timezone));
   });
 
   test('search coordinates', () async {

@@ -5,10 +5,10 @@ import 'dart:io';
 import 'package:dio/dio.dart';
 import 'package:meta/meta.dart';
 
-import 'exception.dart';
-import 'geodata.dart';
-import 'location.dart';
-import 'source.dart';
+import 'package:timezone_map/src/exception.dart';
+import 'package:timezone_map/src/geodata.dart';
+import 'package:timezone_map/src/location.dart';
+import 'package:timezone_map/src/source.dart';
 
 final _options = BaseOptions(
   connectTimeout: const Duration(seconds: 2),

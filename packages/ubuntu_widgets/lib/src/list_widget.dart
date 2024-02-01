@@ -10,9 +10,9 @@ const _kTileHeight = kMinInteractiveDimension;
 class ListWidget extends StatefulWidget {
   /// Creates a new list widget with an item builder.
   const ListWidget.builder({
-    super.key,
     required this.itemCount,
     required this.itemBuilder,
+    super.key,
     this.selectedIndex = -1,
     this.onKeySearch,
   });
