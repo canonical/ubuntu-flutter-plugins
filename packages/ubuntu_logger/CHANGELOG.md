@@ -1,3 +1,9 @@
+## 0.1.1
+
+ - **REFACTOR**: Apply ubuntu lints to all packages (#340).
+ - **FIX**: Remove and fix all unnecessary ignores.
+ - **FEAT**: Activate ubuntu_lints.
+
 # Changelog
 
 ## [0.1.0](https://github.com/canonical/ubuntu-flutter-plugins/compare/ubuntu_logger-v0.0.3...ubuntu_logger-v0.1.0) (2023-07-26)

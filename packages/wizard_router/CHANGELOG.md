@@ -1,3 +1,8 @@
+## 1.1.0
+
+ - **REFACTOR**: Apply ubuntu lints to all packages (#340).
+ - **FEAT**: Activate ubuntu_lints.
+
 # Changelog
 
 ## [1.0.4](https://github.com/canonical/ubuntu-flutter-plugins/compare/wizard_router-v1.0.3...wizard_router-v1.0.4) (2023-10-19)

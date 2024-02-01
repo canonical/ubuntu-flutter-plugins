@@ -1,3 +1,8 @@
+## 0.3.2
+
+ - **REFACTOR**: Apply ubuntu lints to all packages (#340).
+ - **FEAT**: Activate ubuntu_lints.
+
 # Changelog
 
 ## [0.3.1](https://github.com/canonical/ubuntu-flutter-plugins/compare/safe_change_notifier-v0.3.0...safe_change_notifier-v0.3.1) (2023-07-18)

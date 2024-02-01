@@ -1,3 +1,8 @@
+## 0.0.4
+
+ - **REFACTOR**: Apply ubuntu lints to all packages (#340).
+ - **FEAT**: Activate ubuntu_lints.
+
 # Changelog
 
 ## [0.0.3](https://github.com/canonical/ubuntu-flutter-plugins/compare/xdg_icons-v0.0.2...xdg_icons-v0.0.3) (2023-10-18)
