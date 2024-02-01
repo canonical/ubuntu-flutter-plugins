@@ -374,9 +374,12 @@ void main() {
     );
     await tester.pumpAndSettle();
 
-    final widget = tester.widget<SvgPicture>(find.byType(SvgPicture));
-    expect(widget.pictureProvider,
-        isA<FilePicture>().having((p) => p.file.path, 'file', fileName));
+    final widgetFinder = find.byType(XdgIcon);
+    expect(widgetFinder, findsOneWidget);
+    await expectLater(
+      widgetFinder,
+      matchesGoldenFile('goldens/svg_file.png'),
+    );
   });
 
   testWidgets('svg data', (tester) async {
@@ -411,9 +414,12 @@ void main() {
     );
     await tester.pumpAndSettle();
 
-    final widget = tester.widget<SvgPicture>(find.byType(SvgPicture));
-    expect(widget.pictureProvider,
-        isA<MemoryPicture>().having((p) => p.bytes, 'bytes', bytes));
+    final widgetFinder = find.byType(XdgIcon);
+    expect(widgetFinder, findsOneWidget);
+    await expectLater(
+      widgetFinder,
+      matchesGoldenFile('goldens/svg_data.png'),
+    );
   });
 }
 

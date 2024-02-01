@@ -3,8 +3,20 @@ name: ubuntu_flutter_plugins
 packages:
   - packages/**
 
-ignore:
-  - synthetic_package
+command:
+  bootstrap:
+    environment:
+      sdk: ">=3.0.0 <4.0.0"
+      flutter: '>=3.13.0'
+
+    dependencies:
+      collection: ^1.17.0
+      flutter_svg: ^2.0.9
+      meta: ^1.10.0
+      path: ^1.8.3
+
+    dev_dependencies:
+      mockito: 5.4.4
 
 scripts:
   # analyze all packages
@@ -58,3 +70,13 @@ scripts:
   test: >
     melos exec -c 1 --fail-fast --dir-exists=test -- \
       flutter test
+
+  # run pub upgrade in all packages
+  upgrade: melos exec flutter pub upgrade
+
+  # update all goldens files
+  update-goldens:
+    run: melos exec -- flutter test --update-goldens
+    packageFilters:
+      dirExists: test
+    description: Re-generate all golden test files
