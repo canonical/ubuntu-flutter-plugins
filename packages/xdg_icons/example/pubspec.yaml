@@ -12,8 +12,7 @@ platforms:
 dependencies:
   flutter:
     sdk: flutter
-  xdg_icons:
-    path: ../
+  xdg_icons: ^0.0.3
   yaru: ^1.1.0
 
 flutter:
