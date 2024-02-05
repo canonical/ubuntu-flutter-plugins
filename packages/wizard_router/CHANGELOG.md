@@ -1,3 +1,8 @@
+## 1.2.0
+
+ - **FEAT**(wizard_router): add errorRoute and showError().
+ - **FEAT**: allow the user to complete the wizard flow.
+
 ## 1.1.0
 
  - **REFACTOR**: Apply ubuntu lints to all packages (#340).

@@ -3,6 +3,28 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 2024-02-05
+
+### Changes
+
+---
+
+Packages with breaking changes:
+
+ - There are no breaking changes in this release.
+
+Packages with other changes:
+
+ - [`wizard_router` - `v1.2.0`](#wizard_router---v120)
+
+---
+
+#### `wizard_router` - `v1.2.0`
+
+ - **FEAT**(wizard_router): add errorRoute and showError().
+ - **FEAT**: allow the user to complete the wizard flow.
+
+
 ## 2024-02-01
 
 ### Changes
