@@ -76,6 +76,10 @@ class WizardScopeState extends State<WizardScope> {
   Future<T?> jump<T extends Object?>(String route, {Object? arguments}) =>
       widget._controller.jump(route, arguments: arguments);
 
+  /// Requests the wizard to jump to the error page, if available.
+  Future<T?> showError<T extends Object?>(Object error) =>
+      widget._controller.showError(error);
+
   /// Returns `false` if the wizard page is the first page.
   bool get hasPrevious => widget._index > 0;
 

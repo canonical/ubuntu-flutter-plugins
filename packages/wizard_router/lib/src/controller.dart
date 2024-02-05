@@ -4,12 +4,13 @@ part of 'wizard.dart';
 /// This is useful for widgets that are defined above the Wizard, such as a mobile
 /// app's AppBar.
 class WizardController extends SafeChangeNotifier {
-  WizardController({required this.routes, this.initialRoute}) {
+  WizardController({required this.routes, this.initialRoute, this.errorRoute}) {
     _flowController = FlowController(
         [WizardRouteSettings(name: initialRoute ?? routes.keys.first)]);
     _flowController.addListener(notifyListeners);
   }
   final String? initialRoute;
+  final String? errorRoute;
   final Map<String, WizardRoute> routes;
   late final FlowController<List<WizardRouteSettings>> _flowController;
 
@@ -26,6 +27,11 @@ class WizardController extends SafeChangeNotifier {
         next = await getRoute(next.name!);
       }
       return next;
+    } on Exception catch (e) {
+      if (errorRoute != null) {
+        return WizardRouteSettings(name: errorRoute, arguments: e);
+      }
+      rethrow;
     } finally {
       if (--_loading == 0) notifyListeners();
     }
@@ -173,5 +179,14 @@ class WizardController extends SafeChangeNotifier {
       return copy..add(settings);
     });
     return settings.completer.future;
+  }
+
+  Future<T?> showError<T extends Object?>(Object error) async {
+    if (errorRoute == null) {
+      throw const WizardException(
+          '`Wizard.showError()` called without an error route.');
+    }
+
+    return jump<T>(errorRoute!, arguments: error);
   }
 }

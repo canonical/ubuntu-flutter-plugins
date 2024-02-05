@@ -12,6 +12,7 @@ abstract class Routes {
   static const second = '/second';
   static const third = '/third';
   static const fourth = '/fourth';
+  static const error = '/error';
 }
 
 class TestObserver extends NavigatorObserver {
@@ -955,6 +956,62 @@ void main() {
     await tester.pumpAndSettle();
     expect(calls, 3);
     expect(find.text(Routes.second), findsOneWidget);
+  });
+
+  testWidgets('onLoad with error route', (tester) async {
+    final controller = WizardController(
+      initialRoute: Routes.first,
+      errorRoute: Routes.error,
+      routes: {
+        Routes.first: WizardRoute(builder: (_) => const Text(Routes.first)),
+        Routes.second: WizardRoute(
+          builder: (_) => const Text(Routes.second),
+          onLoad: (_) => throw Exception('something went wrong'),
+        ),
+        Routes.error: WizardRoute(
+          builder: (context) =>
+              Text(ModalRoute.of(context)!.settings.arguments!.toString()),
+        ),
+      },
+    );
+    await pumpWizardApp(tester, controller: controller);
+    await tester.pumpAndSettle();
+
+    expect(find.text(Routes.first), findsOneWidget);
+
+    controller.next();
+    await tester.pumpAndSettle();
+
+    expect(find.text(Routes.second), findsNothing);
+    expect(find.text('Exception: something went wrong'), findsOneWidget);
+  });
+
+  testWidgets('show error route', (tester) async {
+    final controller = WizardController(
+      initialRoute: Routes.first,
+      errorRoute: Routes.error,
+      routes: {
+        Routes.first: WizardRoute(builder: (_) => const Text(Routes.first)),
+        Routes.second: WizardRoute(builder: (_) => const Text(Routes.second)),
+        Routes.error: WizardRoute(
+          builder: (context) =>
+              Text(ModalRoute.of(context)!.settings.arguments.toString()),
+        ),
+      },
+    );
+    await pumpWizardApp(tester, controller: controller);
+    await tester.pumpAndSettle();
+
+    final firstPage = find.text(Routes.first);
+    expect(firstPage, findsOneWidget);
+
+    Wizard.of(tester.element(firstPage))
+        .showError(Exception('something went wrong'));
+    await tester.pumpAndSettle();
+
+    expect(find.text(Routes.first), findsNothing);
+    expect(find.text(Routes.second), findsNothing);
+    expect(find.text('Exception: something went wrong'), findsOneWidget);
   });
 
   testWidgets('loading state', (tester) async {
