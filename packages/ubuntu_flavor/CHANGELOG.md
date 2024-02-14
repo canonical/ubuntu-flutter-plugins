@@ -1,3 +1,9 @@
+## 0.3.0
+
+> Note: This release has breaking changes.
+
+ - **BREAKING** **FEAT**(ubuntu_flavor): use enum instead of immutable class.
+
 ## 0.2.2
 
  - **REFACTOR**: Apply ubuntu lints to all packages (#340).

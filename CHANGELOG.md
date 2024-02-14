@@ -3,6 +3,27 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 2024-02-14
+
+### Changes
+
+---
+
+Packages with breaking changes:
+
+ - [`ubuntu_flavor` - `v0.3.0`](#ubuntu_flavor---v030)
+
+Packages with other changes:
+
+ - There are no other changes in this release.
+
+---
+
+#### `ubuntu_flavor` - `v0.3.0`
+
+ - **BREAKING** **FEAT**(ubuntu_flavor): use enum instead of immutable class.
+
+
 ## 2024-02-05
 
 ### Changes
