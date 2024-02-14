@@ -3,27 +3,9 @@ import 'package:test/test.dart';
 import 'package:ubuntu_flavor/ubuntu_flavor.dart';
 
 void main() {
-  test('data', () {
-    const flavor1 = UbuntuFlavor(id: 'id1', name: 'Name 1');
-    expect(flavor1.id, 'id1');
-    expect(flavor1.name, 'Name 1');
-    expect(flavor1.copyWith(), flavor1);
-    expect(flavor1.hashCode, flavor1.copyWith().hashCode);
-    expect(flavor1.toString(), 'UbuntuFlavor(id: id1, name: Name 1)');
-
-    const flavor2 = UbuntuFlavor(id: 'id2', name: 'Name 2');
-    expect(flavor2.id, 'id2');
-    expect(flavor2.name, 'Name 2');
-    expect(flavor2, isNot(flavor1));
-
-    final copy1 = flavor1.copyWith(id: 'id1.1');
-    expect(copy1.id, 'id1.1');
-    expect(copy1.name, 'Name 1');
-    expect(copy1, isNot(flavor1));
-  });
-
   test('none', () {
-    expect(UbuntuFlavor.detect(FakePlatform(environment: {})), isNull);
+    expect(UbuntuFlavor.detect(FakePlatform(environment: {})),
+        UbuntuFlavor.unknown);
   });
 
   test('original', () {
@@ -126,7 +108,12 @@ void main() {
       UbuntuFlavor.detect(FakePlatform(environment: {
         'XDG_CURRENT_DESKTOP': 'foo:bar',
       })),
-      isNull,
+      UbuntuFlavor.unknown,
     );
+  });
+
+  test('from name', () {
+    expect(UbuntuFlavor.fromName('cinnamon'), UbuntuFlavor.cinnamon);
+    expect(UbuntuFlavor.fromName('foobar'), UbuntuFlavor.unknown);
   });
 }
