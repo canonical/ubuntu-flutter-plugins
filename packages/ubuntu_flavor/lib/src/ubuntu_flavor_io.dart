@@ -1,8 +1,7 @@
 import 'package:platform_linux/platform.dart';
-
 import 'package:ubuntu_flavor/src/ubuntu_flavor.dart';
 
-UbuntuFlavor? detectUbuntuFlavor([Platform platform = const LocalPlatform()]) {
+UbuntuFlavor detectUbuntuFlavor([Platform platform = const LocalPlatform()]) {
   if (platform.isBudgie) {
     return UbuntuFlavor.budgie;
   }
@@ -32,5 +31,5 @@ UbuntuFlavor? detectUbuntuFlavor([Platform platform = const LocalPlatform()]) {
   if (platform.isXfce) {
     return UbuntuFlavor.xubuntu;
   }
-  return null;
+  return UbuntuFlavor.unknown;
 }
