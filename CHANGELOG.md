@@ -3,6 +3,31 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 2024-03-07
+
+### Changes
+
+---
+
+Packages with breaking changes:
+
+ - [`ubuntu_flavor` - `v0.4.0`](#ubuntu_flavor---v040)
+
+Packages with other changes:
+
+ - [`ubuntu_widgets` - `v0.4.0`](#ubuntu_widgets---v040)
+
+---
+
+#### `ubuntu_flavor` - `v0.4.0`
+
+ - **BREAKING** **FEAT**(ubuntu_flavor): use enum instead of immutable class.
+
+#### `ubuntu_widgets` - `v0.4.0`
+
+ - **FIX**: Allow `ValidatedFormField` to have a custom fill color.
+
+
 ## 2024-02-14
 
 ### Changes
