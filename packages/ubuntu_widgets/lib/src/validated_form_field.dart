@@ -35,6 +35,8 @@ class ValidatedFormField extends StatefulWidget {
     this.autovalidateMode = AutovalidateMode.onUserInteraction,
     this.enabled = true,
     this.suffixIcon,
+    this.filled = false,
+    this.fillColor,
   })  : validator = validator ?? _NoValidator(),
         spacing = spacing ?? (successWidget != null ? _kIconSpacing : null);
 
@@ -90,6 +92,12 @@ class ValidatedFormField extends StatefulWidget {
 
   /// An optional Widget placed inside the text input.
   final Widget? suffixIcon;
+
+  /// Whether the background should be filled with a color or not.
+  final bool filled;
+
+  /// Override the background fill color of the form field if [filled] is true.
+  final Color? fillColor;
 
   @override
   State<ValidatedFormField> createState() => _ValidatedFormFieldState();
@@ -161,6 +169,8 @@ class _ValidatedFormFieldState extends State<ValidatedFormField> {
         labelText: widget.labelText,
         helperText: widget.helperText,
         suffixIcon: widget.suffixIcon,
+        filled: widget.filled,
+        fillColor: widget.fillColor,
       ),
     );
 
