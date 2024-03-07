@@ -10,7 +10,7 @@ environment:
 
 dependencies:
   get_it: ^7.4.1
-  meta: ^1.10.0
+  meta: ^1.11.0
 
 dev_dependencies:
   test: ^1.21.1

@@ -8,7 +8,7 @@ version: 0.3.3
 
 environment:
   sdk: ">=3.0.0 <4.0.0"
-  flutter: ">=3.13.0"
+  flutter: ">=3.19.0"
 
 dependencies:
   collection: ^1.17.0
@@ -18,9 +18,7 @@ dependencies:
   form_field_validator: ^1.1.0
   password_strength: ^0.2.0
   ubuntu_localizations: ^0.3.5
-  yaru: ^1.1.0
-  yaru_icons: ">1.0.0 <3.0.0"
-  yaru_widgets: ^3.2.0
+  yaru: ^4.0.0
 
 dev_dependencies:
   flutter_test:
