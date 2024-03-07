@@ -10,12 +10,15 @@ import 'package:xdg_icons/src/data.dart';
 import 'package:xdg_icons/src/platform_interface.dart';
 import 'package:xdg_icons/src/theme.dart';
 
+typedef IconNotFoundBuilder = Widget Function();
+
 class XdgIcon extends StatefulWidget {
   const XdgIcon({
     required this.name,
     this.size,
     this.scale,
     this.theme,
+    this.iconNotFoundBuilder,
     super.key,
   });
 
@@ -23,6 +26,7 @@ class XdgIcon extends StatefulWidget {
   final int? size;
   final int? scale;
   final String? theme;
+  final IconNotFoundBuilder? iconNotFoundBuilder;
 
   @override
   State<XdgIcon> createState() => XdgIconState();
@@ -31,6 +35,7 @@ class XdgIcon extends StatefulWidget {
 class XdgIconState extends State<XdgIcon> {
   XdgIconData? _icon;
   StreamSubscription<dynamic>? _themeChange;
+  bool _iconNotFound = false;
 
   XdgIconData? get icon => _icon;
 
@@ -72,8 +77,16 @@ class XdgIconState extends State<XdgIcon> {
   }
 
   void _updateIcon(XdgIconData? icon) {
-    if (_icon == icon || !mounted) return;
-    setState(() => _icon = icon);
+    if (_icon == icon || !mounted) {
+      if (icon == null) {
+        setState(() => _iconNotFound = true);
+      }
+      return;
+    }
+    setState(() {
+      _icon = icon;
+      _iconNotFound = icon == null;
+    });
   }
 
   void _listenThemeChanges() {
@@ -131,6 +144,8 @@ class XdgIconState extends State<XdgIcon> {
         width: size.toDouble(),
         height: size.toDouble(),
       );
+    } else if (_iconNotFound && widget.iconNotFoundBuilder != null) {
+      return widget.iconNotFoundBuilder!();
     }
     return SizedBox.square(dimension: size.toDouble());
   }
