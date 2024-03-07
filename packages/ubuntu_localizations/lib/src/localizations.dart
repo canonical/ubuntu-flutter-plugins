@@ -52,7 +52,7 @@ class LocalizedLanguage {
   int get hashCode => Object.hash(name, locale);
 
   @override
-  bool operator ==(dynamic other) =>
+  bool operator ==(Object other) =>
       other is LocalizedLanguage &&
       other.name == name &&
       other.locale == locale;
