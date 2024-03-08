@@ -3,6 +3,27 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 2024-03-08
+
+### Changes
+
+---
+
+Packages with breaking changes:
+
+ - There are no breaking changes in this release.
+
+Packages with other changes:
+
+ - [`xdg_icons` - `v0.0.5`](#xdg_icons---v005)
+
+---
+
+#### `xdg_icons` - `v0.0.5`
+
+ - **FEAT**: providing an optional render when an icon fails to resolve entirely.
+
+
 ## 2024-03-07
 
 ### Changes
