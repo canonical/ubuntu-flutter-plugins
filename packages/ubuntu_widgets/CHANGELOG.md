@@ -1,3 +1,7 @@
+## 0.4.0
+
+ - **FIX**: Allow `ValidatedFormField` to have a custom fill color.
+
 ## 0.3.3
 
  - **FIX**: Remove Flexible from AnimatedExpanded.
