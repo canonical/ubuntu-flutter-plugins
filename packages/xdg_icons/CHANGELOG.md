@@ -1,3 +1,7 @@
+## 0.0.5
+
+ - **FEAT**: providing an optional render when an icon fails to resolve entirely.
+
 ## 0.0.4
 
  - **REFACTOR**: Apply ubuntu lints to all packages (#340).
