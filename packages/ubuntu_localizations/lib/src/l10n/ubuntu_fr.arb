@@ -235,5 +235,7 @@
   "forwardLabel": "Précédent",
   "@forwardLabel": {},
   "indexLabel": "Index",
-  "@indexLabel": {}
+  "@indexLabel": {},
+  "upLabel": "Haut",
+  "@upLabel": {}
 }
