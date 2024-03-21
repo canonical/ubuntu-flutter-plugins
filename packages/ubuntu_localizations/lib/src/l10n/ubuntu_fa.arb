@@ -237,5 +237,9 @@
   "gigabyte": "گ‌ب",
   "@gigabyte": {},
   "restartLabel": "آغاز دوباره",
-  "@restartLabel": {}
+  "@restartLabel": {},
+  "petabyte": "پ‌ب",
+  "@petabyte": {},
+  "terabyte": "ت‌ب",
+  "@terabyte": {}
 }

@@ -237,5 +237,9 @@
   "gigabyte": "GB",
   "@gigabyte": {},
   "restartLabel": "Újraindítás",
-  "@restartLabel": {}
+  "@restartLabel": {},
+  "terabyte": "TB",
+  "@terabyte": {},
+  "petabyte": "PB",
+  "@petabyte": {}
 }

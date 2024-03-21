@@ -237,5 +237,9 @@
   "gigabyte": "GB",
   "@gigabyte": {},
   "restartLabel": "Paleisti iš naujo",
-  "@restartLabel": {}
+  "@restartLabel": {},
+  "terabyte": "TB",
+  "@terabyte": {},
+  "petabyte": "PB",
+  "@petabyte": {}
 }

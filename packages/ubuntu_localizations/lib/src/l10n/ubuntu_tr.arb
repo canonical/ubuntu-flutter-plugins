@@ -4,7 +4,7 @@
   "@countryCode": {},
   "languageName": "Türkçe",
   "@languageName": {},
-  "backAction": "Geri Git",
+  "backAction": "Geri git",
   "@backAction": {},
   "continueAction": "Devam et",
   "@continueAction": {},
@@ -237,5 +237,9 @@
   "gigabyte": "GB",
   "@gigabyte": {},
   "restartLabel": "Yeniden başlat",
-  "@restartLabel": {}
+  "@restartLabel": {},
+  "terabyte": "TB",
+  "@terabyte": {},
+  "petabyte": "PB",
+  "@petabyte": {}
 }

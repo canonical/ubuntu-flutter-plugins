@@ -239,5 +239,9 @@
   "gigabyte": "Go",
   "@gigabyte": {},
   "restartLabel": "Reaviar",
-  "@restartLabel": {}
+  "@restartLabel": {},
+  "terabyte": "To",
+  "@terabyte": {},
+  "petabyte": "Po",
+  "@petabyte": {}
 }
