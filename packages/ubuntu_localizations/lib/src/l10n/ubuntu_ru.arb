@@ -92,7 +92,7 @@
   "@goBackLabel": {},
   "italicLabel": "Курсив",
   "@italicLabel": {},
-  "landscapeLabel": "Ландшафт",
+  "landscapeLabel": "Горизонтально",
   "@landscapeLabel": {},
   "informationLabel": "Сведения",
   "@informationLabel": {},
@@ -112,7 +112,7 @@
   "@pasteLabel": {},
   "pauseLabel": "Пауза",
   "@pauseLabel": {},
-  "portraitLabel": "Портрет",
+  "portraitLabel": "Вертикально",
   "@portraitLabel": {},
   "preferencesLabel": "Параметры",
   "@preferencesLabel": {},
@@ -239,5 +239,7 @@
   "petabyte": "ПБ",
   "@petabyte": {},
   "restartLabel": "Перезагрузить",
-  "@restartLabel": {}
+  "@restartLabel": {},
+  "normalLabel": "Обычный",
+  "@normalLabel": {}
 }
