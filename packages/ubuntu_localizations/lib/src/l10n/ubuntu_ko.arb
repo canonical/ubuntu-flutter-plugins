@@ -239,5 +239,9 @@
   "gigabyte": "GB",
   "@gigabyte": {},
   "restartLabel": "다시 시작",
-  "@restartLabel": {}
+  "@restartLabel": {},
+  "terabyte": "TB",
+  "@terabyte": {},
+  "petabyte": "PB",
+  "@petabyte": {}
 }
