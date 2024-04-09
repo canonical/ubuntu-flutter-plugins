@@ -3,6 +3,28 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 2024-04-09
+
+### Changes
+
+---
+
+Packages with breaking changes:
+
+ - [`ubuntu_widgets` - `v0.5.0`](#ubuntu_widgets---v050)
+
+Packages with other changes:
+
+ - There are no other changes in this release.
+
+---
+
+#### `ubuntu_widgets` - `v0.5.0`
+
+ - **FIX**: Scrollbar should be in the side of the logview.
+ - **BREAKING** **FIX**: Remove support for max lines.
+
+
 ## 2024-03-08
 
 ### Changes

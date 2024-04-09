@@ -1,3 +1,10 @@
+## 0.5.0
+
+> Note: This release has breaking changes.
+
+ - **FIX**: Scrollbar should be in the side of the logview.
+ - **BREAKING** **FIX**: Remove support for max lines.
+
 ## 0.4.0
 
  - **FIX**: Allow `ValidatedFormField` to have a custom fill color.
