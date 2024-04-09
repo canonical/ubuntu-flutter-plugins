@@ -7,19 +7,16 @@ class LogView extends StatefulWidget {
   /// Creates a log view. A stream of [log] lines is required.
   const LogView({
     required this.log,
-    this.maxLines,
     this.padding,
     this.decoration,
     this.background,
     this.style,
+    this.scrollController,
     super.key,
   });
 
   /// The stream of log lines to show.
   final Stream<String> log;
-
-  /// See [TextField.maxLines]
-  final int? maxLines;
 
   /// Padding around the log text.
   final EdgeInsetsGeometry? padding;
@@ -33,6 +30,9 @@ class LogView extends StatefulWidget {
   /// See [TextField.style]
   final TextStyle? style;
 
+  /// See [TextField.scrollController]
+  final ScrollController? scrollController;
+
   @override
   State<LogView> createState() => _LogViewState();
 }
@@ -40,7 +40,7 @@ class LogView extends StatefulWidget {
 class _LogViewState extends State<LogView> {
   StreamSubscription<String>? _subscription;
   final _controller = TextEditingController();
-  final _scrollController = ScrollController();
+  late final _scrollController = widget.scrollController ?? ScrollController();
 
   @override
   void initState() {
@@ -95,16 +95,27 @@ class _LogViewState extends State<LogView> {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      padding: widget.padding,
-      decoration: widget.background,
-      child: TextField(
-        controller: _controller,
-        decoration: widget.decoration,
-        maxLines: widget.maxLines,
-        readOnly: true,
-        scrollController: _scrollController,
-        style: widget.style,
+    final contentPadding =
+        (widget.decoration?.contentPadding ?? EdgeInsets.zero)
+            .add(widget.padding ?? EdgeInsets.zero);
+    final decoration = (widget.decoration ?? const InputDecoration())
+        .copyWith(contentPadding: contentPadding);
+
+    return DecoratedBox(
+      decoration: widget.background ?? const BoxDecoration(),
+      child: Scrollbar(
+        key: const ValueKey('LogViewScrollbar'),
+        thumbVisibility: true,
+        controller: _scrollController,
+        child: SingleChildScrollView(
+          controller: _scrollController,
+          child: TextField(
+            controller: _controller,
+            decoration: decoration,
+            readOnly: true,
+            style: widget.style,
+          ),
+        ),
       ),
     );
   }
