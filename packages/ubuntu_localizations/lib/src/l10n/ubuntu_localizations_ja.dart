@@ -41,160 +41,160 @@ class UbuntuLocalizationsJa extends UbuntuLocalizations {
   String get shiftKey => 'Shift';
 
   @override
-  String get aboutLabel => 'About';
+  String get aboutLabel => 'このアプリについて';
 
   @override
-  String get addLabel => 'Add';
+  String get addLabel => '追加';
 
   @override
-  String get allLabel => 'All';
+  String get allLabel => 'すべて';
 
   @override
-  String get applyLabel => 'Apply';
+  String get applyLabel => '適用';
 
   @override
-  String get ascendingLabel => 'Ascending';
+  String get ascendingLabel => '昇順';
 
   @override
-  String get backLabel => 'Back';
+  String get backLabel => '戻る';
 
   @override
-  String get boldLabel => 'Bold';
+  String get boldLabel => '太字';
 
   @override
-  String get bottomLabel => 'Bottom';
+  String get bottomLabel => '下';
 
   @override
   String get cancelLabel => 'キャンセル';
 
   @override
-  String get centerLabel => 'Center';
+  String get centerLabel => '中央';
 
   @override
-  String get clearLabel => 'Clear';
+  String get clearLabel => '消去';
 
   @override
-  String get closeLabel => 'Close';
+  String get closeLabel => '閉じる';
 
   @override
-  String get colorLabel => 'Color';
+  String get colorLabel => '色';
 
   @override
   String get connectLabel => '接続';
 
   @override
-  String get continueLabel => 'Continue';
+  String get continueLabel => '続ける';
 
   @override
-  String get copyLabel => 'Copy';
+  String get copyLabel => 'コピー';
 
   @override
-  String get createLabel => 'Create';
+  String get createLabel => '作成';
 
   @override
-  String get cutLabel => 'Cut';
+  String get cutLabel => '切り取り';
 
   @override
-  String get decreaseLabel => 'Decrease';
+  String get decreaseLabel => '減少';
 
   @override
-  String get deleteLabel => 'Delete';
+  String get deleteLabel => '削除';
 
   @override
-  String get descendingLabel => 'Descending';
+  String get descendingLabel => '降順';
 
   @override
-  String get discardLabel => 'Discard';
+  String get discardLabel => '破棄';
 
   @override
-  String get disconnectLabel => 'Disconnect';
+  String get disconnectLabel => '切断';
 
   @override
-  String get doneLabel => 'Done';
+  String get doneLabel => '完了';
 
   @override
-  String get downloadLabel => 'Download';
+  String get downloadLabel => 'ダウンロード';
 
   @override
-  String get editLabel => 'Edit';
+  String get editLabel => '編集';
 
   @override
-  String get enterLabel => 'Enter';
+  String get enterLabel => '入力';
 
   @override
-  String get errorLabel => 'Error';
+  String get errorLabel => 'エラー';
 
   @override
-  String get executeLabel => 'Execute';
+  String get executeLabel => '実行';
 
   @override
-  String get exitLabel => 'Exit';
+  String get exitLabel => '終了';
 
   @override
-  String get fileLabel => 'File';
+  String get fileLabel => 'ファイル';
 
   @override
   String get fillLabel => 'Fill';
 
   @override
-  String get findLabel => 'Find';
+  String get findLabel => '検索';
 
   @override
-  String get firstLabel => 'First';
+  String get firstLabel => '最初';
 
   @override
-  String get fontLabel => 'Font';
+  String get fontLabel => 'フォント';
 
   @override
-  String get forwardLabel => 'Forward';
+  String get forwardLabel => '前';
 
   @override
-  String get fullscreenLabel => 'Fullscreen';
+  String get fullscreenLabel => 'フルスクリーン';
 
   @override
-  String get goBackLabel => 'Go Back';
+  String get goBackLabel => '戻る';
 
   @override
-  String get helpLabel => 'Help';
+  String get helpLabel => 'ヘルプ';
 
   @override
-  String get homeLabel => 'Home';
+  String get homeLabel => 'ホーム';
 
   @override
-  String get importLabel => 'Import';
+  String get importLabel => 'インポート';
 
   @override
-  String get increaseLabel => 'Increase';
+  String get increaseLabel => '増加';
 
   @override
-  String get indexLabel => 'Index';
+  String get indexLabel => 'インデックス';
 
   @override
-  String get informationLabel => 'Information';
+  String get informationLabel => '情報';
 
   @override
-  String get insertLabel => 'Insert';
+  String get insertLabel => '挿入';
 
   @override
-  String get italicLabel => 'Italic';
+  String get italicLabel => '斜体';
 
   @override
   String get landscapeLabel => 'Landscape';
 
   @override
-  String get lastLabel => 'Last';
+  String get lastLabel => '最後';
 
   @override
   String get leaveLabel => 'Leave';
 
   @override
-  String get leftLabel => 'Left';
+  String get leftLabel => '左';
 
   @override
-  String get mediaLabel => 'Media';
+  String get mediaLabel => 'メディア';
 
   @override
-  String get networkLabel => 'Network';
+  String get networkLabel => 'ネットワーク';
 
   @override
   String get newLabel => 'New';
@@ -215,58 +215,58 @@ class UbuntuLocalizationsJa extends UbuntuLocalizations {
   String get okLabel => 'OK';
 
   @override
-  String get openLabel => 'Open';
+  String get openLabel => '開く';
 
   @override
-  String get pasteLabel => 'Paste';
+  String get pasteLabel => '貼り付け';
 
   @override
   String get pauseLabel => 'Pause';
 
   @override
-  String get playLabel => 'Play';
+  String get playLabel => '再生';
 
   @override
   String get portraitLabel => 'Portrait';
 
   @override
-  String get preferencesLabel => 'Preferences';
+  String get preferencesLabel => '設定';
 
   @override
   String get previousLabel => 'Previous';
 
   @override
-  String get printLabel => 'Print';
+  String get printLabel => '印刷';
 
   @override
-  String get printPreviewLabel => 'Print Preview';
+  String get printPreviewLabel => '印刷プレビュー';
 
   @override
-  String get propertiesLabel => 'Properties';
+  String get propertiesLabel => 'プロパティ';
 
   @override
-  String get questionLabel => 'Question';
+  String get questionLabel => '質問';
 
   @override
-  String get quitLabel => 'Quit';
+  String get quitLabel => '終了';
 
   @override
   String get recordLabel => 'Record';
 
   @override
-  String get redoLabel => 'Redo';
+  String get redoLabel => 'やり直し';
 
   @override
   String get refreshLabel => 'Refresh';
 
   @override
-  String get removeLabel => 'Remove';
+  String get removeLabel => '削除';
 
   @override
   String get renameLabel => 'Rename';
 
   @override
-  String get resetLabel => 'Reset';
+  String get resetLabel => 'リセット';
 
   @override
   String get restartLabel => '再起動';
@@ -284,37 +284,37 @@ class UbuntuLocalizationsJa extends UbuntuLocalizations {
   String get rewindLabel => 'Rewind';
 
   @override
-  String get rightLabel => 'Right';
+  String get rightLabel => '右';
 
   @override
-  String get saveAsLabel => 'Save As';
+  String get saveAsLabel => '名前を付けて保存';
 
   @override
-  String get saveLabel => 'Save';
+  String get saveLabel => '保存';
 
   @override
-  String get searchLabel => 'Search';
+  String get searchLabel => '検索';
 
   @override
-  String get selectAllLabel => 'Select All';
+  String get selectAllLabel => 'すべて選択';
 
   @override
-  String get selectLabel => 'Select';
+  String get selectLabel => '選択';
 
   @override
-  String get sendLabel => 'Send';
+  String get sendLabel => '送信';
 
   @override
   String get skipLabel => 'Skip';
 
   @override
-  String get sortLabel => 'Sort';
+  String get sortLabel => '並び替え';
 
   @override
   String get stopLabel => 'Stop';
 
   @override
-  String get strikeThroughLabel => 'Strike Through';
+  String get strikeThroughLabel => '取り消し線';
 
   @override
   String get submitLabel => 'Submit';
@@ -323,7 +323,7 @@ class UbuntuLocalizationsJa extends UbuntuLocalizations {
   String get topLabel => 'Top';
 
   @override
-  String get undoLabel => 'Undo';
+  String get undoLabel => '元に戻す';
 
   @override
   String get updateLabel => 'Update';
@@ -335,19 +335,19 @@ class UbuntuLocalizationsJa extends UbuntuLocalizations {
   String get viewLabel => 'View';
 
   @override
-  String get warningLabel => 'Warning';
+  String get warningLabel => '警告';
 
   @override
-  String get windowLabel => 'Window';
+  String get windowLabel => 'ウィンドウ';
 
   @override
   String get yesLabel => 'はい';
 
   @override
-  String get zoomInLabel => 'Zoom In';
+  String get zoomInLabel => '拡大';
 
   @override
-  String get zoomOutLabel => 'Zoom Out';
+  String get zoomOutLabel => '縮小';
 
   @override
   String get byte => 'B';

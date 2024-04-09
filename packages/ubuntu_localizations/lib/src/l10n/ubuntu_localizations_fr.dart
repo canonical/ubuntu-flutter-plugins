@@ -62,16 +62,16 @@ class UbuntuLocalizationsFr extends UbuntuLocalizations {
   String get boldLabel => 'Gras';
 
   @override
-  String get bottomLabel => 'Bottom';
+  String get bottomLabel => 'Debas';
 
   @override
   String get cancelLabel => 'Annuler';
 
   @override
-  String get centerLabel => 'Center';
+  String get centerLabel => 'Centrer';
 
   @override
-  String get clearLabel => 'Clear';
+  String get clearLabel => 'Vider';
 
   @override
   String get closeLabel => 'Fermer';
@@ -146,7 +146,7 @@ class UbuntuLocalizationsFr extends UbuntuLocalizations {
   String get fontLabel => 'Police';
 
   @override
-  String get forwardLabel => 'Forward';
+  String get forwardLabel => 'Précédent';
 
   @override
   String get fullscreenLabel => 'Plein écran';
@@ -329,7 +329,7 @@ class UbuntuLocalizationsFr extends UbuntuLocalizations {
   String get updateLabel => 'Mettre à jour';
 
   @override
-  String get upLabel => 'Up';
+  String get upLabel => 'Haut';
 
   @override
   String get viewLabel => 'Voir';

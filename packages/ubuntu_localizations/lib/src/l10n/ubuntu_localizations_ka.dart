@@ -11,7 +11,7 @@ class UbuntuLocalizationsKa extends UbuntuLocalizations {
   String get languageName => 'ქართული';
 
   @override
-  String get backAction => 'უკან';
+  String get backAction => 'უკან გადასვლა';
 
   @override
   String get continueAction => 'გაგრძელება';

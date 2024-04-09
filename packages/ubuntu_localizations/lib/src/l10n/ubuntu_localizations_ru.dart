@@ -179,7 +179,7 @@ class UbuntuLocalizationsRu extends UbuntuLocalizations {
   String get italicLabel => 'Курсив';
 
   @override
-  String get landscapeLabel => 'Ландшафт';
+  String get landscapeLabel => 'Горизонтально';
 
   @override
   String get lastLabel => 'Последний';
@@ -209,7 +209,7 @@ class UbuntuLocalizationsRu extends UbuntuLocalizations {
   String get noneLabel => 'Ничего';
 
   @override
-  String get normalLabel => 'Normal';
+  String get normalLabel => 'Обычный';
 
   @override
   String get okLabel => 'OK';
@@ -227,7 +227,7 @@ class UbuntuLocalizationsRu extends UbuntuLocalizations {
   String get playLabel => 'Воспроизвести';
 
   @override
-  String get portraitLabel => 'Портрет';
+  String get portraitLabel => 'Вертикально';
 
   @override
   String get preferencesLabel => 'Параметры';
