@@ -8,13 +8,13 @@ class UbuntuLocalizationsAr extends UbuntuLocalizations {
   String get countryCode => 'EG';
 
   @override
-  String get languageName => 'عربي';
+  String get languageName => 'العربية';
 
   @override
-  String get backAction => 'الرجوع للخلف';
+  String get backAction => 'العودة';
 
   @override
-  String get continueAction => 'المواصلة';
+  String get continueAction => 'مواصلة';
 
   @override
   String get strongPassword => 'كلمة مرور قوية';

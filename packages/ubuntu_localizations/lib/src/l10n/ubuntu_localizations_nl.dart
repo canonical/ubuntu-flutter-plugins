@@ -17,16 +17,16 @@ class UbuntuLocalizationsNl extends UbuntuLocalizations {
   String get continueAction => 'Volgende';
 
   @override
-  String get strongPassword => 'Strong password';
+  String get strongPassword => 'Sterk wachtwoord';
 
   @override
-  String get fairPassword => 'Fair password';
+  String get fairPassword => 'Redelijk wachtwoord';
 
   @override
-  String get goodPassword => 'Good password';
+  String get goodPassword => 'Goed wachtwoord';
 
   @override
-  String get weakPassword => 'Weak password';
+  String get weakPassword => 'Zwak wachtwoord';
 
   @override
   String get altKey => 'Alt';
@@ -41,34 +41,34 @@ class UbuntuLocalizationsNl extends UbuntuLocalizations {
   String get shiftKey => 'Shift';
 
   @override
-  String get aboutLabel => 'About';
+  String get aboutLabel => 'Over';
 
   @override
-  String get addLabel => 'Add';
+  String get addLabel => 'Toevoegen';
 
   @override
-  String get allLabel => 'All';
+  String get allLabel => 'Alle';
 
   @override
-  String get applyLabel => 'Apply';
+  String get applyLabel => 'Toepassen';
 
   @override
-  String get ascendingLabel => 'Ascending';
+  String get ascendingLabel => 'Oplopend';
 
   @override
-  String get backLabel => 'Back';
+  String get backLabel => 'Terug';
 
   @override
-  String get boldLabel => 'Bold';
+  String get boldLabel => 'Vet';
 
   @override
-  String get bottomLabel => 'Bottom';
+  String get bottomLabel => 'Onderkant';
 
   @override
-  String get cancelLabel => 'Cancel';
+  String get cancelLabel => 'Annuleren';
 
   @override
-  String get centerLabel => 'Center';
+  String get centerLabel => 'Centreren';
 
   @override
   String get clearLabel => 'Clear';

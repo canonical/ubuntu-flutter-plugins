@@ -11,112 +11,112 @@ class UbuntuLocalizationsCy extends UbuntuLocalizations {
   String get languageName => 'Cymraeg';
 
   @override
-  String get backAction => 'Go back';
+  String get backAction => 'Yn ôl';
 
   @override
-  String get continueAction => 'Continue';
+  String get continueAction => 'Parhau';
 
   @override
-  String get strongPassword => 'Strong password';
+  String get strongPassword => 'Cyfrinair cryf';
 
   @override
-  String get fairPassword => 'Fair password';
+  String get fairPassword => 'Cyfrinair gweddol';
 
   @override
-  String get goodPassword => 'Good password';
+  String get goodPassword => 'Cyfrinair da';
 
   @override
-  String get weakPassword => 'Weak password';
+  String get weakPassword => 'Cyfrinair gwan';
 
   @override
   String get altKey => 'Alt';
 
   @override
-  String get controlKey => 'Control';
+  String get controlKey => 'Ctrl';
 
   @override
   String get metaKey => 'Meta';
 
   @override
-  String get shiftKey => 'Shift';
+  String get shiftKey => 'Shifft';
 
   @override
-  String get aboutLabel => 'About';
+  String get aboutLabel => 'Gwybodaeth';
 
   @override
-  String get addLabel => 'Add';
+  String get addLabel => 'Ychwanegu';
 
   @override
-  String get allLabel => 'All';
+  String get allLabel => 'Popeth';
 
   @override
-  String get applyLabel => 'Apply';
+  String get applyLabel => 'Iawn';
 
   @override
-  String get ascendingLabel => 'Ascending';
+  String get ascendingLabel => 'Esgynnol';
 
   @override
-  String get backLabel => 'Back';
+  String get backLabel => 'Yn ôl';
 
   @override
   String get boldLabel => 'Bold';
 
   @override
-  String get bottomLabel => 'Bottom';
+  String get bottomLabel => 'Gwaelod';
 
   @override
   String get cancelLabel => 'Diddymu';
 
   @override
-  String get centerLabel => 'Center';
+  String get centerLabel => 'Canol';
 
   @override
-  String get clearLabel => 'Clear';
+  String get clearLabel => 'Clirio';
 
   @override
-  String get closeLabel => 'Close';
+  String get closeLabel => 'Cau';
 
   @override
-  String get colorLabel => 'Color';
+  String get colorLabel => 'Lliw';
 
   @override
   String get connectLabel => 'Cysylltu';
 
   @override
-  String get continueLabel => 'Continue';
+  String get continueLabel => 'Parhau';
 
   @override
-  String get copyLabel => 'Copy';
+  String get copyLabel => 'Copïo';
 
   @override
-  String get createLabel => 'Create';
+  String get createLabel => 'Creu';
 
   @override
-  String get cutLabel => 'Cut';
+  String get cutLabel => 'Torri';
 
   @override
-  String get decreaseLabel => 'Decrease';
+  String get decreaseLabel => 'Lleihau';
 
   @override
-  String get deleteLabel => 'Delete';
+  String get deleteLabel => 'Dileu';
 
   @override
-  String get descendingLabel => 'Descending';
+  String get descendingLabel => 'Disgynnol';
 
   @override
-  String get discardLabel => 'Discard';
+  String get discardLabel => 'Gwaredu';
 
   @override
-  String get disconnectLabel => 'Disconnect';
+  String get disconnectLabel => 'Datgysylltu';
 
   @override
-  String get doneLabel => 'Done';
+  String get doneLabel => 'Iawn';
 
   @override
-  String get downloadLabel => 'Download';
+  String get downloadLabel => 'Lawrlwytho';
 
   @override
-  String get editLabel => 'Edit';
+  String get editLabel => 'Golygu';
 
   @override
   String get enterLabel => 'Enter';

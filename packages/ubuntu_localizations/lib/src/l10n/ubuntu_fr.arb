@@ -225,5 +225,17 @@
   "gigabyte": "Go",
   "@gigabyte": {},
   "restartLabel": "Redémarrer",
-  "@restartLabel": {}
+  "@restartLabel": {},
+  "bottomLabel": "Debas",
+  "@bottomLabel": {},
+  "centerLabel": "Centrer",
+  "@centerLabel": {},
+  "clearLabel": "Vider",
+  "@clearLabel": {},
+  "forwardLabel": "Précédent",
+  "@forwardLabel": {},
+  "indexLabel": "Index",
+  "@indexLabel": {},
+  "upLabel": "Haut",
+  "@upLabel": {}
 }

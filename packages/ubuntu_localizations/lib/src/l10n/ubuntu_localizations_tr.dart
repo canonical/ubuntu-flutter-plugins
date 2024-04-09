@@ -11,7 +11,7 @@ class UbuntuLocalizationsTr extends UbuntuLocalizations {
   String get languageName => 'Türkçe';
 
   @override
-  String get backAction => 'Geri Git';
+  String get backAction => 'Geri git';
 
   @override
   String get continueAction => 'Devam et';

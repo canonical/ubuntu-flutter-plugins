@@ -128,7 +128,7 @@ class UbuntuLocalizationsDe extends UbuntuLocalizations {
   String get executeLabel => 'Ausführen';
 
   @override
-  String get exitLabel => 'Beenden';
+  String get exitLabel => 'Verlassen';
 
   @override
   String get fileLabel => 'Datei';
@@ -254,7 +254,7 @@ class UbuntuLocalizationsDe extends UbuntuLocalizations {
   String get recordLabel => 'Aufnehmen';
 
   @override
-  String get redoLabel => 'Rückgängig';
+  String get redoLabel => 'Wiederherstellen';
 
   @override
   String get refreshLabel => 'Auffrischen';
