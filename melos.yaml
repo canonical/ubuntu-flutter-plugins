@@ -60,7 +60,7 @@ scripts:
 
   # run integration tests in all packages
   integration_test: >
-    melos exec -c 1 --fail-fast --dir-exists=integration_test -- \
+    melos exec -c 1 --dir-exists=integration_test -- \
       flutter test integration_test
 
   # runs "flutter pub <arg(s)>" in all packages
@@ -68,7 +68,7 @@ scripts:
 
   # run tests in all packages
   test: >
-    melos exec -c 1 --fail-fast --dir-exists=test -- \
+    melos exec -c 1 --dir-exists=test -- \
       flutter test
 
   # run pub upgrade in all packages

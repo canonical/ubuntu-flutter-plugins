@@ -9,11 +9,18 @@ import 'package:ubuntu_widgets/ubuntu_widgets.dart';
 void main() {
   testWidgets('append lines', (tester) async {
     final log = StreamController<String>(sync: true);
+    final scrollController = ScrollController();
 
     await tester.pumpWidget(
       MaterialApp(
         home: Scaffold(
-          body: LogView(log: log.stream, maxLines: 2),
+          body: SizedBox(
+            height: 5,
+            child: LogView(
+              log: log.stream,
+              scrollController: scrollController,
+            ),
+          ),
         ),
       ),
     );
@@ -23,26 +30,23 @@ void main() {
     final controller = textField.controller;
     expect(controller, isNotNull);
 
-    final scrollController = textField.scrollController;
-    expect(scrollController, isNotNull);
-
     log.add('line 1');
     await tester.pump();
     expect(controller!.text, equals('line 1'));
-    expect(scrollController!.position.extentAfter, equals(0.0));
-    expect(scrollController.position.maxScrollExtent, equals(0.0));
+    expect(scrollController.position.extentAfter, equals(0.0));
+    expect(scrollController.position.maxScrollExtent, isPositive);
 
     log.add('line 2');
     await tester.pump();
     expect(controller.text, equals('line 1\nline 2'));
     expect(scrollController.position.extentAfter, equals(0.0));
-    expect(scrollController.position.maxScrollExtent, equals(0.0));
+    expect(scrollController.position.maxScrollExtent, isPositive);
 
     log.add('line 3');
-    await tester.pump();
+    await tester.pumpAndSettle();
     expect(controller.text, equals('line 1\nline 2\nline 3'));
     expect(scrollController.position.extentAfter, equals(0.0));
-    expect(scrollController.position.maxScrollExtent, greaterThan(0.0));
+    expect(scrollController.position.maxScrollExtent, isPositive);
   });
 
   testWidgets('rebuild with different stream', (tester) async {
@@ -78,7 +82,14 @@ void main() {
     }
 
     await tester.pumpWidget(
-      MaterialApp(home: Scaffold(body: LogView(log: log.stream, maxLines: 2))),
+      MaterialApp(
+        home: Scaffold(
+          body: SizedBox(
+            height: 20,
+            child: LogView(log: log.stream),
+          ),
+        ),
+      ),
     );
 
     FlutterErrorDetails? error;
@@ -99,7 +110,7 @@ void main() {
     await tester.pumpWidget(
       MaterialApp(
         home: Scaffold(
-          body: LogView(log: log.stream, maxLines: 2),
+          body: SizedBox(height: 20, child: LogView(log: log.stream)),
         ),
       ),
     );
@@ -109,7 +120,9 @@ void main() {
     final controller = textField.controller;
     expect(controller, isNotNull);
 
-    final scrollController = textField.scrollController;
+    final scrollView = tester
+        .widget<SingleChildScrollView>(find.byType(SingleChildScrollView));
+    final scrollController = scrollView.controller;
     expect(scrollController, isNotNull);
 
     for (var i = 1; i < 6; i++) {
