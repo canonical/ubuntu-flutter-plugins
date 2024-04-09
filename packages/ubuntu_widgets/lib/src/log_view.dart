@@ -95,16 +95,26 @@ class _LogViewState extends State<LogView> {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      padding: widget.padding,
-      decoration: widget.background,
-      child: TextField(
-        controller: _controller,
-        decoration: widget.decoration,
-        maxLines: widget.maxLines,
-        readOnly: true,
-        scrollController: _scrollController,
-        style: widget.style,
+    final contentPadding =
+        (widget.decoration?.contentPadding ?? EdgeInsets.zero)
+            .add(widget.padding ?? EdgeInsets.zero);
+
+    return DecoratedBox(
+      decoration: widget.background ?? const BoxDecoration(),
+      child: Scrollbar(
+        thumbVisibility: true,
+        controller: _scrollController,
+        child: SingleChildScrollView(
+          controller: _scrollController,
+          child: TextField(
+            controller: _controller,
+            decoration: (widget.decoration ?? const InputDecoration())
+                .copyWith(contentPadding: contentPadding),
+            maxLines: widget.maxLines,
+            readOnly: true,
+            style: widget.style,
+          ),
+        ),
       ),
     );
   }
