@@ -195,5 +195,19 @@
   "homeLabel": "ホーム",
   "@homeLabel": {},
   "indexLabel": "インデックス",
-  "@indexLabel": {}
+  "@indexLabel": {},
+  "nextLabel": "次",
+  "@nextLabel": {},
+  "noneLabel": "なし",
+  "@noneLabel": {},
+  "previousLabel": "前",
+  "@previousLabel": {},
+  "skipLabel": "スキップ",
+  "@skipLabel": {},
+  "stopLabel": "停止",
+  "@stopLabel": {},
+  "updateLabel": "アップデート",
+  "@updateLabel": {},
+  "viewLabel": "表示",
+  "@viewLabel": {}
 }
