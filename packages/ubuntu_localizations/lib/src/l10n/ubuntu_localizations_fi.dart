@@ -146,7 +146,7 @@ class UbuntuLocalizationsFi extends UbuntuLocalizations {
   String get fontLabel => 'Fontti';
 
   @override
-  String get forwardLabel => 'Forward';
+  String get forwardLabel => 'Seuraava';
 
   @override
   String get fullscreenLabel => 'Koko näyttö';

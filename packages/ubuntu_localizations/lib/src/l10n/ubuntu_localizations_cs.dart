@@ -65,7 +65,7 @@ class UbuntuLocalizationsCs extends UbuntuLocalizations {
   String get bottomLabel => 'Dole';
 
   @override
-  String get cancelLabel => 'Storno';
+  String get cancelLabel => 'Zrušit';
 
   @override
   String get centerLabel => 'Střed';
@@ -212,7 +212,7 @@ class UbuntuLocalizationsCs extends UbuntuLocalizations {
   String get normalLabel => 'Normální';
 
   @override
-  String get okLabel => 'OK';
+  String get okLabel => 'Budiž';
 
   @override
   String get openLabel => 'Otevřít';
