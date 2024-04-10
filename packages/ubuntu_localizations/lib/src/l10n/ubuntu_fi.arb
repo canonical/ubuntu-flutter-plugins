@@ -223,5 +223,15 @@
   "petabyte": "Pt",
   "@petabyte": {},
   "restartLabel": "Käynnistä uudelleen",
-  "@restartLabel": {}
+  "@restartLabel": {},
+  "shiftKey": "Shift",
+  "@shiftKey": {},
+  "altKey": "Alt",
+  "@altKey": {},
+  "controlKey": "Control",
+  "@controlKey": {},
+  "metaKey": "Meta",
+  "@metaKey": {},
+  "forwardLabel": "Seuraava",
+  "@forwardLabel": {}
 }

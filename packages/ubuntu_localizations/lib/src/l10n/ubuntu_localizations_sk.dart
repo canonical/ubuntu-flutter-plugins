@@ -314,7 +314,7 @@ class UbuntuLocalizationsSk extends UbuntuLocalizations {
   String get stopLabel => 'Zastaviť';
 
   @override
-  String get strikeThroughLabel => 'Preškrtnuté';
+  String get strikeThroughLabel => 'Prečiarknuť';
 
   @override
   String get submitLabel => 'Odoslať';
