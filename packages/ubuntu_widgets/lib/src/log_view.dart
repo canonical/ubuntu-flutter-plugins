@@ -113,6 +113,7 @@ class _LogViewState extends State<LogView> {
             controller: _controller,
             decoration: decoration,
             readOnly: true,
+            maxLines: null,
             style: widget.style,
           ),
         ),
