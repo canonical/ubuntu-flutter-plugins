@@ -1,3 +1,7 @@
+## 0.5.1
+
+ - **FIX**: LogView should allow multiple lines.
+
 ## 0.5.0
 
 > Note: This release has breaking changes.
