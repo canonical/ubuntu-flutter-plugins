@@ -3,6 +3,27 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 2024-04-10
+
+### Changes
+
+---
+
+Packages with breaking changes:
+
+ - There are no breaking changes in this release.
+
+Packages with other changes:
+
+ - [`ubuntu_widgets` - `v0.5.1`](#ubuntu_widgets---v051)
+
+---
+
+#### `ubuntu_widgets` - `v0.5.1`
+
+ - **FIX**: LogView should allow multiple lines.
+
+
 ## 2024-04-09
 
 ### Changes
