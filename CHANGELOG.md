@@ -3,6 +3,25 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 2024-04-12
+
+### Changes
+
+---
+
+Packages with breaking changes:
+
+ - There are no breaking changes in this release.
+
+Packages with other changes:
+
+ - [`ubuntu_service` - `v0.3.2`](#ubuntu_service---v032)
+
+---
+
+#### `ubuntu_service` - `v0.3.2`
+
+
 ## 2024-04-10
 
 ### Changes
