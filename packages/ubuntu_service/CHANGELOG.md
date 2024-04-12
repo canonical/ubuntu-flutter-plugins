@@ -1,3 +1,7 @@
+## 0.3.2
+
+ - **FIX**: Bump get_it to 7.6.9
+
 ## 0.3.1
 
  - **FEAT**: Activate ubuntu_lints.
