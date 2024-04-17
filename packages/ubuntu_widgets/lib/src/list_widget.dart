@@ -15,6 +15,7 @@ class ListWidget extends StatefulWidget {
     super.key,
     this.selectedIndex = -1,
     this.onKeySearch,
+    this.tabFocusNode,
   });
 
   /// The index of the selected item.
@@ -28,6 +29,10 @@ class ListWidget extends StatefulWidget {
 
   /// Called when a key is pressed.
   final ValueChanged<String>? onKeySearch;
+
+  /// This is the focus node for the next focus node outside of the list,
+  /// where the focus should go when you tab out of the list.
+  final FocusNode? tabFocusNode;
 
   @override
   State<ListWidget> createState() => _ListWidgetState();
@@ -49,6 +54,7 @@ class _ListWidgetState extends State<ListWidget> {
   @override
   void dispose() {
     _focusNode.dispose();
+    widget.tabFocusNode?.dispose();
     _scrollController?.dispose();
     super.dispose();
   }
