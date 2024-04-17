@@ -233,5 +233,13 @@
   "metaKey": "Meta",
   "@metaKey": {},
   "forwardLabel": "Seuraava",
-  "@forwardLabel": {}
+  "@forwardLabel": {},
+  "bottomLabel": "Alas",
+  "@bottomLabel": {},
+  "indexLabel": "Hakemisto",
+  "@indexLabel": {},
+  "topLabel": "Ylös",
+  "@topLabel": {},
+  "rewindLabel": "Kelaa taaksepäin",
+  "@rewindLabel": {}
 }
