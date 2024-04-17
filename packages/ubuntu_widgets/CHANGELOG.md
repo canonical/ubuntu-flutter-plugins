@@ -1,3 +1,7 @@
+## 0.5.2
+
+ - **FEAT**: Possibility to tab out of ListWidget.
+
 ## 0.5.1
 
  - **FIX**: LogView should allow multiple lines.

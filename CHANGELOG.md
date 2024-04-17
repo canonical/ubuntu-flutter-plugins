@@ -3,6 +3,27 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 2024-04-17
+
+### Changes
+
+---
+
+Packages with breaking changes:
+
+ - There are no breaking changes in this release.
+
+Packages with other changes:
+
+ - [`ubuntu_widgets` - `v0.5.2`](#ubuntu_widgets---v052)
+
+---
+
+#### `ubuntu_widgets` - `v0.5.2`
+
+ - **FEAT**: Possibility to tab out of ListWidget.
+
+
 ## 2024-04-12
 
 ### Changes
