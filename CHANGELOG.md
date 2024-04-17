@@ -15,6 +15,27 @@ Packages with breaking changes:
 
 Packages with other changes:
 
+ - [`ubuntu_widgets` - `v0.5.3`](#ubuntu_widgets---v053)
+
+---
+
+#### `ubuntu_widgets` - `v0.5.3`
+
+ - **FIX**: Properly pass the `tabFocusNode`.
+
+
+## 2024-04-17
+
+### Changes
+
+---
+
+Packages with breaking changes:
+
+ - There are no breaking changes in this release.
+
+Packages with other changes:
+
  - [`ubuntu_widgets` - `v0.5.2`](#ubuntu_widgets---v052)
 
 ---
