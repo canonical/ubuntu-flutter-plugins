@@ -198,7 +198,7 @@
   "@italicLabel": {},
   "mediaLabel": "Media",
   "@mediaLabel": {},
-  "landscapeLabel": "Vaakasuunta",
+  "landscapeLabel": "Vaakataso",
   "@landscapeLabel": {},
   "portraitLabel": "Pystysuunta",
   "@portraitLabel": {},
@@ -241,5 +241,7 @@
   "topLabel": "Ylös",
   "@topLabel": {},
   "rewindLabel": "Kelaa taaksepäin",
-  "@rewindLabel": {}
+  "@rewindLabel": {},
+  "enterLabel": "Enter",
+  "@enterLabel": {}
 }
