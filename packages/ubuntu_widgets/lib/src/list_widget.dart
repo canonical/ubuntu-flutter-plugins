@@ -54,7 +54,6 @@ class _ListWidgetState extends State<ListWidget> {
   @override
   void dispose() {
     _focusNode.dispose();
-    widget.tabFocusNode?.dispose();
     _scrollController?.dispose();
     super.dispose();
   }
@@ -86,6 +85,7 @@ class _ListWidgetState extends State<ListWidget> {
       child: KeySearch(
         autofocus: true,
         focusNode: _focusNode,
+        tabFocusNode: widget.tabFocusNode,
         onSearch: widget.onKeySearch ?? (_) => -1,
         child: LayoutBuilder(
           builder: (context, constraints) {
