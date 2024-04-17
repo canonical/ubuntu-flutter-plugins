@@ -200,13 +200,13 @@ class UbuntuLocalizationsJa extends UbuntuLocalizations {
   String get newLabel => 'New';
 
   @override
-  String get nextLabel => 'Next';
+  String get nextLabel => '次';
 
   @override
   String get noLabel => 'いいえ';
 
   @override
-  String get noneLabel => 'None';
+  String get noneLabel => 'なし';
 
   @override
   String get normalLabel => 'Normal';
@@ -233,7 +233,7 @@ class UbuntuLocalizationsJa extends UbuntuLocalizations {
   String get preferencesLabel => '設定';
 
   @override
-  String get previousLabel => 'Previous';
+  String get previousLabel => '前';
 
   @override
   String get printLabel => '印刷';
@@ -305,13 +305,13 @@ class UbuntuLocalizationsJa extends UbuntuLocalizations {
   String get sendLabel => '送信';
 
   @override
-  String get skipLabel => 'Skip';
+  String get skipLabel => 'スキップ';
 
   @override
   String get sortLabel => '並び替え';
 
   @override
-  String get stopLabel => 'Stop';
+  String get stopLabel => '停止';
 
   @override
   String get strikeThroughLabel => '取り消し線';
@@ -326,13 +326,13 @@ class UbuntuLocalizationsJa extends UbuntuLocalizations {
   String get undoLabel => '元に戻す';
 
   @override
-  String get updateLabel => 'Update';
+  String get updateLabel => 'アップデート';
 
   @override
   String get upLabel => 'Up';
 
   @override
-  String get viewLabel => 'View';
+  String get viewLabel => '表示';
 
   @override
   String get warningLabel => '警告';
