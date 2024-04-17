@@ -58,7 +58,6 @@ class _ListWidgetState extends State<ListWidget> {
   @override
   void dispose() {
     _focusNode.dispose();
-    widget.tabFocusNode?.dispose();
     _scrollController?.dispose();
     super.dispose();
   }
