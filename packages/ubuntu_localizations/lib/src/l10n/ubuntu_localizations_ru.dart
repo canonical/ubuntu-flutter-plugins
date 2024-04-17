@@ -200,7 +200,7 @@ class UbuntuLocalizationsRu extends UbuntuLocalizations {
   String get newLabel => 'Новый';
 
   @override
-  String get nextLabel => 'Следующая';
+  String get nextLabel => 'Далее';
 
   @override
   String get noLabel => 'Нет';

@@ -41,7 +41,7 @@ class UbuntuLocalizationsPl extends UbuntuLocalizations {
   String get shiftKey => 'Shift';
 
   @override
-  String get aboutLabel => 'O';
+  String get aboutLabel => 'O programie';
 
   @override
   String get addLabel => 'Dodaj';
@@ -200,7 +200,7 @@ class UbuntuLocalizationsPl extends UbuntuLocalizations {
   String get newLabel => 'Nowy';
 
   @override
-  String get nextLabel => 'Następne';
+  String get nextLabel => 'Dalej';
 
   @override
   String get noLabel => 'Nie';

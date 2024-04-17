@@ -62,7 +62,7 @@ class UbuntuLocalizationsFi extends UbuntuLocalizations {
   String get boldLabel => 'Lihavoitu';
 
   @override
-  String get bottomLabel => 'Bottom';
+  String get bottomLabel => 'Alas';
 
   @override
   String get cancelLabel => 'Peru';
@@ -167,7 +167,7 @@ class UbuntuLocalizationsFi extends UbuntuLocalizations {
   String get increaseLabel => 'Lisää';
 
   @override
-  String get indexLabel => 'Index';
+  String get indexLabel => 'Hakemisto';
 
   @override
   String get informationLabel => 'Tiedot';
@@ -179,7 +179,7 @@ class UbuntuLocalizationsFi extends UbuntuLocalizations {
   String get italicLabel => 'Kursivoitu';
 
   @override
-  String get landscapeLabel => 'Vaakasuunta';
+  String get landscapeLabel => 'Vaakataso';
 
   @override
   String get lastLabel => 'Viimeinen';
@@ -281,7 +281,7 @@ class UbuntuLocalizationsFi extends UbuntuLocalizations {
   String get revertLabel => 'Kumoa';
 
   @override
-  String get rewindLabel => 'Rewind';
+  String get rewindLabel => 'Kelaa taaksepäin';
 
   @override
   String get rightLabel => 'Oikea';
@@ -320,7 +320,7 @@ class UbuntuLocalizationsFi extends UbuntuLocalizations {
   String get submitLabel => 'Lähetä';
 
   @override
-  String get topLabel => 'Top';
+  String get topLabel => 'Ylös';
 
   @override
   String get undoLabel => 'Kumoa';

@@ -11,7 +11,7 @@ class UbuntuLocalizationsEs extends UbuntuLocalizations {
   String get languageName => 'Español';
 
   @override
-  String get backAction => 'Volver atrás';
+  String get backAction => 'Volver';
 
   @override
   String get continueAction => 'Continuar';
@@ -41,7 +41,7 @@ class UbuntuLocalizationsEs extends UbuntuLocalizations {
   String get shiftKey => 'Mayús';
 
   @override
-  String get aboutLabel => 'Saber más';
+  String get aboutLabel => 'Acerca de';
 
   @override
   String get addLabel => 'Añadir';
@@ -137,13 +137,13 @@ class UbuntuLocalizationsEs extends UbuntuLocalizations {
   String get fillLabel => 'Rellenar';
 
   @override
-  String get findLabel => 'Encontrar';
+  String get findLabel => 'Buscar';
 
   @override
   String get firstLabel => 'Primera';
 
   @override
-  String get fontLabel => 'Tipografía';
+  String get fontLabel => 'Tipo de letra';
 
   @override
   String get forwardLabel => 'Adelante';
@@ -164,7 +164,7 @@ class UbuntuLocalizationsEs extends UbuntuLocalizations {
   String get importLabel => 'Importar';
 
   @override
-  String get increaseLabel => 'Incrementar';
+  String get increaseLabel => 'Aumentar';
 
   @override
   String get indexLabel => 'Índice';
@@ -179,7 +179,7 @@ class UbuntuLocalizationsEs extends UbuntuLocalizations {
   String get italicLabel => 'Itálica';
 
   @override
-  String get landscapeLabel => 'Paisaje';
+  String get landscapeLabel => 'Horizontal';
 
   @override
   String get lastLabel => 'Última';
@@ -227,7 +227,7 @@ class UbuntuLocalizationsEs extends UbuntuLocalizations {
   String get playLabel => 'Reproducir';
 
   @override
-  String get portraitLabel => 'Retrato';
+  String get portraitLabel => 'Vertical';
 
   @override
   String get preferencesLabel => 'Preferencias';
@@ -239,7 +239,7 @@ class UbuntuLocalizationsEs extends UbuntuLocalizations {
   String get printLabel => 'Imprimir';
 
   @override
-  String get printPreviewLabel => 'Imprimir vista previa';
+  String get printPreviewLabel => 'Previsualizar impresión';
 
   @override
   String get propertiesLabel => 'Propiedades';
@@ -263,7 +263,7 @@ class UbuntuLocalizationsEs extends UbuntuLocalizations {
   String get removeLabel => 'Quitar';
 
   @override
-  String get renameLabel => 'Renombrar';
+  String get renameLabel => 'Cambiar nombre';
 
   @override
   String get resetLabel => 'Restablecer';
@@ -305,7 +305,7 @@ class UbuntuLocalizationsEs extends UbuntuLocalizations {
   String get sendLabel => 'Enviar';
 
   @override
-  String get skipLabel => 'Saltar';
+  String get skipLabel => 'Omitir';
 
   @override
   String get sortLabel => 'Ordenar';
@@ -314,10 +314,10 @@ class UbuntuLocalizationsEs extends UbuntuLocalizations {
   String get stopLabel => 'Detener';
 
   @override
-  String get strikeThroughLabel => 'Penetrar';
+  String get strikeThroughLabel => 'Tachar';
 
   @override
-  String get submitLabel => 'Presentar';
+  String get submitLabel => 'Enviar';
 
   @override
   String get topLabel => 'Cima';
@@ -332,10 +332,10 @@ class UbuntuLocalizationsEs extends UbuntuLocalizations {
   String get upLabel => 'Arriba';
 
   @override
-  String get viewLabel => 'Vista';
+  String get viewLabel => 'Ver';
 
   @override
-  String get warningLabel => 'Advertencia';
+  String get warningLabel => 'Atención';
 
   @override
   String get windowLabel => 'Ventana';

@@ -198,7 +198,7 @@
   "@italicLabel": {},
   "mediaLabel": "Media",
   "@mediaLabel": {},
-  "landscapeLabel": "Vaakasuunta",
+  "landscapeLabel": "Vaakataso",
   "@landscapeLabel": {},
   "portraitLabel": "Pystysuunta",
   "@portraitLabel": {},
@@ -233,5 +233,15 @@
   "metaKey": "Meta",
   "@metaKey": {},
   "forwardLabel": "Seuraava",
-  "@forwardLabel": {}
+  "@forwardLabel": {},
+  "bottomLabel": "Alas",
+  "@bottomLabel": {},
+  "indexLabel": "Hakemisto",
+  "@indexLabel": {},
+  "topLabel": "Ylös",
+  "@topLabel": {},
+  "rewindLabel": "Kelaa taaksepäin",
+  "@rewindLabel": {},
+  "enterLabel": "Enter",
+  "@enterLabel": {}
 }
