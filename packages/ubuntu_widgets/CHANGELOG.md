@@ -1,3 +1,7 @@
+## 0.5.3
+
+ - **FIX**: Properly pass the `tabFocusNode`.
+
 ## 0.5.2
 
  - **FEAT**: Possibility to tab out of ListWidget.
