@@ -15,6 +15,7 @@ class KeySearch extends StatefulWidget {
     required this.child,
     this.autofocus = false,
     this.focusNode,
+    this.tabFocusNode,
     this.interval = kKeySearchInterval,
     super.key,
   });
@@ -24,6 +25,10 @@ class KeySearch extends StatefulWidget {
 
   /// The focus node for the key search.
   final FocusNode? focusNode;
+
+  /// The focus node for the where the focus should go when you tab out of the
+  /// key search.
+  final FocusNode? tabFocusNode;
 
   /// The duration to wait since the last key event before calling [onSearch].
   final Duration interval;
@@ -49,6 +54,11 @@ class _KeySearchState extends State<KeySearch> {
   }
 
   KeyEventResult search(KeyEvent event) {
+    if (event.logicalKey == LogicalKeyboardKey.tab &&
+        widget.tabFocusNode != null) {
+      widget.tabFocusNode!.requestFocus();
+      return KeyEventResult.handled;
+    }
     if (event is KeyDownEvent &&
         (event.character?.isNotEmpty ?? false) &&
         !LogicalKeyboardKey.isControlCharacter(event.character!)) {
