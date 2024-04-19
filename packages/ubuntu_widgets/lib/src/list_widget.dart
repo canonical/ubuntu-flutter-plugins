@@ -16,6 +16,7 @@ class ListWidget extends StatefulWidget {
     this.selectedIndex = -1,
     this.onKeySearch,
     this.tabFocusNode,
+    this.shrinkWrap = false,
   });
 
   /// The index of the selected item.
@@ -33,6 +34,9 @@ class ListWidget extends StatefulWidget {
   /// This is the focus node for the next focus node outside of the list,
   /// where the focus should go when you tab out of the list.
   final FocusNode? tabFocusNode;
+
+  /// Whether the list should shrink-wrap its contents or not.
+  final bool shrinkWrap;
 
   @override
   State<ListWidget> createState() => _ListWidgetState();
@@ -104,6 +108,7 @@ class _ListWidgetState extends State<ListWidget> {
               child: ListView.builder(
                 key: _scrollableKey,
                 controller: _scrollController,
+                shrinkWrap: widget.shrinkWrap,
                 itemExtent: _kTileHeight,
                 itemCount: widget.itemCount,
                 itemBuilder: (context, index) => Builder(
