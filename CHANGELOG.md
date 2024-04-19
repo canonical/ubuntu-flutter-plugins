@@ -3,6 +3,27 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 2024-04-19
+
+### Changes
+
+---
+
+Packages with breaking changes:
+
+ - There are no breaking changes in this release.
+
+Packages with other changes:
+
+ - [`ubuntu_widgets` - `v0.5.4`](#ubuntu_widgets---v054)
+
+---
+
+#### `ubuntu_widgets` - `v0.5.4`
+
+ - **FIX**: Expose `shrinkWrap` on `ListWidget`.
+
+
 ## 2024-04-17
 
 ### Changes

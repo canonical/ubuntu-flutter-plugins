@@ -1,3 +1,7 @@
+## 0.5.4
+
+ - **FIX**: Expose `shrinkWrap` on `ListWidget`.
+
 ## 0.5.3
 
  - **FIX**: Properly pass the `tabFocusNode`.
