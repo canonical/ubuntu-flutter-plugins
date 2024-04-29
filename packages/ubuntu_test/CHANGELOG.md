@@ -1,3 +1,7 @@
+## 0.1.0-beta.9
+
+ - Update a dependency to the latest release.
+
 ## 0.1.0-beta.8
 
  - **REFACTOR**: Apply ubuntu lints to all packages (#340).
