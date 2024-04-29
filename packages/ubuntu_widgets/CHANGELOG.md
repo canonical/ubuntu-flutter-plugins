@@ -1,3 +1,7 @@
+## 0.5.5
+
+ - Bump "ubuntu_widgets" to `0.5.5`.
+
 ## 0.5.4
 
  - **FIX**: Expose `shrinkWrap` on `ListWidget`.

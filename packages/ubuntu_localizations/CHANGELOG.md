@@ -1,3 +1,7 @@
+## 0.3.6
+
+ - **FIX**: update unsupported country code.
+
 ## 0.3.5
 
  - **REFACTOR**: Apply ubuntu lints to all packages (#340).
