@@ -5,7 +5,7 @@ class UbuntuLocalizationsEo extends UbuntuLocalizations {
   UbuntuLocalizationsEo([String locale = 'eo']) : super(locale);
 
   @override
-  String get countryCode => 'AQ';
+  String get countryCode => 'US';
 
   @override
   String get languageName => 'Esperanto';
