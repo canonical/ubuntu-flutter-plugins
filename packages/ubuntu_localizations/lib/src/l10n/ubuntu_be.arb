@@ -1,6 +1,7 @@
 {
   "@@locale": "be",
   "countryCode": "BY",
+  "@countryCode": {},
   "languageName": "Беларуская",
   "@languageName": {},
   "continueAction": "Працягнуць",
