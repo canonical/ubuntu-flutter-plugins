@@ -1,6 +1,6 @@
 {
   "@@locale": "zh",
-  "countryCode": "CN",
+  "countryCode": "美国",
   "@countryCode": {},
   "languageName": "中文（简体）",
   "@languageName": {},
@@ -18,7 +18,7 @@
   "@fairPassword": {},
   "altKey": "Alt 键",
   "@altKey": {},
-  "controlKey": "Control 键",
+  "controlKey": "Ctrl 键",
   "@controlKey": {},
   "metaKey": "Meta 键",
   "@metaKey": {},
