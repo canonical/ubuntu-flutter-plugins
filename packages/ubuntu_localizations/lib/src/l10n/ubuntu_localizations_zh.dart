@@ -32,7 +32,7 @@ class UbuntuLocalizationsZh extends UbuntuLocalizations {
   String get altKey => 'Alt 键';
 
   @override
-  String get controlKey => 'Control 键';
+  String get controlKey => 'Ctrl 键';
 
   @override
   String get metaKey => 'Meta 键';

@@ -11,28 +11,28 @@ class UbuntuLocalizationsBe extends UbuntuLocalizations {
   String get languageName => 'Беларуская';
 
   @override
-  String get backAction => 'Go back';
+  String get backAction => 'Назад';
 
   @override
-  String get continueAction => 'Continue';
+  String get continueAction => 'Працягнуць';
 
   @override
-  String get strongPassword => 'Strong password';
+  String get strongPassword => 'Надзейны пароль';
 
   @override
-  String get fairPassword => 'Fair password';
+  String get fairPassword => 'Нядрэнны пароль';
 
   @override
-  String get goodPassword => 'Good password';
+  String get goodPassword => 'Добры пароль';
 
   @override
-  String get weakPassword => 'Weak password';
+  String get weakPassword => 'Ненадзейны пароль';
 
   @override
   String get altKey => 'Alt';
 
   @override
-  String get controlKey => 'Control';
+  String get controlKey => 'Ctrl';
 
   @override
   String get metaKey => 'Meta';
@@ -41,329 +41,329 @@ class UbuntuLocalizationsBe extends UbuntuLocalizations {
   String get shiftKey => 'Shift';
 
   @override
-  String get aboutLabel => 'About';
+  String get aboutLabel => 'Аб праграме';
 
   @override
-  String get addLabel => 'Add';
+  String get addLabel => 'Дадаць';
 
   @override
-  String get allLabel => 'All';
+  String get allLabel => 'Усе';
 
   @override
-  String get applyLabel => 'Apply';
+  String get applyLabel => 'Ужыць';
 
   @override
-  String get ascendingLabel => 'Ascending';
+  String get ascendingLabel => 'Па ўзрастанні';
 
   @override
-  String get backLabel => 'Back';
+  String get backLabel => 'Назад';
 
   @override
-  String get boldLabel => 'Bold';
+  String get boldLabel => 'Тоўсты';
 
   @override
-  String get bottomLabel => 'Bottom';
+  String get bottomLabel => 'Знізу';
 
   @override
-  String get cancelLabel => 'Cancel';
+  String get cancelLabel => 'Скасаваць';
 
   @override
-  String get centerLabel => 'Center';
+  String get centerLabel => 'Цэнтр';
 
   @override
-  String get clearLabel => 'Clear';
+  String get clearLabel => 'Ачысціць';
 
   @override
-  String get closeLabel => 'Close';
+  String get closeLabel => 'Закрыць';
 
   @override
-  String get colorLabel => 'Color';
+  String get colorLabel => 'Колер';
 
   @override
-  String get connectLabel => 'Connect';
+  String get connectLabel => 'Падключыцца';
 
   @override
-  String get continueLabel => 'Continue';
+  String get continueLabel => 'Працягнуць';
 
   @override
-  String get copyLabel => 'Copy';
+  String get copyLabel => 'Капіяваць';
 
   @override
-  String get createLabel => 'Create';
+  String get createLabel => 'Стварыць';
 
   @override
-  String get cutLabel => 'Cut';
+  String get cutLabel => 'Выразаць';
 
   @override
-  String get decreaseLabel => 'Decrease';
+  String get decreaseLabel => 'Паменшыць';
 
   @override
-  String get deleteLabel => 'Delete';
+  String get deleteLabel => 'Выдаліць';
 
   @override
-  String get descendingLabel => 'Descending';
+  String get descendingLabel => 'Па змяншэнні';
 
   @override
-  String get discardLabel => 'Discard';
+  String get discardLabel => 'Скасаваць';
 
   @override
-  String get disconnectLabel => 'Disconnect';
+  String get disconnectLabel => 'Адключыцца';
 
   @override
-  String get doneLabel => 'Done';
+  String get doneLabel => 'Гатова';
 
   @override
-  String get downloadLabel => 'Download';
+  String get downloadLabel => 'Спампаваць';
 
   @override
-  String get editLabel => 'Edit';
+  String get editLabel => 'Рэдагаваць';
 
   @override
-  String get enterLabel => 'Enter';
+  String get enterLabel => 'Увесці';
 
   @override
-  String get errorLabel => 'Error';
+  String get errorLabel => 'Памылка';
 
   @override
-  String get executeLabel => 'Execute';
+  String get executeLabel => 'Выканаць';
 
   @override
-  String get exitLabel => 'Exit';
+  String get exitLabel => 'Выйсці';
 
   @override
-  String get fileLabel => 'File';
+  String get fileLabel => 'Файл';
 
   @override
-  String get fillLabel => 'Fill';
+  String get fillLabel => 'Запаўненне';
 
   @override
-  String get findLabel => 'Find';
+  String get findLabel => 'Знайсці';
 
   @override
-  String get firstLabel => 'First';
+  String get firstLabel => 'Першы';
 
   @override
-  String get fontLabel => 'Font';
+  String get fontLabel => 'Шрыфт';
 
   @override
-  String get forwardLabel => 'Forward';
+  String get forwardLabel => 'Наперад';
 
   @override
-  String get fullscreenLabel => 'Fullscreen';
+  String get fullscreenLabel => 'На ўвесь экран';
 
   @override
-  String get goBackLabel => 'Go Back';
+  String get goBackLabel => 'Вярнуцца';
 
   @override
-  String get helpLabel => 'Help';
+  String get helpLabel => 'Даведка';
 
   @override
-  String get homeLabel => 'Home';
+  String get homeLabel => 'Хатняя папка';
 
   @override
-  String get importLabel => 'Import';
+  String get importLabel => 'Імпартаваць';
 
   @override
-  String get increaseLabel => 'Increase';
+  String get increaseLabel => 'Павялічыць';
 
   @override
-  String get indexLabel => 'Index';
+  String get indexLabel => 'Індэкс';
 
   @override
-  String get informationLabel => 'Information';
+  String get informationLabel => 'Інфармацыя';
 
   @override
-  String get insertLabel => 'Insert';
+  String get insertLabel => 'Уставіць';
 
   @override
-  String get italicLabel => 'Italic';
+  String get italicLabel => 'Курсіў';
 
   @override
-  String get landscapeLabel => 'Landscape';
+  String get landscapeLabel => 'Альбомная';
 
   @override
-  String get lastLabel => 'Last';
+  String get lastLabel => 'Апошні';
 
   @override
-  String get leaveLabel => 'Leave';
+  String get leaveLabel => 'Выйсці';
 
   @override
-  String get leftLabel => 'Left';
+  String get leftLabel => 'Злева';
 
   @override
-  String get mediaLabel => 'Media';
+  String get mediaLabel => 'Медыя';
 
   @override
-  String get networkLabel => 'Network';
+  String get networkLabel => 'Сетка';
 
   @override
-  String get newLabel => 'New';
+  String get newLabel => 'Новы';
 
   @override
-  String get nextLabel => 'Next';
+  String get nextLabel => 'Далей';
 
   @override
-  String get noLabel => 'No';
+  String get noLabel => 'Не';
 
   @override
-  String get noneLabel => 'None';
+  String get noneLabel => 'Няма';
 
   @override
-  String get normalLabel => 'Normal';
+  String get normalLabel => 'Звычайны';
 
   @override
-  String get okLabel => 'OK';
+  String get okLabel => 'ОК';
 
   @override
-  String get openLabel => 'Open';
+  String get openLabel => 'Адкрыць';
 
   @override
-  String get pasteLabel => 'Paste';
+  String get pasteLabel => 'Уставіць';
 
   @override
-  String get pauseLabel => 'Pause';
+  String get pauseLabel => 'Паўза';
 
   @override
-  String get playLabel => 'Play';
+  String get playLabel => 'Прайграць';
 
   @override
-  String get portraitLabel => 'Portrait';
+  String get portraitLabel => 'Кніжная';
 
   @override
-  String get preferencesLabel => 'Preferences';
+  String get preferencesLabel => 'Параметры';
 
   @override
-  String get previousLabel => 'Previous';
+  String get previousLabel => 'Папярэдні';
 
   @override
-  String get printLabel => 'Print';
+  String get printLabel => 'Друк';
 
   @override
-  String get printPreviewLabel => 'Print Preview';
+  String get printPreviewLabel => 'Прагляд вобласці друку';
 
   @override
-  String get propertiesLabel => 'Properties';
+  String get propertiesLabel => 'Уласцівасці';
 
   @override
-  String get questionLabel => 'Question';
+  String get questionLabel => 'Пытанне';
 
   @override
-  String get quitLabel => 'Quit';
+  String get quitLabel => 'Выйсці';
 
   @override
-  String get recordLabel => 'Record';
+  String get recordLabel => 'Запіс';
 
   @override
-  String get redoLabel => 'Redo';
+  String get redoLabel => 'Узнавіць';
 
   @override
-  String get refreshLabel => 'Refresh';
+  String get refreshLabel => 'Абнавіць';
 
   @override
-  String get removeLabel => 'Remove';
+  String get removeLabel => 'Выдаліць';
 
   @override
-  String get renameLabel => 'Rename';
+  String get renameLabel => 'Перайменаваць';
 
   @override
-  String get resetLabel => 'Reset';
+  String get resetLabel => 'Скінуць';
 
   @override
-  String get restartLabel => 'Restart';
+  String get restartLabel => 'Перазапусціць';
 
   @override
-  String get restoreLabel => 'Restore';
+  String get restoreLabel => 'Аднавіць';
 
   @override
-  String get retryLabel => 'Retry';
+  String get retryLabel => 'Паўтарыць';
 
   @override
-  String get revertLabel => 'Revert';
+  String get revertLabel => 'Вярнуць';
 
   @override
-  String get rewindLabel => 'Rewind';
+  String get rewindLabel => 'Праматаць назад';
 
   @override
-  String get rightLabel => 'Right';
+  String get rightLabel => 'Правы';
 
   @override
-  String get saveAsLabel => 'Save As';
+  String get saveAsLabel => 'Захаваць як';
 
   @override
-  String get saveLabel => 'Save';
+  String get saveLabel => 'Захаваць';
 
   @override
-  String get searchLabel => 'Search';
+  String get searchLabel => 'Пошук';
 
   @override
-  String get selectAllLabel => 'Select All';
+  String get selectAllLabel => 'Выбраць усё';
 
   @override
-  String get selectLabel => 'Select';
+  String get selectLabel => 'Выбраць';
 
   @override
-  String get sendLabel => 'Send';
+  String get sendLabel => 'Адправіць';
 
   @override
-  String get skipLabel => 'Skip';
+  String get skipLabel => 'Прапусціць';
 
   @override
-  String get sortLabel => 'Sort';
+  String get sortLabel => 'Сартаванне';
 
   @override
-  String get stopLabel => 'Stop';
+  String get stopLabel => 'Спыніць';
 
   @override
-  String get strikeThroughLabel => 'Strike Through';
+  String get strikeThroughLabel => 'Закрэсліць';
 
   @override
-  String get submitLabel => 'Submit';
+  String get submitLabel => 'Адправіць';
 
   @override
-  String get topLabel => 'Top';
+  String get topLabel => 'Зверху';
 
   @override
-  String get undoLabel => 'Undo';
+  String get undoLabel => 'Адрабіць';
 
   @override
-  String get updateLabel => 'Update';
+  String get updateLabel => 'Абнавіць';
 
   @override
-  String get upLabel => 'Up';
+  String get upLabel => 'Уверх';
 
   @override
-  String get viewLabel => 'View';
+  String get viewLabel => 'Выгляд';
 
   @override
-  String get warningLabel => 'Warning';
+  String get warningLabel => 'Папярэджанне';
 
   @override
-  String get windowLabel => 'Window';
+  String get windowLabel => 'Акно';
 
   @override
-  String get yesLabel => 'Yes';
+  String get yesLabel => 'Так';
 
   @override
-  String get zoomInLabel => 'Zoom In';
+  String get zoomInLabel => 'Павялічыць';
 
   @override
-  String get zoomOutLabel => 'Zoom Out';
+  String get zoomOutLabel => 'Паменшыць';
 
   @override
-  String get byte => 'B';
+  String get byte => 'Б';
 
   @override
-  String get kilobyte => 'kB';
+  String get kilobyte => 'КБ';
 
   @override
-  String get megabyte => 'MB';
+  String get megabyte => 'МБ';
 
   @override
-  String get gigabyte => 'GB';
+  String get gigabyte => 'ГБ';
 
   @override
-  String get terabyte => 'TB';
+  String get terabyte => 'ТБ';
 
   @override
-  String get petabyte => 'PB';
+  String get petabyte => 'ПБ';
 }
