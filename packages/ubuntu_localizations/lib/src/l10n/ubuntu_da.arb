@@ -18,7 +18,7 @@
   "@metaKey": {},
   "altKey": "Alt",
   "@altKey": {},
-  "shiftKey": "Shift",
+  "shiftKey": "Skift",
   "@shiftKey": {},
   "aboutLabel": "Om",
   "@aboutLabel": {},
@@ -237,5 +237,9 @@
   "gigabyte": "GB",
   "@gigabyte": {},
   "restartLabel": "Genstart",
-  "@restartLabel": {}
+  "@restartLabel": {},
+  "terabyte": "TB",
+  "@terabyte": {},
+  "petabyte": "PB",
+  "@petabyte": {}
 }

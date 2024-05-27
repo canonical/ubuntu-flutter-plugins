@@ -237,5 +237,9 @@
   "indexLabel": "Index",
   "@indexLabel": {},
   "upLabel": "Haut",
-  "@upLabel": {}
+  "@upLabel": {},
+  "terabyte": "TO",
+  "@terabyte": {},
+  "petabyte": "PO",
+  "@petabyte": {}
 }

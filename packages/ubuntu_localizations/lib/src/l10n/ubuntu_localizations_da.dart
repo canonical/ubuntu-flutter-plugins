@@ -38,7 +38,7 @@ class UbuntuLocalizationsDa extends UbuntuLocalizations {
   String get metaKey => 'Meta';
 
   @override
-  String get shiftKey => 'Shift';
+  String get shiftKey => 'Skift';
 
   @override
   String get aboutLabel => 'Om';
