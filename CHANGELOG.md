@@ -30,10 +30,15 @@ Packages with dependency updates only:
 
 #### `ubuntu_localizations` - `v0.4.0`
 
+- Bump Flutter to `3.22.1`
+- 
 #### `ubuntu_widgets` - `v0.6.0`
+
+- Bump Flutter to `3.22.1`
 
 #### `ubuntu_lints` - `v0.3.1`
 
+- Bump ubuntu_lints to `4.0.0`
 
 ## 2024-04-29
 

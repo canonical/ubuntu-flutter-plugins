@@ -1,5 +1,7 @@
 ## 0.3.1
 
+- Bump ubuntu_lints to `4.0.0`
+ 
 ## 0.3.0
  
  - **FEAT**: Add `always_use_package_imports` to the ruleset

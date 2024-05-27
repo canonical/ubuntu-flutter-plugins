@@ -1,5 +1,7 @@
 ## 0.6.0
 
+ - Bump Flutter to `3.22.1`
+
 ## 0.5.5
 
  - Bump "ubuntu_widgets" to `0.5.5`.
