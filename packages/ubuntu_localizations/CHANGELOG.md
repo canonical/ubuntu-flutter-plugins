@@ -1,3 +1,7 @@
+## 0.4.0
+
+ - Bump Flutter to `3.22.1`
+ 
 ## 0.3.6
 
  - **FIX**: update unsupported country code.

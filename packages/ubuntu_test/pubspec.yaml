@@ -3,7 +3,7 @@ description: Provides test extensions for Ubuntu applications.
 homepage: https://github.com/canonical/ubuntu-flutter-plugins
 repository: https://github.com/canonical/ubuntu-flutter-plugins/tree/main/packages/ubuntu_test
 issue_tracker: https://github.com/canonical/ubuntu-flutter-plugins/issues
-version: 0.1.0-beta.9
+version: 0.1.0-beta.10
 
 environment:
   sdk: ">=3.0.0 <4.0.0"
@@ -19,11 +19,11 @@ dependencies:
     sdk: flutter
   matcher: ^0.12.16
   mockito: ^5.4.0
-  ubuntu_localizations: ^0.3.6
+  ubuntu_localizations: ^0.4.0
   yaru_test: ^0.1.5
 
 dev_dependencies:
-  ubuntu_lints: ^0.3.0
+  ubuntu_lints: ^0.3.1
 
 flutter:
   assets:
