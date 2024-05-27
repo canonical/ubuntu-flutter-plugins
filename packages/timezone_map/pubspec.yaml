@@ -1,5 +1,6 @@
 name: timezone_map
 description: Timezone map widget.
+version: 0.1.0
 publish_to: 'none'
 
 environment:
