@@ -1,3 +1,5 @@
+## 0.3.1
+
 ## 0.3.0
  
  - **FEAT**: Add `always_use_package_imports` to the ruleset

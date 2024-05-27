@@ -1,3 +1,5 @@
+## 0.6.0
+
 ## 0.5.5
 
  - Bump "ubuntu_widgets" to `0.5.5`.
