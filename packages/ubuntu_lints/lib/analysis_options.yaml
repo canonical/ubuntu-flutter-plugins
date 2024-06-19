@@ -43,6 +43,7 @@ linter:
     - prefer_null_aware_method_calls
     - prefer_single_quotes
     - prefer_void_to_null
+    - require_trailing_commas
     - sized_box_shrink_expand
     - sort_constructors_first
     - sort_pub_dependencies
