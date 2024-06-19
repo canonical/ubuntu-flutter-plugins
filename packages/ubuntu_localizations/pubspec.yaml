@@ -21,5 +21,5 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  ubuntu_lints: ^0.3.1
+  ubuntu_lints: ^0.4.0
   xml: ^6.1.0

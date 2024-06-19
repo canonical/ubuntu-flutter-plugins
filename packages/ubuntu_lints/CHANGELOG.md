@@ -1,3 +1,9 @@
+## 0.4.0
+
+> Note: This release has breaking changes.
+
+ - **BREAKING** **FEAT**: Require trailing commas on overflow.
+
 ## 0.3.1
 
 - Bump ubuntu_lints to `4.0.0`
