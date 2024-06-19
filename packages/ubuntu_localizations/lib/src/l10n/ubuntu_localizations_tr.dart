@@ -269,7 +269,7 @@ class UbuntuLocalizationsTr extends UbuntuLocalizations {
   String get resetLabel => 'Sıfırla';
 
   @override
-  String get restartLabel => 'Yeniden başlat';
+  String get restartLabel => 'Yeniden Başlat';
 
   @override
   String get restoreLabel => 'Geri Yükle';
