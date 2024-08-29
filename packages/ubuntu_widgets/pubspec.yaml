@@ -17,7 +17,7 @@ dependencies:
     sdk: flutter
   form_field_validator: ^1.1.0
   password_strength: ^0.2.0
-  ubuntu_localizations: ^0.4.0
+  ubuntu_localizations: ^0.4.1
   yaru: ^4.0.0
 
 dev_dependencies:
