@@ -1,5 +1,7 @@
 import 'ubuntu_localizations.dart';
 
+// ignore_for_file: type=lint
+
 /// The translations for Indonesian (`id`).
 class UbuntuLocalizationsId extends UbuntuLocalizations {
   UbuntuLocalizationsId([String locale = 'id']) : super(locale);
@@ -41,172 +43,172 @@ class UbuntuLocalizationsId extends UbuntuLocalizations {
   String get shiftKey => 'Shift';
 
   @override
-  String get aboutLabel => 'About';
+  String get aboutLabel => 'Tentang';
 
   @override
-  String get addLabel => 'Add';
+  String get addLabel => 'Tambahkan';
 
   @override
-  String get allLabel => 'All';
+  String get allLabel => 'Semua';
 
   @override
-  String get applyLabel => 'Apply';
+  String get applyLabel => 'Terapkan';
 
   @override
-  String get ascendingLabel => 'Ascending';
+  String get ascendingLabel => 'Urutan naik';
 
   @override
-  String get backLabel => 'Back';
+  String get backLabel => 'Kembali';
 
   @override
-  String get boldLabel => 'Bold';
+  String get boldLabel => 'Tebal';
 
   @override
-  String get bottomLabel => 'Bottom';
+  String get bottomLabel => 'Bawah';
 
   @override
   String get cancelLabel => 'Batal';
 
   @override
-  String get centerLabel => 'Center';
+  String get centerLabel => 'Tengah';
 
   @override
-  String get clearLabel => 'Clear';
+  String get clearLabel => 'Bersihkan';
 
   @override
-  String get closeLabel => 'Close';
+  String get closeLabel => 'Hapus';
 
   @override
-  String get colorLabel => 'Color';
+  String get colorLabel => 'Warna';
 
   @override
   String get connectLabel => 'Sambungkan';
 
   @override
-  String get continueLabel => 'Continue';
+  String get continueLabel => 'Lanjutkan';
 
   @override
-  String get copyLabel => 'Copy';
+  String get copyLabel => 'Salin';
 
   @override
-  String get createLabel => 'Create';
+  String get createLabel => 'Buat';
 
   @override
-  String get cutLabel => 'Cut';
+  String get cutLabel => 'Potong';
 
   @override
-  String get decreaseLabel => 'Decrease';
+  String get decreaseLabel => 'Kurangi';
 
   @override
-  String get deleteLabel => 'Delete';
+  String get deleteLabel => 'Hapus';
 
   @override
-  String get descendingLabel => 'Descending';
+  String get descendingLabel => 'Urutan turun';
 
   @override
-  String get discardLabel => 'Discard';
+  String get discardLabel => 'Buang';
 
   @override
-  String get disconnectLabel => 'Disconnect';
+  String get disconnectLabel => 'Putuskan sambungan';
 
   @override
-  String get doneLabel => 'Done';
+  String get doneLabel => 'Selesai';
 
   @override
-  String get downloadLabel => 'Download';
+  String get downloadLabel => 'Unduh';
 
   @override
-  String get editLabel => 'Edit';
+  String get editLabel => 'Ubah';
 
   @override
-  String get enterLabel => 'Enter';
+  String get enterLabel => 'Masukkan';
 
   @override
-  String get errorLabel => 'Error';
+  String get errorLabel => 'Kesalahan';
 
   @override
-  String get executeLabel => 'Execute';
+  String get executeLabel => 'Jalankan';
 
   @override
-  String get exitLabel => 'Exit';
+  String get exitLabel => 'Keluar';
 
   @override
-  String get fileLabel => 'File';
+  String get fileLabel => 'Berkas';
 
   @override
-  String get fillLabel => 'Fill';
+  String get fillLabel => 'Isi';
 
   @override
-  String get findLabel => 'Find';
+  String get findLabel => 'Temukan';
 
   @override
-  String get firstLabel => 'First';
+  String get firstLabel => 'Pertama';
 
   @override
   String get fontLabel => 'Font';
 
   @override
-  String get forwardLabel => 'Forward';
+  String get forwardLabel => 'Teruskan';
 
   @override
-  String get fullscreenLabel => 'Fullscreen';
+  String get fullscreenLabel => 'Layar penuh';
 
   @override
-  String get goBackLabel => 'Go Back';
+  String get goBackLabel => 'Kembali';
 
   @override
-  String get helpLabel => 'Help';
+  String get helpLabel => 'Bantuan';
 
   @override
-  String get homeLabel => 'Home';
+  String get homeLabel => 'Beranda';
 
   @override
-  String get importLabel => 'Import';
+  String get importLabel => 'Impor';
 
   @override
-  String get increaseLabel => 'Increase';
+  String get increaseLabel => 'Tingkatkan';
 
   @override
-  String get indexLabel => 'Index';
+  String get indexLabel => 'Indeks';
 
   @override
-  String get informationLabel => 'Information';
+  String get informationLabel => 'Informasi';
 
   @override
-  String get insertLabel => 'Insert';
+  String get insertLabel => 'Sisipkan';
 
   @override
-  String get italicLabel => 'Italic';
+  String get italicLabel => 'Miring';
 
   @override
-  String get landscapeLabel => 'Landscape';
+  String get landscapeLabel => 'Lanskap';
 
   @override
-  String get lastLabel => 'Last';
+  String get lastLabel => 'Terakhir';
 
   @override
-  String get leaveLabel => 'Leave';
+  String get leaveLabel => 'Tinggalkan';
 
   @override
-  String get leftLabel => 'Left';
+  String get leftLabel => 'Kiri';
 
   @override
   String get mediaLabel => 'Media';
 
   @override
-  String get networkLabel => 'Network';
+  String get networkLabel => 'Jaringan';
 
   @override
-  String get newLabel => 'New';
+  String get newLabel => 'Baru';
 
   @override
-  String get nextLabel => 'Next';
+  String get nextLabel => 'Selanjutnya';
 
   @override
   String get noLabel => 'Tidak';
 
   @override
-  String get noneLabel => 'None';
+  String get noneLabel => 'Tidak ada';
 
   @override
   String get normalLabel => 'Normal';
@@ -215,139 +217,139 @@ class UbuntuLocalizationsId extends UbuntuLocalizations {
   String get okLabel => 'Ok';
 
   @override
-  String get openLabel => 'Open';
+  String get openLabel => 'Buka';
 
   @override
-  String get pasteLabel => 'Paste';
+  String get pasteLabel => 'Tempelkan';
 
   @override
-  String get pauseLabel => 'Pause';
+  String get pauseLabel => 'Jeda';
 
   @override
-  String get playLabel => 'Play';
+  String get playLabel => 'Lanjut';
 
   @override
-  String get portraitLabel => 'Portrait';
+  String get portraitLabel => 'Potret';
 
   @override
-  String get preferencesLabel => 'Preferences';
+  String get preferencesLabel => 'Preferensi';
 
   @override
-  String get previousLabel => 'Previous';
+  String get previousLabel => 'Sebelumnya';
 
   @override
-  String get printLabel => 'Print';
+  String get printLabel => 'Cetak';
 
   @override
-  String get printPreviewLabel => 'Print Preview';
+  String get printPreviewLabel => 'Pratinjau Cetak';
 
   @override
-  String get propertiesLabel => 'Properties';
+  String get propertiesLabel => 'Properti';
 
   @override
-  String get questionLabel => 'Question';
+  String get questionLabel => 'Pertanyaan';
 
   @override
-  String get quitLabel => 'Quit';
+  String get quitLabel => 'Keluar';
 
   @override
-  String get recordLabel => 'Record';
+  String get recordLabel => 'Riwayat';
 
   @override
-  String get redoLabel => 'Redo';
+  String get redoLabel => 'Ulangi';
 
   @override
-  String get refreshLabel => 'Refresh';
+  String get refreshLabel => 'Segarkan';
 
   @override
-  String get removeLabel => 'Remove';
+  String get removeLabel => 'Hapus';
 
   @override
-  String get renameLabel => 'Rename';
+  String get renameLabel => 'Ubah Nama';
 
   @override
-  String get resetLabel => 'Reset';
+  String get resetLabel => 'Atur Ulang';
 
   @override
   String get restartLabel => 'Jalankan Ulang';
 
   @override
-  String get restoreLabel => 'Restore';
+  String get restoreLabel => 'Pulihkan';
 
   @override
-  String get retryLabel => 'Retry';
+  String get retryLabel => 'Coba lagi';
 
   @override
   String get revertLabel => 'Kembalikan';
 
   @override
-  String get rewindLabel => 'Rewind';
+  String get rewindLabel => 'Balik';
 
   @override
-  String get rightLabel => 'Right';
+  String get rightLabel => 'Kanan';
 
   @override
-  String get saveAsLabel => 'Save As';
+  String get saveAsLabel => 'Simpan Sebagai';
 
   @override
-  String get saveLabel => 'Save';
+  String get saveLabel => 'Simpan';
 
   @override
-  String get searchLabel => 'Search';
+  String get searchLabel => 'Cari';
 
   @override
-  String get selectAllLabel => 'Select All';
+  String get selectAllLabel => 'Pilih Semua';
 
   @override
-  String get selectLabel => 'Select';
+  String get selectLabel => 'Pilih';
 
   @override
-  String get sendLabel => 'Send';
+  String get sendLabel => 'Kirim';
 
   @override
-  String get skipLabel => 'Skip';
+  String get skipLabel => 'Lewati';
 
   @override
-  String get sortLabel => 'Sort';
+  String get sortLabel => 'Urut';
 
   @override
-  String get stopLabel => 'Stop';
+  String get stopLabel => 'Hentikan';
 
   @override
-  String get strikeThroughLabel => 'Strike Through';
+  String get strikeThroughLabel => 'Serang';
 
   @override
-  String get submitLabel => 'Submit';
+  String get submitLabel => 'Kirim';
 
   @override
-  String get topLabel => 'Top';
+  String get topLabel => 'Atas';
 
   @override
-  String get undoLabel => 'Undo';
+  String get undoLabel => 'Urungkan';
 
   @override
-  String get updateLabel => 'Update';
+  String get updateLabel => 'Pembaruan';
 
   @override
-  String get upLabel => 'Up';
+  String get upLabel => 'Atas';
 
   @override
-  String get viewLabel => 'View';
+  String get viewLabel => 'Tampilan';
 
   @override
-  String get warningLabel => 'Warning';
+  String get warningLabel => 'Peringatan';
 
   @override
-  String get windowLabel => 'Window';
+  String get windowLabel => 'Jendela';
 
   @override
   String get yesLabel => 'Ya';
 
   @override
-  String get zoomInLabel => 'Zoom In';
+  String get zoomInLabel => 'Perbesar';
 
   @override
-  String get zoomOutLabel => 'Zoom Out';
+  String get zoomOutLabel => 'Perkecil';
 
   @override
   String get byte => 'B';

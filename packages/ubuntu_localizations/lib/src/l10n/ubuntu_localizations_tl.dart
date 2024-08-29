@@ -1,5 +1,7 @@
 import 'ubuntu_localizations.dart';
 
+// ignore_for_file: type=lint
+
 /// The translations for Tagalog (`tl`).
 class UbuntuLocalizationsTl extends UbuntuLocalizations {
   UbuntuLocalizationsTl([String locale = 'tl']) : super(locale);

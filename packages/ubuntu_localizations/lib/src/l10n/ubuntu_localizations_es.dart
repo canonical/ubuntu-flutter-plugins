@@ -1,5 +1,7 @@
 import 'ubuntu_localizations.dart';
 
+// ignore_for_file: type=lint
+
 /// The translations for Spanish Castilian (`es`).
 class UbuntuLocalizationsEs extends UbuntuLocalizations {
   UbuntuLocalizationsEs([String locale = 'es']) : super(locale);

@@ -1,5 +1,7 @@
 import 'ubuntu_localizations.dart';
 
+// ignore_for_file: type=lint
+
 /// The translations for Bulgarian (`bg`).
 class UbuntuLocalizationsBg extends UbuntuLocalizations {
   UbuntuLocalizationsBg([String locale = 'bg']) : super(locale);
