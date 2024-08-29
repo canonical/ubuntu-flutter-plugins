@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 /// This widget is a text that can be clicked and when it is hovered it changes
 /// its style, by default to underline + primary color, but that can be
 /// customized with [textHoverStyle].
-class CategoryText extends StatefulWidget {
-  const CategoryText(
+class ClickableText extends StatefulWidget {
+  const ClickableText(
     this.text, {
     this.onTap,
     this.textStyle,
@@ -18,10 +18,10 @@ class CategoryText extends StatefulWidget {
   final TextStyle? textHoverStyle;
 
   @override
-  CategoryTextState createState() => CategoryTextState();
+  ClickableTextState createState() => ClickableTextState();
 }
 
-class CategoryTextState extends State<CategoryText> {
+class ClickableTextState extends State<ClickableText> {
   bool _isHovered = false;
 
   @override
