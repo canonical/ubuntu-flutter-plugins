@@ -5,3 +5,6 @@ coverage/
 .dart_tool/
 **/pubspec.lock
 **/pubspec_overrides.yaml
+
+# FVM Version Cache
+.fvm/

@@ -11,343 +11,343 @@ class UbuntuLocalizationsGa extends UbuntuLocalizations {
   String get languageName => 'Gaeilge';
 
   @override
-  String get backAction => 'Go back';
+  String get backAction => 'Téigh siar';
 
   @override
-  String get continueAction => 'Continue';
+  String get continueAction => 'Lean ar aghaidh';
 
   @override
-  String get strongPassword => 'Strong password';
+  String get strongPassword => 'Pasfhocal láidir';
 
   @override
-  String get fairPassword => 'Fair password';
+  String get fairPassword => 'Pasfhocal cothrom';
 
   @override
-  String get goodPassword => 'Good password';
+  String get goodPassword => 'Pasfhocal maith';
 
   @override
-  String get weakPassword => 'Weak password';
+  String get weakPassword => 'Focal faire lag';
 
   @override
   String get altKey => 'Alt';
 
   @override
-  String get controlKey => 'Control';
+  String get controlKey => 'Rialú';
 
   @override
-  String get metaKey => 'Meta';
+  String get metaKey => 'Meitea';
 
   @override
   String get shiftKey => 'Shift';
 
   @override
-  String get aboutLabel => 'About';
+  String get aboutLabel => 'Maidir';
 
   @override
-  String get addLabel => 'Add';
+  String get addLabel => 'Cuir Leis';
 
   @override
-  String get allLabel => 'All';
+  String get allLabel => 'Gach';
 
   @override
-  String get applyLabel => 'Apply';
+  String get applyLabel => 'Iarratas a dhéanamh';
 
   @override
-  String get ascendingLabel => 'Ascending';
+  String get ascendingLabel => 'Ag dul suas';
 
   @override
-  String get backLabel => 'Back';
+  String get backLabel => 'Ar ais';
 
   @override
-  String get boldLabel => 'Bold';
+  String get boldLabel => 'Trom';
 
   @override
-  String get bottomLabel => 'Bottom';
+  String get bottomLabel => 'Bun';
 
   @override
   String get cancelLabel => 'Cealaigh';
 
   @override
-  String get centerLabel => 'Center';
+  String get centerLabel => 'Lár';
 
   @override
-  String get clearLabel => 'Clear';
+  String get clearLabel => 'Glan';
 
   @override
-  String get closeLabel => 'Close';
+  String get closeLabel => 'Dún';
 
   @override
-  String get colorLabel => 'Color';
+  String get colorLabel => 'Dath';
 
   @override
-  String get connectLabel => 'Connect';
+  String get connectLabel => 'Ceangail';
 
   @override
-  String get continueLabel => 'Continue';
+  String get continueLabel => 'Lean ar aghaidh';
 
   @override
-  String get copyLabel => 'Copy';
+  String get copyLabel => 'Cóip';
 
   @override
-  String get createLabel => 'Create';
+  String get createLabel => 'Cruthaigh';
 
   @override
-  String get cutLabel => 'Cut';
+  String get cutLabel => 'Gearr';
 
   @override
-  String get decreaseLabel => 'Decrease';
+  String get decreaseLabel => 'Laghdú';
 
   @override
-  String get deleteLabel => 'Delete';
+  String get deleteLabel => 'Scrios';
 
   @override
-  String get descendingLabel => 'Descending';
+  String get descendingLabel => 'Íslitheach';
 
   @override
-  String get discardLabel => 'Discard';
+  String get discardLabel => 'Ná Sábháil';
 
   @override
-  String get disconnectLabel => 'Disconnect';
+  String get disconnectLabel => 'Dícheangail';
 
   @override
-  String get doneLabel => 'Done';
+  String get doneLabel => 'Déanta';
 
   @override
-  String get downloadLabel => 'Download';
+  String get downloadLabel => 'Íoslódáil';
 
   @override
-  String get editLabel => 'Edit';
+  String get editLabel => 'Cuir in eagar';
 
   @override
-  String get enterLabel => 'Enter';
+  String get enterLabel => 'Iontráil';
 
   @override
-  String get errorLabel => 'Error';
+  String get errorLabel => 'Earráid';
 
   @override
-  String get executeLabel => 'Execute';
+  String get executeLabel => 'Rith';
 
   @override
-  String get exitLabel => 'Exit';
+  String get exitLabel => 'Scoir';
 
   @override
-  String get fileLabel => 'File';
+  String get fileLabel => 'Comhad';
 
   @override
-  String get fillLabel => 'Fill';
+  String get fillLabel => 'Líon';
 
   @override
-  String get findLabel => 'Find';
+  String get findLabel => 'Aimsigh';
 
   @override
-  String get firstLabel => 'First';
+  String get firstLabel => 'An chéad';
 
   @override
-  String get fontLabel => 'Font';
+  String get fontLabel => 'Cló';
 
   @override
-  String get forwardLabel => 'Forward';
+  String get forwardLabel => 'Ar Aghaidh';
 
   @override
-  String get fullscreenLabel => 'Fullscreen';
+  String get fullscreenLabel => 'Lánscáileán';
 
   @override
-  String get goBackLabel => 'Go Back';
+  String get goBackLabel => 'Téigh Ar Ais';
 
   @override
-  String get helpLabel => 'Help';
+  String get helpLabel => 'Cabhair';
 
   @override
-  String get homeLabel => 'Home';
+  String get homeLabel => 'Baile';
 
   @override
-  String get importLabel => 'Import';
+  String get importLabel => 'Iompórtáil';
 
   @override
-  String get increaseLabel => 'Increase';
+  String get increaseLabel => 'Méadaigh';
 
   @override
-  String get indexLabel => 'Index';
+  String get indexLabel => 'Innéacs';
 
   @override
-  String get informationLabel => 'Information';
+  String get informationLabel => 'Eolas';
 
   @override
-  String get insertLabel => 'Insert';
+  String get insertLabel => 'Ionsáigh';
 
   @override
-  String get italicLabel => 'Italic';
+  String get italicLabel => 'Iodálach';
 
   @override
-  String get landscapeLabel => 'Landscape';
+  String get landscapeLabel => 'Tírdhreach';
 
   @override
-  String get lastLabel => 'Last';
+  String get lastLabel => 'An uair dheireanach';
 
   @override
-  String get leaveLabel => 'Leave';
+  String get leaveLabel => 'Fág';
 
   @override
-  String get leftLabel => 'Left';
+  String get leftLabel => 'Ar chlé';
 
   @override
-  String get mediaLabel => 'Media';
+  String get mediaLabel => 'Na Meáin';
 
   @override
-  String get networkLabel => 'Network';
+  String get networkLabel => 'Líonra';
 
   @override
-  String get newLabel => 'New';
+  String get newLabel => 'Nua';
 
   @override
-  String get nextLabel => 'Next';
+  String get nextLabel => 'Ar Aghaidh';
 
   @override
   String get noLabel => 'Níl';
 
   @override
-  String get noneLabel => 'None';
+  String get noneLabel => 'Ceann ar bith';
 
   @override
-  String get normalLabel => 'Normal';
+  String get normalLabel => 'Gnáth';
 
   @override
-  String get okLabel => 'OK';
+  String get okLabel => 'Ceart go leor';
 
   @override
-  String get openLabel => 'Open';
+  String get openLabel => 'Oscail';
 
   @override
-  String get pasteLabel => 'Paste';
+  String get pasteLabel => 'Greamaigh';
 
   @override
-  String get pauseLabel => 'Pause';
+  String get pauseLabel => 'Sos';
 
   @override
-  String get playLabel => 'Play';
+  String get playLabel => 'Seinn';
 
   @override
-  String get portraitLabel => 'Portrait';
+  String get portraitLabel => 'Portráid';
 
   @override
-  String get preferencesLabel => 'Preferences';
+  String get preferencesLabel => 'Sainroghanna';
 
   @override
-  String get previousLabel => 'Previous';
+  String get previousLabel => 'Roimhe Seo';
 
   @override
-  String get printLabel => 'Print';
+  String get printLabel => 'Priontáil';
 
   @override
-  String get printPreviewLabel => 'Print Preview';
+  String get printPreviewLabel => 'Réamhamharc Priontála';
 
   @override
-  String get propertiesLabel => 'Properties';
+  String get propertiesLabel => 'Airíonna';
 
   @override
-  String get questionLabel => 'Question';
+  String get questionLabel => 'Ceist';
 
   @override
-  String get quitLabel => 'Quit';
+  String get quitLabel => 'Scoir';
 
   @override
-  String get recordLabel => 'Record';
+  String get recordLabel => 'Taifead';
 
   @override
-  String get redoLabel => 'Redo';
+  String get redoLabel => 'Athdhéan';
 
   @override
-  String get refreshLabel => 'Refresh';
+  String get refreshLabel => 'Athnuaigh';
 
   @override
-  String get removeLabel => 'Remove';
+  String get removeLabel => 'Bain';
 
   @override
-  String get renameLabel => 'Rename';
+  String get renameLabel => 'Athainmnigh';
 
   @override
-  String get resetLabel => 'Reset';
+  String get resetLabel => 'Athshocraigh';
 
   @override
-  String get restartLabel => 'Restart';
+  String get restartLabel => 'Atosaigh';
 
   @override
-  String get restoreLabel => 'Restore';
+  String get restoreLabel => 'Athchóirigh';
 
   @override
-  String get retryLabel => 'Retry';
+  String get retryLabel => 'Atriail';
 
   @override
   String get revertLabel => 'Fill';
 
   @override
-  String get rewindLabel => 'Rewind';
+  String get rewindLabel => 'Athchasadh';
 
   @override
-  String get rightLabel => 'Right';
+  String get rightLabel => 'Ceart';
 
   @override
-  String get saveAsLabel => 'Save As';
+  String get saveAsLabel => 'Sábháil Mar';
 
   @override
-  String get saveLabel => 'Save';
+  String get saveLabel => 'Sábháil';
 
   @override
-  String get searchLabel => 'Search';
+  String get searchLabel => 'Cuardaigh';
 
   @override
-  String get selectAllLabel => 'Select All';
+  String get selectAllLabel => 'Roghnaigh Gach Rud';
 
   @override
-  String get selectLabel => 'Select';
+  String get selectLabel => 'Roghnaigh';
 
   @override
-  String get sendLabel => 'Send';
+  String get sendLabel => 'Seol';
 
   @override
-  String get skipLabel => 'Skip';
+  String get skipLabel => 'Scipeáil';
 
   @override
-  String get sortLabel => 'Sort';
+  String get sortLabel => 'Sórtáil';
 
   @override
   String get stopLabel => 'Stop';
 
   @override
-  String get strikeThroughLabel => 'Strike Through';
+  String get strikeThroughLabel => 'Stailc Trí';
 
   @override
-  String get submitLabel => 'Submit';
+  String get submitLabel => 'Cuir isteach';
 
   @override
-  String get topLabel => 'Top';
+  String get topLabel => 'Barr';
 
   @override
-  String get undoLabel => 'Undo';
+  String get undoLabel => 'Cealaigh';
 
   @override
-  String get updateLabel => 'Update';
+  String get updateLabel => 'Nuashonrú';
 
   @override
-  String get upLabel => 'Up';
+  String get upLabel => 'Suas';
 
   @override
-  String get viewLabel => 'View';
+  String get viewLabel => 'Amharc';
 
   @override
-  String get warningLabel => 'Warning';
+  String get warningLabel => 'Rabhadh';
 
   @override
-  String get windowLabel => 'Window';
+  String get windowLabel => 'Fuinneog';
 
   @override
   String get yesLabel => 'Tá';
 
   @override
-  String get zoomInLabel => 'Zoom In';
+  String get zoomInLabel => 'Zúmáil Isteach';
 
   @override
-  String get zoomOutLabel => 'Zoom Out';
+  String get zoomOutLabel => 'Zúmáil Amach';
 
   @override
   String get byte => 'B';
@@ -362,7 +362,7 @@ class UbuntuLocalizationsGa extends UbuntuLocalizations {
   String get gigabyte => 'GB';
 
   @override
-  String get terabyte => 'TB';
+  String get terabyte => 'An eitinn';
 
   @override
   String get petabyte => 'PB';

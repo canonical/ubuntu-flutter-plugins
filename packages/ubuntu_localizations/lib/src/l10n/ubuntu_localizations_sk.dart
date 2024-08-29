@@ -275,7 +275,7 @@ class UbuntuLocalizationsSk extends UbuntuLocalizations {
   String get restoreLabel => 'Obnoviť';
 
   @override
-  String get retryLabel => 'Opakovať';
+  String get retryLabel => 'Zopakovať';
 
   @override
   String get revertLabel => 'Vrátiť späť';
