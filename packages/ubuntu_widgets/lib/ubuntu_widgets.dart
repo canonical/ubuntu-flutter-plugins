@@ -2,6 +2,7 @@
 library ubuntu_widgets;
 
 export 'src/animated_expanded.dart';
+export 'src/clickable_text.dart';
 export 'src/form_layout.dart';
 export 'src/icons.dart';
 export 'src/key_search.dart';
