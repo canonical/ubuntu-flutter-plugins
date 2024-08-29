@@ -1,7 +1,5 @@
 import 'ubuntu_localizations.dart';
 
-// ignore_for_file: type=lint
-
 /// The translations for Danish (`da`).
 class UbuntuLocalizationsDa extends UbuntuLocalizations {
   UbuntuLocalizationsDa([String locale = 'da']) : super(locale);

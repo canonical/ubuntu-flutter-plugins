@@ -1,7 +1,5 @@
 import 'ubuntu_localizations.dart';
 
-// ignore_for_file: type=lint
-
 /// The translations for Thai (`th`).
 class UbuntuLocalizationsTh extends UbuntuLocalizations {
   UbuntuLocalizationsTh([String locale = 'th']) : super(locale);

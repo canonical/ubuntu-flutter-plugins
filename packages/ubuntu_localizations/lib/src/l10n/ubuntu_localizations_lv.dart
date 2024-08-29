@@ -1,7 +1,5 @@
 import 'ubuntu_localizations.dart';
 
-// ignore_for_file: type=lint
-
 /// The translations for Latvian (`lv`).
 class UbuntuLocalizationsLv extends UbuntuLocalizations {
   UbuntuLocalizationsLv([String locale = 'lv']) : super(locale);

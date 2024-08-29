@@ -1,7 +1,5 @@
 import 'ubuntu_localizations.dart';
 
-// ignore_for_file: type=lint
-
 /// The translations for Esperanto (`eo`).
 class UbuntuLocalizationsEo extends UbuntuLocalizations {
   UbuntuLocalizationsEo([String locale = 'eo']) : super(locale);

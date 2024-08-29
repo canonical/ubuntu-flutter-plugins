@@ -1,7 +1,5 @@
 import 'ubuntu_localizations.dart';
 
-// ignore_for_file: type=lint
-
 /// The translations for Catalan Valencian (`ca`).
 class UbuntuLocalizationsCa extends UbuntuLocalizations {
   UbuntuLocalizationsCa([String locale = 'ca']) : super(locale);

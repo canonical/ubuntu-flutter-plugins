@@ -1,7 +1,5 @@
 import 'ubuntu_localizations.dart';
 
-// ignore_for_file: type=lint
-
 /// The translations for Kazakh (`kk`).
 class UbuntuLocalizationsKk extends UbuntuLocalizations {
   UbuntuLocalizationsKk([String locale = 'kk']) : super(locale);
