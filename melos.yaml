@@ -57,7 +57,7 @@ scripts:
   # run gen-l10n to generate localizations in all packages
   gen-l10n:
     melos exec -c 1 --fail-fast --depends-on=flutter_localizations -- \
-     fvm flutter gen-l10n
+     flutter gen-l10n
 
   # run integration tests in all packages
   integration_test: >
