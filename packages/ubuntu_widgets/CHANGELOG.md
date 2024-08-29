@@ -1,3 +1,8 @@
+## 0.6.1
+
+ - **FIX**: Correct name for ClickableText.
+ - **FEAT**: Add a widget for clickable text.
+
 ## 0.6.0
 
  - Bump Flutter to `3.22.1`
