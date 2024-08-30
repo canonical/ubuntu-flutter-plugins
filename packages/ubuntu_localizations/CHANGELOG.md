@@ -1,3 +1,8 @@
+## 0.4.1
+
+ - **FIX**: Bump translations
+ 
+ 
 ## 0.4.0
 
  - Bump Flutter to `3.22.1`
