@@ -29,6 +29,9 @@ Packages with dependency updates only:
 
 #### `ubuntu_localizations` - `v0.4.1`
 
+ - **FIX**: Bump translations
+ 
+ 
 #### `ubuntu_widgets` - `v0.6.1`
 
  - **FIX**: Correct name for ClickableText.
