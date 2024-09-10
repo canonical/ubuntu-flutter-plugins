@@ -169,6 +169,47 @@ void main() {
     expect(thirdPage, findsNothing);
   });
 
+  testWidgets('jump and navigate back', (tester) async {
+    await pumpWizardApp(
+      tester,
+      routes: {
+        Routes.first: WizardRoute(builder: (_) => const Text(Routes.first)),
+        Routes.second: WizardRoute(builder: (_) => const Text(Routes.second)),
+        Routes.third: WizardRoute(builder: (_) => const Text(Routes.third)),
+      },
+    );
+
+    final firstPage = find.text(Routes.first);
+    final secondPage = find.text(Routes.second);
+    final thirdPage = find.text(Routes.third);
+
+    expect(firstPage, findsOneWidget);
+    expect(secondPage, findsNothing);
+    expect(thirdPage, findsNothing);
+
+    // jump 1st -> 3rd
+    final firstWizardScope = Wizard.of(tester.element(firstPage));
+    expect(firstWizardScope, isNotNull);
+
+    firstWizardScope.jump(Routes.third);
+    await tester.pumpAndSettle();
+
+    expect(firstPage, findsNothing);
+    expect(secondPage, findsNothing);
+    expect(thirdPage, findsOneWidget);
+
+    // 3rd -> 2nd
+    final thirdWizardScope = Wizard.of(tester.element(thirdPage));
+    expect(thirdWizardScope, isNotNull);
+
+    thirdWizardScope.back();
+    await tester.pumpAndSettle();
+
+    expect(firstPage, findsNothing);
+    expect(secondPage, findsOneWidget);
+    expect(thirdPage, findsNothing);
+  });
+
   testWidgets('navigate past first and last', (tester) async {
     await pumpWizardApp(
       tester,
