@@ -53,10 +53,10 @@ class WizardScopeState extends State<WizardScope> {
   /// ```
   void back<T extends Object?>([T? result]) => widget._controller.back(result);
 
-  /// Requests the wizard to show the previous page. Optionally, `result` can be
-  /// returned to the previous page.
-  /// Compared to `back`, `previous` refers to the route settings to load the
-  /// previous page instead of the navigation history.
+  /// Requests the wizard to load the previous page based on route settings.
+  /// If previous page is already loaded, `previous` behavior is similar to `back`
+  /// Optionally, `result` can be returned to the previous page.
+  ///
   ///
   /// ```dart
   /// onPressed: Wizard.of(context).previous
