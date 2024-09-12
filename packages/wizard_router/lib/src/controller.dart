@@ -99,6 +99,29 @@ class WizardController extends SafeChangeNotifier {
     });
   }
 
+  Future<void> previous<T extends Object?>([T? result]) async {
+    var previous = await routes[currentRoute]!.onBack?.call(state.last);
+    if (previous == null) {
+      final routeNames = routes.keys.toList();
+      final previousRouteIndex = routeNames.indexOf(currentRoute) - 1;
+      previous =
+          previousRouteIndex >= 0 ? routeNames[previousRouteIndex] : null;
+    }
+    if (previous == null) {
+      return back(result);
+    }
+
+    final previousRoute = await _loadRoute(previous, (name) async {
+      return WizardRouteSettings<T>(name: name, arguments: result);
+    });
+
+    _updateState((state) {
+      final copy = List<WizardRouteSettings>.of(state);
+      copy[copy.length - 1] = previousRoute;
+      return copy;
+    });
+  }
+
   /// Requests the wizard to show the next page. Optionally, `arguments` can be
   /// passed to the next page.
   Future<T?> next<T extends Object?>({Object? arguments}) async {

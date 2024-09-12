@@ -202,7 +202,7 @@ void main() {
     final thirdWizardScope = Wizard.of(tester.element(thirdPage));
     expect(thirdWizardScope, isNotNull);
 
-    thirdWizardScope.back();
+    thirdWizardScope.previous();
     await tester.pumpAndSettle();
 
     expect(firstPage, findsNothing);
