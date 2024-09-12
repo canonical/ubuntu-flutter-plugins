@@ -106,14 +106,15 @@ class WizardController extends SafeChangeNotifier {
       final previousRouteIndex = routeNames.indexOf(currentRoute) - 1;
       if (previousRouteIndex < 0) {
         throw WizardException(
-            '`Wizard.previous()` called from the first route ${state.last.name}');
+          '`Wizard.previous()` called from the first route ${state.last.name}',
+        );
       }
       previousName = routeNames[previousRouteIndex];
     }
 
-    final previousStateIndex =
-        state.lastIndexWhere((settings) => settings.name == previousName);
-    if (previousStateIndex > -1) {
+    final previousIsInState =
+        state.any((settings) => settings.name == previousName);
+    if (previousIsInState) {
       return back(result);
     }
 
