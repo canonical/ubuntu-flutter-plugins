@@ -100,18 +100,24 @@ class WizardController extends SafeChangeNotifier {
   }
 
   Future<void> previous<T extends Object?>([T? result]) async {
-    var previous = await routes[currentRoute]!.onBack?.call(state.last);
-    if (previous == null) {
+    var previousName = await routes[currentRoute]!.onBack?.call(state.last);
+    if (previousName == null) {
       final routeNames = routes.keys.toList();
       final previousRouteIndex = routeNames.indexOf(currentRoute) - 1;
-      previous =
-          previousRouteIndex >= 0 ? routeNames[previousRouteIndex] : null;
+      if (previousRouteIndex < 0) {
+        throw WizardException(
+            '`Wizard.previous()` called from the first route ${state.last.name}');
+      }
+      previousName = routeNames[previousRouteIndex];
     }
-    if (previous == null) {
+
+    final previousStateIndex =
+        state.lastIndexWhere((settings) => settings.name == previousName);
+    if (previousStateIndex > -1) {
       return back(result);
     }
 
-    final previousRoute = await _loadRoute(previous, (name) async {
+    final previousRoute = await _loadRoute(previousName, (name) async {
       return WizardRouteSettings<T>(name: name, arguments: result);
     });
 
