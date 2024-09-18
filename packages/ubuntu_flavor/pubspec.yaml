@@ -9,7 +9,7 @@ environment:
   sdk: '>=3.0.0 <4.0.0'
 
 dependencies:
-  meta: ^1.11.0
+  meta: ^1.15.0
   platform_linux: ^0.1.2
 
 dev_dependencies:

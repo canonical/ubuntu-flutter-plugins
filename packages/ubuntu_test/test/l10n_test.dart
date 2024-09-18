@@ -44,7 +44,9 @@ void main() async {
     );
 
     expect(
-        find.l10n<AppLocalizations>((l10n) => l10n.testLabel), findsOneWidget);
+      find.l10n<AppLocalizations>((l10n) => l10n.testLabel),
+      findsOneWidget,
+    );
   });
 
   testWidgets('tap buttons', (tester) async {
@@ -66,18 +68,20 @@ void main() async {
     final actual = <String>[];
     final expected = <String>[];
 
-    await tester.pumpWidget(MaterialApp(
-      localizationsDelegates: UbuntuLocalizations.localizationsDelegates,
-      home: Column(
-        children: [
-          for (final label in labels)
-            ElevatedButton(
-              child: Text(label),
-              onPressed: () => actual.add(label),
-            ),
-        ],
+    await tester.pumpWidget(
+      MaterialApp(
+        localizationsDelegates: UbuntuLocalizations.localizationsDelegates,
+        home: Column(
+          children: [
+            for (final label in labels)
+              ElevatedButton(
+                child: Text(label),
+                onPressed: () => actual.add(label),
+              ),
+          ],
+        ),
       ),
-    ));
+    );
 
     await tester.tapBack();
     expect(actual, expected..add(ul10n.backLabel));

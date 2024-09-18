@@ -74,28 +74,30 @@ class TimezoneMap extends StatelessWidget {
         }
       },
       child: MouseRegion(
-        child: LayoutBuilder(builder: (context, constraints) {
-          return Stack(
-            children: [
-              Positioned.fill(
-                child: _buildImage(context, 'map'),
-              ),
-              if (offset != null)
+        child: LayoutBuilder(
+          builder: (context, constraints) {
+            return Stack(
+              children: [
                 Positioned.fill(
-                  child: _buildImage(
-                    context,
-                    'tz_${_formatTimezoneOffset(offset!)}',
+                  child: _buildImage(context, 'map'),
+                ),
+                if (offset != null)
+                  Positioned.fill(
+                    child: _buildImage(
+                      context,
+                      'tz_${_formatTimezoneOffset(offset!)}',
+                    ),
                   ),
-                ),
-              if (marker != null)
-                Positioned(
-                  left: lng2x(marker!.longitude, constraints.maxWidth) - 12,
-                  top: lat2y(marker!.latitude, constraints.maxHeight) - 24,
-                  child: const Icon(Icons.place, color: Colors.red, size: 24),
-                ),
-            ],
-          );
-        }),
+                if (marker != null)
+                  Positioned(
+                    left: lng2x(marker!.longitude, constraints.maxWidth) - 12,
+                    top: lat2y(marker!.latitude, constraints.maxHeight) - 24,
+                    child: const Icon(Icons.place, color: Colors.red, size: 24),
+                  ),
+              ],
+            );
+          },
+        ),
       ),
     );
   }

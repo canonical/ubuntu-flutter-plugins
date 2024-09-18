@@ -11,15 +11,17 @@ extension AppTester on WidgetTester {
     bool autofocus = false,
     ValueChanged<int>? onSlide,
   }) {
-    return pumpWidget(MaterialApp(
-      home: SlideShow(
-        interval: interval ?? const Duration(seconds: 5),
-        slides: slides.map(Text.new).toList(),
-        wrap: wrap,
-        autofocus: autofocus,
-        onSlide: onSlide,
+    return pumpWidget(
+      MaterialApp(
+        home: SlideShow(
+          interval: interval ?? const Duration(seconds: 5),
+          slides: slides.map(Text.new).toList(),
+          wrap: wrap,
+          autofocus: autofocus,
+          onSlide: onSlide,
+        ),
       ),
-    ));
+    );
   }
 }
 

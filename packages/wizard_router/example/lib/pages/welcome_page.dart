@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_markdown/flutter_markdown.dart';
 import 'package:wizard_router/wizard_router.dart';
 
-import '../actions.dart';
-import '../main.dart';
-import '../widgets.dart';
+import 'package:wizard_router_example/actions.dart';
+import 'package:wizard_router_example/main.dart';
+import 'package:wizard_router_example/widgets.dart';
 
 class WelcomePage extends StatelessWidget {
   const WelcomePage({super.key});

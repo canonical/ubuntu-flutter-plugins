@@ -100,9 +100,10 @@ class _ListWidgetState extends State<ListWidget> {
             }
             // calculate initial center-alignment
             _scrollController ??= ScrollController(
-                initialScrollOffset: widget.selectedIndex * _kTileHeight -
-                    constraints.maxHeight / 2 +
-                    _kTileHeight / 2);
+              initialScrollOffset: widget.selectedIndex * _kTileHeight -
+                  constraints.maxHeight / 2 +
+                  _kTileHeight / 2,
+            );
             return FocusTraversalGroup(
               policy: OrderedTraversalPolicy(),
               child: ListView.builder(

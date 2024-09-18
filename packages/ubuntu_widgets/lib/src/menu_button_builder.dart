@@ -161,7 +161,7 @@ class _MenuButtonBuilderState<T> extends State<MenuButtonBuilder<T>> {
       crossAxisUnconstrained: false,
       style: widget.menuStyle ??
           MenuStyle(
-            minimumSize: MaterialStatePropertyAll(Size(_size?.width ?? 0, 0)),
+            minimumSize: WidgetStatePropertyAll(Size(_size?.width ?? 0, 0)),
             visualDensity: VisualDensity.standard,
           ),
       builder: (context, controller, child) {
@@ -196,13 +196,17 @@ class _MenuButtonBuilderState<T> extends State<MenuButtonBuilder<T>> {
                 DefaultTextStyle(
                   style: _labelStyle,
                   child: Flexible(
-                      child: widget.child != null
-                          ? widget.child!
-                          : widget.selected != null
-                              ? widget.selectedEntry?.child ??
-                                  widget.itemBuilder(
-                                      context, widget.selected as T, null)
-                              : const SizedBox.shrink()),
+                    child: widget.child != null
+                        ? widget.child!
+                        : widget.selected != null
+                            ? widget.selectedEntry?.child ??
+                                widget.itemBuilder(
+                                  context,
+                                  widget.selected as T,
+                                  null,
+                                )
+                            : const SizedBox.shrink(),
+                  ),
                 ),
                 const SizedBox(width: 8),
                 const Icon(YaruIcons.pan_down, size: 20),
@@ -247,10 +251,10 @@ class _MenuButtonBuilderState<T> extends State<MenuButtonBuilder<T>> {
     }
 
     final states = {
-      if (widget.selected == null && index == 0) MaterialState.selected,
+      if (widget.selected == null && index == 0) WidgetState.selected,
       if (widget.selected != null && widget.selected == item.value)
-        MaterialState.selected,
-      if (widget.onSelected == null) MaterialState.disabled,
+        WidgetState.selected,
+      if (widget.onSelected == null) WidgetState.disabled,
     };
 
     final button = OutlinedButtonTheme.of(context).style;
@@ -258,7 +262,7 @@ class _MenuButtonBuilderState<T> extends State<MenuButtonBuilder<T>> {
     final maximumSize = button?.maximumSize?.resolve(states);
 
     return MenuItemButton(
-      focusNode: states.contains(MaterialState.selected) ? _focusNode : null,
+      focusNode: states.contains(WidgetState.selected) ? _focusNode : null,
       leadingIcon: widget.iconBuilder?.call(context, item.value, null),
       onPressed: item.enabled
           ? () {

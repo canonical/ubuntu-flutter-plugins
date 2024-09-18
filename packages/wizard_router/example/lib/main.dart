@@ -2,11 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:wizard_router/wizard_router.dart';
 
-import 'actions.dart';
-import 'models.dart';
-import 'pages.dart';
-import 'routes.dart';
-import 'services.dart';
+import 'package:wizard_router_example/actions.dart';
+import 'package:wizard_router_example/models.dart';
+import 'package:wizard_router_example/pages.dart';
+import 'package:wizard_router_example/routes.dart';
+import 'package:wizard_router_example/services.dart';
 
 void main() {
   final service = NetworkService();

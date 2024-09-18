@@ -1,6 +1,6 @@
 import 'package:flutter/foundation.dart';
 
-import 'services.dart';
+import 'package:wizard_router_example/services.dart';
 
 class NetworkModel extends ChangeNotifier {
   NetworkModel(this._service);

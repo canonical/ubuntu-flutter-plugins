@@ -1,4 +1,5 @@
 name: ubuntu_flutter_plugins
+sdkPath: .fvm/flutter_sdk
 
 packages:
   - packages/**
@@ -7,14 +8,14 @@ command:
   bootstrap:
     environment:
       sdk: ">=3.0.0 <4.0.0"
-      flutter: ">=3.22.1"
+      flutter: ">=3.24.3"
 
     dependencies:
-      collection: ^1.17.0
-      flutter_svg: ^2.0.9
+      collection: ^1.18.0
+      flutter_svg: ^2.0.10+1
       intl: ^0.19.0
-      meta: ^1.11.0
-      path: ^1.8.3
+      meta: ^1.15.0
+      path: ^1.9.0
 
     dev_dependencies:
       mockito: 5.4.4
@@ -23,17 +24,17 @@ scripts:
   # analyze all packages
   analyze: >
     melos exec -c 1 -- \
-      flutter analyze .
+      fvm flutter analyze .
 
   # build examples in all packages
   build: >
     melos exec -c 1 --fail-fast --flutter --scope="*example*" --dir-exists=linux -- \
-      flutter build linux
+      fvm flutter build linux
 
   # collect coverage information for all packages
   coverage: >
     melos exec -c 1 --fail-fast --dir-exists=test -- \
-      flutter test --coverage && melos run coverage:cleanup
+      fvm flutter test --coverage && melos run coverage:cleanup
 
   # cleanup generated files from coverage
   coverage:cleanup: >
@@ -47,37 +48,37 @@ scripts:
       ! -name '*.freezed.dart' \
       ! -path '*/l10n/*' \
       ! -path "*/.*/*" \
-      | xargs dart format --set-exit-if-changed
+      | xargs fvm dart format --set-exit-if-changed
 
   # run build_runner to generate code in all packages
   generate: >
     melos exec -c 1 --fail-fast --depends-on=build_runner -- \
-      dart run build_runner build --delete-conflicting-outputs
+      fvm dart run build_runner build --delete-conflicting-outputs
 
   # run gen-l10n to generate localizations in all packages
   gen-l10n:
     melos exec -c 1 --fail-fast --depends-on=flutter_localizations -- \
-     flutter gen-l10n
+     fvm flutter gen-l10n
 
   # run integration tests in all packages
   integration_test: >
     melos exec -c 1 --dir-exists=integration_test -- \
-      flutter test integration_test
+      fvm flutter test integration_test
 
   # runs "flutter pub <arg(s)>" in all packages
-  pub: melos exec -c 1 -- flutter pub "$@"
+  pub: melos exec -c 1 -- fvm flutter pub "$@"
 
   # run tests in all packages
   test: >
     melos exec -c 1 --dir-exists=test -- \
-      flutter test
+      fvm flutter test
 
   # run pub upgrade in all packages
-  upgrade: melos exec flutter pub upgrade
+  upgrade: melos exec fvm flutter pub upgrade
 
   # update all goldens files
   update-goldens:
-    run: melos exec -- flutter test --update-goldens
+    run: melos exec -- fvm flutter test --update-goldens
     packageFilters:
       dirExists: test
     description: Re-generate all golden test files

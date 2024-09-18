@@ -109,8 +109,13 @@ class Logger {
         _consoleLog!
             .handle(log.LogRecord(LogLevel.info, 'Logging to $path', appName));
       } on FileSystemException catch (e) {
-        _consoleLog!.handle(log.LogRecord(
-            LogLevel.error, 'Logging to $path failed (${e.message})', appName));
+        _consoleLog!.handle(
+          log.LogRecord(
+            LogLevel.error,
+            'Logging to $path failed (${e.message})',
+            appName,
+          ),
+        );
       }
     }
 
@@ -141,8 +146,12 @@ class Logger {
     _log(LogLevel.error, message, error, stackTrace);
   }
 
-  void _log(log.Level level, Object? message,
-      [Object? error, StackTrace? stackTrace]) {
+  void _log(
+    log.Level level,
+    Object? message, [
+    Object? error,
+    StackTrace? stackTrace,
+  ]) {
     _logger.log(level, message, error, stackTrace);
   }
 }
