@@ -8,3 +8,4 @@ build/
 coverage/
 pubspec.lock
 pubspec_overrides.yaml
+.fvm
