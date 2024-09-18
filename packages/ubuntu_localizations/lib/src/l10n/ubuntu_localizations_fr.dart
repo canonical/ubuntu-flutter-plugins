@@ -322,7 +322,7 @@ class UbuntuLocalizationsFr extends UbuntuLocalizations {
   String get submitLabel => 'Soumettre';
 
   @override
-  String get topLabel => 'Top';
+  String get topLabel => 'Haut';
 
   @override
   String get undoLabel => 'Annuler';

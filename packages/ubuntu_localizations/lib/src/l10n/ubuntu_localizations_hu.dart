@@ -274,7 +274,7 @@ class UbuntuLocalizationsHu extends UbuntuLocalizations {
   String get restartLabel => 'Újraindítás';
 
   @override
-  String get restoreLabel => 'Visszaállítás';
+  String get restoreLabel => 'Helyreállítás';
 
   @override
   String get retryLabel => 'Újrapróbálás';
