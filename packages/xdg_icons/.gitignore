@@ -32,4 +32,3 @@ coverage/
 build/
 pubspec.lock
 *generated_plugin
-.fvm
