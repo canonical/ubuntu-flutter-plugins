@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:wizard_router/wizard_router.dart';
 
-import '../widgets.dart';
+import 'package:wizard_router_example/widgets.dart';
 
 class InstallModel extends ValueNotifier<int> {
   InstallModel() : super(0) {

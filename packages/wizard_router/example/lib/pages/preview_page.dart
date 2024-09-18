@@ -3,7 +3,7 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:wizard_router/wizard_router.dart';
 
-import '../widgets.dart';
+import 'package:wizard_router_example/widgets.dart';
 
 class PreviewPage extends StatelessWidget {
   const PreviewPage({super.key});

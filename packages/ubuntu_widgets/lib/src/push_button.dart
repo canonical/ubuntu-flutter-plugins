@@ -19,7 +19,7 @@ abstract class PushButton extends ButtonStyleButton {
     FocusNode? focusNode,
     bool autofocus,
     Clip clipBehavior,
-    MaterialStatesController? statesController,
+    WidgetStatesController? statesController,
     Key? key,
   }) = _ElevatedPushButton;
 
@@ -37,7 +37,7 @@ abstract class PushButton extends ButtonStyleButton {
     FocusNode? focusNode,
     bool autofocus,
     Clip clipBehavior,
-    MaterialStatesController? statesController,
+    WidgetStatesController? statesController,
     Key? key,
   }) = _FilledPushButton;
 
@@ -55,7 +55,7 @@ abstract class PushButton extends ButtonStyleButton {
     FocusNode? focusNode,
     bool autofocus,
     Clip clipBehavior,
-    MaterialStatesController? statesController,
+    WidgetStatesController? statesController,
     Key? key,
   }) = _OutlinedPushButton;
 }
@@ -146,6 +146,6 @@ class _OutlinedPushButton extends OutlinedButton implements PushButton {
 
 extension on ButtonStyle {
   ButtonStyle applyMinimumSize(Size size) {
-    return copyWith(minimumSize: MaterialStateProperty.all(size));
+    return copyWith(minimumSize: WidgetStateProperty.all(size));
   }
 }

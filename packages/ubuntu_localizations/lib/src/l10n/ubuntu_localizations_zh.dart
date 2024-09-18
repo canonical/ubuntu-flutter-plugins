@@ -1,5 +1,7 @@
 import 'ubuntu_localizations.dart';
 
+// ignore_for_file: type=lint
+
 /// The translations for Chinese (`zh`).
 class UbuntuLocalizationsZh extends UbuntuLocalizations {
   UbuntuLocalizationsZh([String locale = 'zh']) : super(locale);

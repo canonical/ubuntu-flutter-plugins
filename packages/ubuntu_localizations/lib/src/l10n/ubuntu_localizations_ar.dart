@@ -1,5 +1,7 @@
 import 'ubuntu_localizations.dart';
 
+// ignore_for_file: type=lint
+
 /// The translations for Arabic (`ar`).
 class UbuntuLocalizationsAr extends UbuntuLocalizations {
   UbuntuLocalizationsAr([String locale = 'ar']) : super(locale);

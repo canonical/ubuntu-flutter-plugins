@@ -1,5 +1,7 @@
 import 'ubuntu_localizations.dart';
 
+// ignore_for_file: type=lint
+
 /// The translations for Kannada (`kn`).
 class UbuntuLocalizationsKn extends UbuntuLocalizations {
   UbuntuLocalizationsKn([String locale = 'kn']) : super(locale);

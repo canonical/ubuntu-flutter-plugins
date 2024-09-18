@@ -143,11 +143,15 @@ void main() {
 
     await tester.tapAt(customSize.bottomLeft(const Offset(0, -1)));
     expect(
-        pressed, isCloseToLatLng(bottomLeftLatLng, 10, LengthUnit.Kilometer));
+      pressed,
+      isCloseToLatLng(bottomLeftLatLng, 10, LengthUnit.Kilometer),
+    );
 
     await tester.tapAt(customSize.bottomRight(const Offset(-1, -1)));
     expect(
-        pressed, isCloseToLatLng(bottomRightLatLng, 10, LengthUnit.Kilometer));
+      pressed,
+      isCloseToLatLng(bottomRightLatLng, 10, LengthUnit.Kilometer),
+    );
   });
 
   testWidgets('pre-cache', (tester) async {
@@ -159,10 +163,12 @@ void main() {
     ]);
 
     await tester.runAsync(() async {
-      await tester.pumpWidget(DefaultAssetBundle(
-        bundle: assetBundle,
-        child: const MaterialApp(),
-      ));
+      await tester.pumpWidget(
+        DefaultAssetBundle(
+          bundle: assetBundle,
+          child: const MaterialApp(),
+        ),
+      );
 
       final context = tester.element(find.byType(MaterialApp));
       await TimezoneMap.precacheAssets(context);
@@ -189,9 +195,13 @@ class FakeAssetBundle extends CachingAssetBundle {
   @override
   Future<ByteData> load(String key) async {
     var bytes = Uint8List(0);
-    final fakes = Map.fromEntries(_fakeAssets.map((e) => MapEntry(e, [
-          {'asset': e, 'dpr': 1.0}
-        ])));
+    final fakes = Map.fromEntries(
+      _fakeAssets.map(
+        (e) => MapEntry(e, [
+          {'asset': e, 'dpr': 1.0},
+        ]),
+      ),
+    );
     switch (key) {
       case 'AssetManifest.bin': // 3.10.0
       case 'AssetManifest.smcbin': // 3.10.1+

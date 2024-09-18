@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:wizard_router/wizard_router.dart';
 
-import '../actions.dart';
-import '../main.dart';
-import '../models.dart';
-import '../widgets.dart';
+import 'package:wizard_router_example/actions.dart';
+import 'package:wizard_router_example/main.dart';
+import 'package:wizard_router_example/models.dart';
+import 'package:wizard_router_example/widgets.dart';
 
 enum Choice { none, preview, install }
 
@@ -76,7 +76,9 @@ class ChooserPage extends StatelessWidget {
           onActivated: model.value != Choice.none
               ? () => WizardApp.useActions
                   ? WizardNextIntent.invoke(
-                      context: context, arguments: model.value)
+                      context: context,
+                      arguments: model.value,
+                    )
                   : Wizard.of(context).next(arguments: model.value)
               : null,
         ),

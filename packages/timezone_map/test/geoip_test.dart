@@ -17,10 +17,12 @@ const kGeoIPUrl = 'http://lookup.geoip.org';
 void main() {
   test('geoip lookup', () async {
     final dio = MockDio();
-    when(dio.get(
-      kGeoIPUrl,
-      cancelToken: anyNamed('cancelToken'),
-    )).thenAnswer((_) async => xmlResponse(copenhagen));
+    when(
+      dio.get(
+        kGeoIPUrl,
+        cancelToken: anyNamed('cancelToken'),
+      ),
+    ).thenAnswer((_) async => xmlResponse(copenhagen));
 
     final geoip = GeoIP(url: kGeoIPUrl, geodata: geodata, dio: dio);
 
@@ -56,7 +58,8 @@ void main() {
 
   test('geodata xml', () async {
     expect(
-      await geodata.fromXml(XmlDocument.parse('''
+      await geodata.fromXml(
+        XmlDocument.parse('''
 <Response>
   <Ip>127.0.0.1</Ip>
   <Status>OK</Status>
@@ -72,18 +75,21 @@ void main() {
   <AreaCode>0</AreaCode>
   <TimeZone>Europe/Stockholm</TimeZone>
 </Response>
-''').rootElement),
+''').rootElement,
+      ),
       gothenburg,
     );
 
     expect(
-      await geodata.fromXml(XmlDocument.parse('''
+      await geodata.fromXml(
+        XmlDocument.parse('''
 <Response>
   <Ip>127.0.0.1</Ip>
   <Status>OK</Status>
   <City>Göteborg</City>
 </Response>
-''').rootElement),
+''').rootElement,
+      ),
       const GeoLocation(
         name: 'Göteborg',
         admin: null,
@@ -96,12 +102,14 @@ void main() {
     );
 
     expect(
-      await geodata.fromXml(XmlDocument.parse('''
+      await geodata.fromXml(
+        XmlDocument.parse('''
 <Response>
   <Ip>127.0.0.1</Ip>
   <Status>ERROR</Status>
 </Response>
-''').rootElement),
+''').rootElement,
+      ),
       isNull,
     );
   });

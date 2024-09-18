@@ -1,5 +1,7 @@
 import 'ubuntu_localizations.dart';
 
+// ignore_for_file: type=lint
+
 /// The translations for Japanese (`ja`).
 class UbuntuLocalizationsJa extends UbuntuLocalizations {
   UbuntuLocalizationsJa([String locale = 'ja']) : super(locale);

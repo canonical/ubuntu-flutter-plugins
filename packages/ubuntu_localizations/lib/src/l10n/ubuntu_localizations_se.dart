@@ -1,5 +1,7 @@
 import 'ubuntu_localizations.dart';
 
+// ignore_for_file: type=lint
+
 /// The translations for Northern Sami (`se`).
 class UbuntuLocalizationsSe extends UbuntuLocalizations {
   UbuntuLocalizationsSe([String locale = 'se']) : super(locale);

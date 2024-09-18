@@ -43,12 +43,16 @@ void main() {
   });
 
   testWidgets('weak password', (tester) async {
-    await tester.pumpWidget(MaterialApp(
-      localizationsDelegates: UbuntuLocalizations.localizationsDelegates,
-      home: Builder(builder: (context) {
-        return const PasswordStrengthLabel(strength: PasswordStrength.weak);
-      }),
-    ));
+    await tester.pumpWidget(
+      MaterialApp(
+        localizationsDelegates: UbuntuLocalizations.localizationsDelegates,
+        home: Builder(
+          builder: (context) {
+            return const PasswordStrengthLabel(strength: PasswordStrength.weak);
+          },
+        ),
+      ),
+    );
 
     final context = tester.element(find.byType(PasswordStrengthLabel));
 
@@ -61,12 +65,16 @@ void main() {
   });
 
   testWidgets('fair password', (tester) async {
-    await tester.pumpWidget(MaterialApp(
-      localizationsDelegates: UbuntuLocalizations.localizationsDelegates,
-      home: Builder(builder: (context) {
-        return const PasswordStrengthLabel(strength: PasswordStrength.fair);
-      }),
-    ));
+    await tester.pumpWidget(
+      MaterialApp(
+        localizationsDelegates: UbuntuLocalizations.localizationsDelegates,
+        home: Builder(
+          builder: (context) {
+            return const PasswordStrengthLabel(strength: PasswordStrength.fair);
+          },
+        ),
+      ),
+    );
 
     final context = tester.element(find.byType(PasswordStrengthLabel));
     final text = UbuntuLocalizations.of(context).fairPassword;
@@ -77,12 +85,16 @@ void main() {
   });
 
   testWidgets('good password', (tester) async {
-    await tester.pumpWidget(MaterialApp(
-      localizationsDelegates: UbuntuLocalizations.localizationsDelegates,
-      home: Builder(builder: (context) {
-        return const PasswordStrengthLabel(strength: PasswordStrength.good);
-      }),
-    ));
+    await tester.pumpWidget(
+      MaterialApp(
+        localizationsDelegates: UbuntuLocalizations.localizationsDelegates,
+        home: Builder(
+          builder: (context) {
+            return const PasswordStrengthLabel(strength: PasswordStrength.good);
+          },
+        ),
+      ),
+    );
 
     final context = tester.element(find.byType(PasswordStrengthLabel));
     final text = UbuntuLocalizations.of(context).goodPassword;
@@ -93,12 +105,18 @@ void main() {
   });
 
   testWidgets('strong password', (tester) async {
-    await tester.pumpWidget(MaterialApp(
-      localizationsDelegates: UbuntuLocalizations.localizationsDelegates,
-      home: Builder(builder: (context) {
-        return const PasswordStrengthLabel(strength: PasswordStrength.strong);
-      }),
-    ));
+    await tester.pumpWidget(
+      MaterialApp(
+        localizationsDelegates: UbuntuLocalizations.localizationsDelegates,
+        home: Builder(
+          builder: (context) {
+            return const PasswordStrengthLabel(
+              strength: PasswordStrength.strong,
+            );
+          },
+        ),
+      ),
+    );
 
     final context = tester.element(find.byType(PasswordStrengthLabel));
 

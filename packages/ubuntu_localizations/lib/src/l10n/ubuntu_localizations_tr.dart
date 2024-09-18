@@ -1,5 +1,7 @@
 import 'ubuntu_localizations.dart';
 
+// ignore_for_file: type=lint
+
 /// The translations for Turkish (`tr`).
 class UbuntuLocalizationsTr extends UbuntuLocalizations {
   UbuntuLocalizationsTr([String locale = 'tr']) : super(locale);

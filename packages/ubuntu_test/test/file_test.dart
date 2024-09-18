@@ -6,37 +6,45 @@ import 'package:ubuntu_test/ubuntu_test.dart';
 
 void main() {
   test('matches text file', () async {
-    await IOOverrides.runZoned(() async {
-      await expectLater('match.txt', matchesTextFile('golden.txt'));
-      await expectLater('mismatch.txt', isNot(matchesTextFile('golden.txt')));
-    }, createFile: (path) {
-      switch (path) {
-        case 'match.txt':
-          return FakeFile(data: 'test');
-        case 'mismatch.txt':
-          return FakeFile(data: 'mismatch');
-        case 'golden.txt':
-          return FakeFile(data: 'test\n');
-        default:
-          throw UnsupportedError(path);
-      }
-    });
+    await IOOverrides.runZoned(
+      () async {
+        await expectLater('match.txt', matchesTextFile('golden.txt'));
+        await expectLater('mismatch.txt', isNot(matchesTextFile('golden.txt')));
+      },
+      createFile: (path) {
+        switch (path) {
+          case 'match.txt':
+            return FakeFile(data: 'test');
+          case 'mismatch.txt':
+            return FakeFile(data: 'mismatch');
+          case 'golden.txt':
+            return FakeFile(data: 'test\n');
+          default:
+            throw UnsupportedError(path);
+        }
+      },
+    );
   });
 
   test('exists later', () async {
-    await IOOverrides.runZoned(() async {
-      await expectLater('1.txt', existsLater);
-      await expectLater(FakeFile(existsLater: 3), existsLater);
-      await expectLater(
-          () => expectLater(123, existsLater), throwsArgumentError);
-    }, createFile: (path) {
-      switch (path) {
-        case '1.txt':
-          return FakeFile(existsLater: 1);
-        default:
-          throw UnsupportedError(path);
-      }
-    });
+    await IOOverrides.runZoned(
+      () async {
+        await expectLater('1.txt', existsLater);
+        await expectLater(FakeFile(existsLater: 3), existsLater);
+        await expectLater(
+          () => expectLater(123, existsLater),
+          throwsArgumentError,
+        );
+      },
+      createFile: (path) {
+        switch (path) {
+          case '1.txt':
+            return FakeFile(existsLater: 1);
+          default:
+            throw UnsupportedError(path);
+        }
+      },
+    );
   });
 }
 

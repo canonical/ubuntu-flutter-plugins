@@ -80,12 +80,16 @@ void main() {
       return codec.encodeSuccessEnvelope(null);
     });
 
-    instance.onDefaultThemeChanged.listen(expectAsync1<void, dynamic>(
-      (dynamic event) => expect(event, isNull),
-    ));
-    instance.onDefaultThemeChanged.listen(expectAsync1<void, dynamic>(
-      (dynamic event) => expect(event, isNull),
-    ));
+    instance.onDefaultThemeChanged.listen(
+      expectAsync1<void, dynamic>(
+        (dynamic event) => expect(event, isNull),
+      ),
+    );
+    instance.onDefaultThemeChanged.listen(
+      expectAsync1<void, dynamic>(
+        (dynamic event) => expect(event, isNull),
+      ),
+    );
 
     await emitEvent(null);
   });
