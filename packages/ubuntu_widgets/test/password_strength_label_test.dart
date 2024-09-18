@@ -111,7 +111,8 @@ void main() {
         home: Builder(
           builder: (context) {
             return const PasswordStrengthLabel(
-                strength: PasswordStrength.strong);
+              strength: PasswordStrength.strong,
+            );
           },
         ),
       ),

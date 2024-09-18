@@ -16,7 +16,9 @@ void main() {
           valueListenable: loading,
           builder: (context, value, child) {
             Timer(
-                const Duration(milliseconds: 250), () => loading.value = false);
+              const Duration(milliseconds: 250),
+              () => loading.value = false,
+            );
             return value ? const Text('loading...') : const Text('home');
           },
         ),
