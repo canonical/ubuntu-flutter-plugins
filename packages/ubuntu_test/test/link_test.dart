@@ -8,24 +8,27 @@ void main() {
     final actual = <String?>[];
     final expected = <String?>[];
 
-    await tester.pumpWidget(MaterialApp(
-      home: Column(
-        children: [
-          Html(
-            data: 'this is the <a href="https://first.link">first</a> link',
-            onAnchorTap: (url, attributes, element) => actual.add(url),
-          ),
-          Html(
-            data: 'this is <a href="https://second.link?q">the second</a> link',
-            onAnchorTap: (url, attributes, element) => actual.add(url),
-          ),
-          Html(
-            data: 'this is <a href="">the third</a> link',
-            onAnchorTap: (url, attributes, element) => actual.add(url),
-          ),
-        ],
+    await tester.pumpWidget(
+      MaterialApp(
+        home: Column(
+          children: [
+            Html(
+              data: 'this is the <a href="https://first.link">first</a> link',
+              onAnchorTap: (url, attributes, element) => actual.add(url),
+            ),
+            Html(
+              data:
+                  'this is <a href="https://second.link?q">the second</a> link',
+              onAnchorTap: (url, attributes, element) => actual.add(url),
+            ),
+            Html(
+              data: 'this is <a href="">the third</a> link',
+              onAnchorTap: (url, attributes, element) => actual.add(url),
+            ),
+          ],
+        ),
       ),
-    ),);
+    );
     await tester.pump();
 
     await tester.tapLink('first');

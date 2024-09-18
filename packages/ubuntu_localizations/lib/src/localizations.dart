@@ -62,7 +62,8 @@ class LocalizedLanguage {
 ///
 /// [locales] must contain the base locale i.e. the template .arb locale.
 Future<Iterable<LocalizedLanguage>> loadLocalizedLanguages(
-    List<Locale> locales,) async {
+  List<Locale> locales,
+) async {
   final languages = SplayTreeMap<String, LocalizedLanguage>();
   for (final locale in locales) {
     final localization = await UbuntuLocalizations.delegate.load(locale);

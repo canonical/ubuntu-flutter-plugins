@@ -196,13 +196,17 @@ class _MenuButtonBuilderState<T> extends State<MenuButtonBuilder<T>> {
                 DefaultTextStyle(
                   style: _labelStyle,
                   child: Flexible(
-                      child: widget.child != null
-                          ? widget.child!
-                          : widget.selected != null
-                              ? widget.selectedEntry?.child ??
-                                  widget.itemBuilder(
-                                      context, widget.selected as T, null,)
-                              : const SizedBox.shrink(),),
+                    child: widget.child != null
+                        ? widget.child!
+                        : widget.selected != null
+                            ? widget.selectedEntry?.child ??
+                                widget.itemBuilder(
+                                  context,
+                                  widget.selected as T,
+                                  null,
+                                )
+                            : const SizedBox.shrink(),
+                  ),
                 ),
                 const SizedBox(width: 8),
                 const Icon(YaruIcons.pan_down, size: 20),

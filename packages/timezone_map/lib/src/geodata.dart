@@ -185,9 +185,10 @@ class Geodata extends GeoSource {
 class _GeoBush extends RBushBase<GeoLocation> {
   _GeoBush()
       : super(
-            toBBox: _HaversineBox.new,
-            getMinX: (item) => item.longitude!,
-            getMinY: (item) => item.latitude!,);
+          toBBox: _HaversineBox.new,
+          getMinX: (item) => item.longitude!,
+          getMinY: (item) => item.latitude!,
+        );
 }
 
 class _HaversineBox extends RBushBox {
@@ -237,11 +238,13 @@ Map<String, String> _parseMap(
 
 // parses tabular data (assets/*.txt)
 Iterable<List<String>> _parseTable(String data) {
-  return LineSplitter.split(data).map((line) => line
-      .split('#') // ignore comments
-      .first
-      .split('\t') // tab-separated data
-      .toList(),);
+  return LineSplitter.split(data).map(
+    (line) => line
+        .split('#') // ignore comments
+        .first
+        .split('\t') // tab-separated data
+        .toList(),
+  );
 }
 
 // trimmed lowercase string with commas and parentheses etc. removed, suitable

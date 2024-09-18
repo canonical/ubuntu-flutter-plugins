@@ -6,7 +6,8 @@ part of 'wizard.dart';
 class WizardController extends SafeChangeNotifier {
   WizardController({required this.routes, this.initialRoute, this.errorRoute}) {
     _flowController = FlowController(
-        [WizardRouteSettings(name: initialRoute ?? routes.keys.first)],);
+      [WizardRouteSettings(name: initialRoute ?? routes.keys.first)],
+    );
     _flowController.addListener(notifyListeners);
   }
   final String? initialRoute;
@@ -57,7 +58,8 @@ class WizardController extends SafeChangeNotifier {
   void home() {
     if (state.length <= 1) {
       throw WizardException(
-          '`Wizard.home()` called from the first route ${state.last.name}',);
+        '`Wizard.home()` called from the first route ${state.last.name}',
+      );
     }
 
     _updateState((state) {
@@ -76,7 +78,8 @@ class WizardController extends SafeChangeNotifier {
   Future<void> back<T extends Object?>([T? result]) async {
     if (state.length <= 1) {
       throw WizardException(
-          '`Wizard.back()` called from the first route ${state.last.name}',);
+        '`Wizard.back()` called from the first route ${state.last.name}',
+      );
     }
 
     // go back to a specific route, or pick the previous route on the list
@@ -84,7 +87,8 @@ class WizardController extends SafeChangeNotifier {
     if (previous != null) {
       if (!routes.keys.contains(previous)) {
         throw WizardException(
-            '`Wizard.routes` is missing route \'$previous\'.',);
+          '`Wizard.routes` is missing route \'$previous\'.',
+        );
       }
     }
 
@@ -135,7 +139,8 @@ class WizardController extends SafeChangeNotifier {
       final index = routeNames.indexOf(previous.name!);
       if (index == routeNames.length - 1) {
         throw WizardException(
-            '`Wizard.next()` called from the last route ${previous.name}.',);
+          '`Wizard.next()` called from the last route ${previous.name}.',
+        );
       }
       return routeNames[index + 1];
     }
@@ -168,7 +173,8 @@ class WizardController extends SafeChangeNotifier {
   Future<T?> jump<T extends Object?>(String route, {Object? arguments}) async {
     if (!routes.keys.contains(route)) {
       throw WizardException(
-          '`Wizard.jump()` called with an unknown route $route.',);
+        '`Wizard.jump()` called with an unknown route $route.',
+      );
     }
     final settings = await _loadRoute(route, (name) async {
       return WizardRouteSettings<T>(name: name, arguments: arguments);
@@ -184,7 +190,8 @@ class WizardController extends SafeChangeNotifier {
   Future<T?> showError<T extends Object?>(Object error) async {
     if (errorRoute == null) {
       throw const WizardException(
-          '`Wizard.showError()` called without an error route.',);
+        '`Wizard.showError()` called without an error route.',
+      );
     }
 
     return jump<T>(errorRoute!, arguments: error);

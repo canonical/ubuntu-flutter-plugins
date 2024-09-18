@@ -4,7 +4,8 @@ import 'package:flutter/widgets.dart';
 
 /// The signature of [WizardRoute.onNext] and [WizardRoute.onBack] callbacks.
 typedef WizardRouteCallback = FutureOr<String?> Function(
-    RouteSettings settings,);
+  RouteSettings settings,
+);
 
 /// The signature of [WizardRoute.onLoad] callback.
 typedef WizardRouteLoader = FutureOr<bool> Function(RouteSettings settings);

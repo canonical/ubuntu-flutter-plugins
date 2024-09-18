@@ -50,7 +50,9 @@ class WizardPage extends StatelessWidget {
 
 class WizardCheckbox extends StatelessWidget {
   const WizardCheckbox({
-    required this.value, required this.onChanged, super.key,
+    required this.value,
+    required this.onChanged,
+    super.key,
     this.title,
   });
 

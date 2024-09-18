@@ -25,9 +25,11 @@ extension UbuntuCommonFinders on CommonFinders {
     return byElementPredicate((element) {
       final l10n = element.lookupLocalizations<T>();
       return l10n != null &&
-          (find.text(tr(l10n),
-                  findRichText: findRichText,
-                  skipOffstage: skipOffstage,) as MatchFinder)
+          (find.text(
+            tr(l10n),
+            findRichText: findRichText,
+            skipOffstage: skipOffstage,
+          ) as MatchFinder)
               .matches(element);
     });
   }

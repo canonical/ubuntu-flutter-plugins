@@ -10,15 +10,18 @@ void main() {
   testWidgets('pump until', (tester) async {
     final loading = ValueNotifier(true);
 
-    await tester.pumpWidget(MaterialApp(
-      home: ValueListenableBuilder(
-        valueListenable: loading,
-        builder: (context, value, child) {
-          Timer(const Duration(milliseconds: 250), () => loading.value = false);
-          return value ? const Text('loading...') : const Text('home');
-        },
+    await tester.pumpWidget(
+      MaterialApp(
+        home: ValueListenableBuilder(
+          valueListenable: loading,
+          builder: (context, value, child) {
+            Timer(
+                const Duration(milliseconds: 250), () => loading.value = false);
+            return value ? const Text('loading...') : const Text('home');
+          },
+        ),
       ),
-    ),);
+    );
 
     expect(find.text('loading...'), findsOneWidget);
     expect(find.text('home'), findsNothing);
@@ -32,22 +35,26 @@ void main() {
   testWidgets('pump timeout', (tester) async {
     final loading = ValueNotifier(true);
 
-    await tester.pumpWidget(MaterialApp(
-      home: ValueListenableBuilder(
-        valueListenable: loading,
-        builder: (context, value, child) {
-          Timer(const Duration(seconds: 5), () => loading.value = false);
-          return value ? const Text('loading...') : const Text('home');
-        },
+    await tester.pumpWidget(
+      MaterialApp(
+        home: ValueListenableBuilder(
+          valueListenable: loading,
+          builder: (context, value, child) {
+            Timer(const Duration(seconds: 5), () => loading.value = false);
+            return value ? const Text('loading...') : const Text('home');
+          },
+        ),
       ),
-    ),);
+    );
 
     expect(find.text('loading...'), findsOneWidget);
     expect(find.text('home'), findsNothing);
 
     await expectLater(
       () => tester.pumpUntil(
-          find.text('home'), const Duration(milliseconds: 250),),
+        find.text('home'),
+        const Duration(milliseconds: 250),
+      ),
       throwsA(isA<TestFailure>()),
     );
 

@@ -7,26 +7,30 @@ import 'package:test/test.dart';
 
 void main() {
   test('none', () {
-    IOOverrides.runZoned(() {
-      final platform = FakePlatform();
-      expect(platform.isAlma, isFalse);
-      expect(platform.isArch, isFalse);
-      expect(platform.isDebian, isFalse);
-      expect(platform.isFedora, isFalse);
-      expect(platform.isManjaro, isFalse);
-      expect(platform.isOpenSUSE, isFalse);
-      expect(platform.isPopOS, isFalse);
-      expect(platform.isUbuntu, isFalse);
-    }, createFile: (_) => throw const FileSystemException(),);
+    IOOverrides.runZoned(
+      () {
+        final platform = FakePlatform();
+        expect(platform.isAlma, isFalse);
+        expect(platform.isArch, isFalse);
+        expect(platform.isDebian, isFalse);
+        expect(platform.isFedora, isFalse);
+        expect(platform.isManjaro, isFalse);
+        expect(platform.isOpenSUSE, isFalse);
+        expect(platform.isPopOS, isFalse);
+        expect(platform.isUbuntu, isFalse);
+      },
+      createFile: (_) => throw const FileSystemException(),
+    );
   });
 
   test('Alma', () {
-    IOOverrides.runZoned(() {
-      final platform = FakePlatform();
-      expect(platform.isAlma, isTrue);
-    },
-        createFile: MockTextFiles({
-          '/etc/os-release': MockTextFile('''
+    IOOverrides.runZoned(
+      () {
+        final platform = FakePlatform();
+        expect(platform.isAlma, isTrue);
+      },
+      createFile: MockTextFiles({
+        '/etc/os-release': MockTextFile('''
 NAME="AlmaLinux"
 VERSION="9.2 (Turquoise Kodkod)"
 ID="almalinux"
@@ -46,16 +50,18 @@ ALMALINUX_MANTISBT_PROJECT_VERSION="9.2"
 REDHAT_SUPPORT_PRODUCT="AlmaLinux"
 REDHAT_SUPPORT_PRODUCT_VERSION="9.2"
 '''),
-        }).call,);
+      }).call,
+    );
   });
 
   test('Arch', () {
-    IOOverrides.runZoned(() {
-      final platform = FakePlatform();
-      expect(platform.isArch, isTrue);
-    },
-        createFile: MockTextFiles({
-          '/etc/os-release': MockTextFile('''
+    IOOverrides.runZoned(
+      () {
+        final platform = FakePlatform();
+        expect(platform.isArch, isTrue);
+      },
+      createFile: MockTextFiles({
+        '/etc/os-release': MockTextFile('''
 NAME="Arch Linux"
 PRETTY_NAME="Arch Linux"
 ID=arch
@@ -69,16 +75,18 @@ BUG_REPORT_URL="https://bugs.archlinux.org/"
 PRIVACY_POLICY_URL="https://terms.archlinux.org/docs/privacy-policy/"
 LOGO=archlinux-logo
 '''),
-        }).call,);
+      }).call,
+    );
   });
 
   test('Debian', () {
-    IOOverrides.runZoned(() {
-      final platform = FakePlatform();
-      expect(platform.isDebian, isTrue);
-    },
-        createFile: MockTextFiles({
-          '/etc/os-release': MockTextFile('''
+    IOOverrides.runZoned(
+      () {
+        final platform = FakePlatform();
+        expect(platform.isDebian, isTrue);
+      },
+      createFile: MockTextFiles({
+        '/etc/os-release': MockTextFile('''
 PRETTY_NAME="Debian GNU/Linux 12 (bookworm)"
 NAME="Debian GNU/Linux"
 VERSION_ID="12"
@@ -89,16 +97,18 @@ HOME_URL="https://www.debian.org/"
 SUPPORT_URL="https://www.debian.org/support"
 BUG_REPORT_URL="https://bugs.debian.org/"
 '''),
-        }).call,);
+      }).call,
+    );
   });
 
   test('Fedora', () {
-    IOOverrides.runZoned(() {
-      final platform = FakePlatform();
-      expect(platform.isFedora, isTrue);
-    },
-        createFile: MockTextFiles({
-          '/etc/os-release': MockTextFile('''
+    IOOverrides.runZoned(
+      () {
+        final platform = FakePlatform();
+        expect(platform.isFedora, isTrue);
+      },
+      createFile: MockTextFiles({
+        '/etc/os-release': MockTextFile('''
 NAME="Fedora Linux"
 VERSION="38 (Container Image)"
 ID=fedora
@@ -122,16 +132,18 @@ SUPPORT_END=2024-05-14
 VARIANT="Container Image"
 VARIANT_ID=container
 '''),
-        }).call,);
+      }).call,
+    );
   });
 
   test('Manjaro', () {
-    IOOverrides.runZoned(() {
-      final platform = FakePlatform();
-      expect(platform.isManjaro, isTrue);
-    },
-        createFile: MockTextFiles({
-          '/etc/os-release': MockTextFile('''
+    IOOverrides.runZoned(
+      () {
+        final platform = FakePlatform();
+        expect(platform.isManjaro, isTrue);
+      },
+      createFile: MockTextFiles({
+        '/etc/os-release': MockTextFile('''
 NAME="Manjaro Linux"
 PRETTY_NAME="Manjaro Linux"
 ID=manjaro
@@ -145,16 +157,18 @@ BUG_REPORT_URL="https://docs.manjaro.org/reporting-bugs/"
 PRIVACY_POLICY_URL="https://manjaro.org/privacy-policy/"
 LOGO=manjarolinux
 '''),
-        }).call,);
+      }).call,
+    );
   });
 
   test('openSUSE', () {
-    IOOverrides.runZoned(() {
-      final platform = FakePlatform();
-      expect(platform.isOpenSUSE, isTrue);
-    },
-        createFile: MockTextFiles({
-          '/etc/os-release': MockTextFile('''
+    IOOverrides.runZoned(
+      () {
+        final platform = FakePlatform();
+        expect(platform.isOpenSUSE, isTrue);
+      },
+      createFile: MockTextFiles({
+        '/etc/os-release': MockTextFile('''
 NAME="openSUSE Leap"
 VERSION="15.5"
 ID="opensuse-leap"
@@ -168,16 +182,18 @@ HOME_URL="https://www.opensuse.org/"
 DOCUMENTATION_URL="https://en.opensuse.org/Portal:Leap"
 LOGO="distributor-logo-Leap"
 '''),
-        }).call,);
+      }).call,
+    );
   });
 
   test('Pop OS', () {
-    IOOverrides.runZoned(() {
-      final platform = FakePlatform();
-      expect(platform.isPopOS, isTrue);
-    },
-        createFile: MockTextFiles({
-          '/etc/os-release': MockTextFile('''
+    IOOverrides.runZoned(
+      () {
+        final platform = FakePlatform();
+        expect(platform.isPopOS, isTrue);
+      },
+      createFile: MockTextFiles({
+        '/etc/os-release': MockTextFile('''
 NAME="Pop!_OS"
 VERSION="22.04 LTS"
 ID=pop
@@ -192,16 +208,18 @@ VERSION_CODENAME=jammy
 UBUNTU_CODENAME=jammy
 LOGO=distributor-logo-pop-os
 '''),
-        }).call,);
+      }).call,
+    );
   });
 
   test('Ubuntu', () {
-    IOOverrides.runZoned(() {
-      final platform = FakePlatform();
-      expect(platform.isUbuntu, isTrue);
-    },
-        createFile: MockTextFiles({
-          '/etc/os-release': MockTextFile('''
+    IOOverrides.runZoned(
+      () {
+        final platform = FakePlatform();
+        expect(platform.isUbuntu, isTrue);
+      },
+      createFile: MockTextFiles({
+        '/etc/os-release': MockTextFile('''
 PRETTY_NAME="Ubuntu 23.04"
 NAME="Ubuntu"
 VERSION_ID="23.04"
@@ -216,7 +234,8 @@ PRIVACY_POLICY_URL="https://www.ubuntu.com/legal/terms-and-policies/privacy-poli
 UBUNTU_CODENAME=lunar
 LOGO=ubuntu-logo
 '''),
-        }).call,);
+      }).call,
+    );
   });
 }
 

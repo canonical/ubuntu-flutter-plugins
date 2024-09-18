@@ -23,16 +23,19 @@ extension UbuntuWidgetTester on WidgetTester {
 
   /// Taps a link with the given [label].
   Future<void> tapLink(String label) async {
-    expect(find.byWidgetPredicate((widget) {
-      if (widget is RichText) {
-        final link = widget.findLink(label);
-        if (link != null) {
-          (link.recognizer as TapGestureRecognizer).onTap!();
-          return true;
+    expect(
+      find.byWidgetPredicate((widget) {
+        if (widget is RichText) {
+          final link = widget.findLink(label);
+          if (link != null) {
+            (link.recognizer as TapGestureRecognizer).onTap!();
+            return true;
+          }
         }
-      }
-      return false;
-    }), findsOneWidget,);
+        return false;
+      }),
+      findsOneWidget,
+    );
   }
 
   /// Taps a _Next_ button.

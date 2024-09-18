@@ -372,7 +372,7 @@ class UbuntuLocalizationsPt extends UbuntuLocalizations {
 
 /// The translations for Portuguese, as used in Brazil (`pt_BR`).
 class UbuntuLocalizationsPtBr extends UbuntuLocalizationsPt {
-  UbuntuLocalizationsPtBr(): super('pt_BR');
+  UbuntuLocalizationsPtBr() : super('pt_BR');
 
   @override
   String get countryCode => 'BR';
