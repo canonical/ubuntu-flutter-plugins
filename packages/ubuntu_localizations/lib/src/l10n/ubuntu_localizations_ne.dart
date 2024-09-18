@@ -1,5 +1,7 @@
 import 'ubuntu_localizations.dart';
 
+// ignore_for_file: type=lint
+
 /// The translations for Nepali (`ne`).
 class UbuntuLocalizationsNe extends UbuntuLocalizations {
   UbuntuLocalizationsNe([String locale = 'ne']) : super(locale);

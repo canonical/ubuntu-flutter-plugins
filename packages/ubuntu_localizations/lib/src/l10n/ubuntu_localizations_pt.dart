@@ -1,5 +1,7 @@
 import 'ubuntu_localizations.dart';
 
+// ignore_for_file: type=lint
+
 /// The translations for Portuguese (`pt`).
 class UbuntuLocalizationsPt extends UbuntuLocalizations {
   UbuntuLocalizationsPt([String locale = 'pt']) : super(locale);
