@@ -103,13 +103,15 @@ jobs:
         branch: create-pull-request/l10n
         delete-branch: true
 
-  pub:
+  publish:
+    name: Dry-run publish
     runs-on: ubuntu-22.04
     steps:
     - uses: actions/checkout@v4
     - uses: Atsumi3/actions-setup-fvm@0.0.3
     - uses: bluefireteam/melos-action@v3
-    - run: melos exec --no-private -- flutter pub publish --dry-run
+    # Remove ubuntu_test from ignore list once
+    - run: melos exec --no-private --ignore ubuntu_test -- flutter pub publish --dry-run
 
   test:
     runs-on: ubuntu-22.04
