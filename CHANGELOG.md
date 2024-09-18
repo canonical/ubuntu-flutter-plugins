@@ -3,6 +3,70 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 2024-09-18
+
+### Changes
+
+---
+
+Packages with breaking changes:
+
+ - [`ubuntu_test` - `v0.2.0`](#ubuntu_test---v020)
+ - [`wizard_router` - `v1.3.0`](#wizard_router---v130)
+ - [`safe_change_notifier` - `v0.4.0`](#safe_change_notifier---v040)
+ - [`ubuntu_flavor` - `v0.5.0`](#ubuntu_flavor---v050)
+ - [`ubuntu_localizations` - `v0.5.0`](#ubuntu_localizations---v050)
+ - [`ubuntu_logger` - `v0.2.0`](#ubuntu_logger---v020)
+ - [`ubuntu_service` - `v0.4.0`](#ubuntu_service---v040)
+ - [`ubuntu_widgets` - `v0.7.0`](#ubuntu_widgets---v070)
+ - [`xdg_icons` - `v0.1.0`](#xdg_icons---v010)
+
+Packages with other changes:
+
+ - There are no other changes in this release.
+
+---
+
+#### `ubuntu_test` - `v0.2.0`
+
+ - **BREAKING** **CHORE**: Bump to Flutter 3.24.3.
+
+#### `wizard_router` - `v1.3.0`
+
+ - **BREAKING** **CHORE**: Bump to Flutter 3.24.3.
+
+#### `safe_change_notifier` - `v0.4.0`
+
+ - **BREAKING** **CHORE**: Bump to Flutter 3.24.3.
+
+#### `ubuntu_flavor` - `v0.5.0`
+
+ - **BREAKING** **CHORE**: Bump to Flutter 3.24.3.
+
+#### `ubuntu_localizations` - `v0.5.0`
+
+ - **FIX**(l10n): translated using Weblate (Serbian).
+ - **FIX**(l10n): translated using Weblate (French).
+ - **FIX**(l10n): translated using Weblate (Hungarian).
+ - **BREAKING** **CHORE**: Bump to Flutter 3.24.3.
+
+#### `ubuntu_logger` - `v0.2.0`
+
+ - **BREAKING** **CHORE**: Bump to Flutter 3.24.3.
+
+#### `ubuntu_service` - `v0.4.0`
+
+ - **BREAKING** **CHORE**: Bump to Flutter 3.24.3.
+
+#### `ubuntu_widgets` - `v0.7.0`
+
+ - **BREAKING** **CHORE**: Bump to Flutter 3.24.3.
+
+#### `xdg_icons` - `v0.1.0`
+
+ - **BREAKING** **CHORE**: Bump to Flutter 3.24.3.
+
+
 ## 2024-08-29
 
 ### Changes

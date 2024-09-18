@@ -1,3 +1,9 @@
+## 0.2.0
+
+> Note: This release has breaking changes.
+
+ - **BREAKING** **CHORE**: Bump to Flutter 3.24.3.
+
 ## 0.1.0-beta.11
 
  - Update a dependency to the latest release.

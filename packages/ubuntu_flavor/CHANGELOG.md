@@ -1,3 +1,9 @@
+## 0.5.0
+
+> Note: This release has breaking changes.
+
+ - **BREAKING** **CHORE**: Bump to Flutter 3.24.3.
+
 ## 0.4.0
 
 > Note: This release has breaking changes.

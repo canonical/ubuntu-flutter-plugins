@@ -1,3 +1,12 @@
+## 0.5.0
+
+> Note: This release has breaking changes.
+
+ - **FIX**(l10n): translated using Weblate (Serbian).
+ - **FIX**(l10n): translated using Weblate (French).
+ - **FIX**(l10n): translated using Weblate (Hungarian).
+ - **BREAKING** **CHORE**: Bump to Flutter 3.24.3.
+
 ## 0.4.1
 
  - **FIX**: Bump translations
