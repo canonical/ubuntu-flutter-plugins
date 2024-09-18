@@ -1,3 +1,9 @@
+## 0.4.0
+
+> Note: This release has breaking changes.
+
+ - **BREAKING** **CHORE**: Bump to Flutter 3.24.3.
+
 ## 0.3.2
 
  - **FIX**: Bump get_it to 7.6.9
