@@ -1,5 +1,7 @@
 import 'ubuntu_localizations.dart';
 
+// ignore_for_file: type=lint
+
 /// The translations for Czech (`cs`).
 class UbuntuLocalizationsCs extends UbuntuLocalizations {
   UbuntuLocalizationsCs([String locale = 'cs']) : super(locale);

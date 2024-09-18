@@ -1,5 +1,7 @@
 import 'ubuntu_localizations.dart';
 
+// ignore_for_file: type=lint
+
 /// The translations for Hungarian (`hu`).
 class UbuntuLocalizationsHu extends UbuntuLocalizations {
   UbuntuLocalizationsHu([String locale = 'hu']) : super(locale);
@@ -272,7 +274,7 @@ class UbuntuLocalizationsHu extends UbuntuLocalizations {
   String get restartLabel => 'Újraindítás';
 
   @override
-  String get restoreLabel => 'Visszaállítás';
+  String get restoreLabel => 'Helyreállítás';
 
   @override
   String get retryLabel => 'Újrapróbálás';
