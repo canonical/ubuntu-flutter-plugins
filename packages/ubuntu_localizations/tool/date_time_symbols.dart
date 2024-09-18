@@ -136,7 +136,8 @@ Reads the given CLDR file and prints the date and time symbols.
           (format) => format
               .findAllElements('pattern')
               .singleWhere(
-                  (pattern) => pattern.getAttribute('alt') != 'variant',)
+                (pattern) => pattern.getAttribute('alt') != 'variant',
+              )
               .innerText
               .replaceAll('\'', '\\\''),
         )
