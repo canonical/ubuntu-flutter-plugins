@@ -34,13 +34,13 @@ void main() {
 
     final listTile = find.listTile('$i');
     expect(tester.getRect(listTile).top,
-        lessThan(tester.getRect(find.byType(ListWidget)).top));
+        lessThan(tester.getRect(find.byType(ListWidget)).top),);
 
     selectedIndex.value = i;
     await tester.pumpAndSettle();
 
     expect(tester.getRect(listTile).top,
-        equals(tester.getRect(find.byType(ListWidget)).top));
+        equals(tester.getRect(find.byType(ListWidget)).top),);
   });
 
   testWidgets('bottom-align last visible', (tester) async {
@@ -60,13 +60,13 @@ void main() {
 
     final listTile = find.listTile('$i');
     expect(tester.getRect(listTile).bottom,
-        greaterThan(tester.getRect(find.byType(ListWidget)).bottom));
+        greaterThan(tester.getRect(find.byType(ListWidget)).bottom),);
 
     selectedIndex.value = i;
     await tester.pumpAndSettle();
 
     expect(tester.getRect(listTile).bottom,
-        equals(tester.getRect(find.byType(ListWidget)).bottom));
+        equals(tester.getRect(find.byType(ListWidget)).bottom),);
   });
 
   testWidgets('center-align non-visible', (tester) async {
@@ -106,6 +106,6 @@ extension on WidgetTester {
           },
         ),
       ),
-    ));
+    ),);
   }
 }

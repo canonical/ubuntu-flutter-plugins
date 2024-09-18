@@ -20,7 +20,7 @@ void main() {
     when(dio.get(
       kGeoIPUrl,
       cancelToken: anyNamed('cancelToken'),
-    )).thenAnswer((_) async => xmlResponse(copenhagen));
+    ),).thenAnswer((_) async => xmlResponse(copenhagen));
 
     final geoip = GeoIP(url: kGeoIPUrl, geodata: geodata, dio: dio);
 
@@ -72,7 +72,7 @@ void main() {
   <AreaCode>0</AreaCode>
   <TimeZone>Europe/Stockholm</TimeZone>
 </Response>
-''').rootElement),
+''').rootElement,),
       gothenburg,
     );
 
@@ -83,7 +83,7 @@ void main() {
   <Status>OK</Status>
   <City>Göteborg</City>
 </Response>
-''').rootElement),
+''').rootElement,),
       const GeoLocation(
         name: 'Göteborg',
         admin: null,
@@ -101,7 +101,7 @@ void main() {
   <Ip>127.0.0.1</Ip>
   <Status>ERROR</Status>
 </Response>
-''').rootElement),
+''').rootElement,),
       isNull,
     );
   });

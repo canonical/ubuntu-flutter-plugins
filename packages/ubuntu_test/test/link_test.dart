@@ -25,7 +25,7 @@ void main() {
           ),
         ],
       ),
-    ));
+    ),);
     await tester.pump();
 
     await tester.tapLink('first');

@@ -28,11 +28,11 @@ you need to add that rule set url as well.
   final currentRules = yamlToOverrideRules(analysisFile);
   final enabledRules = {
     for (final rule in currentRules.entries)
-      if (rule.value) rule.key
+      if (rule.value) rule.key,
   };
   final disabledRules = {
     for (final rule in currentRules.entries)
-      if (!rule.value) rule.key
+      if (!rule.value) rule.key,
   };
 
   const lintsCoreUrl =

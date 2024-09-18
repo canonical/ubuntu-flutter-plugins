@@ -365,7 +365,7 @@ void main() {
           child: ValidatedFormField(
             autofocus: true,
             validator: CallbackValidator((v) => v == 'ubuntu',
-                errorText: 'not ubuntu'),
+                errorText: 'not ubuntu',),
             successWidget: const Text('is ubuntu'),
           ),
         ),

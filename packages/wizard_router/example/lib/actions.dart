@@ -28,12 +28,12 @@ class WizardBackIntent extends Intent {
 }
 
 Map<Type, Action<Intent>> wizardActions(
-        {required WizardController controller}) =>
+        {required WizardController controller,}) =>
     {
       WizardNextIntent: CallbackAction<WizardNextIntent>(
         onInvoke: (intent) => controller.next(arguments: intent.arguments),
       ),
       WizardBackIntent: CallbackAction<WizardBackIntent>(
         onInvoke: (intent) => controller.back(intent.arguments),
-      )
+      ),
     };

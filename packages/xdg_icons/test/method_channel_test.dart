@@ -82,10 +82,10 @@ void main() {
 
     instance.onDefaultThemeChanged.listen(expectAsync1<void, dynamic>(
       (dynamic event) => expect(event, isNull),
-    ));
+    ),);
     instance.onDefaultThemeChanged.listen(expectAsync1<void, dynamic>(
       (dynamic event) => expect(event, isNull),
-    ));
+    ),);
 
     await emitEvent(null);
   });

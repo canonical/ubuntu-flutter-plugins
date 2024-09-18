@@ -187,7 +187,7 @@ class _GeoBush extends RBushBase<GeoLocation> {
       : super(
             toBBox: _HaversineBox.new,
             getMinX: (item) => item.longitude!,
-            getMinY: (item) => item.latitude!);
+            getMinY: (item) => item.latitude!,);
 }
 
 class _HaversineBox extends RBushBox {
@@ -241,7 +241,7 @@ Iterable<List<String>> _parseTable(String data) {
       .split('#') // ignore comments
       .first
       .split('\t') // tab-separated data
-      .toList());
+      .toList(),);
 }
 
 // trimmed lowercase string with commas and parentheses etc. removed, suitable

@@ -18,7 +18,7 @@ void main() {
           return value ? const Text('loading...') : const Text('home');
         },
       ),
-    ));
+    ),);
 
     expect(find.text('loading...'), findsOneWidget);
     expect(find.text('home'), findsNothing);
@@ -40,14 +40,14 @@ void main() {
           return value ? const Text('loading...') : const Text('home');
         },
       ),
-    ));
+    ),);
 
     expect(find.text('loading...'), findsOneWidget);
     expect(find.text('home'), findsNothing);
 
     await expectLater(
       () => tester.pumpUntil(
-          find.text('home'), const Duration(milliseconds: 250)),
+          find.text('home'), const Duration(milliseconds: 250),),
       throwsA(isA<TestFailure>()),
     );
 

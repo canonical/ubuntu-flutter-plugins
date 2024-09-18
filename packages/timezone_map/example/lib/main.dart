@@ -26,7 +26,7 @@ void main() {
 }
 
 class TimezonePage extends StatefulWidget {
-  const TimezonePage({Key? key, required this.service}) : super(key: key);
+  const TimezonePage({super.key, required this.service});
 
   final GeoService service;
 

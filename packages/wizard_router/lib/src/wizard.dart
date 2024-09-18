@@ -121,7 +121,7 @@ class Wizard extends StatefulWidget {
     this.userData,
     this.controller,
   }) : assert((routes == null) != (controller == null),
-            'Either routes or controller must be specified');
+            'Either routes or controller must be specified',);
 
   /// The name of the first route to show.
   ///
@@ -201,7 +201,7 @@ class _WizardState extends State<Wizard> {
     super.initState();
     _controller = widget.controller ??
         WizardController(
-            routes: widget.routes!, initialRoute: widget.initialRoute);
+            routes: widget.routes!, initialRoute: widget.initialRoute,);
   }
 
   @override
@@ -224,13 +224,13 @@ class _WizardState extends State<Wizard> {
       }
       _controller = widget.controller ??
           WizardController(
-              routes: widget.routes!, initialRoute: widget.initialRoute);
+              routes: widget.routes!, initialRoute: widget.initialRoute,);
       _controller._flowController.update((state) {
         final newState =
             state.where((r) => _controller.routes.containsKey(r.name)).toList();
         if (newState.isEmpty) {
           newState.add(WizardRouteSettings(
-              name: widget.initialRoute ?? _controller.routes.keys.first));
+              name: widget.initialRoute ?? _controller.routes.keys.first,),);
         }
         return newState;
       });
@@ -262,7 +262,7 @@ class _WizardState extends State<Wizard> {
       onGeneratePages: (state, __) {
         return state
             .mapIndexed((index, settings) =>
-                _createPage(context, index: index, settings: settings))
+                _createPage(context, index: index, settings: settings),)
             .toList();
       },
       observers: [...widget.observers, HeroController()],

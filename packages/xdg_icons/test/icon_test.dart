@@ -19,7 +19,7 @@ void main() {
               baseSize: 42,
               fileName: '/path/to/foo.svg',
               isSymbolic: false,
-            ));
+            ),);
     when(() => mock.onDefaultThemeChanged).thenAnswer(
       (_) => const Stream.empty(),
     );
@@ -57,7 +57,7 @@ void main() {
               baseSize: 42,
               fileName: '/path/to/bar/foo.svg',
               isSymbolic: false,
-            ));
+            ),);
     when(() => mock.onDefaultThemeChanged).thenAnswer(
       (_) => const Stream.empty(),
     );
@@ -96,13 +96,13 @@ void main() {
           size: any(named: 'size'),
           scale: any(named: 'scale'),
           theme: any(named: 'theme'),
-        )).thenAnswer((i) async => XdgIconData(
+        ),).thenAnswer((i) async => XdgIconData(
           baseScale: i.namedArguments[#scale] as int,
           baseSize: i.namedArguments[#size] as int,
           fileName:
               '/path/to/${i.namedArguments[#theme]}/${i.namedArguments[#name]}.svg',
           isSymbolic: false,
-        ));
+        ),);
     when(() => mock.onDefaultThemeChanged).thenAnswer(
       (_) => const Stream.empty(),
     );
@@ -247,7 +247,7 @@ void main() {
               baseSize: 42,
               fileName: '/path/to/foo.svg',
               isSymbolic: false,
-            ));
+            ),);
     final themeChange = StreamController<dynamic>.broadcast(sync: true);
     when(() => mock.onDefaultThemeChanged).thenAnswer(
       (_) => themeChange.stream,
@@ -283,7 +283,7 @@ void main() {
               baseSize: 16,
               fileName: fileName,
               isSymbolic: false,
-            ));
+            ),);
     when(() => mock.onDefaultThemeChanged).thenAnswer(
       (_) => const Stream.empty(),
     );
@@ -318,7 +318,7 @@ void main() {
               fileName: '/gtk/resources/red.png',
               data: bytes,
               isSymbolic: false,
-            ));
+            ),);
     when(() => mock.onDefaultThemeChanged).thenAnswer(
       (_) => const Stream.empty(),
     );
@@ -340,7 +340,7 @@ void main() {
 
     final widget = tester.widget<Image>(find.byType(Image));
     expect(widget.image,
-        isA<MemoryImage>().having((p) => p.bytes, 'bytes', bytes));
+        isA<MemoryImage>().having((p) => p.bytes, 'bytes', bytes),);
   });
 
   testWidgets('svg file', (tester) async {
@@ -353,7 +353,7 @@ void main() {
               baseSize: 16,
               fileName: fileName,
               isSymbolic: false,
-            ));
+            ),);
     when(() => mock.onDefaultThemeChanged).thenAnswer(
       (_) => const Stream.empty(),
     );
@@ -393,7 +393,7 @@ void main() {
               fileName: '/gtk/resources/blue.svg',
               data: bytes,
               isSymbolic: false,
-            ));
+            ),);
     when(() => mock.onDefaultThemeChanged).thenAnswer(
       (_) => const Stream.empty(),
     );

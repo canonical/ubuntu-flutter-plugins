@@ -17,7 +17,7 @@ void main() {
       expect(platform.isOpenSUSE, isFalse);
       expect(platform.isPopOS, isFalse);
       expect(platform.isUbuntu, isFalse);
-    }, createFile: (_) => throw const FileSystemException());
+    }, createFile: (_) => throw const FileSystemException(),);
   });
 
   test('Alma', () {
@@ -45,8 +45,8 @@ ALMALINUX_MANTISBT_PROJECT="AlmaLinux-9"
 ALMALINUX_MANTISBT_PROJECT_VERSION="9.2"
 REDHAT_SUPPORT_PRODUCT="AlmaLinux"
 REDHAT_SUPPORT_PRODUCT_VERSION="9.2"
-''')
-        }).call);
+'''),
+        }).call,);
   });
 
   test('Arch', () {
@@ -68,8 +68,8 @@ SUPPORT_URL="https://bbs.archlinux.org/"
 BUG_REPORT_URL="https://bugs.archlinux.org/"
 PRIVACY_POLICY_URL="https://terms.archlinux.org/docs/privacy-policy/"
 LOGO=archlinux-logo
-''')
-        }).call);
+'''),
+        }).call,);
   });
 
   test('Debian', () {
@@ -88,8 +88,8 @@ ID=debian
 HOME_URL="https://www.debian.org/"
 SUPPORT_URL="https://www.debian.org/support"
 BUG_REPORT_URL="https://bugs.debian.org/"
-''')
-        }).call);
+'''),
+        }).call,);
   });
 
   test('Fedora', () {
@@ -121,8 +121,8 @@ REDHAT_SUPPORT_PRODUCT_VERSION=38
 SUPPORT_END=2024-05-14
 VARIANT="Container Image"
 VARIANT_ID=container
-''')
-        }).call);
+'''),
+        }).call,);
   });
 
   test('Manjaro', () {
@@ -144,8 +144,8 @@ SUPPORT_URL="https://forum.manjaro.org/"
 BUG_REPORT_URL="https://docs.manjaro.org/reporting-bugs/"
 PRIVACY_POLICY_URL="https://manjaro.org/privacy-policy/"
 LOGO=manjarolinux
-''')
-        }).call);
+'''),
+        }).call,);
   });
 
   test('openSUSE', () {
@@ -167,8 +167,8 @@ BUG_REPORT_URL="https://bugs.opensuse.org"
 HOME_URL="https://www.opensuse.org/"
 DOCUMENTATION_URL="https://en.opensuse.org/Portal:Leap"
 LOGO="distributor-logo-Leap"
-''')
-        }).call);
+'''),
+        }).call,);
   });
 
   test('Pop OS', () {
@@ -191,8 +191,8 @@ PRIVACY_POLICY_URL="https://system76.com/privacy"
 VERSION_CODENAME=jammy
 UBUNTU_CODENAME=jammy
 LOGO=distributor-logo-pop-os
-''')
-        }).call);
+'''),
+        }).call,);
   });
 
   test('Ubuntu', () {
@@ -215,8 +215,8 @@ BUG_REPORT_URL="https://bugs.launchpad.net/ubuntu/"
 PRIVACY_POLICY_URL="https://www.ubuntu.com/legal/terms-and-policies/privacy-policy"
 UBUNTU_CODENAME=lunar
 LOGO=ubuntu-logo
-''')
-        }).call);
+'''),
+        }).call,);
   });
 }
 

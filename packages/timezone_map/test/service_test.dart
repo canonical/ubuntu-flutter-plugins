@@ -93,7 +93,7 @@ void main() {
       kGeonameUrl,
       queryParameters: anyNamed('queryParameters'),
       cancelToken: anyNamed('cancelToken'),
-    )).thenAnswer((_) async => jsonResponse(copenhagen));
+    ),).thenAnswer((_) async => jsonResponse(copenhagen));
 
     final geoname = Geoname(url: kGeonameUrl, geodata: geodata, dio: dio);
 
@@ -102,7 +102,7 @@ void main() {
       kGeonameUrl,
       queryParameters: <String, String>{'query': 'foo'},
       cancelToken: anyNamed('cancelToken'),
-    )).called(1);
+    ),).called(1);
   });
 
   test('geoname lang & release', () async {
@@ -111,7 +111,7 @@ void main() {
       kGeonameUrl,
       queryParameters: anyNamed('queryParameters'),
       cancelToken: anyNamed('cancelToken'),
-    )).thenAnswer((_) async => jsonResponse(copenhagen));
+    ),).thenAnswer((_) async => jsonResponse(copenhagen));
 
     final geoname = Geoname(
       url: kGeonameUrl,
@@ -132,7 +132,7 @@ void main() {
         'lang': 'baz',
       },
       cancelToken: anyNamed('cancelToken'),
-    )).called(1);
+    ),).called(1);
   });
 
   test('geoname error', () async {
@@ -141,7 +141,7 @@ void main() {
       kGeonameUrl,
       queryParameters: anyNamed('queryParameters'),
       cancelToken: anyNamed('cancelToken'),
-    )).thenAnswer((_) async => errorResponse);
+    ),).thenAnswer((_) async => errorResponse);
 
     final geoname = Geoname(
       url: kGeonameUrl,
@@ -165,7 +165,7 @@ void main() {
       kGeonameUrl,
       queryParameters: anyNamed('queryParameters'),
       cancelToken: anyNamed('cancelToken'),
-    )).thenAnswer((_) async => invalidResponse);
+    ),).thenAnswer((_) async => invalidResponse);
 
     final geoname = Geoname(url: kGeonameUrl, geodata: geodata, dio: dio);
 
@@ -310,19 +310,19 @@ void main() {
 
   test('geodata timezone search', () async {
     await geodata.searchTimezone('').then((results) => expect(
-        results, equals([copenhagen, helsinki, reykjavik, oslo, stockholm])));
+        results, equals([copenhagen, helsinki, reykjavik, oslo, stockholm]),),);
     await geodata.searchTimezone(' ').then((results) => expect(
-        results, equals([copenhagen, helsinki, reykjavik, oslo, stockholm])));
+        results, equals([copenhagen, helsinki, reykjavik, oslo, stockholm]),),);
     await geodata
         .searchTimezone('foo')
         .then((results) => expect(results, isEmpty));
     await geodata.searchTimezone('eu').then((results) =>
-        expect(results, equals([copenhagen, helsinki, oslo, stockholm])));
+        expect(results, equals([copenhagen, helsinki, oslo, stockholm])),);
     await geodata
         .searchTimezone('ST')
         .then((results) => expect(results, equals([stockholm])));
     await geodata.searchTimezone('Europe').then((results) =>
-        expect(results, equals([copenhagen, helsinki, oslo, stockholm])));
+        expect(results, equals([copenhagen, helsinki, oslo, stockholm])),);
     await geodata
         .searchTimezone(' copenhagen ')
         .then((results) => expect(results, equals([copenhagen])));

@@ -66,12 +66,12 @@ Reads the given CLDR file and prints the date and time symbols.
 
   printArray('NARROWMONTHS', () => getMonths('format', 'narrow'));
   printArray(
-      'STANDALONENARROWMONTHS', () => getMonths('stand-alone', 'narrow'));
+      'STANDALONENARROWMONTHS', () => getMonths('stand-alone', 'narrow'),);
   printArray('MONTHS', () => getMonths('format', 'wide'));
   printArray('STANDALONEMONTHS', () => getMonths('stand-alone', 'wide'));
   printArray('SHORTMONTHS', () => getMonths('format', 'abbreviated'));
   printArray(
-      'STANDALONESHORTMONTHS', () => getMonths('stand-alone', 'abbreviated'));
+      'STANDALONESHORTMONTHS', () => getMonths('stand-alone', 'abbreviated'),);
 
   Iterable<String> getDays(String context, String width) {
     return calendar
@@ -87,10 +87,10 @@ Reads the given CLDR file and prints the date and time symbols.
   printArray('STANDALONEWEEKDAYS', () => getDays('stand-alone', 'wide'));
   printArray('SHORTWEEKDAYS', () => getDays('format', 'abbreviated'));
   printArray(
-      'STANDALONESHORTWEEKDAYS', () => getDays('stand-alone', 'abbreviated'));
+      'STANDALONESHORTWEEKDAYS', () => getDays('stand-alone', 'abbreviated'),);
   printArray('NARROWWEEKDAYS', () => getDays('format', 'narrow'));
   printArray(
-      'STANDALONENARROWWEEKDAYS', () => getDays('stand-alone', 'narrow'));
+      'STANDALONENARROWWEEKDAYS', () => getDays('stand-alone', 'narrow'),);
 
   Iterable<String> getQuarters(String context, String width) {
     return calendar
@@ -113,7 +113,7 @@ Reads the given CLDR file and prints the date and time symbols.
         .singleWhere((e) => e.getAttribute('type') == width)
         .findAllElements('dayPeriod')
         .where((e) =>
-            e.getAttribute('type') == 'am' || e.getAttribute('type') == 'pm')
+            e.getAttribute('type') == 'am' || e.getAttribute('type') == 'pm',)
         .map((quarter) => '\'${quarter.innerText}\'');
   }
 
@@ -126,7 +126,7 @@ Reads the given CLDR file and prints the date and time symbols.
             .findAllElements('pattern')
             .singleWhere((pattern) => pattern.getAttribute('alt') != 'variant')
             .innerText
-            .replaceAll('\'', '\\\''))
+            .replaceAll('\'', '\\\''),)
         .map((pattern) => '\'$pattern\'');
   }
 

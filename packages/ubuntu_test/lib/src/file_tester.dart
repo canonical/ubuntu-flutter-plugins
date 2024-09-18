@@ -29,7 +29,7 @@ extension UbuntuFileTester on File {
     }).timeout(
       timeout,
       onTimeout: () => debugPrint(
-          '\nWARNING: A call to waitForFile() with file "$path" did not complete within the specified time limit $timeout.\n${StackTrace.current}'),
+          '\nWARNING: A call to waitForFile() with file "$path" did not complete within the specified time limit $timeout.\n${StackTrace.current}',),
     );
     return existsSync() && statSync().size > 0;
   }
@@ -38,7 +38,7 @@ extension UbuntuFileTester on File {
 class _TextFileMatcher extends CustomMatcher {
   _TextFileMatcher(String path)
       : super('Text file matches', 'path',
-            equals(File(path).readAsStringSync().trim()));
+            equals(File(path).readAsStringSync().trim()),);
 
   @override
   Object featureValueOf(covariant String path) {

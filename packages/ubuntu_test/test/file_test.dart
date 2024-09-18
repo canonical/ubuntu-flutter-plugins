@@ -20,7 +20,7 @@ void main() {
         default:
           throw UnsupportedError(path);
       }
-    });
+    },);
   });
 
   test('exists later', () async {
@@ -28,7 +28,7 @@ void main() {
       await expectLater('1.txt', existsLater);
       await expectLater(FakeFile(existsLater: 3), existsLater);
       await expectLater(
-          () => expectLater(123, existsLater), throwsArgumentError);
+          () => expectLater(123, existsLater), throwsArgumentError,);
     }, createFile: (path) {
       switch (path) {
         case '1.txt':
@@ -36,7 +36,7 @@ void main() {
         default:
           throw UnsupportedError(path);
       }
-    });
+    },);
   });
 }
 

@@ -33,13 +33,13 @@ abstract class XdgIconsPlatform extends PlatformInterface {
     String? theme,
   }) {
     throw UnimplementedError(
-        'XdgIconsPlatform.lookupIcon() has not been implemented.');
+        'XdgIconsPlatform.lookupIcon() has not been implemented.',);
   }
 
   /// A broadcast stream that emits an event whenever the default icon theme
   /// changes.
   Stream<dynamic> get onDefaultThemeChanged {
     throw UnimplementedError(
-        'XdgIconsPlatform.onThemeChanged has not been implemented.');
+        'XdgIconsPlatform.onThemeChanged has not been implemented.',);
   }
 }

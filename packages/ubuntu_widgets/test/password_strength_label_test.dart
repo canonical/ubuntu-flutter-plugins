@@ -47,8 +47,8 @@ void main() {
       localizationsDelegates: UbuntuLocalizations.localizationsDelegates,
       home: Builder(builder: (context) {
         return const PasswordStrengthLabel(strength: PasswordStrength.weak);
-      }),
-    ));
+      },),
+    ),);
 
     final context = tester.element(find.byType(PasswordStrengthLabel));
 
@@ -65,8 +65,8 @@ void main() {
       localizationsDelegates: UbuntuLocalizations.localizationsDelegates,
       home: Builder(builder: (context) {
         return const PasswordStrengthLabel(strength: PasswordStrength.fair);
-      }),
-    ));
+      },),
+    ),);
 
     final context = tester.element(find.byType(PasswordStrengthLabel));
     final text = UbuntuLocalizations.of(context).fairPassword;
@@ -81,8 +81,8 @@ void main() {
       localizationsDelegates: UbuntuLocalizations.localizationsDelegates,
       home: Builder(builder: (context) {
         return const PasswordStrengthLabel(strength: PasswordStrength.good);
-      }),
-    ));
+      },),
+    ),);
 
     final context = tester.element(find.byType(PasswordStrengthLabel));
     final text = UbuntuLocalizations.of(context).goodPassword;
@@ -97,8 +97,8 @@ void main() {
       localizationsDelegates: UbuntuLocalizations.localizationsDelegates,
       home: Builder(builder: (context) {
         return const PasswordStrengthLabel(strength: PasswordStrength.strong);
-      }),
-    ));
+      },),
+    ),);
 
     final context = tester.element(find.byType(PasswordStrengthLabel));
 

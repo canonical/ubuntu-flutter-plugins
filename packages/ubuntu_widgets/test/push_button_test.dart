@@ -27,7 +27,7 @@ void main() {
         tester.widget<ConstrainedBox>(box).constraints,
         isA<BoxConstraints>()
             .having((c) => c.minWidth, 'minWidth', kPushButtonSize.width)
-            .having((c) => c.minHeight, 'minHeight', kPushButtonSize.height));
+            .having((c) => c.minHeight, 'minHeight', kPushButtonSize.height),);
 
     await tester.tapButton('elevated');
     expect(wasPressed, isTrue);
@@ -56,7 +56,7 @@ void main() {
         tester.widget<ConstrainedBox>(box).constraints,
         isA<BoxConstraints>()
             .having((c) => c.minWidth, 'minWidth', kPushButtonSize.width)
-            .having((c) => c.minHeight, 'minHeight', kPushButtonSize.height));
+            .having((c) => c.minHeight, 'minHeight', kPushButtonSize.height),);
 
     await tester.tapButton('filled');
     expect(wasPressed, isTrue);
@@ -85,7 +85,7 @@ void main() {
         tester.widget<ConstrainedBox>(box).constraints,
         isA<BoxConstraints>()
             .having((c) => c.minWidth, 'minWidth', kPushButtonSize.width)
-            .having((c) => c.minHeight, 'minHeight', kPushButtonSize.height));
+            .having((c) => c.minHeight, 'minHeight', kPushButtonSize.height),);
 
     await tester.tapButton('outlined');
     expect(wasPressed, isTrue);

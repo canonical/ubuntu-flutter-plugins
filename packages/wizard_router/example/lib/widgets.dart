@@ -31,7 +31,7 @@ class WizardPage extends StatelessWidget {
           const Spacer(),
           Padding(
             padding: const EdgeInsets.all(8.0),
-            child: ButtonBar(
+            child: OverflowBar(
               children: actions
                   .map(
                     (action) => OutlinedButton(
@@ -50,10 +50,8 @@ class WizardPage extends StatelessWidget {
 
 class WizardCheckbox extends StatelessWidget {
   const WizardCheckbox({
-    super.key,
+    required this.value, required this.onChanged, super.key,
     this.title,
-    required this.value,
-    required this.onChanged,
   });
 
   final Widget? title;

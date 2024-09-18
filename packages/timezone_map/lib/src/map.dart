@@ -95,7 +95,7 @@ class TimezoneMap extends StatelessWidget {
                 ),
             ],
           );
-        }),
+        },),
       ),
     );
   }

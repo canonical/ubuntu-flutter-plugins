@@ -13,7 +13,7 @@ class SuccessIcon extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Icon(Icons.check_circle,
-        color: Theme.of(context).colorScheme.success);
+        color: Theme.of(context).colorScheme.success,);
   }
 }
 

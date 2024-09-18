@@ -19,7 +19,7 @@ extension AppTester on WidgetTester {
         autofocus: autofocus,
         onSlide: onSlide,
       ),
-    ));
+    ),);
   }
 }
 

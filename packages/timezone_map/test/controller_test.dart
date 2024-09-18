@@ -93,7 +93,7 @@ void main() {
   test('search coordinates', () async {
     const locations = [
       GeoLocation(name: 'foo', latitude: 12, longitude: 34),
-      GeoLocation(name: 'bar', latitude: 56, longitude: 78)
+      GeoLocation(name: 'bar', latitude: 56, longitude: 78),
     ];
 
     final service = MockGeoService();
@@ -101,7 +101,7 @@ void main() {
 
     final model = TimezoneController(service: service);
     expect(
-        await model.searchCoordinates(const LatLng(56, 78)), equals(locations));
+        await model.searchCoordinates(const LatLng(56, 78)), equals(locations),);
     verify(service.searchCoordinates(const LatLng(56, 78))).called(1);
   });
 }

@@ -5,7 +5,7 @@ import 'package:ubuntu_flavor/ubuntu_flavor.dart';
 void main() {
   test('none', () {
     expect(UbuntuFlavor.detect(FakePlatform(environment: {})),
-        UbuntuFlavor.unknown);
+        UbuntuFlavor.unknown,);
   });
 
   test('original', () {
@@ -13,7 +13,7 @@ void main() {
       UbuntuFlavor.detect(FakePlatform(environment: {
         'ORIGINAL_XDG_CURRENT_DESKTOP': 'ubuntu:GNOME',
         'XDG_CURRENT_DESKTOP': 'Unity',
-      })),
+      },),),
       UbuntuFlavor.ubuntu,
     );
   });
@@ -22,7 +22,7 @@ void main() {
     expect(
       UbuntuFlavor.detect(FakePlatform(environment: {
         'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME',
-      })),
+      },),),
       UbuntuFlavor.ubuntu,
     );
   });
@@ -31,7 +31,7 @@ void main() {
     expect(
       UbuntuFlavor.detect(FakePlatform(environment: {
         'XDG_CURRENT_DESKTOP': 'Budgie:GNOME',
-      })),
+      },),),
       UbuntuFlavor.budgie,
     );
   });
@@ -40,7 +40,7 @@ void main() {
     expect(
       UbuntuFlavor.detect(FakePlatform(environment: {
         'XDG_CURRENT_DESKTOP': 'X-Cinnamon',
-      })),
+      },),),
       UbuntuFlavor.cinnamon,
     );
   });
@@ -51,7 +51,7 @@ void main() {
     expect(
       UbuntuFlavor.detect(FakePlatform(environment: {
         'XDG_CURRENT_DESKTOP': 'KDE',
-      })),
+      },),),
       UbuntuFlavor.kubuntu,
     );
   });
@@ -60,7 +60,7 @@ void main() {
     expect(
       UbuntuFlavor.detect(FakePlatform(environment: {
         'XDG_CURRENT_DESKTOP': 'ukui',
-      })),
+      },),),
       UbuntuFlavor.kylin,
     );
   });
@@ -69,7 +69,7 @@ void main() {
     expect(
       UbuntuFlavor.detect(FakePlatform(environment: {
         'XDG_CURRENT_DESKTOP': 'LXQt',
-      })),
+      },),),
       UbuntuFlavor.lubuntu,
     );
   });
@@ -78,7 +78,7 @@ void main() {
     expect(
       UbuntuFlavor.detect(FakePlatform(environment: {
         'XDG_CURRENT_DESKTOP': 'MATE',
-      })),
+      },),),
       UbuntuFlavor.mate,
     );
   });
@@ -89,7 +89,7 @@ void main() {
     expect(
       UbuntuFlavor.detect(FakePlatform(environment: {
         'XDG_CURRENT_DESKTOP': 'Unity:Unity7:ubuntu',
-      })),
+      },),),
       UbuntuFlavor.unity,
     );
   });
@@ -98,7 +98,7 @@ void main() {
     expect(
       UbuntuFlavor.detect(FakePlatform(environment: {
         'XDG_CURRENT_DESKTOP': 'XFCE',
-      })),
+      },),),
       UbuntuFlavor.xubuntu,
     );
   });
@@ -107,7 +107,7 @@ void main() {
     expect(
       UbuntuFlavor.detect(FakePlatform(environment: {
         'XDG_CURRENT_DESKTOP': 'foo:bar',
-      })),
+      },),),
       UbuntuFlavor.unknown,
     );
   });

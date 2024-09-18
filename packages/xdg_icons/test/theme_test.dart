@@ -18,14 +18,14 @@ void main() {
               baseSize: 48,
               fileName: '/path/to/foo.svg',
               isSymbolic: false,
-            ));
+            ),);
     when(() => mock.lookupIcon(name: 'foo', size: 24, scale: 1, theme: 'bar'))
         .thenAnswer((_) async => const XdgIconData(
               baseScale: 1,
               baseSize: 24,
               fileName: '/path/to/foo.svg',
               isSymbolic: false,
-            ));
+            ),);
 
     when(() => mock.onDefaultThemeChanged).thenAnswer(
       (_) => const Stream.empty(),

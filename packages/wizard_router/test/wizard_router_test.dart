@@ -496,7 +496,7 @@ void main() {
 
     // unknown
     await expectLater(
-        firstWizardScope.jump('/unknown'), throwsA(isA<WizardException>()));
+        firstWizardScope.jump('/unknown'), throwsA(isA<WizardException>()),);
   });
 
   testWidgets('has next or previous', (tester) async {
@@ -615,7 +615,7 @@ void main() {
     expect(Wizard.maybeOf(tester.element(find.byType(MaterialApp))), isNull);
     expect(Wizard.maybeOf(tester.element(find.text(Routes.first))), isNotNull);
     expect(Wizard.maybeOf(tester.element(find.text(Routes.first))),
-        Wizard.of(tester.element(find.text(Routes.first))));
+        Wizard.of(tester.element(find.text(Routes.first))),);
   });
 
   testWidgets('hasNext returns false for the last route', (tester) async {
@@ -884,7 +884,7 @@ void main() {
       Routes.first: WizardRoute(builder: (_) => const Text(Routes.first)),
       Routes.second: WizardRoute(builder: (_) => const Text(Routes.second)),
       Routes.third: WizardRoute(builder: (_) => const Text(Routes.third)),
-    });
+    },);
 
     await pumpWizardApp(
       tester,
@@ -1022,7 +1022,7 @@ void main() {
         builder: (_) => const Text(Routes.second),
         onLoad: (_) => completer.future,
       ),
-    });
+    },);
 
     await pumpWizardApp(tester, controller: controller);
     await tester.pumpAndSettle();

@@ -44,7 +44,7 @@ void main() async {
     );
 
     expect(
-        find.l10n<AppLocalizations>((l10n) => l10n.testLabel), findsOneWidget);
+        find.l10n<AppLocalizations>((l10n) => l10n.testLabel), findsOneWidget,);
   });
 
   testWidgets('tap buttons', (tester) async {
@@ -77,7 +77,7 @@ void main() async {
             ),
         ],
       ),
-    ));
+    ),);
 
     await tester.tapBack();
     expect(actual, expected..add(ul10n.backLabel));

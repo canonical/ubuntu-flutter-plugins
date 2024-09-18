@@ -9,6 +9,6 @@ void main() {
     await tester.pumpWidget(const MaterialApp());
 
     await expectLater(
-        tester.pumpUntil(find.byType(MaterialApp)), throwsAssertionError);
+        tester.pumpUntil(find.byType(MaterialApp)), throwsAssertionError,);
   });
 }

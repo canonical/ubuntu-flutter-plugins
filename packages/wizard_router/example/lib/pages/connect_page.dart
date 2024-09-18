@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:wizard_router/wizard_router.dart';
 
-import '../models.dart';
-import '../widgets.dart';
+import 'package:wizard_router_example/models.dart';
+import 'package:wizard_router_example/widgets.dart';
 
 class ConnectPage extends StatelessWidget {
   const ConnectPage({super.key});

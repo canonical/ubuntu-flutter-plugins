@@ -32,7 +32,7 @@ extension UbuntuWidgetTester on WidgetTester {
         }
       }
       return false;
-    }), findsOneWidget);
+    }), findsOneWidget,);
   }
 
   /// Taps a _Next_ button.

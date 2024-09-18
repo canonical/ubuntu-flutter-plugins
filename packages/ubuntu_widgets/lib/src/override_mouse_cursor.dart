@@ -27,7 +27,7 @@ class OverrideMouseCursor extends StatelessWidget {
         child,
         Positioned.fill(
           child: MouseRegion(cursor: cursor, opaque: false),
-        )
+        ),
       ],
     );
   }
