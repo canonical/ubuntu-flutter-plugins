@@ -3,6 +3,30 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 2024-09-19
+
+### Changes
+
+---
+
+Packages with breaking changes:
+
+ - There are no breaking changes in this release.
+
+Packages with other changes:
+
+ - [`ubuntu_test` - `v0.2.1`](#ubuntu_test---v021)
+ - [`wizard_router` - `v1.4.0`](#wizard_router---v140)
+
+---
+
+#### `ubuntu_test` - `v0.2.1`
+
+#### `wizard_router` - `v1.4.0`
+
+ - **FEAT**: wizard_router add previous (#433).
+
+
 ## 2024-09-18
 
 ### Changes
