@@ -1,3 +1,7 @@
+## 1.4.0
+
+ - **FEAT**: wizard_router add previous (#433).
+
 ## 1.3.0
 
 > Note: This release has breaking changes.

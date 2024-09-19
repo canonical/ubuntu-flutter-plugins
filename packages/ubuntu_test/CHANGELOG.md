@@ -1,3 +1,7 @@
+## 0.2.1
+
+ - **FIX**: Remove dependencies not used by ubuntu_test.
+
 ## 0.2.0
 
 > Note: This release has breaking changes.
