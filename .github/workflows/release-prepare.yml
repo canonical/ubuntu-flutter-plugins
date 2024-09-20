@@ -24,5 +24,3 @@ jobs:
           run-versioning-prerelease: ${{ inputs.prerelease == true }}
           publish-dry-run: true
           create-pr: true
-          git-email: contact@blue-fire.xyz
-          git-name: Bluefireteam
