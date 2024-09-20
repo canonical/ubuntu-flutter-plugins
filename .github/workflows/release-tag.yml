@@ -1,11 +1,11 @@
-name: Tag release
+name: Tag and start release
 on:
   push:
     branches: [main]
 
 jobs:
   publish-packages:
-    name: Create tag for a release
+    name: Create tags and start release
     permissions:
       contents: write
     runs-on: [ ubuntu-latest ]
@@ -16,3 +16,9 @@ jobs:
       - uses: bluefireteam/melos-action@v3
         with:
           tag: true
+      - run: |
+          melos exec -c1 --no-published --no-private --order-dependents -- \
+          gh workflow run release-publish.yml \
+          --ref \$MELOS_PACKAGE_NAME-v\$MELOS_PACKAGE_VERSION
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
