@@ -3,6 +3,42 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 2024-10-14
+
+### Changes
+
+---
+
+Packages with breaking changes:
+
+ - There are no breaking changes in this release.
+
+Packages with other changes:
+
+ - [`ubuntu_lints` - `v0.4.1`](#ubuntu_lints---v041)
+ - [`ubuntu_localizations` - `v0.5.1`](#ubuntu_localizations---v051)
+ - [`ubuntu_widgets` - `v0.7.1`](#ubuntu_widgets---v071)
+ - [`ubuntu_test` - `v0.2.2`](#ubuntu_test---v022)
+
+---
+
+#### `ubuntu_lints` - `v0.4.1`
+
+ - **FIX**(deps): update dependency flutter_lints to v5 (#446).
+
+#### `ubuntu_localizations` - `v0.5.1`
+
+ - **FIX**(l10n): translations update from Hosted Weblate (#445).
+
+#### `ubuntu_widgets` - `v0.7.1`
+
+ - **FIX**: MenuButtonBuilder only find render object when mounted (#449).
+
+#### `ubuntu_test` - `v0.2.2`
+
+ - Bump dependencies
+
+
 ## 2024-09-19
 
 ### Changes

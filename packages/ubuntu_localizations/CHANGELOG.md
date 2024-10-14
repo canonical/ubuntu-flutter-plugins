@@ -1,3 +1,7 @@
+## 0.5.1
+
+ - **FIX**(l10n): translations update from Hosted Weblate (#445).
+
 ## 0.5.0
 
 > Note: This release has breaking changes.
