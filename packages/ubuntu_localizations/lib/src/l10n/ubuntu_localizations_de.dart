@@ -280,7 +280,7 @@ class UbuntuLocalizationsDe extends UbuntuLocalizations {
   String get retryLabel => 'Wiederholen';
 
   @override
-  String get revertLabel => 'Zurücksetzen';
+  String get revertLabel => 'Zurückkehren';
 
   @override
   String get rewindLabel => 'Zurückspulen';

@@ -67,7 +67,7 @@ class UbuntuLocalizationsDa extends UbuntuLocalizations {
   String get bottomLabel => 'Bund';
 
   @override
-  String get cancelLabel => 'Afbryd';
+  String get cancelLabel => 'Annullér';
 
   @override
   String get centerLabel => 'Midte';
@@ -136,22 +136,22 @@ class UbuntuLocalizationsDa extends UbuntuLocalizations {
   String get fileLabel => 'Fil';
 
   @override
-  String get fillLabel => 'Fyld';
+  String get fillLabel => 'Udfyld';
 
   @override
   String get findLabel => 'Find';
 
   @override
-  String get firstLabel => 'Først';
+  String get firstLabel => 'Første';
 
   @override
   String get fontLabel => 'Skrifttype';
 
   @override
-  String get forwardLabel => 'Fremad';
+  String get forwardLabel => 'Frem';
 
   @override
-  String get fullscreenLabel => 'Fuld skærm';
+  String get fullscreenLabel => 'Fuldskærm';
 
   @override
   String get goBackLabel => 'Tilbage';
@@ -232,7 +232,7 @@ class UbuntuLocalizationsDa extends UbuntuLocalizations {
   String get portraitLabel => 'Stående';
 
   @override
-  String get preferencesLabel => 'Præferencer';
+  String get preferencesLabel => 'Indstillinger';
 
   @override
   String get previousLabel => 'Forrige';
@@ -241,7 +241,7 @@ class UbuntuLocalizationsDa extends UbuntuLocalizations {
   String get printLabel => 'Udskriv';
 
   @override
-  String get printPreviewLabel => 'Forhåndsvisning af Udskrift';
+  String get printPreviewLabel => 'Forhåndsvisning af udskrift';
 
   @override
   String get propertiesLabel => 'Egenskaber';
@@ -250,7 +250,7 @@ class UbuntuLocalizationsDa extends UbuntuLocalizations {
   String get questionLabel => 'Spørgsmål';
 
   @override
-  String get quitLabel => 'Forlad';
+  String get quitLabel => 'Afslut';
 
   @override
   String get recordLabel => 'Optag';
@@ -280,7 +280,7 @@ class UbuntuLocalizationsDa extends UbuntuLocalizations {
   String get retryLabel => 'Prøv Igen';
 
   @override
-  String get revertLabel => 'Tilbagefør';
+  String get revertLabel => 'Kassér ændringer';
 
   @override
   String get rewindLabel => 'Spol tilbage';
@@ -289,7 +289,7 @@ class UbuntuLocalizationsDa extends UbuntuLocalizations {
   String get rightLabel => 'Højre';
 
   @override
-  String get saveAsLabel => 'Gem Som';
+  String get saveAsLabel => 'Gem som';
 
   @override
   String get saveLabel => 'Gem';
@@ -298,7 +298,7 @@ class UbuntuLocalizationsDa extends UbuntuLocalizations {
   String get searchLabel => 'Søg';
 
   @override
-  String get selectAllLabel => 'Vælg Alle';
+  String get selectAllLabel => 'Vælg alt';
 
   @override
   String get selectLabel => 'Vælg';
@@ -307,7 +307,7 @@ class UbuntuLocalizationsDa extends UbuntuLocalizations {
   String get sendLabel => 'Send';
 
   @override
-  String get skipLabel => 'Spring Over';
+  String get skipLabel => 'Spring over';
 
   @override
   String get sortLabel => 'Sortér';
@@ -346,10 +346,10 @@ class UbuntuLocalizationsDa extends UbuntuLocalizations {
   String get yesLabel => 'Ja';
 
   @override
-  String get zoomInLabel => 'Zoom Ind';
+  String get zoomInLabel => 'Zoom ind';
 
   @override
-  String get zoomOutLabel => 'Zoom Ud';
+  String get zoomOutLabel => 'Zoom ud';
 
   @override
   String get byte => 'B';
