@@ -141,6 +141,8 @@ class _MenuButtonBuilderState<T> extends State<MenuButtonBuilder<T>> {
 
   void _updateSize() {
     WidgetsBinding.instance.addPostFrameCallback((_) {
+      if (!mounted) return;
+
       final size = (context.findRenderObject() as RenderBox?)?.size;
       if (_size != size) {
         setState(() => _size = size);

@@ -7,11 +7,14 @@ jobs:
   publish-packages:
     name: Create tags and start release
     permissions:
+      actions: write
       contents: write
     runs-on: [ ubuntu-latest ]
     if: contains(github.event.head_commit.message, 'chore(release)')
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
       - uses: Atsumi3/actions-setup-fvm@0.0.3
       - uses: bluefireteam/melos-action@v3
         with:
