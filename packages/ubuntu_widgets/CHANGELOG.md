@@ -1,3 +1,7 @@
+## 0.7.1
+
+ - **FIX**: MenuButtonBuilder only find render object when mounted (#449).
+
 ## 0.7.0
 
 > Note: This release has breaking changes.
