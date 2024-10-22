@@ -8,6 +8,6 @@
 ///   print(flavor);
 /// }
 /// ```
-library;
+library ubuntu_flavor;
 
 export 'src/ubuntu_flavor.dart';

@@ -1,5 +1,5 @@
 /// A collection of widgets developed for Flutter-based Ubuntu applications.
-library;
+library ubuntu_widgets;
 
 export 'src/animated_expanded.dart';
 export 'src/clickable_text.dart';

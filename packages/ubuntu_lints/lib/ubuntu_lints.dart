@@ -1,1 +1,1 @@
-library;
+library ubuntu_lints;

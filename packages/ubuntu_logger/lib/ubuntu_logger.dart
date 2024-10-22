@@ -16,6 +16,6 @@
 ///   log.info('This is an info message.');
 /// }
 /// ```
-library;
+library ubuntu_logger;
 
 export 'src/ubuntu_logger.dart';
