@@ -22,8 +22,7 @@ command:
 
   publish:
     hooks:
-      pre:
-        - melos gen-l10n
+      pre: melos gen-l10n
 
 scripts:
   # analyze all packages
