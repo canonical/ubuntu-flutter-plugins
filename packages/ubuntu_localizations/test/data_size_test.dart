@@ -1,7 +1,7 @@
 import 'package:flutter_test/flutter_test.dart';
 import 'package:ubuntu_localizations/src/data_size.dart';
-import 'package:ubuntu_localizations/src/l10n/ubuntu_localizations_en.dart';
-import 'package:ubuntu_localizations/src/l10n/ubuntu_localizations_fi.dart';
+import 'package:ubuntu_localizations/src/l10n/ubuntu_localizations_en.g.dart';
+import 'package:ubuntu_localizations/src/l10n/ubuntu_localizations_fi.g.dart';
 
 void main() {
   final en = UbuntuLocalizationsEn();
