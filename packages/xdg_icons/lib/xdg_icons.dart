@@ -6,7 +6,7 @@
 ///   size: 48,
 /// )
 /// ```
-library xdg_icons;
+library;
 
 export 'src/icon.dart';
 export 'src/theme.dart';

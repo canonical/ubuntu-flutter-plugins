@@ -5,7 +5,7 @@
 /// cause changes in existing pages.
 ///
 /// ![wizard_router](https://github.com/canonical/ubuntu-flutter-plugins/raw/main/packages/wizard_router/images/wizard_router.png)
-library wizard_router;
+library;
 
 export 'src/exception.dart';
 export 'src/route.dart';
