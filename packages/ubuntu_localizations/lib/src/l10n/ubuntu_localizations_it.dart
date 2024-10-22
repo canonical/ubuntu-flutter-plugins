@@ -43,22 +43,22 @@ class UbuntuLocalizationsIt extends UbuntuLocalizations {
   String get shiftKey => 'Shift';
 
   @override
-  String get aboutLabel => 'About';
+  String get aboutLabel => 'Informazioni';
 
   @override
-  String get addLabel => 'Add';
+  String get addLabel => 'Aggiungi';
 
   @override
-  String get allLabel => 'All';
+  String get allLabel => 'Tutto';
 
   @override
-  String get applyLabel => 'Apply';
+  String get applyLabel => 'Applica';
 
   @override
   String get ascendingLabel => 'Ascending';
 
   @override
-  String get backLabel => 'Back';
+  String get backLabel => 'Indietro';
 
   @override
   String get boldLabel => 'Bold';
