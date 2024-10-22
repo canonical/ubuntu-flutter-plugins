@@ -1,4 +1,4 @@
-library timezone_map;
+library;
 
 export 'src/controller.dart';
 export 'src/exception.dart';

@@ -37,5 +37,15 @@
   "revertLabel": "Ripristina",
   "@revertLabel": {},
   "restartLabel": "Riavvia",
-  "@restartLabel": {}
+  "@restartLabel": {},
+  "aboutLabel": "Informazioni",
+  "@aboutLabel": {},
+  "addLabel": "Aggiungi",
+  "@addLabel": {},
+  "allLabel": "Tutto",
+  "@allLabel": {},
+  "applyLabel": "Applica",
+  "@applyLabel": {},
+  "backLabel": "Indietro",
+  "@backLabel": {}
 }
