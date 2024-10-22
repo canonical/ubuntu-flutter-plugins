@@ -46,12 +46,14 @@ scripts:
       lcov --remove coverage/lcov.info '**/*.g.dart' '**/*.freezed.dart' -o coverage/lcov.info
 
   # format all packages
-  format: >
+  format:exclude: >
     find . -name '*.dart' \
-      ! -name '*.g.dart' \
       ! -name '*.freezed.dart' \
-      ! -path '*/l10n/*' \
-      ! -path "*/.*/*" \
+      ! -name '*.g.dart' \
+      ! -name '*.mocks.dart' \
+      ! -path '*/l10n/*.dart' \
+      ! -name '*.pb*.dart' \
+      ! -path '*/.*/*' \
       | xargs fvm dart format --set-exit-if-changed
 
   # run build_runner to generate code in all packages
