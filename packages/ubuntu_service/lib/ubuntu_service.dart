@@ -13,6 +13,6 @@
 ///   ...
 /// }
 /// ```
-library ubuntu_service;
+library;
 
 export 'src/ubuntu_service.dart';

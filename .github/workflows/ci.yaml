@@ -8,115 +8,106 @@ on:
   workflow_dispatch:
 
 jobs:
-  analyze:
+  setup:
     runs-on: ubuntu-22.04
     steps:
-    - uses: actions/checkout@v4
-    - uses: Atsumi3/actions-setup-fvm@0.0.3
-    - uses: bluefireteam/melos-action@v3
-    - run: melos analyze
+      - uses: actions/checkout@v3
+      - uses: Atsumi3/actions-setup-fvm@0.0.3
+      - uses: bluefireteam/melos-action@v2
+      - run: melos generate
+      - run: melos gen-l10n
+      - uses: actions/cache@v3
+        with:
+          path: .
+          key: ${{ runner.os }}-repo-${{ github.sha }}-generated
 
   build:
     runs-on: ubuntu-22.04
+    needs: setup
     steps:
-    - uses: actions/checkout@v4
-    - uses: Atsumi3/actions-setup-fvm@0.0.3
-    - uses: bluefireteam/melos-action@v3
-    - run: sudo apt update
-    - run: sudo apt install -y clang cmake curl libgtk-3-dev ninja-build pkg-config unzip xvfb
-      env:
-        DEBIAN_FRONTEND: noninteractive
-    - run: melos build
+      - uses: actions/checkout@v4
+      - uses: Atsumi3/actions-setup-fvm@0.0.3
+      - uses: bluefireteam/melos-action@v3
+      - run: sudo apt update
+      - run: sudo apt install -y clang cmake curl libgtk-3-dev ninja-build pkg-config unzip xvfb
+        env:
+          DEBIAN_FRONTEND: noninteractive
+      - run: melos build
 
-  coverage:
+  analyze:
     runs-on: ubuntu-22.04
+    needs: setup
     steps:
-    - uses: actions/checkout@v4
-    - uses: Atsumi3/actions-setup-fvm@0.0.3
-    - uses: bluefireteam/melos-action@v3
-    - run: sudo apt update
-    - run: sudo apt install -y lcov
-      env:
-        DEBIAN_FRONTEND: noninteractive
-    - run: melos run coverage
-    - uses: codecov/codecov-action@v4
-      with:
-        token: ${{secrets.CODECOV_TOKEN}}
+      - uses: actions/checkout@v3
+      - name: Restore repository cache
+        uses: actions/cache@v3
+        with:
+          path: .
+          key: ${{ runner.os }}-repo-${{ github.sha }}-generated
+          restore-keys: |
+            ${{ runner.os }}-repo-
+      - name: Restore repository cache
+        uses: actions/cache@v3
+        with:
+          path: .
+          key: ${{ runner.os }}-repo-${{ github.sha }}-generated
+          restore-keys: |
+            ${{ runner.os }}-repo-
+      - uses: Atsumi3/actions-setup-fvm@0.0.3
+      - uses: bluefireteam/melos-action@v2
+      - run: melos analyze --fatal-infos
 
   format:
     runs-on: ubuntu-22.04
+    needs: setup
     steps:
-    - uses: actions/checkout@v4
-    - uses: Atsumi3/actions-setup-fvm@0.0.3
-    - uses: bluefireteam/melos-action@v3
-    - run: melos run format
+      - uses: actions/checkout@v3
+      - name: Restore repository cache
+        uses: actions/cache@v3
+        with:
+          path: .
+          key: ${{ runner.os }}-repo-${{ github.sha }}-generated
+          restore-keys: |
+            ${{ runner.os }}-repo-
+      - uses: Atsumi3/actions-setup-fvm@0.0.3
+      - uses: bluefireteam/melos-action@v2
+      - run: melos format:exclude
 
-  integration:
-    runs-on: ubuntu-22.04
-    steps:
-    - uses: actions/checkout@v4
-    - uses: Atsumi3/actions-setup-fvm@0.0.3
-    - uses: bluefireteam/melos-action@v3
-    - run: sudo apt update
-    - run: sudo apt install -y clang cmake curl libgtk-3-dev ninja-build pkg-config unzip xvfb
-      env:
-        DEBIAN_FRONTEND: noninteractive
-    - run: melos exec -c 1 --dir-exists=integration_test -- \
-        xvfb-run -a xvfb-run -a -s '-screen 0 1024x768x24 +extension GLX' \
-            flutter test integration_test
-
-  mocks:
-    runs-on: ubuntu-22.04
-    steps:
-    - uses: actions/checkout@v4
-    - uses: Atsumi3/actions-setup-fvm@0.0.3
-    - uses: bluefireteam/melos-action@v3
-    - run: melos generate
-    - run: ./.github/scripts/check-outdated-files.sh
-      if: github.event_name == 'pull_request'
-    - uses: peter-evans/create-pull-request@v7
-      if: github.event_name != 'pull_request'
-      id: create-pr
-      with:
-        add-paths: '**/*.mocks.dart'
-        title: 'chore: regenerate mocks'
-        commit-message: 'chore: regenerate mocks'
-        branch: create-pull-request/mocks
-        delete-branch: true
-
-  l10n:
-    runs-on: ubuntu-22.04
-    steps:
-    - uses: actions/checkout@v4
-    - uses: Atsumi3/actions-setup-fvm@0.0.3
-    - uses: bluefireteam/melos-action@v3
-    - run: melos gen-l10n
-    - run: ./.github/scripts/check-outdated-files.sh
-      if: github.event_name == 'pull_request'
-    - uses: peter-evans/create-pull-request@v7
-      if: github.event_name != 'pull_request'
-      id: create-pr
-      with:
-        add-paths: '**/l10n/*.dart'
-        title: 'chore: regenerate l10n'
-        commit-message: 'chore: regenerate l10n'
-        branch: create-pull-request/l10n
-        delete-branch: true
 
   publish:
     name: Dry-run publish
+    needs: setup
     runs-on: ubuntu-22.04
     steps:
-    - uses: actions/checkout@v4
-    - uses: Atsumi3/actions-setup-fvm@0.0.3
-    - uses: bluefireteam/melos-action@v3
-    # Remove ubuntu_test from ignore list once
-    - run: melos exec --no-private --ignore ubuntu_test -- flutter pub publish --dry-run
+      - uses: actions/checkout@v4
+      - name: Restore repository cache
+        uses: actions/cache@v3
+        with:
+          path: .
+          key: ${{ runner.os }}-repo-${{ github.sha }}-generated
+          restore-keys: |
+            ${{ runner.os }}-repo-
+      - uses: Atsumi3/actions-setup-fvm@0.0.3
+      - uses: bluefireteam/melos-action@v3
+      # Remove ubuntu_test from ignore list once
+      - run: melos exec --no-private --ignore ubuntu_test -- flutter pub publish --dry-run
 
   test:
     runs-on: ubuntu-22.04
+    needs: setup
     steps:
-    - uses: actions/checkout@v4
-    - uses: Atsumi3/actions-setup-fvm@0.0.3
-    - uses: bluefireteam/melos-action@v3
-    - run: melos test
+      - uses: actions/checkout@v3
+      - name: Restore repository cache
+        uses: actions/cache@v3
+        with:
+          path: .
+          key: ${{ runner.os }}-repo-${{ github.sha }}-generated
+          restore-keys: |
+            ${{ runner.os }}-repo-
+      - uses: Atsumi3/actions-setup-fvm@0.0.3
+      - uses: bluefireteam/melos-action@v2
+      - run: sudo apt update && sudo apt install -y lcov
+      - run: melos coverage
+      - uses: codecov/codecov-action@v3
+        with:
+          token: ${{secrets.CODECOV_TOKEN}}

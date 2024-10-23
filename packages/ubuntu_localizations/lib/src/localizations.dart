@@ -7,9 +7,9 @@ import 'package:intl/intl.dart';
 import 'package:intl/intl_standalone.dart';
 
 import 'package:ubuntu_localizations/src/flutter/flutter_localizations.dart';
-import 'package:ubuntu_localizations/src/l10n/ubuntu_localizations.dart';
+import 'package:ubuntu_localizations/src/l10n/ubuntu_localizations.g.dart';
 
-export 'l10n/ubuntu_localizations.dart';
+export 'l10n/ubuntu_localizations.g.dart';
 
 /// Provides localization delegates.
 class GlobalUbuntuLocalizations {
