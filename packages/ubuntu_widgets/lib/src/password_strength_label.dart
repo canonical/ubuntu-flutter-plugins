@@ -58,8 +58,6 @@ class PasswordStrengthLabel extends StatelessWidget {
           lang.strongPassword,
           style: TextStyle(color: Theme.of(context).colorScheme.success),
         );
-      default:
-        return const SizedBox.shrink();
     }
   }
 }
