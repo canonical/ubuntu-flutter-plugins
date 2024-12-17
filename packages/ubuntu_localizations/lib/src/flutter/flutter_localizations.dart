@@ -116,6 +116,7 @@ abstract class FlutterLocalizationsDelegate<T>
             singleDigitSecondFormat: DateFormat.s(localeName),
             decimalFormat:
                 NumberFormat.decimalPattern(baseLocaleName ?? 'en_US'),
+            weekdayFormat: DateFormat.EEEE(localeName),
           ) as T,
         );
       default:
