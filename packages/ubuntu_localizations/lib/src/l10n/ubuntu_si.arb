@@ -229,5 +229,9 @@
   "gigabyte": "ගි.බ.",
   "@gigabyte": {},
   "restartLabel": "යළි අරඹන්න",
-  "@restartLabel": {}
+  "@restartLabel": {},
+  "terabyte": "ටෙ.බ.",
+  "@terabyte": {},
+  "petabyte": "පෙ.බ.",
+  "@petabyte": {}
 }
