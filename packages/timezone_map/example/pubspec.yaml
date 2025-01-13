@@ -9,7 +9,7 @@ dependencies:
   flutter:
     sdk: flutter
   timezone_map: ^0.1.0
-  yaru: ^4.1.0
+  yaru: ">=6.0.0 <8.0.0"
 
 dev_dependencies:
   ubuntu_lints: ^0.4.1
