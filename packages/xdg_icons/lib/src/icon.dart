@@ -18,6 +18,7 @@ class XdgIcon extends StatefulWidget {
     this.size,
     this.scale,
     this.theme,
+    this.color,
     this.iconNotFoundBuilder,
     super.key,
   });
@@ -26,6 +27,7 @@ class XdgIcon extends StatefulWidget {
   final int? size;
   final int? scale;
   final String? theme;
+  final Color? color;
   final IconNotFoundBuilder? iconNotFoundBuilder;
 
   @override
@@ -136,6 +138,7 @@ class XdgIconState extends State<XdgIcon> {
         file,
         width: size.toDouble(),
         height: size.toDouble(),
+        color: widget.color,
       );
     } else if (_icon?.data != null) {
       final builder = _icon!.isScalable ? SvgPicture.memory : Image.memory;
@@ -143,6 +146,7 @@ class XdgIconState extends State<XdgIcon> {
         Uint8List.fromList(_icon!.data!),
         width: size.toDouble(),
         height: size.toDouble(),
+        color: widget.color,
       );
     } else if (_iconNotFound && widget.iconNotFoundBuilder != null) {
       return widget.iconNotFoundBuilder!();
