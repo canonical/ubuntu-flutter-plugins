@@ -30,6 +30,13 @@ class GlobalUbuntuLocalizations {
 /// * [Intl.defaultLocale]
 /// * [Intl.systemLocale]
 Future<void> initDefaultLocale([String? locale]) async {
+  var systemLocale = await findSystemLocale();
+
+  // Fallback to 'en' if the system locale is 'POSIX' or undefined.
+  if (systemLocale == 'POSIX' || systemLocale == 'und') {
+    systemLocale = 'en';
+  }
+
   Intl.defaultLocale = locale ?? await findSystemLocale();
 }
 
