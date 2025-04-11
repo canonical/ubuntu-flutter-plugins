@@ -37,7 +37,7 @@ Future<void> initDefaultLocale([String? locale]) async {
     systemLocale = 'en';
   }
 
-  Intl.defaultLocale = locale ?? await findSystemLocale();
+  Intl.defaultLocale = locale ?? systemLocale;
 }
 
 /// A localized language and its locale.
