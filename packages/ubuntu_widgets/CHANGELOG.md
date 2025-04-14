@@ -1,3 +1,7 @@
+## 0.7.2
+
+ - **CHORE**: Bump yaru version
+
 ## 0.7.1
 
  - **FIX**: MenuButtonBuilder only find render object when mounted (#449).
