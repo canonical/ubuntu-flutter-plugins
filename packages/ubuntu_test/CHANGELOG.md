@@ -1,3 +1,7 @@
+## 0.2.3
+
+ - **CHORE**: Bump yaru_test and flutter_html
+
 ## 0.2.2
 
  - Bump dependencies
