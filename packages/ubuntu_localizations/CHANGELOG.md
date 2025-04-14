@@ -1,3 +1,7 @@
+## 0.5.2
+
+ - **CHORE**: Bump Flutter to 3.27.4
+
 ## 0.5.1
 
  - **FIX**(l10n): translations update from Hosted Weblate (#445).
