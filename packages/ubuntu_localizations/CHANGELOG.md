@@ -1,3 +1,7 @@
+## 0.5.2+1
+
+ - **FIX**: Ensure generated files are included in the package.
+
 ## 0.5.2
 
  - **CHORE**: Bump Flutter to 3.27.4
