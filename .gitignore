@@ -9,5 +9,3 @@ coverage/
 # FVM Version Cache
 .fvm/
 **/.fvm
-
-**/*.g.dart
