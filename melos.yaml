@@ -20,10 +20,6 @@ command:
     dev_dependencies:
       mockito: 5.4.4
 
-  publish:
-    hooks:
-      pre: melos gen-l10n
-
 scripts:
   # analyze all packages
   analyze: >
