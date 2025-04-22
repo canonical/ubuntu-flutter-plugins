@@ -1,3 +1,7 @@
+## 0.2.1
+
+ - **CHORE**: Loosen version constraints on `logging` and bump to `^1.3.0`
+
 ## 0.2.0
 
 > Note: This release has breaking changes.
