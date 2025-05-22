@@ -1,5 +1,21 @@
 {
   "@@locale": "km",
   "countryCode": "KH",
-  "languageName": "﻿ខ្មែរ"
+  "@countryCode": {},
+  "languageName": "﻿ខ្មែរ",
+  "@languageName": {},
+  "strongPassword": "ពាក្យសម្ងាត់សុវត្ថិភាពខ្លាំង",
+  "@strongPassword": {},
+  "fairPassword": "ពាក្យសម្ងាត់សមរម្យ",
+  "@fairPassword": {},
+  "altKey": "ជំនួស",
+  "@altKey": {},
+  "weakPassword": "ពាក្យសម្ងាត់ខ្សោយ",
+  "@weakPassword": {},
+  "backAction": "ត្រឡប់ក្រោយ",
+  "@backAction": {},
+  "continueAction": "បន្ត",
+  "@continueAction": {},
+  "goodPassword": "ពាក្យសម្ងាត់ល្អ",
+  "@goodPassword": {}
 }
