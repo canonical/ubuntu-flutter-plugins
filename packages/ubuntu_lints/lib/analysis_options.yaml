@@ -13,7 +13,8 @@ analyzer:
 
   errors:
     # TODO: Remove when SDK is bumped to ^3.8.0
-    unsupported_option_without_values: ignore
+    #unsupported_option_without_values: ignore
+
 
 formatter:
   trailing_commas: preserve
