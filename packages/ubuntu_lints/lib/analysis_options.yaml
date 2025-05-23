@@ -11,14 +11,8 @@ analyzer:
     strict-casts: true
     strict-raw-types: true
 
-#  errors:
-    # TODO: Remove when SDK is bumped to ^3.8.0
-    #unsupported_option_without_values: ignore
-    #unsupported_value: ignore
-
-
-#formatter:
-#  trailing_commas: preserve
+formatter:
+  trailing_commas: preserve
 
 linter:
   rules:
