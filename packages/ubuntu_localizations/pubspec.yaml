@@ -23,3 +23,6 @@ dev_dependencies:
     sdk: flutter
   ubuntu_lints: ^0.4.1
   xml: ^6.1.0
+
+flutter:
+  generate: true
