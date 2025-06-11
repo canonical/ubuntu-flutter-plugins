@@ -1,3 +1,9 @@
+# Changelog
+
+## 0.1.1
+
+ - deps: replace flutter_svg with jovial_svg to support SVG styles (#475)
+
 ## 0.1.0
 
 > Note: This release has breaking changes.
@@ -12,8 +18,6 @@
 
  - **REFACTOR**: Apply ubuntu lints to all packages (#340).
  - **FEAT**: Activate ubuntu_lints.
-
-# Changelog
 
 ## [0.0.3](https://github.com/canonical/ubuntu-flutter-plugins/compare/xdg_icons-v0.0.2...xdg_icons-v0.0.3) (2023-10-18)
 
