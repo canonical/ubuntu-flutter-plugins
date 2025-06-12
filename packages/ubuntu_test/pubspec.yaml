@@ -20,7 +20,7 @@ dependencies:
   matcher: ^0.12.16+1
   mockito: ^5.4.4
   ubuntu_localizations: ^0.5.1
-  yaru_test: ^0.3.0
+  yaru_test: ^0.3.2
 
 dev_dependencies:
   ubuntu_lints: ^0.4.1

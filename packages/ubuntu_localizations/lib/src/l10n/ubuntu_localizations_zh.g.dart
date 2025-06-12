@@ -374,7 +374,7 @@ class UbuntuLocalizationsZh extends UbuntuLocalizations {
 
 /// The translations for Chinese, as used in Taiwan (`zh_TW`).
 class UbuntuLocalizationsZhTw extends UbuntuLocalizationsZh {
-  UbuntuLocalizationsZhTw(): super('zh_TW');
+  UbuntuLocalizationsZhTw() : super('zh_TW');
 
   @override
   String get countryCode => 'TW';
