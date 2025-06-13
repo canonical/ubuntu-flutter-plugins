@@ -11,10 +11,10 @@ dependencies:
     sdk: flutter
   flutter_markdown: ^0.7.0
   provider: ^6.0.0
-  wizard_router: ^1.4.0
+  wizard_router: ^1.4.1
 
 dev_dependencies:
-  ubuntu_lints: ^0.4.1
+  ubuntu_lints: ^0.4.1+1
 
 flutter:
   uses-material-design: true

@@ -1,3 +1,7 @@
+## 0.2.1+1
+
+ - **FIX**(l10n): translations update from Hosted Weblate (#451).
+
 ## 0.2.1
 
  - **CHORE**: Loosen version constraints on `logging` and bump to `^1.3.0`
