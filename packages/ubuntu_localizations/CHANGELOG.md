@@ -1,3 +1,11 @@
+## 0.5.2+2
+
+ - **FIX**(ubuntu_localizations): use fallback if locale is 'POSIX' or 'und' (#476).
+ - **FIX**(l10n): translations update from Hosted Weblate (#467).
+ - **FIX**(l10n): translations update from Hosted Weblate (#461).
+ - **FIX**(l10n): translations update from Hosted Weblate (#459).
+ - **FIX**(l10n): translations update from Hosted Weblate (#451).
+
 ## 0.5.2+1
 
  - **FIX**: Ensure generated files are included in the package.

@@ -1,3 +1,8 @@
+## 0.1.2
+
+ - **FIX**(l10n): translations update from Hosted Weblate (#451).
+ - **FEAT**(xdg_icons): replace flutter_svg dependency with jovial_svg (#475).
+
 # Changelog
 
 ## 0.1.1

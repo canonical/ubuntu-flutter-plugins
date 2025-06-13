@@ -1,3 +1,7 @@
+## 0.2.3+1
+
+ - **FIX**(l10n): translations update from Hosted Weblate (#451).
+
 ## 0.2.3
 
  - **CHORE**: Bump yaru_test and flutter_html
