@@ -1,3 +1,7 @@
+## 0.7.3
+
+- **FEAT**(a11y): Expose semantic labels for icons
+
 ## 0.7.2+1
 
  - **FIX**(l10n): translations update from Hosted Weblate (#451).
