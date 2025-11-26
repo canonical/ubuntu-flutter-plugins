@@ -13,7 +13,7 @@ dependencies:
   flutter:
     sdk: flutter
   xdg_icons: ^0.1.2
-  yaru: ^8.3.0
+  yaru: 9.0.0
 
 flutter:
   uses-material-design: true
