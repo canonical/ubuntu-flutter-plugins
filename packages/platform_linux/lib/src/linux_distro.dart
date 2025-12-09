@@ -1,5 +1,6 @@
 import 'dart:io';
 
+import 'package:meta/meta.dart';
 import 'package:platform/platform.dart';
 
 /// Detects the Linux distro.
@@ -34,7 +35,15 @@ extension PlatformLinuxDistro on Platform {
   /// [Ubuntu](https://ubuntu.com/)
   bool get isUbuntu => _isDistro('ubuntu');
 
+  /// Overrides the detected distro for testing.
+  @visibleForTesting
+  static String? osIdOverride;
+
   bool _isDistro(String id) {
+    if (osIdOverride != null) {
+      return osIdOverride == id;
+    }
+
     final os = _getOsRelease(this);
     return os?['ID'] == id ||
         (os?['ID_LIKE']?.split(' ').contains(id) ?? false);
