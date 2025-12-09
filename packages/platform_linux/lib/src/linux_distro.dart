@@ -37,13 +37,13 @@ extension PlatformLinuxDistro on Platform {
 
   /// Overrides the detected distro for testing.
   @visibleForTesting
-  static String? osIdOverride;
+  set distroOverride(String? id) {
+    final cacheId = identityHashCode(this);
+    _osReleaseCacheId = cacheId;
+    _osReleaseCache = {'ID': id};
+  }
 
   bool _isDistro(String id) {
-    if (osIdOverride != null) {
-      return osIdOverride == id;
-    }
-
     final os = _getOsRelease(this);
     return os?['ID'] == id ||
         (os?['ID_LIKE']?.split(' ').contains(id) ?? false);

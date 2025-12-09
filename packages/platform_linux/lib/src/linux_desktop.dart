@@ -49,7 +49,11 @@ extension PlatformLinuxDesktop on Platform {
   ///
   /// The values must be in lowercase.
   @visibleForTesting
-  static List<String>? xdgCurrentDesktopOverride;
+  set xdgDesktopOverride(List<String>? names) {
+    final cacheId = identityHashCode(this);
+    _xdgCurrentDesktopCacheId = cacheId;
+    _xdgCurrentDesktopCache = names;
+  }
 
   bool _isDesktop(String name) {
     return _getXdgCurrentDesktop(this)?.contains(name) ?? false;
@@ -58,10 +62,6 @@ extension PlatformLinuxDesktop on Platform {
   static int? _xdgCurrentDesktopCacheId;
   static List<String>? _xdgCurrentDesktopCache;
   static List<String>? _getXdgCurrentDesktop(Platform platform) {
-    if (xdgCurrentDesktopOverride != null) {
-      return xdgCurrentDesktopOverride;
-    }
-
     final cacheId = identityHashCode(platform);
     if (cacheId != _xdgCurrentDesktopCacheId) {
       _xdgCurrentDesktopCacheId = cacheId;

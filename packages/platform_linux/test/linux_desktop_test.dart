@@ -140,7 +140,7 @@ void main() {
         'XDG_CURRENT_DESKTOP': 'KDE',
       },
     );
-    PlatformLinuxDesktop.xdgCurrentDesktopOverride = ['budgie', 'gnome'];
+    platform.xdgDesktopOverride = ['budgie', 'gnome'];
     expect({
       'kde': platform.isKDE,
       'budgie': platform.isBudgie,

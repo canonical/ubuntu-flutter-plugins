@@ -242,7 +242,7 @@ LOGO=ubuntu-logo
     IOOverrides.runZoned(
       () {
         final platform = FakePlatform();
-        PlatformLinuxDistro.osIdOverride = 'opensuse';
+        platform.distroOverride = 'opensuse';
         expect(
           {'manjaro': platform.isManjaro, 'opensuse': platform.isOpenSUSE},
           {'manjaro': isFalse, 'opensuse': isTrue},
