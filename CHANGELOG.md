@@ -3,6 +3,26 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 2025-12-11
+
+### Changes
+
+---
+
+Packages with breaking changes:
+
+ - There are no breaking changes in this release.
+
+Packages with other changes:
+
+ - [`ubuntu_widgets` - `v0.7.4`](#ubuntu_widgets---v074)
+
+---
+
+#### `ubuntu_widgets` - `v0.7.4`
+
+- **CHORE**: Bump to Yaru 9.0.0
+
 ## 2025-06-13
 
 ### Changes
@@ -230,8 +250,8 @@ Packages with dependency updates only:
 #### `ubuntu_localizations` - `v0.4.1`
 
  - **FIX**: Bump translations
- 
- 
+
+
 #### `ubuntu_widgets` - `v0.6.1`
 
  - **FIX**: Correct name for ClickableText.
@@ -309,7 +329,7 @@ Packages with dependency updates only:
 #### `ubuntu_localizations` - `v0.4.0`
 
 - Bump Flutter to `3.22.1`
-- 
+-
 #### `ubuntu_widgets` - `v0.6.0`
 
 - Bump Flutter to `3.22.1`
@@ -732,4 +752,3 @@ Packages with other changes:
  - **FEAT**: Activate ubuntu_lints.
  - **FEAT**: Introduce the `ubuntu_lints` package (#336).
  - **DOCS**: Update to correct name of ubuntu_lints in readme (#337).
-
