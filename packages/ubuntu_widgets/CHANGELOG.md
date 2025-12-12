@@ -1,3 +1,7 @@
+## 0.7.4
+
+- **CHORE**: Bump to Yaru 9.0.0
+
 ## 0.7.3
 
 - **FEAT**(a11y): Expose semantic labels for icons
