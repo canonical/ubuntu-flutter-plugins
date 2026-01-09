@@ -106,7 +106,6 @@ class _ListWidgetState extends State<ListWidget> {
                 return KeyEventResult.ignored;
               },
               child: KeySearch(
-                autofocus: false,
                 onSearch: widget.onKeySearch ?? (_) => -1,
                 child: LayoutBuilder(
                   builder: (context, constraints) {
