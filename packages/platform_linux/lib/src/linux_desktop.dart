@@ -1,3 +1,4 @@
+import 'package:meta/meta.dart';
 import 'package:platform/platform.dart';
 
 /// Detects the Linux desktop environment.
@@ -43,6 +44,16 @@ extension PlatformLinuxDesktop on Platform {
 
   /// [Xfce](https://xfce.org/)
   bool get isXfce => _isDesktop('xfce');
+
+  /// Overrides the detected desktop environment for testing.
+  ///
+  /// The values must be in lowercase.
+  @visibleForTesting
+  set xdgDesktopOverride(List<String>? names) {
+    final cacheId = identityHashCode(this);
+    _xdgCurrentDesktopCacheId = cacheId;
+    _xdgCurrentDesktopCache = names;
+  }
 
   bool _isDesktop(String name) {
     return _getXdgCurrentDesktop(this)?.contains(name) ?? false;
