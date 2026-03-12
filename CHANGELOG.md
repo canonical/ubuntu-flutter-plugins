@@ -3,6 +3,31 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 2026-03-12
+
+### Changes
+
+---
+
+Packages with breaking changes:
+
+ - [`ubuntu_widgets` - `v0.8.0`](#ubuntu_widgets---v080)
+
+Packages with other changes:
+
+ - [`ubuntu_test` - `v0.2.3+2`](#ubuntu_test---v0232)
+
+---
+
+#### `ubuntu_widgets` - `v0.8.0`
+
+ - **BREAKING** **FIX**(ListWidget): fix accessibility focus trap and remove tabFocusNode.
+ - **CHORE**: Bump Yaru to 10.x.x
+
+#### `ubuntu_test` - `v0.2.3+2`
+
+ - **CHORE**: Bump Yaru to 10.x.x
+
 ## 2025-12-11
 
 ### Changes

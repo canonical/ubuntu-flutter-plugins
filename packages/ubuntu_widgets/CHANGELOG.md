@@ -1,3 +1,10 @@
+## 0.8.0
+
+> Note: This release has breaking changes.
+
+ - **BREAKING** **FIX**(ListWidget): fix accessibility focus trap and remove tabFocusNode.
+ - **CHORE**: Bump to Yaru 10.0.0
+
 ## 0.7.4
 
 - **CHORE**: Bump to Yaru 9.0.0

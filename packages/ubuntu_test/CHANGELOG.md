@@ -1,3 +1,7 @@
+## 0.2.3+2
+
+ - **CHORE**: Bump Yaru to 10.x.x
+
 ## 0.2.3+1
 
  - **FIX**(l10n): translations update from Hosted Weblate (#451).
