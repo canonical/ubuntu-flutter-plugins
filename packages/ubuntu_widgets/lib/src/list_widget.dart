@@ -41,6 +41,8 @@ class ListWidget extends StatefulWidget {
 class _ListWidgetState extends State<ListWidget> {
   final _scrollableKey = GlobalKey();
   ScrollController? _scrollController;
+  final FocusNode _wrapperNode = FocusNode(debugLabel: 'ListWrapper');
+  final FocusNode _anchorNode = FocusNode(debugLabel: 'ListAnchor');
 
   @override
   void didUpdateWidget(ListWidget oldWidget) {
@@ -53,6 +55,8 @@ class _ListWidgetState extends State<ListWidget> {
   @override
   void dispose() {
     _scrollController?.dispose();
+    _wrapperNode.dispose();
+    _anchorNode.dispose();
     super.dispose();
   }
 
@@ -76,6 +80,9 @@ class _ListWidgetState extends State<ListWidget> {
 
   @override
   Widget build(BuildContext context) {
+    final effectiveSelectedIndex = widget.selectedIndex < 0
+        ? 0
+        : widget.selectedIndex;
     return YaruBorderContainer(
       clipBehavior: Clip.antiAlias,
       // Wrap the list in a FocusScope to define it as a group in order to allow propper focus behaviour
@@ -83,6 +90,15 @@ class _ListWidgetState extends State<ListWidget> {
         child: Builder(
           builder: (context) {
             return Focus(
+              focusNode: _wrapperNode,
+              canRequestFocus: true,
+              onFocusChange: (hasFocus) {
+                if (hasFocus && _wrapperNode.hasPrimaryFocus) {
+                  if (_anchorNode.canRequestFocus) {
+                    _anchorNode.requestFocus();
+                  }
+                }
+              },
               // Intercept Key Events to handle Tab to Exit
               onKeyEvent: (node, event) {
                 if (event is KeyDownEvent &&
@@ -114,12 +130,15 @@ class _ListWidgetState extends State<ListWidget> {
                         constraints.maxHeight <= 0) {
                       return const SizedBox.expand();
                     }
-                    // calculate initial center-alignment
+                    final double rawOffset =
+                        effectiveSelectedIndex * _kTileHeight -
+                        constraints.maxHeight / 2 +
+                        _kTileHeight / 2;
+
                     _scrollController ??= ScrollController(
-                      initialScrollOffset: widget.selectedIndex * _kTileHeight -
-                          constraints.maxHeight / 2 +
-                          _kTileHeight / 2,
+                      initialScrollOffset: rawOffset < 0 ? 0.0 : rawOffset,
                     );
+
                     return FocusTraversalGroup(
                       policy: OrderedTraversalPolicy(),
                       child: ListView.builder(
@@ -128,18 +147,56 @@ class _ListWidgetState extends State<ListWidget> {
                         shrinkWrap: widget.shrinkWrap,
                         itemExtent: _kTileHeight,
                         itemCount: widget.itemCount,
-                        itemBuilder: (context, index) => Builder(
-                          builder: (context) {
-                            if (index == widget.selectedIndex) {
-                              // bring a half-visible selected item into the viewport
-                              context.findRenderObject()?.showOnScreen();
-                            }
-                            return FocusTraversalOrder(
-                              order: NumericFocusOrder(index.toDouble()),
-                              child: widget.itemBuilder(context, index),
+                        itemBuilder: (context, index) {
+                          Widget item = widget.itemBuilder(context, index);
+
+                          if (index == widget.selectedIndex) {
+                            item = Builder(
+                              builder: (ctx) {
+                                ctx.findRenderObject()?.showOnScreen();
+                                return widget.itemBuilder(context, index);
+                              },
                             );
-                          },
-                        ),
+                          }
+
+                          final isEffectiveAnchor =
+                              index == effectiveSelectedIndex;
+
+                          item = Focus(
+                            focusNode: isEffectiveAnchor ? _anchorNode : null,
+                            canRequestFocus: isEffectiveAnchor,
+                            skipTraversal: true,
+                            onFocusChange: isEffectiveAnchor
+                                ? (hasFocus) {
+                                    if (hasFocus &&
+                                        _anchorNode.hasPrimaryFocus) {
+                                      _anchorNode.nextFocus();
+                                    }
+                                  }
+                                : null,
+                            onKeyEvent: (node, event) {
+                              if (event is KeyDownEvent) {
+                                if (index == widget.itemCount - 1 &&
+                                    event.logicalKey ==
+                                        LogicalKeyboardKey.arrowDown) {
+                                  return KeyEventResult.handled;
+                                }
+                                if (index == 0 &&
+                                    event.logicalKey ==
+                                        LogicalKeyboardKey.arrowUp) {
+                                  return KeyEventResult.handled;
+                                }
+                              }
+                              return KeyEventResult.ignored;
+                            },
+                            child: item,
+                          );
+
+                          return FocusTraversalOrder(
+                            order: NumericFocusOrder(index.toDouble()),
+                            child: item,
+                          );
+                        },
                       ),
                     );
                   },
