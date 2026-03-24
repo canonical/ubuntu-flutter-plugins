@@ -66,15 +66,27 @@ class _ListWidgetState extends State<ListWidget> {
     final box = _scrollableKey.currentContext?.findRenderObject() as RenderBox?;
     if (box?.hasSize != true) return;
 
-    final scrollOffset = _scrollController!.offset;
-    final tileOffset = index * _kTileHeight;
     final viewHeight = box!.size.height;
+    final scrollOffset = _scrollController!.offset;
+    final tileTop = index * _kTileHeight;
+    final tileBottom = tileTop + _kTileHeight;
 
-    // jump and center align the selected item is fully outside the viewport
-    if (tileOffset < scrollOffset - _kTileHeight ||
-        tileOffset > scrollOffset + viewHeight) {
-      final center = tileOffset - viewHeight / 2 + _kTileHeight / 2;
-      _scrollController?.jumpTo(center);
+  // Check if the tile is off-screen (even partially)
+    if (tileTop < scrollOffset || tileBottom > scrollOffset + viewHeight) {
+      final distance = (tileTop - scrollOffset).abs();
+
+      if (distance > viewHeight) {
+        final center = tileTop - viewHeight / 2 + _kTileHeight / 2;
+        _scrollController?.jumpTo(center);
+      }
+      // If it's just above the viewport, align it to the top.
+      else if (tileTop < scrollOffset) {
+        _scrollController?.jumpTo(tileTop);
+      }
+      // If it's just below the viewport, align it to the bottom.
+      else {
+        _scrollController?.jumpTo(tileBottom - viewHeight);
+      }
     }
   }
 
