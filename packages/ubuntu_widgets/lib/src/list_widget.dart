@@ -3,7 +3,6 @@ import 'package:flutter/services.dart';
 import 'package:ubuntu_widgets/ubuntu_widgets.dart';
 import 'package:yaru/widgets.dart';
 
-// assumes dense list tiles
 const _kTileHeight = kMinInteractiveDimension;
 
 /// A list view that scrolls to the selected item and offers a callback for key
@@ -71,20 +70,15 @@ class _ListWidgetState extends State<ListWidget> {
     final tileTop = index * _kTileHeight;
     final tileBottom = tileTop + _kTileHeight;
 
-  // Check if the tile is off-screen (even partially)
     if (tileTop < scrollOffset || tileBottom > scrollOffset + viewHeight) {
       final distance = (tileTop - scrollOffset).abs();
 
       if (distance > viewHeight) {
         final center = tileTop - viewHeight / 2 + _kTileHeight / 2;
         _scrollController?.jumpTo(center);
-      }
-      // If it's just above the viewport, align it to the top.
-      else if (tileTop < scrollOffset) {
+      } else if (tileTop < scrollOffset) {
         _scrollController?.jumpTo(tileTop);
-      }
-      // If it's just below the viewport, align it to the bottom.
-      else {
+      } else {
         _scrollController?.jumpTo(tileBottom - viewHeight);
       }
     }
@@ -92,12 +86,11 @@ class _ListWidgetState extends State<ListWidget> {
 
   @override
   Widget build(BuildContext context) {
-    final effectiveSelectedIndex = widget.selectedIndex < 0
-        ? 0
-        : widget.selectedIndex;
+    final effectiveSelectedIndex =
+        widget.selectedIndex < 0 ? 0 : widget.selectedIndex;
+
     return YaruBorderContainer(
       clipBehavior: Clip.antiAlias,
-      // Wrap the list in a FocusScope to define it as a group in order to allow propper focus behaviour
       child: FocusScope(
         child: Builder(
           builder: (context) {
@@ -111,16 +104,11 @@ class _ListWidgetState extends State<ListWidget> {
                   }
                 }
               },
-              // Intercept Key Events to handle Tab to Exit
               onKeyEvent: (node, event) {
                 if (event is KeyDownEvent &&
                     event.logicalKey == LogicalKeyboardKey.tab) {
-                  // Get the current scope (the list)
                   final scope = FocusScope.of(context);
 
-                  // Move focus in the PARENT scope (The Page).
-                  // This jumps from the List to the Nex  or previous element
-                  // completely skipping the internal list items.
                   if (HardwareKeyboard.instance.isShiftPressed) {
                     scope.enclosingScope?.previousFocus();
                   } else {
@@ -130,7 +118,6 @@ class _ListWidgetState extends State<ListWidget> {
                   return KeyEventResult.handled;
                 }
 
-                // Let Arrow keys pass through to the ListView naturally
                 return KeyEventResult.ignored;
               },
               child: KeySearch(
@@ -142,8 +129,8 @@ class _ListWidgetState extends State<ListWidget> {
                         constraints.maxHeight <= 0) {
                       return const SizedBox.expand();
                     }
-                    final double rawOffset =
-                        effectiveSelectedIndex * _kTileHeight -
+
+                    final rawOffset = effectiveSelectedIndex * _kTileHeight -
                         constraints.maxHeight / 2 +
                         _kTileHeight / 2;
 
@@ -160,16 +147,7 @@ class _ListWidgetState extends State<ListWidget> {
                         itemExtent: _kTileHeight,
                         itemCount: widget.itemCount,
                         itemBuilder: (context, index) {
-                          Widget item = widget.itemBuilder(context, index);
-
-                          if (index == widget.selectedIndex) {
-                            item = Builder(
-                              builder: (ctx) {
-                                ctx.findRenderObject()?.showOnScreen();
-                                return widget.itemBuilder(context, index);
-                              },
-                            );
-                          }
+                          var item = widget.itemBuilder(context, index);
 
                           final isEffectiveAnchor =
                               index == effectiveSelectedIndex;
@@ -204,8 +182,13 @@ class _ListWidgetState extends State<ListWidget> {
                             child: item,
                           );
 
-                          return FocusTraversalOrder(
+                          item = FocusTraversalOrder(
                             order: NumericFocusOrder(index.toDouble()),
+                            child: item,
+                          );
+
+                          return Semantics(
+                            selected: index == widget.selectedIndex,
                             child: item,
                           );
                         },
