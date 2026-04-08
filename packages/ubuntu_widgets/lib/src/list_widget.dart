@@ -3,6 +3,7 @@ import 'package:flutter/services.dart';
 import 'package:ubuntu_widgets/ubuntu_widgets.dart';
 import 'package:yaru/widgets.dart';
 
+// assumes dense list tiles
 const _kTileHeight = kMinInteractiveDimension;
 
 /// A list view that scrolls to the selected item and offers a callback for key
@@ -48,6 +49,15 @@ class _ListWidgetState extends State<ListWidget> {
     super.didUpdateWidget(oldWidget);
     if (oldWidget.selectedIndex != widget.selectedIndex) {
       _scrollTo(widget.selectedIndex);
+      WidgetsBinding.instance.addPostFrameCallback((_) {
+        if (mounted && _anchorNode.canRequestFocus) {
+          if (_anchorNode.children.isNotEmpty) {
+            _anchorNode.children.first.requestFocus();
+          } else {
+            _anchorNode.requestFocus();
+          }
+        }
+      });
     }
   }
 
@@ -91,6 +101,7 @@ class _ListWidgetState extends State<ListWidget> {
 
     return YaruBorderContainer(
       clipBehavior: Clip.antiAlias,
+      // Wrap the list in a FocusScope to define it as a group in order to allow propper focus behaviour
       child: FocusScope(
         child: Builder(
           builder: (context) {
@@ -100,15 +111,24 @@ class _ListWidgetState extends State<ListWidget> {
               onFocusChange: (hasFocus) {
                 if (hasFocus && _wrapperNode.hasPrimaryFocus) {
                   if (_anchorNode.canRequestFocus) {
-                    _anchorNode.requestFocus();
+                    if (_anchorNode.children.isNotEmpty) {
+                      _anchorNode.children.first.requestFocus();
+                    } else {
+                      _anchorNode.requestFocus();
+                    }
                   }
                 }
               },
+              // Intercept Key Events to handle Tab to Exit
               onKeyEvent: (node, event) {
                 if (event is KeyDownEvent &&
                     event.logicalKey == LogicalKeyboardKey.tab) {
+                  // Get the current scope (the list)
                   final scope = FocusScope.of(context);
 
+                  // Move focus in the PARENT scope (The Page).
+                  // This jumps from the List to the Next or previous element
+                  // completely skipping the internal list items.
                   if (HardwareKeyboard.instance.isShiftPressed) {
                     scope.enclosingScope?.previousFocus();
                   } else {
@@ -118,6 +138,7 @@ class _ListWidgetState extends State<ListWidget> {
                   return KeyEventResult.handled;
                 }
 
+                // Let Arrow keys pass through to the ListView naturally
                 return KeyEventResult.ignored;
               },
               child: KeySearch(
@@ -130,6 +151,7 @@ class _ListWidgetState extends State<ListWidget> {
                       return const SizedBox.expand();
                     }
 
+                    // calculate initial center-alignment
                     final rawOffset = effectiveSelectedIndex * _kTileHeight -
                         constraints.maxHeight / 2 +
                         _kTileHeight / 2;
