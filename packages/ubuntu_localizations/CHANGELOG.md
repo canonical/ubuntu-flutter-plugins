@@ -1,3 +1,7 @@
+## 0.5.2+3
+
+ - **FIX**(l10n): translations update from Hosted Weblate (#470)
+
 ## 0.5.2+2
 
  - **FIX**(ubuntu_localizations): use fallback if locale is 'POSIX' or 'und' (#476).
