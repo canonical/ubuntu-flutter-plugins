@@ -36,322 +36,322 @@ class UbuntuLocalizationsEu extends UbuntuLocalizations {
   String get altKey => 'Alt';
 
   @override
-  String get controlKey => 'Control';
+  String get controlKey => 'Ctrl';
 
   @override
   String get metaKey => 'Meta';
 
   @override
-  String get shiftKey => 'Shift';
+  String get shiftKey => 'Maius';
 
   @override
-  String get aboutLabel => 'About';
+  String get aboutLabel => 'Honi buruz';
 
   @override
-  String get addLabel => 'Add';
+  String get addLabel => 'Gehitu';
 
   @override
-  String get allLabel => 'All';
+  String get allLabel => 'Dena';
 
   @override
-  String get applyLabel => 'Apply';
+  String get applyLabel => 'Aplikatu';
 
   @override
-  String get ascendingLabel => 'Ascending';
+  String get ascendingLabel => 'Gorantz';
 
   @override
-  String get backLabel => 'Back';
+  String get backLabel => 'Atzera';
 
   @override
-  String get boldLabel => 'Bold';
+  String get boldLabel => 'Lodia';
 
   @override
-  String get bottomLabel => 'Bottom';
+  String get bottomLabel => 'Azpian';
 
   @override
   String get cancelLabel => 'Utzi';
 
   @override
-  String get centerLabel => 'Center';
+  String get centerLabel => 'Erdian';
 
   @override
-  String get clearLabel => 'Clear';
+  String get clearLabel => 'Garbitu';
 
   @override
-  String get closeLabel => 'Close';
+  String get closeLabel => 'Itxi';
 
   @override
-  String get colorLabel => 'Color';
+  String get colorLabel => 'Kolore';
 
   @override
   String get connectLabel => 'Konektatu';
 
   @override
-  String get continueLabel => 'Continue';
+  String get continueLabel => 'Jarraitu';
 
   @override
-  String get copyLabel => 'Copy';
+  String get copyLabel => 'Kopiatu';
 
   @override
-  String get createLabel => 'Create';
+  String get createLabel => 'Sortu';
 
   @override
-  String get cutLabel => 'Cut';
+  String get cutLabel => 'Ebaki';
 
   @override
-  String get decreaseLabel => 'Decrease';
+  String get decreaseLabel => 'Txikitu';
 
   @override
-  String get deleteLabel => 'Delete';
+  String get deleteLabel => 'Ezabatu';
 
   @override
-  String get descendingLabel => 'Descending';
+  String get descendingLabel => 'Beherantz';
 
   @override
-  String get discardLabel => 'Discard';
+  String get discardLabel => 'Baztertu';
 
   @override
-  String get disconnectLabel => 'Disconnect';
+  String get disconnectLabel => 'Deskonektatu';
 
   @override
-  String get doneLabel => 'Done';
+  String get doneLabel => 'Eginda';
 
   @override
-  String get downloadLabel => 'Download';
+  String get downloadLabel => 'Deskargatu';
 
   @override
-  String get editLabel => 'Edit';
+  String get editLabel => 'Editatu';
 
   @override
-  String get enterLabel => 'Enter';
+  String get enterLabel => 'Sartu';
 
   @override
-  String get errorLabel => 'Error';
+  String get errorLabel => 'Errorea';
 
   @override
-  String get executeLabel => 'Execute';
+  String get executeLabel => 'Exekutatu';
 
   @override
-  String get exitLabel => 'Exit';
+  String get exitLabel => 'Irten';
 
   @override
-  String get fileLabel => 'File';
+  String get fileLabel => 'Fitxategia';
 
   @override
-  String get fillLabel => 'Fill';
+  String get fillLabel => 'Bete';
 
   @override
-  String get findLabel => 'Find';
+  String get findLabel => 'Bilatu';
 
   @override
-  String get firstLabel => 'First';
+  String get firstLabel => 'Lehenengoa';
 
   @override
-  String get fontLabel => 'Font';
+  String get fontLabel => 'Letra-tipoa';
 
   @override
-  String get forwardLabel => 'Forward';
+  String get forwardLabel => 'Aurrera';
 
   @override
-  String get fullscreenLabel => 'Fullscreen';
+  String get fullscreenLabel => 'Pantaila osoan';
 
   @override
-  String get goBackLabel => 'Go Back';
+  String get goBackLabel => 'Itzuli';
 
   @override
-  String get helpLabel => 'Help';
+  String get helpLabel => 'Laguntza';
 
   @override
-  String get homeLabel => 'Home';
+  String get homeLabel => 'Hasiera';
 
   @override
-  String get importLabel => 'Import';
+  String get importLabel => 'Inportatu';
 
   @override
-  String get increaseLabel => 'Increase';
+  String get increaseLabel => 'Handitu';
 
   @override
-  String get indexLabel => 'Index';
+  String get indexLabel => 'Aurkibidea';
 
   @override
-  String get informationLabel => 'Information';
+  String get informationLabel => 'Informazioa';
 
   @override
-  String get insertLabel => 'Insert';
+  String get insertLabel => 'Txertatu';
 
   @override
-  String get italicLabel => 'Italic';
+  String get italicLabel => 'Etzana';
 
   @override
-  String get landscapeLabel => 'Landscape';
+  String get landscapeLabel => 'Horizontala';
 
   @override
-  String get lastLabel => 'Last';
+  String get lastLabel => 'Azkenekoa';
 
   @override
-  String get leaveLabel => 'Leave';
+  String get leaveLabel => 'Utzi';
 
   @override
-  String get leftLabel => 'Left';
+  String get leftLabel => 'Ezkerrean';
 
   @override
-  String get mediaLabel => 'Media';
+  String get mediaLabel => 'Multimedia';
 
   @override
-  String get networkLabel => 'Network';
+  String get networkLabel => 'Sarea';
 
   @override
-  String get newLabel => 'New';
+  String get newLabel => 'Berria';
 
   @override
-  String get nextLabel => 'Next';
+  String get nextLabel => 'Hurrengoa';
 
   @override
   String get noLabel => 'Ez';
 
   @override
-  String get noneLabel => 'None';
+  String get noneLabel => 'Bat ere ez';
 
   @override
-  String get normalLabel => 'Normal';
+  String get normalLabel => 'Arrunta';
 
   @override
-  String get okLabel => 'Ondo';
+  String get okLabel => 'Ados';
 
   @override
-  String get openLabel => 'Open';
+  String get openLabel => 'Ireki';
 
   @override
-  String get pasteLabel => 'Paste';
+  String get pasteLabel => 'Itsatsi';
 
   @override
-  String get pauseLabel => 'Pause';
+  String get pauseLabel => 'Pausatu';
 
   @override
-  String get playLabel => 'Play';
+  String get playLabel => 'Erreproduzitu';
 
   @override
-  String get portraitLabel => 'Portrait';
+  String get portraitLabel => 'Bertikala';
 
   @override
-  String get preferencesLabel => 'Preferences';
+  String get preferencesLabel => 'Hobespenak';
 
   @override
-  String get previousLabel => 'Previous';
+  String get previousLabel => 'Aurrekoa';
 
   @override
-  String get printLabel => 'Print';
+  String get printLabel => 'Inprimatu';
 
   @override
-  String get printPreviewLabel => 'Print Preview';
+  String get printPreviewLabel => 'Inprimatzeko aurrebista';
 
   @override
-  String get propertiesLabel => 'Properties';
+  String get propertiesLabel => 'Propietateak';
 
   @override
-  String get questionLabel => 'Question';
+  String get questionLabel => 'Galdera';
 
   @override
-  String get quitLabel => 'Quit';
+  String get quitLabel => 'Irten';
 
   @override
-  String get recordLabel => 'Record';
+  String get recordLabel => 'Grabatu';
 
   @override
-  String get redoLabel => 'Redo';
+  String get redoLabel => 'Berregin';
 
   @override
-  String get refreshLabel => 'Refresh';
+  String get refreshLabel => 'Berritu';
 
   @override
-  String get removeLabel => 'Remove';
+  String get removeLabel => 'Kendu';
 
   @override
-  String get renameLabel => 'Rename';
+  String get renameLabel => 'Berrizendatu';
 
   @override
-  String get resetLabel => 'Reset';
+  String get resetLabel => 'Berrezarri';
 
   @override
   String get restartLabel => 'Berrabiarazi';
 
   @override
-  String get restoreLabel => 'Restore';
+  String get restoreLabel => 'Berreskuratu';
 
   @override
-  String get retryLabel => 'Retry';
+  String get retryLabel => 'Berriz saiatu';
 
   @override
   String get revertLabel => 'Berrezarri';
 
   @override
-  String get rewindLabel => 'Rewind';
+  String get rewindLabel => 'Birbobinatu';
 
   @override
-  String get rightLabel => 'Right';
+  String get rightLabel => 'Eskuinean';
 
   @override
-  String get saveAsLabel => 'Save As';
+  String get saveAsLabel => 'Gorde honela';
 
   @override
-  String get saveLabel => 'Save';
+  String get saveLabel => 'Gorde';
 
   @override
-  String get searchLabel => 'Search';
+  String get searchLabel => 'Bilatu';
 
   @override
-  String get selectAllLabel => 'Select All';
+  String get selectAllLabel => 'Hautatu dena';
 
   @override
-  String get selectLabel => 'Select';
+  String get selectLabel => 'Hautatu';
 
   @override
-  String get sendLabel => 'Send';
+  String get sendLabel => 'Bidali';
 
   @override
-  String get skipLabel => 'Skip';
+  String get skipLabel => 'Saltatu';
 
   @override
-  String get sortLabel => 'Sort';
+  String get sortLabel => 'Ordenatu';
 
   @override
-  String get stopLabel => 'Stop';
+  String get stopLabel => 'Gelditu';
 
   @override
-  String get strikeThroughLabel => 'Strike Through';
+  String get strikeThroughLabel => 'Zeharmarra';
 
   @override
-  String get submitLabel => 'Submit';
+  String get submitLabel => 'Bidali';
 
   @override
-  String get topLabel => 'Top';
+  String get topLabel => 'Goian';
 
   @override
-  String get undoLabel => 'Undo';
+  String get undoLabel => 'Desegin';
 
   @override
-  String get updateLabel => 'Update';
+  String get updateLabel => 'Eguneratu';
 
   @override
-  String get upLabel => 'Up';
+  String get upLabel => 'Gora';
 
   @override
-  String get viewLabel => 'View';
+  String get viewLabel => 'Ikusi';
 
   @override
-  String get warningLabel => 'Warning';
+  String get warningLabel => 'Abisua';
 
   @override
-  String get windowLabel => 'Window';
+  String get windowLabel => 'Leihoa';
 
   @override
   String get yesLabel => 'Bai';
 
   @override
-  String get zoomInLabel => 'Zoom In';
+  String get zoomInLabel => 'Gerturatu';
 
   @override
-  String get zoomOutLabel => 'Zoom Out';
+  String get zoomOutLabel => 'Urrundu';
 
   @override
   String get byte => 'B';

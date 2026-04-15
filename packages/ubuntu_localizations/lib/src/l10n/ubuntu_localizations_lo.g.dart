@@ -12,25 +12,25 @@ class UbuntuLocalizationsLo extends UbuntuLocalizations {
   String get countryCode => 'LA';
 
   @override
-  String get languageName => '﻿ລາວ';
+  String get languageName => 'ລາວ';
 
   @override
-  String get backAction => 'Go back';
+  String get backAction => 'ກັບຄືນ';
 
   @override
-  String get continueAction => 'Continue';
+  String get continueAction => 'ດຳເນີນການຕໍ່';
 
   @override
-  String get strongPassword => 'Strong password';
+  String get strongPassword => 'ລະຫັດຜ່ານປອດໄພສູງ';
 
   @override
-  String get fairPassword => 'Fair password';
+  String get fairPassword => 'ລະຫັດຜ່ານປານກາງ';
 
   @override
-  String get goodPassword => 'Good password';
+  String get goodPassword => 'ລະຫັດຜ່ານດີ';
 
   @override
-  String get weakPassword => 'Weak password';
+  String get weakPassword => 'ລະຫັດຜ່ານອ່ອນ';
 
   @override
   String get altKey => 'Alt';
@@ -45,313 +45,313 @@ class UbuntuLocalizationsLo extends UbuntuLocalizations {
   String get shiftKey => 'Shift';
 
   @override
-  String get aboutLabel => 'About';
+  String get aboutLabel => 'ກ່ຽວກັບ';
 
   @override
-  String get addLabel => 'Add';
+  String get addLabel => 'ເພີ່ມ';
 
   @override
-  String get allLabel => 'All';
+  String get allLabel => 'ທັງໝົດ';
 
   @override
-  String get applyLabel => 'Apply';
+  String get applyLabel => 'ນຳໃຊ້';
 
   @override
-  String get ascendingLabel => 'Ascending';
+  String get ascendingLabel => 'ລຽງຂຶ້ນ';
 
   @override
-  String get backLabel => 'Back';
+  String get backLabel => 'ກັບຄືນ';
 
   @override
-  String get boldLabel => 'Bold';
+  String get boldLabel => 'ໂຕເຂັ້ມ';
 
   @override
-  String get bottomLabel => 'Bottom';
+  String get bottomLabel => 'ທາງລຸ່ມ';
 
   @override
-  String get cancelLabel => 'Cancel';
+  String get cancelLabel => 'ຍົກເລີກ';
 
   @override
-  String get centerLabel => 'Center';
+  String get centerLabel => 'ເຄິ່ງກາງ';
 
   @override
-  String get clearLabel => 'Clear';
+  String get clearLabel => 'ລຶບລ້າງ';
 
   @override
-  String get closeLabel => 'Close';
+  String get closeLabel => 'ປິດ';
 
   @override
-  String get colorLabel => 'Color';
+  String get colorLabel => 'ສີ';
 
   @override
-  String get connectLabel => 'Connect';
+  String get connectLabel => 'ເຊື່ອມຕໍ່';
 
   @override
-  String get continueLabel => 'Continue';
+  String get continueLabel => 'ດຳເນີນການຕໍ່';
 
   @override
-  String get copyLabel => 'Copy';
+  String get copyLabel => 'ສຳເນົາ';
 
   @override
-  String get createLabel => 'Create';
+  String get createLabel => 'ສ້າງ';
 
   @override
-  String get cutLabel => 'Cut';
+  String get cutLabel => 'ຕັດ';
 
   @override
-  String get decreaseLabel => 'Decrease';
+  String get decreaseLabel => 'ຫຼຸດລົງ';
 
   @override
-  String get deleteLabel => 'Delete';
+  String get deleteLabel => 'ລຶບ';
 
   @override
-  String get descendingLabel => 'Descending';
+  String get descendingLabel => 'ລຽງລົງ';
 
   @override
-  String get discardLabel => 'Discard';
+  String get discardLabel => 'ປະຖິ້ມ';
 
   @override
-  String get disconnectLabel => 'Disconnect';
+  String get disconnectLabel => 'ຕັດການເຊື່ອມຕໍ່';
 
   @override
-  String get doneLabel => 'Done';
+  String get doneLabel => 'ສຳເລັດ';
 
   @override
-  String get downloadLabel => 'Download';
+  String get downloadLabel => 'ດາວໂຫຼດ';
 
   @override
-  String get editLabel => 'Edit';
+  String get editLabel => 'ແກ້ໄຂ';
 
   @override
-  String get enterLabel => 'Enter';
+  String get enterLabel => 'ຕົກລົງ';
 
   @override
-  String get errorLabel => 'Error';
+  String get errorLabel => 'ຜິດພາດ';
 
   @override
-  String get executeLabel => 'Execute';
+  String get executeLabel => 'ປະຕິບັດ';
 
   @override
-  String get exitLabel => 'Exit';
+  String get exitLabel => 'ອອກ';
 
   @override
-  String get fileLabel => 'File';
+  String get fileLabel => 'ໄຟລ໌';
 
   @override
-  String get fillLabel => 'Fill';
+  String get fillLabel => 'ຕື່ມ';
 
   @override
-  String get findLabel => 'Find';
+  String get findLabel => 'ຄົ້ນຫາ';
 
   @override
-  String get firstLabel => 'First';
+  String get firstLabel => 'ທຳອິດ';
 
   @override
-  String get fontLabel => 'Font';
+  String get fontLabel => 'ແບບໂຕໜັງສື';
 
   @override
-  String get forwardLabel => 'Forward';
+  String get forwardLabel => 'ໄປໜ້າ';
 
   @override
-  String get fullscreenLabel => 'Fullscreen';
+  String get fullscreenLabel => 'ເຕັມໜ້າຈໍ';
 
   @override
-  String get goBackLabel => 'Go Back';
+  String get goBackLabel => 'ກັບຄືນ';
 
   @override
-  String get helpLabel => 'Help';
+  String get helpLabel => 'ຊ່ວຍເຫຼືອ';
 
   @override
-  String get homeLabel => 'Home';
+  String get homeLabel => 'ໜ້າຫຼັກ';
 
   @override
-  String get importLabel => 'Import';
+  String get importLabel => 'ນຳເຂົ້າ';
 
   @override
-  String get increaseLabel => 'Increase';
+  String get increaseLabel => 'ເພີ່ມຂຶ້ນ';
 
   @override
-  String get indexLabel => 'Index';
+  String get indexLabel => 'ດັດຊະນີ';
 
   @override
-  String get informationLabel => 'Information';
+  String get informationLabel => 'ຂໍ້ມູນ';
 
   @override
-  String get insertLabel => 'Insert';
+  String get insertLabel => 'ແຊກ';
 
   @override
-  String get italicLabel => 'Italic';
+  String get italicLabel => 'ໂຕອຽງ';
 
   @override
-  String get landscapeLabel => 'Landscape';
+  String get landscapeLabel => 'ລວງນອນ';
 
   @override
-  String get lastLabel => 'Last';
+  String get lastLabel => 'ສຸດທ້າຍ';
 
   @override
-  String get leaveLabel => 'Leave';
+  String get leaveLabel => 'ອອກຈາກ';
 
   @override
-  String get leftLabel => 'Left';
+  String get leftLabel => 'ຊ້າຍ';
 
   @override
-  String get mediaLabel => 'Media';
+  String get mediaLabel => 'ສື່';
 
   @override
-  String get networkLabel => 'Network';
+  String get networkLabel => 'ເຄືອຂ່າຍ';
 
   @override
-  String get newLabel => 'New';
+  String get newLabel => 'ໃໝ່';
 
   @override
-  String get nextLabel => 'Next';
+  String get nextLabel => 'ຕໍ່ໄປ';
 
   @override
-  String get noLabel => 'No';
+  String get noLabel => 'ບໍ່';
 
   @override
-  String get noneLabel => 'None';
+  String get noneLabel => 'ບໍ່ມີ';
 
   @override
-  String get normalLabel => 'Normal';
+  String get normalLabel => 'ປົກກະຕິ';
 
   @override
-  String get okLabel => 'OK';
+  String get okLabel => 'ຕົກລົງ';
 
   @override
-  String get openLabel => 'Open';
+  String get openLabel => 'ເປີດ';
 
   @override
-  String get pasteLabel => 'Paste';
+  String get pasteLabel => 'ວາງ';
 
   @override
-  String get pauseLabel => 'Pause';
+  String get pauseLabel => 'ຢຸດຊົ່ວຄາວ';
 
   @override
-  String get playLabel => 'Play';
+  String get playLabel => 'ຫຼິ້ນ';
 
   @override
-  String get portraitLabel => 'Portrait';
+  String get portraitLabel => 'ລວງຕັ້ງ';
 
   @override
-  String get preferencesLabel => 'Preferences';
+  String get preferencesLabel => 'ການຕັ້ງຄ່າ';
 
   @override
-  String get previousLabel => 'Previous';
+  String get previousLabel => 'ກ່ອນໜ້າ';
 
   @override
-  String get printLabel => 'Print';
+  String get printLabel => 'ພິມ';
 
   @override
-  String get printPreviewLabel => 'Print Preview';
+  String get printPreviewLabel => 'ສະແດງຕົວຢ່າງກ່ອນພິມ';
 
   @override
-  String get propertiesLabel => 'Properties';
+  String get propertiesLabel => 'ຄຸນສົມບັດ';
 
   @override
-  String get questionLabel => 'Question';
+  String get questionLabel => 'ຄຳຖາມ';
 
   @override
-  String get quitLabel => 'Quit';
+  String get quitLabel => 'ອອກ';
 
   @override
-  String get recordLabel => 'Record';
+  String get recordLabel => 'ບັນທຶກ';
 
   @override
-  String get redoLabel => 'Redo';
+  String get redoLabel => 'ເຮັດຄືນ';
 
   @override
-  String get refreshLabel => 'Refresh';
+  String get refreshLabel => 'ໂຫຼດຄືນໃໝ່';
 
   @override
-  String get removeLabel => 'Remove';
+  String get removeLabel => 'ເອົາອອກ';
 
   @override
-  String get renameLabel => 'Rename';
+  String get renameLabel => 'ປ່ຽນຊື່';
 
   @override
-  String get resetLabel => 'Reset';
+  String get resetLabel => 'ຕັ້ງຄ່າຄືນໃໝ່';
 
   @override
-  String get restartLabel => 'Restart';
+  String get restartLabel => 'ເລີ່ມຕົ້ນໃໝ່';
 
   @override
-  String get restoreLabel => 'Restore';
+  String get restoreLabel => 'ກູ້ຄືນ';
 
   @override
-  String get retryLabel => 'Retry';
+  String get retryLabel => 'ລອງໃໝ່';
 
   @override
-  String get revertLabel => 'Revert';
+  String get revertLabel => 'ຍ້ອນກັບ';
 
   @override
-  String get rewindLabel => 'Rewind';
+  String get rewindLabel => 'ກໍກັບ';
 
   @override
-  String get rightLabel => 'Right';
+  String get rightLabel => 'ຂວາ';
 
   @override
-  String get saveAsLabel => 'Save As';
+  String get saveAsLabel => 'ບັນທຶກເປັນ';
 
   @override
-  String get saveLabel => 'Save';
+  String get saveLabel => 'ບັນທຶກ';
 
   @override
-  String get searchLabel => 'Search';
+  String get searchLabel => 'ຄົ້ນຫາ';
 
   @override
-  String get selectAllLabel => 'Select All';
+  String get selectAllLabel => 'ເລືອກທັງໝົດ';
 
   @override
-  String get selectLabel => 'Select';
+  String get selectLabel => 'ເລືອກ';
 
   @override
-  String get sendLabel => 'Send';
+  String get sendLabel => 'ສົ່ງ';
 
   @override
-  String get skipLabel => 'Skip';
+  String get skipLabel => 'ຂ້າມ';
 
   @override
-  String get sortLabel => 'Sort';
+  String get sortLabel => 'ລຽງລຳດັບ';
 
   @override
-  String get stopLabel => 'Stop';
+  String get stopLabel => 'ຢຸດ';
 
   @override
-  String get strikeThroughLabel => 'Strike Through';
+  String get strikeThroughLabel => 'ຂີດຂ້າ';
 
   @override
-  String get submitLabel => 'Submit';
+  String get submitLabel => 'ສົ່ງ';
 
   @override
-  String get topLabel => 'Top';
+  String get topLabel => 'ທາງເທິງ';
 
   @override
-  String get undoLabel => 'Undo';
+  String get undoLabel => 'ເລີກເຮັດ';
 
   @override
-  String get updateLabel => 'Update';
+  String get updateLabel => 'ອັບເດດ';
 
   @override
-  String get upLabel => 'Up';
+  String get upLabel => 'ຂຶ້ນ';
 
   @override
-  String get viewLabel => 'View';
+  String get viewLabel => 'ມຸມມອງ';
 
   @override
-  String get warningLabel => 'Warning';
+  String get warningLabel => 'ຄຳເຕືອນ';
 
   @override
-  String get windowLabel => 'Window';
+  String get windowLabel => 'ໜ້າຕ່າງ';
 
   @override
-  String get yesLabel => 'Yes';
+  String get yesLabel => 'ແມ່ນ';
 
   @override
-  String get zoomInLabel => 'Zoom In';
+  String get zoomInLabel => 'ຂະຫຍາຍເຂົ້າ';
 
   @override
-  String get zoomOutLabel => 'Zoom Out';
+  String get zoomOutLabel => 'ຫຍໍ້ລົງ';
 
   @override
   String get byte => 'B';

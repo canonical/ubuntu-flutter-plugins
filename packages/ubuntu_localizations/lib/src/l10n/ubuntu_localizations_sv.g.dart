@@ -9,7 +9,7 @@ class UbuntuLocalizationsSv extends UbuntuLocalizations {
   UbuntuLocalizationsSv([String locale = 'sv']) : super(locale);
 
   @override
-  String get countryCode => 'SE';
+  String get countryCode => 'SV';
 
   @override
   String get languageName => 'Svenska';
@@ -42,7 +42,7 @@ class UbuntuLocalizationsSv extends UbuntuLocalizations {
   String get metaKey => 'Meta';
 
   @override
-  String get shiftKey => 'Shift';
+  String get shiftKey => 'Skift';
 
   @override
   String get aboutLabel => 'Om';
@@ -75,7 +75,7 @@ class UbuntuLocalizationsSv extends UbuntuLocalizations {
   String get centerLabel => 'Mitten';
 
   @override
-  String get clearLabel => 'Rensa';
+  String get clearLabel => 'Töm';
 
   @override
   String get closeLabel => 'Stäng';
@@ -105,19 +105,19 @@ class UbuntuLocalizationsSv extends UbuntuLocalizations {
   String get deleteLabel => 'Ta bort';
 
   @override
-  String get descendingLabel => 'Nedåtgående';
+  String get descendingLabel => 'Fallande';
 
   @override
-  String get discardLabel => 'Kasta';
+  String get discardLabel => 'Förkasta';
 
   @override
-  String get disconnectLabel => 'Koppla ifrån';
+  String get disconnectLabel => 'Koppla från';
 
   @override
   String get doneLabel => 'Klart';
 
   @override
-  String get downloadLabel => 'Ladda ned';
+  String get downloadLabel => 'Hämta ner';
 
   @override
   String get editLabel => 'Redigera';
@@ -141,10 +141,10 @@ class UbuntuLocalizationsSv extends UbuntuLocalizations {
   String get fillLabel => 'Fyll';
 
   @override
-  String get findLabel => 'Hitta';
+  String get findLabel => 'Sök';
 
   @override
-  String get firstLabel => 'Först';
+  String get firstLabel => 'Första';
 
   @override
   String get fontLabel => 'Teckensnitt';
@@ -183,7 +183,7 @@ class UbuntuLocalizationsSv extends UbuntuLocalizations {
   String get italicLabel => 'Kursiv';
 
   @override
-  String get landscapeLabel => 'Landscape';
+  String get landscapeLabel => 'Liggande';
 
   @override
   String get lastLabel => 'Sista';
@@ -228,7 +228,7 @@ class UbuntuLocalizationsSv extends UbuntuLocalizations {
   String get pauseLabel => 'Pausa';
 
   @override
-  String get playLabel => 'Spela';
+  String get playLabel => 'Spela upp';
 
   @override
   String get portraitLabel => 'Porträtt';
@@ -243,7 +243,7 @@ class UbuntuLocalizationsSv extends UbuntuLocalizations {
   String get printLabel => 'Skriv ut';
 
   @override
-  String get printPreviewLabel => 'Utskriftsförhandsgranskning';
+  String get printPreviewLabel => 'Förhandsgranska utskrift';
 
   @override
   String get propertiesLabel => 'Egenskaper';
@@ -270,7 +270,7 @@ class UbuntuLocalizationsSv extends UbuntuLocalizations {
   String get renameLabel => 'Byt namn';
 
   @override
-  String get resetLabel => 'Återställa';
+  String get resetLabel => 'Återställ';
 
   @override
   String get restartLabel => 'Starta om';

@@ -15,25 +15,25 @@ class UbuntuLocalizationsKm extends UbuntuLocalizations {
   String get languageName => '﻿ខ្មែរ';
 
   @override
-  String get backAction => 'Go back';
+  String get backAction => 'ត្រឡប់ក្រោយ';
 
   @override
-  String get continueAction => 'Continue';
+  String get continueAction => 'បន្ត';
 
   @override
-  String get strongPassword => 'Strong password';
+  String get strongPassword => 'ពាក្យសម្ងាត់សុវត្ថិភាពខ្លាំង';
 
   @override
-  String get fairPassword => 'Fair password';
+  String get fairPassword => 'ពាក្យសម្ងាត់សមរម្យ';
 
   @override
-  String get goodPassword => 'Good password';
+  String get goodPassword => 'ពាក្យសម្ងាត់ល្អ';
 
   @override
-  String get weakPassword => 'Weak password';
+  String get weakPassword => 'ពាក្យសម្ងាត់ខ្សោយ';
 
   @override
-  String get altKey => 'Alt';
+  String get altKey => 'ជំនួស';
 
   @override
   String get controlKey => 'Control';

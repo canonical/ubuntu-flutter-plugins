@@ -183,7 +183,7 @@ class UbuntuLocalizationsJa extends UbuntuLocalizations {
   String get italicLabel => '斜体';
 
   @override
-  String get landscapeLabel => 'Landscape';
+  String get landscapeLabel => '横向き';
 
   @override
   String get lastLabel => '最後';
@@ -201,10 +201,10 @@ class UbuntuLocalizationsJa extends UbuntuLocalizations {
   String get networkLabel => 'ネットワーク';
 
   @override
-  String get newLabel => 'New';
+  String get newLabel => '新';
 
   @override
-  String get nextLabel => '次';
+  String get nextLabel => '次へ';
 
   @override
   String get noLabel => 'いいえ';
@@ -213,7 +213,7 @@ class UbuntuLocalizationsJa extends UbuntuLocalizations {
   String get noneLabel => 'なし';
 
   @override
-  String get normalLabel => 'Normal';
+  String get normalLabel => '通常';
 
   @override
   String get okLabel => 'OK';
@@ -225,13 +225,13 @@ class UbuntuLocalizationsJa extends UbuntuLocalizations {
   String get pasteLabel => '貼り付け';
 
   @override
-  String get pauseLabel => 'Pause';
+  String get pauseLabel => '一時停止';
 
   @override
   String get playLabel => '再生';
 
   @override
-  String get portraitLabel => 'Portrait';
+  String get portraitLabel => '縦向き';
 
   @override
   String get preferencesLabel => '設定';
@@ -255,19 +255,19 @@ class UbuntuLocalizationsJa extends UbuntuLocalizations {
   String get quitLabel => '終了';
 
   @override
-  String get recordLabel => 'Record';
+  String get recordLabel => '記録';
 
   @override
   String get redoLabel => 'やり直し';
 
   @override
-  String get refreshLabel => 'Refresh';
+  String get refreshLabel => '更新';
 
   @override
   String get removeLabel => '削除';
 
   @override
-  String get renameLabel => 'Rename';
+  String get renameLabel => '名前を変更';
 
   @override
   String get resetLabel => 'リセット';
@@ -279,13 +279,13 @@ class UbuntuLocalizationsJa extends UbuntuLocalizations {
   String get restoreLabel => 'Restore';
 
   @override
-  String get retryLabel => 'Retry';
+  String get retryLabel => '再試行';
 
   @override
   String get revertLabel => '元に戻す';
 
   @override
-  String get rewindLabel => 'Rewind';
+  String get rewindLabel => '巻き戻し';
 
   @override
   String get rightLabel => '右';
@@ -321,10 +321,10 @@ class UbuntuLocalizationsJa extends UbuntuLocalizations {
   String get strikeThroughLabel => '取り消し線';
 
   @override
-  String get submitLabel => 'Submit';
+  String get submitLabel => '送信';
 
   @override
-  String get topLabel => 'Top';
+  String get topLabel => '上';
 
   @override
   String get undoLabel => '元に戻す';

@@ -15,22 +15,22 @@ class UbuntuLocalizationsEl extends UbuntuLocalizations {
   String get languageName => 'Ελληνικά';
 
   @override
-  String get backAction => 'Go back';
+  String get backAction => 'Πήγαινε πίσω';
 
   @override
-  String get continueAction => 'Continue';
+  String get continueAction => 'Συνέχεια';
 
   @override
-  String get strongPassword => 'Strong password';
+  String get strongPassword => 'Δυνατός κωδικός πρόσβασης';
 
   @override
-  String get fairPassword => 'Fair password';
+  String get fairPassword => 'Μέτριος κωδικός πρόσβασης';
 
   @override
-  String get goodPassword => 'Good password';
+  String get goodPassword => 'Καλός κωδικός πρόσβασης';
 
   @override
-  String get weakPassword => 'Weak password';
+  String get weakPassword => 'Αδύναμος κωδικός πρόσβασης';
 
   @override
   String get altKey => 'Alt';
@@ -45,313 +45,313 @@ class UbuntuLocalizationsEl extends UbuntuLocalizations {
   String get shiftKey => 'Shift';
 
   @override
-  String get aboutLabel => 'About';
+  String get aboutLabel => 'Περί';
 
   @override
-  String get addLabel => 'Add';
+  String get addLabel => 'Προσθήκη';
 
   @override
-  String get allLabel => 'All';
+  String get allLabel => 'Όλα';
 
   @override
-  String get applyLabel => 'Apply';
+  String get applyLabel => 'Εφαρμογή';
 
   @override
-  String get ascendingLabel => 'Ascending';
+  String get ascendingLabel => 'Αύξουσα';
 
   @override
-  String get backLabel => 'Back';
+  String get backLabel => 'Πίσω';
 
   @override
-  String get boldLabel => 'Bold';
+  String get boldLabel => 'Έντονα';
 
   @override
-  String get bottomLabel => 'Bottom';
+  String get bottomLabel => 'Κάτω μέρος';
 
   @override
-  String get cancelLabel => 'Cancel';
+  String get cancelLabel => 'Ακύρωση';
 
   @override
-  String get centerLabel => 'Center';
+  String get centerLabel => 'Κέντρο';
 
   @override
-  String get clearLabel => 'Clear';
+  String get clearLabel => 'Καθαρισμός';
 
   @override
-  String get closeLabel => 'Close';
+  String get closeLabel => 'Κλείσιμο';
 
   @override
-  String get colorLabel => 'Color';
+  String get colorLabel => 'Χρώμα';
 
   @override
-  String get connectLabel => 'Connect';
+  String get connectLabel => 'Σύνδεση';
 
   @override
-  String get continueLabel => 'Continue';
+  String get continueLabel => 'Συνέχεια';
 
   @override
-  String get copyLabel => 'Copy';
+  String get copyLabel => 'Αντιγραφή';
 
   @override
-  String get createLabel => 'Create';
+  String get createLabel => 'Δημιουργία';
 
   @override
-  String get cutLabel => 'Cut';
+  String get cutLabel => 'Αποκοπή';
 
   @override
-  String get decreaseLabel => 'Decrease';
+  String get decreaseLabel => 'Μείωση';
 
   @override
-  String get deleteLabel => 'Delete';
+  String get deleteLabel => 'Διαγραφή';
 
   @override
-  String get descendingLabel => 'Descending';
+  String get descendingLabel => 'Φθίνουσα';
 
   @override
-  String get discardLabel => 'Discard';
+  String get discardLabel => 'Απόρριψη';
 
   @override
-  String get disconnectLabel => 'Disconnect';
+  String get disconnectLabel => 'Αποσύνδεση';
 
   @override
-  String get doneLabel => 'Done';
+  String get doneLabel => 'Ολοκλήρωση';
 
   @override
-  String get downloadLabel => 'Download';
+  String get downloadLabel => 'Λήψη';
 
   @override
-  String get editLabel => 'Edit';
+  String get editLabel => 'Επεξεργασία';
 
   @override
   String get enterLabel => 'Enter';
 
   @override
-  String get errorLabel => 'Error';
+  String get errorLabel => 'Σφάλμα';
 
   @override
-  String get executeLabel => 'Execute';
+  String get executeLabel => 'Εκτέλεση';
 
   @override
-  String get exitLabel => 'Exit';
+  String get exitLabel => 'Έξοδος';
 
   @override
-  String get fileLabel => 'File';
+  String get fileLabel => 'Αρχείο';
 
   @override
-  String get fillLabel => 'Fill';
+  String get fillLabel => 'Γέμισμα';
 
   @override
-  String get findLabel => 'Find';
+  String get findLabel => 'Αναζήτηση';
 
   @override
-  String get firstLabel => 'First';
+  String get firstLabel => 'Πρώτο';
 
   @override
-  String get fontLabel => 'Font';
+  String get fontLabel => 'Γραμματοσειρά';
 
   @override
-  String get forwardLabel => 'Forward';
+  String get forwardLabel => 'Μπροστά';
 
   @override
-  String get fullscreenLabel => 'Fullscreen';
+  String get fullscreenLabel => 'Πλήρης οθόνη';
 
   @override
-  String get goBackLabel => 'Go Back';
+  String get goBackLabel => 'Πήγαινε πίσω';
 
   @override
-  String get helpLabel => 'Help';
+  String get helpLabel => 'Βοήθεια';
 
   @override
-  String get homeLabel => 'Home';
+  String get homeLabel => 'Αρχή';
 
   @override
-  String get importLabel => 'Import';
+  String get importLabel => 'Εισαγωγή';
 
   @override
-  String get increaseLabel => 'Increase';
+  String get increaseLabel => 'Αύξηση';
 
   @override
-  String get indexLabel => 'Index';
+  String get indexLabel => 'Ευρετήριο';
 
   @override
-  String get informationLabel => 'Information';
+  String get informationLabel => 'Πληροφορία';
 
   @override
-  String get insertLabel => 'Insert';
+  String get insertLabel => 'Εισαγωγή';
 
   @override
-  String get italicLabel => 'Italic';
+  String get italicLabel => 'Πλάγια';
 
   @override
-  String get landscapeLabel => 'Landscape';
+  String get landscapeLabel => 'Τοπίο';
 
   @override
-  String get lastLabel => 'Last';
+  String get lastLabel => 'Τελευταίο';
 
   @override
-  String get leaveLabel => 'Leave';
+  String get leaveLabel => 'Αποχώρηση';
 
   @override
-  String get leftLabel => 'Left';
+  String get leftLabel => 'Αριστερά';
 
   @override
-  String get mediaLabel => 'Media';
+  String get mediaLabel => 'Πολυμέσα';
 
   @override
-  String get networkLabel => 'Network';
+  String get networkLabel => 'Δίκτυο';
 
   @override
-  String get newLabel => 'New';
+  String get newLabel => 'Νέο';
 
   @override
-  String get nextLabel => 'Next';
+  String get nextLabel => 'Επόμενο';
 
   @override
-  String get noLabel => 'No';
+  String get noLabel => 'Όχι';
 
   @override
-  String get noneLabel => 'None';
+  String get noneLabel => 'Κανένα';
 
   @override
-  String get normalLabel => 'Normal';
+  String get normalLabel => 'Κανονικά';
 
   @override
-  String get okLabel => 'OK';
+  String get okLabel => 'Εντάξει';
 
   @override
-  String get openLabel => 'Open';
+  String get openLabel => 'Άνοιγμα';
 
   @override
-  String get pasteLabel => 'Paste';
+  String get pasteLabel => 'Επικόλληση';
 
   @override
-  String get pauseLabel => 'Pause';
+  String get pauseLabel => 'Παύση';
 
   @override
-  String get playLabel => 'Play';
+  String get playLabel => 'Αναπαραγωγή';
 
   @override
-  String get portraitLabel => 'Portrait';
+  String get portraitLabel => 'Πορτραίτο';
 
   @override
-  String get preferencesLabel => 'Preferences';
+  String get preferencesLabel => 'Προτιμήσεις';
 
   @override
-  String get previousLabel => 'Previous';
+  String get previousLabel => 'Προηγούμενο';
 
   @override
-  String get printLabel => 'Print';
+  String get printLabel => 'Εκτύπωση';
 
   @override
-  String get printPreviewLabel => 'Print Preview';
+  String get printPreviewLabel => 'Προεπισκόπηση εκτύπωσης';
 
   @override
-  String get propertiesLabel => 'Properties';
+  String get propertiesLabel => 'Ιδιότητες';
 
   @override
-  String get questionLabel => 'Question';
+  String get questionLabel => 'Ερώτηση';
 
   @override
-  String get quitLabel => 'Quit';
+  String get quitLabel => 'Αποχώρηση';
 
   @override
-  String get recordLabel => 'Record';
+  String get recordLabel => 'Καταχώρηση';
 
   @override
-  String get redoLabel => 'Redo';
+  String get redoLabel => 'Επανάληψη';
 
   @override
-  String get refreshLabel => 'Refresh';
+  String get refreshLabel => 'Ανανέωση';
 
   @override
-  String get removeLabel => 'Remove';
+  String get removeLabel => 'Αφαίρεση';
 
   @override
-  String get renameLabel => 'Rename';
+  String get renameLabel => 'Μετονομασία';
 
   @override
-  String get resetLabel => 'Reset';
+  String get resetLabel => 'Αρχικοποίηση';
 
   @override
-  String get restartLabel => 'Restart';
+  String get restartLabel => 'Επανεκκίνηση';
 
   @override
-  String get restoreLabel => 'Restore';
+  String get restoreLabel => 'Επαναφορά';
 
   @override
-  String get retryLabel => 'Retry';
+  String get retryLabel => 'Προσπάθεια ξανά';
 
   @override
-  String get revertLabel => 'Revert';
+  String get revertLabel => 'Επαναφορά';
 
   @override
   String get rewindLabel => 'Rewind';
 
   @override
-  String get rightLabel => 'Right';
+  String get rightLabel => 'Δεξιά';
 
   @override
-  String get saveAsLabel => 'Save As';
+  String get saveAsLabel => 'Αποθήκευση ως';
 
   @override
-  String get saveLabel => 'Save';
+  String get saveLabel => 'Αποθήκευση';
 
   @override
-  String get searchLabel => 'Search';
+  String get searchLabel => 'Εύρεση';
 
   @override
-  String get selectAllLabel => 'Select All';
+  String get selectAllLabel => 'Επιλογή όλων';
 
   @override
-  String get selectLabel => 'Select';
+  String get selectLabel => 'Επιλογή';
 
   @override
-  String get sendLabel => 'Send';
+  String get sendLabel => 'Αποστολή';
 
   @override
-  String get skipLabel => 'Skip';
+  String get skipLabel => 'Παράλεψη';
 
   @override
-  String get sortLabel => 'Sort';
+  String get sortLabel => 'Ταξινόμηση';
 
   @override
-  String get stopLabel => 'Stop';
+  String get stopLabel => 'Διακοπή';
 
   @override
-  String get strikeThroughLabel => 'Strike Through';
+  String get strikeThroughLabel => 'Διαγράμμιση';
 
   @override
-  String get submitLabel => 'Submit';
+  String get submitLabel => 'Υποβολή';
 
   @override
-  String get topLabel => 'Top';
+  String get topLabel => 'Κορυφή';
 
   @override
-  String get undoLabel => 'Undo';
+  String get undoLabel => 'Αναίρεση';
 
   @override
-  String get updateLabel => 'Update';
+  String get updateLabel => 'Ενημέρωση';
 
   @override
-  String get upLabel => 'Up';
+  String get upLabel => 'Επάνω';
 
   @override
-  String get viewLabel => 'View';
+  String get viewLabel => 'Προβολή';
 
   @override
-  String get warningLabel => 'Warning';
+  String get warningLabel => 'Προσοχή';
 
   @override
-  String get windowLabel => 'Window';
+  String get windowLabel => 'Παράθυρο';
 
   @override
-  String get yesLabel => 'Yes';
+  String get yesLabel => 'Ναι';
 
   @override
-  String get zoomInLabel => 'Zoom In';
+  String get zoomInLabel => 'Μεγέθυνση';
 
   @override
-  String get zoomOutLabel => 'Zoom Out';
+  String get zoomOutLabel => 'Σμίκρυνση';
 
   @override
   String get byte => 'B';

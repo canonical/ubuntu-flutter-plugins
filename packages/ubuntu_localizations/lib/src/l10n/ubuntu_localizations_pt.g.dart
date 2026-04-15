@@ -240,7 +240,7 @@ class UbuntuLocalizationsPt extends UbuntuLocalizations {
   String get previousLabel => 'Anterior';
 
   @override
-  String get printLabel => 'Mostrar';
+  String get printLabel => 'Imprimir';
 
   @override
   String get printPreviewLabel => 'Mostrar pré-visualização';
