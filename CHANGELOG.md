@@ -3,6 +3,27 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 2026-04-15
+
+### Changes
+
+---
+
+Packages with breaking changes:
+
+ - There are no breaking changes in this release.
+
+Packages with other changes:
+
+ - [`ubuntu_localizations` - `v0.5.2+3`](#ubuntu_localizations---v0523)
+
+---
+
+#### `ubuntu_localizations` - `v0.5.2+3`
+
+ - **FIX**(l10n): translations update from Hosted Weblate (#470)
+
+
 ## 2026-03-12
 
 ### Changes
