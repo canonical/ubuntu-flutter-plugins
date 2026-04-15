@@ -45,329 +45,329 @@ class UbuntuLocalizationsKa extends UbuntuLocalizations {
   String get shiftKey => 'Shift';
 
   @override
-  String get aboutLabel => 'About';
+  String get aboutLabel => 'შესახებ';
 
   @override
-  String get addLabel => 'Add';
+  String get addLabel => 'დამატება';
 
   @override
-  String get allLabel => 'All';
+  String get allLabel => 'ყველა';
 
   @override
-  String get applyLabel => 'Apply';
+  String get applyLabel => 'გადატარება';
 
   @override
-  String get ascendingLabel => 'Ascending';
+  String get ascendingLabel => 'აღმავალი';
 
   @override
-  String get backLabel => 'Back';
+  String get backLabel => 'უკან';
 
   @override
-  String get boldLabel => 'Bold';
+  String get boldLabel => 'სქელი';
 
   @override
-  String get bottomLabel => 'Bottom';
+  String get bottomLabel => 'ქვემოთ';
 
   @override
   String get cancelLabel => 'გაუქმება';
 
   @override
-  String get centerLabel => 'Center';
+  String get centerLabel => 'ცენტრი';
 
   @override
-  String get clearLabel => 'Clear';
+  String get clearLabel => 'გასუფთავება';
 
   @override
-  String get closeLabel => 'Close';
+  String get closeLabel => 'დახურვა';
 
   @override
-  String get colorLabel => 'Color';
+  String get colorLabel => 'ფერი';
 
   @override
-  String get connectLabel => 'Connect';
+  String get connectLabel => 'დაკავშირება';
 
   @override
-  String get continueLabel => 'Continue';
+  String get continueLabel => 'გაგრძელება';
 
   @override
-  String get copyLabel => 'Copy';
+  String get copyLabel => 'კოპირება';
 
   @override
-  String get createLabel => 'Create';
+  String get createLabel => 'შექმნა';
 
   @override
-  String get cutLabel => 'Cut';
+  String get cutLabel => 'ამოჭრა';
 
   @override
-  String get decreaseLabel => 'Decrease';
+  String get decreaseLabel => 'შემცირება';
 
   @override
-  String get deleteLabel => 'Delete';
+  String get deleteLabel => 'წაშლა';
 
   @override
-  String get descendingLabel => 'Descending';
+  String get descendingLabel => 'დაღმავალი';
 
   @override
-  String get discardLabel => 'Discard';
+  String get discardLabel => 'მოცილება';
 
   @override
-  String get disconnectLabel => 'Disconnect';
+  String get disconnectLabel => 'გათიშვა';
 
   @override
-  String get doneLabel => 'Done';
+  String get doneLabel => 'მზადაა';
 
   @override
-  String get downloadLabel => 'Download';
+  String get downloadLabel => 'გადმოწერა';
 
   @override
-  String get editLabel => 'Edit';
+  String get editLabel => 'ჩასწორება';
 
   @override
-  String get enterLabel => 'Enter';
+  String get enterLabel => 'შეყვანა';
 
   @override
-  String get errorLabel => 'Error';
+  String get errorLabel => 'შეცდომა';
 
   @override
-  String get executeLabel => 'Execute';
+  String get executeLabel => 'შესრულება';
 
   @override
-  String get exitLabel => 'Exit';
+  String get exitLabel => 'გასვლა';
 
   @override
-  String get fileLabel => 'File';
+  String get fileLabel => 'ფაილი';
 
   @override
-  String get fillLabel => 'Fill';
+  String get fillLabel => 'შევსება';
 
   @override
-  String get findLabel => 'Find';
+  String get findLabel => 'ძებნა';
 
   @override
-  String get firstLabel => 'First';
+  String get firstLabel => 'პირველი';
 
   @override
-  String get fontLabel => 'Font';
+  String get fontLabel => 'ფონტი';
 
   @override
-  String get forwardLabel => 'Forward';
+  String get forwardLabel => 'წინ';
 
   @override
-  String get fullscreenLabel => 'Fullscreen';
+  String get fullscreenLabel => 'სრულ ეკრანზე';
 
   @override
-  String get goBackLabel => 'Go Back';
+  String get goBackLabel => 'უკან გადასვლა';
 
   @override
-  String get helpLabel => 'Help';
+  String get helpLabel => 'დახმარება';
 
   @override
-  String get homeLabel => 'Home';
+  String get homeLabel => 'საწყისი ეკრანი';
 
   @override
-  String get importLabel => 'Import';
+  String get importLabel => 'შემოტანა';
 
   @override
-  String get increaseLabel => 'Increase';
+  String get increaseLabel => 'გაზრდა';
 
   @override
-  String get indexLabel => 'Index';
+  String get indexLabel => 'ინდექსი';
 
   @override
-  String get informationLabel => 'Information';
+  String get informationLabel => 'ინფორმაცია';
 
   @override
-  String get insertLabel => 'Insert';
+  String get insertLabel => 'ჩასმა';
 
   @override
-  String get italicLabel => 'Italic';
+  String get italicLabel => 'კურსივი';
 
   @override
-  String get landscapeLabel => 'Landscape';
+  String get landscapeLabel => 'ლანდშაფტი';
 
   @override
-  String get lastLabel => 'Last';
+  String get lastLabel => 'ბოლო';
 
   @override
-  String get leaveLabel => 'Leave';
+  String get leaveLabel => 'დატოვება';
 
   @override
-  String get leftLabel => 'Left';
+  String get leftLabel => 'მარცხნივ';
 
   @override
-  String get mediaLabel => 'Media';
+  String get mediaLabel => 'მედია';
 
   @override
-  String get networkLabel => 'Network';
+  String get networkLabel => 'ქსელი';
 
   @override
-  String get newLabel => 'New';
+  String get newLabel => 'ახალი';
 
   @override
-  String get nextLabel => 'Next';
+  String get nextLabel => 'შემდეგი';
 
   @override
   String get noLabel => 'არა';
 
   @override
-  String get noneLabel => 'None';
+  String get noneLabel => 'არცერთი';
 
   @override
-  String get normalLabel => 'Normal';
+  String get normalLabel => 'ნორმალური';
 
   @override
   String get okLabel => 'დიახ';
 
   @override
-  String get openLabel => 'Open';
+  String get openLabel => 'გახსნა';
 
   @override
-  String get pasteLabel => 'Paste';
+  String get pasteLabel => 'ჩასმა';
 
   @override
-  String get pauseLabel => 'Pause';
+  String get pauseLabel => 'შეჩერება';
 
   @override
-  String get playLabel => 'Play';
+  String get playLabel => 'დაკვრა';
 
   @override
-  String get portraitLabel => 'Portrait';
+  String get portraitLabel => 'პორტრეტი';
 
   @override
-  String get preferencesLabel => 'Preferences';
+  String get preferencesLabel => 'მორგება';
 
   @override
-  String get previousLabel => 'Previous';
+  String get previousLabel => 'წინა';
 
   @override
-  String get printLabel => 'Print';
+  String get printLabel => 'დაბეჭდვა';
 
   @override
-  String get printPreviewLabel => 'Print Preview';
+  String get printPreviewLabel => 'დაბეჭდვის მინიატურა';
 
   @override
-  String get propertiesLabel => 'Properties';
+  String get propertiesLabel => 'თვისებები';
 
   @override
-  String get questionLabel => 'Question';
+  String get questionLabel => 'კითხვა';
 
   @override
-  String get quitLabel => 'Quit';
+  String get quitLabel => 'გასვლა';
 
   @override
-  String get recordLabel => 'Record';
+  String get recordLabel => 'ჩაწერა';
 
   @override
-  String get redoLabel => 'Redo';
+  String get redoLabel => 'თავიდან';
 
   @override
-  String get refreshLabel => 'Refresh';
+  String get refreshLabel => 'განახლება';
 
   @override
-  String get removeLabel => 'Remove';
+  String get removeLabel => 'წაშლა';
 
   @override
-  String get renameLabel => 'Rename';
+  String get renameLabel => 'სახელის გადარქმევა';
 
   @override
-  String get resetLabel => 'Reset';
+  String get resetLabel => 'ჩამოყრა';
 
   @override
   String get restartLabel => 'გადატვირთვა';
 
   @override
-  String get restoreLabel => 'Restore';
+  String get restoreLabel => 'აღდგენა';
 
   @override
-  String get retryLabel => 'Retry';
+  String get retryLabel => 'თავიდან ცდა';
 
   @override
   String get revertLabel => 'აღდგენა';
 
   @override
-  String get rewindLabel => 'Rewind';
+  String get rewindLabel => 'გადახვევა';
 
   @override
-  String get rightLabel => 'Right';
+  String get rightLabel => 'მარჯვნივ';
 
   @override
-  String get saveAsLabel => 'Save As';
+  String get saveAsLabel => 'შენახვა, როგორც';
 
   @override
-  String get saveLabel => 'Save';
+  String get saveLabel => 'შენახვა';
 
   @override
-  String get searchLabel => 'Search';
+  String get searchLabel => 'ძებნა';
 
   @override
-  String get selectAllLabel => 'Select All';
+  String get selectAllLabel => 'ყველაფრის მონიშვნა';
 
   @override
-  String get selectLabel => 'Select';
+  String get selectLabel => 'მონიშვნა';
 
   @override
-  String get sendLabel => 'Send';
+  String get sendLabel => 'გაგზავნა';
 
   @override
-  String get skipLabel => 'Skip';
+  String get skipLabel => 'გამოტოვება';
 
   @override
-  String get sortLabel => 'Sort';
+  String get sortLabel => 'დალაგება';
 
   @override
-  String get stopLabel => 'Stop';
+  String get stopLabel => 'გაჩერება';
 
   @override
-  String get strikeThroughLabel => 'Strike Through';
+  String get strikeThroughLabel => 'ხაზგადასმული';
 
   @override
-  String get submitLabel => 'Submit';
+  String get submitLabel => 'გადაცემა';
 
   @override
-  String get topLabel => 'Top';
+  String get topLabel => 'ზედა';
 
   @override
-  String get undoLabel => 'Undo';
+  String get undoLabel => 'გაუქმება';
 
   @override
-  String get updateLabel => 'Update';
+  String get updateLabel => 'განახლება';
 
   @override
-  String get upLabel => 'Up';
+  String get upLabel => 'მაღლა';
 
   @override
-  String get viewLabel => 'View';
+  String get viewLabel => 'ხედი';
 
   @override
-  String get warningLabel => 'Warning';
+  String get warningLabel => 'გაფრთხილება';
 
   @override
-  String get windowLabel => 'Window';
+  String get windowLabel => 'ფანჯარა';
 
   @override
   String get yesLabel => 'დიახ';
 
   @override
-  String get zoomInLabel => 'Zoom In';
+  String get zoomInLabel => 'გადიდება';
 
   @override
-  String get zoomOutLabel => 'Zoom Out';
+  String get zoomOutLabel => 'დაპატარავება';
 
   @override
-  String get byte => 'B';
+  String get byte => 'ბ';
 
   @override
-  String get kilobyte => 'kB';
+  String get kilobyte => 'კბ';
 
   @override
-  String get megabyte => 'MB';
+  String get megabyte => 'მბ';
 
   @override
-  String get gigabyte => 'GB';
+  String get gigabyte => 'გბ';
 
   @override
-  String get terabyte => 'TB';
+  String get terabyte => 'ტბ';
 
   @override
-  String get petabyte => 'PB';
+  String get petabyte => 'პბ';
 }

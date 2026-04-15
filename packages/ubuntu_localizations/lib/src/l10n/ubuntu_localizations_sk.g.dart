@@ -24,7 +24,7 @@ class UbuntuLocalizationsSk extends UbuntuLocalizations {
   String get strongPassword => 'Silné heslo';
 
   @override
-  String get fairPassword => 'Prijateľné heslo';
+  String get fairPassword => 'Priemerné heslo';
 
   @override
   String get goodPassword => 'Dobré heslo';
@@ -123,7 +123,7 @@ class UbuntuLocalizationsSk extends UbuntuLocalizations {
   String get editLabel => 'Upraviť';
 
   @override
-  String get enterLabel => 'Zadať';
+  String get enterLabel => 'Potvrdiť';
 
   @override
   String get errorLabel => 'Chyba';
@@ -159,7 +159,7 @@ class UbuntuLocalizationsSk extends UbuntuLocalizations {
   String get goBackLabel => 'Naspäť';
 
   @override
-  String get helpLabel => 'Pomocník';
+  String get helpLabel => 'Pomoc';
 
   @override
   String get homeLabel => 'Domov';
@@ -171,7 +171,7 @@ class UbuntuLocalizationsSk extends UbuntuLocalizations {
   String get increaseLabel => 'Zvýšiť';
 
   @override
-  String get indexLabel => 'Register';
+  String get indexLabel => 'Obsah';
 
   @override
   String get informationLabel => 'Informácia';
@@ -201,7 +201,7 @@ class UbuntuLocalizationsSk extends UbuntuLocalizations {
   String get networkLabel => 'Sieť';
 
   @override
-  String get newLabel => 'Nové';
+  String get newLabel => 'Nový';
 
   @override
   String get nextLabel => 'Ďalej';
@@ -213,10 +213,10 @@ class UbuntuLocalizationsSk extends UbuntuLocalizations {
   String get noneLabel => 'Žiadne';
 
   @override
-  String get normalLabel => 'Normálna';
+  String get normalLabel => 'Normálny';
 
   @override
-  String get okLabel => 'Ok';
+  String get okLabel => 'OK';
 
   @override
   String get openLabel => 'Otvoriť';
@@ -258,7 +258,7 @@ class UbuntuLocalizationsSk extends UbuntuLocalizations {
   String get recordLabel => 'Zaznamenať';
 
   @override
-  String get redoLabel => 'Znovu';
+  String get redoLabel => 'Znova';
 
   @override
   String get refreshLabel => 'Obnoviť';
@@ -285,7 +285,7 @@ class UbuntuLocalizationsSk extends UbuntuLocalizations {
   String get revertLabel => 'Vrátiť späť';
 
   @override
-  String get rewindLabel => 'Vrátiť na začiatok';
+  String get rewindLabel => 'Pretočiť späť';
 
   @override
   String get rightLabel => 'Vpravo';

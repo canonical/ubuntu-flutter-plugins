@@ -162,7 +162,7 @@ class UbuntuLocalizationsDe extends UbuntuLocalizations {
   String get helpLabel => 'Hilfe';
 
   @override
-  String get homeLabel => 'Zuhause';
+  String get homeLabel => 'Persönlich';
 
   @override
   String get importLabel => 'Importieren';

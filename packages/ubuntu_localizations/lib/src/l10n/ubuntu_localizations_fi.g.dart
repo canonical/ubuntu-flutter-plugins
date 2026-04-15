@@ -150,7 +150,7 @@ class UbuntuLocalizationsFi extends UbuntuLocalizations {
   String get fontLabel => 'Fontti';
 
   @override
-  String get forwardLabel => 'Seuraava';
+  String get forwardLabel => 'Eteenpäin';
 
   @override
   String get fullscreenLabel => 'Koko näyttö';
@@ -270,7 +270,7 @@ class UbuntuLocalizationsFi extends UbuntuLocalizations {
   String get renameLabel => 'Nimeä uudelleen';
 
   @override
-  String get resetLabel => 'Palauta';
+  String get resetLabel => 'Oletukset';
 
   @override
   String get restartLabel => 'Käynnistä uudelleen';

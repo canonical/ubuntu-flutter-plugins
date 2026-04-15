@@ -354,10 +354,10 @@ class UbuntuLocalizationsAr extends UbuntuLocalizations {
   String get zoomOutLabel => 'Zoom Out';
 
   @override
-  String get byte => 'B';
+  String get byte => 'ب';
 
   @override
-  String get kilobyte => 'kB';
+  String get kilobyte => 'ك.ب';
 
   @override
   String get megabyte => 'م.ب';

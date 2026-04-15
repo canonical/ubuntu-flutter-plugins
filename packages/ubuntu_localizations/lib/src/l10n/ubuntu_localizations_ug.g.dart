@@ -15,22 +15,22 @@ class UbuntuLocalizationsUg extends UbuntuLocalizations {
   String get languageName => 'ئۇيغۇرچە';
 
   @override
-  String get backAction => 'Go back';
+  String get backAction => 'قايت';
 
   @override
-  String get continueAction => 'Continue';
+  String get continueAction => 'داۋاملاشتۇر';
 
   @override
-  String get strongPassword => 'Strong password';
+  String get strongPassword => 'كۈچلۈك ئىم';
 
   @override
-  String get fairPassword => 'Fair password';
+  String get fairPassword => 'يامان ئەمەس ئىم';
 
   @override
-  String get goodPassword => 'Good password';
+  String get goodPassword => 'ياخشى ئىم';
 
   @override
-  String get weakPassword => 'Weak password';
+  String get weakPassword => 'ئاجىز ئىم';
 
   @override
   String get altKey => 'Alt';
@@ -45,313 +45,313 @@ class UbuntuLocalizationsUg extends UbuntuLocalizations {
   String get shiftKey => 'Shift';
 
   @override
-  String get aboutLabel => 'About';
+  String get aboutLabel => 'ھەققىدە';
 
   @override
-  String get addLabel => 'Add';
+  String get addLabel => 'قوش';
 
   @override
-  String get allLabel => 'All';
+  String get allLabel => 'ھەممىسى';
 
   @override
-  String get applyLabel => 'Apply';
+  String get applyLabel => 'قوللان';
 
   @override
-  String get ascendingLabel => 'Ascending';
+  String get ascendingLabel => 'ئۆسكۈچى';
 
   @override
-  String get backLabel => 'Back';
+  String get backLabel => 'قايت';
 
   @override
-  String get boldLabel => 'Bold';
+  String get boldLabel => 'توم';
 
   @override
-  String get bottomLabel => 'Bottom';
+  String get bottomLabel => 'ئاستى';
 
   @override
-  String get cancelLabel => 'Cancel';
+  String get cancelLabel => 'ۋاز كەچ';
 
   @override
-  String get centerLabel => 'Center';
+  String get centerLabel => 'ئوتتۇرا';
 
   @override
-  String get clearLabel => 'Clear';
+  String get clearLabel => 'تازىلا';
 
   @override
-  String get closeLabel => 'Close';
+  String get closeLabel => 'ياپ';
 
   @override
-  String get colorLabel => 'Color';
+  String get colorLabel => 'رەڭ';
 
   @override
-  String get connectLabel => 'Connect';
+  String get connectLabel => 'باغلا';
 
   @override
-  String get continueLabel => 'Continue';
+  String get continueLabel => 'داۋاملاشتۇر';
 
   @override
-  String get copyLabel => 'Copy';
+  String get copyLabel => 'كۆچۈر';
 
   @override
-  String get createLabel => 'Create';
+  String get createLabel => 'قۇر';
 
   @override
-  String get cutLabel => 'Cut';
+  String get cutLabel => 'كەس';
 
   @override
-  String get decreaseLabel => 'Decrease';
+  String get decreaseLabel => 'تۆۋەتلەت';
 
   @override
-  String get deleteLabel => 'Delete';
+  String get deleteLabel => 'ئۆچۈر';
 
   @override
-  String get descendingLabel => 'Descending';
+  String get descendingLabel => 'كېمەيگۈچى';
 
   @override
-  String get discardLabel => 'Discard';
+  String get discardLabel => 'تاشلىۋەت';
 
   @override
-  String get disconnectLabel => 'Disconnect';
+  String get disconnectLabel => 'ئۈز';
 
   @override
-  String get doneLabel => 'Done';
+  String get doneLabel => 'تامام';
 
   @override
-  String get downloadLabel => 'Download';
+  String get downloadLabel => 'چۈشۈر';
 
   @override
-  String get editLabel => 'Edit';
+  String get editLabel => 'تەھرىر';
 
   @override
   String get enterLabel => 'Enter';
 
   @override
-  String get errorLabel => 'Error';
+  String get errorLabel => 'خاتالىق';
 
   @override
-  String get executeLabel => 'Execute';
+  String get executeLabel => 'ئىجرا قىل';
 
   @override
-  String get exitLabel => 'Exit';
+  String get exitLabel => 'چېكىن';
 
   @override
-  String get fileLabel => 'File';
+  String get fileLabel => 'ھۆججەت';
 
   @override
-  String get fillLabel => 'Fill';
+  String get fillLabel => 'تولدۇر';
 
   @override
-  String get findLabel => 'Find';
+  String get findLabel => 'ئىزدە';
 
   @override
-  String get firstLabel => 'First';
+  String get firstLabel => 'بىرىنچى';
 
   @override
-  String get fontLabel => 'Font';
+  String get fontLabel => 'خەت نۇسخا';
 
   @override
-  String get forwardLabel => 'Forward';
+  String get forwardLabel => 'ئالدى';
 
   @override
-  String get fullscreenLabel => 'Fullscreen';
+  String get fullscreenLabel => 'تولۇق ئېكران';
 
   @override
-  String get goBackLabel => 'Go Back';
+  String get goBackLabel => 'قايت';
 
   @override
-  String get helpLabel => 'Help';
+  String get helpLabel => 'ياردەم';
 
   @override
-  String get homeLabel => 'Home';
+  String get homeLabel => 'باش بەت';
 
   @override
-  String get importLabel => 'Import';
+  String get importLabel => 'ئەكىر';
 
   @override
-  String get increaseLabel => 'Increase';
+  String get increaseLabel => 'يۇقىرىلات';
 
   @override
-  String get indexLabel => 'Index';
+  String get indexLabel => 'مۇندەرىجە';
 
   @override
-  String get informationLabel => 'Information';
+  String get informationLabel => 'ئۇچۇر';
 
   @override
-  String get insertLabel => 'Insert';
+  String get insertLabel => 'قىستۇر';
 
   @override
-  String get italicLabel => 'Italic';
+  String get italicLabel => 'يانتۇ';
 
   @override
-  String get landscapeLabel => 'Landscape';
+  String get landscapeLabel => 'توغرىسىغا';
 
   @override
-  String get lastLabel => 'Last';
+  String get lastLabel => 'ئاخىرقى';
 
   @override
-  String get leaveLabel => 'Leave';
+  String get leaveLabel => 'ئايرىل';
 
   @override
-  String get leftLabel => 'Left';
+  String get leftLabel => 'سول';
 
   @override
-  String get mediaLabel => 'Media';
+  String get mediaLabel => 'ۋاسىتە';
 
   @override
-  String get networkLabel => 'Network';
+  String get networkLabel => 'تور';
 
   @override
-  String get newLabel => 'New';
+  String get newLabel => 'يېڭى';
 
   @override
-  String get nextLabel => 'Next';
+  String get nextLabel => 'كېيىنكى';
 
   @override
   String get noLabel => 'ياق';
 
   @override
-  String get noneLabel => 'None';
+  String get noneLabel => 'ھىچنىمە يوق';
 
   @override
-  String get normalLabel => 'Normal';
+  String get normalLabel => 'ئادەتتىكى';
 
   @override
-  String get okLabel => 'OK';
+  String get okLabel => 'جەزملە';
 
   @override
-  String get openLabel => 'Open';
+  String get openLabel => 'ئاچ';
 
   @override
-  String get pasteLabel => 'Paste';
+  String get pasteLabel => 'چاپلا';
 
   @override
-  String get pauseLabel => 'Pause';
+  String get pauseLabel => 'ۋاقىتلىق توختا';
 
   @override
-  String get playLabel => 'Play';
+  String get playLabel => 'ياڭرات';
 
   @override
-  String get portraitLabel => 'Portrait';
+  String get portraitLabel => 'بويىغا';
 
   @override
-  String get preferencesLabel => 'Preferences';
+  String get preferencesLabel => 'مايىللىق';
 
   @override
-  String get previousLabel => 'Previous';
+  String get previousLabel => 'ئالدىنقى';
 
   @override
-  String get printLabel => 'Print';
+  String get printLabel => 'باس';
 
   @override
-  String get printPreviewLabel => 'Print Preview';
+  String get printPreviewLabel => 'بېسىشنى ئالدىن كۆزەت';
 
   @override
-  String get propertiesLabel => 'Properties';
+  String get propertiesLabel => 'خاسلىق';
 
   @override
-  String get questionLabel => 'Question';
+  String get questionLabel => 'سوئال';
 
   @override
-  String get quitLabel => 'Quit';
+  String get quitLabel => 'چېكىن';
 
   @override
-  String get recordLabel => 'Record';
+  String get recordLabel => 'خاتىرە';
 
   @override
-  String get redoLabel => 'Redo';
+  String get redoLabel => 'قايتىلا';
 
   @override
-  String get refreshLabel => 'Refresh';
+  String get refreshLabel => 'يېڭىلا';
 
   @override
-  String get removeLabel => 'Remove';
+  String get removeLabel => 'چىقىرىۋەت';
 
   @override
-  String get renameLabel => 'Rename';
+  String get renameLabel => 'ئات ئۆزگەرت';
 
   @override
-  String get resetLabel => 'Reset';
+  String get resetLabel => 'ئەسلىگە قايتۇر';
 
   @override
-  String get restartLabel => 'Restart';
+  String get restartLabel => 'قايتا قوزغات';
 
   @override
-  String get restoreLabel => 'Restore';
+  String get restoreLabel => 'ئەسلىگە كەلتۈر';
 
   @override
-  String get retryLabel => 'Retry';
+  String get retryLabel => 'قايتا سىنا';
 
   @override
   String get revertLabel => 'ئەسلىگە قايتۇر';
 
   @override
-  String get rewindLabel => 'Rewind';
+  String get rewindLabel => 'كەينىگە';
 
   @override
-  String get rightLabel => 'Right';
+  String get rightLabel => 'ئوڭ';
 
   @override
-  String get saveAsLabel => 'Save As';
+  String get saveAsLabel => 'باشقا ئاتتا ساقلا';
 
   @override
-  String get saveLabel => 'Save';
+  String get saveLabel => 'ساقلا';
 
   @override
-  String get searchLabel => 'Search';
+  String get searchLabel => 'ئىزدە';
 
   @override
-  String get selectAllLabel => 'Select All';
+  String get selectAllLabel => 'ھەممىنى تاللا';
 
   @override
-  String get selectLabel => 'Select';
+  String get selectLabel => 'تاللا';
 
   @override
-  String get sendLabel => 'Send';
+  String get sendLabel => 'يوللا';
 
   @override
-  String get skipLabel => 'Skip';
+  String get skipLabel => 'ئاتلا';
 
   @override
-  String get sortLabel => 'Sort';
+  String get sortLabel => 'تەرتىپلە';
 
   @override
-  String get stopLabel => 'Stop';
+  String get stopLabel => 'توختا';
 
   @override
-  String get strikeThroughLabel => 'Strike Through';
+  String get strikeThroughLabel => 'ئۆچۈرۈش سىزىقى';
 
   @override
-  String get submitLabel => 'Submit';
+  String get submitLabel => 'تاپشۇر';
 
   @override
-  String get topLabel => 'Top';
+  String get topLabel => 'چوققا';
 
   @override
-  String get undoLabel => 'Undo';
+  String get undoLabel => 'يېنىۋال';
 
   @override
-  String get updateLabel => 'Update';
+  String get updateLabel => 'يېڭىلا';
 
   @override
-  String get upLabel => 'Up';
+  String get upLabel => 'ئۈستى';
 
   @override
-  String get viewLabel => 'View';
+  String get viewLabel => 'كۆرۈنۈش';
 
   @override
-  String get warningLabel => 'Warning';
+  String get warningLabel => 'ئاگاھلاندۇرۇش';
 
   @override
-  String get windowLabel => 'Window';
+  String get windowLabel => 'كۆزنەك';
 
   @override
   String get yesLabel => 'ھەئە';
 
   @override
-  String get zoomInLabel => 'Zoom In';
+  String get zoomInLabel => 'يېقىنلات';
 
   @override
-  String get zoomOutLabel => 'Zoom Out';
+  String get zoomOutLabel => 'يىراقلات';
 
   @override
   String get byte => 'B';

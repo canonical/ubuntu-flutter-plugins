@@ -18,7 +18,7 @@ class UbuntuLocalizationsNl extends UbuntuLocalizations {
   String get backAction => 'Terug';
 
   @override
-  String get continueAction => 'Volgende';
+  String get continueAction => 'Doorgaan';
 
   @override
   String get strongPassword => 'Sterk wachtwoord';
@@ -36,7 +36,7 @@ class UbuntuLocalizationsNl extends UbuntuLocalizations {
   String get altKey => 'Alt';
 
   @override
-  String get controlKey => 'Control';
+  String get controlKey => 'Ctrl';
 
   @override
   String get metaKey => 'Meta';
@@ -51,7 +51,7 @@ class UbuntuLocalizationsNl extends UbuntuLocalizations {
   String get addLabel => 'Toevoegen';
 
   @override
-  String get allLabel => 'Alle';
+  String get allLabel => 'Alles';
 
   @override
   String get applyLabel => 'Toepassen';
@@ -66,7 +66,7 @@ class UbuntuLocalizationsNl extends UbuntuLocalizations {
   String get boldLabel => 'Vet';
 
   @override
-  String get bottomLabel => 'Onderkant';
+  String get bottomLabel => 'Onderaan';
 
   @override
   String get cancelLabel => 'Annuleren';
@@ -75,283 +75,283 @@ class UbuntuLocalizationsNl extends UbuntuLocalizations {
   String get centerLabel => 'Centreren';
 
   @override
-  String get clearLabel => 'Clear';
+  String get clearLabel => 'Wissen';
 
   @override
-  String get closeLabel => 'Close';
+  String get closeLabel => 'Sluiten';
 
   @override
-  String get colorLabel => 'Color';
+  String get colorLabel => 'Kleur';
 
   @override
-  String get connectLabel => 'Connect';
+  String get connectLabel => 'Verbinden';
 
   @override
-  String get continueLabel => 'Continue';
+  String get continueLabel => 'Doorgaan';
 
   @override
-  String get copyLabel => 'Copy';
+  String get copyLabel => 'Kopiëren';
 
   @override
-  String get createLabel => 'Create';
+  String get createLabel => 'Aanmaken';
 
   @override
-  String get cutLabel => 'Cut';
+  String get cutLabel => 'Snijden';
 
   @override
-  String get decreaseLabel => 'Decrease';
+  String get decreaseLabel => 'Verminderen';
 
   @override
-  String get deleteLabel => 'Delete';
+  String get deleteLabel => 'Verwijderen';
 
   @override
-  String get descendingLabel => 'Descending';
+  String get descendingLabel => 'Aflopend';
 
   @override
-  String get discardLabel => 'Discard';
+  String get discardLabel => 'Verwerpen';
 
   @override
-  String get disconnectLabel => 'Disconnect';
+  String get disconnectLabel => 'Verbinding verbreken';
 
   @override
-  String get doneLabel => 'Done';
+  String get doneLabel => 'Klaar';
 
   @override
-  String get downloadLabel => 'Download';
+  String get downloadLabel => 'Downloaden';
 
   @override
-  String get editLabel => 'Edit';
+  String get editLabel => 'Bewerken';
 
   @override
-  String get enterLabel => 'Enter';
+  String get enterLabel => 'Invoeren';
 
   @override
-  String get errorLabel => 'Error';
+  String get errorLabel => 'Fout';
 
   @override
-  String get executeLabel => 'Execute';
+  String get executeLabel => 'Uitvoeren';
 
   @override
-  String get exitLabel => 'Exit';
+  String get exitLabel => 'Verlaten';
 
   @override
-  String get fileLabel => 'File';
+  String get fileLabel => 'Bestand';
 
   @override
-  String get fillLabel => 'Fill';
+  String get fillLabel => 'Vullen';
 
   @override
-  String get findLabel => 'Find';
+  String get findLabel => 'Zoeken';
 
   @override
-  String get firstLabel => 'First';
+  String get firstLabel => 'Eerste';
 
   @override
-  String get fontLabel => 'Font';
+  String get fontLabel => 'Lettertype';
 
   @override
-  String get forwardLabel => 'Forward';
+  String get forwardLabel => 'Verder';
 
   @override
-  String get fullscreenLabel => 'Fullscreen';
+  String get fullscreenLabel => 'Volledig scherm';
 
   @override
-  String get goBackLabel => 'Go Back';
+  String get goBackLabel => 'Terug';
 
   @override
-  String get helpLabel => 'Help';
+  String get helpLabel => 'Hulp';
 
   @override
-  String get homeLabel => 'Home';
+  String get homeLabel => 'Thuis';
 
   @override
-  String get importLabel => 'Import';
+  String get importLabel => 'Importeren';
 
   @override
-  String get increaseLabel => 'Increase';
+  String get increaseLabel => 'Verhogen';
 
   @override
   String get indexLabel => 'Index';
 
   @override
-  String get informationLabel => 'Information';
+  String get informationLabel => 'Informatie';
 
   @override
-  String get insertLabel => 'Insert';
+  String get insertLabel => 'Invoegen';
 
   @override
-  String get italicLabel => 'Italic';
+  String get italicLabel => 'Cursief';
 
   @override
-  String get landscapeLabel => 'Landscape';
+  String get landscapeLabel => 'Liggend';
 
   @override
-  String get lastLabel => 'Last';
+  String get lastLabel => 'Laatste';
 
   @override
-  String get leaveLabel => 'Leave';
+  String get leaveLabel => 'Verlaten';
 
   @override
-  String get leftLabel => 'Left';
+  String get leftLabel => 'Links';
 
   @override
   String get mediaLabel => 'Media';
 
   @override
-  String get networkLabel => 'Network';
+  String get networkLabel => 'Netwerl';
 
   @override
-  String get newLabel => 'New';
+  String get newLabel => 'Nieuw';
 
   @override
-  String get nextLabel => 'Next';
+  String get nextLabel => 'Volgende';
 
   @override
-  String get noLabel => 'No';
+  String get noLabel => 'Nee';
 
   @override
-  String get noneLabel => 'None';
+  String get noneLabel => 'Geen';
 
   @override
-  String get normalLabel => 'Normal';
+  String get normalLabel => 'Normaal';
 
   @override
   String get okLabel => 'OK';
 
   @override
-  String get openLabel => 'Open';
+  String get openLabel => 'Openen';
 
   @override
-  String get pasteLabel => 'Paste';
+  String get pasteLabel => 'Plakken';
 
   @override
-  String get pauseLabel => 'Pause';
+  String get pauseLabel => 'Pauze';
 
   @override
-  String get playLabel => 'Play';
+  String get playLabel => 'Afspelen';
 
   @override
-  String get portraitLabel => 'Portrait';
+  String get portraitLabel => 'Staand';
 
   @override
-  String get preferencesLabel => 'Preferences';
+  String get preferencesLabel => 'Voorkeuren';
 
   @override
-  String get previousLabel => 'Previous';
+  String get previousLabel => 'Vorige';
 
   @override
-  String get printLabel => 'Print';
+  String get printLabel => 'Afdrukken';
 
   @override
-  String get printPreviewLabel => 'Print Preview';
+  String get printPreviewLabel => 'Afdrukvoorbeeld';
 
   @override
-  String get propertiesLabel => 'Properties';
+  String get propertiesLabel => 'Eigenschappen';
 
   @override
-  String get questionLabel => 'Question';
+  String get questionLabel => 'Vraag';
 
   @override
-  String get quitLabel => 'Quit';
+  String get quitLabel => 'Verlaten';
 
   @override
-  String get recordLabel => 'Record';
+  String get recordLabel => 'Opname';
 
   @override
-  String get redoLabel => 'Redo';
+  String get redoLabel => 'Opnieuw uitvoeren';
 
   @override
-  String get refreshLabel => 'Refresh';
+  String get refreshLabel => 'Vernieuwen';
 
   @override
-  String get removeLabel => 'Remove';
+  String get removeLabel => 'Verwijderen';
 
   @override
-  String get renameLabel => 'Rename';
+  String get renameLabel => 'Hernoemen';
 
   @override
-  String get resetLabel => 'Reset';
+  String get resetLabel => 'Terugzetten';
 
   @override
   String get restartLabel => 'Opnieuw opstarten';
 
   @override
-  String get restoreLabel => 'Restore';
+  String get restoreLabel => 'Herstellen';
 
   @override
-  String get retryLabel => 'Retry';
+  String get retryLabel => 'Opnieuw proberen';
 
   @override
-  String get revertLabel => 'Revert';
+  String get revertLabel => 'Terugkeren';
 
   @override
-  String get rewindLabel => 'Rewind';
+  String get rewindLabel => 'Terugspoelen';
 
   @override
-  String get rightLabel => 'Right';
+  String get rightLabel => 'Rechts';
 
   @override
-  String get saveAsLabel => 'Save As';
+  String get saveAsLabel => 'Opslaan als';
 
   @override
-  String get saveLabel => 'Save';
+  String get saveLabel => 'Opslaan';
 
   @override
-  String get searchLabel => 'Search';
+  String get searchLabel => 'Zoeken';
 
   @override
-  String get selectAllLabel => 'Select All';
+  String get selectAllLabel => 'Alles selecteren';
 
   @override
-  String get selectLabel => 'Select';
+  String get selectLabel => 'Selecteren';
 
   @override
-  String get sendLabel => 'Send';
+  String get sendLabel => 'Verzenden';
 
   @override
-  String get skipLabel => 'Skip';
+  String get skipLabel => 'Overslaan';
 
   @override
-  String get sortLabel => 'Sort';
+  String get sortLabel => 'Sorteren';
 
   @override
-  String get stopLabel => 'Stop';
+  String get stopLabel => 'Stoppen';
 
   @override
-  String get strikeThroughLabel => 'Strike Through';
+  String get strikeThroughLabel => 'Doorhalen';
 
   @override
-  String get submitLabel => 'Submit';
+  String get submitLabel => 'Indienen';
 
   @override
-  String get topLabel => 'Top';
+  String get topLabel => 'Boven';
 
   @override
-  String get undoLabel => 'Undo';
+  String get undoLabel => 'Ongedaan maken';
 
   @override
-  String get updateLabel => 'Update';
+  String get updateLabel => 'Bijwerken';
 
   @override
-  String get upLabel => 'Up';
+  String get upLabel => 'Omhoog';
 
   @override
-  String get viewLabel => 'View';
+  String get viewLabel => 'Weergave';
 
   @override
-  String get warningLabel => 'Warning';
+  String get warningLabel => 'Waarschuwing';
 
   @override
-  String get windowLabel => 'Window';
+  String get windowLabel => 'Venster';
 
   @override
-  String get yesLabel => 'Yes';
+  String get yesLabel => 'Ja';
 
   @override
-  String get zoomInLabel => 'Zoom In';
+  String get zoomInLabel => 'Inzoomen';
 
   @override
-  String get zoomOutLabel => 'Zoom Out';
+  String get zoomOutLabel => 'Uitzoomen';
 
   @override
   String get byte => 'B';
