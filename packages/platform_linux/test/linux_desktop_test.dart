@@ -133,4 +133,22 @@ void main() {
     );
     expect(platform.isXfce, isTrue);
   });
+
+  test('Override', () {
+    final platform = FakePlatform(
+      environment: {
+        'XDG_CURRENT_DESKTOP': 'KDE',
+      },
+    );
+    platform.xdgDesktopOverride = ['budgie', 'gnome'];
+    expect({
+      'kde': platform.isKDE,
+      'budgie': platform.isBudgie,
+      'gnome': platform.isGNOME,
+    }, {
+      'kde': isFalse,
+      'budgie': isTrue,
+      'gnome': isTrue,
+    });
+  });
 }
