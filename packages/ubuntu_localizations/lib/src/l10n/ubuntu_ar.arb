@@ -18,5 +18,6 @@
     "revertLabel": "يرجع",
     "restartLabel": "إعادة تشغيل",
     "byte": "ب",
-    "kilobyte": "ك.ب"
+    "kilobyte": "ك.ب",
+    "nextLabel": "التالي"
 }
