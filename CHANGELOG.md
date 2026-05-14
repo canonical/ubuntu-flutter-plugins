@@ -3,6 +3,29 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 2026-05-14
+
+### Changes
+
+---
+
+Packages with breaking changes:
+
+ - There are no breaking changes in this release.
+
+Packages with other changes:
+
+ - [`ubuntu_widgets` - `v0.8.1`](#ubuntu_widgets---v081)
+
+---
+
+#### `ubuntu_widgets` - `v0.8.1`
+
+ - **FIX**(ubuntu_widgets): adjust scroll alignment to satisfy boundary tests.
+ - **FIX**(a11y): resolve focus traps and silent semantics in ListWidget.
+ - **FEAT**(ubuntu_widgets): expose errorMaxLines for ValidatedFormField.
+
+
 ## 2026-04-15
 
 ### Changes
