@@ -1,3 +1,9 @@
+## 0.8.1
+
+ - **FIX**(ubuntu_widgets): adjust scroll alignment to satisfy boundary tests.
+ - **FIX**(a11y): resolve focus traps and silent semantics in ListWidget.
+ - **FEAT**(ubuntu_widgets): expose errorMaxLines for ValidatedFormField.
+
 ## 0.8.0
 
 > Note: This release has breaking changes.
