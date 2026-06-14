@@ -20,7 +20,7 @@ dependencies:
   rbush: ^1.1.0
   safe_change_notifier: ^0.4.0+1
   vector_graphics: ^1.1.4
-  xml: ^6.1.0
+  xml: ^7.0.0
 
 dev_dependencies:
   build_runner: ^2.2.0
