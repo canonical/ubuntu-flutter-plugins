@@ -3,6 +3,27 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 2026-06-17
+
+### Changes
+
+---
+
+Packages with breaking changes:
+
+ - There are no breaking changes in this release.
+
+Packages with other changes:
+
+ - [`ubuntu_lints` - `v0.4.2`](#ubuntu_lints---v042)
+
+---
+
+#### `ubuntu_lints` - `v0.4.2`
+
+ - **FEAT**(ubuntu_lints): preserve trailing commas.
+
+
 ## 2026-05-14
 
 ### Changes

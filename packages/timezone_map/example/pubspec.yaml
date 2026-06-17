@@ -12,7 +12,7 @@ dependencies:
   yaru: ^10.0.0
 
 dev_dependencies:
-  ubuntu_lints: ^0.4.1+1
+  ubuntu_lints: ^0.4.2
   flutter_test:
     sdk: flutter
 
