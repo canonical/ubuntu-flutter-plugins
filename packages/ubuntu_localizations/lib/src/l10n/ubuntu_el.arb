@@ -77,7 +77,7 @@
     "boldLabel": "Έντονα",
     "bottomLabel": "Κάτω μέρος",
     "enterLabel": "Enter",
-    "goBackLabel": "Πήγαινε πίσω",
+    "goBackLabel": "Πήγαινε Πίσω",
     "restoreLabel": "Επαναφορά",
     "discardLabel": "Απόρριψη",
     "insertLabel": "Εισαγωγή",
@@ -119,5 +119,6 @@
     "megabyte": "MB",
     "gigabyte": "GB",
     "terabyte": "TB",
-    "petabyte": "PB"
+    "petabyte": "PB",
+    "rewindLabel": "Επαναστροφή"
 }
