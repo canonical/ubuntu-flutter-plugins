@@ -20,13 +20,13 @@ jobs:
         id: semantic-pr
         env:
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
-      - uses: marocchino/sticky-pull-request-comment@v2
+      - uses: marocchino/sticky-pull-request-comment@v3.0.4
         if: always() && steps.semantic-pr.outputs.error_message != null
         with:
           header: semantic-pr-error
           message: ${{steps.semantic-pr.outputs.error_message}}
       - if: steps.semantic-pr.outputs.error_message == null
-        uses: marocchino/sticky-pull-request-comment@v2
+        uses: marocchino/sticky-pull-request-comment@v3.0.4
         with:
           header: semantic-pr-error
           delete: true
