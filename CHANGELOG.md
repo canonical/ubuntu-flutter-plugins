@@ -3,6 +3,28 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 2026-08-13
+
+### Changes
+
+---
+
+Packages with breaking changes:
+
+ - There are no breaking changes in this release.
+
+Packages with other changes:
+
+ - [`ubuntu_localizations` - `v0.5.2+4`](#ubuntu_localizations---v0524)
+
+---
+
+#### `ubuntu_localizations` - `v0.5.2+4`
+
+ - **FIX**(l10n): Add en_GB translations.
+ - **FIX**: Correctly fallback to en.
+
+
 ## 2026-06-17
 
 ### Changes

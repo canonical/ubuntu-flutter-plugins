@@ -1,3 +1,8 @@
+## 0.5.2+4
+
+ - **FIX**(l10n): Add en_GB translations.
+ - **FIX**: Correctly fallback to en.
+
 ## 0.5.2+3
 
  - **FIX**(l10n): translations update from Hosted Weblate (#470)
