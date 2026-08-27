@@ -9,7 +9,7 @@ on:
 
 jobs:
   generate:
-    runs-on: ubuntu-24.04
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       - uses: Atsumi3/actions-setup-fvm@0.0.3
@@ -21,7 +21,7 @@ jobs:
         run: ./.github/scripts/check-outdated-files.sh
 
   build:
-    runs-on: ubuntu-24.04
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       - uses: Atsumi3/actions-setup-fvm@0.0.3
@@ -33,7 +33,7 @@ jobs:
       - run: melos build
 
   analyze:
-    runs-on: ubuntu-24.04
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       - uses: Atsumi3/actions-setup-fvm@0.0.3
@@ -41,7 +41,7 @@ jobs:
       - run: melos analyze --fatal-infos
 
   format:
-    runs-on: ubuntu-24.04
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       - uses: Atsumi3/actions-setup-fvm@0.0.3
@@ -50,7 +50,7 @@ jobs:
 
   publish:
     name: Dry-run publish
-    runs-on: ubuntu-24.04
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       - uses: Atsumi3/actions-setup-fvm@0.0.3
@@ -59,7 +59,7 @@ jobs:
       - run: melos exec --no-private --ignore ubuntu_test -- flutter pub publish --dry-run
 
   test:
-    runs-on: ubuntu-24.04
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       - uses: Atsumi3/actions-setup-fvm@0.0.3
