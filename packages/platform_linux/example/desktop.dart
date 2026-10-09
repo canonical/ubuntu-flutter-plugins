@@ -7,6 +7,7 @@ void main() {
 
   print('Budgie: ${platform.isBudgie}');
   print('Cinnamon: ${platform.isCinnamon}');
+  print('COSMIC: ${platform.isCOSMIC}');
   print('Deepin: ${platform.isDeepin}');
   print('Enlightenment: ${platform.isEnlightenment}');
   print('GNOME: ${platform.isGNOME}');

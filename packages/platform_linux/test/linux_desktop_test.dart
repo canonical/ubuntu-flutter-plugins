@@ -8,6 +8,7 @@ void main() {
     final platform = FakePlatform(environment: {});
     expect(platform.isBudgie, isFalse);
     expect(platform.isCinnamon, isFalse);
+    expect(platform.isCOSMIC, isFalse);
     expect(platform.isDeepin, isFalse);
     expect(platform.isEnlightenment, isFalse);
     expect(platform.isGNOME, isFalse);
@@ -37,6 +38,15 @@ void main() {
       },
     );
     expect(platform.isCinnamon, isTrue);
+  });
+
+  test('COSMIC', () {
+    final platform = FakePlatform(
+      environment: {
+        'XDG_CURRENT_DESKTOP': 'COSMIC',
+      },
+    );
+    expect(platform.isCOSMIC, isTrue);
   });
 
   test('Deepin', () {

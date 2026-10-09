@@ -16,6 +16,9 @@ extension PlatformLinuxDesktop on Platform {
   /// [Cinnamon](https://github.com/linuxmint/Cinnamon)
   bool get isCinnamon => _isDesktop('x-cinnamon');
 
+  /// [COSMIC](https://system76.com/cosmic)
+  bool get isCOSMIC => _isDesktop('cosmic');
+
   /// [Deepin](https://www.deepin.org/en/)
   bool get isDeepin => _isDesktop('deepin');
 
