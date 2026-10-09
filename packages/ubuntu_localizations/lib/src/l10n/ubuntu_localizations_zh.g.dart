@@ -63,7 +63,7 @@ class UbuntuLocalizationsZh extends UbuntuLocalizations {
   String get backLabel => '返回';
 
   @override
-  String get boldLabel => '加粗';
+  String get boldLabel => '粗体';
 
   @override
   String get bottomLabel => '底部';
@@ -123,7 +123,7 @@ class UbuntuLocalizationsZh extends UbuntuLocalizations {
   String get editLabel => '编辑';
 
   @override
-  String get enterLabel => '确认';
+  String get enterLabel => '输入';
 
   @override
   String get errorLabel => '错误';
@@ -183,7 +183,7 @@ class UbuntuLocalizationsZh extends UbuntuLocalizations {
   String get italicLabel => '斜体';
 
   @override
-  String get landscapeLabel => '横屏';
+  String get landscapeLabel => '横向';
 
   @override
   String get lastLabel => '末个';

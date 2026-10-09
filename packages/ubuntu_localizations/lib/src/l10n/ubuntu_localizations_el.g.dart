@@ -156,7 +156,7 @@ class UbuntuLocalizationsEl extends UbuntuLocalizations {
   String get fullscreenLabel => 'Πλήρης οθόνη';
 
   @override
-  String get goBackLabel => 'Πήγαινε πίσω';
+  String get goBackLabel => 'Πήγαινε Πίσω';
 
   @override
   String get helpLabel => 'Βοήθεια';
@@ -285,7 +285,7 @@ class UbuntuLocalizationsEl extends UbuntuLocalizations {
   String get revertLabel => 'Επαναφορά';
 
   @override
-  String get rewindLabel => 'Rewind';
+  String get rewindLabel => 'Επαναστροφή';
 
   @override
   String get rightLabel => 'Δεξιά';

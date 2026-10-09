@@ -204,7 +204,7 @@ class UbuntuLocalizationsAr extends UbuntuLocalizations {
   String get newLabel => 'New';
 
   @override
-  String get nextLabel => 'Next';
+  String get nextLabel => 'التالي';
 
   @override
   String get noLabel => 'لا';
