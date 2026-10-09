@@ -1,3 +1,7 @@
+## 0.8.1+1
+
+ - Update a dependency to the latest release.
+
 ## 0.8.1
 
  - **FIX**(ubuntu_widgets): adjust scroll alignment to satisfy boundary tests.

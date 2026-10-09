@@ -3,6 +3,56 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 2026-10-09
+
+### Changes
+
+---
+
+Packages with breaking changes:
+
+ - There are no breaking changes in this release.
+
+Packages with other changes:
+
+ - [`platform_linux` - `v0.1.3`](#platform_linux---v013)
+ - [`ubuntu_flavor` - `v0.5.0+2`](#ubuntu_flavor---v0502)
+ - [`ubuntu_localizations` - `v0.5.2+5`](#ubuntu_localizations---v0525)
+ - [`ubuntu_test` - `v0.2.3+3`](#ubuntu_test---v0233)
+ - [`ubuntu_widgets` - `v0.8.1+1`](#ubuntu_widgets---v0811)
+
+Packages with dependency updates only:
+
+> Packages listed below depend on other packages in this workspace that have had changes. Their versions have been incremented to bump the minimum dependency versions of the packages they depend upon in this project.
+
+ - `ubuntu_widgets` - `v0.8.1+1`
+
+---
+
+#### `platform_linux` - `v0.1.3`
+
+ - **FIX**: resolve CI failures caused by newer dependencies.
+ - **FEAT**: add COSMIC desktop environment (#524).
+ - **FEAT**: add COSMIC desktop environment.
+
+#### `ubuntu_flavor` - `v0.5.0+2`
+
+ - **FIX**: resolve CI failures caused by newer dependencies.
+
+#### `ubuntu_localizations` - `v0.5.2+5`
+
+ - **FIX**(l10n): translated using Weblate (Slovak).
+ - **FIX**(l10n): translated using Weblate (Italian).
+ - **FIX**(l10n): translated using Weblate (Chinese (Simplified Han script)).
+ - **FIX**(l10n): translated using Weblate (Slovak).
+ - **FIX**(l10n): translated using Weblate (Arabic).
+ - **FIX**(l10n): translated using Weblate (Greek).
+
+#### `ubuntu_test` - `v0.2.3+3`
+
+ - **FIX**: resolve CI failures caused by newer dependencies.
+
+
 ## 2026-08-13
 
 ### Changes

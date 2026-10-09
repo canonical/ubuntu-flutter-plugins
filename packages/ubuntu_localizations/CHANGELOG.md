@@ -1,3 +1,12 @@
+## 0.5.2+5
+
+ - **FIX**(l10n): translated using Weblate (Slovak).
+ - **FIX**(l10n): translated using Weblate (Italian).
+ - **FIX**(l10n): translated using Weblate (Chinese (Simplified Han script)).
+ - **FIX**(l10n): translated using Weblate (Slovak).
+ - **FIX**(l10n): translated using Weblate (Arabic).
+ - **FIX**(l10n): translated using Weblate (Greek).
+
 ## 0.5.2+4
 
  - **FIX**(l10n): Add en_GB translations.
