@@ -7,6 +7,7 @@ import 'package:intl/intl.dart' as intl;
 
 import 'ubuntu_localizations_am.g.dart';
 import 'ubuntu_localizations_ar.g.dart';
+import 'ubuntu_localizations_az.g.dart';
 import 'ubuntu_localizations_be.g.dart';
 import 'ubuntu_localizations_bg.g.dart';
 import 'ubuntu_localizations_bn.g.dart';
@@ -167,6 +168,7 @@ abstract class UbuntuLocalizations {
   static const List<Locale> supportedLocales = <Locale>[
     Locale('am'),
     Locale('ar'),
+    Locale('az'),
     Locale('be'),
     Locale('bg'),
     Locale('bn'),
@@ -984,6 +986,7 @@ class _UbuntuLocalizationsDelegate
   bool isSupported(Locale locale) => <String>[
         'am',
         'ar',
+        'az',
         'be',
         'bg',
         'bn',
@@ -1096,6 +1099,8 @@ UbuntuLocalizations lookupUbuntuLocalizations(Locale locale) {
       return UbuntuLocalizationsAm();
     case 'ar':
       return UbuntuLocalizationsAr();
+    case 'az':
+      return UbuntuLocalizationsAz();
     case 'be':
       return UbuntuLocalizationsBe();
     case 'bg':
