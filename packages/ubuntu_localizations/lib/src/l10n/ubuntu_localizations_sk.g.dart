@@ -15,7 +15,7 @@ class UbuntuLocalizationsSk extends UbuntuLocalizations {
   String get languageName => 'Slovenčina';
 
   @override
-  String get backAction => 'Naspäť';
+  String get backAction => 'Späť';
 
   @override
   String get continueAction => 'Pokračovať';
@@ -75,7 +75,7 @@ class UbuntuLocalizationsSk extends UbuntuLocalizations {
   String get centerLabel => 'Stred';
 
   @override
-  String get clearLabel => 'Vyčistiť';
+  String get clearLabel => 'Vymazať';
 
   @override
   String get closeLabel => 'Zavrieť';
@@ -99,10 +99,10 @@ class UbuntuLocalizationsSk extends UbuntuLocalizations {
   String get cutLabel => 'Vystrihnúť';
 
   @override
-  String get decreaseLabel => 'Znížiť';
+  String get decreaseLabel => 'Zmenšiť';
 
   @override
-  String get deleteLabel => 'Vymazať';
+  String get deleteLabel => 'Odstrániť';
 
   @override
   String get descendingLabel => 'Zostupne';
@@ -114,7 +114,7 @@ class UbuntuLocalizationsSk extends UbuntuLocalizations {
   String get disconnectLabel => 'Odpojiť';
 
   @override
-  String get doneLabel => 'Dokončiť';
+  String get doneLabel => 'Hotovo';
 
   @override
   String get downloadLabel => 'Stiahnuť';
@@ -123,7 +123,7 @@ class UbuntuLocalizationsSk extends UbuntuLocalizations {
   String get editLabel => 'Upraviť';
 
   @override
-  String get enterLabel => 'Potvrdiť';
+  String get enterLabel => 'Enter';
 
   @override
   String get errorLabel => 'Chyba';
@@ -138,13 +138,13 @@ class UbuntuLocalizationsSk extends UbuntuLocalizations {
   String get fileLabel => 'Súbor';
 
   @override
-  String get fillLabel => 'Vyplniť';
+  String get fillLabel => 'Výplň';
 
   @override
-  String get findLabel => 'Nájsť';
+  String get findLabel => 'Hľadať';
 
   @override
-  String get firstLabel => 'Prvá';
+  String get firstLabel => 'Prvý';
 
   @override
   String get fontLabel => 'Písmo';
@@ -156,7 +156,7 @@ class UbuntuLocalizationsSk extends UbuntuLocalizations {
   String get fullscreenLabel => 'Celá obrazovka';
 
   @override
-  String get goBackLabel => 'Naspäť';
+  String get goBackLabel => 'Späť';
 
   @override
   String get helpLabel => 'Pomoc';
@@ -168,13 +168,13 @@ class UbuntuLocalizationsSk extends UbuntuLocalizations {
   String get importLabel => 'Importovať';
 
   @override
-  String get increaseLabel => 'Zvýšiť';
+  String get increaseLabel => 'Zväčšiť';
 
   @override
-  String get indexLabel => 'Obsah';
+  String get indexLabel => 'Index';
 
   @override
-  String get informationLabel => 'Informácia';
+  String get informationLabel => 'Informácie';
 
   @override
   String get insertLabel => 'Vložiť';
@@ -186,10 +186,10 @@ class UbuntuLocalizationsSk extends UbuntuLocalizations {
   String get landscapeLabel => 'Na šírku';
 
   @override
-  String get lastLabel => 'Posledná';
+  String get lastLabel => 'Posledný';
 
   @override
-  String get leaveLabel => 'Odísť';
+  String get leaveLabel => 'Opustiť';
 
   @override
   String get leftLabel => 'Vľavo';
@@ -210,7 +210,7 @@ class UbuntuLocalizationsSk extends UbuntuLocalizations {
   String get noLabel => 'Nie';
 
   @override
-  String get noneLabel => 'Žiadne';
+  String get noneLabel => 'Žiadny';
 
   @override
   String get normalLabel => 'Normálny';
@@ -222,7 +222,7 @@ class UbuntuLocalizationsSk extends UbuntuLocalizations {
   String get openLabel => 'Otvoriť';
 
   @override
-  String get pasteLabel => 'Prilepiť';
+  String get pasteLabel => 'Vložiť';
 
   @override
   String get pauseLabel => 'Pozastaviť';
@@ -237,10 +237,10 @@ class UbuntuLocalizationsSk extends UbuntuLocalizations {
   String get preferencesLabel => 'Predvoľby';
 
   @override
-  String get previousLabel => 'Späť';
+  String get previousLabel => 'Predchádzajúci';
 
   @override
-  String get printLabel => 'Vytlačiť';
+  String get printLabel => 'Tlačiť';
 
   @override
   String get printPreviewLabel => 'Náhľad tlače';
@@ -279,7 +279,7 @@ class UbuntuLocalizationsSk extends UbuntuLocalizations {
   String get restoreLabel => 'Obnoviť';
 
   @override
-  String get retryLabel => 'Zopakovať';
+  String get retryLabel => 'Skúsiť znova';
 
   @override
   String get revertLabel => 'Vrátiť späť';
@@ -312,19 +312,19 @@ class UbuntuLocalizationsSk extends UbuntuLocalizations {
   String get skipLabel => 'Preskočiť';
 
   @override
-  String get sortLabel => 'Zoradiť';
+  String get sortLabel => 'Triediť';
 
   @override
   String get stopLabel => 'Zastaviť';
 
   @override
-  String get strikeThroughLabel => 'Prečiarknuť';
+  String get strikeThroughLabel => 'Prečiarknuté';
 
   @override
   String get submitLabel => 'Odoslať';
 
   @override
-  String get topLabel => 'Nahor';
+  String get topLabel => 'Hore';
 
   @override
   String get undoLabel => 'Späť';

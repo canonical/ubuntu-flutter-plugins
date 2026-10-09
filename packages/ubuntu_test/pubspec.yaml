@@ -17,6 +17,8 @@ dependencies:
   flutter_svg: ^2.0.10+1
   flutter_test:
     sdk: flutter
+  # flutter_html 3.0.0 relies on an API removed in html 0.15.7
+  html: ">=0.15.5 <0.15.7"
   matcher: ^0.12.16+1
   mockito: ^5.4.4
   ubuntu_localizations: ^0.5.2+4
