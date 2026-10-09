@@ -1,3 +1,5 @@
+// ignore_for_file: deprecated_member_use
+
 import 'package:platform_linux/platform.dart';
 import 'package:test/test.dart';
 
