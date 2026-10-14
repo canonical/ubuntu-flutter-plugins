@@ -12,7 +12,7 @@ class UbuntuLocalizationsAz extends UbuntuLocalizations {
   String get countryCode => 'AZ';
 
   @override
-  String get languageName => 'Azərbaycanca';
+  String get languageName => 'Azərbaycan dili';
 
   @override
   String get backAction => 'Geri qayıt';
@@ -21,16 +21,16 @@ class UbuntuLocalizationsAz extends UbuntuLocalizations {
   String get continueAction => 'Davam et';
 
   @override
-  String get strongPassword => 'Güclü parol';
+  String get strongPassword => 'Güclü şifrə';
 
   @override
-  String get fairPassword => 'Orta parol';
+  String get fairPassword => 'Ortabab şifrə';
 
   @override
-  String get goodPassword => 'Yaxşı parol';
+  String get goodPassword => 'Yaxşı şifrə';
 
   @override
-  String get weakPassword => 'Zəif parol';
+  String get weakPassword => 'Zəif şifrə';
 
   @override
   String get altKey => 'Alt';
@@ -69,7 +69,7 @@ class UbuntuLocalizationsAz extends UbuntuLocalizations {
   String get bottomLabel => 'Aşağı';
 
   @override
-  String get cancelLabel => 'Ləğv et';
+  String get cancelLabel => 'İmtina';
 
   @override
   String get centerLabel => 'Mərkəz';
@@ -90,7 +90,7 @@ class UbuntuLocalizationsAz extends UbuntuLocalizations {
   String get continueLabel => 'Davam et';
 
   @override
-  String get copyLabel => 'Kopyala';
+  String get copyLabel => 'Köçür';
 
   @override
   String get createLabel => 'Yarat';
@@ -108,22 +108,22 @@ class UbuntuLocalizationsAz extends UbuntuLocalizations {
   String get descendingLabel => 'Azalan';
 
   @override
-  String get discardLabel => 'Burax';
+  String get discardLabel => 'Ləğv et';
 
   @override
   String get disconnectLabel => 'Bağlantını kəs';
 
   @override
-  String get doneLabel => 'Hazır';
+  String get doneLabel => 'Hazırdır';
 
   @override
-  String get downloadLabel => 'Yüklə';
+  String get downloadLabel => 'Endir';
 
   @override
-  String get editLabel => 'Redaktə et';
+  String get editLabel => 'Düzəliş et';
 
   @override
-  String get enterLabel => 'Daxil et';
+  String get enterLabel => 'Enter';
 
   @override
   String get errorLabel => 'Xəta';
@@ -159,7 +159,7 @@ class UbuntuLocalizationsAz extends UbuntuLocalizations {
   String get goBackLabel => 'Geri qayıt';
 
   @override
-  String get helpLabel => 'Kömək';
+  String get helpLabel => 'Yardım';
 
   @override
   String get homeLabel => 'Ana səhifə';
@@ -207,7 +207,7 @@ class UbuntuLocalizationsAz extends UbuntuLocalizations {
   String get nextLabel => 'Növbəti';
 
   @override
-  String get noLabel => 'Xeyr';
+  String get noLabel => 'Yox';
 
   @override
   String get noneLabel => 'Heç biri';
@@ -216,13 +216,13 @@ class UbuntuLocalizationsAz extends UbuntuLocalizations {
   String get normalLabel => 'Normal';
 
   @override
-  String get okLabel => 'OK';
+  String get okLabel => 'Oldu';
 
   @override
   String get openLabel => 'Aç';
 
   @override
-  String get pasteLabel => 'Yapışdır';
+  String get pasteLabel => 'Əlavə et';
 
   @override
   String get pauseLabel => 'Fasilə ver';
@@ -237,7 +237,7 @@ class UbuntuLocalizationsAz extends UbuntuLocalizations {
   String get preferencesLabel => 'Tərcihlər';
 
   @override
-  String get previousLabel => 'Əvvəlki';
+  String get previousLabel => 'Öncəki';
 
   @override
   String get printLabel => 'Çap et';
@@ -246,7 +246,7 @@ class UbuntuLocalizationsAz extends UbuntuLocalizations {
   String get printPreviewLabel => 'Çap önizləməsi';
 
   @override
-  String get propertiesLabel => 'Xüsusiyyətlər';
+  String get propertiesLabel => 'Özəlliklər';
 
   @override
   String get questionLabel => 'Sual';
@@ -264,7 +264,7 @@ class UbuntuLocalizationsAz extends UbuntuLocalizations {
   String get refreshLabel => 'Yenilə';
 
   @override
-  String get removeLabel => 'Sil';
+  String get removeLabel => 'Yığışdır';
 
   @override
   String get renameLabel => 'Adını dəyiş';
@@ -291,7 +291,7 @@ class UbuntuLocalizationsAz extends UbuntuLocalizations {
   String get rightLabel => 'Sağ';
 
   @override
-  String get saveAsLabel => 'Belə saxla';
+  String get saveAsLabel => 'Fərqli saxla';
 
   @override
   String get saveLabel => 'Saxla';
@@ -309,10 +309,10 @@ class UbuntuLocalizationsAz extends UbuntuLocalizations {
   String get sendLabel => 'Göndər';
 
   @override
-  String get skipLabel => 'Keç';
+  String get skipLabel => 'Ötür';
 
   @override
-  String get sortLabel => 'Sırala';
+  String get sortLabel => 'Çeşidlə';
 
   @override
   String get stopLabel => 'Dayandır';
@@ -324,7 +324,7 @@ class UbuntuLocalizationsAz extends UbuntuLocalizations {
   String get submitLabel => 'Təqdim et';
 
   @override
-  String get topLabel => 'Yuxarı';
+  String get topLabel => 'Üst';
 
   @override
   String get undoLabel => 'Geri al';
@@ -345,7 +345,7 @@ class UbuntuLocalizationsAz extends UbuntuLocalizations {
   String get windowLabel => 'Pəncərə';
 
   @override
-  String get yesLabel => 'Bəli';
+  String get yesLabel => 'Hə';
 
   @override
   String get zoomInLabel => 'Yaxınlaşdır';
