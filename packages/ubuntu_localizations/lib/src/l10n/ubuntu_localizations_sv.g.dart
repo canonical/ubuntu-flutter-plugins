@@ -63,7 +63,7 @@ class UbuntuLocalizationsSv extends UbuntuLocalizations {
   String get backLabel => 'Tillbaka';
 
   @override
-  String get boldLabel => 'Kursiv';
+  String get boldLabel => 'Fet';
 
   @override
   String get bottomLabel => 'Längst ner';
@@ -117,7 +117,7 @@ class UbuntuLocalizationsSv extends UbuntuLocalizations {
   String get doneLabel => 'Klart';
 
   @override
-  String get downloadLabel => 'Hämta ner';
+  String get downloadLabel => 'Hämta';
 
   @override
   String get editLabel => 'Redigera';
@@ -177,7 +177,7 @@ class UbuntuLocalizationsSv extends UbuntuLocalizations {
   String get informationLabel => 'Information';
 
   @override
-  String get insertLabel => 'Insert';
+  String get insertLabel => 'Infoga';
 
   @override
   String get italicLabel => 'Kursiv';

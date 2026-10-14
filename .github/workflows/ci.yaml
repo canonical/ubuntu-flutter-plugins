@@ -56,7 +56,7 @@ jobs:
       - uses: Atsumi3/actions-setup-fvm@0.0.3
       - uses: bluefireteam/melos-action@v3
       # Remove ubuntu_test from ignore list once
-      - run: melos exec --no-private --ignore ubuntu_test -- flutter pub publish --dry-run
+      - run: melos exec -c 1 --no-private --ignore ubuntu_test -- fvm flutter pub publish --dry-run
 
   test:
     runs-on: ubuntu-latest
