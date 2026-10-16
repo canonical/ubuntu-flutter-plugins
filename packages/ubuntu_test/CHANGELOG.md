@@ -1,3 +1,7 @@
+## 0.2.3+3
+
+ - **FIX**: resolve CI failures caused by newer dependencies.
+
 ## 0.2.3+2
 
  - **CHORE**: Bump Yaru to 10.x.x
