@@ -1,3 +1,7 @@
+## 0.5.0+2
+
+ - **FIX**: resolve CI failures caused by newer dependencies.
+
 ## 0.5.0+1
 
  - **FIX**(l10n): translations update from Hosted Weblate (#451).
