@@ -54,7 +54,7 @@ class Geoname extends GeoSource {
     await cancel();
     try {
       final response = await _sendRequest(location);
-      return _handleResponse(response);
+      return await _handleResponse(response);
     } on DioException catch (e) {
       if (!CancelToken.isCancel(e) && e.error is! SocketException) {
         throw GeoException(e.message ?? '', e);
@@ -84,7 +84,7 @@ class Geoname extends GeoSource {
       final data = json.decode(response.data.toString());
       if (data is! Iterable) throw FormatException('$data');
       final locations = data.cast<Map<String, dynamic>>();
-      return Future.wait(locations.map(_geodata.fromJson));
+      return await Future.wait(locations.map(_geodata.fromJson));
     } on FormatException catch (e) {
       throw GeoException(e.message, e);
     }
