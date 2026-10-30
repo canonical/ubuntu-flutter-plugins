@@ -116,5 +116,9 @@
     "retryLabel": "再試行",
     "rewindLabel": "巻き戻し",
     "submitLabel": "送信",
-    "topLabel": "上"
+    "topLabel": "上",
+    "leaveLabel": "退出",
+    "fillLabel": "塗りつぶし",
+    "restoreLabel": "元のサイズに戻す",
+    "upLabel": "上へ"
 }

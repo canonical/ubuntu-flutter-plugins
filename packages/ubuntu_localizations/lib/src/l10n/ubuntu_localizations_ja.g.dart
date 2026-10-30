@@ -138,7 +138,7 @@ class UbuntuLocalizationsJa extends UbuntuLocalizations {
   String get fileLabel => 'ファイル';
 
   @override
-  String get fillLabel => 'Fill';
+  String get fillLabel => '塗りつぶし';
 
   @override
   String get findLabel => '検索';
@@ -189,7 +189,7 @@ class UbuntuLocalizationsJa extends UbuntuLocalizations {
   String get lastLabel => '最後';
 
   @override
-  String get leaveLabel => 'Leave';
+  String get leaveLabel => '退出';
 
   @override
   String get leftLabel => '左';
@@ -276,7 +276,7 @@ class UbuntuLocalizationsJa extends UbuntuLocalizations {
   String get restartLabel => '再起動';
 
   @override
-  String get restoreLabel => 'Restore';
+  String get restoreLabel => '元のサイズに戻す';
 
   @override
   String get retryLabel => '再試行';
@@ -333,7 +333,7 @@ class UbuntuLocalizationsJa extends UbuntuLocalizations {
   String get updateLabel => 'アップデート';
 
   @override
-  String get upLabel => 'Up';
+  String get upLabel => '上へ';
 
   @override
   String get viewLabel => '表示';
