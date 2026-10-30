@@ -1,3 +1,7 @@
+## 0.8.2
+
+ - Update Yaru to 11.
+
 ## 0.8.1+1
 
  - Update a dependency to the latest release.
