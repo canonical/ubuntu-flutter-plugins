@@ -327,7 +327,7 @@ class UbuntuLocalizationsKa extends UbuntuLocalizations {
   String get topLabel => 'ზედა';
 
   @override
-  String get undoLabel => 'გაუქმება';
+  String get undoLabel => 'ბოლო ქმედების გაუქმება';
 
   @override
   String get updateLabel => 'განახლება';
