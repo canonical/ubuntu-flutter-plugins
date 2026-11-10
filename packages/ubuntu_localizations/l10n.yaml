@@ -2,5 +2,4 @@ arb-dir: lib/src/l10n
 template-arb-file: ubuntu_en.arb
 output-class: UbuntuLocalizations
 output-localization-file: ubuntu_localizations.g.dart
-synthetic-package: false
 nullable-getter: false

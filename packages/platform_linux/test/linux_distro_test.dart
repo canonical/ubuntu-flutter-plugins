@@ -1,3 +1,5 @@
+// ignore_for_file: deprecated_member_use
+
 import 'dart:convert';
 import 'dart:io';
 
@@ -233,6 +235,35 @@ BUG_REPORT_URL="https://bugs.launchpad.net/ubuntu/"
 PRIVACY_POLICY_URL="https://www.ubuntu.com/legal/terms-and-policies/privacy-policy"
 UBUNTU_CODENAME=lunar
 LOGO=ubuntu-logo
+'''),
+      }).call,
+    );
+  });
+
+  test('Override', () {
+    IOOverrides.runZoned(
+      () {
+        final platform = FakePlatform();
+        platform.distroOverride = 'opensuse';
+        expect(
+          {'manjaro': platform.isManjaro, 'opensuse': platform.isOpenSUSE},
+          {'manjaro': isFalse, 'opensuse': isTrue},
+        );
+      },
+      createFile: MockTextFiles({
+        '/etc/os-release': MockTextFile('''
+NAME="Manjaro Linux"
+PRETTY_NAME="Manjaro Linux"
+ID=manjaro
+ID_LIKE=arch
+BUILD_ID=rolling
+ANSI_COLOR="32;1;24;144;200"
+HOME_URL="https://manjaro.org/"
+DOCUMENTATION_URL="https://wiki.manjaro.org/"
+SUPPORT_URL="https://forum.manjaro.org/"
+BUG_REPORT_URL="https://docs.manjaro.org/reporting-bugs/"
+PRIVACY_POLICY_URL="https://manjaro.org/privacy-policy/"
+LOGO=manjarolinux
 '''),
       }).call,
     );

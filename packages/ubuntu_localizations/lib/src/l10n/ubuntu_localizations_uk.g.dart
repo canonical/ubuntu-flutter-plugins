@@ -204,7 +204,7 @@ class UbuntuLocalizationsUk extends UbuntuLocalizations {
   String get newLabel => 'Новий';
 
   @override
-  String get nextLabel => 'Наступний';
+  String get nextLabel => 'Далі';
 
   @override
   String get noLabel => 'Ні';

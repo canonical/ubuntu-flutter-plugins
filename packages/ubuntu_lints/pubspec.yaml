@@ -1,6 +1,6 @@
 name: ubuntu_lints
 description: Ubuntu lints package for Dart and Flutter.
-version: 0.4.1
+version: 0.4.2
 repository: https://github.com/canonical/ubuntu-flutter-plugins/tree/main/packages/ubuntu_lints
 issue_tracker: https://github.com/canonical/ubuntu-flutter-plugins/issues
 topics:
@@ -10,6 +10,6 @@ environment:
   sdk: ">=3.0.0 <4.0.0"
 
 dependencies:
-  flutter_lints: ^5.0.0
+  flutter_lints: ^6.0.0
   yaml: ^3.1.2
 

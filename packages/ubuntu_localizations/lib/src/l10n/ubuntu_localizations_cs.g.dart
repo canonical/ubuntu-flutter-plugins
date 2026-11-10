@@ -12,7 +12,7 @@ class UbuntuLocalizationsCs extends UbuntuLocalizations {
   String get countryCode => 'CZ';
 
   @override
-  String get languageName => 'Čeština';
+  String get languageName => 'čeština';
 
   @override
   String get backAction => 'Jít zpět';
@@ -21,7 +21,7 @@ class UbuntuLocalizationsCs extends UbuntuLocalizations {
   String get continueAction => 'Pokračovat';
 
   @override
-  String get strongPassword => 'Prolomení odolné heslo';
+  String get strongPassword => 'Odolné heslo';
 
   @override
   String get fairPassword => 'Dobré heslo';
@@ -30,7 +30,7 @@ class UbuntuLocalizationsCs extends UbuntuLocalizations {
   String get goodPassword => 'Přijatelné heslo';
 
   @override
-  String get weakPassword => 'Snadno prolomitelné heslo';
+  String get weakPassword => 'Prolomitelné heslo';
 
   @override
   String get altKey => 'Alt';
@@ -123,7 +123,7 @@ class UbuntuLocalizationsCs extends UbuntuLocalizations {
   String get editLabel => 'Upravit';
 
   @override
-  String get enterLabel => 'Vstup';
+  String get enterLabel => 'Vložit';
 
   @override
   String get errorLabel => 'Chyba';
@@ -165,7 +165,7 @@ class UbuntuLocalizationsCs extends UbuntuLocalizations {
   String get homeLabel => 'Domů';
 
   @override
-  String get importLabel => 'Importovat';
+  String get importLabel => 'Naimportovat';
 
   @override
   String get increaseLabel => 'Zvýšit';
@@ -183,7 +183,7 @@ class UbuntuLocalizationsCs extends UbuntuLocalizations {
   String get italicLabel => 'Kurzíva';
 
   @override
-  String get landscapeLabel => 'Na šířku';
+  String get landscapeLabel => 'Landscape';
 
   @override
   String get lastLabel => 'Poslední';
@@ -216,7 +216,7 @@ class UbuntuLocalizationsCs extends UbuntuLocalizations {
   String get normalLabel => 'Normální';
 
   @override
-  String get okLabel => 'Budiž';
+  String get okLabel => 'OK';
 
   @override
   String get openLabel => 'Otevřít';
@@ -330,7 +330,7 @@ class UbuntuLocalizationsCs extends UbuntuLocalizations {
   String get undoLabel => 'Zpět';
 
   @override
-  String get updateLabel => 'Zaktualizovat';
+  String get updateLabel => 'Aktualizovat';
 
   @override
   String get upLabel => 'Nahoru';

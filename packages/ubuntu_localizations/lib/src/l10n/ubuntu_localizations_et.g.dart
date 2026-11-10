@@ -240,10 +240,10 @@ class UbuntuLocalizationsEt extends UbuntuLocalizations {
   String get previousLabel => 'Eelmine';
 
   @override
-  String get printLabel => 'Trüki';
+  String get printLabel => 'Prindi';
 
   @override
-  String get printPreviewLabel => 'Trükkimise eelvaade';
+  String get printPreviewLabel => 'Printimise eelvaade';
 
   @override
   String get propertiesLabel => 'Omadused';

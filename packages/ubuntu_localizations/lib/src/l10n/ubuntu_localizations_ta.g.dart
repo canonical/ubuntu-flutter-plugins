@@ -15,349 +15,349 @@ class UbuntuLocalizationsTa extends UbuntuLocalizations {
   String get languageName => 'தமிழ்';
 
   @override
-  String get backAction => 'Go back';
+  String get backAction => 'திரும்பிச் செல்லுங்கள்';
 
   @override
-  String get continueAction => 'Continue';
+  String get continueAction => 'தொடரவும்';
 
   @override
-  String get strongPassword => 'Strong password';
+  String get strongPassword => 'வலுவான கடவுச்சொல்';
 
   @override
-  String get fairPassword => 'Fair password';
+  String get fairPassword => 'நியாயமான கடவுச்சொல்';
 
   @override
-  String get goodPassword => 'Good password';
+  String get goodPassword => 'நல்ல கடவுச்சொல்';
 
   @override
-  String get weakPassword => 'Weak password';
+  String get weakPassword => 'பலவீனமான கடவுச்சொல்';
 
   @override
-  String get altKey => 'Alt';
+  String get altKey => 'மாற்று';
 
   @override
-  String get controlKey => 'Control';
+  String get controlKey => 'கட்டுப்பாடு';
 
   @override
-  String get metaKey => 'Meta';
+  String get metaKey => 'மெட்டா';
 
   @override
-  String get shiftKey => 'Shift';
+  String get shiftKey => 'உயர்த்து';
 
   @override
-  String get aboutLabel => 'About';
+  String get aboutLabel => 'பற்றி';
 
   @override
-  String get addLabel => 'Add';
+  String get addLabel => 'கூட்டு';
 
   @override
-  String get allLabel => 'All';
+  String get allLabel => 'அனைத்தும்';
 
   @override
-  String get applyLabel => 'Apply';
+  String get applyLabel => 'இடு';
 
   @override
-  String get ascendingLabel => 'Ascending';
+  String get ascendingLabel => 'ஏறுதல்';
 
   @override
-  String get backLabel => 'Back';
+  String get backLabel => 'பின்';
 
   @override
-  String get boldLabel => 'Bold';
+  String get boldLabel => 'தடிமான';
 
   @override
-  String get bottomLabel => 'Bottom';
+  String get bottomLabel => 'கீழே';
 
   @override
   String get cancelLabel => 'ரத்து செய்';
 
   @override
-  String get centerLabel => 'Center';
+  String get centerLabel => 'நடுவண்';
 
   @override
-  String get clearLabel => 'Clear';
+  String get clearLabel => 'தெளிவான';
 
   @override
-  String get closeLabel => 'Close';
+  String get closeLabel => 'மூடு';
 
   @override
-  String get colorLabel => 'Color';
+  String get colorLabel => 'நிறம்';
 
   @override
-  String get connectLabel => 'Connect';
+  String get connectLabel => 'இணை';
 
   @override
-  String get continueLabel => 'Continue';
+  String get continueLabel => 'தொடரவும்';
 
   @override
-  String get copyLabel => 'Copy';
+  String get copyLabel => 'நகலெடு';
 
   @override
-  String get createLabel => 'Create';
+  String get createLabel => 'உருவாக்கு';
 
   @override
-  String get cutLabel => 'Cut';
+  String get cutLabel => 'வெட்டு';
 
   @override
-  String get decreaseLabel => 'Decrease';
+  String get decreaseLabel => 'குறைவு';
 
   @override
-  String get deleteLabel => 'Delete';
+  String get deleteLabel => 'நீக்கு';
 
   @override
-  String get descendingLabel => 'Descending';
+  String get descendingLabel => 'இறங்கு';
 
   @override
-  String get discardLabel => 'Discard';
+  String get discardLabel => 'நிராகரிக்கவும்';
 
   @override
-  String get disconnectLabel => 'Disconnect';
+  String get disconnectLabel => 'துண்டிக்கவும்';
 
   @override
-  String get doneLabel => 'Done';
+  String get doneLabel => 'முடிந்தது';
 
   @override
-  String get downloadLabel => 'Download';
+  String get downloadLabel => 'பதிவிறக்கம்';
 
   @override
-  String get editLabel => 'Edit';
+  String get editLabel => 'தொகு';
 
   @override
-  String get enterLabel => 'Enter';
+  String get enterLabel => 'உள்ளிடவும்';
 
   @override
-  String get errorLabel => 'Error';
+  String get errorLabel => 'பிழை';
 
   @override
-  String get executeLabel => 'Execute';
+  String get executeLabel => 'செயல்படுத்தவும்';
 
   @override
-  String get exitLabel => 'Exit';
+  String get exitLabel => 'வெளியேறு';
 
   @override
-  String get fileLabel => 'File';
+  String get fileLabel => 'கோப்பு';
 
   @override
-  String get fillLabel => 'Fill';
+  String get fillLabel => 'நிரப்பவும்';
 
   @override
-  String get findLabel => 'Find';
+  String get findLabel => 'கண்டுபிடி';
 
   @override
-  String get firstLabel => 'First';
+  String get firstLabel => 'முதல்';
 
   @override
-  String get fontLabel => 'Font';
+  String get fontLabel => 'எழுத்துரு';
 
   @override
-  String get forwardLabel => 'Forward';
+  String get forwardLabel => 'முன்னோக்கி';
 
   @override
-  String get fullscreenLabel => 'Fullscreen';
+  String get fullscreenLabel => 'முழு திரை';
 
   @override
-  String get goBackLabel => 'Go Back';
+  String get goBackLabel => 'திரும்பிச் செல்லுங்கள்';
 
   @override
-  String get helpLabel => 'Help';
+  String get helpLabel => 'உதவி';
 
   @override
-  String get homeLabel => 'Home';
+  String get homeLabel => 'வீடு';
 
   @override
-  String get importLabel => 'Import';
+  String get importLabel => 'இறக்குமதி';
 
   @override
-  String get increaseLabel => 'Increase';
+  String get increaseLabel => 'அதிகரிப்பு';
 
   @override
-  String get indexLabel => 'Index';
+  String get indexLabel => 'குறியெண்';
 
   @override
-  String get informationLabel => 'Information';
+  String get informationLabel => 'தகவல்';
 
   @override
-  String get insertLabel => 'Insert';
+  String get insertLabel => 'செருகவும்';
 
   @override
-  String get italicLabel => 'Italic';
+  String get italicLabel => 'சாய்வு';
 
   @override
-  String get landscapeLabel => 'Landscape';
+  String get landscapeLabel => 'நிலப்பரப்பு';
 
   @override
-  String get lastLabel => 'Last';
+  String get lastLabel => 'கடைசி';
 
   @override
-  String get leaveLabel => 'Leave';
+  String get leaveLabel => 'விடுப்பு';
 
   @override
-  String get leftLabel => 'Left';
+  String get leftLabel => 'இடது';
 
   @override
-  String get mediaLabel => 'Media';
+  String get mediaLabel => 'ஊடகம்';
 
   @override
-  String get networkLabel => 'Network';
+  String get networkLabel => 'பிணையம்';
 
   @override
-  String get newLabel => 'New';
+  String get newLabel => 'புதிய';
 
   @override
-  String get nextLabel => 'Next';
+  String get nextLabel => 'அடுத்தது';
 
   @override
   String get noLabel => 'இல்லை';
 
   @override
-  String get noneLabel => 'None';
+  String get noneLabel => 'எதுவுமில்லை';
 
   @override
-  String get normalLabel => 'Normal';
+  String get normalLabel => 'சாதாரண';
 
   @override
   String get okLabel => 'சரி';
 
   @override
-  String get openLabel => 'Open';
+  String get openLabel => 'திற';
 
   @override
-  String get pasteLabel => 'Paste';
+  String get pasteLabel => 'ஒட்டு';
 
   @override
-  String get pauseLabel => 'Pause';
+  String get pauseLabel => 'இடைநிறுத்தம்';
 
   @override
-  String get playLabel => 'Play';
+  String get playLabel => 'விளையாடுங்கள்';
 
   @override
-  String get portraitLabel => 'Portrait';
+  String get portraitLabel => 'உருவப்படம்';
 
   @override
-  String get preferencesLabel => 'Preferences';
+  String get preferencesLabel => 'விருப்பத்தேர்வுகள்';
 
   @override
-  String get previousLabel => 'Previous';
+  String get previousLabel => 'முந்தைய';
 
   @override
-  String get printLabel => 'Print';
+  String get printLabel => 'அச்சிடுக';
 
   @override
-  String get printPreviewLabel => 'Print Preview';
+  String get printPreviewLabel => 'முன்னோட்டம் அச்சு';
 
   @override
-  String get propertiesLabel => 'Properties';
+  String get propertiesLabel => 'பண்புகள்';
 
   @override
-  String get questionLabel => 'Question';
+  String get questionLabel => 'கேள்வி';
 
   @override
-  String get quitLabel => 'Quit';
+  String get quitLabel => 'வெளியேறு';
 
   @override
-  String get recordLabel => 'Record';
+  String get recordLabel => 'பதிவு';
 
   @override
-  String get redoLabel => 'Redo';
+  String get redoLabel => 'மீண்டும்செய்';
 
   @override
-  String get refreshLabel => 'Refresh';
+  String get refreshLabel => 'புதுப்பி';
 
   @override
-  String get removeLabel => 'Remove';
+  String get removeLabel => 'அகற்று';
 
   @override
-  String get renameLabel => 'Rename';
+  String get renameLabel => 'மறுபெயரிடுங்கள்';
 
   @override
-  String get resetLabel => 'Reset';
+  String get resetLabel => 'மீட்டமை';
 
   @override
   String get restartLabel => 'மீண்டும் இயக்கு';
 
   @override
-  String get restoreLabel => 'Restore';
+  String get restoreLabel => 'மீட்டெடு';
 
   @override
-  String get retryLabel => 'Retry';
+  String get retryLabel => 'மீண்டும் முயற்சிக்கவும்';
 
   @override
   String get revertLabel => 'மீட்டல்';
 
   @override
-  String get rewindLabel => 'Rewind';
+  String get rewindLabel => 'முன்னாடி';
 
   @override
-  String get rightLabel => 'Right';
+  String get rightLabel => 'வலது';
 
   @override
-  String get saveAsLabel => 'Save As';
+  String get saveAsLabel => 'என சேமி';
 
   @override
-  String get saveLabel => 'Save';
+  String get saveLabel => 'சேமி';
 
   @override
-  String get searchLabel => 'Search';
+  String get searchLabel => 'தேடல்';
 
   @override
-  String get selectAllLabel => 'Select All';
+  String get selectAllLabel => 'அனைத்தையும் தெரிவுசெய்';
 
   @override
-  String get selectLabel => 'Select';
+  String get selectLabel => 'தேர்ந்தெடு';
 
   @override
-  String get sendLabel => 'Send';
+  String get sendLabel => 'அனுப்பு';
 
   @override
-  String get skipLabel => 'Skip';
+  String get skipLabel => 'தவிர்';
 
   @override
-  String get sortLabel => 'Sort';
+  String get sortLabel => 'வரிசைப்படுத்து';
 
   @override
-  String get stopLabel => 'Stop';
+  String get stopLabel => 'நிறுத்து';
 
   @override
-  String get strikeThroughLabel => 'Strike Through';
+  String get strikeThroughLabel => 'மூலம் வேலைநிறுத்தம்';
 
   @override
-  String get submitLabel => 'Submit';
+  String get submitLabel => 'சமர்ப்பிக்கவும்';
 
   @override
-  String get topLabel => 'Top';
+  String get topLabel => 'மேலே';
 
   @override
-  String get undoLabel => 'Undo';
+  String get undoLabel => 'செயல்தவிர்';
 
   @override
-  String get updateLabel => 'Update';
+  String get updateLabel => 'புதுப்பிப்பு';
 
   @override
-  String get upLabel => 'Up';
+  String get upLabel => 'மேலே';
 
   @override
-  String get viewLabel => 'View';
+  String get viewLabel => 'பார்வை';
 
   @override
-  String get warningLabel => 'Warning';
+  String get warningLabel => 'எச்சரிக்கை';
 
   @override
-  String get windowLabel => 'Window';
+  String get windowLabel => 'சாளரம்';
 
   @override
   String get yesLabel => 'ஆம்';
 
   @override
-  String get zoomInLabel => 'Zoom In';
+  String get zoomInLabel => 'பெரிதாக்கு';
 
   @override
-  String get zoomOutLabel => 'Zoom Out';
+  String get zoomOutLabel => 'சிறிதாக்கு';
 
   @override
   String get byte => 'B';
 
   @override
-  String get kilobyte => 'kB';
+  String get kilobyte => 'கே.பி.';
 
   @override
   String get megabyte => 'எம்பி';
@@ -366,8 +366,8 @@ class UbuntuLocalizationsTa extends UbuntuLocalizations {
   String get gigabyte => 'ஜிபி';
 
   @override
-  String get terabyte => 'TB';
+  String get terabyte => 'காசநோய்';
 
   @override
-  String get petabyte => 'PB';
+  String get petabyte => 'பிபி';
 }

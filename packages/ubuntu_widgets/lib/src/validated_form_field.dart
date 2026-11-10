@@ -37,6 +37,7 @@ class ValidatedFormField extends StatefulWidget {
     this.suffixIcon,
     this.filled = false,
     this.fillColor,
+    this.errorMaxLines,
   })  : validator = validator ?? _NoValidator(),
         spacing = spacing ?? (successWidget != null ? _kIconSpacing : null);
 
@@ -98,6 +99,9 @@ class ValidatedFormField extends StatefulWidget {
 
   /// Override the background fill color of the form field if [filled] is true.
   final Color? fillColor;
+
+  /// The maximum number of lines the errorText can occupy.
+  final int? errorMaxLines;
 
   @override
   State<ValidatedFormField> createState() => _ValidatedFormFieldState();
@@ -171,6 +175,7 @@ class _ValidatedFormFieldState extends State<ValidatedFormField> {
         suffixIcon: widget.suffixIcon,
         filled: widget.filled,
         fillColor: widget.fillColor,
+        errorMaxLines: widget.errorMaxLines,
       ),
     );
 

@@ -327,7 +327,7 @@ class UbuntuLocalizationsGa extends UbuntuLocalizations {
   String get topLabel => 'Barr';
 
   @override
-  String get undoLabel => 'Cealaigh';
+  String get undoLabel => 'Cuir ar ceal';
 
   @override
   String get updateLabel => 'Nuashonrú';

@@ -3,11 +3,11 @@ description: Provides extra localizations for Ubuntu applications.
 homepage: https://github.com/canonical/ubuntu-flutter-plugins
 repository: https://github.com/canonical/ubuntu-flutter-plugins/tree/main/packages/ubuntu_localizations
 issue_tracker: https://github.com/canonical/ubuntu-flutter-plugins/issues
-version: 0.5.2+1
+version: 0.5.2+5
 
 environment:
   sdk: ">=3.0.0 <4.0.0"
-  flutter: ">=3.27.4"
+  flutter: ">=3.35.3"
 
 dependencies:
   collection: ^1.18.0
@@ -16,10 +16,13 @@ dependencies:
     sdk: flutter
   flutter_localizations:
     sdk: flutter
-  intl: ^0.19.0
+  intl: ^0.20.2
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  ubuntu_lints: ^0.4.1
+  ubuntu_lints: ^0.4.2
   xml: ^6.1.0
+
+flutter:
+  generate: true

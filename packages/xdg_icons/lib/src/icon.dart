@@ -1,9 +1,10 @@
 import 'dart:async';
+import 'dart:convert';
 import 'dart:io';
 import 'dart:typed_data';
 
 import 'package:flutter/widgets.dart';
-import 'package:flutter_svg/flutter_svg.dart';
+import 'package:jovial_svg/jovial_svg.dart';
 import 'package:path/path.dart' as path;
 
 import 'package:xdg_icons/src/data.dart';
@@ -131,15 +132,39 @@ class XdgIconState extends State<XdgIcon> {
     final file = File(_icon?.fileName ?? '');
     final size = _resolveSize();
     if (file.existsSync()) {
-      final builder = _icon!.isScalable ? SvgPicture.file : Image.file;
-      return builder(
+      if (_icon!.isScalable) {
+        return SizedBox(
+          width: size.toDouble(),
+          height: size.toDouble(),
+          child: ScalableImageWidget.fromSISource(
+            si: ScalableImageSource.fromSvgFile(
+              file.path,
+              file.readAsStringSync,
+            ),
+          ),
+        );
+      }
+
+      return Image.file(
         file,
         width: size.toDouble(),
         height: size.toDouble(),
       );
     } else if (_icon?.data != null) {
-      final builder = _icon!.isScalable ? SvgPicture.memory : Image.memory;
-      return builder(
+      if (_icon!.isScalable) {
+        return SizedBox(
+          width: size.toDouble(),
+          height: size.toDouble(),
+          child: ScalableImageWidget.fromSISource(
+            si: ScalableImageSource.fromSvgFile(
+              file.path,
+              () => utf8.decode(_icon!.data!),
+            ),
+          ),
+        );
+      }
+
+      return Image.memory(
         Uint8List.fromList(_icon!.data!),
         width: size.toDouble(),
         height: size.toDouble(),

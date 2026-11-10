@@ -1,3 +1,36 @@
+## 0.8.2
+
+ - Update Yaru to 11.
+
+## 0.8.1+1
+
+ - Update a dependency to the latest release.
+
+## 0.8.1
+
+ - **FIX**(ubuntu_widgets): adjust scroll alignment to satisfy boundary tests.
+ - **FIX**(a11y): resolve focus traps and silent semantics in ListWidget.
+ - **FEAT**(ubuntu_widgets): expose errorMaxLines for ValidatedFormField.
+
+## 0.8.0
+
+> Note: This release has breaking changes.
+
+ - **BREAKING** **FIX**(ListWidget): fix accessibility focus trap and remove tabFocusNode.
+ - **CHORE**: Bump to Yaru 10.0.0
+
+## 0.7.4
+
+- **CHORE**: Bump to Yaru 9.0.0
+
+## 0.7.3
+
+- **FEAT**(a11y): Expose semantic labels for icons
+
+## 0.7.2+1
+
+ - **FIX**(l10n): translations update from Hosted Weblate (#451).
+
 ## 0.7.2
 
  - **CHORE**: Bump yaru version

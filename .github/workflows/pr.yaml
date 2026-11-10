@@ -6,17 +6,10 @@ permissions:
   pull-requests: read
 
 jobs:
-  cla:
-    if: contains(fromJson('["weblate"]'), github.event.pull_request.user.login) == false
-    runs-on: ubuntu-latest
-    steps:
-      - name: Check if CLA signed
-        uses: canonical/has-signed-canonical-cla@v2
-
   title:
     runs-on: ubuntu-latest
     steps:
-      - uses: amannn/action-semantic-pull-request@v5
+      - uses: amannn/action-semantic-pull-request@v6
         id: semantic-pr
         env:
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}

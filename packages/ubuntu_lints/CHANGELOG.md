@@ -1,3 +1,11 @@
+## 0.4.2
+
+ - **FEAT**(ubuntu_lints): preserve trailing commas.
+
+## 0.4.1+1
+
+ - **FIX**(l10n): translations update from Hosted Weblate (#451).
+
 ## 0.4.1
 
  - **FIX**(deps): update dependency flutter_lints to v5 (#446).

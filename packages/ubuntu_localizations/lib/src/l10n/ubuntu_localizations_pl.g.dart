@@ -282,7 +282,7 @@ class UbuntuLocalizationsPl extends UbuntuLocalizations {
   String get retryLabel => 'Ponów';
 
   @override
-  String get revertLabel => 'Przywróć';
+  String get revertLabel => 'Cofnij';
 
   @override
   String get rewindLabel => 'Przewiń';

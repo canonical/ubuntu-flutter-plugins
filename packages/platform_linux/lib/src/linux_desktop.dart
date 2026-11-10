@@ -1,3 +1,6 @@
+// ignore_for_file: deprecated_member_use
+
+import 'package:meta/meta.dart';
 import 'package:platform/platform.dart';
 
 /// Detects the Linux desktop environment.
@@ -13,6 +16,9 @@ extension PlatformLinuxDesktop on Platform {
 
   /// [Cinnamon](https://github.com/linuxmint/Cinnamon)
   bool get isCinnamon => _isDesktop('x-cinnamon');
+
+  /// [COSMIC](https://system76.com/cosmic)
+  bool get isCOSMIC => _isDesktop('cosmic');
 
   /// [Deepin](https://www.deepin.org/en/)
   bool get isDeepin => _isDesktop('deepin');
@@ -43,6 +49,16 @@ extension PlatformLinuxDesktop on Platform {
 
   /// [Xfce](https://xfce.org/)
   bool get isXfce => _isDesktop('xfce');
+
+  /// Overrides the detected desktop environment for testing.
+  ///
+  /// The values must be in lowercase.
+  @visibleForTesting
+  set xdgDesktopOverride(List<String>? names) {
+    final cacheId = identityHashCode(this);
+    _xdgCurrentDesktopCacheId = cacheId;
+    _xdgCurrentDesktopCache = names;
+  }
 
   bool _isDesktop(String name) {
     return _getXdgCurrentDesktop(this)?.contains(name) ?? false;

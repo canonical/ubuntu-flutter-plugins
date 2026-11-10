@@ -1,3 +1,5 @@
+// ignore_for_file: deprecated_member_use
+
 import 'package:platform_linux/platform.dart';
 import 'package:test/test.dart';
 
@@ -6,6 +8,7 @@ void main() {
     final platform = FakePlatform(environment: {});
     expect(platform.isBudgie, isFalse);
     expect(platform.isCinnamon, isFalse);
+    expect(platform.isCOSMIC, isFalse);
     expect(platform.isDeepin, isFalse);
     expect(platform.isEnlightenment, isFalse);
     expect(platform.isGNOME, isFalse);
@@ -35,6 +38,15 @@ void main() {
       },
     );
     expect(platform.isCinnamon, isTrue);
+  });
+
+  test('COSMIC', () {
+    final platform = FakePlatform(
+      environment: {
+        'XDG_CURRENT_DESKTOP': 'COSMIC',
+      },
+    );
+    expect(platform.isCOSMIC, isTrue);
   });
 
   test('Deepin', () {
@@ -132,5 +144,23 @@ void main() {
       },
     );
     expect(platform.isXfce, isTrue);
+  });
+
+  test('Override', () {
+    final platform = FakePlatform(
+      environment: {
+        'XDG_CURRENT_DESKTOP': 'KDE',
+      },
+    );
+    platform.xdgDesktopOverride = ['budgie', 'gnome'];
+    expect({
+      'kde': platform.isKDE,
+      'budgie': platform.isBudgie,
+      'gnome': platform.isGNOME,
+    }, {
+      'kde': isFalse,
+      'budgie': isTrue,
+      'gnome': isTrue,
+    });
   });
 }

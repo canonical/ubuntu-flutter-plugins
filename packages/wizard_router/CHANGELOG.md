@@ -1,3 +1,7 @@
+## 1.4.1
+
+ - **FIX**(l10n): translations update from Hosted Weblate (#451).
+
 ## 1.4.0
 
  - **FEAT**: wizard_router add previous (#433).

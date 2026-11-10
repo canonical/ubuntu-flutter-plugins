@@ -1,6 +1,5 @@
-import 'dart:convert';
-
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:intl/intl.dart';
 import 'package:latlong2/latlong.dart';
@@ -43,9 +42,7 @@ class TimezoneMap extends StatelessWidget {
   /// Requests all timezone map SVG assets to be pre-cached.
   static Future<void> precacheAssets(BuildContext context) async {
     final bundle = DefaultAssetBundle.of(context);
-    final manifest = await bundle
-        .loadString('AssetManifest.json')
-        .then((value) => json.decode(value) as Map<String, dynamic>);
+    final manifest = await AssetManifest.loadFromAssetBundle(bundle);
 
     bool filterAsset(String asset) {
       return p.isWithin('packages/timezone_map', asset) &&
@@ -61,7 +58,9 @@ class TimezoneMap extends StatelessWidget {
       return precacheImage(asset, context);
     }
 
-    await Future.wait(manifest.keys.where(filterAsset).map(precacheAsset));
+    await Future.wait(
+      manifest.listAssets().where(filterAsset).map(precacheAsset),
+    );
   }
 
   @override

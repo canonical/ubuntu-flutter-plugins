@@ -357,7 +357,7 @@ class UbuntuLocalizationsFr extends UbuntuLocalizations {
   String get byte => 'o';
 
   @override
-  String get kilobyte => 'Ko';
+  String get kilobyte => 'ko';
 
   @override
   String get megabyte => 'Mo';

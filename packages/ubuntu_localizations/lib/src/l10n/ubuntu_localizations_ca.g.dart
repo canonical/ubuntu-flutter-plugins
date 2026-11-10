@@ -15,7 +15,7 @@ class UbuntuLocalizationsCa extends UbuntuLocalizations {
   String get languageName => 'Català';
 
   @override
-  String get backAction => 'Anar enrera';
+  String get backAction => 'Anar enrere';
 
   @override
   String get continueAction => 'Continuar';
@@ -48,13 +48,13 @@ class UbuntuLocalizationsCa extends UbuntuLocalizations {
   String get aboutLabel => 'Quant a';
 
   @override
-  String get addLabel => 'Add';
+  String get addLabel => 'Afegir';
 
   @override
-  String get allLabel => 'All';
+  String get allLabel => 'Tot';
 
   @override
-  String get applyLabel => 'Apply';
+  String get applyLabel => 'Aplicar';
 
   @override
   String get ascendingLabel => 'Ascendent';
@@ -66,7 +66,7 @@ class UbuntuLocalizationsCa extends UbuntuLocalizations {
   String get boldLabel => 'Negreta';
 
   @override
-  String get bottomLabel => 'Bottom';
+  String get bottomLabel => 'Fons';
 
   @override
   String get cancelLabel => 'Cancel·la';
@@ -123,7 +123,7 @@ class UbuntuLocalizationsCa extends UbuntuLocalizations {
   String get editLabel => 'Edita';
 
   @override
-  String get enterLabel => 'Enter';
+  String get enterLabel => 'Introduïr';
 
   @override
   String get errorLabel => 'Error';
@@ -177,7 +177,7 @@ class UbuntuLocalizationsCa extends UbuntuLocalizations {
   String get informationLabel => 'Informació';
 
   @override
-  String get insertLabel => 'Insert';
+  String get insertLabel => 'Insertar';
 
   @override
   String get italicLabel => 'Cursiva';
@@ -189,7 +189,7 @@ class UbuntuLocalizationsCa extends UbuntuLocalizations {
   String get lastLabel => 'Última';
 
   @override
-  String get leaveLabel => 'Leave';
+  String get leaveLabel => 'Abandonar';
 
   @override
   String get leftLabel => 'Esquerra';
@@ -279,7 +279,7 @@ class UbuntuLocalizationsCa extends UbuntuLocalizations {
   String get restoreLabel => 'Restaurar';
 
   @override
-  String get retryLabel => 'Retry';
+  String get retryLabel => 'Reintentar';
 
   @override
   String get revertLabel => 'Reverteix';
@@ -318,13 +318,13 @@ class UbuntuLocalizationsCa extends UbuntuLocalizations {
   String get stopLabel => 'Atura';
 
   @override
-  String get strikeThroughLabel => 'Strike Through';
+  String get strikeThroughLabel => 'Ratllar';
 
   @override
-  String get submitLabel => 'Submit';
+  String get submitLabel => 'Enviar';
 
   @override
-  String get topLabel => 'Top';
+  String get topLabel => 'Dalt';
 
   @override
   String get undoLabel => 'Desfés';
@@ -336,10 +336,10 @@ class UbuntuLocalizationsCa extends UbuntuLocalizations {
   String get upLabel => 'Amunt';
 
   @override
-  String get viewLabel => 'View';
+  String get viewLabel => 'Veure';
 
   @override
-  String get warningLabel => 'Warning';
+  String get warningLabel => 'Avís';
 
   @override
   String get windowLabel => 'Finestra';

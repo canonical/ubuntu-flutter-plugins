@@ -36,13 +36,13 @@ class UbuntuLocalizationsLt extends UbuntuLocalizations {
   String get altKey => 'Alt';
 
   @override
-  String get controlKey => 'Vald';
+  String get controlKey => 'Vald/Ctrl';
 
   @override
   String get metaKey => 'Meta';
 
   @override
-  String get shiftKey => 'Lyg2';
+  String get shiftKey => 'Lyg2/Shift';
 
   @override
   String get aboutLabel => 'Apie';
@@ -72,7 +72,7 @@ class UbuntuLocalizationsLt extends UbuntuLocalizations {
   String get cancelLabel => 'Atsisakyti';
 
   @override
-  String get centerLabel => 'Centras';
+  String get centerLabel => 'Centre';
 
   @override
   String get clearLabel => 'Išvalyti';

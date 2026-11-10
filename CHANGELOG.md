@@ -3,6 +3,269 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 2026-10-16
+
+### Changes
+
+---
+
+Packages with breaking changes:
+
+ - There are no breaking changes in this release.
+
+Packages with other changes:
+
+ - [`platform_linux` - `v0.1.3`](#platform_linux---v013)
+ - [`ubuntu_flavor` - `v0.5.0+2`](#ubuntu_flavor---v0502)
+ - [`ubuntu_localizations` - `v0.5.2+5`](#ubuntu_localizations---v0525)
+ - [`ubuntu_test` - `v0.2.3+3`](#ubuntu_test---v0233)
+ - [`ubuntu_widgets` - `v0.8.1+1`](#ubuntu_widgets---v0811)
+
+Packages with dependency updates only:
+
+> Packages listed below depend on other packages in this workspace that have had changes. Their versions have been incremented to bump the minimum dependency versions of the packages they depend upon in this project.
+
+ - `ubuntu_widgets` - `v0.8.1+1`
+
+---
+
+#### `platform_linux` - `v0.1.3`
+
+ - **FIX**: resolve CI failures caused by newer dependencies.
+ - **FEAT**: add COSMIC desktop environment (#524).
+ - **FEAT**: add COSMIC desktop environment.
+
+#### `ubuntu_flavor` - `v0.5.0+2`
+
+ - **FIX**: resolve CI failures caused by newer dependencies.
+
+#### `ubuntu_localizations` - `v0.5.2+5`
+
+ - **FIX**: gen-l10n.
+ - **FIX**(l10n): translated using Weblate (Azerbaijani).
+ - **FIX**(l10n): translated using Weblate (Swedish).
+ - **FIX**(l10n): translated using Weblate (Azerbaijani).
+ - **FIX**(l10n): added translation using Weblate (Azerbaijani).
+ - **FIX**(l10n): translated using Weblate (Slovak).
+ - **FIX**(l10n): translated using Weblate (Italian).
+ - **FIX**(l10n): translated using Weblate (Chinese (Simplified Han script)).
+ - **FIX**(l10n): translated using Weblate (Slovak).
+ - **FIX**(l10n): translated using Weblate (Arabic).
+ - **FIX**(l10n): translated using Weblate (Greek).
+
+#### `ubuntu_test` - `v0.2.3+3`
+
+ - **FIX**: resolve CI failures caused by newer dependencies.
+
+
+## 2026-08-13
+
+### Changes
+
+---
+
+Packages with breaking changes:
+
+ - There are no breaking changes in this release.
+
+Packages with other changes:
+
+ - [`ubuntu_localizations` - `v0.5.2+4`](#ubuntu_localizations---v0524)
+
+---
+
+#### `ubuntu_localizations` - `v0.5.2+4`
+
+ - **FIX**(l10n): Add en_GB translations.
+ - **FIX**: Correctly fallback to en.
+
+
+## 2026-06-17
+
+### Changes
+
+---
+
+Packages with breaking changes:
+
+ - There are no breaking changes in this release.
+
+Packages with other changes:
+
+ - [`ubuntu_lints` - `v0.4.2`](#ubuntu_lints---v042)
+
+---
+
+#### `ubuntu_lints` - `v0.4.2`
+
+ - **FEAT**(ubuntu_lints): preserve trailing commas.
+
+
+## 2026-05-14
+
+### Changes
+
+---
+
+Packages with breaking changes:
+
+ - There are no breaking changes in this release.
+
+Packages with other changes:
+
+ - [`ubuntu_widgets` - `v0.8.1`](#ubuntu_widgets---v081)
+
+---
+
+#### `ubuntu_widgets` - `v0.8.1`
+
+ - **FIX**(ubuntu_widgets): adjust scroll alignment to satisfy boundary tests.
+ - **FIX**(a11y): resolve focus traps and silent semantics in ListWidget.
+ - **FEAT**(ubuntu_widgets): expose errorMaxLines for ValidatedFormField.
+
+
+## 2026-04-15
+
+### Changes
+
+---
+
+Packages with breaking changes:
+
+ - There are no breaking changes in this release.
+
+Packages with other changes:
+
+ - [`ubuntu_localizations` - `v0.5.2+3`](#ubuntu_localizations---v0523)
+
+---
+
+#### `ubuntu_localizations` - `v0.5.2+3`
+
+ - **FIX**(l10n): translations update from Hosted Weblate (#470)
+
+
+## 2026-03-12
+
+### Changes
+
+---
+
+Packages with breaking changes:
+
+ - [`ubuntu_widgets` - `v0.8.0`](#ubuntu_widgets---v080)
+
+Packages with other changes:
+
+ - [`ubuntu_test` - `v0.2.3+2`](#ubuntu_test---v0232)
+
+---
+
+#### `ubuntu_widgets` - `v0.8.0`
+
+ - **BREAKING** **FIX**(ListWidget): fix accessibility focus trap and remove tabFocusNode.
+ - **CHORE**: Bump Yaru to 10.x.x
+
+#### `ubuntu_test` - `v0.2.3+2`
+
+ - **CHORE**: Bump Yaru to 10.x.x
+
+## 2025-12-11
+
+### Changes
+
+---
+
+Packages with breaking changes:
+
+ - There are no breaking changes in this release.
+
+Packages with other changes:
+
+ - [`ubuntu_widgets` - `v0.7.4`](#ubuntu_widgets---v074)
+
+---
+
+#### `ubuntu_widgets` - `v0.7.4`
+
+- **CHORE**: Bump to Yaru 9.0.0
+
+## 2025-06-13
+
+### Changes
+
+---
+
+Packages with breaking changes:
+
+ - There are no breaking changes in this release.
+
+Packages with other changes:
+
+ - [`platform_linux` - `v0.1.2+1`](#platform_linux---v0121)
+ - [`safe_change_notifier` - `v0.4.0+1`](#safe_change_notifier---v0401)
+ - [`ubuntu_flavor` - `v0.5.0+1`](#ubuntu_flavor---v0501)
+ - [`ubuntu_lints` - `v0.4.1+1`](#ubuntu_lints---v0411)
+ - [`ubuntu_localizations` - `v0.5.2+2`](#ubuntu_localizations---v0522)
+ - [`ubuntu_logger` - `v0.2.1+1`](#ubuntu_logger---v0211)
+ - [`ubuntu_service` - `v0.4.0+1`](#ubuntu_service---v0401)
+ - [`ubuntu_test` - `v0.2.3+1`](#ubuntu_test---v0231)
+ - [`ubuntu_widgets` - `v0.7.2+1`](#ubuntu_widgets---v0721)
+ - [`wizard_router` - `v1.4.1`](#wizard_router---v141)
+ - [`xdg_icons` - `v0.1.2`](#xdg_icons---v012)
+
+---
+
+#### `platform_linux` - `v0.1.2+1`
+
+ - **FIX**(l10n): translations update from Hosted Weblate (#451).
+
+#### `safe_change_notifier` - `v0.4.0+1`
+
+ - **FIX**(l10n): translations update from Hosted Weblate (#451).
+
+#### `ubuntu_flavor` - `v0.5.0+1`
+
+ - **FIX**(l10n): translations update from Hosted Weblate (#451).
+
+#### `ubuntu_lints` - `v0.4.1+1`
+
+ - **FIX**(l10n): translations update from Hosted Weblate (#451).
+
+#### `ubuntu_localizations` - `v0.5.2+2`
+
+ - **FIX**(ubuntu_localizations): use fallback if locale is 'POSIX' or 'und' (#476).
+ - **FIX**(l10n): translations update from Hosted Weblate (#467).
+ - **FIX**(l10n): translations update from Hosted Weblate (#461).
+ - **FIX**(l10n): translations update from Hosted Weblate (#459).
+ - **FIX**(l10n): translations update from Hosted Weblate (#451).
+
+#### `ubuntu_logger` - `v0.2.1+1`
+
+ - **FIX**(l10n): translations update from Hosted Weblate (#451).
+
+#### `ubuntu_service` - `v0.4.0+1`
+
+ - **FIX**(l10n): translations update from Hosted Weblate (#451).
+
+#### `ubuntu_test` - `v0.2.3+1`
+
+ - **FIX**(l10n): translations update from Hosted Weblate (#451).
+
+#### `ubuntu_widgets` - `v0.7.2+1`
+
+ - **FIX**(l10n): translations update from Hosted Weblate (#451).
+
+#### `wizard_router` - `v1.4.1`
+
+ - **FIX**(l10n): translations update from Hosted Weblate (#451).
+
+#### `xdg_icons` - `v0.1.2`
+
+ - **FIX**(l10n): translations update from Hosted Weblate (#451).
+ - **FEAT**(xdg_icons): replace flutter_svg dependency with jovial_svg (#475).
+
+
 ## 2024-10-14
 
 ### Changes
@@ -154,8 +417,8 @@ Packages with dependency updates only:
 #### `ubuntu_localizations` - `v0.4.1`
 
  - **FIX**: Bump translations
- 
- 
+
+
 #### `ubuntu_widgets` - `v0.6.1`
 
  - **FIX**: Correct name for ClickableText.
@@ -233,7 +496,7 @@ Packages with dependency updates only:
 #### `ubuntu_localizations` - `v0.4.0`
 
 - Bump Flutter to `3.22.1`
-- 
+-
 #### `ubuntu_widgets` - `v0.6.0`
 
 - Bump Flutter to `3.22.1`
@@ -656,4 +919,3 @@ Packages with other changes:
  - **FEAT**: Activate ubuntu_lints.
  - **FEAT**: Introduce the `ubuntu_lints` package (#336).
  - **DOCS**: Update to correct name of ubuntu_lints in readme (#337).
-

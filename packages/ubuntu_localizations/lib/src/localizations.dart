@@ -82,7 +82,8 @@ Future<Iterable<LocalizedLanguage>> loadLocalizedLanguages(
   return languages.values;
 }
 
-// A fallback locale that must always exist (same as the template .arb).
+// A fallback locale that must always exist (same as the template .arb). A bare
+// `en` entry is considered the same as this locale.
 const _kBaseLocale = Locale('en', 'US');
 
 /// A helper to match locales.
@@ -100,7 +101,7 @@ extension LocalizedLanguageMatcher on List<LocalizedLanguage> {
     return _indexOfLocaleOrNull(locale) ??
         _indexOfNeutralLocaleOrNull(locale) ??
         _indexOfParentLocaleOrNull(locale) ??
-        _indexOfLocaleOrNull(_kBaseLocale)!;
+        _indexOfBaseLocaleOrNull()!;
   }
 
   // full match (language, country, and script)
@@ -112,6 +113,18 @@ extension LocalizedLanguageMatcher on List<LocalizedLanguage> {
   // match language and country
   int? _indexOfNeutralLocaleOrNull(Locale locale) {
     final index = indexWhere((lang) => lang.locale == locale.neutral);
+    return index != -1 ? index : null;
+  }
+
+  // match the base locale (`en_US`), treating a bare `en` entry as equivalent.
+  int? _indexOfBaseLocaleOrNull() {
+    final index = indexWhere(
+      (lang) =>
+          lang.locale == _kBaseLocale ||
+          (lang.locale.languageCode == _kBaseLocale.languageCode &&
+              lang.locale.countryCode == null &&
+              lang.locale.scriptCode == null),
+    );
     return index != -1 ? index : null;
   }
 

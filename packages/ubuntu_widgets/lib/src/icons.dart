@@ -8,13 +8,16 @@ import 'package:yaru/yaru.dart';
 ///  * [ValidatedFormField]
 class SuccessIcon extends StatelessWidget {
   /// Creates a success icon.
-  const SuccessIcon({super.key});
+  const SuccessIcon({super.key, this.semanticLabel});
+
+  final String? semanticLabel;
 
   @override
   Widget build(BuildContext context) {
     return Icon(
       Icons.check_circle,
       color: Theme.of(context).colorScheme.success,
+      semanticLabel: semanticLabel,
     );
   }
 }
@@ -25,10 +28,16 @@ class SuccessIcon extends StatelessWidget {
 ///  * [ValidatedFormField]
 class ErrorIcon extends StatelessWidget {
   /// Creates an error icon.
-  const ErrorIcon({super.key});
+  const ErrorIcon({super.key, this.semanticLabel});
+
+  final String? semanticLabel;
 
   @override
   Widget build(BuildContext context) {
-    return Icon(Icons.error, color: Theme.of(context).colorScheme.error);
+    return Icon(
+      Icons.error,
+      color: Theme.of(context).colorScheme.error,
+      semanticLabel: semanticLabel,
+    );
   }
 }

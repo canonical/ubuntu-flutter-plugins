@@ -1,3 +1,34 @@
+## 0.5.2+5
+
+ - **FIX**: gen-l10n.
+ - **FIX**(l10n): translated using Weblate (Azerbaijani).
+ - **FIX**(l10n): translated using Weblate (Swedish).
+ - **FIX**(l10n): translated using Weblate (Azerbaijani).
+ - **FIX**(l10n): added translation using Weblate (Azerbaijani).
+ - **FIX**(l10n): translated using Weblate (Slovak).
+ - **FIX**(l10n): translated using Weblate (Italian).
+ - **FIX**(l10n): translated using Weblate (Chinese (Simplified Han script)).
+ - **FIX**(l10n): translated using Weblate (Slovak).
+ - **FIX**(l10n): translated using Weblate (Arabic).
+ - **FIX**(l10n): translated using Weblate (Greek).
+
+## 0.5.2+4
+
+ - **FIX**(l10n): Add en_GB translations.
+ - **FIX**: Correctly fallback to en.
+
+## 0.5.2+3
+
+ - **FIX**(l10n): translations update from Hosted Weblate (#470)
+
+## 0.5.2+2
+
+ - **FIX**(ubuntu_localizations): use fallback if locale is 'POSIX' or 'und' (#476).
+ - **FIX**(l10n): translations update from Hosted Weblate (#467).
+ - **FIX**(l10n): translations update from Hosted Weblate (#461).
+ - **FIX**(l10n): translations update from Hosted Weblate (#459).
+ - **FIX**(l10n): translations update from Hosted Weblate (#451).
+
 ## 0.5.2+1
 
  - **FIX**: Ensure generated files are included in the package.

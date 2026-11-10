@@ -4,7 +4,7 @@ publish_to: 'none'
 
 environment:
   sdk: '>=3.0.0 <4.0.0'
-  flutter: ">=3.27.4"
+  flutter: ">=3.35.3"
 
 platforms:
   linux:
@@ -12,8 +12,8 @@ platforms:
 dependencies:
   flutter:
     sdk: flutter
-  xdg_icons: ^0.1.0
-  yaru: ">=6.0.0 <8.0.0"
+  xdg_icons: ^0.1.2
+  yaru: ^11.0.0
 
 flutter:
   uses-material-design: true

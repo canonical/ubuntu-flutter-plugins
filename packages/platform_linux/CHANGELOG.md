@@ -1,3 +1,13 @@
+## 0.1.3
+
+ - **FIX**: resolve CI failures caused by newer dependencies.
+ - **FEAT**: add COSMIC desktop environment (#524).
+ - **FEAT**: add COSMIC desktop environment.
+
+## 0.1.2+1
+
+ - **FIX**(l10n): translations update from Hosted Weblate (#451).
+
 ## 0.1.2
 
  - **REFACTOR**: Apply ubuntu lints to all packages (#340).
