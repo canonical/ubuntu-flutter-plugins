@@ -3,6 +3,47 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 2026-11-13
+
+### Changes
+
+---
+
+Packages with breaking changes:
+
+ - There are no breaking changes in this release.
+
+Packages with other changes:
+
+ - [`platform_linux` - `v0.1.4`](#platform_linux---v014)
+ - [`ubuntu_localizations` - `v0.5.2+6`](#ubuntu_localizations---v0526)
+ - [`ubuntu_flavor` - `v0.5.0+3`](#ubuntu_flavor---v0503)
+ - [`ubuntu_widgets` - `v0.8.2+1`](#ubuntu_widgets---v0821)
+ - [`ubuntu_test` - `v0.2.3+4`](#ubuntu_test---v0234)
+
+Packages with dependency updates only:
+
+> Packages listed below depend on other packages in this workspace that have had changes. Their versions have been incremented to bump the minimum dependency versions of the packages they depend upon in this project.
+
+ - `ubuntu_flavor` - `v0.5.0+3`
+ - `ubuntu_widgets` - `v0.8.2+1`
+ - `ubuntu_test` - `v0.2.3+4`
+
+---
+
+#### `platform_linux` - `v0.1.4`
+
+ - **FIX**: breakage with `platform: 3.2.0`.
+ - **FEAT**: allow overriding desktop and distro for tests (#501).
+ - **FEAT**: allow overriding desktop and distro.
+
+#### `ubuntu_localizations` - `v0.5.2+6`
+
+ - **FIX**(l10n): translated using Weblate (Japanese).
+ - **FIX**(l10n): translated using Weblate (Georgian).
+ - **FIX**(l10n): translated using Weblate (Japanese).
+
+
 ## 2026-10-16
 
 ### Changes

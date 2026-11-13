@@ -1,3 +1,9 @@
+## 0.1.4
+
+ - **FIX**: breakage with `platform: 3.2.0`.
+ - **FEAT**: allow overriding desktop and distro for tests (#501).
+ - **FEAT**: allow overriding desktop and distro.
+
 ## 0.1.3
 
  - **FIX**: resolve CI failures caused by newer dependencies.
