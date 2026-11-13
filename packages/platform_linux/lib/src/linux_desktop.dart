@@ -69,10 +69,10 @@ extension PlatformLinuxDesktop on Platform {
   static List<String>? _getXdgCurrentDesktop(Platform platform) {
     final cacheId = identityHashCode(platform);
     if (cacheId != _xdgCurrentDesktopCacheId) {
+      final env = platform.nativePlatform?.environment;
       _xdgCurrentDesktopCacheId = cacheId;
       _xdgCurrentDesktopCache =
-          (platform.environment['ORIGINAL_XDG_CURRENT_DESKTOP'] ??
-                  platform.environment['XDG_CURRENT_DESKTOP'])
+          (env?['ORIGINAL_XDG_CURRENT_DESKTOP'] ?? env?['XDG_CURRENT_DESKTOP'])
               ?.toLowerCase()
               .split(':');
     }
