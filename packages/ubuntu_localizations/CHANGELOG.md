@@ -1,3 +1,9 @@
+## 0.5.2+6
+
+ - **FIX**(l10n): translated using Weblate (Japanese).
+ - **FIX**(l10n): translated using Weblate (Georgian).
+ - **FIX**(l10n): translated using Weblate (Japanese).
+
 ## 0.5.2+5
 
  - **FIX**: gen-l10n.
