@@ -1,0 +1,33 @@
+name: standalone_compatibility
+publish_to: none
+
+environment:
+  sdk: '>=3.13.0 <4.0.0'
+  flutter: '>=3.47.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  material_ui: ^1.0.0
+  timezone_map:
+    path: ../../packages/timezone_map
+  ubuntu_localizations:
+    path: ../../packages/ubuntu_localizations
+  ubuntu_widgets:
+    path: ../../packages/ubuntu_widgets
+  wizard_router:
+    path: ../../packages/wizard_router
+  yaru: ^12.0.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  ubuntu_test:
+    path: ../../packages/ubuntu_test
+
+dependency_overrides:
+  ubuntu_localizations:
+    path: ../../packages/ubuntu_localizations
+
+flutter:
+  uses-material-design: true
