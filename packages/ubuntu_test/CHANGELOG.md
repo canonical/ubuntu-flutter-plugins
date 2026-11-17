@@ -1,3 +1,9 @@
+## 0.3.0
+
+> Note: This release has breaking changes.
+
+ - **BREAKING** **FEAT**(ubuntu_test): use standalone Yaru test helpers.
+
 ## 0.2.3+4
 
  - Update a dependency to the latest release.

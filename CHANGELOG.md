@@ -3,6 +3,37 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 2026-11-17
+
+### Changes
+
+---
+
+Packages with breaking changes:
+
+ - [`ubuntu_localizations` - `v0.6.0`](#ubuntu_localizations---v060)
+ - [`ubuntu_test` - `v0.3.0`](#ubuntu_test---v030)
+ - [`ubuntu_widgets` - `v0.9.0`](#ubuntu_widgets---v090)
+
+Packages with other changes:
+
+ - There are no other changes in this release.
+
+---
+
+#### `ubuntu_localizations` - `v0.6.0`
+
+ - **BREAKING** **FEAT**(ubuntu_localizations): migrate to standalone UI localizations.
+
+#### `ubuntu_test` - `v0.3.0`
+
+ - **BREAKING** **FEAT**(ubuntu_test): use standalone Yaru test helpers.
+
+#### `ubuntu_widgets` - `v0.9.0`
+
+ - **BREAKING** **FEAT**(ubuntu_widgets): migrate to standalone Material.
+
+
 ## 2026-11-13
 
 ### Changes
