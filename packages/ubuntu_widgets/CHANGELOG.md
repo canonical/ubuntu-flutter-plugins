@@ -1,3 +1,9 @@
+## 0.9.0-dev.0
+
+ - **BREAKING**: Migrate widgets to standalone `material_ui` and Yaru 12.
+ - Require Flutter 3.47 and Dart 3.13 or newer.
+ - Update `ubuntu_localizations` to the standalone UI prerelease.
+
 ## 0.8.2+1
 
  - Update a dependency to the latest release.

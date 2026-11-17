@@ -1,3 +1,9 @@
+## 0.3.0-dev.0
+
+ - **BREAKING**: Use standalone-compatible Yaru test helpers and localizations.
+ - Require Flutter 3.47 and Dart 3.13 or newer.
+  - Use published `yaru_test` 1.0.0 for standalone Material and Yaru 12 support.
+
 ## 0.2.3+4
 
  - Update a dependency to the latest release.

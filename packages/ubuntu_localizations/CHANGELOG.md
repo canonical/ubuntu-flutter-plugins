@@ -1,3 +1,10 @@
+## 0.6.0-dev.0
+
+ - **BREAKING**: Migrate Material and Cupertino localizations to `material_ui` and
+   `cupertino_ui`. Applications must compose Ubuntu's extra locale delegates
+   before the standalone global design delegates.
+ - Require Flutter 3.47 and Dart 3.13 or newer.
+
 ## 0.5.2+6
 
  - **FIX**(l10n): translated using Weblate (Japanese).
