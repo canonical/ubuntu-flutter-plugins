@@ -17,10 +17,9 @@ class GeoIP extends GeoSource {
   /// Constructs a new [GeoIP] instance.
   GeoIP({
     required this.url,
-    required Geodata geodata,
+    required this._geodata,
     @visibleForTesting Dio? dio,
-  })  : _dio = dio ?? Dio(_options),
-        _geodata = geodata;
+  }) : _dio = dio ?? Dio(_options);
 
   /// Constructs a new [GeoIP] with https://geoip.ubuntu.com/lookup.
   factory GeoIP.ubuntu({required Geodata geodata}) {

@@ -26,8 +26,8 @@ class XdgIconsMethodChannel extends XdgIconsPlatform {
       <String, dynamic>{
         'name': name,
         'size': size,
-        if (scale != null) 'scale': scale,
-        if (theme != null) 'theme': theme,
+        'scale': ?scale,
+        'theme': ?theme,
       },
     ).then((json) => json != null ? XdgIconData.fromJson(json) : null);
   }

@@ -268,7 +268,7 @@ class _WizardState extends State<Wizard> {
   Widget build(BuildContext context) {
     return FlowBuilder<List<WizardRouteSettings>>(
       controller: _controller._flowController,
-      onGeneratePages: (state, __) {
+      onGeneratePages: (state, _) {
         return state
             .mapIndexed(
               (index, settings) =>

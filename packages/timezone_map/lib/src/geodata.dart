@@ -21,14 +21,11 @@ final haversine = const Haversine().distance;
 class Geodata extends GeoSource {
   /// Constructs a lazily loaded geodata.
   Geodata({
-    required FutureOr<String> Function() loadCities,
-    required FutureOr<String> Function() loadAdmins,
-    required FutureOr<String> Function() loadCountries,
-    required FutureOr<String> Function() loadTimezones,
-  })  : _loadCities = loadCities,
-        _loadAdmins = loadAdmins,
-        _loadCountries = loadCountries,
-        _loadTimezones = loadTimezones;
+    required this._loadCities,
+    required this._loadAdmins,
+    required this._loadCountries,
+    required this._loadTimezones,
+  });
 
   /// Constructs geodata from the package's assets.
   factory Geodata.asset({AssetBundle? bundle}) {
