@@ -2,9 +2,9 @@ import 'dart:collection';
 
 import 'package:collection/collection.dart';
 import 'package:diacritic/diacritic.dart';
-import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:intl/intl_standalone.dart';
+import 'package:material_ui/material_ui.dart';
 
 import 'package:ubuntu_localizations/src/flutter/flutter_localizations.dart';
 import 'package:ubuntu_localizations/src/l10n/ubuntu_localizations.g.dart';
