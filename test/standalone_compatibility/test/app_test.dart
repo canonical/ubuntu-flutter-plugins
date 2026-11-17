@@ -49,6 +49,8 @@ void main() {
                   width: 400,
                   height: 200,
                   child: TimezoneMap(
+                    size: TimezoneMapSize.medium,
+                    offset: 0,
                     marker: const LatLng(0, 0),
                     onPressed: (value) => pressed = value,
                   ),
