@@ -75,11 +75,11 @@ class ChooserPage extends StatelessWidget {
           label: 'Next',
           onActivated: model.value != Choice.none
               ? () => WizardApp.useActions
-                  ? WizardNextIntent.invoke(
-                      context: context,
-                      arguments: model.value,
-                    )
-                  : Wizard.of(context).next(arguments: model.value)
+                    ? WizardNextIntent.invoke(
+                        context: context,
+                        arguments: model.value,
+                      )
+                    : Wizard.of(context).next(arguments: model.value)
               : null,
         ),
       ],

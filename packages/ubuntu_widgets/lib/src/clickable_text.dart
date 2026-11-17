@@ -36,10 +36,10 @@ class ClickableTextState extends State<ClickableText> {
           widget.text,
           style: _isHovered
               ? (widget.textHoverStyle ??
-                  TextStyle(
-                    color: colorScheme.primary,
-                    decoration: TextDecoration.underline,
-                  ))
+                    TextStyle(
+                      color: colorScheme.primary,
+                      decoration: TextDecoration.underline,
+                    ))
               : widget.textStyle,
         ),
         onEnter: (_) => setState(() => _isHovered = true),

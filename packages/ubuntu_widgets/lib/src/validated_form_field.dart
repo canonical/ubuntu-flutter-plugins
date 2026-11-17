@@ -38,8 +38,8 @@ class ValidatedFormField extends StatefulWidget {
     this.filled = false,
     this.fillColor,
     this.errorMaxLines,
-  })  : validator = validator ?? _NoValidator(),
-        spacing = spacing ?? (successWidget != null ? _kIconSpacing : null);
+  }) : validator = validator ?? _NoValidator(),
+       spacing = spacing ?? (successWidget != null ? _kIconSpacing : null);
 
   /// The controller used to get the [TextField] values. If [controller] is
   /// null, a controller is created internally and its text is set to
@@ -150,8 +150,9 @@ class _ValidatedFormFieldState extends State<ValidatedFormField> {
       scheduleMicrotask(() {
         _controller.value = TextEditingValue(
           text: widget.initialValue!,
-          selection:
-              TextSelection.collapsed(offset: widget.initialValue!.length),
+          selection: TextSelection.collapsed(
+            offset: widget.initialValue!.length,
+          ),
         );
       });
     }
@@ -189,7 +190,8 @@ class _ValidatedFormFieldState extends State<ValidatedFormField> {
           builder: (context, value, child) {
             return Padding(
               padding: EdgeInsets.only(left: widget.spacing ?? 0.0),
-              child: widget.successWidget == null ||
+              child:
+                  widget.successWidget == null ||
                       !widget.validator.isValid(value.text)
                   ? const SizedBox.shrink()
                   : _alignBaseline(widget.successWidget),
@@ -228,7 +230,7 @@ class _NoValidator extends FieldValidator<String?> {
 class CallbackValidator extends FieldValidator<String?> {
   /// The callback used to validate the input.
   CallbackValidator(this._callback, {required String errorText})
-      : super(errorText);
+    : super(errorText);
 
   final bool Function(String?) _callback;
 

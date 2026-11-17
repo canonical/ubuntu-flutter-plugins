@@ -54,13 +54,13 @@ void main() {
     final mock = MockXdgIconsPlatform();
     when(() => mock.lookupIcon(name: 'foo', size: 24, scale: 2, theme: 'bar'))
         .thenAnswer(
-      (_) async => const XdgIconData(
-        baseScale: 2,
-        baseSize: 42,
-        fileName: '/path/to/bar/foo.svg',
-        isSymbolic: false,
-      ),
-    );
+          (_) async => const XdgIconData(
+            baseScale: 2,
+            baseSize: 42,
+            fileName: '/path/to/bar/foo.svg',
+            isSymbolic: false,
+          ),
+        );
     when(() => mock.onDefaultThemeChanged).thenAnswer(
       (_) => const Stream.empty(),
     );

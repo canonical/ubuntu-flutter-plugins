@@ -96,10 +96,12 @@ class _LogViewState extends State<LogView> {
   @override
   Widget build(BuildContext context) {
     final contentPadding =
-        (widget.decoration?.contentPadding ?? EdgeInsets.zero)
-            .add(widget.padding ?? EdgeInsets.zero);
-    final decoration = (widget.decoration ?? const InputDecoration())
-        .copyWith(contentPadding: contentPadding);
+        (widget.decoration?.contentPadding ?? EdgeInsets.zero).add(
+          widget.padding ?? EdgeInsets.zero,
+        );
+    final decoration = (widget.decoration ?? const InputDecoration()).copyWith(
+      contentPadding: contentPadding,
+    );
 
     return DecoratedBox(
       decoration: widget.background ?? const BoxDecoration(),

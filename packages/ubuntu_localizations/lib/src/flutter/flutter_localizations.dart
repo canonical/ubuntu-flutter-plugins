@@ -23,35 +23,35 @@ import 'package:ubuntu_localizations/src/flutter/flutter_localizations_ug.dart';
 abstract class FlutterMaterialLocalizations {
   static const List<LocalizationsDelegate<dynamic>> delegates =
       <LocalizationsDelegate<dynamic>>[
-    FlutterLocalizationsDelegateBo<MaterialLocalizations>(),
-    FlutterLocalizationsDelegateCy<MaterialLocalizations>(),
-    FlutterLocalizationsDelegateDz<MaterialLocalizations>(),
-    FlutterLocalizationsDelegateEo<MaterialLocalizations>(),
-    FlutterLocalizationsDelegateGa<MaterialLocalizations>(),
-    FlutterLocalizationsDelegateKu<MaterialLocalizations>(),
-    FlutterLocalizationsDelegateNn<MaterialLocalizations>(),
-    FlutterLocalizationsDelegateOc<MaterialLocalizations>(),
-    FlutterLocalizationsDelegateSe<MaterialLocalizations>(),
-    FlutterLocalizationsDelegateTg<MaterialLocalizations>(),
-    FlutterLocalizationsDelegateUg<MaterialLocalizations>(),
-  ];
+        FlutterLocalizationsDelegateBo<MaterialLocalizations>(),
+        FlutterLocalizationsDelegateCy<MaterialLocalizations>(),
+        FlutterLocalizationsDelegateDz<MaterialLocalizations>(),
+        FlutterLocalizationsDelegateEo<MaterialLocalizations>(),
+        FlutterLocalizationsDelegateGa<MaterialLocalizations>(),
+        FlutterLocalizationsDelegateKu<MaterialLocalizations>(),
+        FlutterLocalizationsDelegateNn<MaterialLocalizations>(),
+        FlutterLocalizationsDelegateOc<MaterialLocalizations>(),
+        FlutterLocalizationsDelegateSe<MaterialLocalizations>(),
+        FlutterLocalizationsDelegateTg<MaterialLocalizations>(),
+        FlutterLocalizationsDelegateUg<MaterialLocalizations>(),
+      ];
 }
 
 abstract class FlutterCupertinoLocalizations {
   static const List<LocalizationsDelegate<dynamic>> delegates =
       <LocalizationsDelegate<dynamic>>[
-    FlutterLocalizationsDelegateBo<CupertinoLocalizations>(),
-    FlutterLocalizationsDelegateCy<CupertinoLocalizations>(),
-    FlutterLocalizationsDelegateDz<CupertinoLocalizations>(),
-    FlutterLocalizationsDelegateEo<CupertinoLocalizations>(),
-    FlutterLocalizationsDelegateGa<CupertinoLocalizations>(),
-    FlutterLocalizationsDelegateKu<CupertinoLocalizations>(),
-    FlutterLocalizationsDelegateNn<CupertinoLocalizations>(),
-    FlutterLocalizationsDelegateOc<CupertinoLocalizations>(),
-    FlutterLocalizationsDelegateSe<CupertinoLocalizations>(),
-    FlutterLocalizationsDelegateTg<CupertinoLocalizations>(),
-    FlutterLocalizationsDelegateUg<CupertinoLocalizations>(),
-  ];
+        FlutterLocalizationsDelegateBo<CupertinoLocalizations>(),
+        FlutterLocalizationsDelegateCy<CupertinoLocalizations>(),
+        FlutterLocalizationsDelegateDz<CupertinoLocalizations>(),
+        FlutterLocalizationsDelegateEo<CupertinoLocalizations>(),
+        FlutterLocalizationsDelegateGa<CupertinoLocalizations>(),
+        FlutterLocalizationsDelegateKu<CupertinoLocalizations>(),
+        FlutterLocalizationsDelegateNn<CupertinoLocalizations>(),
+        FlutterLocalizationsDelegateOc<CupertinoLocalizations>(),
+        FlutterLocalizationsDelegateSe<CupertinoLocalizations>(),
+        FlutterLocalizationsDelegateTg<CupertinoLocalizations>(),
+        FlutterLocalizationsDelegateUg<CupertinoLocalizations>(),
+      ];
 }
 
 typedef FlutterLocalizationsFactory<T> = T Function({
@@ -97,10 +97,13 @@ abstract class FlutterLocalizationsDelegate<T>
             longDateFormat: DateFormat.yMMMMEEEEd(localeName),
             yearMonthFormat: DateFormat.yMMMM(localeName),
             shortMonthDayFormat: DateFormat.MMMd(localeName),
-            decimalFormat:
-                NumberFormat.decimalPattern(baseLocaleName ?? 'en_US'),
-            twoDigitZeroPaddedFormat:
-                NumberFormat('00', baseLocaleName ?? 'en_US'),
+            decimalFormat: NumberFormat.decimalPattern(
+              baseLocaleName ?? 'en_US',
+            ),
+            twoDigitZeroPaddedFormat: NumberFormat(
+              '00',
+              baseLocaleName ?? 'en_US',
+            ),
           ) as T,
         );
       case LocalizationsDelegate<CupertinoLocalizations> _:
@@ -114,8 +117,9 @@ abstract class FlutterLocalizationsDelegate<T>
             singleDigitMinuteFormat: DateFormat.m(localeName),
             doubleDigitMinuteFormat: DateFormat('mm', localeName),
             singleDigitSecondFormat: DateFormat.s(localeName),
-            decimalFormat:
-                NumberFormat.decimalPattern(baseLocaleName ?? 'en_US'),
+            decimalFormat: NumberFormat.decimalPattern(
+              baseLocaleName ?? 'en_US',
+            ),
             weekdayFormat: DateFormat.EEEE(localeName),
           ) as T,
         );

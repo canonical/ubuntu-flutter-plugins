@@ -181,21 +181,21 @@ class Geodata extends GeoSource {
 // Spatial indexing of coordinates.
 class _GeoBush extends RBushBase<GeoLocation> {
   _GeoBush()
-      : super(
-          toBBox: _HaversineBox.new,
-          getMinX: (item) => item.longitude!,
-          getMinY: (item) => item.latitude!,
-        );
+    : super(
+        toBBox: _HaversineBox.new,
+        getMinX: (item) => item.longitude!,
+        getMinY: (item) => item.latitude!,
+      );
 }
 
 class _HaversineBox extends RBushBox {
   _HaversineBox(GeoLocation location)
-      : super(
-          minX: location.longitude!,
-          maxX: location.longitude!,
-          minY: location.latitude!,
-          maxY: location.latitude!,
-        );
+    : super(
+        minX: location.longitude!,
+        maxX: location.longitude!,
+        minY: location.latitude!,
+        maxY: location.latitude!,
+      );
 
   @override
   double distanceSq(double x, double y) {
@@ -214,8 +214,8 @@ extension _JsonValue on Map<String, dynamic> {
     return value is double
         ? value
         : value is String
-            ? double.tryParse(value)
-            : null;
+        ? double.tryParse(value)
+        : null;
   }
 }
 

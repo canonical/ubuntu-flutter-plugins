@@ -41,13 +41,16 @@ extension UbuntuDataSizeLocalizations on UbuntuLocalizations {
     final units = [byte, kilobyte, megabyte, gigabyte, terabyte, petabyte];
     final idx = bytes == 0
         ? 0
-        : (math.log(bytes.abs()) ~/ math.log(divider))
-            .clamp(0, units.length - 1);
+        : (math.log(bytes.abs()) ~/ math.log(divider)).clamp(
+            0,
+            units.length - 1,
+          );
     final p = precision == null && (bytes < divider || bytes % divider == 0)
         ? 0
         : precision;
-    final sz =
-        (bytes / math.pow(divider, idx)).toStringAsFixed(p ?? idx.clamp(0, 2));
+    final sz = (bytes / math.pow(divider, idx)).toStringAsFixed(
+      p ?? idx.clamp(0, 2),
+    );
     return '$sz ${units[idx]}';
   }
 }

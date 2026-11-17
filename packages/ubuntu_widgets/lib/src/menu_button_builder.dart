@@ -67,9 +67,9 @@ class MenuButtonBuilder<T> extends StatefulWidget {
     this.itemStyle,
     this.expanded = true,
     super.key,
-  })  : assert((entries != null) != (values != null)),
-        entries =
-            entries ?? values!.map((e) => MenuButtonEntry(value: e)).toList();
+  }) : assert((entries != null) != (values != null)),
+       entries =
+           entries ?? values!.map((e) => MenuButtonEntry(value: e)).toList();
 
   /// An optional child widget placed as a label of the button.
   final Widget? child;
@@ -161,7 +161,8 @@ class _MenuButtonBuilderState<T> extends State<MenuButtonBuilder<T>> {
     return MenuAnchor(
       controller: _controller,
       crossAxisUnconstrained: false,
-      style: widget.menuStyle ??
+      style:
+          widget.menuStyle ??
           MenuStyle(
             minimumSize: WidgetStatePropertyAll(Size(_size?.width ?? 0, 0)),
             visualDensity: VisualDensity.standard,
@@ -191,8 +192,9 @@ class _MenuButtonBuilderState<T> extends State<MenuButtonBuilder<T>> {
               }
             },
             child: Row(
-              mainAxisSize:
-                  widget.expanded ? MainAxisSize.max : MainAxisSize.min,
+              mainAxisSize: widget.expanded
+                  ? MainAxisSize.max
+                  : MainAxisSize.min,
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 DefaultTextStyle(
@@ -201,13 +203,13 @@ class _MenuButtonBuilderState<T> extends State<MenuButtonBuilder<T>> {
                     child: widget.child != null
                         ? widget.child!
                         : widget.selected != null
-                            ? widget.selectedEntry?.child ??
-                                widget.itemBuilder(
-                                  context,
-                                  widget.selected as T,
-                                  null,
-                                )
-                            : const SizedBox.shrink(),
+                        ? widget.selectedEntry?.child ??
+                              widget.itemBuilder(
+                                context,
+                                widget.selected as T,
+                                null,
+                              )
+                        : const SizedBox.shrink(),
                   ),
                 ),
                 const SizedBox(width: 8),
@@ -220,20 +222,18 @@ class _MenuButtonBuilderState<T> extends State<MenuButtonBuilder<T>> {
     );
   }
 
-  TextStyle get _labelStyle => Theme.of(context)
-      .textTheme
-      .labelLarge!
-      .copyWith(overflow: TextOverflow.ellipsis);
+  TextStyle get _labelStyle =>
+      Theme.of(context).textTheme.labelLarge!
+          .copyWith(overflow: TextOverflow.ellipsis);
 
   Offset _calculateOffset() {
     switch (widget.menuPosition) {
       case PopupMenuPosition.under:
         return Offset(0, _size?.height ?? 0);
       case PopupMenuPosition.over:
-        final padding = MenuTheme.of(context)
-            .style
-            ?.padding
-            ?.resolve({})?.resolve(Directionality.of(context));
+        final padding = MenuTheme.of(context).style?.padding
+            ?.resolve({})
+            ?.resolve(Directionality.of(context));
         return Offset(0, -(padding?.top ?? 8));
     }
   }
@@ -272,7 +272,8 @@ class _MenuButtonBuilderState<T> extends State<MenuButtonBuilder<T>> {
               _controller.close();
             }
           : null,
-      style: widget.itemStyle ??
+      style:
+          widget.itemStyle ??
           MenuItemButton.styleFrom(
             minimumSize: minimumSize ?? const Size(0, _kItemHeight),
             maximumSize:

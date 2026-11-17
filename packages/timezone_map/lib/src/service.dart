@@ -5,7 +5,7 @@ import 'package:timezone_map/src/source.dart';
 class GeoService {
   /// Constructs a service with the given list of geolocation lookup [sources].
   GeoService({List<GeoSource>? sources})
-      : _geosources = sources ?? <GeoSource>[];
+    : _geosources = sources ?? <GeoSource>[];
 
   final List<GeoSource> _geosources;
 

@@ -1,5 +1,6 @@
 import 'dart:math';
 import 'dart:ui';
+
 import 'package:latlong2/latlong.dart';
 
 const _kTopLatitude = 81.0;

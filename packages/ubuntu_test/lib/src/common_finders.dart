@@ -29,8 +29,7 @@ extension UbuntuCommonFinders on CommonFinders {
             tr(l10n),
             findRichText: findRichText,
             skipOffstage: skipOffstage,
-          ) as MatchFinder)
-              .matches(element);
+          ) as MatchFinder).matches(element);
     });
   }
 

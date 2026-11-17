@@ -21,15 +21,17 @@ class XdgIconsMethodChannel extends XdgIconsPlatform {
     int? scale,
     String? theme,
   }) {
-    return methodChannel.invokeMapMethod<String, dynamic>(
-      'lookupIcon',
-      <String, dynamic>{
-        'name': name,
-        'size': size,
-        'scale': ?scale,
-        'theme': ?theme,
-      },
-    ).then((json) => json != null ? XdgIconData.fromJson(json) : null);
+    return methodChannel
+        .invokeMapMethod<String, dynamic>(
+          'lookupIcon',
+          <String, dynamic>{
+            'name': name,
+            'size': size,
+            'scale': ?scale,
+            'theme': ?theme,
+          },
+        )
+        .then((json) => json != null ? XdgIconData.fromJson(json) : null);
   }
 
   @override

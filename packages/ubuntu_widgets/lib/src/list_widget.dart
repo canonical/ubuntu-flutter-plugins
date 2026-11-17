@@ -96,8 +96,9 @@ class _ListWidgetState extends State<ListWidget> {
 
   @override
   Widget build(BuildContext context) {
-    final effectiveSelectedIndex =
-        widget.selectedIndex < 0 ? 0 : widget.selectedIndex;
+    final effectiveSelectedIndex = widget.selectedIndex < 0
+        ? 0
+        : widget.selectedIndex;
 
     return YaruBorderContainer(
       clipBehavior: Clip.antiAlias,
@@ -152,7 +153,8 @@ class _ListWidgetState extends State<ListWidget> {
                     }
 
                     // calculate initial center-alignment
-                    final rawOffset = effectiveSelectedIndex * _kTileHeight -
+                    final rawOffset =
+                        effectiveSelectedIndex * _kTileHeight -
                         constraints.maxHeight / 2 +
                         _kTileHeight / 2;
 

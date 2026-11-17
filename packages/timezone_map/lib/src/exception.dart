@@ -9,7 +9,7 @@ class GeoException implements Exception {
 
   /// Creates a new exception from a DIO response.
   GeoException.response(Response<dynamic> response)
-      : this('${response.statusCode}: ${response.statusMessage}', response);
+    : this('${response.statusCode}: ${response.statusMessage}', response);
 
   /// A message describing the exception.
   final String message;

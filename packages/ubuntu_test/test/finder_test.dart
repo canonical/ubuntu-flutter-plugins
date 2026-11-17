@@ -25,8 +25,9 @@ void main() {
   });
 
   testWidgets('markdown data', (tester) async {
-    await tester
-        .pumpWidget(const MaterialApp(home: MarkdownBody(data: '**foo**')));
+    await tester.pumpWidget(
+      const MaterialApp(home: MarkdownBody(data: '**foo**')),
+    );
     expect(find.markdownBody('**foo**'), findsOneWidget);
     expect(find.markdownBody('**nothing**'), findsNothing);
   });

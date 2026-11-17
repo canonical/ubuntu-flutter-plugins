@@ -61,19 +61,21 @@ void main() {
     });
   });
 
-  test('bare en entry with a script code is not treated as the base locale',
-      () {
-    final languages = [
-      const LocalizedLanguage(
-        'English (Cyrillic)',
-        Locale.fromSubtags(languageCode: 'en', scriptCode: 'Cyrl'),
-      ),
-    ];
-    expect(
-      () => languages.findBestMatch(const Locale('ja', 'JP')),
-      throwsA(isA<TypeError>()),
-    );
-  });
+  test(
+    'bare en entry with a script code is not treated as the base locale',
+    () {
+      final languages = [
+        const LocalizedLanguage(
+          'English (Cyrillic)',
+          Locale.fromSubtags(languageCode: 'en', scriptCode: 'Cyrl'),
+        ),
+      ];
+      expect(
+        () => languages.findBestMatch(const Locale('ja', 'JP')),
+        throwsA(isA<TypeError>()),
+      );
+    },
+  );
 
   test('matching non-base language still uses generic parent', () {
     final languages = [

@@ -38,11 +38,11 @@ extension UbuntuFileTester on File {
 
 class _TextFileMatcher extends CustomMatcher {
   _TextFileMatcher(String path)
-      : super(
-          'Text file matches',
-          'path',
-          equals(File(path).readAsStringSync().trim()),
-        );
+    : super(
+        'Text file matches',
+        'path',
+        equals(File(path).readAsStringSync().trim()),
+      );
 
   @override
   Object featureValueOf(covariant String path) {

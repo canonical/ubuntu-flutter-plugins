@@ -49,8 +49,7 @@ void main() {
 }
 
 class FakeFile extends Fake implements File {
-  FakeFile({this._data, int? existsLater})
-      : _existsLater = existsLater ?? 0;
+  FakeFile({this._data, int? existsLater}) : _existsLater = existsLater ?? 0;
 
   final String? _data;
   int _existsLater;
