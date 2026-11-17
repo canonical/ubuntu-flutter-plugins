@@ -84,9 +84,26 @@ abstract class FlutterLocalizationsDelegate<T>
       patterns: dateTimePatterns ?? _inheritDateTimePatterns(localeName),
       symbols: dateTimeSymbols ?? _inheritDateTimeSymbols(localeName),
     );
+    final numberLocaleName = NumberFormat.localeExists(localeName)
+        ? localeName
+        : baseLocaleName ?? 'en_US';
 
     switch (this) {
       case LocalizationsDelegate<MaterialLocalizations> _:
+        if (GlobalMaterialLocalizations.delegate.isSupported(locale)) {
+          return getMaterialTranslation(
+            locale,
+            DateFormat.y(localeName),
+            DateFormat.yMd(localeName),
+            DateFormat.yMMMd(localeName),
+            DateFormat.MMMEd(localeName),
+            DateFormat.yMMMMEEEEd(localeName),
+            DateFormat.yMMMM(localeName),
+            DateFormat.MMMd(localeName),
+            NumberFormat.decimalPattern(numberLocaleName),
+            NumberFormat('00', numberLocaleName),
+          ) as T;
+        }
         return SynchronousFuture<T>(
           MaterialLocalizationNb(
             localeName: localeName,
@@ -104,6 +121,20 @@ abstract class FlutterLocalizationsDelegate<T>
           ) as T,
         );
       case LocalizationsDelegate<CupertinoLocalizations> _:
+        if (GlobalCupertinoLocalizations.delegate.isSupported(locale)) {
+          return getCupertinoTranslation(
+            locale,
+            DateFormat.y(localeName),
+            DateFormat.d(localeName),
+            DateFormat.EEEE(localeName),
+            DateFormat.MMMEd(localeName),
+            DateFormat('HH', localeName),
+            DateFormat.m(localeName),
+            DateFormat('mm', localeName),
+            DateFormat.s(localeName),
+            NumberFormat.decimalPattern(numberLocaleName),
+          ) as T;
+        }
         return SynchronousFuture(
           CupertinoLocalizationNb(
             localeName: localeName,
