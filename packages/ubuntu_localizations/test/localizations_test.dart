@@ -1,5 +1,6 @@
-import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:cupertino_ui/cupertino_ui.dart' as cupertino;
 import 'package:flutter_test/flutter_test.dart';
+import 'package:material_ui/material_ui.dart';
 import 'package:ubuntu_localizations/src/flutter/flutter_localizations.dart';
 import 'package:ubuntu_localizations/ubuntu_localizations.dart';
 
@@ -32,7 +33,7 @@ void main() {
 
   testWidgets('cupertino supports all ubuntu localizations', (tester) async {
     final delegates = [
-      GlobalCupertinoLocalizations.delegate,
+      cupertino.GlobalCupertinoLocalizations.delegate,
       ...FlutterCupertinoLocalizations.delegates,
     ];
 
