@@ -1,3 +1,9 @@
+## 0.6.0
+
+> Note: This release has breaking changes.
+
+ - **BREAKING** **FEAT**(ubuntu_localizations): migrate to standalone UI localizations.
+
 ## 0.5.2+6
 
  - **FIX**(l10n): translated using Weblate (Japanese).

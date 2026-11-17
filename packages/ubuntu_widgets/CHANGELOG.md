@@ -1,3 +1,9 @@
+## 0.9.0
+
+> Note: This release has breaking changes.
+
+ - **BREAKING** **FEAT**(ubuntu_widgets): migrate to standalone Material.
+
 ## 0.8.2+1
 
  - Update a dependency to the latest release.
