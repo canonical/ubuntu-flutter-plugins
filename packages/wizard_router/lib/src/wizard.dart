@@ -121,9 +121,9 @@ class Wizard extends StatefulWidget {
     this.userData,
     this.controller,
   }) : assert(
-          (routes == null) != (controller == null),
-          'Either routes or controller must be specified',
-        );
+         (routes == null) != (controller == null),
+         'Either routes or controller must be specified',
+       );
 
   /// The name of the first route to show.
   ///
@@ -201,7 +201,8 @@ class _WizardState extends State<Wizard> {
   @override
   void initState() {
     super.initState();
-    _controller = widget.controller ??
+    _controller =
+        widget.controller ??
         WizardController(
           routes: widget.routes!,
           initialRoute: widget.initialRoute,
@@ -221,19 +222,23 @@ class _WizardState extends State<Wizard> {
     super.didUpdateWidget(oldWidget);
     if (widget.initialRoute != oldWidget.initialRoute ||
         widget.controller != oldWidget.controller ||
-        !const IterableEquality()
-            .equals(widget.routes?.keys, oldWidget.routes?.keys)) {
+        !const IterableEquality().equals(
+          widget.routes?.keys,
+          oldWidget.routes?.keys,
+        )) {
       if (oldWidget.controller == null) {
         _controller.dispose();
       }
-      _controller = widget.controller ??
+      _controller =
+          widget.controller ??
           WizardController(
             routes: widget.routes!,
             initialRoute: widget.initialRoute,
           );
       _controller._flowController.update((state) {
-        final newState =
-            state.where((r) => _controller.routes.containsKey(r.name)).toList();
+        final newState = state
+            .where((r) => _controller.routes.containsKey(r.name))
+            .toList();
         if (newState.isEmpty) {
           newState.add(
             WizardRouteSettings(
@@ -268,7 +273,7 @@ class _WizardState extends State<Wizard> {
   Widget build(BuildContext context) {
     return FlowBuilder<List<WizardRouteSettings>>(
       controller: _controller._flowController,
-      onGeneratePages: (state, __) {
+      onGeneratePages: (state, _) {
         return state
             .mapIndexed(
               (index, settings) =>

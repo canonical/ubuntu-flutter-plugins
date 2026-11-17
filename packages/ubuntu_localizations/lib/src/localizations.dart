@@ -16,10 +16,10 @@ class GlobalUbuntuLocalizations {
   /// The list of localization delegates.
   static const List<LocalizationsDelegate<dynamic>> delegates =
       <LocalizationsDelegate<dynamic>>[
-    UbuntuLocalizations.delegate,
-    ...FlutterMaterialLocalizations.delegates,
-    ...FlutterCupertinoLocalizations.delegates,
-  ];
+        UbuntuLocalizations.delegate,
+        ...FlutterMaterialLocalizations.delegates,
+        ...FlutterCupertinoLocalizations.delegates,
+      ];
 }
 
 /// Initializes [Intl.defaultLocale] for formatting dates, times, and numbers.
@@ -30,10 +30,11 @@ class GlobalUbuntuLocalizations {
 /// * [Intl.defaultLocale]
 /// * [Intl.systemLocale]
 Future<void> initDefaultLocale([String? locale]) async {
-  Intl.defaultLocale = locale ??
+  Intl.defaultLocale =
+      locale ??
       await findSystemLocale()
-          // Fallback to 'en' if the system locale is 'POSIX' or undefined.
-          .then((l) => l == 'POSIX' || l == 'und' ? 'en' : l);
+      // Fallback to 'en' if the system locale is 'POSIX' or undefined.
+      .then((l) => l == 'POSIX' || l == 'und' ? 'en' : l);
 }
 
 /// A localized language and its locale.

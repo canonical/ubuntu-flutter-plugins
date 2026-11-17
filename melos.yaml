@@ -6,10 +6,6 @@ packages:
 
 command:
   bootstrap:
-    environment:
-      sdk: ">=3.0.0 <4.0.0"
-      flutter: ">=3.35.3"
-
     dependencies:
       collection: ^1.18.0
       flutter_svg: ^2.0.10+1

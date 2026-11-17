@@ -313,8 +313,8 @@ void main() {
             return !skipSecond
                 ? Routes.second
                 : !skipThird
-                    ? Routes.third
-                    : Routes.fourth;
+                ? Routes.third
+                : Routes.fourth;
           },
         ),
         Routes.second: WizardRoute(
@@ -330,8 +330,8 @@ void main() {
           onBack: (_) => !skipThird
               ? Routes.third
               : !skipSecond
-                  ? Routes.second
-                  : Routes.first,
+              ? Routes.second
+              : Routes.first,
         ),
       },
     );
@@ -680,8 +680,9 @@ void main() {
           initialRoute: Routes.first,
           routes: {
             Routes.first: WizardRoute(builder: (_) => const Text(Routes.first)),
-            Routes.second:
-                WizardRoute(builder: (_) => const Text(Routes.second)),
+            Routes.second: WizardRoute(
+              builder: (_) => const Text(Routes.second),
+            ),
           },
           observers: [observer],
         ),
@@ -770,8 +771,9 @@ void main() {
     expect(find.text(Routes.third), findsOneWidget);
   });
 
-  testWidgets('hasNext returns false for the last route on skip as well',
-      (tester) async {
+  testWidgets('hasNext returns false for the last route on skip as well', (
+    tester,
+  ) async {
     await pumpWizardApp(
       tester,
       initialRoute: Routes.first,

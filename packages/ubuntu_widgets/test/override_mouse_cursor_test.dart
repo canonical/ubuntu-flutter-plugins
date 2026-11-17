@@ -26,8 +26,10 @@ void main() {
       ),
     );
 
-    final gesture =
-        await tester.createGesture(kind: PointerDeviceKind.mouse, pointer: 1);
+    final gesture = await tester.createGesture(
+      kind: PointerDeviceKind.mouse,
+      pointer: 1,
+    );
     await gesture.addPointer(location: Offset.zero);
     addTearDown(gesture.removePointer);
 

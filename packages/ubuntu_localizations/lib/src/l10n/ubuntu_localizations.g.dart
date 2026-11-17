@@ -135,7 +135,7 @@ import 'ubuntu_localizations_zh.g.dart';
 /// property.
 abstract class UbuntuLocalizations {
   UbuntuLocalizations(String locale)
-      : localeName = intl.Intl.canonicalizedLocale(locale.toString());
+    : localeName = intl.Intl.canonicalizedLocale(locale.toString());
 
   final String localeName;
 
@@ -158,11 +158,11 @@ abstract class UbuntuLocalizations {
   /// of delegates is preferred or required.
   static const List<LocalizationsDelegate<dynamic>> localizationsDelegates =
       <LocalizationsDelegate<dynamic>>[
-    delegate,
-    GlobalMaterialLocalizations.delegate,
-    GlobalCupertinoLocalizations.delegate,
-    GlobalWidgetsLocalizations.delegate,
-  ];
+        delegate,
+        GlobalMaterialLocalizations.delegate,
+        GlobalCupertinoLocalizations.delegate,
+        GlobalWidgetsLocalizations.delegate,
+      ];
 
   /// A list of this localizations delegate's supported locales.
   static const List<Locale> supportedLocales = <Locale>[
@@ -242,7 +242,7 @@ abstract class UbuntuLocalizations {
     Locale('uk'),
     Locale('vi'),
     Locale('zh'),
-    Locale('zh', 'TW')
+    Locale('zh', 'TW'),
   ];
 
   /// No description provided for @countryCode.
@@ -979,86 +979,87 @@ class _UbuntuLocalizationsDelegate
   @override
   Future<UbuntuLocalizations> load(Locale locale) {
     return SynchronousFuture<UbuntuLocalizations>(
-        lookupUbuntuLocalizations(locale));
+      lookupUbuntuLocalizations(locale),
+    );
   }
 
   @override
   bool isSupported(Locale locale) => <String>[
-        'am',
-        'ar',
-        'az',
-        'be',
-        'bg',
-        'bn',
-        'bo',
-        'bs',
-        'ca',
-        'cs',
-        'cy',
-        'da',
-        'de',
-        'dz',
-        'el',
-        'en',
-        'eo',
-        'es',
-        'et',
-        'eu',
-        'fa',
-        'fi',
-        'fr',
-        'ga',
-        'gl',
-        'gu',
-        'he',
-        'hi',
-        'hr',
-        'hu',
-        'id',
-        'is',
-        'it',
-        'ja',
-        'ka',
-        'kk',
-        'km',
-        'kn',
-        'ko',
-        'ku',
-        'lo',
-        'lt',
-        'lv',
-        'mk',
-        'ml',
-        'mr',
-        'my',
-        'nb',
-        'ne',
-        'nl',
-        'nn',
-        'oc',
-        'pa',
-        'pl',
-        'pt',
-        'ro',
-        'ru',
-        'se',
-        'si',
-        'sk',
-        'sl',
-        'sq',
-        'sr',
-        'sv',
-        'ta',
-        'te',
-        'tg',
-        'th',
-        'tl',
-        'tr',
-        'ug',
-        'uk',
-        'vi',
-        'zh'
-      ].contains(locale.languageCode);
+    'am',
+    'ar',
+    'az',
+    'be',
+    'bg',
+    'bn',
+    'bo',
+    'bs',
+    'ca',
+    'cs',
+    'cy',
+    'da',
+    'de',
+    'dz',
+    'el',
+    'en',
+    'eo',
+    'es',
+    'et',
+    'eu',
+    'fa',
+    'fi',
+    'fr',
+    'ga',
+    'gl',
+    'gu',
+    'he',
+    'hi',
+    'hr',
+    'hu',
+    'id',
+    'is',
+    'it',
+    'ja',
+    'ka',
+    'kk',
+    'km',
+    'kn',
+    'ko',
+    'ku',
+    'lo',
+    'lt',
+    'lv',
+    'mk',
+    'ml',
+    'mr',
+    'my',
+    'nb',
+    'ne',
+    'nl',
+    'nn',
+    'oc',
+    'pa',
+    'pl',
+    'pt',
+    'ro',
+    'ru',
+    'se',
+    'si',
+    'sk',
+    'sl',
+    'sq',
+    'sr',
+    'sv',
+    'ta',
+    'te',
+    'tg',
+    'th',
+    'tl',
+    'tr',
+    'ug',
+    'uk',
+    'vi',
+    'zh',
+  ].contains(locale.languageCode);
 
   @override
   bool shouldReload(_UbuntuLocalizationsDelegate old) => false;
@@ -1246,8 +1247,9 @@ UbuntuLocalizations lookupUbuntuLocalizations(Locale locale) {
   }
 
   throw FlutterError(
-      'UbuntuLocalizations.delegate failed to load unsupported locale "$locale". This is likely '
-      'an issue with the localizations generation tool. Please file an issue '
-      'on GitHub with a reproducible sample app and the gen-l10n configuration '
-      'that was used.');
+    'UbuntuLocalizations.delegate failed to load unsupported locale "$locale". This is likely '
+    'an issue with the localizations generation tool. Please file an issue '
+    'on GitHub with a reproducible sample app and the gen-l10n configuration '
+    'that was used.',
+  );
 }

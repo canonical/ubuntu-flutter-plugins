@@ -116,8 +116,9 @@ class WizardController extends SafeChangeNotifier {
       previousName = routeNames[previousRouteIndex];
     }
 
-    final previousIsInState =
-        state.any((settings) => settings.name == previousName);
+    final previousIsInState = state.any(
+      (settings) => settings.name == previousName,
+    );
     if (previousIsInState) {
       return back(result);
     }

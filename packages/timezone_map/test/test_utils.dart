@@ -54,16 +54,17 @@ extension SvgFinder on CommonFinders {
     return find.byWidgetPredicate((widget) {
       return widget is SvgPicture &&
           widget.bytesLoader is AssetBytesLoader &&
-          (widget.bytesLoader as AssetBytesLoader)
-              .assetName
-              .endsWith(assetName);
+          (widget.bytesLoader as AssetBytesLoader).assetName.endsWith(
+            assetName,
+          );
     });
   }
 }
 
 Response<String> jsonResponse(GeoLocation city) {
   return Response(
-    data: '''
+    data:
+        '''
 [
   {
     "name": "${city.name}",

@@ -18,8 +18,9 @@ void main() {
             'MaterialLocalizations for "$locale" not found. Is the delegate is missing?',
       );
 
-      final delegate =
-          delegates.firstWhere((delegate) => delegate.isSupported(locale));
+      final delegate = delegates.firstWhere(
+        (delegate) => delegate.isSupported(locale),
+      );
       await expectLater(
         () async => delegate.load(locale),
         returnsNormally,
@@ -43,8 +44,9 @@ void main() {
             'CupertinoLocalizations for "$locale" not found. Is the delegate is missing?',
       );
 
-      final delegate =
-          delegates.firstWhere((delegate) => delegate.isSupported(locale));
+      final delegate = delegates.firstWhere(
+        (delegate) => delegate.isSupported(locale),
+      );
       await expectLater(
         () async => delegate.load(locale),
         returnsNormally,

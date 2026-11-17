@@ -82,8 +82,7 @@ class _ElevatedPushButton extends ElevatedButton implements PushButton {
 
   @override
   ButtonStyle? themeStyleOf(BuildContext context) {
-    return ElevatedButtonTheme.of(context)
-        .style
+    return ElevatedButtonTheme.of(context).style
         ?.applyMinimumSize(kPushButtonSize);
   }
 }
@@ -110,8 +109,7 @@ class _FilledPushButton extends FilledButton implements PushButton {
 
   @override
   ButtonStyle? themeStyleOf(BuildContext context) {
-    return FilledButtonTheme.of(context)
-        .style
+    return FilledButtonTheme.of(context).style
         ?.applyMinimumSize(kPushButtonSize);
   }
 }
@@ -138,8 +136,7 @@ class _OutlinedPushButton extends OutlinedButton implements PushButton {
 
   @override
   ButtonStyle? themeStyleOf(BuildContext context) {
-    return OutlinedButtonTheme.of(context)
-        .style
+    return OutlinedButtonTheme.of(context).style
         ?.applyMinimumSize(kPushButtonSize);
   }
 }

@@ -117,7 +117,8 @@ void main() {
 
 Response<String> xmlResponse(GeoLocation city) {
   return Response<String>(
-    data: '''
+    data:
+        '''
 <Response>
   <Ip>127.0.0.1</Ip>
   <Status>OK</Status>

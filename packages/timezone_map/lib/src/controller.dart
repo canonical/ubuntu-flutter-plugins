@@ -5,12 +5,11 @@ import 'package:timezone_map/src/service.dart';
 
 /// Controls a timezone map widget.
 class TimezoneController extends SafeChangeNotifier {
-  /// Creates a controller with the given [service].
+  /// Creates a controller with the given [GeoService].
   TimezoneController({
-    required GeoService service,
-    GeoLocation? selectedLocation,
-  })  : _service = service,
-        _selectedLocation = selectedLocation;
+    required this._service,
+    this._selectedLocation,
+  });
 
   final GeoService _service;
 

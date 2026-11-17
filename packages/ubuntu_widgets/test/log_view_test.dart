@@ -120,8 +120,9 @@ void main() {
     final controller = textField.controller;
     expect(controller, isNotNull);
 
-    final scrollView = tester
-        .widget<SingleChildScrollView>(find.byType(SingleChildScrollView));
+    final scrollView = tester.widget<SingleChildScrollView>(
+      find.byType(SingleChildScrollView),
+    );
     final scrollController = scrollView.controller;
     expect(scrollController, isNotNull);
 

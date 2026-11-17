@@ -21,11 +21,10 @@ class Geoname extends GeoSource {
   /// Constructs a new [Geoname] instance.
   Geoname({
     required this.url,
-    required Geodata geodata,
+    required this._geodata,
     this.parameters,
     @visibleForTesting Dio? dio,
-  })  : _dio = dio ?? Dio(_options),
-        _geodata = geodata;
+  }) : _dio = dio ?? Dio(_options);
 
   /// Constructs a new [Geoname] with https://geoname-lookup.ubuntu.com.
   factory Geoname.ubuntu({
