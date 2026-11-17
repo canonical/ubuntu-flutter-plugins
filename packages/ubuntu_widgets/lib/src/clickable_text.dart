@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+import 'package:material_ui/material_ui.dart';
 
 /// This widget is a text that can be clicked and when it is hovered it changes
 /// its style, by default to underline + primary color, but that can be

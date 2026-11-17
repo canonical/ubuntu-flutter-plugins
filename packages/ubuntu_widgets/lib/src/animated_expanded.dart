@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+import 'package:material_ui/material_ui.dart';
 
 const _kDefaultCurve = Curves.easeIn;
 const _kDefaultDuration = Duration(milliseconds: 200);
