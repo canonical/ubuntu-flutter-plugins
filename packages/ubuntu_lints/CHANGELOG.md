@@ -1,3 +1,7 @@
+## 0.4.3
+
+ - **FEAT**(ubuntu_lints): disable avoid_redundant_argument_values.
+
 ## 0.4.2
 
  - **FEAT**(ubuntu_lints): preserve trailing commas.

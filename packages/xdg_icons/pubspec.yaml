@@ -24,7 +24,7 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  ubuntu_lints: ^0.4.2
+  ubuntu_lints: ^0.4.3
 
 flutter:
   plugin:
