@@ -22,7 +22,6 @@ linter:
     - avoid_catches_without_on_clauses
     - avoid_equals_and_hash_code_on_mutable_classes
     - avoid_multiple_declarations_per_line
-    - avoid_redundant_argument_values
     - avoid_returning_this
     - avoid_type_to_string
     - avoid_types_on_closure_parameters
