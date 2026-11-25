@@ -3,6 +3,27 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 2026-11-25
+
+### Changes
+
+---
+
+Packages with breaking changes:
+
+ - There are no breaking changes in this release.
+
+Packages with other changes:
+
+ - [`ubuntu_lints` - `v0.4.3`](#ubuntu_lints---v043)
+
+---
+
+#### `ubuntu_lints` - `v0.4.3`
+
+ - **FEAT**(ubuntu_lints): disable avoid_redundant_argument_values.
+
+
 ## 2026-11-17
 
 ### Changes
